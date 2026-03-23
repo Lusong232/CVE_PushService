@@ -1,1 +1,15 @@
-
+{
+  "latest": [
+    {
+      "cve_id": "CVE-2026-4567",
+      "title": "高危漏洞: CVE-2026-4567 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-03-23T03:16:00.387",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Tenda A15 15.13.07.13. The impacted element is the function UploadCfg of the file /cgi-bin/UploadCfg. The manipulation of the argument File leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/942384053/cve/issues/3\nhttps://github.com/user-attachments/files/25824036/Tenda.A15.V15.13.07.13.Unauthenticated.Stack-based.Buffer.Overflow.in._cgi-bin_UploadCfg.zip\nhttps://vuldb.com/?ctiid.352404",
+      "source": "NVD",
+      "time": "2026-03-23 09:17:58"
+    }
+  ]
+}
