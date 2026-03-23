@@ -1,114 +1,114 @@
 {
   "latest": [
     {
-      "cve_id": "CVE-2026-4567",
-      "title": "高危漏洞: CVE-2026-4567 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-23T03:16:00.387",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Tenda A15 15.13.07.13. The impacted element is the function UploadCfg of the file /cgi-bin/UploadCfg. The manipulation of the argument File leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/942384053/cve/issues/3\nhttps://github.com/user-attachments/files/25824036/Tenda.A15.V15.13.07.13.Unauthenticated.Stack-based.Buffer.Overflow.in._cgi-bin_UploadCfg.zip\nhttps://vuldb.com/?ctiid.352404",
+      "cve_id": "CVE-2026-33723",
+      "title": "高危漏洞: CVE-2026-33723 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-03-23T19:16:42.807",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `Subscribe::save()` method in `objects/subscribe.php` concatenates the `$this->users_id` property directly into an INSERT SQL query without sanitization or parameterized binding. This property originates from `$_POST['user_id']` in both `subscribe.json.php` and `subscribeNotify.json.php`. An authenticated attacker can inject arbitrary SQL to extract sensitive data from any database table, including password hashes, API keys, and encryption salts. Commit 36dfae22059fbd66fd34bbc5568a838fc0efd66c contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/36dfae22059fbd66fd34bbc5568a838fc0efd66c\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-ffr8-fxhv-fv8h",
       "source": "NVD",
-      "time": "2026-03-23 09:17:58"
+      "time": "2026-03-23 23:33:56"
     },
     {
-      "cve_id": "CVE-2026-4566",
-      "title": "高危漏洞: CVE-2026-4566 (CVSS 8.8)",
+      "cve_id": "CVE-2026-33719",
+      "title": "高危漏洞: CVE-2026-33719 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-03-23T19:16:42.647",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the CDN plugin endpoints `plugin/CDN/status.json.php` and `plugin/CDN/disable.json.php` use key-based authentication with an empty string default key. When the CDN plugin is enabled but the key has not been configured (the default state), the key validation check is completely bypassed, allowing any unauthenticated attacker to modify the full CDN configuration — including CDN URLs, storage credentials, and the authentication key itself — via mass-assignment through the `par` request parameter. Commit adeff0a31ba04a56f411eef256139fd7ed7d4310 contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/adeff0a31ba04a56f411eef256139fd7ed7d4310\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-r64r-883r-wcwh",
+      "source": "NVD",
+      "time": "2026-03-23 23:33:51"
+    },
+    {
+      "cve_id": "CVE-2026-33717",
+      "title": "高危漏洞: CVE-2026-33717 (CVSS 8.8)",
       "cvss_score": 8.8,
-      "published_date": "2026-03-23T03:16:00.083",
+      "published_date": "2026-03-23T19:16:42.497",
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Belkin F9K1122 1.00.33. The affected element is the function formWISP5G of the file /goform/formWISP5G. Executing a manipulation of the argument webpage can lead to stack-based buffer overflow. The attack can be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_151/README.md\nhttps://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_151/README.md#proof-of-concept-poc\nhttps://vuldb.com/?ctiid.352403",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `downloadVideoFromDownloadURL()` function in `objects/aVideoEncoder.json.php` saves remote content to a web-accessible temporary directory using the original URL's filename and extension (including `.php`). By providing an invalid `resolution` parameter, an attacker triggers an early `die()` via `forbiddenPage()` before the temp file can be moved or cleaned up, leaving an executable PHP file persistently accessible under the web root at `videos/cache/tmpFile/`. Commit 6da79b43484099a0b660d1544a63c07b633ed3a2 contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/6da79b43484099a0b660d1544a63c07b633ed3a2\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-8wf4-c4x3-h952",
       "source": "NVD",
-      "time": "2026-03-23 09:17:54"
+      "time": "2026-03-23 23:33:47"
     },
     {
-      "cve_id": "CVE-2026-4565",
-      "title": "高危漏洞: CVE-2026-4565 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-23T01:16:43.803",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda AC21 16.03.08.16. Impacted is the function formSetQosBand of the file /goform/SetNetControlList. Performing a manipulation of the argument list results in buffer overflow. The attack can be initiated remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/hellonestor/killallbug/issues/14\nhttps://github.com/hellonestor/killallbug/releases/tag/poc\nhttps://vuldb.com/?ctiid.352402",
+      "cve_id": "CVE-2026-33716",
+      "title": "高危漏洞: CVE-2026-33716 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-03-23T19:16:42.323",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the standalone live stream control endpoint at `plugin/Live/standAloneFiles/control.json.php` accepts a user-supplied `streamerURL` parameter that overrides where the server sends token verification requests. An attacker can redirect token verification to a server they control that always returns `{\"error\": false}`, completely bypassing authentication. This grants unauthenticated control over any live stream on the platform, including dropping active publishers, starting/stopping recordings, and probing stream existence. Commit 388fcd57dbd16f6cb3ebcdf1d08cf2b929941128 contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/388fcd57dbd16f6cb3ebcdf1d08cf2b929941128\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-9hv9-gvwm-95f2",
       "source": "NVD",
-      "time": "2026-03-23 09:17:49"
+      "time": "2026-03-23 23:33:39"
     },
     {
-      "cve_id": "CVE-2026-4562",
-      "title": "高危漏洞: CVE-2026-4562 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-23T00:16:51.647",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in MacCMS 2025.1000.4052. This affects an unknown part of the file application/api/controller/Timming.php of the component Timming API Endpoint. The manipulation results in missing authentication. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/HuajiHD/CVE/issues/9\nhttps://vuldb.com/?ctiid.352399\nhttps://vuldb.com/?id.352399",
+      "cve_id": "CVE-2026-33681",
+      "title": "高危漏洞: CVE-2026-33681 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-23T19:16:41.540",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `objects/pluginRunDatabaseScript.json.php` endpoint accepts a `name` parameter via POST and passes it to `Plugin::getDatabaseFileName()` without any path traversal sanitization. This allows an authenticated admin (or an attacker via CSRF) to traverse outside the plugin directory and execute the contents of any `install/install.sql` file on the filesystem as raw SQL queries against the application database. Commit 81b591c509835505cb9f298aa1162ac64c4152cb contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/81b591c509835505cb9f298aa1162ac64c4152cb\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-3hwv-x8g3-9qpr",
       "source": "NVD",
-      "time": "2026-03-23 09:17:44"
+      "time": "2026-03-23 23:33:35"
     },
     {
-      "cve_id": "CVE-2026-2580",
-      "title": "高危漏洞: CVE-2026-2580 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-23T00:16:51.453",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The WP Maps – Store Locator,Google Maps,OpenStreetMap,Mapbox,Listing,Directory & Filters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘orderby’ parameter in all versions up to, and including, 4.9.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wp-google-map-plugin/tags/4.9.1/classes/wpgmp-helper.php#L127\nhttps://plugins.trac.wordpress.org/browser/wp-google-map-plugin/tags/4.9.1/core/class.tabular.php#L780\nhttps://plugins.trac.wordpress.org/browser/wp-google-map-plugin/tags/4.9.1/wp-google-map-plugin.php#L77",
-      "source": "NVD",
-      "time": "2026-03-23 09:17:40"
-    },
-    {
-      "cve_id": "CVE-2026-4558",
-      "title": "高危漏洞: CVE-2026-4558 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-22T18:16:06.023",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Linksys MR9600 2.0.6.206937. Affected is the function smartConnectConfigure of the file SmartConnect.lua. Executing a manipulation of the argument configApSsid/configApPassphrase/srpLogin/srpPassword can lead to os command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/utmost3/cve/issues/1\nhttps://vuldb.com/?ctiid.352385\nhttps://vuldb.com/?id.352385",
-      "source": "NVD",
-      "time": "2026-03-23 09:17:33"
-    },
-    {
-      "cve_id": "CVE-2026-4555",
-      "title": "高危漏洞: CVE-2026-4555 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-22T17:17:09.937",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in D-Link DIR-513 1.10. The impacted element is the function formEasySetTimezone of the file /goform/formEasySetTimezone of the component boa. This manipulation of the argument curTime causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/Dir513/vul_24/README.md\nhttps://vuldb.com/?ctiid.352382\nhttps://vuldb.com/?id.352382",
-      "source": "NVD",
-      "time": "2026-03-23 09:17:28"
-    },
-    {
-      "cve_id": "CVE-2026-33293",
-      "title": "高危漏洞: CVE-2026-33293 (CVSS 8.1)",
+      "cve_id": "CVE-2026-33651",
+      "title": "高危漏洞: CVE-2026-33651 (CVSS 8.1)",
       "cvss_score": 8.1,
-      "published_date": "2026-03-22T17:17:08.950",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "WWBN AVideo is an open source video platform. Prior to version 26.0, the `deleteDump` parameter in `plugin/CloneSite/cloneServer.json.php` is passed directly to `unlink()` without any path sanitization. An attacker with valid clone credentials can use path traversal sequences (e.g., `../../`) to delete arbitrary files on the server, including critical application files such as `configuration.php`, causing complete denial of service or enabling further attacks by removing security-critical files. Version 26.0 fixes the issue.",
-      "refs": "https://github.com/WWBN/AVideo/commit/941decd6d19e2e694acb75e86317d10fbb560284\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-xmjm-86qv-g226",
+      "published_date": "2026-03-23T19:16:41.383",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `remindMe.json.php` endpoint passes `$_REQUEST['live_schedule_id']` through multiple functions without sanitization until it reaches `Scheduler_commands::getAllActiveOrToRepeat()`, which directly concatenates it into a SQL `LIKE` clause. Although intermediate functions (`new Live_schedule()`, `getUsers_idOrCompany()`) apply `intval()` internally, they do so on local copies within `ObjectYPT::getFromDb()`, leaving the original tainted variable unchanged. Any authenticated user can perform time-based blind SQL injection to extract arbitrary database contents. Commit 75d45780728294ededa1e3f842f95295d3e7d144 contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/75d45780728294ededa1e3f842f95295d3e7d144\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-pvw4-p2jm-chjm",
       "source": "NVD",
-      "time": "2026-03-23 09:17:24"
+      "time": "2026-03-23 23:33:30"
     },
     {
-      "cve_id": "CVE-2026-33292",
-      "title": "高危漏洞: CVE-2026-33292 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-22T17:17:08.753",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "WWBN AVideo is an open source video platform. Prior to version 26.0, the HLS streaming endpoint (`view/hls.php`) is vulnerable to a path traversal attack that allows an unauthenticated attacker to stream any private or paid video on the platform. The `videoDirectory` GET parameter is used in two divergent code paths — one for authorization (which truncates at the first `/` segment) and one for file access (which preserves `..` traversal sequences) — creating a split-oracle condition where authorization is checked against one video while content is served from another. Version 26.0 contains a fix for the issue.",
-      "refs": "https://github.com/WWBN/AVideo/commit/bc034066281085af00e64b0d7b81d8a025a928c4\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-pw4v-x838-w5pg",
+      "cve_id": "CVE-2026-33650",
+      "title": "高危漏洞: CVE-2026-33650 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-03-23T19:16:41.223",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, a user with the \"Videos Moderator\" permission can escalate privileges to perform full video management operations — including ownership transfer and deletion of any video — despite the permission being documented as only allowing video publicity changes (Active, Inactive, Unlisted). The root cause is that `Permissions::canModerateVideos()` is used as an authorization gate for full video editing in `videoAddNew.json.php`, while `videoDelete.json.php` only checks ownership, creating an asymmetric authorization boundary exploitable via a two-step ownership-transfer-then-delete chain. Commit 838e16818c793779406ecbf34ebaeba9830e33f8 contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/838e16818c793779406ecbf34ebaeba9830e33f8\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-8x77-f38v-4m5j",
       "source": "NVD",
-      "time": "2026-03-23 09:17:19"
+      "time": "2026-03-23 23:33:26"
     },
     {
-      "cve_id": "CVE-2026-4553",
-      "title": "高危漏洞: CVE-2026-4553 (CVSS 8.8)",
+      "cve_id": "CVE-2026-33649",
+      "title": "高危漏洞: CVE-2026-33649 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-03-23T19:16:41.070",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `plugin/Permissions/setPermission.json.php` endpoint accepts GET parameters for a state-changing operation that modifies user group permissions. The endpoint has no CSRF token validation, and the application explicitly sets `session.cookie_samesite=None` on session cookies. This allows an unauthenticated attacker to craft a page with `<img>` tags that, when visited by an admin, silently grant arbitrary permissions to the attacker's user group — escalating the attacker to near-admin access. As of time of publication, no known patched versions are available.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-g8x9-7mgh-7cvj",
+      "source": "NVD",
+      "time": "2026-03-23 23:33:21"
+    },
+    {
+      "cve_id": "CVE-2026-33648",
+      "title": "高危漏洞: CVE-2026-33648 (CVSS 8.8)",
       "cvss_score": 8.8,
-      "published_date": "2026-03-22T16:16:04.300",
+      "published_date": "2026-03-23T19:16:40.907",
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Tenda F453 1.0.0.3. Impacted is the function fromNatlimit of the file /goform/Natlimit of the component Parameters Handler. The manipulation of the argument page leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/F453/vul_88/README.md\nhttps://vuldb.com/?ctiid.352380\nhttps://vuldb.com/?id.352380",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the restreamer endpoint constructs a log file path by embedding user-controlled `users_id` and `liveTransmitionHistory_id` values from the JSON request body without any sanitization. This log file path is then concatenated directly into shell commands passed to `exec()`, allowing an authenticated user to achieve arbitrary command execution on the server via shell metacharacters such as `$()` or backticks. Commit 99b865413172045fef6a98b5e9bfc7b24da11678 contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/99b865413172045fef6a98b5e9bfc7b24da11678\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-5m4q-5cvx-36mw",
       "source": "NVD",
-      "time": "2026-03-23 09:17:12"
+      "time": "2026-03-23 23:33:16"
+    },
+    {
+      "cve_id": "CVE-2026-33647",
+      "title": "高危漏洞: CVE-2026-33647 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-23T19:16:40.750",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `ImageGallery::saveFile()` method validates uploaded file content using `finfo` MIME type detection but derives the saved filename extension from the user-supplied original filename without an allowlist check. An attacker can upload a polyglot file (valid JPEG magic bytes followed by PHP code) with a `.php` extension. The MIME check passes, but the file is saved as an executable `.php` file in a web-accessible directory, achieving Remote Code Execution. Commit 345a8d3ece0ad1e1b71a704c1579cbf885d8f3ae contains a patch.",
+      "refs": "https://github.com/WWBN/AVideo/commit/345a8d3ece0ad1e1b71a704c1579cbf885d8f3ae\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-wxjw-phj6-g75w",
+      "source": "NVD",
+      "time": "2026-03-23 23:33:12"
     }
   ]
 }
