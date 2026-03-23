@@ -175,8 +175,8 @@ def update_latest_json(vuln_info, message):
         "cvss_score": vuln_info['cvss_score'],
         "published_date": vuln_info['published_date'],
         "vector_string": vuln_info['vector_string'],
-        "description": vuln_info['description'],          # 完整描述
-        "refs": vuln_info['refs'],                        # 所有链接（换行分隔）
+        "description": vuln_info['description'],                     # 完整描述
+        "refs": vuln_info['refs'],                                   # 完整链接（换行分隔）
         "source": vuln_info['source'],
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
