@@ -172,9 +172,12 @@ def update_latest_json(vuln_info, message):
     new_msg = {
         "cve_id": vuln_info['id'],
         "title": f"高危漏洞: {vuln_info['id']} (CVSS {vuln_info['cvss_score']})",
-        "desp": vuln_info['description'][:200] + "..." if len(vuln_info['description']) > 200 else vuln_info['description'],
-        "url": vuln_info['refs'].split('\n')[0] if vuln_info['refs'] else "#",  # 取第一个链接
         "cvss_score": vuln_info['cvss_score'],
+        "published_date": vuln_info['published_date'],
+        "vector_string": vuln_info['vector_string'],
+        "description": vuln_info['description'],          # 完整描述
+        "refs": vuln_info['refs'],                        # 所有链接（换行分隔）
+        "source": vuln_info['source'],
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
