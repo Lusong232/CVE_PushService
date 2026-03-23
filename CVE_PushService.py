@@ -161,7 +161,7 @@ def save_vuln(vuln_info):
 
 
 # JSON 文件路径（相对于仓库根目录）
-JSON_FILE = "docs/latest.json"
+JSON_FILE = "docs/latest_nvd.json"
 def update_latest_json(vuln_info, message):
     """
     将最新漏洞消息写入 JSON 文件，保留最近 10 条
@@ -225,10 +225,10 @@ def send_notification(vuln_info, template: str, delaytime: int):
     title = f"高危漏洞: {vuln_info['id']} ({vuln_info['cvss_score']})"
 
     try:
+        # 【新增】将漏洞信息写入 JSON 文件
+        update_latest_json(vuln_info, message)
         response = sc_send(SCKEY, title, message, {"tags": "🚨漏洞警报"})
         logger.info(f"Notification sent for {vuln_info['id']}, response: {response}")
-          # 【新增】将漏洞信息写入 JSON 文件
-        update_latest_json(vuln_info, message)
     except Exception as e:
         logger.error(f"Failed to send notification: {str(e)}")
 
