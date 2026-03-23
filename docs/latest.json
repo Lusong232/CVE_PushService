@@ -1,0 +1,44 @@
+{
+  "latest": [
+    {
+      "cve_id": "CVE-2026-4567",
+      "title": "高危漏洞: CVE-2026-4567 (CVSS 9.8)",
+      "desp": "A vulnerability has been found in Tenda A15 15.13.07.13. The impacted element is the function UploadCfg of the file /cgi-bin/UploadCfg. The manipulation of the argument File leads to stack-based buffe...",
+      "url": "https://github.com/942384053/cve/issues/3",
+      "cvss_score": 9.8,
+      "time": "2026-03-23 06:41:19"
+    },
+    {
+      "cve_id": "CVE-2026-4566",
+      "title": "高危漏洞: CVE-2026-4566 (CVSS 8.8)",
+      "desp": "A flaw has been found in Belkin F9K1122 1.00.33. The affected element is the function formWISP5G of the file /goform/formWISP5G. Executing a manipulation of the argument webpage can lead to stack-base...",
+      "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_151/README.md",
+      "cvss_score": 8.8,
+      "time": "2026-03-23 06:41:14"
+    },
+    {
+      "cve_id": "CVE-2026-4565",
+      "title": "高危漏洞: CVE-2026-4565 (CVSS 8.8)",
+      "desp": "A vulnerability was detected in Tenda AC21 16.03.08.16. Impacted is the function formSetQosBand of the file /goform/SetNetControlList. Performing a manipulation of the argument list results in buffer ...",
+      "url": "https://github.com/hellonestor/killallbug/issues/14",
+      "cvss_score": 8.8,
+      "time": "2026-03-23 06:41:07"
+    },
+    {
+      "cve_id": "CVE-2026-4562",
+      "title": "高危漏洞: CVE-2026-4562 (CVSS 7.3)",
+      "desp": "A security flaw has been discovered in MacCMS 2025.1000.4052. This affects an unknown part of the file application/api/controller/Timming.php of the component Timming API Endpoint. The manipulation re...",
+      "url": "https://github.com/HuajiHD/CVE/issues/9",
+      "cvss_score": 7.3,
+      "time": "2026-03-23 06:41:00"
+    },
+    {
+      "cve_id": "CVE-2026-2580",
+      "title": "高危漏洞: CVE-2026-2580 (CVSS 7.5)",
+      "desp": "The WP Maps – Store Locator,Google Maps,OpenStreetMap,Mapbox,Listing,Directory & Filters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘orderby’ parameter in all versions up t...",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-google-map-plugin/tags/4.9.1/classes/wpgmp-helper.php#L127",
+      "cvss_score": 7.5,
+      "time": "2026-03-23 06:40:55"
+    }
+  ]
+}
