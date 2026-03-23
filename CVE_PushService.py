@@ -11,6 +11,7 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
 from serverchan_sdk import sc_send
+from datetime import datetime
 
 # 基本配置
 SCKEY = os.getenv("SCKEY")
