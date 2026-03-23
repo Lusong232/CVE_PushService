@@ -159,6 +159,48 @@ def save_vuln(vuln_info):
     finally:
         conn.close()
 
+
+# JSON 文件路径（相对于仓库根目录）
+JSON_FILE = "docs/latest.json"
+def update_latest_json(vuln_info, message):
+    """
+    将最新漏洞消息写入 JSON 文件，保留最近 10 条
+    vuln_info: 漏洞信息字典
+    message: 推送的完整 Markdown 内容（可选）
+    """
+    # 构造新消息对象（精简版，便于展示）
+    new_msg = {
+        "cve_id": vuln_info['id'],
+        "title": f"高危漏洞: {vuln_info['id']} (CVSS {vuln_info['cvss_score']})",
+        "desp": vuln_info['description'][:200] + "..." if len(vuln_info['description']) > 200 else vuln_info['description'],
+        "url": vuln_info['refs'].split('\n')[0] if vuln_info['refs'] else "#",  # 取第一个链接
+        "cvss_score": vuln_info['cvss_score'],
+        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+    # 读取现有 JSON（如果存在）
+    if os.path.exists(JSON_FILE):
+        try:
+            with open(JSON_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                latest = data.get("latest", [])
+        except:
+            latest = []
+    else:
+        # 确保 docs 目录存在
+        os.makedirs(os.path.dirname(JSON_FILE), exist_ok=True)
+        latest = []
+
+    # 插入到最前面，保留最近 10 条
+    latest.insert(0, new_msg)
+    data = {"latest": latest[:10]}
+
+    # 写回文件
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+
 # 通过Server酱发送通知
 def send_notification(vuln_info, template: str, delaytime: int):
 
@@ -182,6 +224,8 @@ def send_notification(vuln_info, template: str, delaytime: int):
     try:
         response = sc_send(SCKEY, title, message, {"tags": "🚨漏洞警报"})
         logger.info(f"Notification sent for {vuln_info['id']}, response: {response}")
+          # 【新增】将漏洞信息写入 JSON 文件
+        update_latest_json(vuln_info, message)
     except Exception as e:
         logger.error(f"Failed to send notification: {str(e)}")
 
