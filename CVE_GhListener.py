@@ -256,6 +256,59 @@ def process_new_repositories() -> List[Dict]:
 
     return new_repositories
 
+# GitHub 监控脚本专用的 JSON 文件路径
+JSON_FILE = "docs/latest_gh.json"
+def update_gh_json(repo_info):
+    """将完整仓库信息写入 docs/latest_gh.json，保留最近 10 条"""
+    logger.info(f"Updating GH JSON with repository: {repo_info['name']}")
+
+    # 获取漏洞概述（完整，不截断）
+    cve_overviews_text = ""
+    if repo_info.get('cve_ids'):
+        overviews = []
+        for cve_id in repo_info['cve_ids']:
+            overview = get_cve_overview(cve_id)
+            if overview:
+                overviews.append(overview)
+        if overviews:
+            cve_overviews_text = "\n".join(overviews)   # 完整内容
+
+    new_msg = {
+        "cve_id": ', '.join(repo_info['cve_ids']) if repo_info['cve_ids'] else '未检测到CVE ID',
+        "title": f"漏洞仓库: {repo_info['name']}",
+        "cvss_score": None,
+        "published_date": repo_info['created_at'],        # 创建时间
+        "updated_date": repo_info['pushed_at'],           # 最后更新时间
+        "vector_string": "N/A",
+        "description": repo_info['description'],          # 完整描述
+        "refs": repo_info['url'],
+        "source": "GitHub",
+        "cve_overviews": cve_overviews_text,              # 完整漏洞概述
+        "time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+    # 读取现有 JSON（如果存在）
+    if os.path.exists(JSON_FILE):
+        try:
+            with open(JSON_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                latest = data.get("latest", [])
+        except:
+            latest = []
+    else:
+        # 确保 docs 目录存在
+        os.makedirs(os.path.dirname(JSON_FILE), exist_ok=True)
+        latest = []
+
+    # 插入到最前面，保留最近 10 条
+    latest.insert(0, new_msg)
+    data = {"latest": latest[:10]}
+
+    # 写回文件
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def send_notification(repo_info: Dict, template: str, delaytime: int):
     """发送单个仓库的通知"""
 
@@ -285,6 +338,7 @@ def send_notification(repo_info: Dict, template: str, delaytime: int):
     title = f"漏洞仓库: {repo_info['name']}"
 
     try:
+        update_gh_json(repo_info)
         response = sc_send(SCKEY, title, message, {"tags": "🧰Possible poc/exp"})
         logger.info(f"Notification sent for repository: {repo_info['name']}, response: {response}")
     except Exception as e:
