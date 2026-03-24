@@ -257,9 +257,9 @@ def process_new_repositories() -> List[Dict]:
     return new_repositories
 
 # GitHub 监控脚本专用的 JSON 文件路径
-JSON_FILE = "docs/latest_gh.json"
+JSON_FILE = "docs/latest.json"
 def update_gh_json(repo_info):
-    """将完整仓库信息写入 docs/latest_gh.json，保留最近 10 条"""
+    """将完整仓库信息写入 docs/latest.json，保留最近 10 条"""
     logger.info(f"Updating GH JSON with repository: {repo_info['name']}")
 
     # 获取漏洞概述（完整，不截断）
@@ -302,7 +302,7 @@ def update_gh_json(repo_info):
 
     # 插入到最前面，保留最近 10 条
     latest.insert(0, new_msg)
-    data = {"latest": latest[:10]}
+    data = {"latest": latest[:25]}
 
     # 写回文件
     with open(JSON_FILE, "w", encoding="utf-8") as f:
