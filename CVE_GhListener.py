@@ -2,12 +2,13 @@ import os
 import sqlite3
 import json
 import re
-import datetime
+#import datetime
 import time
 from pkg.utils import *
 from typing import List, Dict, Optional
 import logging
 from serverchan_sdk import sc_send
+from datetime import datetime
 
 # 获取环境变量
 SCKEY = os.getenv("SCKEY")
