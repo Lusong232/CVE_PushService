@@ -158,7 +158,7 @@ def save_check_record(total_count: int):
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute("INSERT INTO check_records (check_time, total_count) VALUES (?, ?)",
-              (datetime.now().isoformat(), total_count))
+              (datetime.datetime.now().isoformat(), total_count))
     conn.commit()
     conn.close()
 
