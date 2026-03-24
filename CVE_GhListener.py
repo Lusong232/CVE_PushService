@@ -2,13 +2,12 @@ import os
 import sqlite3
 import json
 import re
-#import datetime
+import datetime as dt   # 修改：重命名避免冲突
 import time
 from pkg.utils import *
 from typing import List, Dict, Optional
 import logging
 from serverchan_sdk import sc_send
-from datetime import datetime
 
 # 获取环境变量
 SCKEY = os.getenv("SCKEY")
@@ -159,7 +158,7 @@ def save_check_record(total_count: int):
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute("INSERT INTO check_records (check_time, total_count) VALUES (?, ?)",
-              (datetime.datetime.now().isoformat(), total_count))
+              (dt.datetime.now().isoformat(), total_count))   # 修改：使用 dt.datetime
     conn.commit()
     conn.close()
 
@@ -285,7 +284,7 @@ def update_gh_json(repo_info):
         "refs": repo_info['url'],
         "source": "GitHub",
         "cve_overviews": cve_overviews_text,              # 完整漏洞概述
-        "time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "time": dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")   # 修改：使用 dt.datetime
     }
 
     # 读取现有 JSON（如果存在）
