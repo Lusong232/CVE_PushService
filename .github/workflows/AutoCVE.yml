@@ -70,3 +70,10 @@ jobs:
           git add vulns.db Github_CVE_Monitor.db docs/latest.json
           # 如果有任何变更则提交
           git diff --staged --quiet || (git commit -m "Update all CVE data [skip ci]" && git push)
+
+      # ========== 🔥 新增：自动刷新 jsdelivr CDN 缓存 ==========
+      - name: Purge jsdelivr CDN cache
+        if: success()
+        run: |
+          curl -s "https://purge.jsdelivr.net/gh/Lusong232/CVE_PushService@main/docs/latest.json"
+          echo "✅ CDN 缓存已刷新"
