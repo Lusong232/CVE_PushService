@@ -2,7 +2,7 @@ name: Unified CVE Push Service
 
 on:
   schedule:
-    - cron: '0 23 * * *'   # 每天 UTC 23:00 (北京时间次日 7:00) 运行 NVD 脚本
+    - cron: '0 */3 * * *'   # 每 3 小时运行一次
   workflow_dispatch:       # 手动触发
 
 permissions:
