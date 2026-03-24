@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4306",
+      "title": "高危漏洞: CVE-2026-4306 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-23T23:17:13.403",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The WP Job Portal plugin for WordPress is vulnerable to SQL Injection via the 'radius' parameter in all versions up to, and including, 2.4.8 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-job-portal/tags/2.4.7/includes/ajax.php#L10\nhttps://plugins.trac.wordpress.org/browser/wp-job-portal/tags/2.4.7/modules/job/model.php#L2743\nhttps://plugins.trac.wordpress.org/changeset?old_path=/wp-job-portal/tags/2.4.8&new_path=/wp-job-portal/tags/2.4.9",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:59"
+    },
+    {
+      "cve_id": "CVE-2026-4612",
+      "title": "高危漏洞: CVE-2026-4612 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-23T22:16:31.677",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in itsourcecode Free Hotel Reservation System 1.0. This affects an unknown part of the file /hotel/admin/mod_users/index.php?view=edit&id=8 of the component Parameter Handler. The manipulation of the argument account_id leads to sql injection. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/bybinyu/Vulnerability-Practice/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/?ctiid.352476",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:52"
+    },
+    {
+      "cve_id": "CVE-2026-4611",
+      "title": "高危漏洞: CVE-2026-4611 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-23T22:16:31.463",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in TOTOLINK X6000R 9.4.0cu.1360_B20241207/9.4.0cu.1498_B20250826. Affected by this issue is the function setLanCfg of the file /usr/sbin/shttpd. Executing a manipulation of the argument Hostname can lead to os command injection. The attack may be launched remotely.",
+      "refs": "https://vuldb.com/?ctiid.352475\nhttps://vuldb.com/?id.352475\nhttps://vuldb.com/?submit.775642",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:47"
+    },
+    {
+      "cve_id": "CVE-2026-32913",
+      "title": "高危漏洞: CVE-2026-32913 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-03-23T22:16:30.433",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "description": "OpenClaw before 2026.3.7 contains an improper header validation vulnerability in fetchWithSsrFGuard that forwards custom authorization headers across cross-origin redirects. Attackers can trigger redirects to different origins to intercept sensitive headers like X-Api-Key and Private-Token intended for the original destination.",
+      "refs": "https://github.com/openclaw/openclaw/commit/46715371b0612a6f9114dffd1466941ac476cef5\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-6mgf-v5j7-45cr\nhttps://vulncheck.com/advisories/openclaw-mar-custom-authorization-header-leakage-via-cross-origin-redirects",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:42"
+    },
+    {
+      "cve_id": "CVE-2026-32300",
+      "title": "高危漏洞: CVE-2026-32300 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-03-23T22:16:27.933",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Connect-CMS is a content management system. In versions on the 1.x series up to and including 1.41.0 and versions on the 2.x series up to and including 2.41.0, an improper authorization issue in the My Page profile update feature may allow modification of arbitrary user information. Versions 1.41.1 and 2.41.1 contain a patch.",
+      "refs": "https://github.com/opensource-workshop/connect-cms/commit/7c9951738c62a1d51b91e9956d1eb756c5d52cce\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:38"
+    },
+    {
+      "cve_id": "CVE-2026-32299",
+      "title": "高危漏洞: CVE-2026-32299 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-23T22:16:27.780",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Connect-CMS is a content management system. In versions on the 1.x series up to and including 1.41.0 and versions on the 2.x series up to and including 2.41.0, an improper authorization issue in the page content retrieval feature may allow retrieval of non-public information. Versions 1.41.1 and 2.41.1 contain a patch.",
+      "refs": "https://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1\nhttps://github.com/opensource-workshop/connect-cms/security/advisories/GHSA-62ch-j6x7-722j",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:32"
+    },
+    {
+      "cve_id": "CVE-2026-32278",
+      "title": "高危漏洞: CVE-2026-32278 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-03-23T22:16:27.443",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L",
+      "description": "Connect-CMS is a content management system. In versions on the 1.x series up to and including 1.41.0 and versions on the 2.x series up to and including 2.41.0, a Stored Cross-site Scripting (XSS) issue exists in the file field of the Form Plugin. Versions 1.41.1 and 2.41.1 contain a patch.",
+      "refs": "https://github.com/opensource-workshop/connect-cms/commit/9d87fe8ecf7f57efbb0e5231be058807734c96b3\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:26"
+    },
+    {
+      "cve_id": "CVE-2026-32277",
+      "title": "高危漏洞: CVE-2026-32277 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-03-23T22:16:27.260",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Connect-CMS is a content management system. In versions 1.35.0 through 1.41.0 and 2.35.0 through 2.41.0, a DOM-based Cross-Site Scripting (XSS) issue exists in the Cabinet Plugin list view. Versions 1.41.1 and 2.41.1 contain a patch.",
+      "refs": "https://github.com/opensource-workshop/connect-cms/commit/c04dc40f814eff891915752ef1ec00ba6612441c\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:21"
+    },
+    {
+      "cve_id": "CVE-2026-32276",
+      "title": "高危漏洞: CVE-2026-32276 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-23T22:16:27.050",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Connect-CMS is a content management system. In versions on the 1.x series up to and including 1.41.0 and versions on the 2.x series up to and including 2.41.0, an authenticated user may be able to execute arbitrary code in the Code Study Plugin. Versions 1.41.1 and 2.41.1 contain a patch.",
+      "refs": "https://github.com/opensource-workshop/connect-cms/commit/c0bcd07fc1e9375941aa1295d044328ecd44ed85\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v1.41.1\nhttps://github.com/opensource-workshop/connect-cms/releases/tag/v2.41.1",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:14"
+    },
+    {
+      "cve_id": "CVE-2025-60949",
+      "title": "高危漏洞: CVE-2025-60949 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-03-23T22:16:23.130",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Census CSWeb 8.0.1 allows \"app/config\" to be reachable via HTTP in some deployments. A remote, unauthenticated attacker could send requests to configuration files and obtain leaked secrets. Fixed in 8.1.0 alpha.",
+      "refs": "https://github.com/csprousers/csweb/commit/eba0b59a243390a1a4f9524cce6dbc0314bf0d91\nhttps://github.com/hx381/cspro-exploits\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-082-01.json",
+      "source": "NVD",
+      "time": "2026-03-24 02:45:08"
+    },
+    {
+      "cve_id": "CVE-2025-60947",
+      "title": "高危漏洞: CVE-2025-60947 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-23T22:16:22.793",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Census CSWeb 8.0.1 allows arbitrary file upload. A remote, authenticated attacker could upload a malicious file, possibly leading to remote code execution. Fixed in 8.1.0 alpha.",
+      "refs": "https://github.com/csprousers/csweb/commit/eba0b59a243390a1a4f9524cce6dbc0314bf0d91\nhttps://github.com/hx381/cspro-exploits\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-082-01.json",
+      "source": "NVD",
+      "time": "2026-03-24 02:44:59"
+    },
+    {
+      "cve_id": "CVE-2025-60946",
+      "title": "高危漏洞: CVE-2025-60946 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-23T22:16:22.583",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Census CSWeb 8.0.1 allows arbitrary file path input. A remote, authenticated attacker could access unintended file directories. Fixed in 8.1.0 alpha.",
+      "refs": "https://github.com/csprousers/csweb/commit/eba0b59a243390a1a4f9524cce6dbc0314bf0d91\nhttps://github.com/hx381/cspro-exploits\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-079-01.json",
+      "source": "NVD",
+      "time": "2026-03-24 02:44:54"
+    },
+    {
       "cve_id": "CVE-2026-33723",
       "title": "高危漏洞: CVE-2026-33723 (CVSS 7.1)",
       "cvss_score": 7.1,
