@@ -161,7 +161,7 @@ def save_vuln(vuln_info):
 
 
 # JSON 文件路径（相对于仓库根目录）
-JSON_FILE = "docs/latest_nvd.json"
+JSON_FILE = "docs/latest.json"
 def update_latest_json(vuln_info, message):
     """
     将最新漏洞消息写入 JSON 文件，保留最近 10 条
@@ -196,7 +196,7 @@ def update_latest_json(vuln_info, message):
 
     # 插入到最前面，保留最近 10 条
     latest.insert(0, new_msg)
-    data = {"latest": latest[:10]}
+    data = {"latest": latest[:25]}
 
     # 写回文件
     with open(JSON_FILE, "w", encoding="utf-8") as f:
