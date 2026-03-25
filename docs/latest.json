@@ -1,6 +1,58 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-25746",
+      "title": "漏洞仓库: CVE-2026-25746_SqlInjectionVulnerabilityOpenEMR7.0.4",
+      "cvss_score": null,
+      "published_date": "2026-02-03T14:41:25Z",
+      "updated_date": "2026-03-25T08:47:26Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-25746 - SQL Injection Vulnerability in OpenEMR <8.0.0",
+      "refs": "https://github.com/ChrisSub08/CVE-2026-25746_SqlInjectionVulnerabilityOpenEMR7.0.4",
+      "source": "GitHub",
+      "cve_overviews": "OpenEMR is a free and open source electronic health records and medical practice management application. Versions prior to 8.0.0 contain a SQL injection vulnerability in prescription that can be exploited by authenticated attackers. The vulnerability exists due to insufficient input validation in the prescription listing functionality. Version 8.0.0 fixes the vulnerability.",
+      "time": "2026-03-25 09:44:06"
+    },
+    {
+      "cve_id": "CVE-2026-32127",
+      "title": "漏洞仓库: CVE-2026-32127_SqlInjectionVulnerabilityOpenEMR8.0.0",
+      "cvss_score": null,
+      "published_date": "2026-02-26T17:25:38Z",
+      "updated_date": "2026-03-25T08:53:06Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-32127: SQL Injection Vulnerability in OpenEMR <8.0.0.1",
+      "refs": "https://github.com/ChrisSub08/CVE-2026-32127_SqlInjectionVulnerabilityOpenEMR8.0.0",
+      "source": "GitHub",
+      "cve_overviews": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.0.0.1, OpenEMR contains a SQL injection vulnerability in the ajax graphs library that can be exploited by authenticated attackers. The vulnerability exists due to insufficient input validation in the ajax graphs library. This vulnerability is fixed in 8.0.0.1.",
+      "time": "2026-03-25 09:43:49"
+    },
+    {
+      "cve_id": "CVE-2026-22241",
+      "title": "漏洞仓库: CVE-2026-22241",
+      "cvss_score": null,
+      "published_date": "2026-02-18T19:29:50Z",
+      "updated_date": "2026-03-25T09:28:13Z",
+      "vector_string": "N/A",
+      "description": "Lab Environment for CVE-2026-22241",
+      "refs": "https://github.com/CVEs-Labs/CVE-2026-22241",
+      "source": "GitHub",
+      "cve_overviews": "The Open eClass platform (formerly known as GUnet eClass) is a complete course management system. Prior to version 4.2, an arbitrary file upload vulnerability in the theme import functionality enables an attacker with administrative privileges to upload arbitrary files on the server's file system. The main cause of the issue is that no validation or sanitization of the file's present inside the zip archive. This leads to remote code execution on the web server. Version 4.2 patches the issue.",
+      "time": "2026-03-25 09:43:42"
+    },
+    {
+      "cve_id": "CVE-2026-3584",
+      "title": "漏洞仓库: CVE-2026-3584",
+      "cvss_score": null,
+      "published_date": "2026-03-25T09:21:54Z",
+      "updated_date": "2026-03-25T09:40:33Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-3584",
+      "refs": "https://github.com/Yucaerin/CVE-2026-3584",
+      "source": "GitHub",
+      "cve_overviews": "The Kali Forms plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 2.4.9 via the 'form_process' function. This is due to the 'prepare_post_data' function mapping user-supplied keys directly into internal placeholder storage, combined with the use of 'call_user_func' on these placeholder values. This makes it possible for unauthenticated attackers to execute code on the server.",
+      "time": "2026-03-25 09:43:32"
+    },
+    {
       "cve_id": "CVE-2026-33656",
       "title": "漏洞仓库: ESPOCRM-RCE-POC-CVE-2026-33656",
       "cvss_score": null,
@@ -242,50 +294,6 @@
       "refs": "https://github.com/pyload/pyload/security/advisories/GHSA-r7mc-x6x7-cqxx",
       "source": "NVD",
       "time": "2026-03-25 01:17:37"
-    },
-    {
-      "cve_id": "CVE-2026-33344",
-      "title": "高危漏洞: CVE-2026-33344 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-24T20:16:28.910",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Dagu is a workflow engine with a built-in Web user interface. From version 2.0.0 to before version 2.3.1, the fix for CVE-2026-27598 added ValidateDAGName to CreateNewDAG and rewrote generateFilePath to use filepath.Base. This patched the CREATE path. The remaining API endpoints - GET, DELETE, RENAME, EXECUTE - all pass the {fileName} URL path parameter to locateDAG without calling ValidateDAGName. %2F-encoded forward slashes in the {fileName} segment traverse outside the DAGs directory. This issue has been patched in version 2.3.1.",
-      "refs": "https://github.com/dagu-org/dagu/commit/7d07fda8f9de3ae73dfb081ccd0639f8059c56bb\nhttps://github.com/dagu-org/dagu/security/advisories/GHSA-ph8x-4jfv-v9v8",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:32"
-    },
-    {
-      "cve_id": "CVE-2026-33331",
-      "title": "高危漏洞: CVE-2026-33331 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-03-24T20:16:28.547",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "oRPC is an tool that helps build APIs that are end-to-end type-safe and adhere to OpenAPI standards. Prior to version 1.13.9, a stored cross-site scripting (XSS) vulnerability exists in the OpenAPI documentation generation of orpc. If an attacker can control any field within the OpenAPI specification (such as info.description), they can break out of the JSON context and execute arbitrary JavaScript when a user views the generated API documentation. This issue has been patched in version 1.13.9.",
-      "refs": "https://github.com/middleapi/orpc/commit/4f0efa8a1d3fa8e8317a4b03cc3945a5dfd68add\nhttps://github.com/middleapi/orpc/releases/tag/v1.13.9\nhttps://github.com/middleapi/orpc/security/advisories/GHSA-7f6v-3gx7-27q8",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:27"
-    },
-    {
-      "cve_id": "CVE-2026-33330",
-      "title": "高危漏洞: CVE-2026-33330 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-03-24T20:16:28.387",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
-      "description": "FileRise is a self-hosted web file manager / WebDAV server. Prior to version 3.10.0, a broken access control issue in FileRise's ONLYOFFICE integration allows an authenticated user with read-only access to obtain a signed save callbackUrl for a file and then directly forge the ONLYOFFICE save callback to overwrite that file with attacker-controlled content. This issue has been patched in version 3.10.0.",
-      "refs": "https://github.com/error311/FileRise/commit/3871f9fd1661688bed4f7dd23912be0ebf50973c\nhttps://github.com/error311/FileRise/releases/tag/v3.10.0\nhttps://github.com/error311/FileRise/security/advisories/GHSA-6c3j-f4x4-36m3",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:23"
-    },
-    {
-      "cve_id": "CVE-2026-33329",
-      "title": "高危漏洞: CVE-2026-33329 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-24T20:16:28.217",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "FileRise is a self-hosted web file manager / WebDAV server. From version 1.0.1 to before version 3.10.0, the resumableIdentifier parameter in the Resumable.js chunked upload handler (UploadModel::handleUpload()) is concatenated directly into filesystem paths without any sanitization. An authenticated user with upload permission can exploit this to write files to arbitrary directories on the server, delete arbitrary directories via the post-assembly cleanup, and probe file/directory existence. This issue has been patched in version 3.10.0.",
-      "refs": "https://github.com/error311/FileRise/commit/3871f9fd1661688bed4f7dd23912be0ebf50973c\nhttps://github.com/error311/FileRise/releases/tag/v3.10.0\nhttps://github.com/error311/FileRise/security/advisories/GHSA-c2jm-4wp9-5vrh",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:18"
     }
   ]
 }
