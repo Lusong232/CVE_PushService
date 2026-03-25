@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-27602",
+      "title": "高危漏洞: CVE-2026-27602 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-25T19:16:48.430",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Modoboa is a mail hosting and management platform. Prior to version 2.7.1, `exec_cmd()` in `modoboa/lib/sysutils.py` always runs subprocess calls with `shell=True`. Since domain names flow directly into shell command strings without any sanitization, a Reseller or SuperAdmin can include shell metacharacters in a domain name to run arbitrary OS commands on the server. Version 2.7.1 patches the issue.",
+      "refs": "https://github.com/modoboa/modoboa/commit/27a7aa133d3608fe8c25ae39125d1012c333cbfa\nhttps://github.com/modoboa/modoboa/releases/tag/2.7.1\nhttps://github.com/modoboa/modoboa/security/advisories/GHSA-wwv8-cqpr-vx3m",
+      "source": "NVD",
+      "time": "2026-03-25 21:29:30"
+    },
+    {
+      "cve_id": "CVE-2024-51347",
+      "title": "高危漏洞: CVE-2024-51347 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-25T14:16:29.097",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A buffer overflow vulnerability in the dgiot binary in LSC Smart Indoor IP Camera V7.6.32. The flaw exists in the handling of the Time Zone (TZ) parameter within the ONVIF configuration interface. The time zone (TZ) parameter does not have its length properly validated before being copied into a fixed-size buffer using the insecure strcpy function.",
+      "refs": "https://github.com/victorGoeman/LSC-Indoor-Camera-Security-Research/blob/main/CVE-2024-51347.md\nhttps://github.com/victorGoeman/LSC-Indoor-Camera-Security-Research/tree/main\nhttps://github.com/victorGoeman/LSC-Indoor-Camera-Security-Research/blob/main/CVE-2024-51347.md",
+      "source": "NVD",
+      "time": "2026-03-25 21:29:26"
+    },
+    {
+      "cve_id": "CVE-2026-28842",
+      "title": "高危漏洞: CVE-2026-28842 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-25T01:17:09.080",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The issue was addressed with improved bounds checks. This issue is fixed in macOS Tahoe 26.4. A buffer overflow may result in memory corruption and unexpected app termination.",
+      "refs": "https://support.apple.com/en-us/126794",
+      "source": "NVD",
+      "time": "2026-03-25 21:29:22"
+    },
+    {
+      "cve_id": "CVE-2026-20701",
+      "title": "高危漏洞: CVE-2026-20701 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-25T01:17:06.757",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An access issue was addressed with additional sandbox restrictions. This issue is fixed in macOS Sequoia 15.7.5, macOS Sonoma 14.8.5, macOS Tahoe 26.4. An app may be able to connect to a network share without user consent.",
+      "refs": "https://support.apple.com/en-us/126794\nhttps://support.apple.com/en-us/126795\nhttps://support.apple.com/en-us/126796",
+      "source": "NVD",
+      "time": "2026-03-25 21:29:17"
+    },
+    {
+      "cve_id": "CVE-2026-20687",
+      "title": "高危漏洞: CVE-2026-20687 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-03-25T01:17:05.587",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+      "description": "A use after free issue was addressed with improved memory management. This issue is fixed in iOS 18.7.7 and iPadOS 18.7.7, iOS 26.4 and iPadOS 26.4, macOS Sequoia 15.7.5, macOS Tahoe 26.4, tvOS 26.4, watchOS 26.4. An app may be able to cause unexpected system termination or write kernel memory.",
+      "refs": "https://support.apple.com/en-us/126792\nhttps://support.apple.com/en-us/126793\nhttps://support.apple.com/en-us/126794",
+      "source": "NVD",
+      "time": "2026-03-25 21:29:12"
+    },
+    {
       "cve_id": "CVE-2026-3988",
       "title": "高危漏洞: CVE-2026-3988 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -219,63 +274,6 @@
       "refs": "https://support.apple.com/en-us/126794\nhttps://support.apple.com/en-us/126795\nhttps://support.apple.com/en-us/126796",
       "source": "NVD",
       "time": "2026-03-25 18:43:46"
-    },
-    {
-      "cve_id": "CVE-2026-28875",
-      "title": "高危漏洞: CVE-2026-28875 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-25T01:17:11.307",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A buffer overflow was addressed with improved bounds checking. This issue is fixed in iOS 26.4 and iPadOS 26.4. A remote attacker may be able to cause a denial-of-service.",
-      "refs": "https://support.apple.com/en-us/126792",
-      "source": "NVD",
-      "time": "2026-03-25 18:43:41"
-    },
-    {
-      "cve_id": "CVE-2026-28817",
-      "title": "高危漏洞: CVE-2026-28817 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-25T01:17:06.980",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A race condition was addressed with improved state handling. This issue is fixed in macOS Sequoia 15.7.5, macOS Sonoma 14.8.5, macOS Tahoe 26.4. A sandboxed process may be able to circumvent sandbox restrictions.",
-      "refs": "https://support.apple.com/en-us/126794\nhttps://support.apple.com/en-us/126795\nhttps://support.apple.com/en-us/126796",
-      "source": "NVD",
-      "time": "2026-03-25 18:43:34"
-    },
-    {
-      "cve_id": "CVE-2026-4371",
-      "title": "高危漏洞: CVE-2026-4371 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-03-24T21:16:29.583",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
-      "description": "A malicious mail server could send malformed strings with negative lengths, causing the parser to read memory outside the buffer. If a mail server or connection to a mail server were compromised, an attacker could cause the parser to malfunction, potentially crashing Thunderbird or leaking sensitive data. This vulnerability affects Thunderbird < 149 and Thunderbird < 140.9.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2023493\nhttps://www.mozilla.org/security/advisories/mfsa2026-23/\nhttps://www.mozilla.org/security/advisories/mfsa2026-24/",
-      "source": "NVD",
-      "time": "2026-03-25 18:43:26"
-    },
-    {
-      "cve_id": "CVE-2026-1995",
-      "title": "高危漏洞: CVE-2026-1995 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-03-24T19:16:49.033",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IDrive’s id_service.exe process runs with elevated privileges and regularly reads from several files under the C:\\ProgramData\\IDrive\\ directory. The UTF16-LE encoded contents of these files are used as arguments for starting a process, but they can be edited by any standard user logged into the system. An attacker can overwrite or edit the files to specify a path to an arbitrary executable, which will then be executed by the id_service.exe process with SYSTEM privileges.",
-      "refs": "https://kb.cert.org/vuls/id/330121\nhttps://www.kb.cert.org/vuls/id/330121",
-      "source": "NVD",
-      "time": "2026-03-25 18:43:17"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE-2026-26198-analysis",
-      "cvss_score": null,
-      "published_date": "2026-03-25T13:09:40Z",
-      "updated_date": "2026-03-25T13:37:26Z",
-      "vector_string": "N/A",
-      "description": "Deep dive into a critical SQL injection in Python's Ormar ORM — reproduction, fix, and tests",
-      "refs": "https://github.com/sergicortesabadia/CVE-2026-26198-analysis",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-25 16:00:45"
     }
   ]
 }
