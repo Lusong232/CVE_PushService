@@ -1,6 +1,54 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-33656",
+      "title": "漏洞仓库: ESPOCRM-RCE-POC-CVE-2026-33656",
+      "cvss_score": null,
+      "published_date": "2026-03-24T19:41:19Z",
+      "updated_date": "2026-03-25T03:40:14Z",
+      "vector_string": "N/A",
+      "description": "Formula for Disaster: RCE in EspoCRM v9.3.3 (CVE-2026-33656)",
+      "refs": "https://github.com/JivaSecurity/ESPOCRM-RCE-POC-CVE-2026-33656",
+      "source": "GitHub",
+      "cve_overviews": "No English description available for this CVE.",
+      "time": "2026-03-25 06:53:02"
+    },
+    {
+      "cve_id": "CVE-2026-33150, CVE-2026-33179",
+      "title": "漏洞仓库: abhinavagarwal07.github.io",
+      "cvss_score": null,
+      "published_date": "2026-03-25T05:48:59Z",
+      "updated_date": "2026-03-25T06:48:46Z",
+      "vector_string": "N/A",
+      "description": "RingWraith: CVE-2026-33150 and CVE-2026-33179 — Use-After-Free and NULL Dereference in libfuse io_uring",
+      "refs": "https://github.com/abhinavagarwal07/abhinavagarwal07.github.io",
+      "source": "GitHub",
+      "cve_overviews": "libfuse is the reference implementation of the Linux FUSE. From version 3.18.0 to before version 3.18.2, a use-after-free vulnerability in the io_uring subsystem of libfuse allows a local attacker to crash FUSE filesystem processes and potentially execute arbitrary code. When io_uring thread creation fails due to resource exhaustion (e.g., cgroup pids.max), fuse_uring_start() frees the ring pool structure but stores the dangling pointer in the session state, leading to a use-after-free when the session shuts down. The trigger is reliable in containerized environments where cgroup pids.max limits naturally constrain thread creation. This issue has been patched in version 3.18.2.\nlibfuse is the reference implementation of the Linux FUSE. From version 3.18.0 to before version 3.18.2, a NULL pointer dereference and memory leak in fuse_uring_init_queue allows a local user to crash the FUSE daemon or cause resource exhaustion. When numa_alloc_local fails during io_uring queue entry setup, the code proceeds with NULL pointers. When fuse_uring_register_queue fails, NUMA allocations are leaked and the function incorrectly returns success. Only the io_uring transport is affected; the traditional /dev/fuse path is not affected. PoC confirmed with AddressSanitizer/LeakSanitizer. This issue has been patched in version 3.18.2.",
+      "time": "2026-03-25 06:52:56"
+    },
+    {
+      "cve_id": "CVE-2026-2072",
+      "title": "高危漏洞: CVE-2026-2072 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-03-25T03:16:05.850",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L",
+      "description": "Cross-Site Scripting vulnerability in Hitachi Infrastructure Analytics Advisor (Analytics probe component), Hitachi Ops Center Analyzer.This issue affects Hitachi Infrastructure Analytics Advisor:; Hitachi Ops Center Analyzer: from 10.0.0-00 before 11.0.5-00.",
+      "refs": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2026-114/index.html",
+      "source": "NVD",
+      "time": "2026-03-25 06:52:29"
+    },
+    {
+      "cve_id": "CVE-2026-4784",
+      "title": "高危漏洞: CVE-2026-4784 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-25T02:16:06.350",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in code-projects Simple Laundry System 1.0. This affects an unknown function of the file /checkcheckout.php of the component Parameter Handler. The manipulation of the argument serviceId results in sql injection. It is possible to launch the attack remotely. The exploit has been made public and could be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/zzb1388/cve2/issues/1\nhttps://vuldb.com/?ctiid.352801",
+      "source": "NVD",
+      "time": "2026-03-25 06:52:10"
+    },
+    {
       "cve_id": "CVE-2026-23744",
       "title": "漏洞仓库: htb-kobold-writeup",
       "cvss_score": null,
@@ -238,50 +286,6 @@
       "refs": "https://github.com/error311/FileRise/commit/3871f9fd1661688bed4f7dd23912be0ebf50973c\nhttps://github.com/error311/FileRise/releases/tag/v3.10.0\nhttps://github.com/error311/FileRise/security/advisories/GHSA-c2jm-4wp9-5vrh",
       "source": "NVD",
       "time": "2026-03-25 01:17:18"
-    },
-    {
-      "cve_id": "CVE-2026-22559",
-      "title": "高危漏洞: CVE-2026-22559 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-24T20:16:26.253",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "An Improper Input Validation vulnerability in UniFi Network Server may allow unauthorized access to an account if the account owner is socially engineered into clicking a malicious link.\r\n\r\n\r\nAffected Products:\r\nUniFi Network Server (Version 10.1.85 and earlier) \r\n\r\n\r\nMitigation:\r\nUpdate UniFi Network Server to Version 10.1.89 or later.",
-      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-062-062/c29719c0-405e-4d4a-8f26-e343e99f931b",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:14"
-    },
-    {
-      "cve_id": "CVE-2026-33554",
-      "title": "高危漏洞: CVE-2026-33554 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-24T15:16:35.743",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "ipmi-oem in FreeIPMI before 1.16.17 has exploitable buffer overflows on response messages. The Intelligent Platform Management Interface (IPMI) specification defines a set of interfaces for platform management. It is implemented by a large number of hardware manufacturers to support system management. It is most commonly used for sensor reading (e.g., CPU temperatures through the ipmi-sensors command within FreeIPMI) and remote power control (the ipmipower command). The ipmi-oem client command implements a set of a IPMI OEM commands for specific hardware vendors. If a user has supported hardware, they may wish to use the ipmi-oem command to send a request to a server to retrieve specific information. Three subcommands were found to have exploitable buffer overflows on response messages. They are: \"ipmi-oem dell get-last-post-code - get the last POST code and string describing the error on some Dell servers,\" \"ipmi-oem supermicro extra-firmware-info - get extra firmware info on Supermicro servers,\" and \"ipmi-oem wistron read-proprietary-string - read a proprietary string on Wistron servers.\"",
-      "refs": "https://ftp.gnu.org/gnu/freeipmi/\nhttps://savannah.gnu.org/bugs/?68140\nhttps://savannah.gnu.org/bugs/?68141",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:09"
-    },
-    {
-      "cve_id": "CVE-2026-4719",
-      "title": "高危漏洞: CVE-2026-4719 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-24T13:16:07.793",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Incorrect boundary conditions in the Graphics: Text component. This vulnerability affects Firefox < 149, Firefox ESR < 140.9, Thunderbird < 149, and Thunderbird < 140.9.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2016367\nhttps://www.mozilla.org/security/advisories/mfsa2026-20/\nhttps://www.mozilla.org/security/advisories/mfsa2026-22/",
-      "source": "NVD",
-      "time": "2026-03-25 01:17:01"
-    },
-    {
-      "cve_id": "CVE-2026-4716",
-      "title": "高危漏洞: CVE-2026-4716 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-03-24T13:16:07.503",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
-      "description": "Incorrect boundary conditions, uninitialized memory in the JavaScript Engine component. This vulnerability affects Firefox < 149, Firefox ESR < 140.9, Thunderbird < 149, and Thunderbird < 140.9.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2018592\nhttps://www.mozilla.org/security/advisories/mfsa2026-20/\nhttps://www.mozilla.org/security/advisories/mfsa2026-22/",
-      "source": "NVD",
-      "time": "2026-03-25 01:16:55"
     }
   ]
 }
