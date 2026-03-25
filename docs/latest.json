@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-23744",
+      "title": "漏洞仓库: htb-kobold-writeup",
+      "cvss_score": null,
+      "published_date": "2026-03-25T04:06:05Z",
+      "updated_date": "2026-03-25T04:12:48Z",
+      "vector_string": "N/A",
+      "description": "Hack The Box — Kobold writeup. Exploiting CVE-2026-23744 (MCPJam Inspector unauthenticated RCE) to gain initial access as ben, then escaping via Docker group misconfiguration to root.",
+      "refs": "https://github.com/yassertioursi/htb-kobold-writeup",
+      "source": "GitHub",
+      "cve_overviews": "MCPJam inspector is the local-first development platform for MCP servers. Versions 1.4.2 and earlier are vulnerable to remote code execution (RCE) vulnerability, which allows an attacker to send a crafted HTTP request that triggers the installation of an MCP server, leading to RCE. Since MCPJam inspector by default listens on 0.0.0.0 instead of 127.0.0.1, an attacker can trigger the RCE remotely via a simple HTTP request. Version 1.4.3 contains a patch.",
+      "time": "2026-03-25 04:49:09"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: PoC-CVE-2026-23744",
+      "cvss_score": null,
+      "published_date": "2026-03-25T02:24:21Z",
+      "updated_date": "2026-03-25T04:35:44Z",
+      "vector_string": "N/A",
+      "description": "Remote Code Execution on MCPJam Inspector <= 1.4.2",
+      "refs": "https://github.com/z4yd3/PoC-CVE-2026-23744",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-25 04:49:01"
+    },
+    {
       "cve_id": "CVE-2026-0866",
       "title": "漏洞仓库: zombieguard",
       "cvss_score": null,
@@ -256,28 +282,6 @@
       "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2018592\nhttps://www.mozilla.org/security/advisories/mfsa2026-20/\nhttps://www.mozilla.org/security/advisories/mfsa2026-22/",
       "source": "NVD",
       "time": "2026-03-25 01:16:55"
-    },
-    {
-      "cve_id": "CVE-2026-4714",
-      "title": "高危漏洞: CVE-2026-4714 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-24T13:16:07.313",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Incorrect boundary conditions in the Audio/Video component. This vulnerability affects Firefox < 149, Firefox ESR < 140.9, Thunderbird < 149, and Thunderbird < 140.9.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2018126\nhttps://www.mozilla.org/security/advisories/mfsa2026-20/\nhttps://www.mozilla.org/security/advisories/mfsa2026-22/",
-      "source": "NVD",
-      "time": "2026-03-25 01:16:50"
-    },
-    {
-      "cve_id": "CVE-2026-4713",
-      "title": "高危漏洞: CVE-2026-4713 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-24T13:16:07.217",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Incorrect boundary conditions in the Graphics component. This vulnerability affects Firefox < 149, Firefox ESR < 140.9, Thunderbird < 149, and Thunderbird < 140.9.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2018113\nhttps://www.mozilla.org/security/advisories/mfsa2026-20/\nhttps://www.mozilla.org/security/advisories/mfsa2026-22/",
-      "source": "NVD",
-      "time": "2026-03-25 01:16:46"
     }
   ]
 }
