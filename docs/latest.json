@@ -1,6 +1,45 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-30039",
+      "title": "漏洞仓库: CVE-2026-30039",
+      "cvss_score": null,
+      "published_date": "2026-03-26T02:38:23Z",
+      "updated_date": "2026-03-26T02:46:37Z",
+      "vector_string": "N/A",
+      "description": "Security advisory and bilingual write-up for CVE-2026-30039 in rarfile",
+      "refs": "https://github.com/bx33661/CVE-2026-30039",
+      "source": "GitHub",
+      "cve_overviews": "No English description available for this CVE.",
+      "time": "2026-03-26 05:00:16"
+    },
+    {
+      "cve_id": "CVE-2026-24291",
+      "title": "漏洞仓库: RegPwn",
+      "cvss_score": null,
+      "published_date": "2026-03-26T04:38:27Z",
+      "updated_date": "2026-03-26T04:39:34Z",
+      "vector_string": "N/A",
+      "description": "Exploit Windows local privilege escalation on clients and servers using tested code for CVE-2026-24291 across multiple Windows versions",
+      "refs": "https://github.com/tracyliving606/RegPwn",
+      "source": "GitHub",
+      "cve_overviews": "Incorrect permission assignment for critical resource in Windows Accessibility Infrastructure (ATBroker.exe) allows an authorized attacker to elevate privileges locally.",
+      "time": "2026-03-26 05:00:10"
+    },
+    {
+      "cve_id": "CVE-2026-33017",
+      "title": "漏洞仓库: cve-2026-33017-Lab",
+      "cvss_score": null,
+      "published_date": "2026-03-26T04:49:07Z",
+      "updated_date": "2026-03-26T04:51:33Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/rootdirective-sec/cve-2026-33017-Lab",
+      "source": "GitHub",
+      "cve_overviews": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
+      "time": "2026-03-26 05:00:04"
+    },
+    {
       "cve_id": "CVE-2026-33913",
       "title": "高危漏洞: CVE-2026-33913 (CVSS 7.7)",
       "cvss_score": 7.7,
@@ -241,39 +280,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Plugin/revisionary/vulnerability/wordpress-publishpress-revisions-plugin-3-7-23-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-03-26 01:26:39"
-    },
-    {
-      "cve_id": "CVE-2026-32538",
-      "title": "高危漏洞: CVE-2026-32538 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-25T17:17:07.570",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Insertion of Sensitive Information Into Sent Data vulnerability in Noor Alam SMTP Mailer smtp-mailer allows Retrieve Embedded Sensitive Data.This issue affects SMTP Mailer: from n/a through <= 1.1.24.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/smtp-mailer/vulnerability/wordpress-smtp-mailer-plugin-1-1-24-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-03-26 01:26:34"
-    },
-    {
-      "cve_id": "CVE-2026-32537",
-      "title": "高危漏洞: CVE-2026-32537 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-25T17:17:07.427",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in nK Visual Portfolio, Photo Gallery & Post Grid visual-portfolio allows PHP Local File Inclusion.This issue affects Visual Portfolio, Photo Gallery & Post Grid: from n/a through <= 3.5.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/visual-portfolio/vulnerability/wordpress-visual-portfolio-photo-gallery-post-grid-plugin-3-5-1-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-03-26 01:26:29"
-    },
-    {
-      "cve_id": "CVE-2026-32536",
-      "title": "高危漏洞: CVE-2026-32536 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-03-25T17:17:07.293",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Unrestricted Upload of File with Dangerous Type vulnerability in halfdata Green Downloads halfdata-paypal-green-downloads allows Using Malicious Files.This issue affects Green Downloads: from n/a through <= 2.08.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/halfdata-paypal-green-downloads/vulnerability/wordpress-green-downloads-plugin-2-08-arbitrary-file-upload-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-03-26 01:26:25"
     }
   ]
 }
