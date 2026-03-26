@@ -1,6 +1,45 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-33910",
+      "title": "漏洞仓库: CVE-2026-33910_SqlInjectionVulnerabilityOpenEMR8.0.0.2",
+      "cvss_score": null,
+      "published_date": "2026-03-23T15:58:53Z",
+      "updated_date": "2026-03-25T09:03:10Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-33910: SQL Injection Vulnerability in OpenEMR <8.0.0.3",
+      "refs": "https://github.com/ChrisSub08/CVE-2026-33910_SqlInjectionVulnerabilityOpenEMR8.0.0.2",
+      "source": "GitHub",
+      "cve_overviews": "OpenEMR is a free and open source electronic health records and medical practice management application. Versions up to and including 8.0.0.2 contain a SQL injection vulnerability in the patient selection feature that can be exploited by authenticated attackers. The vulnerability exists due to insufficient input validation in the patient selection feature. Version 8.0.0.3 contains a patch.",
+      "time": "2026-03-26 09:53:36"
+    },
+    {
+      "cve_id": "CVE-2026-33917",
+      "title": "漏洞仓库: CVE-2026-33917_SqlInjectionVulnerabilityOpenEMR8.0.0",
+      "cvss_score": null,
+      "published_date": "2026-02-25T18:47:15Z",
+      "updated_date": "2026-03-25T09:13:19Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-33917: SQL Injection Vulnerability in OpenEMR <8.0.0.3",
+      "refs": "https://github.com/ChrisSub08/CVE-2026-33917_SqlInjectionVulnerabilityOpenEMR8.0.0",
+      "source": "GitHub",
+      "cve_overviews": "OpenEMR is a free and open source electronic health records and medical practice management application. Versions prior to 8.0.0.3 contais a SQL injection vulnerability in the ajax_save CAMOS form that can be exploited by authenticated attackers. The vulnerability exists due to insufficient input validation in the ajax_save page in the CAMOS form. Version 8.0.0.3 patches the issue.",
+      "time": "2026-03-26 09:53:27"
+    },
+    {
+      "cve_id": "CVE-2026-29187",
+      "title": "漏洞仓库: CVE-2026-29187_SqlInjectionVulnerabilityOpenEMR7.0.4",
+      "cvss_score": null,
+      "published_date": "2026-02-10T07:08:38Z",
+      "updated_date": "2026-03-26T08:38:44Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-29187: SQL Injection Vulnerability in OpenEMR <8.0.0.3",
+      "refs": "https://github.com/ChrisSub08/CVE-2026-29187_SqlInjectionVulnerabilityOpenEMR7.0.4",
+      "source": "GitHub",
+      "cve_overviews": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, a Blind SQL Injection vulnerability exists in the Patient Search functionality (/interface/new/new_search_popup.php). The vulnerability allows an authenticated attacker to execute arbitrary SQL commands by manipulating the HTTP parameter keys rather than the values. Version 8.0.0.3 contains a patch.",
+      "time": "2026-03-26 09:53:16"
+    },
+    {
       "cve_id": "CVE-2026-24018",
       "title": "漏洞仓库: Fortinet_FortiClient_Exploit_CVE-2026-24018",
       "cvss_score": null,
@@ -249,39 +288,6 @@
       "refs": "https://github.com/openemr/openemr/commit/c61887aa7c83e83b3282db05246f1c00de3aa21d\nhttps://github.com/openemr/openemr/releases/tag/v8_0_0_3\nhttps://github.com/openemr/openemr/security/advisories/GHSA-2r7h-xm8v-m872",
       "source": "NVD",
       "time": "2026-03-26 01:28:10"
-    },
-    {
-      "cve_id": "CVE-2026-4824",
-      "title": "高危漏洞: CVE-2026-4824 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-03-25T22:16:19.497",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Enter Software Iperius Backup up to 8.7.3. Affected by this issue is some unknown functionality of the component Backup Job Configuration File Handler. The manipulation leads to improper privilege management. The attack must be carried out locally. The attack is considered to have high complexity. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 8.7.4 can resolve this issue. It is advisable to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
-      "refs": "https://github.com/0truust/iperius-backup-security-advisories/blob/main/advisories/privilege-escalation-rce.md\nhttps://vuldb.com/?ctiid.353124\nhttps://vuldb.com/?id.353124",
-      "source": "NVD",
-      "time": "2026-03-26 01:28:05"
-    },
-    {
-      "cve_id": "CVE-2026-4822",
-      "title": "高危漏洞: CVE-2026-4822 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-03-25T21:16:48.377",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Enter Software Iperius Backup bis 8.7.3. Affected is an unknown function of the file C:\\ProgramData\\IperiusBackup\\Jobs\\ of the component Backup Service. Performing a manipulation results in creation of temporary file with insecure permissions. The attack is only possible with local access. A high degree of complexity is needed for the attack. The exploitability is told to be difficult. The exploit is now public and may be used. Upgrading to version 8.7.4 is able to address this issue. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
-      "refs": "https://github.com/0truust/iperius-backup-security-advisories/blob/main/advisories/arbitrary-file-disclosure.md\nhttps://vuldb.com/?ctiid.353122\nhttps://vuldb.com/?id.353122",
-      "source": "NVD",
-      "time": "2026-03-26 01:28:01"
-    },
-    {
-      "cve_id": "CVE-2026-30976",
-      "title": "高危漏洞: CVE-2026-30976 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-03-25T21:16:41.623",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Sonarr is a PVR for Usenet and BitTorrent users. In versions on the 4.x branch prior to 4.0.17.2950, an unauthenticated remote attacker can potentially read any file readable by the Sonarr process. These include application configuration files (containing API keys and database credentials), Windows system files, and any user-accessible files on the same drive This issue only impacts Windows systems; macOS and Linux are unaffected. Files returned from the API were not limited to the directory on disk they were intended to be served from. This problem has been patched in 4.0.17.2950 in the nightly/develop branch or 4.0.17.2952 for stable/main releases. It's possible to work around the issue by only hosting Sonarr on a secure internal network and accessing it via VPN, Tailscale or similar solution outside that network.",
-      "refs": "https://github.com/Sonarr/Sonarr/releases/tag/v4.0.17.2950\nhttps://github.com/Sonarr/Sonarr/releases/tag/v4.0.17.2952\nhttps://github.com/Sonarr/Sonarr/security/advisories/GHSA-h393-v5hm-6h8f",
-      "source": "NVD",
-      "time": "2026-03-26 01:27:56"
     }
   ]
 }
