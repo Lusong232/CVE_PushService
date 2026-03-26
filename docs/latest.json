@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4926",
+      "title": "高危漏洞: CVE-2026-4926 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-26T19:17:08.387",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Impact:\n\nA bad regular expression is generated any time you have multiple sequential optional groups (curly brace syntax), such as `{a}{b}{c}:z`. The generated regex grows exponentially with the number of groups, causing denial of service.\n\nPatches:\n\nFixed in version 8.4.0.\n\nWorkarounds:\n\nLimit the number of sequential optional groups in route patterns. Avoid passing user-controlled input as route patterns.",
+      "refs": "https://cna.openjsf.org/security-advisories.html",
+      "source": "NVD",
+      "time": "2026-03-26 21:24:14"
+    },
+    {
+      "cve_id": "CVE-2026-33506",
+      "title": "高危漏洞: CVE-2026-33506 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-26T19:17:05.680",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:L",
+      "description": "Ory Polis, formerly known as BoxyHQ Jackson, bridges or proxies a SAML login flow to OAuth 2.0 or OpenID Connect. Versions prior to 26.2.0 contain a DOM-based Cross-Site Scripting (XSS) vulnerability in Ory Polis's login functionality. The application improperly trusts a URL parameter (`callbackUrl`), which is passed to `router.push`. An attacker can craft a malicious link that, when opened by an authenticated user (or an unauthenticated user that later logs in), performs a client-side redirect and executes arbitrary JavaScript in the context of their browser. This could lead to credential theft, internal network pivoting, and unauthorized actions performed on behalf of the victim. Version 26.2.0 contains a patch for the issue.",
+      "refs": "https://github.com/ory/polis/releases/tag/v26.2.0\nhttps://github.com/ory/polis/security/advisories/GHSA-3wjr-6gw8-9j22",
+      "source": "NVD",
+      "time": "2026-03-26 21:24:10"
+    },
+    {
+      "cve_id": "CVE-2026-33505",
+      "title": "高危漏洞: CVE-2026-33505 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-26T19:17:04.753",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Ory Keto is am open source authorization server for managing permissions at scale. Prior to version 26.2.0, the GetRelationships API in Ory Keto is vulnerable to SQL injection due to flaws in its pagination implementation. Pagination tokens are encrypted using the secret configured in `secrets.pagination`. An attacker who knows this secret can craft their own tokens, including malicious tokens that lead to SQL injection. If this configuration value is not set, Keto falls back to a hard-coded default pagination encryption secret. Because this default value is publicly known, attackers can generate valid and malicious pagination tokens manually for installations where this secret is not set. This issue can be exploited when GetRelationships API is directly or indirectly accessible to the attacker, the attacker can pass a raw pagination token to the affected API, and the configuration value `secrets.pagination` is not set or known to the attacker. An attacker can execute arbitrary SQL queries through forged pagination tokens. As a first line of defense, immediately configure a custom value for `secrets.pagination` by generating a cryptographically secure random secret. Next, upgrade Keto to a fixed version, 26.2.0 or later, as soon as possible.",
+      "refs": "https://github.com/ory/keto/security/advisories/GHSA-c38g-mx2c-9wf2",
+      "source": "NVD",
+      "time": "2026-03-26 21:24:05"
+    },
+    {
+      "cve_id": "CVE-2026-33491",
+      "title": "高危漏洞: CVE-2026-33491 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-03-26T19:17:04.333",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Zen C is a systems programming language that compiles to human-readable GNU C/C11. Prior to version 0.4.4, a stack-based buffer overflow vulnerability in the Zen C compiler allows attackers to cause a compiler crash or potentially execute arbitrary code by providing a specially crafted Zen C source file (`.zc`) with excessively long struct, function, or trait identifiers. Users are advised to update to Zen C version v0.4.4 or later to receive a patch.",
+      "refs": "https://github.com/zenc-lang/zenc/security/advisories/GHSA-rv74-w6q7-h8xr",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:58"
+    },
+    {
+      "cve_id": "CVE-2026-33152",
+      "title": "高危漏洞: CVE-2026-33152 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-03-26T19:17:03.147",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. In versions prior to 2.6.0, Tandoor Recipes configures Django REST Framework with BasicAuthentication as one of the default authentication backends. The AllAuth rate limiting configuration (ACCOUNT_RATE_LIMITS: login: 5/m/ip) only applies to the HTML-based login endpoint at /accounts/login/. Any API endpoint that accepts authenticated requests can be targeted via Authorization: Basic headers with zero rate limiting, zero account lockout, and unlimited attempts. An attacker can perform high-speed password guessing against any known username. Version 2.6.0 patches the issue.",
+      "refs": "https://github.com/TandoorRecipes/recipes/releases/tag/2.6.0\nhttps://github.com/TandoorRecipes/recipes/security/advisories/GHSA-7m7c-jjqc-r522",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:54"
+    },
+    {
+      "cve_id": "CVE-2026-33149",
+      "title": "高危漏洞: CVE-2026-33149 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-03-26T19:17:02.967",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. Versions up to and including 2.5.3 set ALLOWED_HOSTS = '*' by default, which causes Django to accept any value in the HTTP Host header without validation. The application uses request.build_absolute_uri() to generate absolute URLs in multiple contexts, including invite link emails, API pagination, and OpenAPI schema generation. An attacker who can send requests to the application with a crafted Host header can manipulate all server-generated absolute URLs. The most critical impact is invite link poisoning: when an admin creates an invite and the application sends the invite email, the link points to the attacker's server instead of the real application. When the victim clicks the link, the invite token is sent to the attacker, who can then use it at the real application. As of time of publication, it is unknown if a patched version is available.",
+      "refs": "https://github.com/TandoorRecipes/recipes/security/advisories/GHSA-x636-4jx6-xc4w",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:48"
+    },
+    {
+      "cve_id": "CVE-2026-33504",
+      "title": "高危漏洞: CVE-2026-33504 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-26T18:16:31.060",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Ory Hydra is an OAuth 2.0 Server and OpenID Connect Provider. Prior to version 26.2.0, the listOAuth2Clients, listOAuth2ConsentSessions, and listTrustedOAuth2JwtGrantIssuers Admin APIs in Ory Hydra are vulnerable to SQL injection due to flaws in its pagination implementation. Pagination tokens are encrypted using the secret configured in `secrets.pagination`. If this value is not set, Hydra falls back to using `secrets.system`. An attacker who knows this secret can craft their own tokens, including malicious tokens that lead to SQL injection. This issue can be exploited when one or more admin APIs listed above are directly or indirectly accessible to the attacker; the attacker can pass a raw pagination token to the affected API; and the configuration value `secrets.pagination` is set and known to the attacker, or `secrets.pagination` is not set and `secrets.system` is known to the attacker. An attacker can execute arbitrary SQL queries through forged pagination tokens. As a first line of defense, immediately configure a custom value for `secrets.pagination` by generating a cryptographically secure random secret. Next, upgrade Hydra to the fixed version, 26.2.0 as soon as possible.",
+      "refs": "https://github.com/ory/hydra/security/advisories/GHSA-r9w3-57w2-gch2",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:44"
+    },
+    {
+      "cve_id": "CVE-2026-33503",
+      "title": "高危漏洞: CVE-2026-33503 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-26T18:16:30.897",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Ory Kratos is an identity, user management and authentication system for cloud services. Prior to version 26.2.0, the ListCourierMessages Admin API in Ory Kratos is vulnerable to SQL injection due to flaws in its pagination implementation. Pagination tokens are encrypted using the secret configured in `secrets.pagination`. An attacker who knows this secret can craft their own tokens, including malicious tokens that lead to SQL injection. If this configuration value is not set, Kratos falls back to a default pagination encryption secret. Because this default value is publicly known, attackers can generate valid and malicious pagination tokens manually for installations where this secret is not set. As a first line of defense, immediately configure a custom value for `secrets.pagination` by generating a cryptographically secure random secret. Next, upgrade Kratos** to a fixed version, 26.2.0 or later, as soon as possible.",
+      "refs": "https://github.com/ory/kratos/security/advisories/GHSA-hgx2-28f8-6g2r",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:37"
+    },
+    {
+      "cve_id": "CVE-2026-33496",
+      "title": "高危漏洞: CVE-2026-33496 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-03-26T18:16:30.730",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "ORY Oathkeeper is an Identity & Access Proxy (IAP) and Access Control Decision API that authorizes HTTP requests based on sets of Access Rules. Versions prior to 26.2.0 are  vulnerable to authentication bypass due to cache key confusion. The `oauth2_introspection` authenticator cache does not distinguish tokens that were validated with different introspection URLs. An attacker can therefore legitimately use a token to prime the cache, and subsequently use the same token for rules that use a different introspection server. Ory Oathkeeper has to be configured with multiple `oauth2_introspection` authenticator servers, each accepting different tokens. The authenticators also must be configured to use caching. An attacker has to have a way to gain a valid token for one of the configured introspection servers. Starting in version 26.2.0, Ory Oathkeeper includes the introspection server URL in the cache key, preventing confusion of tokens. Update to the patched version of Ory Oathkeeper. If that is not immediately possible, disable caching for `oauth2_introspection` authenticators.",
+      "refs": "https://github.com/ory/oathkeeper/commit/198a2bc82a99e0a77bd0ffe290cbdd5285a1b17c\nhttps://github.com/ory/oathkeeper/security/advisories/GHSA-4mq7-pvjg-xp2r",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:33"
+    },
+    {
+      "cve_id": "CVE-2026-33494",
+      "title": "高危漏洞: CVE-2026-33494 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-03-26T18:16:30.400",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "ORY Oathkeeper is an Identity & Access Proxy (IAP) and Access Control Decision API that authorizes HTTP requests based on sets of Access Rules. Versions prior to 26.2.0 are vulnerable to an authorization bypass via HTTP path traversal. An attacker can craft a URL containing path traversal sequences (e.g. `/public/../admin/secrets`) that resolves to a protected path after normalization, but is matched against a permissive rule because the raw, un-normalized path is used during rule evaluation. Version 26.2.0 contains a patch.",
+      "refs": "https://github.com/ory/oathkeeper/commit/8e0002140491c592db41fa141dc6ad68f417e2b2\nhttps://github.com/ory/oathkeeper/security/advisories/GHSA-p224-6x5r-fjpm",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:25"
+    },
+    {
+      "cve_id": "CVE-2026-33487",
+      "title": "高危漏洞: CVE-2026-33487 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-26T18:16:30.070",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "goxmlsig provides XML Digital Signatures implemented in Go. Prior to version 1.6.0, the `validateSignature` function in `validate.go` goes through the references in the `SignedInfo` block to find one that matches the signed element's ID. In Go versions before 1.22, or when `go.mod` uses an older version, there is a loop variable capture issue. The code takes the address of the loop variable `_ref` instead of its value. As a result, if more than one reference matches the ID or if the loop logic is incorrect, the `ref` pointer will always end up pointing to the last element in the `SignedInfo.References` slice after the loop. goxmlsig version 1.6.0 contains a patch.",
+      "refs": "https://github.com/russellhaering/goxmldsig/security/advisories/GHSA-479m-364c-43vc",
+      "source": "NVD",
+      "time": "2026-03-26 21:23:21"
+    },
+    {
       "cve_id": "CVE-2026-29905",
       "title": "漏洞仓库: CVE-2026-29905",
       "cvss_score": null,
@@ -159,127 +280,6 @@
       "refs": "https://github.com/EVerest/EVerest/security/advisories/GHSA-vw95-6jj7-3fv9",
       "source": "NVD",
       "time": "2026-03-26 18:56:36"
-    },
-    {
-      "cve_id": "CVE-2026-23995",
-      "title": "高危漏洞: CVE-2026-23995 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-26T15:16:32.137",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "EVerest is an EV charging software stack. Prior to version 2026.02.0, stack-based buffer overflow in CAN interface initialization: passing an interface name longer than IFNAMSIZ (16) to CAN open routines overflows `ifreq.ifr_name`, corrupting adjacent stack data and enabling potential code execution. A malicious or misconfigured interface name can trigger this before any privilege checks. Version 2026.02.0 contains a patch.",
-      "refs": "https://github.com/EVerest/EVerest/security/advisories/GHSA-p47c-2jpr-mpwx",
-      "source": "NVD",
-      "time": "2026-03-26 18:56:31"
-    },
-    {
-      "cve_id": "CVE-2026-22790",
-      "title": "高危漏洞: CVE-2026-22790 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-26T15:16:31.970",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "EVerest is an EV charging software stack. Prior to version 2026.02.0, `HomeplugMessage::setup_payload` trusts `len` after an `assert`; in release builds the check is removed, so oversized SLAC payloads are `memcpy`'d into a ~1497-byte stack buffer, corrupting the stack and enabling remote code execution from network-provided frames. Version 2026.02.0 contains a patch.",
-      "refs": "https://github.com/EVerest/EVerest/security/advisories/GHSA-wh8w-7cfc-gq7m\nhttps://github.com/EVerest/EVerest/security/advisories/GHSA-wh8w-7cfc-gq7m",
-      "source": "NVD",
-      "time": "2026-03-26 18:56:13"
-    },
-    {
-      "cve_id": "CVE-2026-22593",
-      "title": "高危漏洞: CVE-2026-22593 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-26T15:16:31.800",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "EVerest is an EV charging software stack. Prior to version 2026.02.0, an off-by-one check in IsoMux certificate filename handling causes a stack-based buffer overflow when a filename length equals `MAX_FILE_NAME_LENGTH` (100). A crafted filename in the certificate directory can overflow `file_names[idx]`, corrupting stack state and enabling potential code execution. Version 2026.02.0 contains a patch.",
-      "refs": "https://github.com/EVerest/EVerest/security/advisories/GHSA-cpqf-mcqc-783m",
-      "source": "NVD",
-      "time": "2026-03-26 18:56:08"
-    },
-    {
-      "cve_id": "CVE-2026-33396",
-      "title": "高危漏洞: CVE-2026-33396 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-03-26T14:16:13.310",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.35, a low-privileged authenticated user (ProjectMember) can achieve remote command execution on the Probe container/host by abusing Synthetic Monitor Playwright script execution. Synthetic monitor code is executed in VMRunner.runCodeInNodeVM with a live Playwright page object in context. The sandbox relies on a denylist of blocked properties/methods, but it is incomplete. Specifically, _browserType and launchServer are not blocked, so attacker code can traverse `page.context().browser()._browserType.launchServer(...)` and spawn arbitrary processes. Version 10.0.35 contains a patch.",
-      "refs": "https://github.com/OneUptime/oneuptime/commit/e8e4ee3ff0740eb131045ab3d67453141c46178a\nhttps://github.com/OneUptime/oneuptime/security/advisories/GHSA-cqpg-phpp-9jjg\nhttps://github.com/OneUptime/oneuptime/security/advisories/GHSA-cqpg-phpp-9jjg",
-      "source": "NVD",
-      "time": "2026-03-26 18:55:49"
-    },
-    {
-      "cve_id": "CVE-2026-2511",
-      "title": "高危漏洞: CVE-2026-2511 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-26T14:16:10.017",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The JS Help Desk – AI-Powered Support & Ticketing System plugin for WordPress is vulnerable to SQL Injection via the `multiformid` parameter in the `storeTickets()` function in all versions up to, and including, 3.0.4. This is due to the user-supplied `multiformid` value being passed to `esc_sql()` without enclosing the result in quotes in the SQL query, rendering the escaping ineffective against payloads that do not contain quote characters. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://plugins.trac.wordpress.org/browser/js-support-ticket/tags/3.0.4/modules/fieldordering/model.php#L181\nhttps://plugins.trac.wordpress.org/browser/js-support-ticket/tags/3.0.4/modules/fieldordering/model.php#L996\nhttps://plugins.trac.wordpress.org/browser/js-support-ticket/tags/3.0.4/modules/ticket/model.php#L1178",
-      "source": "NVD",
-      "time": "2026-03-26 18:55:45"
-    },
-    {
-      "cve_id": "CVE-2026-2231",
-      "title": "高危漏洞: CVE-2026-2231 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-03-26T14:16:09.670",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Fluent Booking plugin for WordPress is vulnerable to Stored Cross-Site Scripting via multiple parameters in all versions up to, and including, 2.0.01 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/browser/fluent-booking/trunk/app/Hooks/Handlers/FrontEndHandler.php#L864\nhttps://plugins.trac.wordpress.org/browser/fluent-booking/trunk/app/Models/Booking.php#L440\nhttps://plugins.trac.wordpress.org/browser/fluent-booking/trunk/app/Models/Booking.php#L448",
-      "source": "NVD",
-      "time": "2026-03-26 18:55:25"
-    },
-    {
-      "cve_id": "CVE-2025-55263",
-      "title": "高危漏洞: CVE-2025-55263 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-26T14:16:08.007",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:H",
-      "description": "HCL Aftermarket DPC is affected by Hardcoded Sensitive Data which allows attacker to gain access to the source code or if it is stored in insecure repositories, they can easily retrieve these hardcoded secrets.",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793",
-      "source": "NVD",
-      "time": "2026-03-26 18:55:21"
-    },
-    {
-      "cve_id": "CVE-2025-55262",
-      "title": "高危漏洞: CVE-2025-55262 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-03-26T14:16:07.863",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H",
-      "description": "HCL Aftermarket DPC is affected by SQL Injection which allows attacker to exploit this vulnerability to retrieve sensitive information from the database.",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793",
-      "source": "NVD",
-      "time": "2026-03-26 18:55:02"
-    },
-    {
-      "cve_id": "CVE-2025-55261",
-      "title": "高危漏洞: CVE-2025-55261 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-26T14:16:07.710",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
-      "description": "HCL Aftermarket DPC is affected by Missing Functional Level Access Control which will allow attacker to escalate his privileges and may compromise the application and may steal and manipulate the data.",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793",
-      "source": "NVD",
-      "time": "2026-03-26 18:54:58"
-    },
-    {
-      "cve_id": "CVE-2019-25650",
-      "title": "高危漏洞: CVE-2019-25650 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-26T14:16:06.663",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "River Past CamDo 3.7.6 contains a structured exception handler (SEH) buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious string in the Lame_enc.dll name field. Attackers can craft a payload with a 280-byte buffer, NSEH jump instruction, and SEH handler address pointing to a pop-pop-ret gadget to trigger code execution and establish a bind shell on port 3110.",
-      "refs": "https://en.softonic.com/download/river-past-cam-do/windows/post-download?sl=1\nhttps://www.exploit-db.com/exploits/46335\nhttps://www.vulncheck.com/advisories/river-past-camdo-structured-exception-handler-buffer-overflow",
-      "source": "NVD",
-      "time": "2026-03-26 18:54:39"
-    },
-    {
-      "cve_id": "CVE-2018-25219",
-      "title": "高危漏洞: CVE-2018-25219 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-26T14:16:06.090",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PassFab Excel Password Recovery 8.3.1 contains a structured exception handling buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious payload in the registration code field. Attackers can craft a buffer overflow payload with a pop-pop-ret gadget and shellcode that triggers code execution when pasted into the Licensed E-mail and Registration Code field during the registration process.",
-      "refs": "https://www.exploit-db.com/exploits/46301\nhttps://www.passfab.com/downloads/passfab-excel-password-recovery.exe\nhttps://www.passfab.com/products/excel-password-recovery.html",
-      "source": "NVD",
-      "time": "2026-03-26 18:54:34"
     }
   ]
 }
