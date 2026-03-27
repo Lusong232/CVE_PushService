@@ -1,6 +1,97 @@
 {
   "latest": [
     {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: By-Poloss..-..CVE-2026-33868",
+      "cvss_score": null,
+      "published_date": "2026-03-27T09:23:51Z",
+      "updated_date": "2026-03-27T09:34:05Z",
+      "vector_string": "N/A",
+      "description": "Mastodon - Open Redirect",
+      "refs": "https://github.com/O99099O/By-Poloss..-..CVE-2026-33868",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-27 15:43:36"
+    },
+    {
+      "cve_id": "CVE-2026-33017",
+      "title": "漏洞仓库: PoC-CVE-2026-33017",
+      "cvss_score": null,
+      "published_date": "2026-03-27T07:15:07Z",
+      "updated_date": "2026-03-27T12:48:46Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-33017: Unauthenticated RCE in Langflow",
+      "refs": "https://github.com/z4yd3/PoC-CVE-2026-33017",
+      "source": "GitHub",
+      "cve_overviews": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
+      "time": "2026-03-27 15:43:30"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE_2026_24061",
+      "cvss_score": null,
+      "published_date": "2026-02-02T10:30:25Z",
+      "updated_date": "2026-03-27T13:51:19Z",
+      "vector_string": "N/A",
+      "description": " GNU InetUtils telnetd - Unauthenticated Remote Root via NEW-ENVIRON Variable Injection.",
+      "refs": "https://github.com/franckferman/CVE_2026_24061",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-27 15:43:08"
+    },
+    {
+      "cve_id": "CVE-2026-23744",
+      "title": "漏洞仓库: CVE-2026-23744",
+      "cvss_score": null,
+      "published_date": "2026-03-27T14:14:14Z",
+      "updated_date": "2026-03-27T14:17:08Z",
+      "vector_string": "N/A",
+      "description": "python script for exploiting CVE-2026-23744",
+      "refs": "https://github.com/AhmadF77/CVE-2026-23744",
+      "source": "GitHub",
+      "cve_overviews": "MCPJam inspector is the local-first development platform for MCP servers. Versions 1.4.2 and earlier are vulnerable to remote code execution (RCE) vulnerability, which allows an attacker to send a crafted HTTP request that triggers the installation of an MCP server, leading to RCE. Since MCPJam inspector by default listens on 0.0.0.0 instead of 127.0.0.1, an attacker can trigger the RCE remotely via a simple HTTP request. Version 1.4.3 contains a patch.",
+      "time": "2026-03-27 15:43:03"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: InvenTree-Path-Traversal-CVE-2026-33531",
+      "cvss_score": null,
+      "published_date": "2026-03-27T13:07:08Z",
+      "updated_date": "2026-03-27T14:17:57Z",
+      "vector_string": "N/A",
+      "description": "This repository contains a professional write-up of a path traversal vulnerability discovered in InvenTree's report template engine. This vulnerability was patched in versions 1.2.6 and 1.3.0.",
+      "refs": "https://github.com/alonaki/InvenTree-Path-Traversal-CVE-2026-33531",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-27 15:42:48"
+    },
+    {
+      "cve_id": "CVE-2026-34227",
+      "title": "漏洞仓库: CVE-2026-34227",
+      "cvss_score": null,
+      "published_date": "2026-03-27T13:51:07Z",
+      "updated_date": "2026-03-27T15:12:34Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-34227 · CORS → CSRF chain on Sliver's unauthenticated MCP interface",
+      "refs": "https://github.com/skoveit/CVE-2026-34227",
+      "source": "GitHub",
+      "cve_overviews": "No English description available for this CVE.",
+      "time": "2026-03-27 15:42:43"
+    },
+    {
+      "cve_id": "CVE-2026-23744",
+      "title": "漏洞仓库: CVE-2026-23744-POC",
+      "cvss_score": null,
+      "published_date": "2026-03-27T15:31:08Z",
+      "updated_date": "2026-03-27T15:35:45Z",
+      "vector_string": "N/A",
+      "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
+      "refs": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
+      "source": "GitHub",
+      "cve_overviews": "MCPJam inspector is the local-first development platform for MCP servers. Versions 1.4.2 and earlier are vulnerable to remote code execution (RCE) vulnerability, which allows an attacker to send a crafted HTTP request that triggers the installation of an MCP server, leading to RCE. Since MCPJam inspector by default listens on 0.0.0.0 instead of 127.0.0.1, an attacker can trigger the RCE remotely via a simple HTTP request. Version 1.4.3 contains a patch.",
+      "time": "2026-03-27 15:42:29"
+    },
+    {
       "cve_id": "CVE-2026-27858",
       "title": "高危漏洞: CVE-2026-27858 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -203,83 +294,6 @@
       "refs": "https://lavender-bicycle-a5a.notion.site/Tenda_AC5_WizardHandle_PPW-32053a41781f80cab094d750d30dc9a8?source=copy_link\nhttps://vuldb.com/?ctiid.353657\nhttps://vuldb.com/?id.353657",
       "source": "NVD",
       "time": "2026-03-27 06:58:01"
-    },
-    {
-      "cve_id": "CVE-2026-33747",
-      "title": "高危漏洞: CVE-2026-33747 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-27T01:16:21.330",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner. Prior to version 0.28.1, when using a custom BuildKit frontend, the frontend can craft an API message that causes files to be written outside of the BuildKit state directory for the execution context. The issue has been fixed in v0.28.1. The vulnerability requires using an untrusted BuildKit frontend set with `#syntax` or `--build-arg BUILDKIT_SYNTAX`. Using these options with a well-known frontend image like `docker/dockerfile` is not affected.",
-      "refs": "https://github.com/moby/buildkit/releases/tag/v0.28.1\nhttps://github.com/moby/buildkit/security/advisories/GHSA-4c29-8rgm-jvjj",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:57"
-    },
-    {
-      "cve_id": "CVE-2026-33745",
-      "title": "高危漏洞: CVE-2026-33745 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-03-27T01:16:21.167",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to 0.39.0, the cpp-httplib HTTP client forwards stored Basic Auth, Bearer Token, and Digest Auth credentials to arbitrary hosts when following cross-origin HTTP redirects (301/302/307/308). A malicious or compromised server can redirect the client to an attacker-controlled host, which then receives the plaintext credentials in the `Authorization` header. Version 0.39.0 fixes the issue.",
-      "refs": "https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-6hrp-7fq9-3qv2",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:52"
-    },
-    {
-      "cve_id": "CVE-2026-33744",
-      "title": "高危漏洞: CVE-2026-33744 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-03-27T01:16:21.007",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "BentoML is a Python library for building online serving systems optimized for AI apps and model inference. Prior to 1.4.37, the `docker.system_packages` field in `bentofile.yaml` accepts arbitrary strings that are interpolated directly into Dockerfile `RUN` commands without sanitization. Since `system_packages` is semantically a list of OS package names (data), users do not expect values to be interpreted as shell commands. A malicious `bentofile.yaml` achieves arbitrary command execution during `bentoml containerize` / `docker build`. Version 1.4.37 fixes the issue.",
-      "refs": "https://github.com/bentoml/BentoML/security/advisories/GHSA-jfjg-vc52-wqvf",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:48"
-    },
-    {
-      "cve_id": "CVE-2026-33725",
-      "title": "高危漏洞: CVE-2026-33725 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-03-27T01:16:19.837",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Metabase is an open source business intelligence and embedded analytics tool. In Metabase Enterprise prior to versions 1.54.22, 1.55.22, 1.56.22, 1.57.16, 1.58.10, and 1.59.4, authenticated admins on Metabase Enterprise Edition can achieve Remote Code Execution (RCE) and Arbitrary File Read via the `POST /api/ee/serialization/import` endpoint. A crafted serialization archive injects an `INIT` property into the H2 JDBC spec, which can execute arbitrary SQL during a database sync. We confirmed this was possible on Metabase Cloud. This only affects Metabase Enterprise. Metabase OSS lacks the affected codepaths. All versions of Metabase Enterprise that have serialization, which dates back to at least version 1.47, are affected. Metabase Enterprise versions 1.54.22, 1.55.22, 1.56.22, 1.57.16, 1.58.10, and 1.59.4 patch the issue. As a workaround, disable the serialization import endpoint in their Metabase instance to prevent access to the vulnerable codepaths.",
-      "refs": "https://github.com/metabase/metabase/security/advisories/GHSA-fppj-vcm3-w229",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:42"
-    },
-    {
-      "cve_id": "CVE-2026-33718",
-      "title": "高危漏洞: CVE-2026-33718 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-03-27T01:16:19.483",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
-      "description": "OpenHands is software for AI-driven development. Starting in version 1.5.0, a Command Injection vulnerability exists in the `get_git_diff()` method at `openhands/runtime/utils/git_handler.py:134`. The `path` parameter from the `/api/conversations/{conversation_id}/git/diff` API endpoint is passed unsanitized to a shell command, allowing authenticated attackers to execute arbitrary commands in the agent sandbox. The user is already allowed to instruct the agent to execute commands, but this bypasses the normal channels. Version 1.5.0 fixes the issue.",
-      "refs": "https://docs.python.org/3/library/shlex.html#shlex.quote\nhttps://docs.python.org/3/library/subprocess.html#security-considerations\nhttps://github.com/OpenHands/OpenHands/pull/13051",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:35"
-    },
-    {
-      "cve_id": "CVE-2026-4905",
-      "title": "高危漏洞: CVE-2026-4905 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-27T00:16:24.393",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda AC5 15.03.06.47. Impacted is the function formWifiWpsOOB of the file /goform/WifiWpsOOB of the component POST Request Handler. Performing a manipulation of the argument index results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/Tenda_AC5_WifiWpsOOB_index-32053a41781f8096a9b6e48177c25eb0?source=copy_link\nhttps://vuldb.com/?ctiid.353656\nhttps://vuldb.com/?id.353656",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:31"
-    },
-    {
-      "cve_id": "CVE-2026-4904",
-      "title": "高危漏洞: CVE-2026-4904 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-27T00:16:24.170",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Tenda AC5 15.03.06.47. This issue affects the function formSetCfm of the file /goform/setcfm of the component POST Request Handler. Such manipulation of the argument funcpara1 leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/Tenda_AC5_setcfm_funcpara1-32053a41781f8073a4d6ef8076abe644?source=copy_link\nhttps://vuldb.com/?ctiid.353655\nhttps://vuldb.com/?id.353655",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:24"
     }
   ]
 }
