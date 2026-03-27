@@ -1,6 +1,76 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-21643",
+      "title": "漏洞仓库: CVE-2026-21643",
+      "cvss_score": null,
+      "published_date": "2026-03-27T19:11:15Z",
+      "updated_date": "2026-03-27T19:20:04Z",
+      "vector_string": "N/A",
+      "description": "Python PoC and Nuclei template for CVE-2026-21643 (Pre-Authentication SQL Injection in FortiClient EMS 7.4.4)",
+      "refs": "https://github.com/alirezac0/CVE-2026-21643",
+      "source": "GitHub",
+      "cve_overviews": "An improper neutralization of special elements used in an sql command ('sql injection') vulnerability in Fortinet FortiClientEMS 7.4.4 may allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests.",
+      "time": "2026-03-27 21:26:38"
+    },
+    {
+      "cve_id": "CVE-2026-20963",
+      "title": "漏洞仓库: CVE-2026-20963",
+      "cvss_score": null,
+      "published_date": "2026-03-27T21:03:46Z",
+      "updated_date": "2026-03-27T21:03:50Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/jenniferreire26/CVE-2026-20963",
+      "source": "GitHub",
+      "cve_overviews": "Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
+      "time": "2026-03-27 21:26:27"
+    },
+    {
+      "cve_id": "CVE-2026-34375",
+      "title": "高危漏洞: CVE-2026-34375 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-03-27T19:16:43.107",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the YPTWallet Stripe payment confirmation page directly echoes the `$_REQUEST['plugin']` parameter into a JavaScript block without any encoding or sanitization. The `plugin` parameter is not included in any of the framework's input filter lists defined in `security.php`, so it passes through completely raw. An attacker can inject arbitrary JavaScript by crafting a malicious URL and sending it to a victim user. The same script block also outputs the current user's username and password hash via `User::getUserName()` and `User::getUserPass()`, meaning a successful XSS exploitation can immediately exfiltrate these credentials. Commit fa0bc102493a15d79fe03f86c07ab7ca1b5b63e2 fixes the issue.",
+      "refs": "https://github.com/WWBN/AVideo/commit/fa0bc102493a15d79fe03f86c07ab7ca1b5b63e2\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-pm37-62g7-p768",
+      "source": "NVD",
+      "time": "2026-03-27 21:26:18"
+    },
+    {
+      "cve_id": "CVE-2026-34374",
+      "title": "高危漏洞: CVE-2026-34374 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-03-27T19:16:42.930",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `Live_schedule::keyExists()` method constructs a SQL query by interpolating a stream key directly into the query string without parameterization. This method is called as a fallback from `LiveTransmition::keyExists()` when the initial parameterized lookup returns no results. Although the calling function correctly uses parameterized queries for its own lookup, the fallback path to `Live_schedule::keyExists()` undoes this protection entirely. This vulnerability is distinct from GHSA-pvw4-p2jm-chjm, which covers SQL injection via the `live_schedule_id` parameter in the reminder function. This finding targets the stream key lookup path used during RTMP publish authentication. As of time of publication, no patched versions are available.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-xgv5-66wp-ch88",
+      "source": "NVD",
+      "time": "2026-03-27 21:26:13"
+    },
+    {
+      "cve_id": "CVE-2026-4965",
+      "title": "高危漏洞: CVE-2026-4965 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-27T18:16:06.590",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in letta-ai letta 0.16.4. This issue affects the function resolve_type of the file letta/functions/ast_parsers.py of the component Incomplete Fix CVE-2025-6101. Performing a manipulation results in improper neutralization of directives in dynamically evaluated code. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. Once again VulDB remains the best source for vulnerability data.",
+      "refs": "https://gist.github.com/YLChen-007/fc09bc447a73bba526c1642d9ce73ca5\nhttps://vuldb.com/?ctiid.353842\nhttps://vuldb.com/?id.353842",
+      "source": "NVD",
+      "time": "2026-03-27 21:26:08"
+    },
+    {
+      "cve_id": "CVE-2025-69986",
+      "title": "高危漏洞: CVE-2025-69986 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-27T15:16:45.887",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A buffer overflow vulnerability exists in the ONVIF GetStreamUri function of LSC Indoor Camera V7.6.32. The application fails to validate the length of the Protocol parameter inside the Transport element. By sending a specially crafted SOAP request containing an oversized protocol string, an attacker can overflow the stack buffer, overwriting the return instruction pointer (RIP). This vulnerability allows for Denial of Service (DoS) via device crash or Remote Code Execution (RCE) in the context of the ONVIF service.",
+      "refs": "https://github.com/victorGoeman/LSC-Indoor-Camera-Security-Research/blob/main/CVE-2025-69986.md",
+      "source": "NVD",
+      "time": "2026-03-27 21:26:01"
+    },
+    {
       "cve_id": "CVE-2026-4447",
       "title": "漏洞仓库: CVE-2026-4447",
       "cvss_score": null,
@@ -218,78 +288,6 @@
       "refs": "https://datatracker.ietf.org/doc/html/rfc8628#section-5.4\nhttps://github.com/openbao/openbao/commit/e32103951925723e9787e33886ab6b6ec20f4964\nhttps://github.com/openbao/openbao/security/advisories/GHSA-7q7g-x6vg-xpc3",
       "source": "NVD",
       "time": "2026-03-27 18:44:24"
-    },
-    {
-      "cve_id": "CVE-2026-33755",
-      "title": "高危漏洞: CVE-2026-33755 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-27T15:16:57.527",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Group-Office is an enterprise customer relationship management and groupware tool. Prior to versions 6.8.158, 25.0.92, and 26.0.17, an authenticated SQL Injection vulnerability in the JMAP `Contact/query` endpoint allows any authenticated user with basic addressbook access to extract arbitrary data from the database — including active session tokens of other users. This enables full account takeover of any user, including the System Administrator, without knowing their password. Versions 6.8.158, 25.0.92, and 26.0.17 fix the issue.",
-      "refs": "https://github.com/Intermesh/groupoffice/security/advisories/GHSA-3gc4-5993-c2qc",
-      "source": "NVD",
-      "time": "2026-03-27 18:44:06"
-    },
-    {
-      "cve_id": "CVE-2026-27880",
-      "title": "高危漏洞: CVE-2026-27880 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-27T15:16:51.323",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The OpenFeature feature toggle evaluation endpoint reads unbounded values into memory, which can cause out-of-memory crashes.",
-      "refs": "https://grafana.com/security/security-advisories/cve-2026-27880\nhttps://grafana.com/security/security-advisories/cve-2026-27880",
-      "source": "NVD",
-      "time": "2026-03-27 18:43:47"
-    },
-    {
-      "cve_id": "CVE-2026-27876",
-      "title": "高危漏洞: CVE-2026-27876 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-03-27T15:16:50.920",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A chained attack via SQL Expressions and a Grafana Enterprise plugin can lead to a remote arbitrary code execution impact (RCE). This is enabled by a feature in Grafana (OSS), so all users are always recommended to update to avoid future attack vectors going this path.\n\nOnly instances with the sqlExpressions feature toggle enabled are vulnerable.",
-      "refs": "https://grafana.com/security/security-advisories/cve-2026-27876",
-      "source": "NVD",
-      "time": "2026-03-27 18:43:26"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: By-Poloss..-..CVE-2026-33868",
-      "cvss_score": null,
-      "published_date": "2026-03-27T09:23:51Z",
-      "updated_date": "2026-03-27T09:34:05Z",
-      "vector_string": "N/A",
-      "description": "Mastodon - Open Redirect",
-      "refs": "https://github.com/O99099O/By-Poloss..-..CVE-2026-33868",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-27 15:43:36"
-    },
-    {
-      "cve_id": "CVE-2026-33017",
-      "title": "漏洞仓库: PoC-CVE-2026-33017",
-      "cvss_score": null,
-      "published_date": "2026-03-27T07:15:07Z",
-      "updated_date": "2026-03-27T12:48:46Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-33017: Unauthenticated RCE in Langflow",
-      "refs": "https://github.com/z4yd3/PoC-CVE-2026-33017",
-      "source": "GitHub",
-      "cve_overviews": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
-      "time": "2026-03-27 15:43:30"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE_2026_24061",
-      "cvss_score": null,
-      "published_date": "2026-02-02T10:30:25Z",
-      "updated_date": "2026-03-27T13:51:19Z",
-      "vector_string": "N/A",
-      "description": " GNU InetUtils telnetd - Unauthenticated Remote Root via NEW-ENVIRON Variable Injection.",
-      "refs": "https://github.com/franckferman/CVE_2026_24061",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-27 15:43:08"
     }
   ]
 }
