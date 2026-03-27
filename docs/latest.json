@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-27858",
+      "title": "高危漏洞: CVE-2026-27858 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-27T09:16:20.073",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Attacker can send a specifically crafted message before authentication that causes managesieve to allocate large amount of memory.\r\n Attacker can force managesieve-login to be unavailable by repeatedly crashing the process. Protect access to managesieve protocol, or install fixed version. No publicly available exploits are known.",
+      "refs": "https://documentation.open-xchange.com/dovecot/security/advisories/csaf/2026/oxdc-adv-2026-0001.json",
+      "source": "NVD",
+      "time": "2026-03-27 12:42:03"
+    },
+    {
+      "cve_id": "CVE-2026-27856",
+      "title": "高危漏洞: CVE-2026-27856 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-03-27T09:16:19.767",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Doveadm credentials are verified using direct comparison which is susceptible to timing oracle attack. An attacker can use this to determine the configured credentials. Figuring out the credential will lead into full access to the affected component. Limit access to the doveadm http service port, install fixed version. No publicly available exploits are known.",
+      "refs": "https://documentation.open-xchange.com/dovecot/security/advisories/csaf/2026/oxdc-adv-2026-0001.json",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:57"
+    },
+    {
+      "cve_id": "CVE-2026-24031",
+      "title": "高危漏洞: CVE-2026-24031 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-03-27T09:16:19.447",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Dovecot SQL based authentication can be bypassed when auth_username_chars is cleared by admin. This vulnerability allows bypassing authentication for any user and user enumeration. Do not clear auth_username_chars. If this is not possible, install latest fixed version. No publicly available exploits are known.",
+      "refs": "https://documentation.open-xchange.com/dovecot/security/advisories/csaf/2026/oxdc-adv-2026-0001.json",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:51"
+    },
+    {
+      "cve_id": "CVE-2025-59032",
+      "title": "高危漏洞: CVE-2025-59032 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-27T09:16:18.933",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "ManageSieve AUTHENTICATE command crashes when using literal as SASL initial response. This can be used to crash ManageSieve service repeatedly, making it unavailable for other users. Control access to ManageSieve port, or disable the service if it's not needed. Alternatively upgrade to a fixed version. No publicly available exploits are known.",
+      "refs": "https://documentation.open-xchange.com/dovecot/security/advisories/csaf/2026/oxdc-adv-2026-0001.json",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:47"
+    },
+    {
+      "cve_id": "CVE-2026-33280",
+      "title": "高危漏洞: CVE-2026-33280 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-27T06:16:38.837",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Hidden functionality issue exists in BUFFALO Wi-Fi router products, which may allow an attacker to gain access to the product’s debugging functionality, resulting in the execution of arbitrary OS commands.",
+      "refs": "https://jvn.jp/en/jp/JVN83788689/\nhttps://www.buffalo.jp/news/detail/20260323-01.html",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:42"
+    },
+    {
+      "cve_id": "CVE-2026-32678",
+      "title": "高危漏洞: CVE-2026-32678 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-27T06:16:38.650",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Authentication bypass issue exists in BUFFALO Wi-Fi router products, which may allow an attacker to alter critical configuration settings without authentication.",
+      "refs": "https://jvn.jp/en/jp/JVN83788689/\nhttps://www.buffalo.jp/news/detail/20260323-01.html",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:37"
+    },
+    {
+      "cve_id": "CVE-2026-32669",
+      "title": "高危漏洞: CVE-2026-32669 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-27T06:16:38.450",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Code injection vulnerability exists in BUFFALO Wi-Fi router products. If this vulnerability is exploited, an arbitrary code may be executed on the products.",
+      "refs": "https://jvn.jp/en/jp/JVN83788689/\nhttps://www.buffalo.jp/news/detail/20260323-01.html",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:30"
+    },
+    {
+      "cve_id": "CVE-2026-27650",
+      "title": "高危漏洞: CVE-2026-27650 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-27T06:16:38.257",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "OS Command Injection vulnerability exists in BUFFALO Wi-Fi router products. If this vulnerability is exploited, an arbitrary OS command may be executed on the products.",
+      "refs": "https://jvn.jp/en/jp/JVN83788689/\nhttps://www.buffalo.jp/news/detail/20260323-01.html",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:26"
+    },
+    {
+      "cve_id": "CVE-2026-22744",
+      "title": "高危漏洞: CVE-2026-22744 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-27T06:16:38.120",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "In RedisFilterExpressionConverter of spring-ai-redis-store, when a user-controlled string is passed as a filter value for a TAG field, stringValue() inserts the value directly into the @field:{VALUE} RediSearch TAG block without escaping characters.This issue affects Spring AI: from 1.0.0 before 1.0.5, from 1.1.0 before 1.1.4.",
+      "refs": "https://spring.io/security/cve-2026-22744",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:22"
+    },
+    {
+      "cve_id": "CVE-2026-22743",
+      "title": "高危漏洞: CVE-2026-22743 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-27T06:16:37.977",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Spring AI's spring-ai-neo4j-store contains a Cypher injection vulnerability in Neo4jVectorFilterExpressionConverter. When a user-controlled string is passed as a filter expression key in Neo4jVectorFilterExpressionConverter of spring-ai-neo4j-store, doKey() embeds the key into a backtick-delimited Cypher property accessor (node.`metadata.`) after stripping only double quotes, without escaping embedded backticks.This issue affects Spring AI: from 1.0.0 before 1.0.5, from 1.1.0 before 1.1.4.",
+      "refs": "https://spring.io/security/cve-2026-22743",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:16"
+    },
+    {
+      "cve_id": "CVE-2026-22742",
+      "title": "高危漏洞: CVE-2026-22742 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-03-27T06:16:37.833",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Spring AI's spring-ai-bedrock-converse contains a Server-Side Request Forgery (SSRF) vulnerability in BedrockProxyChatModel when processing multimodal messages that include user-supplied media URLs. Insufficient validation of those URLs allows an attacker to induce the server to issue HTTP requests to unintended internal or external destinations.\nThis issue affects Spring AI: from 1.0.0 before 1.0.5, from 1.1.0 before 1.1.4.",
+      "refs": "https://spring.io/security/cve-2026-22742",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:10"
+    },
+    {
+      "cve_id": "CVE-2026-22738",
+      "title": "高危漏洞: CVE-2026-22738 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-03-27T06:16:37.663",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Spring AI, a SpEL injection vulnerability exists in SimpleVectorStore when a user-supplied value is used as a filter expression key. A malicious actor could exploit this to execute arbitrary code. Only applications that use SimpleVectorStore and pass user-supplied input as a filter expression key are affected.\nThis issue affects Spring AI: from 1.0.0 before 1.0.5, from 1.1.0 before 1.1.4.",
+      "refs": "https://spring.io/security/cve-2026-22738",
+      "source": "NVD",
+      "time": "2026-03-27 12:41:02"
+    },
+    {
       "cve_id": "CVE-2026-29955",
       "title": "漏洞仓库: CVE-2026-29955",
       "cvss_score": null,
@@ -148,148 +280,6 @@
       "refs": "https://lavender-bicycle-a5a.notion.site/Tenda_AC5_setcfm_funcpara1-32053a41781f8073a4d6ef8076abe644?source=copy_link\nhttps://vuldb.com/?ctiid.353655\nhttps://vuldb.com/?id.353655",
       "source": "NVD",
       "time": "2026-03-27 06:57:24"
-    },
-    {
-      "cve_id": "CVE-2026-33945",
-      "title": "高危漏洞: CVE-2026-33945 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-03-27T00:16:23.633",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Incus instances have an option to provide credentials to systemd in the guest. For containers, this is handled through a shared directory. Prior to version 6.23.0, an attacker can set a configuration key named something like `systemd.credential.../../../../../../root/.bashrc` to cause Incus to write outside of the `credentials` directory associated with the container. This makes use of the fact that the Incus syntax for such credentials is `systemd.credential.XYZ` where `XYZ` can itself contain more periods. While it's not possible to read any data this way, it's possible to write to arbitrary files as root, enabling both privilege escalation and denial of service attacks. Version 6.23.0 fixes the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-q4q8-7f2j-9h9f",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:19"
-    },
-    {
-      "cve_id": "CVE-2026-33898",
-      "title": "高危漏洞: CVE-2026-33898 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-27T00:16:23.333",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 6.23.0, the web server spawned by `incus webui` incorrectly validates the authentication token such that an invalid value will be accepted. `incus webui` runs a local web server on a random localhost port. For authentication, it provides the user with a URL containing an authentication token. When accessed with that token, Incus creates a cookie persisting that token without needing to include it in subsequent HTTP requests. While the Incus client correctly validates the value of the cookie, it does not correctly validate the token when passed int the URL.\nThis allows for an attacker able to locate and talk to the temporary web server on localhost to have as much access to Incus as the user who ran `incus webui`. This can lead to privilege escalation by another local user or an access to the user's Incus instances and possibly system resources by a remote attack able to trick the local user into interacting with the Incus UI web server. Version 6.23.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-453r-g2pg-cxxq",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:14"
-    },
-    {
-      "cve_id": "CVE-2026-33697",
-      "title": "高危漏洞: CVE-2026-33697 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-27T00:16:23.133",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Cocos AI is a confidential computing system for AI. The current implementation of attested TLS (aTLS) in CoCoS is vulnerable to a relay attack affecting all versions from v0.4.0 through v0.8.2. This vulnerability is present in both the AMD SEV-SNP and Intel TDX deployment targets supported by CoCoS. In the affected design, an attacker may be able to extract the ephemeral TLS private key used during the intra-handshake attestation. Because the attestation evidence is bound to the ephemeral key but not to the TLS channel, possession of that key is sufficient to relay or divert the attested TLS session. A client will accept the connection under false assumptions about the endpoint it is communicating with — the attestation report cannot distinguish the genuine attested service from the attacker's relay. This undermines the intended authentication guarantees of attested TLS. A successful attack may allow an attacker to impersonate an attested CoCoS service and access data or operations that the client intended to send only to the genuine attested endpoint. Exploitation requires the attacker to first extract the ephemeral TLS private key, which is possible through physical access to the server hardware, transient execution attacks, or side-channel attacks. Note that the aTLS implementation was fully redesigned in v0.7.0, but the redesign does not address this vulnerability. The relay attack weakness is architectural and affects all releases in the v0.4.0–v0.8.2 range. This vulnerability class was formally analyzed and demonstrated across multiple attested TLS implementations, including CoCoS, by researchers whose findings were disclosed to the IETF TLS Working Group. Formal verification was conducted using ProVerif. As of time of publication, there is no patch available. No complete workaround is available. The following hardening measures reduce but do not eliminate the risk: Keep TEE firmware and microcode up to date to reduce the key-extraction surface; define strict attestation policies that validate all available report fields, including firmware versions, TCB levels, and platform configuration registers; and/or enable mutual aTLS with CA-signed certificates where deployment architecture permits.",
-      "refs": "https://github.com/ultravioletrs/cocos/security/advisories/GHSA-vfgg-mvxx-mgg7",
-      "source": "NVD",
-      "time": "2026-03-27 06:57:06"
-    },
-    {
-      "cve_id": "CVE-2026-28788",
-      "title": "高危漏洞: CVE-2026-28788 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-03-27T00:16:22.673",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to version 0.8.6, any authenticated user can overwrite any file's content by ID through the `POST /api/v1/retrieval/process/files/batch` endpoint. The endpoint performs no ownership check, so a regular user with read access to a shared knowledge base can obtain file UUIDs via `GET /api/v1/knowledge/{id}/files` and then overwrite those files, escalating from read to write. The overwritten content is served to the LLM via RAG, meaning the attacker controls what the model tells other users. Version 0.8.6 patches the issue.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-jjp7-g2jw-wh3j",
-      "source": "NVD",
-      "time": "2026-03-27 06:56:57"
-    },
-    {
-      "cve_id": "CVE-2026-27893",
-      "title": "高危漏洞: CVE-2026-27893 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-27T00:16:22.333",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "vLLM is an inference and serving engine for large language models (LLMs). Starting in version 0.10.1 and prior to version 0.18.0, two model implementation files hardcode `trust_remote_code=True` when loading sub-components, bypassing the user's explicit `--trust-remote-code=False` security opt-out. This enables remote code execution via malicious model repositories even when the user has explicitly disabled remote code trust. Version 0.18.0 patches the issue.",
-      "refs": "https://github.com/vllm-project/vllm/commit/00bd08edeee5dd4d4c13277c0114a464011acf72\nhttps://github.com/vllm-project/vllm/pull/36192\nhttps://github.com/vllm-project/vllm/security/advisories/GHSA-7972-pg2x-xr59",
-      "source": "NVD",
-      "time": "2026-03-27 06:56:51"
-    },
-    {
-      "cve_id": "CVE-2026-23744",
-      "title": "漏洞仓库: CVE-2026-23744",
-      "cvss_score": null,
-      "published_date": "2026-03-26T16:21:22Z",
-      "updated_date": "2026-03-26T22:36:49Z",
-      "vector_string": "N/A",
-      "description": "A minimal proof-of-concept (PoC) for CVE-2026-23744, demonstrating an unauthenticated RCE in MCPJam Inspector (<= 1.4.2).",
-      "refs": "https://github.com/ctzisme/CVE-2026-23744",
-      "source": "GitHub",
-      "cve_overviews": "MCPJam inspector is the local-first development platform for MCP servers. Versions 1.4.2 and earlier are vulnerable to remote code execution (RCE) vulnerability, which allows an attacker to send a crafted HTTP request that triggers the installation of an MCP server, leading to RCE. Since MCPJam inspector by default listens on 0.0.0.0 instead of 127.0.0.1, an attacker can trigger the RCE remotely via a simple HTTP request. Version 1.4.3 contains a patch.",
-      "time": "2026-03-27 01:23:43"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: BACkupCVE-2026-29971",
-      "cvss_score": null,
-      "published_date": "2026-03-26T22:39:43Z",
-      "updated_date": "2026-03-26T22:56:58Z",
-      "vector_string": "N/A",
-      "description": "An attacker can execute arbitrary JavaScript in the victim's browser, potentially leading to session hijacking or privilege escalation.",
-      "refs": "https://github.com/tharunchidurala-cyber/BACkupCVE-2026-29971",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-27 01:23:36"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE-2026-29971",
-      "cvss_score": null,
-      "published_date": "2026-03-26T22:56:31Z",
-      "updated_date": "2026-03-26T22:58:17Z",
-      "vector_string": "N/A",
-      "description": "An attacker can execute arbitrary JavaScript in the victim's browser, potentially leading to session hijacking or privilege escalation.",
-      "refs": "https://github.com/Tharooon/CVE-2026-29971",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-27 01:23:32"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE-2026-29909-MRCMS-vulnerability",
-      "cvss_score": null,
-      "published_date": "2026-03-26T23:49:16Z",
-      "updated_date": "2026-03-27T00:01:13Z",
-      "vector_string": "N/A",
-      "description": "MRCMS V3.1.2 contains an unauthenticated directory enumeration vulnerability in the file management module. The `/admin/file/list.do` endpoint lacks authentication controls and proper input validation, allowing remote attackers to enumerate directory contents on the server without any credentials.",
-      "refs": "https://github.com/qflksheep/CVE-2026-29909-MRCMS-vulnerability",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-27 01:23:28"
-    },
-    {
-      "cve_id": "CVE-2026-2576",
-      "title": "漏洞仓库: CVE_2026_2576_PoC",
-      "cvss_score": null,
-      "published_date": "2026-03-26T23:37:39Z",
-      "updated_date": "2026-03-27T00:03:37Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-2576 — Business Directory Plugin SQLi PoC (Local Setup). Unauthenticated Time-Based Blind SQL Injection Business Directory Plugin for WordPress ≤ 6.4.21",
-      "refs": "https://github.com/SowatKheang/CVE_2026_2576_PoC",
-      "source": "GitHub",
-      "cve_overviews": "The Business Directory Plugin – Easy Listing Directories for WordPress plugin for WordPress is vulnerable to time-based SQL Injection via the 'payment' parameter in all versions up to, and including, 6.4.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "time": "2026-03-27 01:23:24"
-    },
-    {
-      "cve_id": "CVE-2026-4903",
-      "title": "高危漏洞: CVE-2026-4903 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-26T23:16:21.307",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Tenda AC5 15.03.06.47. This vulnerability affects the function formQuickIndex of the file /goform/QuickIndex of the component POST Request Handler. This manipulation of the argument PPPOEPassword causes stack-based buffer overflow. The attack may be initiated remotely. The exploit has been published and may be used.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/Tenda_AC5_QuickIndex_PPPOEPassword-32053a41781f808dae98f99c99bcb21c?source=copy_link\nhttps://vuldb.com/?ctiid.353654\nhttps://vuldb.com/?id.353654",
-      "source": "NVD",
-      "time": "2026-03-27 01:23:07"
-    },
-    {
-      "cve_id": "CVE-2026-4902",
-      "title": "高危漏洞: CVE-2026-4902 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-26T23:16:21.090",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda AC5 15.03.06.47. This affects the function fromAddressNat of the file /goform/addressNat of the component POST Request Handler. The manipulation of the argument page results in stack-based buffer overflow. The attack can be launched remotely. The exploit is now public and may be used.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/Tenda_AC5_addressNat_page-32053a41781f8017938dda66f0193ebd?source=copy_link\nhttps://vuldb.com/?ctiid.353653\nhttps://vuldb.com/?id.353653",
-      "source": "NVD",
-      "time": "2026-03-27 01:23:03"
     }
   ]
 }
