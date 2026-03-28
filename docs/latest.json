@@ -1,6 +1,56 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-21643",
+      "title": "漏洞仓库: CVE-2026-21643",
+      "cvss_score": null,
+      "published_date": "2026-03-28T19:09:38Z",
+      "updated_date": "2026-03-28T19:43:38Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-21643",
+      "refs": "https://github.com/0xBlackash/CVE-2026-21643",
+      "source": "GitHub",
+      "cve_overviews": "An improper neutralization of special elements used in an sql command ('sql injection') vulnerability in Fortinet FortiClientEMS 7.4.4 may allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests.",
+      "time": "2026-03-28 21:22:18"
+    },
+    {
+      "cve_id": "CVE-2026-23744",
+      "title": "漏洞仓库: CVE-2026-23744-HACKTHEBOX",
+      "cvss_score": null,
+      "published_date": "2026-03-28T20:03:34Z",
+      "updated_date": "2026-03-28T20:06:25Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/d0x-awrqxavc/CVE-2026-23744-HACKTHEBOX",
+      "source": "GitHub",
+      "cve_overviews": "MCPJam inspector is the local-first development platform for MCP servers. Versions 1.4.2 and earlier are vulnerable to remote code execution (RCE) vulnerability, which allows an attacker to send a crafted HTTP request that triggers the installation of an MCP server, leading to RCE. Since MCPJam inspector by default listens on 0.0.0.0 instead of 127.0.0.1, an attacker can trigger the RCE remotely via a simple HTTP request. Version 1.4.3 contains a patch.",
+      "time": "2026-03-28 21:21:55"
+    },
+    {
+      "cve_id": "CVE-2026-31802",
+      "title": "漏洞仓库: CVE-2026-31802",
+      "cvss_score": null,
+      "published_date": "2026-03-28T20:49:46Z",
+      "updated_date": "2026-03-28T20:50:11Z",
+      "vector_string": "N/A",
+      "description": "Demonstrate and analyze the CVE-2026-31802 path traversal vulnerability in npm tar, enabling arbitrary file overwrite via symlink extraction.",
+      "refs": "https://github.com/Recorded-texteditor120/CVE-2026-31802",
+      "source": "GitHub",
+      "cve_overviews": "node-tar is a full-featured Tar for Node.js. Prior to version 7.5.11, tar (npm) can be tricked into creating a symlink that points outside the extraction directory by using a drive-relative symlink target such as C:../../../target.txt, which enables file overwrite outside cwd during normal tar.x() extraction. This vulnerability is fixed in 7.5.11.",
+      "time": "2026-03-28 21:21:35"
+    },
+    {
+      "cve_id": "CVE-2026-5004",
+      "title": "高危漏洞: CVE-2026-5004 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-28T18:15:57.917",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Wavlink WL-WN579X3-C 231124. This impacts the function sub_4019FC of the file /cgi-bin/firewall.cgi of the component UPNP Handler. Executing a manipulation of the argument UpnpEnabled can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Litengzheng/vul_db/blob/main/WL-WN579X3-C/vul_200/README.md\nhttps://vuldb.com/submit/779149\nhttps://vuldb.com/vuln/353891",
+      "source": "NVD",
+      "time": "2026-03-28 21:21:12"
+    },
+    {
       "cve_id": "CVE-2026-5002",
       "title": "高危漏洞: CVE-2026-5002 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -238,50 +288,6 @@
       "refs": "http://www.varaneckas.com/jad/\nhttps://www.exploit-db.com/exploits/42076\nhttps://www.vulncheck.com/advisories/jad-8e-1kali1-stack-based-buffer-overflow-remote-code-execution",
       "source": "NVD",
       "time": "2026-03-28 15:23:22"
-    },
-    {
-      "cve_id": "CVE-2016-20048",
-      "title": "高危漏洞: CVE-2016-20048 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:01.210",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "iSelect 1.4.0-2+b1 contains a local buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying an oversized value to the -k/--key parameter. Attackers can craft a malicious argument containing a NOP sled, shellcode, and return address to overflow a 1024-byte stack buffer and gain code execution with user privileges.",
-      "refs": "http://www.ossp.org/pkg/tool/iselect/\nhttps://www.exploit-db.com/exploits/41076\nhttps://www.vulncheck.com/advisories/iselect-2-b1-local-buffer-overflow-via-key-parameter",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:16"
-    },
-    {
-      "cve_id": "CVE-2016-20047",
-      "title": "高危漏洞: CVE-2016-20047 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:01.013",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "EKG Gadu 1.9~pre+r2855-3+b1 contains a local buffer overflow vulnerability in the username handling that allows local attackers to execute arbitrary code by supplying an oversized username string. Attackers can trigger the overflow in the strlcpy function by passing a crafted buffer exceeding 258 bytes to overwrite the instruction pointer and execute shellcode with user privileges.",
-      "refs": "http://ekg.chmurka.net/\nhttps://www.exploit-db.com/exploits/40392\nhttps://www.vulncheck.com/advisories/ekg-gadu-local-buffer-overflow-via-username-parameter",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:12"
-    },
-    {
-      "cve_id": "CVE-2016-20046",
-      "title": "高危漏洞: CVE-2016-20046 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:00.827",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "zFTP Client 20061220+dfsg3-4.1 contains a buffer overflow vulnerability in the NAME parameter handling of FTP connections that allows local attackers to crash the application or execute arbitrary code. Attackers can supply an oversized NAME value exceeding the 80-byte buffer allocated in strcpy_chk to overwrite the instruction pointer and execute shellcode with user privileges.",
-      "refs": "http://cernlib.web.cern.ch/cernlib/\nhttps://www.exploit-db.com/exploits/40203\nhttps://www.vulncheck.com/advisories/zftp-client-20061220-dfsg3-local-buffer-overflow",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:04"
-    },
-    {
-      "cve_id": "CVE-2016-20045",
-      "title": "高危漏洞: CVE-2016-20045 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:00.630",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "HNB Organizer 1.9.18-10 contains a local buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying an oversized argument to the -rc command-line parameter. Attackers can craft a malicious input string exceeding 108 bytes containing shellcode and a return address to overwrite the stack and achieve code execution.",
-      "refs": "http://hnb.sourceforge.net/\nhttps://www.exploit-db.com/exploits/40025\nhttps://www.vulncheck.com/advisories/hnb-organizer-10-local-buffer-overflow-via-rc-parameter",
-      "source": "NVD",
-      "time": "2026-03-28 15:22:59"
     }
   ]
 }
