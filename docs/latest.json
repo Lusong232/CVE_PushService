@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5002",
+      "title": "高危漏洞: CVE-2026-5002 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T17:16:45.450",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in PromtEngineer localGPT up to 4d41c7d1713b16b216d8e062e51a5dd88b20b054. The impacted element is the function _route_using_overviews of the file backend/server.py of the component LLM Prompt Handler. Such manipulation leads to injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/August829/CVEP/issues/9\nhttps://vuldb.com/submit/779122\nhttps://vuldb.com/vuln/353889",
+      "source": "NVD",
+      "time": "2026-03-28 18:28:02"
+    },
+    {
+      "cve_id": "CVE-2026-5001",
+      "title": "高危漏洞: CVE-2026-5001 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T16:15:58.260",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in PromtEngineer localGPT up to 4d41c7d1713b16b216d8e062e51a5dd88b20b054. The affected element is the function do_POST of the file backend/server.py. This manipulation causes unrestricted upload. The attack is possible to be carried out remotely. The exploit has been published and may be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/August829/CVEP/issues/7\nhttps://vuldb.com/submit/778316\nhttps://vuldb.com/vuln/353888",
+      "source": "NVD",
+      "time": "2026-03-28 18:27:43"
+    },
+    {
+      "cve_id": "CVE-2026-5000",
+      "title": "高危漏洞: CVE-2026-5000 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T15:16:38.563",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in PromtEngineer localGPT up to 4d41c7d1713b16b216d8e062e51a5dd88b20b054. Impacted is the function LocalGPTHandler of the file backend/server.py of the component API Endpoint. The manipulation of the argument BaseHTTPRequestHandler results in missing authentication. The attack can be executed remotely. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/August829/CVEP/issues/8\nhttps://vuldb.com/submit/778315\nhttps://vuldb.com/vuln/353887",
+      "source": "NVD",
+      "time": "2026-03-28 18:27:25"
+    },
+    {
+      "cve_id": "CVE-2026-4998",
+      "title": "高危漏洞: CVE-2026-4998 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T14:15:58.987",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Sinaptik AI PandasAI up to 3.0.0. This vulnerability affects the function CodeExecutor.execute of the file pandasai/core/code_execution/code_executor.py of the component Chat Message Handler. Executing a manipulation can lead to code injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/78ed1dbcccdb8895adb230dddde3316d\nhttps://vuldb.com/submit/778270\nhttps://vuldb.com/vuln/353885",
+      "source": "NVD",
+      "time": "2026-03-28 18:27:03"
+    },
+    {
       "cve_id": "CVE-2026-28466",
       "title": "漏洞仓库: CVE-2026-28466",
       "cvss_score": null,
@@ -238,50 +282,6 @@
       "refs": "http://hnb.sourceforge.net/\nhttps://www.exploit-db.com/exploits/40025\nhttps://www.vulncheck.com/advisories/hnb-organizer-10-local-buffer-overflow-via-rc-parameter",
       "source": "NVD",
       "time": "2026-03-28 15:22:59"
-    },
-    {
-      "cve_id": "CVE-2016-20044",
-      "title": "高危漏洞: CVE-2016-20044 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:00.447",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PInfo 0.6.9-5.1 contains a local buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying an oversized argument to the -m parameter. Attackers can craft a malicious input string with 564 bytes of padding followed by a return address to overwrite the instruction pointer and execute shellcode with user privileges.",
-      "refs": "http://pinfo.alioth.debian.org/\nhttps://www.exploit-db.com/exploits/40023\nhttps://www.vulncheck.com/advisories/pinfo-local-buffer-overflow-via-m-parameter",
-      "source": "NVD",
-      "time": "2026-03-28 15:22:55"
-    },
-    {
-      "cve_id": "CVE-2016-20043",
-      "title": "高危漏洞: CVE-2016-20043 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:00.250",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NRSS RSS Reader 0.3.9-1 contains a stack buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying an oversized argument to the -F parameter. Attackers can craft a malicious input with 256 bytes of padding followed by a controlled EIP value to overwrite the return address and achieve code execution.",
-      "refs": "http://www.codezen.org/nrss/\nhttps://www.exploit-db.com/exploits/39810\nhttps://www.vulncheck.com/advisories/nrss-rss-reader-1-stack-buffer-overflow",
-      "source": "NVD",
-      "time": "2026-03-28 15:22:50"
-    },
-    {
-      "cve_id": "CVE-2016-20042",
-      "title": "高危漏洞: CVE-2016-20042 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:00.057",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "TRN 3.6-23 contains a stack buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying an oversized argument to the application. Attackers can craft a malicious command-line argument with 156 bytes of padding followed by a return address to overwrite the instruction pointer and execute shellcode with user privileges.",
-      "refs": "https://sourceforge.net/projects/trn/\nhttps://www.exploit-db.com/exploits/39764\nhttps://www.vulncheck.com/advisories/trn-23-stack-buffer-overflow-local-code-execution",
-      "source": "NVD",
-      "time": "2026-03-28 15:22:45"
-    },
-    {
-      "cve_id": "CVE-2016-20041",
-      "title": "高危漏洞: CVE-2016-20041 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:15:59.860",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Yasr 0.6.9-5 contains a buffer overflow vulnerability that allows local attackers to crash the application or execute arbitrary code by supplying an oversized argument to the -p parameter. Attackers can invoke yasr with a crafted payload containing junk data, shellcode, and a return address to overwrite the stack and trigger code execution.",
-      "refs": "http://yasr.sourceforge.net/\nhttps://www.exploit-db.com/exploits/39734\nhttps://www.vulncheck.com/advisories/yasr-5-buffer-overflow-via-command-line-parameter",
-      "source": "NVD",
-      "time": "2026-03-28 15:22:39"
     }
   ]
 }
