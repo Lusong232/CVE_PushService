@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-1657",
+      "title": "漏洞仓库: -CVE-2026-1657",
+      "cvss_score": null,
+      "published_date": "2026-03-28T08:30:11Z",
+      "updated_date": "2026-03-28T08:34:49Z",
+      "vector_string": "N/A",
+      "description": " CVE-2026-1657 exploit Unauthenticated Image Upload via 'ep_upload_file_media' AJAX Endpoint",
+      "refs": "https://github.com/Vimash-Dilsara/-CVE-2026-1657",
+      "source": "GitHub",
+      "cve_overviews": "The EventPrime plugin for WordPress is vulnerable to unauthorized image file upload in all versions up to, and including, 4.2.8.4. This is due to the plugin registering the upload_file_media AJAX action as publicly accessible (nopriv-enabled) without implementing any authentication, authorization, or nonce verification despite a nonce being created. This makes it possible for unauthenticated attackers to upload image files to the WordPress uploads directory and create Media Library attachments via the ep_upload_file_media endpoint.",
+      "time": "2026-03-28 09:28:20"
+    },
+    {
       "cve_id": "CVE-2025-12886",
       "title": "高危漏洞: CVE-2025-12886 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -263,17 +276,6 @@
       "refs": "https://github.com/ellanetworks/core/commit/1e4768288a6519fcb63ec83f851584ecebb8a972\nhttps://github.com/ellanetworks/core/releases/tag/v1.7.0\nhttps://github.com/ellanetworks/core/security/advisories/GHSA-87j9-m7x6-hvw2",
       "source": "NVD",
       "time": "2026-03-28 01:17:43"
-    },
-    {
-      "cve_id": "CVE-2026-33896",
-      "title": "高危漏洞: CVE-2026-33896 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-03-27T21:17:26.320",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.4.0, `pki.verifyCertificateChain()` does not enforce RFC 5280 basicConstraints requirements when an intermediate certificate lacks both the `basicConstraints` and `keyUsage` extensions. This allows any leaf certificate (without these extensions) to act as a CA and sign other certificates, which node-forge will accept as valid. Version 1.4.0 patches the issue.",
-      "refs": "https://github.com/digitalbazaar/forge/commit/2e492832fb25227e6b647cbe1ac981c123171e90\nhttps://github.com/digitalbazaar/forge/security/advisories/GHSA-2328-f5f3-gj25",
-      "source": "NVD",
-      "time": "2026-03-28 01:17:38"
     }
   ]
 }
