@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2025-12886",
+      "title": "高危漏洞: CVE-2025-12886 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-03-28T04:16:49.323",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Oxygen Theme theme for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 6.0.8 via the laborator_calc_route AJAX action. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services.",
+      "refs": "https://documentation.laborator.co/kb/oxygen/oxygen-release-notes/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/8c83f430-8a4d-40fa-890c-387c787a3b55?source=cve",
+      "source": "NVD",
+      "time": "2026-03-28 06:46:16"
+    },
+    {
+      "cve_id": "CVE-2026-4987",
+      "title": "高危漏洞: CVE-2026-4987 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-28T02:16:14.793",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The SureForms – Contact Form, Payment Form & Other Custom Form Builder plugin for WordPress is vulnerable to Payment Amount Bypass in all versions up to, and including, 2.5.2. This is due to the create_payment_intent() function performing a payment validation solely based on the value of a user-controlled parameter. This makes it possible for unauthenticated attackers to bypass configured form payment-amount validation and create underpriced payment/subscription intents by setting form_id to 0.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3488858/sureforms\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/c4772b32-a730-44f2-b43c-f9bd5abb6541?source=cve",
+      "source": "NVD",
+      "time": "2026-03-28 06:46:10"
+    },
+    {
+      "cve_id": "CVE-2026-1679",
+      "title": "高危漏洞: CVE-2026-1679 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T00:16:04.740",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
+      "description": "The eswifi socket offload driver copies user-provided payloads into a fixed buffer without checking available space; oversized sends overflow `eswifi->buf`, corrupting kernel memory (CWE-120). Exploit requires local code that can call the socket send API; no remote attacker can reach it directly.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-qx3g-5g22-fq5w",
+      "source": "NVD",
+      "time": "2026-03-28 06:46:04"
+    },
+    {
       "cve_id": "CVE-2026-4248",
       "title": "高危漏洞: CVE-2026-4248 (CVSS 8.0)",
       "cvss_score": 8.0,
@@ -241,39 +274,6 @@
       "refs": "https://github.com/digitalbazaar/forge/commit/2e492832fb25227e6b647cbe1ac981c123171e90\nhttps://github.com/digitalbazaar/forge/security/advisories/GHSA-2328-f5f3-gj25",
       "source": "NVD",
       "time": "2026-03-28 01:17:38"
-    },
-    {
-      "cve_id": "CVE-2026-33895",
-      "title": "高危漏洞: CVE-2026-33895 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-27T21:17:26.157",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.4.0, Ed25519 signature verification accepts forged non-canonical signatures where the scalar S is not reduced modulo the group order (`S >= L`). A valid signature and its `S + L` variant both verify in forge, while Node.js `crypto.verify` (OpenSSL-backed) rejects the `S + L` variant, as defined by the specification. This class of signature malleability has been exploited in practice to bypass authentication and authorization logic (see CVE-2026-25793, CVE-2022-35961). Applications relying on signature uniqueness (i.e., dedup by signature bytes, replay tracking, signed-object canonicalization checks) may be bypassed. Version 1.4.0 patches the issue.",
-      "refs": "https://datatracker.ietf.org/doc/html/rfc8032#section-8.4\nhttps://github.com/digitalbazaar/forge/commit/bdecf11571c9f1a487cc0fe72fe78ff6dfa96b85\nhttps://github.com/digitalbazaar/forge/security/advisories/GHSA-q67f-28xg-22rw",
-      "source": "NVD",
-      "time": "2026-03-28 01:17:34"
-    },
-    {
-      "cve_id": "CVE-2026-33894",
-      "title": "高危漏洞: CVE-2026-33894 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-27T21:17:25.983",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.4.0, RSASSA PKCS#1 v1.5 signature verification accepts forged signatures for low public exponent keys (e=3). Attackers can forge signatures by stuffing “garbage” bytes within the ASN structure in order to construct a signature that passes verification, enabling Bleichenbacher style forgery. This issue is similar to CVE-2022-24771, but adds bytes in an addition field within the ASN structure, rather than outside of it.  Additionally, forge does not validate that signatures include a minimum of 8 bytes of padding as defined by the specification, providing attackers additional space to construct Bleichenbacher forgeries. Version 1.4.0 patches the issue.",
-      "refs": "https://datatracker.ietf.org/doc/html/rfc2313#section-8\nhttps://github.com/digitalbazaar/forge/security/advisories/GHSA-ppp5-5v6c-4jwp\nhttps://github.com/digitalbazaar/forge/security/advisories/GHSA-ppp5-5v6c-4jwp",
-      "source": "NVD",
-      "time": "2026-03-28 01:17:27"
-    },
-    {
-      "cve_id": "CVE-2026-33891",
-      "title": "高危漏洞: CVE-2026-33891 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-27T21:17:25.817",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.4.0, a Denial of Service (DoS) vulnerability exists in the node-forge library due to an infinite loop in the BigInteger.modInverse() function (inherited from the bundled jsbn library). When modInverse() is called with a zero value as input, the internal Extended Euclidean Algorithm enters an unreachable exit condition, causing the process to hang indefinitely and consume 100% CPU. Version 1.4.0 patches the issue.",
-      "refs": "https://github.com/digitalbazaar/forge/commit/9bb8d67b99d17e4ebb5fd7596cd699e11f25d023\nhttps://github.com/digitalbazaar/forge/security/advisories/GHSA-5m6q-g25r-mvwx",
-      "source": "NVD",
-      "time": "2026-03-28 01:17:23"
     }
   ]
 }
