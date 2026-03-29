@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-0562",
+      "title": "高危漏洞: CVE-2026-0562 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-03-29T18:16:14.460",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "A critical security vulnerability in parisneo/lollms versions up to 2.2.0 allows any authenticated user to accept or reject friend requests belonging to other users. The `respond_request()` function in `backend/routers/friends.py` does not implement proper authorization checks, enabling Insecure Direct Object Reference (IDOR) attacks. Specifically, the `/api/friends/requests/{friendship_id}` endpoint fails to verify whether the authenticated user is part of the friendship or the intended recipient of the request. This vulnerability can lead to unauthorized access, privacy violations, and potential social engineering attacks. The issue has been addressed in version 2.2.0.",
+      "refs": "https://github.com/parisneo/lollms/commit/c46297799f8e1e23305373f8350746b905e0e83c\nhttps://huntr.com/bounties/6aab01ca-a138-4a1d-bef9-3bce145359bf",
+      "source": "NVD",
+      "time": "2026-03-29 21:23:21"
+    },
+    {
+      "cve_id": "CVE-2026-0560",
+      "title": "高危漏洞: CVE-2026-0560 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-29T18:16:14.303",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "A Server-Side Request Forgery (SSRF) vulnerability exists in parisneo/lollms versions prior to 2.2.0, specifically in the `/api/files/export-content` endpoint. The `_download_image_to_temp()` function in `backend/routers/files.py` fails to validate user-controlled URLs, allowing attackers to make arbitrary HTTP requests to internal services and cloud metadata endpoints. This vulnerability can lead to internal network access, cloud metadata access, information disclosure, port scanning, and potentially remote code execution.",
+      "refs": "https://github.com/parisneo/lollms/commit/76a54f0df2df8a5b254aa627d487b5dc939a0263\nhttps://huntr.com/bounties/65e43a5e-b902-4369-b738-1825285a3ea5",
+      "source": "NVD",
+      "time": "2026-03-29 21:23:16"
+    },
+    {
+      "cve_id": "CVE-2026-0558",
+      "title": "高危漏洞: CVE-2026-0558 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-29T18:16:13.250",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "A vulnerability in parisneo/lollms, up to and including version 2.2.0, allows unauthenticated users to upload and process files through the `/api/files/extract-text` endpoint. This endpoint does not enforce authentication, unlike other file-related endpoints, and lacks the `Depends(get_current_active_user)` dependency. This issue can lead to denial of service (DoS) through resource exhaustion, information disclosure, and violation of the application's documented security policies.",
+      "refs": "https://github.com/parisneo/lollms/commit/a6625dc83786ff21d109b0d545ca61b770607ef3\nhttps://huntr.com/bounties/0a722001-89ce-4c91-b6a6-a55ee5ba2113",
+      "source": "NVD",
+      "time": "2026-03-29 21:23:09"
+    },
+    {
       "cve_id": "CVE-2026-3055",
       "title": "漏洞仓库: CVE-2026-3055",
       "cvss_score": null,
@@ -251,39 +284,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc\nhttps://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-unvalidated-scope-in-device-token-rotate",
       "source": "NVD",
       "time": "2026-03-29 15:22:53"
-    },
-    {
-      "cve_id": "CVE-2026-32918",
-      "title": "高危漏洞: CVE-2026-32918 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-29T13:17:00.173",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "OpenClaw before 2026.3.11 contains a session sandbox escape vulnerability in the session_status tool that allows sandboxed subagents to access parent or sibling session state. Attackers can supply arbitrary sessionKey values to read or modify session data outside their sandbox scope, including persisted model overrides.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wcxr-59v9-rxr8\nhttps://www.vulncheck.com/advisories/openclaw-session-sandbox-escape-via-session-status-tool",
-      "source": "NVD",
-      "time": "2026-03-29 15:22:45"
-    },
-    {
-      "cve_id": "CVE-2026-32915",
-      "title": "高危漏洞: CVE-2026-32915 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T13:16:59.973",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.11 contains a sandbox boundary bypass vulnerability allowing leaf subagents to access the subagents control surface and resolve against parent requester scope instead of their own session tree. A low-privilege sandboxed leaf worker can steer or kill sibling runs and cause execution with broader tool policies by exploiting insufficient authorization checks on subagent control requests.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4w7m-58cg-cmff\nhttps://www.vulncheck.com/advisories/openclaw-sandbox-boundary-bypass-via-subagent-control-surface",
-      "source": "NVD",
-      "time": "2026-03-29 15:22:39"
-    },
-    {
-      "cve_id": "CVE-2026-32914",
-      "title": "高危漏洞: CVE-2026-32914 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T13:16:59.767",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.12 contains an insufficient access control vulnerability in the /config and /debug command handlers that allows command-authorized non-owners to access owner-only surfaces. Attackers with command authorization can read or modify privileged configuration settings restricted to owners by exploiting missing owner-level permission checks.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r7vr-gr74-94p8\nhttps://www.vulncheck.com/advisories/openclaw-insufficient-access-control-in-config-and-debug-endpoints",
-      "source": "NVD",
-      "time": "2026-03-29 15:22:30"
     }
   ]
 }
