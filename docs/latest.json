@@ -1,6 +1,45 @@
 {
   "latest": [
     {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE-2026-0847",
+      "cvss_score": null,
+      "published_date": "2026-03-29T08:00:18Z",
+      "updated_date": "2026-03-29T08:13:46Z",
+      "vector_string": "N/A",
+      "description": "A vulnerability in NLTK versions up to and including 3.9.2 allows arbitrary file read via path traversal in multiple CorpusReader classes, including WordListCorpusReader, TaggedCorpusReader, and BracketParseCorpusReader.",
+      "refs": "https://github.com/HyperPS/CVE-2026-0847",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-29 09:28:11"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE-2026-0848",
+      "cvss_score": null,
+      "published_date": "2026-03-29T08:20:30Z",
+      "updated_date": "2026-03-29T08:29:59Z",
+      "vector_string": "N/A",
+      "description": "nltk.tokenize.StanfordSegmenter dynamically loads external Java .jar files without verification or sandboxing. If an attacker can supply or replace the JAR (e.g., a poisoned model download, MITM package swap, or dependency poisoning), arbitrary Java bytecode executes at import time.",
+      "refs": "https://github.com/HyperPS/CVE-2026-0848",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-29 09:28:00"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE-2026-0897",
+      "cvss_score": null,
+      "published_date": "2026-03-29T08:44:34Z",
+      "updated_date": "2026-03-29T09:27:41Z",
+      "vector_string": "N/A",
+      "description": "Allocation of Resources Without Limits or Throttling in the HDF5 weight loading component in Google Keras 3.0.0 through 3.13.0 on all platforms allows a remote attacker to cause a Denial of Service (DoS) through memory exhaustion and a crash of the Python interpreter via a crafted .keras ",
+      "refs": "https://github.com/HyperPS/CVE-2026-0897",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-29 09:27:53"
+    },
+    {
       "cve_id": "CVE-2026-5024",
       "title": "高危漏洞: CVE-2026-5024 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -257,39 +296,6 @@
       "refs": "http://sipp.sourceforge.net/\nhttps://www.exploit-db.com/exploits/45288\nhttps://www.vulncheck.com/advisories/sipp-stack-based-buffer-overflow-via-configuration-file",
       "source": "NVD",
       "time": "2026-03-28 15:24:22"
-    },
-    {
-      "cve_id": "CVE-2018-25224",
-      "title": "高危漏洞: CVE-2018-25224 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:03.370",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PMS 0.42 contains a stack-based buffer overflow vulnerability that allows local unauthenticated attackers to execute arbitrary code by supplying malicious values in the configuration file. Attackers can craft configuration files with oversized input that overflows the stack buffer and execute shell commands via return-oriented programming gadgets.",
-      "refs": "https://pms.sourceforge.net\nhttps://www.exploit-db.com/exploits/44426\nhttps://www.vulncheck.com/advisories/pms-stack-based-buffer-overflow-via-configuration-file",
-      "source": "NVD",
-      "time": "2026-03-28 15:24:16"
-    },
-    {
-      "cve_id": "CVE-2018-25223",
-      "title": "高危漏洞: CVE-2018-25223 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-28T12:16:03.170",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Crashmail 1.6 contains a stack-based buffer overflow vulnerability that allows remote attackers to execute arbitrary code by sending malicious input to the application. Attackers can craft payloads with ROP chains to achieve code execution in the application context, with failed attempts potentially causing denial of service.",
-      "refs": "http://exploitpack.com\nhttp://ftnapps.sourceforge.net/crashmail.html\nhttps://www.exploit-db.com/exploits/44331",
-      "source": "NVD",
-      "time": "2026-03-28 15:24:11"
-    },
-    {
-      "cve_id": "CVE-2018-25222",
-      "title": "高危漏洞: CVE-2018-25222 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:02.983",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SC v7.16 contains a stack-based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying oversized input that exceeds buffer boundaries. Attackers can craft malicious input strings exceeding 1052 bytes to overwrite the instruction pointer and execute shellcode in the application context.",
-      "refs": "https://www.exploit-db.com/exploits/44279\nhttps://www.vulncheck.com/advisories/sc-stack-based-buffer-overflow-remote-code-execution",
-      "source": "NVD",
-      "time": "2026-03-28 15:24:06"
     }
   ]
 }
