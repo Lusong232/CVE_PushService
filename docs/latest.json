@@ -1,6 +1,104 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3055",
+      "title": "漏洞仓库: CVE-2026-3055",
+      "cvss_score": null,
+      "published_date": "2026-03-29T10:58:13Z",
+      "updated_date": "2026-03-29T11:01:36Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-3055",
+      "refs": "https://github.com/0xBlackash/CVE-2026-3055",
+      "source": "GitHub",
+      "cve_overviews": "Insufficient input validation in NetScaler ADC and NetScaler Gateway when configured as a SAML IDP leading to memory overread",
+      "time": "2026-03-29 18:29:51"
+    },
+    {
+      "cve_id": "CVE-2026-22812, CVE-2026-22813",
+      "title": "漏洞仓库: ai-agent-security-research",
+      "cvss_score": null,
+      "published_date": "2026-03-29T11:19:22Z",
+      "updated_date": "2026-03-29T11:27:33Z",
+      "vector_string": "N/A",
+      "description": "Open security research on AI coding agent infrastructure. Agent-executable remediation manifests for CVE-2026-22812 and CVE-2026-22813.",
+      "refs": "https://github.com/HodgeLuke/ai-agent-security-research",
+      "source": "GitHub",
+      "cve_overviews": "OpenCode is an open source AI coding agent. Prior to 1.0.216, OpenCode automatically starts an unauthenticated HTTP server that allows any local process (or any website via permissive CORS) to execute arbitrary shell commands with the user's privileges. This vulnerability is fixed in 1.0.216.\nOpenCode is an open source AI coding agent. The markdown renderer used for LLM responses will insert arbitrary HTML into the DOM. There is no sanitization with DOMPurify or even a CSP on the web interface to prevent JavaScript execution via HTML injection. This means controlling the LLM response for a chat session gets JavaScript execution on the http://localhost:4096 origin. This vulnerability is fixed in 1.1.10.",
+      "time": "2026-03-29 18:29:31"
+    },
+    {
+      "cve_id": "CVE-2026-27940",
+      "title": "漏洞仓库: CVE-2026-27940",
+      "cvss_score": null,
+      "published_date": "2026-03-29T13:30:04Z",
+      "updated_date": "2026-03-29T13:34:53Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/ngtuonghung/CVE-2026-27940",
+      "source": "GitHub",
+      "cve_overviews": "llama.cpp is an inference of several LLM models in C/C++. Prior to b8146, the gguf_init_from_file_impl() in gguf.cpp is vulnerable to an Integer overflow, leading to an undersized heap allocation. Using the subsequent fread() writes 528+ bytes of attacker-controlled data past the buffer boundary. This is a bypass of a similar bug in the same file - CVE-2025-53630, but the fix overlooked some areas. This vulnerability is fixed in b8146.",
+      "time": "2026-03-29 18:29:22"
+    },
+    {
+      "cve_id": "CVE-2026-23744",
+      "title": "漏洞仓库: CVE-2026-23744",
+      "cvss_score": null,
+      "published_date": "2026-03-29T16:26:01Z",
+      "updated_date": "2026-03-29T16:31:26Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-23744 - MCP Connect RCE via Unauthenticated Command Injection",
+      "refs": "https://github.com/CyLock11/CVE-2026-23744",
+      "source": "GitHub",
+      "cve_overviews": "MCPJam inspector is the local-first development platform for MCP servers. Versions 1.4.2 and earlier are vulnerable to remote code execution (RCE) vulnerability, which allows an attacker to send a crafted HTTP request that triggers the installation of an MCP server, leading to RCE. Since MCPJam inspector by default listens on 0.0.0.0 instead of 127.0.0.1, an attacker can trigger the RCE remotely via a simple HTTP request. Version 1.4.3 contains a patch.",
+      "time": "2026-03-29 18:29:01"
+    },
+    {
+      "cve_id": "CVE-2026-33340",
+      "title": "漏洞仓库: CVE-2026-33340",
+      "cvss_score": null,
+      "published_date": "2026-03-29T16:59:53Z",
+      "updated_date": "2026-03-29T17:01:05Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-33340: Critical SSRF in lollms-webui /api/proxy - Unauthenticated arbitrary request forgery (CVSS 9.1)",
+      "refs": "https://github.com/regaan/CVE-2026-33340",
+      "source": "GitHub",
+      "cve_overviews": "LoLLMs WEBUI provides the Web user interface for Lord of Large Language and Multi modal Systems. A critical Server-Side Request Forgery (SSRF) vulnerability has been identified in all known existing versions of `lollms-webui`. The `@router.post(\"/api/proxy\")` endpoint allows unauthenticated attackers to force the server into making arbitrary GET requests. This can be exploited to access internal services, scan local networks, or exfiltrate sensitive cloud metadata (e.g., AWS/GCP IAM tokens). As of time of publication, no known patched versions are available.",
+      "time": "2026-03-29 18:28:56"
+    },
+    {
+      "cve_id": "CVE-2026-34005",
+      "title": "高危漏洞: CVE-2026-34005 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-29T17:16:44.257",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Sofia on Xiongmai DVR/NVR (AHB7008T-MH-V2 and NBD7024H-P) 4.03.R11 devices, root OS command injection can occur via shell metacharacters in the HostName value via an authenticated DVRIP protocol (TCP port 34567) request to the NetWork.NetCommon configuration handler, because system() is used.",
+      "refs": "https://uky007.github.io/CVE-2026-34005/\nhttps://www.xiongmaitech.com",
+      "source": "NVD",
+      "time": "2026-03-29 18:28:33"
+    },
+    {
+      "cve_id": "CVE-2026-5046",
+      "title": "高危漏洞: CVE-2026-5046 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-29T15:16:36.990",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda FH1201 1.2.0.14(408). Affected is the function formWrlExtraSet of the file /goform/WrlExtraSet of the component Parameter Handler. Executing a manipulation of the argument GO can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been published and may be used.",
+      "refs": "https://github.com/Litengzheng/vul_db/blob/main/FH1201/vul_44/README.md\nhttps://vuldb.com/submit/779127\nhttps://vuldb.com/vuln/353969",
+      "source": "NVD",
+      "time": "2026-03-29 18:28:29"
+    },
+    {
+      "cve_id": "CVE-2026-5045",
+      "title": "高危漏洞: CVE-2026-5045 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-29T14:16:32.547",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tenda FH1201 1.2.0.14(408). This impacts the function WrlclientSet of the file /goform/WrlclientSet of the component Parameter Handler. Performing a manipulation of the argument GO results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/Litengzheng/vul_db/blob/main/FH1201/vul_43/README.md\nhttps://vuldb.com/submit/779126\nhttps://vuldb.com/vuln/353968",
+      "source": "NVD",
+      "time": "2026-03-29 18:28:10"
+    },
+    {
       "cve_id": "CVE-2026-5044",
       "title": "高危漏洞: CVE-2026-5044 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -186,98 +284,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r7vr-gr74-94p8\nhttps://www.vulncheck.com/advisories/openclaw-insufficient-access-control-in-config-and-debug-endpoints",
       "source": "NVD",
       "time": "2026-03-29 15:22:30"
-    },
-    {
-      "cve_id": "CVE-2026-5043",
-      "title": "高危漏洞: CVE-2026-5043 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T12:15:57.937",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in Belkin F9K1122 1.00.33. The impacted element is the function formSetPassword of the file /goform/formSetPassword of the component Parameter Handler. This manipulation of the argument webpage causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_154/README.md\nhttps://vuldb.com/submit/779124\nhttps://vuldb.com/vuln/353966",
-      "source": "NVD",
-      "time": "2026-03-29 15:22:21"
-    },
-    {
-      "cve_id": "CVE-2026-5042",
-      "title": "高危漏洞: CVE-2026-5042 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T11:16:34.867",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in Belkin F9K1122 1.00.33. The affected element is the function formCrossBandSwitch of the file /goform/formCrossBandSwitch of the component Parameter Handler. The manipulation of the argument webpage results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_153/README.md\nhttps://vuldb.com/submit/779123\nhttps://vuldb.com/vuln/353965",
-      "source": "NVD",
-      "time": "2026-03-29 12:34:03"
-    },
-    {
-      "cve_id": "CVE-2026-5036",
-      "title": "高危漏洞: CVE-2026-5036 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T08:15:56.063",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda 4G06 04.06.01.29. This vulnerability affects the function fromDhcpListClient of the file /goform/DhcpListClient of the component Endpoint. Performing a manipulation of the argument page results in stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/Kiciot/cve/issues/1\nhttps://vuldb.com/submit/778625\nhttps://vuldb.com/vuln/353962",
-      "source": "NVD",
-      "time": "2026-03-29 12:33:44"
-    },
-    {
-      "cve_id": "CVE-2026-5035",
-      "title": "高危漏洞: CVE-2026-5035 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-29T07:15:56.793",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in code-projects Accounting System 1.0. This affects an unknown part of the file /view_work.php of the component Parameter Handler. Such manipulation of the argument en_id leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/8\nhttps://vuldb.com/submit/778603",
-      "source": "NVD",
-      "time": "2026-03-29 12:33:35"
-    },
-    {
-      "cve_id": "CVE-2026-5034",
-      "title": "高危漏洞: CVE-2026-5034 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-29T06:16:12.870",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in code-projects Accounting System 1.0. Affected by this issue is some unknown functionality of the file /edit_costumer.php of the component Parameter Handler. This manipulation of the argument cos_id causes sql injection. It is possible to initiate the attack remotely. The exploit has been published and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/7\nhttps://vuldb.com/submit/778594",
-      "source": "NVD",
-      "time": "2026-03-29 12:33:31"
-    },
-    {
-      "cve_id": "CVE-2026-5033",
-      "title": "高危漏洞: CVE-2026-5033 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-29T06:16:11.703",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in code-projects Accounting System 1.0. Affected by this vulnerability is an unknown functionality of the file /view_costumer.php of the component Parameter Handler. The manipulation of the argument cos_id results in sql injection. The attack may be performed from remote. The exploit is now public and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/6\nhttps://vuldb.com/submit/778589",
-      "source": "NVD",
-      "time": "2026-03-29 12:33:23"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE-2026-0847",
-      "cvss_score": null,
-      "published_date": "2026-03-29T08:00:18Z",
-      "updated_date": "2026-03-29T08:13:46Z",
-      "vector_string": "N/A",
-      "description": "A vulnerability in NLTK versions up to and including 3.9.2 allows arbitrary file read via path traversal in multiple CorpusReader classes, including WordListCorpusReader, TaggedCorpusReader, and BracketParseCorpusReader.",
-      "refs": "https://github.com/HyperPS/CVE-2026-0847",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-29 09:28:11"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE-2026-0848",
-      "cvss_score": null,
-      "published_date": "2026-03-29T08:20:30Z",
-      "updated_date": "2026-03-29T08:29:59Z",
-      "vector_string": "N/A",
-      "description": "nltk.tokenize.StanfordSegmenter dynamically loads external Java .jar files without verification or sandboxing. If an attacker can supply or replace the JAR (e.g., a poisoned model download, MITM package swap, or dependency poisoning), arbitrary Java bytecode executes at import time.",
-      "refs": "https://github.com/HyperPS/CVE-2026-0848",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-29 09:28:00"
     }
   ]
 }
