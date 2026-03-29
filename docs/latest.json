@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5042",
+      "title": "高危漏洞: CVE-2026-5042 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-29T11:16:34.867",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Belkin F9K1122 1.00.33. The affected element is the function formCrossBandSwitch of the file /goform/formCrossBandSwitch of the component Parameter Handler. The manipulation of the argument webpage results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_153/README.md\nhttps://vuldb.com/submit/779123\nhttps://vuldb.com/vuln/353965",
+      "source": "NVD",
+      "time": "2026-03-29 12:34:03"
+    },
+    {
+      "cve_id": "CVE-2026-5036",
+      "title": "高危漏洞: CVE-2026-5036 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-29T08:15:56.063",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Tenda 4G06 04.06.01.29. This vulnerability affects the function fromDhcpListClient of the file /goform/DhcpListClient of the component Endpoint. Performing a manipulation of the argument page results in stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/Kiciot/cve/issues/1\nhttps://vuldb.com/submit/778625\nhttps://vuldb.com/vuln/353962",
+      "source": "NVD",
+      "time": "2026-03-29 12:33:44"
+    },
+    {
+      "cve_id": "CVE-2026-5035",
+      "title": "高危漏洞: CVE-2026-5035 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-29T07:15:56.793",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in code-projects Accounting System 1.0. This affects an unknown part of the file /view_work.php of the component Parameter Handler. Such manipulation of the argument en_id leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/8\nhttps://vuldb.com/submit/778603",
+      "source": "NVD",
+      "time": "2026-03-29 12:33:35"
+    },
+    {
+      "cve_id": "CVE-2026-5034",
+      "title": "高危漏洞: CVE-2026-5034 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-29T06:16:12.870",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in code-projects Accounting System 1.0. Affected by this issue is some unknown functionality of the file /edit_costumer.php of the component Parameter Handler. This manipulation of the argument cos_id causes sql injection. It is possible to initiate the attack remotely. The exploit has been published and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/7\nhttps://vuldb.com/submit/778594",
+      "source": "NVD",
+      "time": "2026-03-29 12:33:31"
+    },
+    {
+      "cve_id": "CVE-2026-5033",
+      "title": "高危漏洞: CVE-2026-5033 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-29T06:16:11.703",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Accounting System 1.0. Affected by this vulnerability is an unknown functionality of the file /view_costumer.php of the component Parameter Handler. The manipulation of the argument cos_id results in sql injection. The attack may be performed from remote. The exploit is now public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/6\nhttps://vuldb.com/submit/778589",
+      "source": "NVD",
+      "time": "2026-03-29 12:33:23"
+    },
+    {
       "cve_id": "未检测到CVE ID",
       "title": "漏洞仓库: CVE-2026-0847",
       "cvss_score": null,
@@ -235,67 +290,6 @@
       "source": "GitHub",
       "cve_overviews": "OpenClaw versions prior to 2026.2.14 contain a vulnerability in the gateway in which it fails to sanitize internal approval fields in node.invoke parameters, allowing authenticated clients to bypass exec approval gating for system.run commands. Attackers with valid gateway credentials can inject approval control fields to execute arbitrary commands on connected node hosts, potentially compromising developer workstations and CI runners.",
       "time": "2026-03-28 15:25:02"
-    },
-    {
-      "cve_id": "CVE-2026-20079",
-      "title": "漏洞仓库: CVE-2026-20079",
-      "cvss_score": null,
-      "published_date": "2026-03-28T13:08:16Z",
-      "updated_date": "2026-03-28T13:39:26Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-20079",
-      "refs": "https://github.com/0xBlackash/CVE-2026-20079",
-      "source": "GitHub",
-      "cve_overviews": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.\r\n\r This vulnerability is due to an improper system process that is created at boot time. An attacker could exploit this vulnerability by sending crafted HTTP requests to an affected device. A successful exploit could allow the attacker to execute a variety of scripts and commands that allow root access to the device.",
-      "time": "2026-03-28 15:24:55"
-    },
-    {
-      "cve_id": "CVE-2026-33937",
-      "title": "漏洞仓库: cve-2026-33937",
-      "cvss_score": null,
-      "published_date": "2026-03-28T13:24:22Z",
-      "updated_date": "2026-03-28T14:51:47Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/dinhvaren/cve-2026-33937",
-      "source": "GitHub",
-      "cve_overviews": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable.",
-      "time": "2026-03-28 15:24:47"
-    },
-    {
-      "cve_id": "CVE-2026-0766",
-      "title": "漏洞仓库: CVE-2026-0766",
-      "cvss_score": null,
-      "published_date": "2026-03-28T14:14:23Z",
-      "updated_date": "2026-03-28T15:22:29Z",
-      "vector_string": "N/A",
-      "description": "Educational security research: OpenWebUI RCE via tool code injection (CVE-2026-0766  - ZDI-26-032)",
-      "refs": "https://github.com/bitt0n/CVE-2026-0766",
-      "source": "GitHub",
-      "cve_overviews": "Open WebUI load_tool_module_by_id Command Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Open WebUI. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the load_tool_module_by_id function. The issue results from the lack of proper validation of a user-supplied string before using it to execute Python code. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-28257.",
-      "time": "2026-03-28 15:24:40"
-    },
-    {
-      "cve_id": "CVE-2026-4996",
-      "title": "高危漏洞: CVE-2026-4996 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-28T12:16:04.150",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in Sinaptik AI PandasAI up to 0.1.4. Affected by this issue is the function delete_question_and_answers/delete_docs/update_question_answer/update_docs/get_relevant_question_answers_by_id/get_relevant_docs_by_id of the file extensions/ee/vectorstores/lancedb/pandasai_lancedb/lancedb.py of the component pandasai-lancedb Extension. Such manipulation leads to sql injection. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/e33f76941234bed3824181ed252bd09f\nhttps://vuldb.com/?ctiid.353883\nhttps://vuldb.com/?id.353883",
-      "source": "NVD",
-      "time": "2026-03-28 15:24:29"
-    },
-    {
-      "cve_id": "CVE-2018-25225",
-      "title": "高危漏洞: CVE-2018-25225 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:03.560",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SIPP 3.3 contains a stack-based buffer overflow vulnerability that allows local unauthenticated attackers to execute arbitrary code by supplying malicious input in the configuration file. Attackers can craft a configuration file with oversized values that overflow a stack buffer, overwriting the return address and executing arbitrary code through return-oriented programming gadgets.",
-      "refs": "http://sipp.sourceforge.net/\nhttps://www.exploit-db.com/exploits/45288\nhttps://www.vulncheck.com/advisories/sipp-stack-based-buffer-overflow-via-configuration-file",
-      "source": "NVD",
-      "time": "2026-03-28 15:24:22"
     }
   ]
 }
