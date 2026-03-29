@@ -1,6 +1,63 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-32013, CVE-2026-32015",
+      "title": "漏洞仓库: cve-scanner",
+      "cvss_score": null,
+      "published_date": "2026-03-29T01:06:48Z",
+      "updated_date": "2026-03-29T01:06:58Z",
+      "vector_string": "N/A",
+      "description": "OpenClaw CVE scanner. Tracks known vulnerabilities (CVE-2026-32013, CVE-2026-32015, etc.). Zero network calls, 100% local. Version checking, upgrade recommendations.",
+      "refs": "https://github.com/hargabyte/cve-scanner",
+      "source": "GitHub",
+      "cve_overviews": "OpenClaw versions prior to 2026.2.25 contain a symlink traversal vulnerability in the agents.files.get and agents.files.set methods that allows reading and writing files outside the agent workspace. Attackers can exploit symlinked allowlisted files to access arbitrary host files within gateway process permissions, potentially enabling code execution through file overwrite attacks.\nOpenClaw versions 2026.1.21 prior to 2026.2.19 contain a path hijacking vulnerability in tools.exec.safeBins that allows attackers to bypass allowlist checks by controlling process PATH resolution. Attackers who can influence the gateway process PATH or launch environment can execute trojan binaries with allowlisted names, such as jq, circumventing executable validation controls.",
+      "time": "2026-03-29 01:25:05"
+    },
+    {
+      "cve_id": "CVE-2026-5018",
+      "title": "高危漏洞: CVE-2026-5018 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T23:16:44.663",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in code-projects Simple Food Order System 1.0. Affected is an unknown function of the file register-router.php of the component Parameter Handler. Executing a manipulation of the argument Name can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/16\nhttps://vuldb.com/submit/779336",
+      "source": "NVD",
+      "time": "2026-03-29 01:24:54"
+    },
+    {
+      "cve_id": "CVE-2026-5017",
+      "title": "高危漏洞: CVE-2026-5017 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T23:16:43.597",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in code-projects Simple Food Order System 1.0. This impacts an unknown function of the file /all-tickets.php of the component Parameter Handler. Performing a manipulation of the argument Status results in sql injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/15\nhttps://vuldb.com/submit/779331",
+      "source": "NVD",
+      "time": "2026-03-29 01:24:50"
+    },
+    {
+      "cve_id": "CVE-2026-5016",
+      "title": "高危漏洞: CVE-2026-5016 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T22:15:58.120",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in elecV2 elecV2P up to 3.8.3. This affects the function eAxios of the file /mock of the component URL Handler. Such manipulation of the argument req leads to server-side request forgery. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/elecV2/elecV2P/\nhttps://github.com/elecV2/elecV2P/issues/202\nhttps://vuldb.com/submit/779181",
+      "source": "NVD",
+      "time": "2026-03-29 01:24:46"
+    },
+    {
+      "cve_id": "CVE-2026-5012",
+      "title": "高危漏洞: CVE-2026-5012 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-28T20:16:16.237",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in elecV2 elecV2P up to 3.8.3. This issue affects the function pm2run of the file /rpc. Executing a manipulation can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/elecV2/elecV2P/\nhttps://github.com/elecV2/elecV2P/issues/196\nhttps://vuldb.com/submit/779174",
+      "source": "NVD",
+      "time": "2026-03-29 01:24:42"
+    },
+    {
       "cve_id": "CVE-2026-21643",
       "title": "漏洞仓库: CVE-2026-21643",
       "cvss_score": null,
@@ -233,61 +290,6 @@
       "refs": "https://www.exploit-db.com/exploits/42357\nhttps://www.vulncheck.com/advisories/mawk-17-stack-based-buffer-overflow",
       "source": "NVD",
       "time": "2026-03-28 15:23:49"
-    },
-    {
-      "cve_id": "CVE-2017-20228",
-      "title": "高危漏洞: CVE-2017-20228 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:02.200",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flat Assembler 1.71.21 contains a stack-based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying oversized input to the application. Attackers can craft malicious assembly input exceeding 5895 bytes to overwrite the instruction pointer and execute return-oriented programming chains for shell command execution.",
-      "refs": "http://www.flatassembler.net\nhttps://www.exploit-db.com/exploits/42265\nhttps://www.vulncheck.com/advisories/flat-assembler-stack-based-buffer-overflow-rop",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:44"
-    },
-    {
-      "cve_id": "CVE-2017-20227",
-      "title": "高危漏洞: CVE-2017-20227 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-28T12:16:01.993",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "JAD Java Decompiler 1.5.8e-1kali1 and prior contains a stack-based buffer overflow vulnerability that allows attackers to execute arbitrary code by supplying overly long input that exceeds buffer boundaries. Attackers can craft malicious input passed to the jad command to overflow the stack and execute a return-oriented programming chain that spawns a shell.",
-      "refs": "http://www.varaneckas.com/jad/\nhttps://www.exploit-db.com/exploits/42255\nhttps://www.vulncheck.com/advisories/jad-8e-1kali1-stack-based-buffer-overflow",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:37"
-    },
-    {
-      "cve_id": "CVE-2017-20226",
-      "title": "高危漏洞: CVE-2017-20226 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-28T12:16:01.810",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Mapscrn 2.0.3 contains a stack-based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying an oversized input buffer. Attackers can craft a malicious buffer with junk data, return address, NOP instructions, and shellcode to overflow the stack and achieve code execution or denial of service.",
-      "refs": "http://ccross.msk.su\nhttps://www.exploit-db.com/exploits/42144\nhttps://www.vulncheck.com/advisories/mapscrn-stack-based-buffer-overflow",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:32"
-    },
-    {
-      "cve_id": "CVE-2017-20225",
-      "title": "高危漏洞: CVE-2017-20225 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-28T12:16:01.613",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "TiEmu 2.08 and prior contains a stack-based buffer overflow vulnerability that allows attackers to execute arbitrary code by exploiting inadequate boundary checks on user-supplied input. Attackers can trigger the overflow through command-line arguments passed to the application, leveraging ROP gadgets to bypass protections and execute shellcode in the application context.",
-      "refs": "http://lpg.ticalc.org/prj_tiemu/\nhttps://www.exploit-db.com/exploits/42087\nhttps://www.vulncheck.com/advisories/tiemu-stack-based-buffer-overflow-vulnerability",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:27"
-    },
-    {
-      "cve_id": "CVE-2016-20049",
-      "title": "高危漏洞: CVE-2016-20049 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-28T12:16:01.407",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "JAD 1.5.8e-1kali1 and prior contains a stack-based buffer overflow vulnerability that allows attackers to execute arbitrary code by supplying oversized input that exceeds buffer boundaries. Attackers can craft malicious input strings exceeding 8150 bytes to overflow the stack, overwrite return addresses, and execute shellcode in the application context.",
-      "refs": "http://www.varaneckas.com/jad/\nhttps://www.exploit-db.com/exploits/42076\nhttps://www.vulncheck.com/advisories/jad-8e-1kali1-stack-based-buffer-overflow-remote-code-execution",
-      "source": "NVD",
-      "time": "2026-03-28 15:23:22"
     }
   ]
 }
