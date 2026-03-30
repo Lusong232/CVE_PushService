@@ -2,6 +2,85 @@
   "latest": [
     {
       "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE-2026-npm-bin-links-RCE-Exploit",
+      "cvss_score": null,
+      "published_date": "2026-03-30T12:21:53Z",
+      "updated_date": "2026-03-30T12:26:56Z",
+      "vector_string": "N/A",
+      "description": "A critical Path Traversal vulnerability exists in the @npmcli/bin-links library due to insufficient sanitization of the bin field in package.json. By crafting a malicious package with traversal sequences (e.g., ../../), an attacker can escape the intended node_modules/.bin directory during installation.",
+      "refs": "https://github.com/Anh-Khoa-PC/CVE-2026-npm-bin-links-RCE-Exploit",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-30 12:55:33"
+    },
+    {
+      "cve_id": "CVE-2026-5128",
+      "title": "高危漏洞: CVE-2026-5128 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-03-30T10:16:02.610",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A sensitive information exposure vulnerability exists in ArthurFiorette steam-trader 2.1.1. An unauthenticated attacker can send a request to the /users API endpoint to retrieve highly sensitive Steam account data, including the account username, password, identity secret, and shared secret. In addition, application logs expose authentication artifacts such as access tokens, refresh tokens, and session identifiers. This information allows an attacker to generate valid Steam Guard (2FA) codes, hijack authenticated sessions, and obtain full control over the affected Steam account, including unauthorized access to inventory and trading functionality. No fix is available because the repository is archived and no longer maintained.",
+      "refs": "https://github.com/arthurfiorette/steam-trader",
+      "source": "NVD",
+      "time": "2026-03-30 12:55:25"
+    },
+    {
+      "cve_id": "CVE-2026-4416",
+      "title": "高危漏洞: CVE-2026-4416 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-03-30T08:16:18.360",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Performance Library component of Gigabyte Control Center has an Insecure Deserialization vulnerability. Authenticated local attackers can send a malicious serialized payload to the EasyTune Engine service, resulting in privilege escalation.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-10806-fbc4a-2.html\nhttps://www.twcert.org.tw/tw/cp-132-10805-a53f6-1.html",
+      "source": "NVD",
+      "time": "2026-03-30 12:55:20"
+    },
+    {
+      "cve_id": "CVE-2026-4415",
+      "title": "高危漏洞: CVE-2026-4415 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-03-30T08:16:18.107",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Gigabyte Control Center developed by GIGABYTE has an Arbitrary File Write vulnerability. When the pairing feature is enabled, unauthenticated remote attackers can write arbitrary files to any location on the underlying operating system, leading to arbitrary code execution or privilege escalation.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-10804-689cd-2.html\nhttps://www.twcert.org.tw/tw/cp-132-10803-ae014-1.html",
+      "source": "NVD",
+      "time": "2026-03-30 12:55:14"
+    },
+    {
+      "cve_id": "CVE-2026-3945",
+      "title": "高危漏洞: CVE-2026-3945 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-30T08:16:17.653",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An integer overflow vulnerability in the HTTP chunked transfer encoding parser in tinyproxy up to and including version 1.11.3 allows an unauthenticated remote attacker to cause a denial of service (DoS). The issue occurs because chunk size values are parsed using strtol() without properly validating overflow conditions (e.g., errno == ERANGE). A crafted chunk size such as 0x7fffffffffffffff (LONG_MAX) bypasses the existing validation check (chunklen < 0), leading to a signed integer overflow during arithmetic operations (chunklen + 2). This results in incorrect size calculations, causing the proxy to attempt reading an extremely large amount of request-body data and holding worker connections open indefinitely. An attacker can exploit this behavior to exhaust all available worker slots, preventing new connections from being accepted and causing complete service unavailability. Upstream addressed this issue in commit bb7edc4; however, the latest stable release (1.11.3) remains affected at the time of publication.",
+      "refs": "https://github.com/tinyproxy/tinyproxy/commit/969852c\nhttps://github.com/tinyproxy/tinyproxy/commit/bb7edc4\nhttps://github.com/tinyproxy/tinyproxy/issues/602",
+      "source": "NVD",
+      "time": "2026-03-30 12:55:09"
+    },
+    {
+      "cve_id": "CVE-2026-2328",
+      "title": "高危漏洞: CVE-2026-2328 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-30T08:16:17.210",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An unauthenticated remote attacker can exploit insufficient input validation to access backend components beyond their intended scope via path traversal, resulting in exposure of sensitive information.",
+      "refs": "https://certvde.com/de/advisories/VDE-2026-010",
+      "source": "NVD",
+      "time": "2026-03-30 12:55:00"
+    },
+    {
+      "cve_id": "CVE-2025-15379",
+      "title": "高危漏洞: CVE-2025-15379 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-03-30T08:16:15.667",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A command injection vulnerability exists in MLflow's model serving container initialization code, specifically in the `_install_model_dependencies_to_env()` function. When deploying a model with `env_manager=LOCAL`, MLflow reads dependency specifications from the model artifact's `python_env.yaml` file and directly interpolates them into a shell command without sanitization. This allows an attacker to supply a malicious model artifact and achieve arbitrary command execution on systems that deploy the model. The vulnerability affects versions 3.8.0 and is fixed in version 3.8.2.",
+      "refs": "https://github.com/mlflow/mlflow/commit/361b6f620adf98385c6721e384fb5ef9a30bb05e\nhttps://huntr.com/bounties/dc9c1c20-7879-4050-87df-4d095fe5ca75",
+      "source": "NVD",
+      "time": "2026-03-30 12:54:52"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
       "title": "漏洞仓库: CVE-2026-30082",
       "cvss_score": null,
       "published_date": "2026-03-30T01:46:48Z",
@@ -217,83 +296,6 @@
       "refs": "https://uky007.github.io/CVE-2026-34005/\nhttps://www.xiongmaitech.com",
       "source": "NVD",
       "time": "2026-03-29 18:28:33"
-    },
-    {
-      "cve_id": "CVE-2026-5046",
-      "title": "高危漏洞: CVE-2026-5046 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T15:16:36.990",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Tenda FH1201 1.2.0.14(408). Affected is the function formWrlExtraSet of the file /goform/WrlExtraSet of the component Parameter Handler. Executing a manipulation of the argument GO can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been published and may be used.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/FH1201/vul_44/README.md\nhttps://vuldb.com/submit/779127\nhttps://vuldb.com/vuln/353969",
-      "source": "NVD",
-      "time": "2026-03-29 18:28:29"
-    },
-    {
-      "cve_id": "CVE-2026-5045",
-      "title": "高危漏洞: CVE-2026-5045 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T14:16:32.547",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda FH1201 1.2.0.14(408). This impacts the function WrlclientSet of the file /goform/WrlclientSet of the component Parameter Handler. Performing a manipulation of the argument GO results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/FH1201/vul_43/README.md\nhttps://vuldb.com/submit/779126\nhttps://vuldb.com/vuln/353968",
-      "source": "NVD",
-      "time": "2026-03-29 18:28:10"
-    },
-    {
-      "cve_id": "CVE-2026-5044",
-      "title": "高危漏洞: CVE-2026-5044 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T13:17:03.573",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Belkin F9K1122 1.00.33. This affects the function formSetSystemSettings of the file /goform/formSetSystemSettings of the component Setting Handler. Such manipulation of the argument webpage leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_155/README.md\nhttps://vuldb.com/submit/779125\nhttps://vuldb.com/vuln/353967",
-      "source": "NVD",
-      "time": "2026-03-29 15:24:05"
-    },
-    {
-      "cve_id": "CVE-2026-33575",
-      "title": "高危漏洞: CVE-2026-33575 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-29T13:17:03.370",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "OpenClaw before 2026.3.12 embeds long-lived shared gateway credentials directly in pairing setup codes generated by /pair endpoint and OpenClaw qr command. Attackers with access to leaked setup codes from chat history, logs, or screenshots can recover and reuse the shared gateway credential outside the intended one-time pairing flow.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7h7g-x2px-94hj\nhttps://www.vulncheck.com/advisories/openclaw-long-lived-credential-exposure-in-pairing-setup-codes",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:58"
-    },
-    {
-      "cve_id": "CVE-2026-33573",
-      "title": "高危漏洞: CVE-2026-33573 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T13:17:02.980",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.11 contains an authorization bypass vulnerability in the gateway agent RPC that allows authenticated operators with operator.write permission to override workspace boundaries by supplying attacker-controlled spawnedBy and workspaceDir values. Remote operators can escape the configured workspace boundary and execute arbitrary file and exec operations from any process-accessible directory.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2rqg-gjgv-84jm\nhttps://www.vulncheck.com/advisories/openclaw-workspace-boundary-bypass-via-agent-rpc-parameters",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:52"
-    },
-    {
-      "cve_id": "CVE-2026-33572",
-      "title": "高危漏洞: CVE-2026-33572 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-03-29T13:17:02.770",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.2.17 creates session transcript JSONL files with overly broad default permissions, allowing local users to read transcript contents. Attackers with local access can read transcript files to extract sensitive information including secrets from tool output.",
-      "refs": "https://github.com/openclaw/openclaw/commit/095d522099653367e1b76fa5bb09d4ddf7c8a57c\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-vr7j-g7jv-h5mp\nhttps://www.vulncheck.com/advisories/openclaw-insufficient-file-permissions-in-session-transcript-files",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:48"
-    },
-    {
-      "cve_id": "CVE-2026-32987",
-      "title": "高危漏洞: CVE-2026-32987 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-29T13:17:02.563",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.13 allows bootstrap setup codes to be replayed during device pairing verification in src/infra/device-bootstrap.ts. Attackers can verify a valid bootstrap code multiple times before approval to escalate pending pairing scopes, including privilege escalation to operator.admin.",
-      "refs": "https://github.com/openclaw/openclaw/commit/1803d16d5cec970c54b0e1ac46b31b1cbade335c\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-63f5-hhc7-cx6p\nhttps://www.vulncheck.com/advisories/openclaw-bootstrap-setup-code-replay-via-device-pairing",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:43"
     }
   ]
 }
