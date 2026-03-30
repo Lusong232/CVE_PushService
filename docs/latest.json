@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5147",
+      "title": "高危漏洞: CVE-2026-5147 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-03-30T19:16:27.690",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in YunaiV yudao-cloud up to 2026.01. This affects an unknown part of the file /admin-api/system/tenant/get-by-website. The manipulation of the argument Website results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/NarcherAlter/Security_Note/blob/main/Vulnerability_Discovery/yudaoCloudv2026.01.md\nhttps://github.com/NarcherAlter/Security_Note/blob/main/Vulnerability_Discovery/yudaoCloudv2026.01.md#admin-apisystemtenantget-by-website\nhttps://vuldb.com/submit/780191",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:37"
+    },
+    {
+      "cve_id": "CVE-2026-3991",
+      "title": "高危漏洞: CVE-2026-3991 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-03-30T19:16:27.207",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Symantec Data Loss Prevention Windows Endpoint, prior to 25.1 MP1, 16.1 MP2, 16.0 RU2 HF9, 16.0 RU1 MP1 HF12, and 16.0 MP2 HF15, may be susceptible to a Elevation of Privilege vulnerability, which is a type of issue whereby an attacker may attempt to compromise the software application to gain elevated access to resources that are normally protected from an application or user.",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37306",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:32"
+    },
+    {
+      "cve_id": "CVE-2026-3502",
+      "title": "高危漏洞: CVE-2026-3502 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-03-30T19:16:27.053",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L",
+      "description": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user.",
+      "refs": "https://trueconf.com/blog/update/trueconf-8-5",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:28"
+    },
+    {
+      "cve_id": "CVE-2026-34714",
+      "title": "高危漏洞: CVE-2026-34714 (CVSS 9.2)",
+      "cvss_score": 9.2,
+      "published_date": "2026-03-30T19:16:26.853",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "description": "Vim before 9.2.0272 allows code execution that happens immediately upon opening a crafted file in the default configuration, because %{expr} injection occurs with tabpanel lacking P_MLE.",
+      "refs": "https://github.com/vim/vim/commit/664701eb7576edb7c7c7d9f2d600815ec1f43459\nhttps://github.com/vim/vim/releases/tag/v9.2.0272\nhttps://github.com/vim/vim/security/advisories/GHSA-2gmj-rpqf-pxvh",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:24"
+    },
+    {
+      "cve_id": "CVE-2026-4046",
+      "title": "高危漏洞: CVE-2026-4046 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-30T18:16:19.573",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The iconv() function in the GNU C Library versions 2.43 and earlier may crash due to an assertion failure when converting inputs from the IBM1390 or IBM1399 character sets, which may be used to remotely crash an application.\n\n\n\nThis vulnerability can be trivially mitigated by removing the IBM1390 and IBM1399 character sets from systems that do not need them.",
+      "refs": "https://sourceware.org/bugzilla/show_bug.cgi?id=33980\nhttps://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0007;hb=HEAD",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:20"
+    },
+    {
+      "cve_id": "CVE-2026-33032",
+      "title": "高危漏洞: CVE-2026-33032 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-03-30T18:16:19.410",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Nginx UI is a web user interface for the Nginx web server. In versions 2.3.5 and prior, the nginx-ui MCP (Model Context Protocol) integration exposes two HTTP endpoints: /mcp and /mcp_message. While /mcp requires both IP whitelisting and authentication (AuthRequired() middleware), the /mcp_message endpoint only applies IP whitelisting - and the default IP whitelist is empty, which the middleware treats as \"allow all\". This means any network attacker can invoke all MCP tools without authentication, including restarting nginx, creating/modifying/deleting nginx configuration files, and triggering automatic config reloads - achieving complete nginx service takeover. At time of publication, there are no publicly available patches.",
+      "refs": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h6c2-x2m2-mwhf\nhttps://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h6c2-x2m2-mwhf",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:16"
+    },
+    {
+      "cve_id": "CVE-2026-33030",
+      "title": "高危漏洞: CVE-2026-33030 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-30T18:16:19.243",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Nginx UI is a web user interface for the Nginx web server. In versions 2.3.3 and prior, Nginx-UI contains an Insecure Direct Object Reference (IDOR) vulnerability that allows any authenticated user to access, modify, and delete resources belonging to other users. The application's base Model struct lacks a user_id field, and all resource endpoints perform queries by ID without verifying user ownership, enabling complete authorization bypass in multi-user environments. At time of publication, there are no publicly available patches.",
+      "refs": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-5hf2-vhj6-gj9m",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:12"
+    },
+    {
+      "cve_id": "CVE-2026-30077",
+      "title": "高危漏洞: CVE-2026-30077 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-30T18:16:18.660",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "OpenAirInterface V2.2.0 AMF crashes when it fails to decode the message. Not all decode failures result in a crash. But the crash is consistent for particular inputs. An example input in hex stream is 80 00 00 0E 00 00 01 00 0F 80 02 02 40 00 58 00 01 88.",
+      "refs": "https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-amf/-/issues/76\nhttps://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-amf/-/merge_requests/414",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:08"
+    },
+    {
+      "cve_id": "CVE-2026-29872",
+      "title": "高危漏洞: CVE-2026-29872 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-03-30T18:16:18.523",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "A cross-session information disclosure vulnerability exists in the awesome-llm-apps project in commit e46690f99c3f08be80a9877fab52acacf7ab8251 (2026-01-19). The affected Streamlit-based GitHub MCP Agent stores user-supplied API tokens in process-wide environment variables using os.environ without proper session isolation. Because Streamlit serves multiple concurrent users from a single Python process, credentials provided by one user remain accessible to subsequent unauthenticated users. An attacker can exploit this issue to retrieve sensitive information such as GitHub Personal Access Tokens or LLM API keys, potentially leading to unauthorized access to private resources and financial abuse.",
+      "refs": "https://github.com/lilmingwa13/security-research/blob/main/CVE-2026-29872.md",
+      "source": "NVD",
+      "time": "2026-03-30 21:34:02"
+    },
+    {
+      "cve_id": "CVE-2026-29954",
+      "title": "高危漏洞: CVE-2026-29954 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-03-30T17:16:15.867",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
+      "description": "In KubePlus 4.1.4, the mutating webhook and kubeconfiggenerator components have an SSRF vulnerability when processing the chartURL field of ResourceComposition resources. The field is only URL-encoded without validating the target address. More critically, when kubeconfiggenerator uses wget to download charts, the chartURL is directly concatenated into the command, allowing attackers to inject wget's `--header` option to achieve arbitrary HTTP header injection.",
+      "refs": "https://gist.github.com/b0b0haha/33baea60fd2a847f11f1fb02e43c64c0\nhttps://github.com/b0b0haha/CVE-2026-29954/blob/main/README.md",
+      "source": "NVD",
+      "time": "2026-03-30 21:33:58"
+    },
+    {
+      "cve_id": "CVE-2026-30562",
+      "title": "高危漏洞: CVE-2026-30562 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-03-30T16:16:05.840",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "A Reflected Cross-Site Scripting (XSS) vulnerability exists in SourceCodester Sales and Inventory System 1.0. The vulnerability is located in the add_stock.php file via the \"msg\" parameter. The application fails to sanitize the input, allowing remote attackers to inject arbitrary web script or HTML via a crafted URL.",
+      "refs": "https://github.com/meifukun/Web-Security-PoCs/blob/main/Inventory-System/XSS-AddStock-msg.md",
+      "source": "NVD",
+      "time": "2026-03-30 21:33:53"
+    },
+    {
+      "cve_id": "CVE-2026-29953",
+      "title": "高危漏洞: CVE-2026-29953 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-30T16:16:04.433",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "SQL Injection vulnerability in SchemaHero 0.23.0 via the column parameter to the columnAsInsert function in file plugins/postgres/lib/column.go.",
+      "refs": "https://gist.github.com/b0b0haha/fb59199fb1fdf9414e76442e0599bfed\nhttps://github.com/b0b0haha/SchemaHero--Sqlinjection/blob/main/README.md",
+      "source": "NVD",
+      "time": "2026-03-30 21:33:49"
+    },
+    {
       "cve_id": "CVE-2026-34472",
       "title": "高危漏洞: CVE-2026-34472 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -150,148 +282,6 @@
       "source": "GitHub",
       "cve_overviews": "",
       "time": "2026-03-30 10:07:24"
-    },
-    {
-      "cve_id": "CVE-2026-29597",
-      "title": "漏洞仓库: CVE-2026-29597",
-      "cvss_score": null,
-      "published_date": "2026-03-30T08:04:28Z",
-      "updated_date": "2026-03-30T08:08:02Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/padayali-JD/CVE-2026-29597",
-      "source": "GitHub",
-      "cve_overviews": "No English description available for this CVE.",
-      "time": "2026-03-30 10:07:17"
-    },
-    {
-      "cve_id": "未检测到CVE ID",
-      "title": "漏洞仓库: CVE-2026-20999-my-thought",
-      "cvss_score": null,
-      "published_date": "2026-03-30T08:19:37Z",
-      "updated_date": "2026-03-30T08:43:44Z",
-      "vector_string": "N/A",
-      "description": "this is my thought about CVE, please update fix immediately",
-      "refs": "https://github.com/lasdjk/CVE-2026-20999-my-thought",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-03-30 10:07:10"
-    },
-    {
-      "cve_id": "CVE-2026-3124",
-      "title": "高危漏洞: CVE-2026-3124 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-30T02:16:15.630",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Download Monitor plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.1.7 via the executePayment() function due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to complete arbitrary pending orders by exploiting a mismatch between the PayPal transaction token and the local order, allowing theft of paid digital goods by paying a minimal amount for a low-cost item and using that payment token to finalize a high-value order.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3470119/download-monitor\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/45527d6c-6866-44e6-85c2-5be984afbbc9?source=cve",
-      "source": "NVD",
-      "time": "2026-03-30 05:16:37"
-    },
-    {
-      "cve_id": "CVE-2025-15036",
-      "title": "高危漏洞: CVE-2025-15036 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-03-30T02:16:14.413",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "A path traversal vulnerability exists in the `extract_archive_to_dir` function within the `mlflow/pyfunc/dbconnect_artifact_cache.py` file of the mlflow/mlflow repository. This vulnerability, present in versions before v3.7.0, arises due to the lack of validation of tar member paths during extraction. An attacker with control over the tar.gz file can exploit this issue to overwrite arbitrary files or gain elevated privileges, potentially escaping the sandbox directory in multi-tenant or shared cluster environments.",
-      "refs": "https://github.com/mlflow/mlflow/commit/3bf6d81ac4d38654c8ff012dbd0c3e9f17e7e346\nhttps://huntr.com/bounties/36c314cf-fd6e-4fb0-b9b0-1b47bcdf0eb0",
-      "source": "NVD",
-      "time": "2026-03-30 05:16:31"
-    },
-    {
-      "cve_id": "CVE-2026-2370",
-      "title": "高危漏洞: CVE-2026-2370 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-30T00:16:01.800",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 14.3 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 affecting Jira Connect installations that could have allowed an authenticated user with minimal workspace permissions to obtain installation credentials and impersonate the GitLab app due to improper authorization checks.",
-      "refs": "https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/589635\nhttps://hackerone.com/reports/3522829",
-      "source": "NVD",
-      "time": "2026-03-30 05:16:25"
-    },
-    {
-      "cve_id": "CVE-2026-33634",
-      "title": "漏洞仓库: teampcp-tools",
-      "cvss_score": null,
-      "published_date": "2026-03-28T02:11:17Z",
-      "updated_date": "2026-03-29T21:38:03Z",
-      "vector_string": "N/A",
-      "description": "Detection, eradication, and IOC tools for the TeamPCP/Cipherforce supply chain attack (CVE-2026-33634)",
-      "refs": "https://github.com/Unit221B/teampcp-tools",
-      "source": "GitHub",
-      "cve_overviews": "Trivy is a security scanner. On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in `aquasecurity/trivy-action` to credential-stealing malware, and replace all 7 tags in `aquasecurity/setup-trivy` with malicious commits. This incident is a continuation of the supply chain attack that began in late February 2026. Following the initial disclosure on March 1, credential rotation was performed but was not atomic (not all credentials were revoked simultaneously). The attacker could have use a valid token to exfiltrate newly rotated secrets during the rotation window (which lasted a few days). This could have allowed the attacker to retain access and execute the March 19 attack. Affected components include the `aquasecurity/trivy` Go / Container image version 0.69.4, the `aquasecurity/trivy-action` GitHub Action versions 0.0.1 – 0.34.2 (76/77), and the`aquasecurity/setup-trivy` GitHub Action versions 0.2.0 – 0.2.6, prior to the recreation of 0.2.6 with a safe commit. Known safe versions include versions 0.69.2 and 0.69.3 of the Trivy binary, version 0.35.0 of trivy-action, and version 0.2.6 of setup-trivy. Additionally, take other mitigations to ensure the safety of secrets. If there is any possibility that a compromised version ran in one's environment, all secrets accessible to affected pipelines must be treated as exposed and rotated immediately. Check whether one's organization pulled or executed Trivy v0.69.4 from any source. Remove any affected artifacts immediately. Review all workflows using `aquasecurity/trivy-action` or `aquasecurity/setup-trivy`. Those who referenced a version tag rather than a full commit SHA should check workflow run logs from March 19–20, 2026 for signs of compromise. Look for repositories named `tpcp-docs` in one's GitHub organization. The presence of such a repository may indicate that the fallback exfiltration mechanism was triggered and secrets were successfully stolen. Pin GitHub Actions to full, immutable commit SHA hashes, don't use mutable version tags.",
-      "time": "2026-03-30 01:25:43"
-    },
-    {
-      "cve_id": "CVE-2026-26980",
-      "title": "漏洞仓库: CVE-2026-26980",
-      "cvss_score": null,
-      "published_date": "2026-03-29T22:00:18Z",
-      "updated_date": "2026-03-30T00:59:27Z",
-      "vector_string": "N/A",
-      "description": "[CVE-2026-26980] 👻 Ghost CMS Unauthenticated SQLi via Content API",
-      "refs": "https://github.com/vognik/CVE-2026-26980",
-      "source": "GitHub",
-      "cve_overviews": "Ghost is a Node.js content management system. Versions 3.24.0 through 6.19.0 allow unauthenticated attackers to perform arbitrary reads from the database. This issue has been fixed in version 6.19.1.",
-      "time": "2026-03-30 01:25:31"
-    },
-    {
-      "cve_id": "CVE-2026-4946",
-      "title": "高危漏洞: CVE-2026-4946 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-29T20:16:12.723",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Ghidra versions prior to 12.0.3 improperly process annotation directives embedded in automatically extracted binary data, resulting in arbitrary command execution when an analyst interacts with the UI. Specifically, the @execute annotation (which is intended for trusted, user-authored comments) is also parsed in comments generated during auto-analysis (such as CFStrings in Mach-O binaries). This allows a crafted binary to present seemingly benign clickable text which, when clicked, executes attacker-controlled commands on the analyst’s machine.",
-      "refs": "https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-mc3p-mq2p-xw6v\nhttps://takeonme.org/gcves/GCVE-1337-2026-00000000000000000000000000000000000000000000000001011111111111000111111110000000000000000000000000000000000000000000000000000000110",
-      "source": "NVD",
-      "time": "2026-03-30 01:25:23"
-    },
-    {
-      "cve_id": "CVE-2026-0562",
-      "title": "高危漏洞: CVE-2026-0562 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-03-29T18:16:14.460",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "A critical security vulnerability in parisneo/lollms versions up to 2.2.0 allows any authenticated user to accept or reject friend requests belonging to other users. The `respond_request()` function in `backend/routers/friends.py` does not implement proper authorization checks, enabling Insecure Direct Object Reference (IDOR) attacks. Specifically, the `/api/friends/requests/{friendship_id}` endpoint fails to verify whether the authenticated user is part of the friendship or the intended recipient of the request. This vulnerability can lead to unauthorized access, privacy violations, and potential social engineering attacks. The issue has been addressed in version 2.2.0.",
-      "refs": "https://github.com/parisneo/lollms/commit/c46297799f8e1e23305373f8350746b905e0e83c\nhttps://huntr.com/bounties/6aab01ca-a138-4a1d-bef9-3bce145359bf",
-      "source": "NVD",
-      "time": "2026-03-29 21:23:21"
-    },
-    {
-      "cve_id": "CVE-2026-0560",
-      "title": "高危漏洞: CVE-2026-0560 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-29T18:16:14.303",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "A Server-Side Request Forgery (SSRF) vulnerability exists in parisneo/lollms versions prior to 2.2.0, specifically in the `/api/files/export-content` endpoint. The `_download_image_to_temp()` function in `backend/routers/files.py` fails to validate user-controlled URLs, allowing attackers to make arbitrary HTTP requests to internal services and cloud metadata endpoints. This vulnerability can lead to internal network access, cloud metadata access, information disclosure, port scanning, and potentially remote code execution.",
-      "refs": "https://github.com/parisneo/lollms/commit/76a54f0df2df8a5b254aa627d487b5dc939a0263\nhttps://huntr.com/bounties/65e43a5e-b902-4369-b738-1825285a3ea5",
-      "source": "NVD",
-      "time": "2026-03-29 21:23:16"
-    },
-    {
-      "cve_id": "CVE-2026-0558",
-      "title": "高危漏洞: CVE-2026-0558 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-29T18:16:13.250",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "A vulnerability in parisneo/lollms, up to and including version 2.2.0, allows unauthenticated users to upload and process files through the `/api/files/extract-text` endpoint. This endpoint does not enforce authentication, unlike other file-related endpoints, and lacks the `Depends(get_current_active_user)` dependency. This issue can lead to denial of service (DoS) through resource exhaustion, information disclosure, and violation of the application's documented security policies.",
-      "refs": "https://github.com/parisneo/lollms/commit/a6625dc83786ff21d109b0d545ca61b770607ef3\nhttps://huntr.com/bounties/0a722001-89ce-4c91-b6a6-a55ee5ba2113",
-      "source": "NVD",
-      "time": "2026-03-29 21:23:09"
-    },
-    {
-      "cve_id": "CVE-2026-3055",
-      "title": "漏洞仓库: CVE-2026-3055",
-      "cvss_score": null,
-      "published_date": "2026-03-29T10:58:13Z",
-      "updated_date": "2026-03-29T11:01:36Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-3055",
-      "refs": "https://github.com/0xBlackash/CVE-2026-3055",
-      "source": "GitHub",
-      "cve_overviews": "Insufficient input validation in NetScaler ADC and NetScaler Gateway when configured as a SAML IDP leading to memory overread",
-      "time": "2026-03-29 18:29:51"
     }
   ]
 }
