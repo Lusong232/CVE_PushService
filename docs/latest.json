@@ -1,6 +1,43 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-33634",
+      "title": "漏洞仓库: teampcp-tools",
+      "cvss_score": null,
+      "published_date": "2026-03-28T02:11:17Z",
+      "updated_date": "2026-03-29T21:38:03Z",
+      "vector_string": "N/A",
+      "description": "Detection, eradication, and IOC tools for the TeamPCP/Cipherforce supply chain attack (CVE-2026-33634)",
+      "refs": "https://github.com/Unit221B/teampcp-tools",
+      "source": "GitHub",
+      "cve_overviews": "Trivy is a security scanner. On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in `aquasecurity/trivy-action` to credential-stealing malware, and replace all 7 tags in `aquasecurity/setup-trivy` with malicious commits. This incident is a continuation of the supply chain attack that began in late February 2026. Following the initial disclosure on March 1, credential rotation was performed but was not atomic (not all credentials were revoked simultaneously). The attacker could have use a valid token to exfiltrate newly rotated secrets during the rotation window (which lasted a few days). This could have allowed the attacker to retain access and execute the March 19 attack. Affected components include the `aquasecurity/trivy` Go / Container image version 0.69.4, the `aquasecurity/trivy-action` GitHub Action versions 0.0.1 – 0.34.2 (76/77), and the`aquasecurity/setup-trivy` GitHub Action versions 0.2.0 – 0.2.6, prior to the recreation of 0.2.6 with a safe commit. Known safe versions include versions 0.69.2 and 0.69.3 of the Trivy binary, version 0.35.0 of trivy-action, and version 0.2.6 of setup-trivy. Additionally, take other mitigations to ensure the safety of secrets. If there is any possibility that a compromised version ran in one's environment, all secrets accessible to affected pipelines must be treated as exposed and rotated immediately. Check whether one's organization pulled or executed Trivy v0.69.4 from any source. Remove any affected artifacts immediately. Review all workflows using `aquasecurity/trivy-action` or `aquasecurity/setup-trivy`. Those who referenced a version tag rather than a full commit SHA should check workflow run logs from March 19–20, 2026 for signs of compromise. Look for repositories named `tpcp-docs` in one's GitHub organization. The presence of such a repository may indicate that the fallback exfiltration mechanism was triggered and secrets were successfully stolen. Pin GitHub Actions to full, immutable commit SHA hashes, don't use mutable version tags.",
+      "time": "2026-03-30 01:25:43"
+    },
+    {
+      "cve_id": "CVE-2026-26980",
+      "title": "漏洞仓库: CVE-2026-26980",
+      "cvss_score": null,
+      "published_date": "2026-03-29T22:00:18Z",
+      "updated_date": "2026-03-30T00:59:27Z",
+      "vector_string": "N/A",
+      "description": "[CVE-2026-26980] 👻 Ghost CMS Unauthenticated SQLi via Content API",
+      "refs": "https://github.com/vognik/CVE-2026-26980",
+      "source": "GitHub",
+      "cve_overviews": "Ghost is a Node.js content management system. Versions 3.24.0 through 6.19.0 allow unauthenticated attackers to perform arbitrary reads from the database. This issue has been fixed in version 6.19.1.",
+      "time": "2026-03-30 01:25:31"
+    },
+    {
+      "cve_id": "CVE-2026-4946",
+      "title": "高危漏洞: CVE-2026-4946 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-03-29T20:16:12.723",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Ghidra versions prior to 12.0.3 improperly process annotation directives embedded in automatically extracted binary data, resulting in arbitrary command execution when an analyst interacts with the UI. Specifically, the @execute annotation (which is intended for trusted, user-authored comments) is also parsed in comments generated during auto-analysis (such as CFStrings in Mach-O binaries). This allows a crafted binary to present seemingly benign clickable text which, when clicked, executes attacker-controlled commands on the analyst’s machine.",
+      "refs": "https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-mc3p-mq2p-xw6v\nhttps://takeonme.org/gcves/GCVE-1337-2026-00000000000000000000000000000000000000000000000001011111111111000111111110000000000000000000000000000000000000000000000000000000110",
+      "source": "NVD",
+      "time": "2026-03-30 01:25:23"
+    },
+    {
       "cve_id": "CVE-2026-0562",
       "title": "高危漏洞: CVE-2026-0562 (CVSS 8.3)",
       "cvss_score": 8.3,
@@ -251,39 +288,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m\nhttps://www.vulncheck.com/advisories/openclaw-exec-allowlist-pattern-overmatch-via-posix-path-normalization",
       "source": "NVD",
       "time": "2026-03-29 15:23:10"
-    },
-    {
-      "cve_id": "CVE-2026-32972",
-      "title": "高危漏洞: CVE-2026-32972 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-03-29T13:17:01.167",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "OpenClaw before 2026.3.11 contains an authorization bypass vulnerability allowing authenticated operators with only operator.write permission to access admin-only browser profile management routes through browser.request. Attackers can create or modify browser profiles and persist attacker-controlled remote CDP endpoints to disk without holding operator.admin privileges.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vmhq-cqm9-6p7q\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-browser-profile-management-via-browser-request",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:06"
-    },
-    {
-      "cve_id": "CVE-2026-32924",
-      "title": "高危漏洞: CVE-2026-32924 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-29T13:17:00.963",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.12 contains an authorization bypass vulnerability where Feishu reaction events with omitted chat_type are misclassified as p2p conversations instead of group chats. Attackers can exploit this misclassification to bypass groupAllowFrom and requireMention protections in group chat reaction-derived events.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m69h-jm2f-2pv8\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-misclassified-reaction-events-in-feishu",
-      "source": "NVD",
-      "time": "2026-03-29 15:22:59"
-    },
-    {
-      "cve_id": "CVE-2026-32922",
-      "title": "高危漏洞: CVE-2026-32922 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-03-29T13:17:00.573",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.11 contains a privilege escalation vulnerability in device.token.rotate that allows callers with operator.pairing scope to mint tokens with broader scopes by failing to constrain newly minted scopes to the caller's current scope set. Attackers can obtain operator.admin tokens for paired devices and achieve remote code execution on connected nodes via system.run or gain unauthorized gateway-admin access.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc\nhttps://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-unvalidated-scope-in-device-token-rotate",
-      "source": "NVD",
-      "time": "2026-03-29 15:22:53"
     }
   ]
 }
