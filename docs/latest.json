@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3124",
+      "title": "高危漏洞: CVE-2026-3124 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-03-30T02:16:15.630",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The Download Monitor plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.1.7 via the executePayment() function due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to complete arbitrary pending orders by exploiting a mismatch between the PayPal transaction token and the local order, allowing theft of paid digital goods by paying a minimal amount for a low-cost item and using that payment token to finalize a high-value order.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3470119/download-monitor\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/45527d6c-6866-44e6-85c2-5be984afbbc9?source=cve",
+      "source": "NVD",
+      "time": "2026-03-30 05:16:37"
+    },
+    {
+      "cve_id": "CVE-2025-15036",
+      "title": "高危漏洞: CVE-2025-15036 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-03-30T02:16:14.413",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "A path traversal vulnerability exists in the `extract_archive_to_dir` function within the `mlflow/pyfunc/dbconnect_artifact_cache.py` file of the mlflow/mlflow repository. This vulnerability, present in versions before v3.7.0, arises due to the lack of validation of tar member paths during extraction. An attacker with control over the tar.gz file can exploit this issue to overwrite arbitrary files or gain elevated privileges, potentially escaping the sandbox directory in multi-tenant or shared cluster environments.",
+      "refs": "https://github.com/mlflow/mlflow/commit/3bf6d81ac4d38654c8ff012dbd0c3e9f17e7e346\nhttps://huntr.com/bounties/36c314cf-fd6e-4fb0-b9b0-1b47bcdf0eb0",
+      "source": "NVD",
+      "time": "2026-03-30 05:16:31"
+    },
+    {
+      "cve_id": "CVE-2026-2370",
+      "title": "高危漏洞: CVE-2026-2370 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-03-30T00:16:01.800",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 14.3 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 affecting Jira Connect installations that could have allowed an authenticated user with minimal workspace permissions to obtain installation credentials and impersonate the GitLab app due to improper authorization checks.",
+      "refs": "https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/589635\nhttps://hackerone.com/reports/3522829",
+      "source": "NVD",
+      "time": "2026-03-30 05:16:25"
+    },
+    {
       "cve_id": "CVE-2026-33634",
       "title": "漏洞仓库: teampcp-tools",
       "cvss_score": null,
@@ -255,39 +288,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qc36-x95h-7j53\nhttps://www.vulncheck.com/advisories/openclaw-approval-bypass-via-unrecognized-script-runners",
       "source": "NVD",
       "time": "2026-03-29 15:23:27"
-    },
-    {
-      "cve_id": "CVE-2026-32975",
-      "title": "高危漏洞: CVE-2026-32975 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-29T13:17:01.763",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.12 contains a weak authorization vulnerability in Zalouser allowlist mode that matches mutable group display names instead of stable group identifiers. Attackers can create groups with identical names to allowlisted groups to bypass channel authorization and route messages from unintended groups to the agent.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f5mf-3r52-r83w\nhttps://www.vulncheck.com/advisories/openclaw-weak-authorization-via-mutable-group-names-in-zalouser-allowlist",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:22"
-    },
-    {
-      "cve_id": "CVE-2026-32974",
-      "title": "高危漏洞: CVE-2026-32974 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-03-29T13:17:01.570",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "OpenClaw before 2026.3.12 contains an authentication bypass vulnerability in Feishu webhook mode when only verificationToken is configured without encryptKey, allowing acceptance of forged events. Unauthenticated network attackers can inject forged Feishu events and trigger downstream tool execution by reaching the webhook endpoint.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g353-mgv3-8pcj\nhttps://www.vulncheck.com/advisories/openclaw-forged-event-injection-via-feishu-webhook-verification-token",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:17"
-    },
-    {
-      "cve_id": "CVE-2026-32973",
-      "title": "高危漏洞: CVE-2026-32973 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-29T13:17:01.367",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.11 contains an exec allowlist bypass vulnerability where matchesExecAllowlistPattern improperly normalizes patterns with lowercasing and glob matching that overmatches on POSIX paths. Attackers can exploit the ? wildcard matching across path segments to execute commands or paths not intended by operators.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m\nhttps://www.vulncheck.com/advisories/openclaw-exec-allowlist-pattern-overmatch-via-posix-path-normalization",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:10"
     }
   ]
 }
