@@ -1,6 +1,45 @@
 {
   "latest": [
     {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE-2026-30082",
+      "cvss_score": null,
+      "published_date": "2026-03-30T01:46:48Z",
+      "updated_date": "2026-03-30T02:14:50Z",
+      "vector_string": "N/A",
+      "description": "Stored cross-site scripting (XSS) vulnerabilities in IngEstate Server v11.14.0",
+      "refs": "https://github.com/Cr0wld3r/CVE-2026-30082",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-30 10:07:24"
+    },
+    {
+      "cve_id": "CVE-2026-29597",
+      "title": "漏洞仓库: CVE-2026-29597",
+      "cvss_score": null,
+      "published_date": "2026-03-30T08:04:28Z",
+      "updated_date": "2026-03-30T08:08:02Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/padayali-JD/CVE-2026-29597",
+      "source": "GitHub",
+      "cve_overviews": "No English description available for this CVE.",
+      "time": "2026-03-30 10:07:17"
+    },
+    {
+      "cve_id": "未检测到CVE ID",
+      "title": "漏洞仓库: CVE-2026-20999-my-thought",
+      "cvss_score": null,
+      "published_date": "2026-03-30T08:19:37Z",
+      "updated_date": "2026-03-30T08:43:44Z",
+      "vector_string": "N/A",
+      "description": "this is my thought about CVE, please update fix immediately",
+      "refs": "https://github.com/lasdjk/CVE-2026-20999-my-thought",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-03-30 10:07:10"
+    },
+    {
       "cve_id": "CVE-2026-3124",
       "title": "高危漏洞: CVE-2026-3124 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -255,39 +294,6 @@
       "refs": "https://github.com/openclaw/openclaw/commit/1803d16d5cec970c54b0e1ac46b31b1cbade335c\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-63f5-hhc7-cx6p\nhttps://www.vulncheck.com/advisories/openclaw-bootstrap-setup-code-replay-via-device-pairing",
       "source": "NVD",
       "time": "2026-03-29 15:23:43"
-    },
-    {
-      "cve_id": "CVE-2026-32980",
-      "title": "高危漏洞: CVE-2026-32980 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-29T13:17:02.353",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpenClaw before 2026.3.13 reads and buffers Telegram webhook request bodies before validating the x-telegram-bot-api-secret-token header, allowing unauthenticated attackers to exhaust server resources. Attackers can send POST requests to the webhook endpoint to force memory consumption, socket time, and JSON parsing work before authentication validation occurs.",
-      "refs": "https://github.com/openclaw/openclaw/commit/7e49e98f79073b11134beac27fdff547ba5a4a02\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-jq3f-vjww-8rq7\nhttps://www.vulncheck.com/advisories/openclaw-resource-exhaustion-via-unauthenticated-telegram-webhook-request",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:38"
-    },
-    {
-      "cve_id": "CVE-2026-32979",
-      "title": "高危漏洞: CVE-2026-32979 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-29T13:17:02.157",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.11 contains an approval integrity vulnerability allowing attackers to execute rewritten local code by modifying scripts between approval and execution when exact file binding cannot occur. Remote attackers can change approved local scripts before execution to achieve unintended code execution as the OpenClaw runtime user.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xf99-j42q-5w5p\nhttps://www.vulncheck.com/advisories/openclaw-unbound-interpreter-and-runtime-commands-bypass-in-node-host-approval",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:33"
-    },
-    {
-      "cve_id": "CVE-2026-32978",
-      "title": "高危漏洞: CVE-2026-32978 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-03-29T13:17:01.963",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.11 contains an approval integrity vulnerability where system.run approvals fail to bind mutable file operands for certain script runners like tsx and jiti. Attackers can obtain approval for benign script commands, rewrite referenced scripts on disk, and execute modified code under the approved run context.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qc36-x95h-7j53\nhttps://www.vulncheck.com/advisories/openclaw-approval-bypass-via-unrecognized-script-runners",
-      "source": "NVD",
-      "time": "2026-03-29 15:23:27"
     }
   ]
 }
