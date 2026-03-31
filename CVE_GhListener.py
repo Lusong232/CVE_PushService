@@ -326,7 +326,7 @@ def send_notification(repo_info: Dict, template: str, delaytime: int):
     # cve_overviews_text = "\n\n".join(cve_overviews)
     message = template.format(
         name=repo_info['name'],
-        cve_ids=', '.join(repo_info['cve_ids']) if repo_info['cve_ids'] else '未检测到CVE ID',
+        cve_ids=', '.join(repo_info['cve_ids']) if repo_info['cve_ids'] else 'none',
         pushed_at=repo_info['pushed_at'],
         created_at=repo_info['created_at'],
         description=translate(repo_info['description'],5),
