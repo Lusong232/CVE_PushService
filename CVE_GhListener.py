@@ -274,7 +274,7 @@ def update_gh_json(repo_info):
             cve_overviews_text = "\n".join(overviews)   # 完整内容
 
     new_msg = {
-        "cve_id": ', '.join(repo_info['cve_ids']) if repo_info['cve_ids'] else '未检测到CVE ID',
+        "cve_id": ', '.join(repo_info['cve_ids']) if repo_info['cve_ids'] else 'none',
         "title": f"漏洞仓库: {repo_info['name']}",
         "cvss_score": None,
         "published_date": repo_info['created_at'],        # 创建时间
