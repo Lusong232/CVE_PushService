@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-29000",
+      "title": "漏洞仓库: CVE-2026-29000",
+      "cvss_score": null,
+      "published_date": "2026-03-31T09:06:17Z",
+      "updated_date": "2026-03-31T09:40:27Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-29000",
+      "refs": "https://github.com/ClayOfGilgamesh/CVE-2026-29000",
+      "source": "GitHub",
+      "cve_overviews": "pac4j-jwt versions prior to 4.5.9, 5.7.9, and 6.3.3 contain an authentication bypass vulnerability in JwtAuthenticator when processing encrypted JWTs that allows remote attackers to forge authentication tokens. Attackers who possess the server's RSA public key can create a JWE-wrapped PlainJWT with arbitrary subject and role claims, bypassing signature verification to authenticate as any user including administrators.",
+      "time": "2026-03-31 09:55:36"
+    },
+    {
       "cve_id": "CVE-2026-30081",
       "title": "漏洞仓库: CVE-2026-30081",
       "cvss_score": null,
@@ -277,17 +290,6 @@
       "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/CH22/vul_47/README.md\nhttps://vuldb.com/submit/780207\nhttps://vuldb.com/vuln/354187",
       "source": "NVD",
       "time": "2026-03-31 01:25:12"
-    },
-    {
-      "cve_id": "CVE-2026-5154",
-      "title": "高危漏洞: CVE-2026-5154 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-30T23:17:04.830",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Tenda CH22 1.0.0.1/1.If. The impacted element is the function fromSetCfm of the file /goform/setcfm of the component Parameter Handler. The manipulation of the argument funcname leads to stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/CH22/vul_48/README.md\nhttps://vuldb.com/submit/780206\nhttps://vuldb.com/vuln/354186",
-      "source": "NVD",
-      "time": "2026-03-31 01:24:53"
     }
   ]
 }
