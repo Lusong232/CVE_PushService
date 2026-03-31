@@ -203,7 +203,7 @@
       "time": "2026-03-31 05:04:17"
     },
     {
-      "cve_id": "未检测到CVE ID",
+      "cve_id": "none",
       "title": "漏洞仓库: ICS-MoxieManager-FileUpload-PoC",
       "cvss_score": null,
       "published_date": "2026-03-30T23:06:10Z",
