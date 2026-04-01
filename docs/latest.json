@@ -1,6 +1,140 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4800",
+      "title": "漏洞仓库: CVE-2026-4800-POC",
+      "cvss_score": null,
+      "published_date": "2026-04-01T01:45:10Z",
+      "updated_date": "2026-04-01T01:47:08Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/threalwinky/CVE-2026-4800-POC",
+      "source": "GitHub",
+      "cve_overviews": "Impact:\n\nThe fix for CVE-2021-23337 (https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the variable option in _.template but did not apply the same validation to options.imports key names. Both paths flow into the same Function() constructor sink.\n\nWhen an application passes untrusted input as options.imports key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, _.template uses assignInWith to merge imports, which enumerates inherited properties via for..in. If Object.prototype has been polluted by any other vector, the polluted keys are copied into the imports object and passed to Function().\n\nPatches:\n\nUsers should upgrade to version 4.18.0.\n\nWorkarounds:\n\nDo not pass untrusted input as key names in options.imports. Only use developer-controlled, static key names.",
+      "time": "2026-04-01 05:18:03"
+    },
+    {
+      "cve_id": "CVE-2026-4947",
+      "title": "高危漏洞: CVE-2026-4947 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-04-01T02:16:03.740",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Addressed a potential insecure direct object reference (IDOR) vulnerability in the signing invitation acceptance process. Under certain conditions, this issue could have allowed an attacker to access or modify unauthorized resources by manipulating user-supplied object identifiers, potentially leading to forged signatures and compromising the integrity and authenticity of documents undergoing the signing process. The issue was caused by insufficient authorization validation on referenced resources during request processing.",
+      "refs": "https://www.foxit.com/support/security-bulletins.html",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:52"
+    },
+    {
+      "cve_id": "CVE-2026-3780",
+      "title": "高危漏洞: CVE-2026-3780 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-01T02:16:03.183",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The application's installer runs with elevated privileges but resolves system executables and DLLs using untrusted search paths that can include user-writable directories, allowing a local attacker to place malicious binaries with the same names and have them loaded or executed instead of the legitimate system files, resulting in local privilege escalation.",
+      "refs": "https://www.foxit.com/support/security-bulletins.html",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:47"
+    },
+    {
+      "cve_id": "CVE-2026-3779",
+      "title": "高危漏洞: CVE-2026-3779 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-04-01T02:16:03.043",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The application's list box calculate array logic keeps stale references to page or form objects after they are deleted or re-created, which allows crafted documents to trigger a use-after-free when the calculation runs and can potentially lead to arbitrary code execution.",
+      "refs": "https://www.foxit.com/support/security-bulletins.html\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2365",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:42"
+    },
+    {
+      "cve_id": "CVE-2026-3775",
+      "title": "高危漏洞: CVE-2026-3775 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-04-01T02:16:02.440",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The application's update service, when checking for updates, loads certain system libraries from a search path that includes directories writable by low‑privileged users and is not strictly restricted to trusted system locations. Because these libraries may be resolved and loaded from user‑writable locations, a local attacker can place a malicious library there and have it loaded with SYSTEM privileges, resulting in local privilege escalation and arbitrary code execution.",
+      "refs": "https://www.foxit.com/support/security-bulletins.html",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:36"
+    },
+    {
+      "cve_id": "CVE-2026-35056",
+      "title": "高危漏洞: CVE-2026-35056 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-01T01:16:41.593",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "XenForo before 2.3.9 and before 2.2.18 allows remote code execution (RCE) by authenticated, but malicious, admin users. An attacker with admin panel access can execute arbitrary code on the server.",
+      "refs": "https://www.vulncheck.com/advisories/xenforo-remote-code-execution-via-authenticated-admin\nhttps://xenforo.com/community/threads/xenforo-2-3-9-inc-xfmg-2-2-18-released-security-fix.235659/",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:32"
+    },
+    {
+      "cve_id": "CVE-2025-71282",
+      "title": "高危漏洞: CVE-2025-71282 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-01T01:16:40.797",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "XenForo before 2.3.7 discloses filesystem paths through exception messages triggered by open_basedir restrictions. This allows an attacker to obtain information about the server's directory structure.",
+      "refs": "https://www.vulncheck.com/advisories/xenforo-path-disclosure-via-open-basedir-exceptions\nhttps://xenforo.com/community/threads/xenforo-2-3-7-released-includes-security-fixes.232121/",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:28"
+    },
+    {
+      "cve_id": "CVE-2025-71281",
+      "title": "高危漏洞: CVE-2025-71281 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-01T01:16:40.590",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "XenForo before 2.3.7 does not properly restrict methods callable from within templates. A loose prefix match was used instead of a stricter first-word match for methods accessible through callbacks and variable method calls in templates, potentially allowing unauthorized method invocations.",
+      "refs": "https://www.vulncheck.com/advisories/xenforo-template-method-call-restriction-bypass\nhttps://xenforo.com/community/threads/xenforo-2-3-7-released-includes-security-fixes.232121/",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:23"
+    },
+    {
+      "cve_id": "CVE-2025-71279",
+      "title": "高危漏洞: CVE-2025-71279 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-01T01:16:40.200",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "XenForo before 2.3.7 contains a security issue affecting Passkeys that have been added to user accounts. An attacker may be able to compromise the security of Passkey-based authentication.",
+      "refs": "https://www.vulncheck.com/advisories/xenforo-passkey-security-bypass\nhttps://xenforo.com/community/threads/xenforo-2-3-7-released-includes-security-fixes.232121/",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:17"
+    },
+    {
+      "cve_id": "CVE-2025-71278",
+      "title": "高危漏洞: CVE-2025-71278 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-01T01:16:40.000",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "XenForo before 2.3.5 allows OAuth2 client applications to request unauthorized scopes. This affects any customer using OAuth2 clients on any version of XenForo 2.3 prior to 2.3.5, potentially allowing client applications to gain access beyond their intended authorization level.",
+      "refs": "https://www.vulncheck.com/advisories/xenforo-oauth2-unauthorized-scope-request\nhttps://xenforo.com/community/threads/xenforo-2-3-5-includes-security-fix-add-ons-released.228812/",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:13"
+    },
+    {
+      "cve_id": "CVE-2025-13855",
+      "title": "高危漏洞: CVE-2025-13855 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-04-01T01:16:39.360",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+      "description": "IBM Storage Protect Server 8.2.0 IBM Storage Protect Plus Server is vulnerable to SQL injection. A remote attacker could send specially crafted SQL statements, which could allow the attacker to view, add, modify, or delete information in the back-end database.",
+      "refs": "https://www.ibm.com/support/pages/node/7267783",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:08"
+    },
+    {
+      "cve_id": "CVE-2026-5238",
+      "title": "高危漏洞: CVE-2026-5238 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-01T00:16:02.087",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in itsourcecode Payroll Management System 1.0. Affected by this issue is some unknown functionality of the file /view_employee.php of the component Parameter Handler. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/K4ptor/itsourcecode-Payroll-Management-System-V1.0-SQL-Injection2\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/780475",
+      "source": "NVD",
+      "time": "2026-04-01 05:17:01"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: malxios-checker",
       "cvss_score": null,
@@ -144,142 +278,6 @@
       "refs": "https://github.com/InvoiceShelf/InvoiceShelf/releases/tag/2.2.0\nhttps://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-q9wx-ggwq-mcgh",
       "source": "NVD",
       "time": "2026-04-01 01:30:14"
-    },
-    {
-      "cve_id": "CVE-2026-34366",
-      "title": "高危漏洞: CVE-2026-34366 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-03-31T21:16:29.537",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
-      "description": "InvoiceShelf is an open-source web & mobile app that helps track expenses, payments and create professional invoices and estimates. Prior to version 2.2.0, a Server-Side Request Forgery (SSRF) vulnerability exists in the Payment receipt PDF generation module. User-supplied HTML in the payment Notes field is passed unsanitised to the Dompdf rendering library, which will fetch any remote resources referenced in the markup. The vulnerability is exploitable directly via the PDF receipt endpoint, regardless of whether automated email attachments are enabled. This issue has been patched in version 2.2.0.",
-      "refs": "https://github.com/InvoiceShelf/InvoiceShelf/releases/tag/2.2.0\nhttps://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-38hf-fq8x-q49r",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:10"
-    },
-    {
-      "cve_id": "CVE-2026-1579",
-      "title": "高危漏洞: CVE-2026-1579 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-03-31T21:16:27.897",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The MAVLink communication protocol does not require cryptographic \nauthentication by default. When MAVLink 2.0 message signing is not \nenabled, any message -- including SERIAL_CONTROL, which provides \ninteractive shell access -- can be sent by an unauthenticated party with\n access to the MAVLink interface. PX4 provides MAVLink 2.0 message \nsigning as the cryptographic authentication mechanism for all MAVLink \ncommunication. When signing is enabled, unsigned messages are rejected \nat the protocol level.",
-      "refs": "https://docs.px4.io/main/en/mavlink/message_signing\nhttps://docs.px4.io/main/en/mavlink/security_hardening\nhttps://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-090-02.json",
-      "source": "NVD",
-      "time": "2026-04-01 01:29:51"
-    },
-    {
-      "cve_id": "CVE-2026-5211",
-      "title": "高危漏洞: CVE-2026-5211 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-31T20:16:29.873",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. This vulnerability affects the function UPnP_AV_Server_Path_Del of the file /cgi-bin/app_mgr.cgi. Executing a manipulation of the argument f_dir can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/D-Link8/vuln_165/165.md\nhttps://vuldb.com/submit/780434\nhttps://vuldb.com/vuln/354347",
-      "source": "NVD",
-      "time": "2026-04-01 01:29:47"
-    },
-    {
-      "cve_id": "CVE-2026-4800",
-      "title": "高危漏洞: CVE-2026-4800 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-31T20:16:29.660",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Impact:\n\nThe fix for CVE-2021-23337 (https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the variable option in _.template but did not apply the same validation to options.imports key names. Both paths flow into the same Function() constructor sink.\n\nWhen an application passes untrusted input as options.imports key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, _.template uses assignInWith to merge imports, which enumerates inherited properties via for..in. If Object.prototype has been polluted by any other vector, the polluted keys are copied into the imports object and passed to Function().\n\nPatches:\n\nUsers should upgrade to version 4.18.0.\n\nWorkarounds:\n\nDo not pass untrusted input as key names in options.imports. Only use developer-controlled, static key names.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/advisories/GHSA-35jh-r3h4-6jhm\nhttps://github.com/lodash/lodash/commit/3469357cff396a26c363f8c1b5a91dde28ba4b1c",
-      "source": "NVD",
-      "time": "2026-04-01 01:29:43"
-    },
-    {
-      "cve_id": "CVE-2026-34365",
-      "title": "高危漏洞: CVE-2026-34365 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-03-31T20:16:29.307",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
-      "description": "InvoiceShelf is an open-source web & mobile app that helps track expenses, payments and create professional invoices and estimates. Prior to version 2.2.0, a Server-Side Request Forgery (SSRF) vulnerability exists in the Estimate PDF generation module. User-supplied HTML in the estimate Notes field is passed unsanitised to the Dompdf rendering library, which will fetch any remote resources referenced in the markup. The vulnerability is exploitable directly via the PDF preview and customer view endpoints regardless of whether automated email attachments are enabled. This issue has been patched in version 2.2.0.",
-      "refs": "https://github.com/InvoiceShelf/InvoiceShelf/releases/tag/2.2.0\nhttps://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-pc5v-8xwc-v9xq",
-      "source": "NVD",
-      "time": "2026-04-01 01:29:39"
-    },
-    {
-      "cve_id": "CVE-2026-24061",
-      "title": "漏洞仓库: chall2026-telneted",
-      "cvss_score": null,
-      "published_date": "2026-02-15T13:14:41Z",
-      "updated_date": "2026-03-31T19:41:12Z",
-      "vector_string": "N/A",
-      "description": "[AtHack 2026] Pwn challenge about telnetd CVE-2026-24061",
-      "refs": "https://github.com/athack-ctf/chall2026-telneted",
-      "source": "GitHub",
-      "cve_overviews": "telnetd in GNU Inetutils through 2.7 allows remote authentication bypass via a \"-f root\" value for the USER environment variable.",
-      "time": "2026-03-31 21:30:24"
-    },
-    {
-      "cve_id": "CVE-2026-34036",
-      "title": "漏洞仓库: CVE-2026-34036",
-      "cvss_score": null,
-      "published_date": "2026-03-31T20:32:08Z",
-      "updated_date": "2026-03-31T20:42:00Z",
-      "vector_string": "N/A",
-      "description": "PoC Script for CVE-2026-34036. For educational purposes only.",
-      "refs": "https://github.com/cnf409/CVE-2026-34036",
-      "source": "GitHub",
-      "cve_overviews": "Dolibarr is an enterprise resource planning (ERP) and customer relationship management (CRM) software package. In versions 22.0.4 and prior, there is a Local File Inclusion (LFI) vulnerability in the core AJAX endpoint /core/ajax/selectobject.php. By manipulating the objectdesc parameter and exploiting a fail-open logic flaw in the core access control function restrictedArea(), an authenticated user with no specific privileges can read the contents of arbitrary non-PHP files on the server (such as .env, .htaccess, configuration backups, or logs…). At time of publication, there are no publicly available patches.",
-      "time": "2026-03-31 21:30:13"
-    },
-    {
-      "cve_id": "CVE-2026-5210",
-      "title": "高危漏洞: CVE-2026-5210 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-03-31T19:16:29.597",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in SourceCodester Leave Application System 1.0. This affects an unknown part. Performing a manipulation of the argument page results in file inclusion. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
-      "refs": "https://medium.com/@hemantrajbhati5555/local-file-inclusion-lfi-in-leave-application-system-php-sqlite3-4e095bb7ee40\nhttps://vuldb.com/submit/780419\nhttps://vuldb.com/vuln/354346",
-      "source": "NVD",
-      "time": "2026-03-31 21:30:05"
-    },
-    {
-      "cve_id": "CVE-2026-5190",
-      "title": "高危漏洞: CVE-2026-5190 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-31T18:16:59.080",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out-of-bounds write in the streaming decoder component in aws-c-event-stream before 0.6.0 might allow a third party operating a server to cause memory corruption leading to arbitrary code execution on a client application that processes crafted event-stream messages.\n\nTo remediate this issue, users should upgrade to version 0.6.0 or later.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-011-aws/\nhttps://github.com/awslabs/aws-c-event-stream/releases/tag/v0.6.0\nhttps://github.com/awslabs/aws-c-event-stream/security/advisories/GHSA-xvjw-fjq5-68hf",
-      "source": "NVD",
-      "time": "2026-03-31 21:30:01"
-    },
-    {
-      "cve_id": "CVE-2026-32726",
-      "title": "高危漏洞: CVE-2026-32726 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-31T18:16:50.997",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "SciTokens C++ is a minimal library for creating and using SciTokens from C or C++. Prior to version 1.4.1, scitokens-cpp is vulnerable to an authorization bypass in path-based scope validation. The enforcer used a simple string-prefix comparison when checking whether a requested resource path was covered by a token's authorized scope path. Because the check did not require a path-segment boundary, a token scoped to one path could incorrectly authorize access to sibling paths that merely started with the same prefix. This issue has been patched in version 1.4.1.",
-      "refs": "https://github.com/scitokens/scitokens-cpp/commit/decfe2f00cb9cabbf1e17a3bb2cd4ea1bbbd8a73\nhttps://github.com/scitokens/scitokens-cpp/security/advisories/GHSA-q5fm-fgvx-32jq",
-      "source": "NVD",
-      "time": "2026-03-31 21:29:55"
-    },
-    {
-      "cve_id": "CVE-2026-32725",
-      "title": "高危漏洞: CVE-2026-32725 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-03-31T18:16:50.837",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "SciTokens C++ is a minimal library for creating and using SciTokens from C or C++. Prior to version 1.4.1, scitokens-cpp is vulnerable to an authorization bypass when processing path-based scopes in tokens. The library normalizes the scope path from the token before authorization and collapses \"..\" path components instead of rejecting them. As a result, an attacker can use parent-directory traversal in the scope claim to broaden the effective authorization beyond the intended directory. This issue has been patched in version 1.4.1.",
-      "refs": "https://github.com/scitokens/scitokens-cpp/commit/7951ed809967d88c00c20de414b1ff74df8c3e08\nhttps://github.com/scitokens/scitokens-cpp/security/advisories/GHSA-rqcx-mc9w-pjxp",
-      "source": "NVD",
-      "time": "2026-03-31 21:29:48"
-    },
-    {
-      "cve_id": "CVE-2026-30282",
-      "title": "高危漏洞: CVE-2026-30282 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-03-31T18:16:47.123",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "An arbitrary file overwrite vulnerability in UXGROUP LLC Cast to TV Screen Mirroring v2.2.77 allows attackers to overwrite critical internal files via the file import process, leading to arbtrary code execution or information exposure.",
-      "refs": "http://cast.com\nhttps://appcraze.co/\nhttps://github.com/Secsys-FDU/AF_CVEs/issues/27",
-      "source": "NVD",
-      "time": "2026-03-31 21:29:43"
     }
   ]
 }
