@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-30332",
+      "cvss_score": null,
+      "published_date": "2026-04-01T13:06:15Z",
+      "updated_date": "2026-04-01T13:11:48Z",
+      "vector_string": "N/A",
+      "description": "Balena Etcher versions prior to v2.1.4 on Windows are affected by a Time-of-Check to Time-of-Use (TOCTOU) race condition in the temporary file handling.",
+      "refs": "https://github.com/B1tBreaker/CVE-2026-30332",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-01 16:02:03"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: axios-lab-utils",
+      "cvss_score": null,
+      "published_date": "2026-04-01T12:57:40Z",
+      "updated_date": "2026-04-01T13:41:45Z",
+      "vector_string": "N/A",
+      "description": "A local simulation lab for reproducing and analyzing the Axios npm supply chain attack (CVE-2026), including malicious dependency injection via plain-crypto-js, for security research and awareness.",
+      "refs": "https://github.com/0xHackshat/axios-lab-utils",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-01 16:01:53"
+    },
+    {
       "cve_id": "CVE-2026-5201",
       "title": "漏洞仓库: CVE-2026-5201",
       "cvss_score": null,
@@ -264,28 +290,6 @@
       "refs": "https://github.com/K4ptor/itsourcecode-Payroll-Management-System-V1.0-SQL-Injection\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/780474",
       "source": "NVD",
       "time": "2026-04-01 01:31:03"
-    },
-    {
-      "cve_id": "CVE-2026-5214",
-      "title": "高危漏洞: CVE-2026-5214 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-31T22:16:22.417",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. Impacted is the function cgi_addgroup_get_group_quota_minsize of the file /cgi-bin/account_mgr.cgi. The manipulation of the argument Name results in stack-based buffer overflow. The attack may be performed from remote. The exploit has been made public and could be used.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/D-Link8/vuln_169/169.md\nhttps://vuldb.com/submit/780439\nhttps://vuldb.com/vuln/354349",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:59"
-    },
-    {
-      "cve_id": "CVE-2026-34585",
-      "title": "高危漏洞: CVE-2026-34585 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-03-31T22:16:22.080",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, a vulnerability allows crafted block attribute values to bypass server-side attribute escaping when an HTML entity is mixed with raw special characters. An attacker can embed a malicious IAL value inside a .sy document, package it as a .sy.zip, and have the victim import it through the normal Import -> SiYuan .sy.zip workflow. Once the note is opened, the malicious attribute breaks out of its original HTML context and injects an event handler, resulting in stored XSS. In the Electron desktop client, this XSS reaches remote code execution because injected JavaScript runs with access to Node/Electron APIs. This issue has been patched in version 3.6.2.",
-      "refs": "https://github.com/siyuan-note/siyuan/issues/17246\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.6.2\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-ff66-236v-p4fg",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:55"
     }
   ]
 }
