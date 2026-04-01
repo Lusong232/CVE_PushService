@@ -1,6 +1,74 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5201",
+      "title": "漏洞仓库: CVE-2026-5201",
+      "cvss_score": null,
+      "published_date": "2026-04-01T12:51:19Z",
+      "updated_date": "2026-04-01T12:51:21Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-5201: Heap-based buffer overflow in gdk-pixbuf JPEG loader (CWE-122, CVSS 7.5)",
+      "refs": "https://github.com/kagancapar/CVE-2026-5201",
+      "source": "GitHub",
+      "cve_overviews": "A flaw was found in the gdk-pixbuf library. This heap-based buffer overflow vulnerability occurs in the JPEG image loader due to improper validation of color component counts when processing a specially crafted JPEG image. A remote attacker can exploit this flaw without user interaction, for example, via thumbnail generation. Successful exploitation leads to application crashes and denial of service (DoS) conditions.",
+      "time": "2026-04-01 12:56:13"
+    },
+    {
+      "cve_id": "CVE-2026-5261",
+      "title": "高危漏洞: CVE-2026-5261 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-01T09:16:17.920",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Shandong Hoteam InforCenter PLM up to 8.3.8. The impacted element is the function uploadFileToIIS of the file /Base/BaseHandler.ashx. The manipulation of the argument File leads to unrestricted upload. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://my.feishu.cn/docx/ToGkdd5jwokb4PxEMkHcKrfXn3b?from=from_copylink\nhttps://vuldb.com/submit/780725\nhttps://vuldb.com/vuln/354450",
+      "source": "NVD",
+      "time": "2026-04-01 12:56:04"
+    },
+    {
+      "cve_id": "CVE-2026-4370",
+      "title": "高危漏洞: CVE-2026-4370 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-04-01T09:16:17.717",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Juju from version 3.2.0 until 3.6.19 and from version 4.0 until 4.0.4, where the internal Dqlite database cluster fails to perform proper TLS client and server authentication. Specifically, the Juju controller's database endpoint does not validate client certificates when a new node attempts to join the cluster. An unauthenticated attacker with network reachability to the Juju controller's Dqlite port can exploit this flaw to join the database cluster. Once joined, the attacker gains full read and write access to the underlying database, allowing for total data compromise.",
+      "refs": "https://github.com/juju/juju/security/advisories/GHSA-gvrj-cjch-728p",
+      "source": "NVD",
+      "time": "2026-04-01 12:56:00"
+    },
+    {
+      "cve_id": "CVE-2026-5258",
+      "title": "高危漏洞: CVE-2026-5258 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-01T07:16:02.930",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Sanster IOPaint 1.5.3. Impacted is the function _get_file of the file iopaint/file_manager/file_manager.py of the component File Manager. Performing a manipulation of the argument filename results in path traversal. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/August829/CVEP/issues/11\nhttps://vuldb.com/submit/780666\nhttps://vuldb.com/vuln/354448",
+      "source": "NVD",
+      "time": "2026-04-01 12:55:51"
+    },
+    {
+      "cve_id": "CVE-2026-5257",
+      "title": "高危漏洞: CVE-2026-5257 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-01T06:16:16.363",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in code-projects Simple Laundry System 1.0. This issue affects some unknown processing of the file /delstaffinfo.php of the component Parameter Handler. Such manipulation of the argument userid leads to sql injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/ningfashui123/louplus/issues/1\nhttps://vuldb.com/submit/780723",
+      "source": "NVD",
+      "time": "2026-04-01 12:55:44"
+    },
+    {
+      "cve_id": "CVE-2026-5256",
+      "title": "高危漏洞: CVE-2026-5256 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-01T06:16:16.123",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in code-projects Simple Laundry System 1.0. This vulnerability affects unknown code of the file /modify.php of the component Parameter Handler. This manipulation of the argument firstName causes sql injection. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/kunlan567-boop/test/issues/1\nhttps://vuldb.com/submit/780618",
+      "source": "NVD",
+      "time": "2026-04-01 12:55:38"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: axios-scanner",
       "cvss_score": null,
@@ -218,72 +286,6 @@
       "refs": "https://github.com/siyuan-note/siyuan/issues/17246\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.6.2\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-ff66-236v-p4fg",
       "source": "NVD",
       "time": "2026-04-01 01:30:55"
-    },
-    {
-      "cve_id": "CVE-2026-34453",
-      "title": "高危漏洞: CVE-2026-34453 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-31T22:16:20.483",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, the publish service exposes bookmarked blocks from password-protected documents to unauthenticated visitors. In publish/read-only mode, /api/bookmark/getBookmark filters bookmark results by calling FilterBlocksByPublishAccess(nil, ...). Because the filter treats a nil context as authorized, it skips the publish password check and returns bookmarked blocks from documents configured as Protected. As a result, anyone who can access the publish service can retrieve content from protected documents without providing the required password, as long as at least one block in the document is bookmarked. This issue has been patched in version 3.6.2.",
-      "refs": "https://github.com/siyuan-note/siyuan/issues/17246\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.6.2\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-c77m-r996-jr3q",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:50"
-    },
-    {
-      "cve_id": "CVE-2026-34449",
-      "title": "高危漏洞: CVE-2026-34449 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-03-31T22:16:19.830",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, a malicious website can achieve Remote Code Execution (RCE) on any desktop running SiYuan by exploiting the permissive CORS policy (Access-Control-Allow-Origin: * + Access-Control-Allow-Private-Network: true) to inject a JavaScript snippet via the API. The injected snippet executes in Electron's Node.js context with full OS access the next time the user opens SiYuan's UI. No user interaction is required beyond visiting the malicious website while SiYuan is running. This issue has been patched in version 3.6.2.",
-      "refs": "https://github.com/siyuan-note/siyuan/issues/17246\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.6.2\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-68p4-j234-43mv",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:46"
-    },
-    {
-      "cve_id": "CVE-2026-34448",
-      "title": "高危漏洞: CVE-2026-34448 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-03-31T22:16:19.657",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, an attacker who can place a malicious URL in an Attribute View mAsse field can trigger stored XSS when a victim opens the Gallery or Kanban view with “Cover From -> Asset Field” enabled. The vulnerable code accepts arbitrary http(s) URLs without extensions as images, stores the attacker-controlled string in coverURL, and injects it directly into an <img src=\"...\"> attribute without escaping. In the Electron desktop client, the injected JavaScript executes with nodeIntegration enabled and contextIsolation disabled, so the XSS reaches arbitrary OS command execution under the victim’s account. This issue has been patched in version 3.6.2.",
-      "refs": "https://github.com/siyuan-note/siyuan/issues/17246\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.6.2\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-rx4h-526q-4458",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:42"
-    },
-    {
-      "cve_id": "CVE-2026-5213",
-      "title": "高危漏洞: CVE-2026-5213 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-31T21:16:34.167",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The affected element is the function cgi_adduser_to_session of the file /cgi-bin/account_mgr.cgi. This manipulation of the argument read_list causes stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/D-Link8/vuln_168/168.md\nhttps://vuldb.com/submit/780437\nhttps://vuldb.com/vuln/354350",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:35"
-    },
-    {
-      "cve_id": "CVE-2026-5212",
-      "title": "高危漏洞: CVE-2026-5212 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-03-31T21:16:33.890",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. This issue affects the function Webdav_Upload_File of the file /cgi-bin/webdav_mgr.cgi. The manipulation of the argument f_file leads to stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/D-Link8/vuln_166/166.md\nhttps://vuldb.com/submit/780435\nhttps://vuldb.com/submit/780436",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:31"
-    },
-    {
-      "cve_id": "CVE-2026-34731",
-      "title": "高危漏洞: CVE-2026-34731 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-03-31T21:16:31.760",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "WWBN AVideo is an open source video platform. In versions 26.0 and prior, the AVideo on_publish_done.php endpoint in the Live plugin allows unauthenticated users to terminate any active live stream. The endpoint processes RTMP callback events to mark streams as finished in the database, but performs no authentication or authorization checks before doing so. An attacker can enumerate active stream keys from the unauthenticated stats.json.php endpoint, then send crafted POST requests to on_publish_done.php to terminate any live broadcast. This enables denial-of-service against all live streaming functionality on the platform. At time of publication, there are no publicly available patches.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-4jcg-jxpf-5vq3",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:26"
     }
   ]
 }
