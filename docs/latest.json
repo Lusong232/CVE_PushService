@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: axios-scanner",
+      "cvss_score": null,
+      "published_date": "2026-04-01T08:29:35Z",
+      "updated_date": "2026-04-01T08:33:32Z",
+      "vector_string": "N/A",
+      "description": "A simple and minimal project designed to scan for axios supply chain attack (CVE-2026) IOCs",
+      "refs": "https://github.com/ssynical/axios-scanner",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-01 09:59:45"
+    },
+    {
       "cve_id": "CVE-2026-22200",
       "title": "漏洞仓库: CVE-2026-22200",
       "cvss_score": null,
@@ -271,17 +284,6 @@
       "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-4jcg-jxpf-5vq3",
       "source": "NVD",
       "time": "2026-04-01 01:30:26"
-    },
-    {
-      "cve_id": "CVE-2026-34394",
-      "title": "高危漏洞: CVE-2026-34394 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-03-31T21:16:30.660",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "WWBN AVideo is an open source video platform. In versions 26.0 and prior, AVideo's admin plugin configuration endpoint (admin/save.json.php) lacks any CSRF token validation. There is no call to isGlobalTokenValid() or verifyToken() before processing the request. Combined with the application's explicit SameSite=None cookie policy, an attacker can forge cross-origin POST requests from a malicious page to overwrite arbitrary plugin settings on a victim administrator's session. Because the plugins table is included in the ignoreTableSecurityCheck() array in objects/Object.php, standard table-level access controls are also bypassed. This allows a complete takeover of platform functionality by reconfiguring payment processors, authentication providers, cloud storage credentials, and more. At time of publication, there are no publicly available patches.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-4wwr-7h7c-chqr",
-      "source": "NVD",
-      "time": "2026-04-01 01:30:22"
     }
   ]
 }
