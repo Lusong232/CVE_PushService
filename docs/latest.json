@@ -1,6 +1,155 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-24516-DigitalOcean-RCE",
+      "cvss_score": null,
+      "published_date": "2026-03-22T20:52:57Z",
+      "updated_date": "2026-04-02T04:58:49Z",
+      "vector_string": "N/A",
+      "description": "Critical Pre-Auth Root RCE (CVSS 10.0) in DigitalOcean Droplet Agent up to v1.3.2 via Command Injection.",
+      "refs": "https://github.com/poxsky/CVE-2026-24516-DigitalOcean-RCE",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-02 12:51:04"
+    },
+    {
+      "cve_id": "CVE-2026-28372",
+      "title": "漏洞仓库: CVE-2026-28372-GNU-inetutils-telnetd-Privilege-Escalation",
+      "cvss_score": null,
+      "published_date": "2026-02-27T19:54:43Z",
+      "updated_date": "2026-04-02T09:00:45Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/mbanyamer/CVE-2026-28372-GNU-inetutils-telnetd-Privilege-Escalation",
+      "source": "GitHub",
+      "cve_overviews": "telnetd in GNU inetutils through 2.7 allows privilege escalation that can be exploited by abusing systemd service credentials support added to the login(1) implementation of util-linux in release 2.40. This is related to client control over the CREDENTIALS_DIRECTORY environment variable, and requires an unprivileged local user to create a login.noauth file.",
+      "time": "2026-04-02 12:50:57"
+    },
+    {
+      "cve_id": "CVE-2026-5027",
+      "title": "漏洞仓库: CVE-2026-5027",
+      "cvss_score": null,
+      "published_date": "2026-04-02T10:46:45Z",
+      "updated_date": "2026-04-02T10:49:28Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-5027 - Langflow Path Traversal to Remote Code Execution (CVSS 8.8)",
+      "refs": "https://github.com/yahiahamza/CVE-2026-5027",
+      "source": "GitHub",
+      "cve_overviews": "The 'POST /api/v2/files' endpoint does not sanitize the 'filename' parameter from the multipart form data, allowing an attacker to write files to arbitrary locations on the filesystem using path traversal sequences ('../').",
+      "time": "2026-04-02 12:50:50"
+    },
+    {
+      "cve_id": "CVE-2026-33616",
+      "title": "高危漏洞: CVE-2026-33616 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-02T10:16:17.080",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An unauthenticated remote attacker can exploit an unauthenticated blind SQL Injection vulnerability in the mb24api endpoint due to improper neutralization of special elements in a SQL SELECT command. This can result in a total loss of confidentiality.",
+      "refs": "https://certvde.com/de/advisories/VDE-2026-030\nhttps://mbconnectline.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-030.json",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:40"
+    },
+    {
+      "cve_id": "CVE-2026-33615",
+      "title": "高危漏洞: CVE-2026-33615 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-02T10:16:16.910",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "An unauthenticated remote attacker can exploit an unauthenticated SQL Injection vulnerability in the setinfo endpoint due to improper neutralization of special elements in a SQL UPDATE command. This can result in a total loss of integrity and availability.",
+      "refs": "https://certvde.com/de/advisories/VDE-2026-030\nhttps://mbconnectline.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-030.json",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:34"
+    },
+    {
+      "cve_id": "CVE-2026-33614",
+      "title": "高危漏洞: CVE-2026-33614 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-02T10:16:16.723",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An unauthenticated remote attacker can exploit an unauthenticated SQL Injection vulnerability in the getinfo endpoint due to improper neutralization of special elements in a SQL SELECT command. This can result in a total loss of confidentiality.",
+      "refs": "https://certvde.com/de/advisories/VDE-2026-030\nhttps://mbconnectline.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-030.json",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:28"
+    },
+    {
+      "cve_id": "CVE-2026-33613",
+      "title": "高危漏洞: CVE-2026-33613 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-02T10:16:15.727",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Due to the improper neutralisation of special elements used in an OS command, a remote attacker can exploit an RCE vulnerability in the generateSrpArray function, resulting in full system compromise.\nThis vulnerability can only be attacked if the attacker has some other way to write arbitrary data to the user table.",
+      "refs": "https://certvde.com/de/advisories/VDE-2026-030\nhttps://mbconnectline.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-030.json",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:23"
+    },
+    {
+      "cve_id": "CVE-2026-5244",
+      "title": "高危漏洞: CVE-2026-5244 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-02T08:16:28.683",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Cesanta Mongoose up to 7.20. This affects the function mg_tls_recv_cert of the file mongoose.c of the component TLS 1.3 Handler. Such manipulation of the argument pubkey leads to heap-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 7.21 mitigates this issue. The name of the patch is 0d882f1b43ff2308b7486a56a9d60cd6dba8a3f1. It is advisable to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://github.com/cesanta/mongoose/\nhttps://github.com/cesanta/mongoose/commit/0d882f1b43ff2308b7486a56a9d60cd6dba8a3f1\nhttps://github.com/cesanta/mongoose/releases/tag/7.21",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:19"
+    },
+    {
+      "cve_id": "CVE-2026-5032",
+      "title": "高危漏洞: CVE-2026-5032 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-02T08:16:28.493",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The W3 Total Cache plugin for WordPress is vulnerable to information exposure in all versions up to, and including, 2.9.3. This is due to the plugin bypassing its entire output buffering and processing pipeline when the request's User-Agent header contains \"W3 Total Cache\", which causes raw mfunc/mclude dynamic fragment HTML comments — including the W3TC_DYNAMIC_SECURITY security token — to be rendered in the page source. This makes it possible for unauthenticated attackers to discover the value of the W3TC_DYNAMIC_SECURITY constant by sending a crafted User-Agent header to any page that contains developer-placed dynamic fragment tags, granted the site has the fragment caching feature enabled.",
+      "refs": "https://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.9.3/Generic_Plugin.php#L1016\nhttps://plugins.trac.wordpress.org/changeset/3495959/w3-total-cache\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/a65eb62d-847b-4f3a-848b-1290e3118c01?source=cve",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:12"
+    },
+    {
+      "cve_id": "CVE-2026-0686",
+      "title": "高危漏洞: CVE-2026-0686 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-02T08:16:27.850",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Webmention plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 5.6.2 in the 'MF2::parse_authorpage' function via the 'Receiver::post' function. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services.",
+      "refs": "https://github.com/pfefferle/wordpress-webmention/blob/057223cee18a9e93b017d0f21db6ea77a7686489/includes/handler/class-mf2.php#L878\nhttps://plugins.trac.wordpress.org/browser/webmention/tags/5.6.2/includes/class-receiver.php#L260\nhttps://plugins.trac.wordpress.org/browser/webmention/tags/5.6.2/includes/handler/class-mf2.php#L877",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:06"
+    },
+    {
+      "cve_id": "CVE-2026-5322",
+      "title": "高危漏洞: CVE-2026-5322 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-02T06:16:23.530",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in AlejandroArciniegas mcp-data-vis bc597e391f184d2187062fd567599a3cb72adf51/de5a51525a69822290eaee569a1ab447b490746d. This affects the function Request of the file src/servers/database/server.js of the component MCP Handler. The manipulation leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wing3e/public_exp/issues/19\nhttps://vuldb.com/submit/780731\nhttps://vuldb.com/vuln/354654",
+      "source": "NVD",
+      "time": "2026-04-02 12:50:01"
+    },
+    {
+      "cve_id": "CVE-2026-4347",
+      "title": "高危漏洞: CVE-2026-4347 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-02T06:16:23.297",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MW WP Form plugin for WordPress is vulnerable to arbitrary file moving due to insufficient file path validation via the 'generate_user_filepath' function and the 'move_temp_file_to_upload_dir' function in all versions up to, and including, 5.1.0. This makes it possible for unauthenticated attackers to move arbitrary files on the server, which can easily lead to remote code execution when the right file is moved (such as wp-config.php). The vulnerability is only exploitable if a file upload field is added to the form and the “Saving inquiry data in database” option is enabled.",
+      "refs": "https://plugins.trac.wordpress.org/browser/mw-wp-form/tags/5.1.0/classes/controllers/class.main.php#L271\nhttps://plugins.trac.wordpress.org/browser/mw-wp-form/tags/5.1.0/classes/models/class.directory.php#L138\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/194ee4a0-87c3-42e5-9676-8dd355838b78?source=cve",
+      "source": "NVD",
+      "time": "2026-04-02 12:49:57"
+    },
+    {
+      "cve_id": "CVE-2026-5320",
+      "title": "高危漏洞: CVE-2026-5320 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-02T05:16:04.743",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in vanna-ai vanna up to 2.0.2. Affected by this vulnerability is an unknown functionality of the file /api/vanna/v2/ of the component Chat API Endpoint. Performing a manipulation results in missing authentication. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/August829/CVEP/issues/13\nhttps://vuldb.com/submit/780727\nhttps://vuldb.com/vuln/354652",
+      "source": "NVD",
+      "time": "2026-04-02 12:49:51"
+    },
+    {
       "cve_id": "CVE-2026-21765",
       "title": "高危漏洞: CVE-2026-21765 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -141,149 +290,6 @@
       "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-8fq3-c5w3-pj3q",
       "source": "NVD",
       "time": "2026-04-02 01:21:48"
-    },
-    {
-      "cve_id": "CVE-2026-34571",
-      "title": "高危漏洞: CVE-2026-34571 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-04-01T22:16:21.030",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, a Stored Cross-Site Scripting (Stored XSS) vulnerability exists in the backend user management functionality. The application fails to properly sanitize user-controlled input before rendering it in the administrative interface, allowing attackers to inject persistent JavaScript code. This results in automatic execution whenever backend users access the affected page, enabling session hijacking, privilege escalation, and full administrative account compromise. This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-fc4p-p49v-r948",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:44"
-    },
-    {
-      "cve_id": "CVE-2026-34569",
-      "title": "高危漏洞: CVE-2026-34569 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-04-01T22:16:20.717",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog categories. An attacker can inject a malicious JavaScript payload into the category title field, which is then stored server-side. This stored payload is later rendered unsafely across public-facing blog category pages, administrative interfaces, and blog post views without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-fhrf-q333-82fm",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:39"
-    },
-    {
-      "cve_id": "CVE-2026-34568",
-      "title": "高危漏洞: CVE-2026-34568 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:20.570",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog posts. An attacker can inject a malicious JavaScript payload into blog post content, which is then stored server-side. This stored payload is later rendered unsafely in multiple application views without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-x7wh-g25g-53vg",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:32"
-    },
-    {
-      "cve_id": "CVE-2026-34567",
-      "title": "高危漏洞: CVE-2026-34567 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:20.420",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog posts within the Categories section. An attacker can inject a malicious JavaScript payload into the Categories content, which is then stored server-side. This stored payload is later rendered unsafely when the Categories are viewed via blog posts, without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-r33w-c82v-x5v7",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:27"
-    },
-    {
-      "cve_id": "CVE-2026-34566",
-      "title": "高危漏洞: CVE-2026-34566 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:20.263",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input within the Page Management functionality when creating or editing pages. Multiple input fields accept attacker-controlled JavaScript payloads that are stored server-side. These stored values are later rendered without proper output encoding across administrative page lists and public-facing page views, leading to stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-458r-h248-29c5",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:23"
-    },
-    {
-      "cve_id": "CVE-2026-34565",
-      "title": "高危漏洞: CVE-2026-34565 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:20.107",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when adding Posts to navigation menus through the Menu Management functionality. Post-related data selected via the Posts section is stored server-side and rendered without proper output encoding. These stored values are later rendered unsafely within administrative dashboards and public-facing navigation menus, resulting in stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-xgh5-w62m-8mpr",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:19"
-    },
-    {
-      "cve_id": "CVE-2026-34564",
-      "title": "高危漏洞: CVE-2026-34564 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:19.950",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when adding Pages to navigation menus through the Menu Management functionality. Page-related data selected via the Pages section is stored server-side and rendered without proper output encoding. This stored payload is later rendered unsafely within administrative interfaces and public-facing navigation menus, leading to stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-g4pp-fhgf-8653",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:14"
-    },
-    {
-      "cve_id": "CVE-2026-34563",
-      "title": "高危漏洞: CVE-2026-34563 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:19.800",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when handling backup uploads and processing backup metadata. An attacker can inject a malicious JavaScript payload into the backup filename via the uploaded xss.sql, which uses SQL functionality to insert the XSS payload server-side. This stored payload is later rendered unsafely in multiple backup management views without proper output encoding, leading to stored blind cross-site scripting (Blind XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-85m8-g393-jcxf",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:09"
-    },
-    {
-      "cve_id": "CVE-2026-34560",
-      "title": "高危漏洞: CVE-2026-34560 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:19.333",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application renders user-controlled input unsafely within the logs interface. If any stored XSS payload exists within logged data, it is rendered without proper output encoding. This issue becomes a Blind XSS scenario because the attacker does not see immediate execution. Instead, the payload is stored within application logs and only executes later when an administrator views the logs page. This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-r4v5-rwr2-q7r4",
-      "source": "NVD",
-      "time": "2026-04-02 01:21:05"
-    },
-    {
-      "cve_id": "CVE-2026-34559",
-      "title": "高危漏洞: CVE-2026-34559 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T22:16:18.780",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog tags. An attacker can inject a malicious JavaScript payload into the tag name field, which is then stored server-side. This stored payload is later rendered unsafely across public tag pages and administrative interfaces without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-4333-387x-w245",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:58"
-    },
-    {
-      "cve_id": "CVE-2026-4101",
-      "title": "高危漏洞: CVE-2026-4101 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-01T21:17:02.417",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 under certain load conditions could allow an attacker to bypass authentication mechanisms and gain unauthorized access to the application.",
-      "refs": "https://www.ibm.com/support/pages/node/7268253",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:53"
-    },
-    {
-      "cve_id": "CVE-2026-34529",
-      "title": "高危漏洞: CVE-2026-34529 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-04-01T21:17:00.830",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
-      "description": "File Browser is a file managing interface for uploading, deleting, previewing, renaming, and editing files within a specified directory. Prior to version 2.62.2, the EPUB preview function in File Browser is vulnerable to Stored Cross-Site Scripting (XSS). JavaScript embedded in a crafted EPUB file executes in the victim's browser when they preview the file. This issue has been patched in version 2.62.2.",
-      "refs": "https://github.com/filebrowser/filebrowser/releases/tag/v2.62.2\nhttps://github.com/filebrowser/filebrowser/security/advisories/GHSA-5vpr-4fgw-f69h",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:48"
-    },
-    {
-      "cve_id": "CVE-2026-34528",
-      "title": "高危漏洞: CVE-2026-34528 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-01T21:17:00.660",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "File Browser is a file managing interface for uploading, deleting, previewing, renaming, and editing files within a specified directory. Prior to version 2.62.2, the signupHandler in File Browser applies default user permissions via d.settings.Defaults.Apply(user), then strips only Admin. The Execute permission and Commands list from the default user template are not stripped. When an administrator has enabled signup, server-side execution, and set Execute=true in the default user template, any unauthenticated user who self-registers inherits shell execution capabilities and can run arbitrary commands on the server. This issue has been patched in version 2.62.2.",
-      "refs": "https://github.com/filebrowser/filebrowser/releases/tag/v2.62.2\nhttps://github.com/filebrowser/filebrowser/security/advisories/GHSA-x8jc-jvqm-pm3f",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:44"
     }
   ]
 }
