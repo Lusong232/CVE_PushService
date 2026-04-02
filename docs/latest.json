@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-21765",
+      "title": "高危漏洞: CVE-2026-21765 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-02T00:16:23.953",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "HCL BigFix Platform is affected by insecure permissions on private cryptographic keys.  The private cryptographic keys located on a Windows host machine might be subject to overly permissive file system permissions.",
+      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129906",
+      "source": "NVD",
+      "time": "2026-04-02 07:01:05"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: CVE-2026-33936",
       "cvss_score": null,
@@ -273,17 +284,6 @@
       "refs": "https://github.com/filebrowser/filebrowser/releases/tag/v2.62.2\nhttps://github.com/filebrowser/filebrowser/security/advisories/GHSA-x8jc-jvqm-pm3f",
       "source": "NVD",
       "time": "2026-04-02 01:20:44"
-    },
-    {
-      "cve_id": "CVE-2026-1345",
-      "title": "高危漏洞: CVE-2026-1345 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-01T21:16:58.110",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 could allow an unauthenticated user to execute arbitrary commands as lower user privileges on the system due to improper validation of user supplied input.",
-      "refs": "https://www.ibm.com/support/pages/node/7268253",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:39"
     }
   ]
 }
