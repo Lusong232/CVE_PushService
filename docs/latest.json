@@ -1,6 +1,58 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-33936",
+      "cvss_score": null,
+      "published_date": "2026-04-02T03:18:21Z",
+      "updated_date": "2026-04-02T03:23:30Z",
+      "vector_string": "N/A",
+      "description": "Denial of Service vulnerability in ecdsa (PyPI)",
+      "refs": "https://github.com/0xmrma/CVE-2026-33936",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-02 04:57:24"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-34828",
+      "cvss_score": null,
+      "published_date": "2026-04-02T03:25:32Z",
+      "updated_date": "2026-04-02T03:29:07Z",
+      "vector_string": "N/A",
+      "description": "listmonk’s Session Persistence After Password Reset and Password Change",
+      "refs": "https://github.com/0xmrma/CVE-2026-34828",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-02 04:57:19"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-32722",
+      "cvss_score": null,
+      "published_date": "2026-03-15T20:42:35Z",
+      "updated_date": "2026-04-02T03:29:23Z",
+      "vector_string": "N/A",
+      "description": "Bloomberg Memray’s Stored XSS via Unescaped Command-Line Metadata",
+      "refs": "https://github.com/0xmrma/CVE-2026-32722",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-02 04:57:15"
+    },
+    {
+      "cve_id": "CVE-2026-5281",
+      "title": "漏洞仓库: CVE-2026-5281-Research-Toolkit",
+      "cvss_score": null,
+      "published_date": "2026-04-02T01:51:28Z",
+      "updated_date": "2026-04-02T03:45:14Z",
+      "vector_string": "N/A",
+      "description": "Chrome WebGPU Use-After-Free (CWE-416)  This toolkit is for security research and defensive verification around CVE-2026-5281. Patched Chrome version: 146.0.7680.178 Potentially vulnerable versions: anything below 146.0.7680.178",
+      "refs": "https://github.com/umair-aziz025/CVE-2026-5281-Research-Toolkit",
+      "source": "GitHub",
+      "cve_overviews": "Use after free in Dawn in Google Chrome prior to 146.0.7680.178 allowed a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
+      "time": "2026-04-02 04:57:08"
+    },
+    {
       "cve_id": "CVE-2026-31900",
       "title": "漏洞仓库: CVE-2026-31900",
       "cvss_score": null,
@@ -232,50 +284,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7268253",
       "source": "NVD",
       "time": "2026-04-02 01:20:39"
-    },
-    {
-      "cve_id": "CVE-2026-34872",
-      "title": "高危漏洞: CVE-2026-34872 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-01T20:16:27.493",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "An issue was discovered in Mbed TLS 3.5.x and 3.6.x through 3.6.5 and TF-PSA-Crypto 1.0. There is a lack of contributory behavior in FFDH due to improper input validation. Using finite-field Diffie-Hellman, the other party can force the shared secret into a small set of values (lack of contributory behavior). This is a problem for protocols that depend on contributory behavior (which is not the case for TLS). The attack can be carried by the peer, or depending on the protocol by an active network attacker (person in the middle).",
-      "refs": "https://mbed-tls.readthedocs.io/en/latest/security-advisories/\nhttps://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-ffdh-peerkey-checks/",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:35"
-    },
-    {
-      "cve_id": "CVE-2026-34748",
-      "title": "高危漏洞: CVE-2026-34748 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-04-01T20:16:27.040",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Payload is a free and open source headless content management system. Prior to version 3.78.0 in @payloadcms/next, a stored Cross-Site Scripting (XSS) vulnerability existed in the admin panel. An authenticated user with write access to a collection could save content that, when viewed by another user, would execute in their browser. This issue has been patched in version 3.78.0.",
-      "refs": "https://github.com/payloadcms/payload/security/advisories/GHSA-mmxc-95ch-2j7c",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:30"
-    },
-    {
-      "cve_id": "CVE-2026-34747",
-      "title": "高危漏洞: CVE-2026-34747 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-04-01T20:16:26.887",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Payload is a free and open source headless content management system. Prior to version 3.79.1, certain request inputs were not properly validated. An attacker could craft requests that influence SQL query execution, potentially exposing or modifying data in collections. This issue has been patched in version 3.79.1.",
-      "refs": "https://github.com/payloadcms/payload/releases/tag/v3.79.1\nhttps://github.com/payloadcms/payload/security/advisories/GHSA-7xxh-373w-35vg",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:23"
-    },
-    {
-      "cve_id": "CVE-2026-34746",
-      "title": "高危漏洞: CVE-2026-34746 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-01T20:16:26.727",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Payload is a free and open source headless content management system. Prior to version 3.79.1, an authenticated Server-Side Request Forgery (SSRF) vulnerability exists in the upload functionality. Authenticated users with create or update access to an upload-enabled collection could cause the server to make outbound HTTP requests to arbitrary URLs. This issue has been patched in version 3.79.1.",
-      "refs": "https://github.com/payloadcms/payload/releases/tag/v3.79.1\nhttps://github.com/payloadcms/payload/security/advisories/GHSA-6r7f-q7f5-wpx8",
-      "source": "NVD",
-      "time": "2026-04-02 01:20:19"
     }
   ]
 }
