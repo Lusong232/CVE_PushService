@@ -1,6 +1,41 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-2991",
+      "title": "漏洞仓库: CVE-2026-2991",
+      "cvss_score": null,
+      "published_date": "2026-04-03T20:26:43Z",
+      "updated_date": "2026-04-03T20:29:42Z",
+      "vector_string": "N/A",
+      "description": "Explore a PoC for CVE-2026-2991, an auth bypass in KiviCare 4.1.2 and earlier via the patient social-login REST endpoint",
+      "refs": "https://github.com/Jumpthereness578/CVE-2026-2991",
+      "source": "GitHub",
+      "cve_overviews": "The KiviCare – Clinic & Patient Management System (EHR) plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 4.1.2. This is due to the `patientSocialLogin()` function not verifying the social provider access token before authenticating a user. This makes it possible for unauthenticated attackers to log in as any patient registered on the system by providing only their email address and an arbitrary value for the access token, bypassing all credential verification. The attacker gains access to sensitive medical records, appointments, prescriptions, and billing information (PII/PHI breach). Additionally, authentication cookies are set before the role check, meaning the auth cookies for non-patient users (including administrators) are also set in the HTTP response headers, even though a 403 response is returned.",
+      "time": "2026-04-03 21:24:48"
+    },
+    {
+      "cve_id": "CVE-2026-0545",
+      "title": "高危漏洞: CVE-2026-0545 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-03T18:16:21.540",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "In mlflow/mlflow, the FastAPI job endpoints under `/ajax-api/3.0/jobs/*` are not protected by authentication or authorization when the `basic-auth` app is enabled. This vulnerability affects the latest version of the repository. If job execution is enabled (`MLFLOW_SERVER_ENABLE_JOB_EXECUTION=true`) and any job function is allowlisted, any network client can submit, read, search, and cancel jobs without credentials, bypassing basic-auth entirely. This can lead to unauthenticated remote code execution if allowed jobs perform privileged actions such as shell execution or filesystem changes. Even if jobs are deemed safe, this still constitutes an authentication bypass, potentially resulting in job spam, denial of service (DoS), or data exposure in job results.",
+      "refs": "https://huntr.com/bounties/b2e5b028-9541-4d29-8703-a76f1a3734d8",
+      "source": "NVD",
+      "time": "2026-04-03 21:24:38"
+    },
+    {
+      "cve_id": "CVE-2026-28373",
+      "title": "高危漏洞: CVE-2026-28373 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-04-03T17:16:42.140",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "The Stackfield Desktop App before 1.10.2 for macOS and Windows contains a path traversal vulnerability in certain decryption functionality when processing the filePath property. A malicious export can write arbitrary content to any path on the victim's filesystem.",
+      "refs": "https://www.rcesecurity.com/2026/03/stackfield-desktop-app-rce-via-path-traversal-and-arbitrary-file-write-cve-2026-28373/\nhttps://www.rcesecurity.com/advisories/cve-2026-28373/\nhttps://www.stackfield.com/desktop-apps",
+      "source": "NVD",
+      "time": "2026-04-03 21:24:30"
+    },
+    {
       "cve_id": "CVE-2026-5027",
       "title": "漏洞仓库: CVE-2026-5027",
       "cvss_score": null,
@@ -253,45 +288,6 @@
       "source": "GitHub",
       "cve_overviews": "",
       "time": "2026-04-03 12:41:44"
-    },
-    {
-      "cve_id": "none",
-      "title": "漏洞仓库: CVE-2026-22738",
-      "cvss_score": null,
-      "published_date": "2026-04-03T10:16:50Z",
-      "updated_date": "2026-04-03T10:19:12Z",
-      "vector_string": "N/A",
-      "description": "SpEL Injection via Unescaped Filter Key in SimpleVectorStore Leads to Remote Code Execution",
-      "refs": "https://github.com/rockmelodies/CVE-2026-22738",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-04-03 12:41:40"
-    },
-    {
-      "cve_id": "CVE-2026-33149",
-      "title": "漏洞仓库: CVE-2026-33149-PoC",
-      "cvss_score": null,
-      "published_date": "2026-04-03T11:41:06Z",
-      "updated_date": "2026-04-03T11:52:50Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/FilipeGaudard/CVE-2026-33149-PoC",
-      "source": "GitHub",
-      "cve_overviews": "Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. Versions up to and including 2.5.3 set ALLOWED_HOSTS = '*' by default, which causes Django to accept any value in the HTTP Host header without validation. The application uses request.build_absolute_uri() to generate absolute URLs in multiple contexts, including invite link emails, API pagination, and OpenAPI schema generation. An attacker who can send requests to the application with a crafted Host header can manipulate all server-generated absolute URLs. The most critical impact is invite link poisoning: when an admin creates an invite and the application sends the invite email, the link points to the attacker's server instead of the real application. When the victim clicks the link, the invite token is sent to the attacker, who can then use it at the real application. As of time of publication, it is unknown if a patched version is available.",
-      "time": "2026-04-03 12:41:29"
-    },
-    {
-      "cve_id": "CVE-2026-5027",
-      "title": "漏洞仓库: CVE-2026-5027",
-      "cvss_score": null,
-      "published_date": "2026-04-03T09:48:58Z",
-      "updated_date": "2026-04-03T12:07:19Z",
-      "vector_string": "N/A",
-      "description": "Langflow, Remote Code Execution (RCE) via Cron Job Injection through Path Traversal (CVE-2026-5027)",
-      "refs": "https://github.com/min8282/CVE-2026-5027",
-      "source": "GitHub",
-      "cve_overviews": "The 'POST /api/v2/files' endpoint does not sanitize the 'filename' parameter from the multipart form data, allowing an attacker to write files to arbitrary locations on the filesystem using path traversal sequences ('../').",
-      "time": "2026-04-03 12:41:22"
     }
   ]
 }
