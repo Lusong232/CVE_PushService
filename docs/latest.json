@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-29780",
+      "title": "漏洞仓库: CVE-2026-29780",
+      "cvss_score": null,
+      "published_date": "2026-03-10T05:46:46Z",
+      "updated_date": "2026-04-03T02:29:10Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-29780 eml-parser",
+      "refs": "https://github.com/redyank/CVE-2026-29780",
+      "source": "GitHub",
+      "cve_overviews": "eml_parser serves as a python module for parsing eml files and returning various information found in the e-mail as well as computed information. Prior to version 2.0.1, the official example script examples/recursively_extract_attachments.py contains a path traversal vulnerability that allows arbitrary file write outside the intended output directory. Attachment filenames extracted from parsed emails are directly used to construct output file paths without any sanitization, allowing an attacker-controlled filename to escape the target directory. This issue has been patched in version 2.0.1.",
+      "time": "2026-04-03 04:59:15"
+    },
+    {
+      "cve_id": "CVE-2026-33154",
+      "title": "漏洞仓库: CVE-2026-33154",
+      "cvss_score": null,
+      "published_date": "2026-04-03T02:30:20Z",
+      "updated_date": "2026-04-03T04:36:36Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-33154(RCE @jinja resolver)",
+      "refs": "https://github.com/redyank/CVE-2026-33154",
+      "source": "GitHub",
+      "cve_overviews": "dynaconf is a configuration management tool for Python. Prior to version 3.2.13, Dynaconf is vulnerable to Server-Side Template Injection (SSTI) due to unsafe template evaluation in the @Jinja resolver. When the jinja2 package is installed, Dynaconf evaluates template expressions embedded in configuration values without a sandboxed environment. This issue has been patched in version 3.2.13.",
+      "time": "2026-04-03 04:59:07"
+    },
+    {
       "cve_id": "CVE-2026-27944",
       "title": "漏洞仓库: CVE-2026-27944-poc",
       "cvss_score": null,
@@ -254,28 +280,6 @@
       "refs": "https://support.apple.com/en-us/121564",
       "source": "NVD",
       "time": "2026-04-02 21:29:39"
-    },
-    {
-      "cve_id": "CVE-2023-7342",
-      "title": "高危漏洞: CVE-2023-7342 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-02T19:16:52.790",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "HiSecOS web server contains a privilege escalation vulnerability that allows authenticated users with operator or auditor roles to escalate privileges to the administrator role by sending specially crafted packets to the web server. Attackers can exploit this flaw to gain full administrative access to the affected device.",
-      "refs": "https://assets.belden.com/m/4828b7cf8b652105/original/Microsoft-Word-Belden_Security_Bulletin_BSECV-2021-07_1v0-docx.pdf\nhttps://www.vulncheck.com/advisories/belden-hisecos-web-server-privilege-escalation",
-      "source": "NVD",
-      "time": "2026-04-02 21:29:33"
-    },
-    {
-      "cve_id": "CVE-2026-5368",
-      "title": "高危漏洞: CVE-2026-5368 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-02T18:16:35.110",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in projectworlds Car Rental Project 1.0. The affected element is an unknown function of the file /login.php of the component Parameter Handler. This manipulation of the argument uname causes sql injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/eqiya17/collection-of-vulnerabilities/issues/5\nhttps://vuldb.com/submit/781665\nhttps://vuldb.com/vuln/354746",
-      "source": "NVD",
-      "time": "2026-04-02 21:29:28"
     }
   ]
 }
