@@ -1,6 +1,98 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-35045",
+      "title": "漏洞仓库: CVE-2026-35045-PoC",
+      "cvss_score": null,
+      "published_date": "2026-04-03T12:59:08Z",
+      "updated_date": "2026-04-03T14:15:30Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/FilipeGaudard/CVE-2026-35045-PoC",
+      "source": "GitHub",
+      "cve_overviews": "No English description available for this CVE.",
+      "time": "2026-04-03 15:34:14"
+    },
+    {
+      "cve_id": "CVE-2026-33032",
+      "title": "漏洞仓库: cve-2026-33032-scanner",
+      "cvss_score": null,
+      "published_date": "2026-04-03T15:12:04Z",
+      "updated_date": "2026-04-03T15:19:32Z",
+      "vector_string": "N/A",
+      "description": "Non-destructive vulnerability scanner for Nginx-UI MCP Endpoint Authentication Bypass (CVE-2026-33032)",
+      "refs": "https://github.com/Twinson333/cve-2026-33032-scanner",
+      "source": "GitHub",
+      "cve_overviews": "Nginx UI is a web user interface for the Nginx web server. In versions 2.3.5 and prior, the nginx-ui MCP (Model Context Protocol) integration exposes two HTTP endpoints: /mcp and /mcp_message. While /mcp requires both IP whitelisting and authentication (AuthRequired() middleware), the /mcp_message endpoint only applies IP whitelisting - and the default IP whitelist is empty, which the middleware treats as \"allow all\". This means any network attacker can invoke all MCP tools without authentication, including restarting nginx, creating/modifying/deleting nginx configuration files, and triggering automatic config reloads - achieving complete nginx service takeover. At time of publication, there are no publicly available patches.",
+      "time": "2026-04-03 15:34:05"
+    },
+    {
+      "cve_id": "CVE-2026-27655",
+      "title": "高危漏洞: CVE-2026-27655 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-03T13:17:07.903",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Zohocorp ManageEngine Exchange Reporter Plus versions before 5802 are vulnerable to Stored XSS in Permissions Based on Mailboxes report.",
+      "refs": "https://www.manageengine.com/products/exchange-reports/advisory/CVE-2026-27655.html",
+      "source": "NVD",
+      "time": "2026-04-03 15:33:57"
+    },
+    {
+      "cve_id": "CVE-2026-4108",
+      "title": "高危漏洞: CVE-2026-4108 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-03T12:16:19.207",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Zohocorp ManageEngine Exchange Reporter Plus versions before 5802 are vulnerable to Stored XSS in Non-Owner Mailbox Permission report.",
+      "refs": "https://www.manageengine.com/products/exchange-reports/advisory/CVE-2026-4108.html",
+      "source": "NVD",
+      "time": "2026-04-03 15:33:53"
+    },
+    {
+      "cve_id": "CVE-2026-4107",
+      "title": "高危漏洞: CVE-2026-4107 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-03T12:16:19.067",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Zohocorp ManageEngine Exchange Reporter Plus versions before 5802 are vulnerable to Stored XSS in Folder Message Count and Size report.",
+      "refs": "https://www.manageengine.com/products/exchange-reports/advisory/CVE-2026-4107.html",
+      "source": "NVD",
+      "time": "2026-04-03 15:33:49"
+    },
+    {
+      "cve_id": "CVE-2026-3880",
+      "title": "高危漏洞: CVE-2026-3880 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-03T12:16:18.933",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Zohocorp ManageEngine Exchange Reporter Plus versions before 5802 are vulnerable to Stored XSS in Public Folder Client Permissions report.",
+      "refs": "https://www.manageengine.com/products/exchange-reports/advisory/CVE-2026-3880.html",
+      "source": "NVD",
+      "time": "2026-04-03 15:33:43"
+    },
+    {
+      "cve_id": "CVE-2026-3879",
+      "title": "高危漏洞: CVE-2026-3879 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-03T12:16:18.743",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Zohocorp ManageEngine Exchange Reporter Plus versions before 5802 are vulnerable to Stored XSS in Equipment Mailbox Details report.",
+      "refs": "https://www.manageengine.com/products/exchange-reports/advisory/CVE-2026-3879.html",
+      "source": "NVD",
+      "time": "2026-04-03 15:33:28"
+    },
+    {
+      "cve_id": "CVE-2026-28703",
+      "title": "高危漏洞: CVE-2026-28703 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-03T12:16:17.490",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Zohocorp ManageEngine Exchange Reporter Plus versions before 5802 are vulnerable to Stored XSS in Mails Exchanged Between Users report.",
+      "refs": "https://www.manageengine.com/products/exchange-reports/advisory/CVE-2026-28703.html",
+      "source": "NVD",
+      "time": "2026-04-03 15:33:23"
+    },
+    {
       "cve_id": "CVE-2026-0770",
       "title": "漏洞仓库: CVE-2026-0770",
       "cvss_score": null,
@@ -210,98 +302,6 @@
       "source": "GitHub",
       "cve_overviews": "A security flaw has been discovered in YunaiV yudao-cloud up to 2026.01. This affects an unknown part of the file /admin-api/system/tenant/get-by-website. The manipulation of the argument Website results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
       "time": "2026-04-03 06:58:58"
-    },
-    {
-      "cve_id": "CVE-2026-24516",
-      "title": "漏洞仓库: CVE-2026-24516-DigitalOcean-RCE.",
-      "cvss_score": null,
-      "published_date": "2026-04-03T05:25:18Z",
-      "updated_date": "2026-04-03T05:40:11Z",
-      "vector_string": "N/A",
-      "description": "Technical analysis and PoC for CVE-2026-24516: Unauthenticated Root Remote Code Execution in DigitalOcean Droplet Agent (CVSS 10.0).",
-      "refs": "https://github.com/poxsky/CVE-2026-24516-DigitalOcean-RCE.",
-      "source": "GitHub",
-      "cve_overviews": "A command injection vulnerability exists in DigitalOcean Droplet Agent through 1.3.2. The troubleshooting actioner component (internal/troubleshooting/actioner/actioner.go) processes metadata from the metadata service endpoint and executes commands specified in the TroubleshootingAgent.Requesting array without adequate input validation. While the code validates that artifacts exist in the validInvestigationArtifacts map, it fails to sanitize the actual command content after the \"command:\" prefix. This allows an attacker who can control metadata responses to inject and execute arbitrary OS commands with root privileges. The attack is triggered by sending a TCP packet with specific sequence numbers to the SSH port, which causes the agent to fetch metadata from http://169.254.169.254/metadata/v1.json. The vulnerability affects the command execution flow in internal/troubleshooting/actioner/actioner.go (insufficient validation), internal/troubleshooting/command/exec.go (direct exec.CommandContext call), and internal/troubleshooting/command/command.go (command parsing without sanitization). This can lead to complete system compromise, data exfiltration, privilege escalation, and potential lateral movement across cloud infrastructure.",
-      "time": "2026-04-03 06:58:52"
-    },
-    {
-      "cve_id": "CVE-2026-29000",
-      "title": "漏洞仓库: CVE-2026-29000",
-      "cvss_score": null,
-      "published_date": "2026-04-03T06:37:06Z",
-      "updated_date": "2026-04-03T06:40:59Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-29000: Critical Authentication Bypass in pac4j-jwt - Using Only a Public Key (CVSS 10)",
-      "refs": "https://github.com/yasirr10/CVE-2026-29000",
-      "source": "GitHub",
-      "cve_overviews": "pac4j-jwt versions prior to 4.5.9, 5.7.9, and 6.3.3 contain an authentication bypass vulnerability in JwtAuthenticator when processing encrypted JWTs that allows remote attackers to forge authentication tokens. Attackers who possess the server's RSA public key can create a JWE-wrapped PlainJWT with arbitrary subject and role claims, bypassing signature verification to authenticate as any user including administrators.",
-      "time": "2026-04-03 06:58:40"
-    },
-    {
-      "cve_id": "CVE-2026-35536",
-      "title": "高危漏洞: CVE-2026-35536 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-03T04:16:53.550",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "In Tornado before 6.5.5, cookie attribute injection could occur because the domain, path, and samesite arguments to .RequestHandler.set_cookie were not checked for crafted characters.",
-      "refs": "https://github.com/tornadoweb/tornado/releases/tag/v6.5.5\nhttps://github.com/tornadoweb/tornado/security/advisories/GHSA-78cv-mqj4-43f7",
-      "source": "NVD",
-      "time": "2026-04-03 06:58:31"
-    },
-    {
-      "cve_id": "CVE-2026-35535",
-      "title": "高危漏洞: CVE-2026-35535 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-04-03T03:16:18.233",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In Sudo through 1.9.17p2 before 3e474c2, a failure of a setuid, setgid, or setgroups call, during a privilege drop before running the mailer, is not a fatal error and can lead to privilege escalation.",
-      "refs": "https://bugs.debian.org/1130593\nhttps://bugs.launchpad.net/ubuntu/+source/sudo/+bug/2143042\nhttps://github.com/sudo-project/sudo/commit/3e474c2f201484be83d994ae10a4e20e8c81bb69",
-      "source": "NVD",
-      "time": "2026-04-03 06:58:24"
-    },
-    {
-      "cve_id": "CVE-2026-33107",
-      "title": "高危漏洞: CVE-2026-33107 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-04-03T00:16:05.207",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Server-side request forgery (ssrf) in Azure Databricks allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33107",
-      "source": "NVD",
-      "time": "2026-04-03 06:58:20"
-    },
-    {
-      "cve_id": "CVE-2026-33105",
-      "title": "高危漏洞: CVE-2026-33105 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-04-03T00:16:05.040",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Improper authorization in Microsoft Azure Kubernetes Service allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33105",
-      "source": "NVD",
-      "time": "2026-04-03 06:58:15"
-    },
-    {
-      "cve_id": "CVE-2026-32213",
-      "title": "高危漏洞: CVE-2026-32213 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-04-03T00:16:04.877",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Improper authorization in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32213",
-      "source": "NVD",
-      "time": "2026-04-03 06:58:10"
-    },
-    {
-      "cve_id": "CVE-2026-32211",
-      "title": "高危漏洞: CVE-2026-32211 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-03T00:16:04.703",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Missing authentication for critical function in Azure MCP Server allows an unauthorized attacker to disclose information over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32211",
-      "source": "NVD",
-      "time": "2026-04-03 06:58:05"
     }
   ]
 }
