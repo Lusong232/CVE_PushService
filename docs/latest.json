@@ -2,6 +2,19 @@
   "latest": [
     {
       "cve_id": "CVE-2026-35616",
+      "title": "漏洞仓库: CVE-2026-35616",
+      "cvss_score": null,
+      "published_date": "2026-04-04T08:43:00Z",
+      "updated_date": "2026-04-04T09:12:04Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-35616",
+      "refs": "https://github.com/0xBlackash/CVE-2026-35616",
+      "source": "GitHub",
+      "cve_overviews": "A improper access control vulnerability in Fortinet FortiClientEMS 7.4.5 through 7.4.6 may allow an unauthenticated attacker to execute unauthorized code or commands via crafted requests.",
+      "time": "2026-04-04 09:28:37"
+    },
+    {
+      "cve_id": "CVE-2026-35616",
       "title": "高危漏洞: CVE-2026-35616 (CVSS 9.8)",
       "cvss_score": 9.8,
       "published_date": "2026-04-04T01:16:39.720",
@@ -263,17 +276,6 @@
       "refs": "https://assets.belden.com/m/1281cac2c9e90abf/original/Security-Bulletin-Authentication-Security-ProSoft-ICX35-BSECV-2017-09.pdf\nhttps://www.vulncheck.com/advisories/prosoft-technology-icx35-hwc-authentication-bypass",
       "source": "NVD",
       "time": "2026-04-04 01:18:27"
-    },
-    {
-      "cve_id": "CVE-2017-20234",
-      "title": "高危漏洞: CVE-2017-20234 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-03T23:17:00.087",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "GarrettCom Magnum 6K and 10K managed switches contain an authentication bypass vulnerability that allows unauthenticated attackers to gain unauthorized access by exploiting a hardcoded string in the authentication mechanism. Attackers can bypass login controls to access administrative functions and sensitive switch configuration without valid credentials.",
-      "refs": "https://assets.belden.com/m/114be964b4651983/original/Security-Bulletin-MNS-6K-10K-GarrettCom-BSECV-2017-08.pdf\nhttps://www.vulncheck.com/advisories/garrettcom-magnum-6k-and-10k-authentication-bypass-via-hardcoded-string",
-      "source": "NVD",
-      "time": "2026-04-04 01:18:23"
     }
   ]
 }
