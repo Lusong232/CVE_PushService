@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-35616",
+      "title": "高危漏洞: CVE-2026-35616 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-04T01:16:39.720",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A improper access control vulnerability in Fortinet FortiClientEMS 7.4.5 through 7.4.6 may allow an unauthenticated attacker to execute unauthorized code or commands via crafted requests.",
+      "refs": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:51"
+    },
+    {
+      "cve_id": "CVE-2026-34780",
+      "title": "高危漏洞: CVE-2026-34780 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-04-04T01:16:39.540",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. From versions 39.0.0-alpha.1 to before 39.8.0, 40.0.0-alpha.1 to before 40.7.0, and 41.0.0-alpha.1 to before 41.0.0-beta.8, apps that pass VideoFrame objects (from the WebCodecs API) across the contextBridge are vulnerable to a context isolation bypass. An attacker who can execute JavaScript in the main world (for example, via XSS) can use a bridged VideoFrame to gain access to the isolated world, including any Node.js APIs exposed to the preload script. Apps are only affected if a preload script returns, resolves, or passes a VideoFrame object to the main world via contextBridge.exposeInMainWorld(). Apps that do not bridge VideoFrame objects are not affected. This issue has been patched in versions 39.8.0, 40.7.0, and 41.0.0-beta.8.",
+      "refs": "https://github.com/electron/electron/security/advisories/GHSA-jfqg-hf23-qpw2",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:44"
+    },
+    {
+      "cve_id": "CVE-2026-34955",
+      "title": "高危漏洞: CVE-2026-34955 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-04T00:16:19.370",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "PraisonAI is a multi-agent teams system. Prior to version 4.5.97, SubprocessSandbox in all modes (BASIC, STRICT, NETWORK_ISOLATED) calls subprocess.run() with shell=True and relies solely on string-pattern matching to block dangerous commands. The blocklist does not include sh or bash as standalone executables, allowing trivial sandbox escape in STRICT mode via sh -c '<command>'. This issue has been patched in version 4.5.97.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-r4f2-3m54-pp7q",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:39"
+    },
+    {
+      "cve_id": "CVE-2026-34774",
+      "title": "高危漏洞: CVE-2026-34774 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-04T00:16:18.447",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 39.8.1, 40.7.0, and 41.0.0, apps that use offscreen rendering and allow child windows via window.open() may be vulnerable to a use-after-free. If the parent offscreen WebContents is destroyed while a child window remains open, subsequent paint frames on the child dereference freed memory, which may lead to a crash or memory corruption. Apps are only affected if they use offscreen rendering (webPreferences.offscreen: true) and their setWindowOpenHandler permits child windows. Apps that do not use offscreen rendering, or that deny child windows, are not affected. This issue has been patched in versions 39.8.1, 40.7.0, and 41.0.0.",
+      "refs": "https://github.com/electron/electron/security/advisories/GHSA-532v-xpq5-8h95",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:35"
+    },
+    {
+      "cve_id": "CVE-2026-34771",
+      "title": "高危漏洞: CVE-2026-34771 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-04T00:16:17.980",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.0, 40.7.0, and 41.0.0-beta.8, apps that register an asynchronous session.setPermissionRequestHandler() may be vulnerable to a use-after-free when handling fullscreen, pointer-lock, or keyboard-lock permission requests. If the requesting frame navigates or the window closes while the permission handler is pending, invoking the stored callback dereferences freed memory, which may lead to a crash or memory corruption. Apps that do not set a permission request handler, or whose handler responds synchronously, are not affected. This issue has been patched in versions 38.8.6, 39.8.0, 40.7.0, and 41.0.0-beta.8.",
+      "refs": "https://github.com/electron/electron/security/advisories/GHSA-8337-3p73-46f4",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:31"
+    },
+    {
+      "cve_id": "CVE-2026-34770",
+      "title": "高危漏洞: CVE-2026-34770 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-04-04T00:16:17.823",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.1, 40.8.0, and 41.0.0-beta.8, apps that use the powerMonitor module may be vulnerable to a use-after-free. After the native PowerMonitor object is garbage-collected, the associated OS-level resources (a message window on Windows, a shutdown handler on macOS) retain dangling references. A subsequent session-change event (Windows) or system shutdown (macOS) dereferences freed memory, which may lead to a crash or memory corruption. All apps that access powerMonitor events (suspend, resume, lock-screen, etc.) are potentially affected. The issue is not directly renderer-controllable. This issue has been patched in versions 38.8.6, 39.8.1, 40.8.0, and 41.0.0-beta.8.",
+      "refs": "https://github.com/electron/electron/security/advisories/GHSA-jjp3-mq3x-295m",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:27"
+    },
+    {
+      "cve_id": "CVE-2026-34769",
+      "title": "高危漏洞: CVE-2026-34769 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-04-04T00:16:17.657",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.0, 40.7.0, and 41.0.0-beta.8, an undocumented commandLineSwitches webPreference allowed arbitrary switches to be appended to the renderer process command line. Apps that construct webPreferences by spreading untrusted configuration objects may inadvertently allow an attacker to inject switches that disable renderer sandboxing or web security controls. Apps are only affected if they construct webPreferences from external or untrusted input without an allowlist. Apps that use a fixed, hardcoded webPreferences object are not affected. This issue has been patched in versions 38.8.6, 39.8.0, 40.7.0, and 41.0.0-beta.8.",
+      "refs": "https://github.com/electron/electron/security/advisories/GHSA-9wfr-w7mm-pc7f",
+      "source": "NVD",
+      "time": "2026-04-04 06:48:22"
+    },
+    {
       "cve_id": "CVE-2026-34954",
       "title": "高危漏洞: CVE-2026-34954 (CVSS 8.6)",
       "cvss_score": 8.6,
@@ -197,83 +274,6 @@
       "refs": "https://assets.belden.com/m/114be964b4651983/original/Security-Bulletin-MNS-6K-10K-GarrettCom-BSECV-2017-08.pdf\nhttps://www.vulncheck.com/advisories/garrettcom-magnum-6k-and-10k-authentication-bypass-via-hardcoded-string",
       "source": "NVD",
       "time": "2026-04-04 01:18:23"
-    },
-    {
-      "cve_id": "CVE-2026-33175",
-      "title": "高危漏洞: CVE-2026-33175 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-03T22:16:26.483",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OAuthenticator is software that allows OAuth2 identity providers to be plugged in and used with JupyterHub. Prior to version 17.4.0, an authentication bypass vulnerability in oauthenticator allows an attacker with an unverified email address on an Auth0 tenant to login to JupyterHub. When email is used as the usrname_claim, this gives users control over their username and the possibility of account takeover. This issue has been patched in version 17.4.0.",
-      "refs": "https://github.com/jupyterhub/oauthenticator/commit/f0c7002dc36e41efae0f674033cf7888a21d96f9\nhttps://github.com/jupyterhub/oauthenticator/releases/tag/17.4.0\nhttps://github.com/jupyterhub/oauthenticator/security/advisories/GHSA-rrvg-cxh4-qhrv",
-      "source": "NVD",
-      "time": "2026-04-04 01:18:19"
-    },
-    {
-      "cve_id": "CVE-2026-27885",
-      "title": "高危漏洞: CVE-2026-27885 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-03T22:16:26.173",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Piwigo is an open source photo gallery application for the web. Prior to version 16.3.0, a SQL Injection vulnerability was discovered in Piwigo affecting the Activity List API endpoint. This vulnerability allows an authenticated administrator to extract sensitive data from the database, including user credentials, email addresses, and all stored content. This issue has been patched in version 16.3.0.",
-      "refs": "https://github.com/Piwigo/Piwigo/commit/c172d284e11eab4a5dbadd2844d26f734d5c8c72\nhttps://github.com/Piwigo/Piwigo/security/advisories/GHSA-wfmr-9hg8-jh3m\nhttps://piwigo.org/release-16.3.0",
-      "source": "NVD",
-      "time": "2026-04-04 01:18:14"
-    },
-    {
-      "cve_id": "CVE-2026-27834",
-      "title": "高危漏洞: CVE-2026-27834 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-03T22:16:26.013",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Piwigo is an open source photo gallery application for the web. Prior to version 16.3.0, a SQL Injection vulnerability exists in the pwg.users.getList Web Service API method. The filter parameter is directly concatenated into a SQL query without proper sanitization, allowing authenticated administrators to execute arbitrary SQL commands. This issue has been patched in version 16.3.0.",
-      "refs": "https://github.com/Piwigo/Piwigo/commit/9df471f16243371dc3725c5262e1632d23c8218a\nhttps://github.com/Piwigo/Piwigo/security/advisories/GHSA-5jwg-cr5q-vjq2\nhttps://piwigo.org/release-16.3.0",
-      "source": "NVD",
-      "time": "2026-04-04 01:18:10"
-    },
-    {
-      "cve_id": "CVE-2026-27833",
-      "title": "高危漏洞: CVE-2026-27833 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-03T22:16:25.863",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Piwigo is an open source photo gallery application for the web. Prior to version 16.3.0, the pwg.history.search API method in Piwigo is registered without the admin_only option, allowing unauthenticated users to access the full browsing history of all gallery visitors. This issue has been patched in version 16.3.0.",
-      "refs": "https://github.com/Piwigo/Piwigo/commit/d05c16561ce3692ca922199f8c8d7b1a45893f1c\nhttps://github.com/Piwigo/Piwigo/security/advisories/GHSA-397m-gfhm-pmg2\nhttps://piwigo.org/release-16.3.0",
-      "source": "NVD",
-      "time": "2026-04-04 01:18:06"
-    },
-    {
-      "cve_id": "CVE-2018-25237",
-      "title": "高危漏洞: CVE-2018-25237 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-03T22:16:24.740",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Hirschmann HiSecOS devices versions prior to 05.3.03 contain a buffer overflow vulnerability in the HTTPS login interface when RADIUS authentication is enabled that allows remote attackers to crash the device or execute arbitrary code by submitting a password longer than 128 characters. Attackers can exploit improper bounds checking in password handling to overflow a fixed-size buffer and achieve denial of service or remote code execution.",
-      "refs": "https://assets.belden.com/m/2d5657b3e5d721c6/original/Security-Bulletin-RADIUS-Authentication-BSECV-2018-04.pdf\nhttps://www.vulncheck.com/advisories/hirschmann-hisecos-buffer-overflow-via-https-login",
-      "source": "NVD",
-      "time": "2026-04-04 01:18:01"
-    },
-    {
-      "cve_id": "CVE-2016-15058",
-      "title": "高危漏洞: CVE-2016-15058 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-03T22:16:24.563",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Hirschmann HiLCOS Classic Platform switches Classic L2E, L2P, L3E, L3P versions prior to 09.0.06 and Classic L2B prior to 05.3.07 contain a credential exposure vulnerability where user passwords are synchronized with SNMPv1/v2 community strings and transmitted in plaintext when the feature is enabled. Attackers with local network access can sniff SNMP traffic or extract configuration data to recover plaintext credentials and gain unauthorized administrative access to the switches.",
-      "refs": "https://assets.belden.com/m/1d8273c6205dc400/original/Security-Bulletin-Password-Sync-SNMP-v1-v2-BSECV-2016-12.pdf\nhttps://www.kb.cert.org/vuls/id/507216\nhttps://www.vulncheck.com/advisories/hirschmann-hilcos-classic-platform-password-exposure-via-snmp",
-      "source": "NVD",
-      "time": "2026-04-04 01:17:54"
-    },
-    {
-      "cve_id": "CVE-2015-10148",
-      "title": "高危漏洞: CVE-2015-10148 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-03T22:16:24.207",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Hirschmann HiLCOS devices OpenBAT, WLC, BAT300, BAT54 prior to 8.80 and OpenBAT prior to 9.10 are shipped with identical default SSH and SSL keys that cannot be changed, allowing unauthenticated remote attackers to decrypt or intercept encrypted management communications. Attackers can perform man-in-the-middle attacks, impersonate devices, and expose sensitive information by leveraging the shared default cryptographic keys across multiple devices.",
-      "refs": "https://assets.belden.com/m/76d31798e65c9f47/original/Security-Bulletin-SSH-SSL-Default-Keys-HiLCOS-Hirschmann-BSECV-2015-12.pdf\nhttps://www.vulncheck.com/advisories/hirschmann-hilcos-hard-coded-credentials-ssh-ssl-keys",
-      "source": "NVD",
-      "time": "2026-04-04 01:17:49"
     }
   ]
 }
