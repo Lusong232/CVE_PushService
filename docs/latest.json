@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5536",
+      "title": "高危漏洞: CVE-2026-5536 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T04:16:09.487",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in FedML-AI FedML up to 0.8.9. Affected is the function sendMessage of the file grpc_server.py of the component gRPC server. Executing a manipulation can lead to deserialization. The attack may be performed from remote. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/AnalogyC0de/public_exp/issues/26\nhttps://vuldb.com/submit/782201\nhttps://vuldb.com/vuln/355289",
+      "source": "NVD",
+      "time": "2026-04-05 06:55:05"
+    },
+    {
+      "cve_id": "CVE-2026-5534",
+      "title": "高危漏洞: CVE-2026-5534 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T03:16:00.800",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in itsourcecode Online Enrollment System 1.0. This affects an unknown function of the file /sms/user/index.php?view=edit&id=10 of the component Parameter Handler. Such manipulation of the argument USERID leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/ldan42008-ux/cve/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/782185",
+      "source": "NVD",
+      "time": "2026-04-05 06:54:56"
+    },
+    {
       "cve_id": "CVE-2026-28363",
       "title": "漏洞仓库: CVE-2026-28363",
       "cvss_score": null,
@@ -264,30 +286,6 @@
       "source": "GitHub",
       "cve_overviews": "OpenClaw before 2026.3.28 contains a privilege escalation vulnerability in the /pair approve command path that fails to forward caller scopes into the core approval check. A caller with pairing privileges but without admin privileges can approve pending device requests asking for broader scopes including admin access by exploiting the missing scope validation in extensions/device-pair/index.ts and src/infra/device-pairing.ts.",
       "time": "2026-04-04 15:22:36"
-    },
-    {
-      "cve_id": "CVE-2026-35492",
-      "title": "漏洞仓库: CVE-2026-35492",
-      "cvss_score": null,
-      "published_date": "2026-04-04T14:53:34Z",
-      "updated_date": "2026-04-04T14:54:06Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-35492(Path traversal vulnerability in PartitionedDataset allows arbitrary file write)",
-      "refs": "https://github.com/redyank/CVE-2026-35492",
-      "source": "GitHub",
-      "cve_overviews": "No English description available for this CVE.",
-      "time": "2026-04-04 15:22:28"
-    },
-    {
-      "cve_id": "CVE-2026-3666",
-      "title": "高危漏洞: CVE-2026-3666 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-04T12:16:03.390",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The wpForo Forum plugin for WordPress is vulnerable to arbitrary file deletion in all versions up to, and including, 2.4.16. This is due to a missing file name/path validation against path traversal sequences. This makes it possible for authenticated attackers, with subscriber level access and above, to delete arbitrary files on the server by embedding a crafted path traversal string in a forum post body and then deleting the post.",
-      "refs": "https://plugins.trac.wordpress.org/changeset?old_path=wpforo/tags/2.4.16/classes/Posts.php&new_path=wpforo/tags/2.4.17/classes/Posts.php&old=3471614&new=3483044\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f215e320-8563-4d25-9963-ed3664b4901d?source=cve",
-      "source": "NVD",
-      "time": "2026-04-04 15:22:17"
     }
   ]
 }
