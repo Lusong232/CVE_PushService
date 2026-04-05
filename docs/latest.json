@@ -1,6 +1,54 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3502",
+      "title": "漏洞仓库: CVE-2026-3502---TrueConf-Client-Update-Hijacking-PoC",
+      "cvss_score": null,
+      "published_date": "2026-04-04T22:39:53Z",
+      "updated_date": "2026-04-04T22:45:49Z",
+      "vector_string": "N/A",
+      "description": "Exploit para CVE-2026-3502 en TrueConf Client. Un atacante con control del servidor TrueConf local reemplaza la actualización legítima por un payload malicioso sin verificación de integridad, logrando ejecución remota de código y despliegue de malware Havoc en todos los clientes conectados (Operación TrueChaos).",
+      "refs": "https://github.com/fevar54/CVE-2026-3502---TrueConf-Client-Update-Hijacking-PoC",
+      "source": "GitHub",
+      "cve_overviews": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user.",
+      "time": "2026-04-05 01:25:35"
+    },
+    {
+      "cve_id": "CVE-2026-3502",
+      "title": "漏洞仓库: CVE-2026-3502-Scanner---TrueConf-Vulnerability-Detection-Tool",
+      "cvss_score": null,
+      "published_date": "2026-04-04T22:50:54Z",
+      "updated_date": "2026-04-04T22:55:06Z",
+      "vector_string": "N/A",
+      "description": "Herramienta de detección para CVE-2026-3502. Escanea servidores TrueConf sin verificación de actualizaciones, detecta clientes Windows vulnerables (≤8.5.3.884) y busca IOCs de TrueChaos: PowerISO, persistencia en registro y tareas programadas. Reportes JSON, HTML o CSV.",
+      "refs": "https://github.com/fevar54/CVE-2026-3502-Scanner---TrueConf-Vulnerability-Detection-Tool",
+      "source": "GitHub",
+      "cve_overviews": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user.",
+      "time": "2026-04-05 01:25:28"
+    },
+    {
+      "cve_id": "CVE-2026-5526",
+      "title": "高危漏洞: CVE-2026-5526 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-04T23:16:44.290",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53/192.168.0.1. Affected by this vulnerability is an unknown functionality of the file /bin/httpd. The manipulation results in improper access controls. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://vuldb.com/submit/782052\nhttps://vuldb.com/vuln/355279\nhttps://vuldb.com/vuln/355279/cti",
+      "source": "NVD",
+      "time": "2026-04-05 01:25:19"
+    },
+    {
+      "cve_id": "CVE-2018-25246",
+      "title": "高危漏洞: CVE-2018-25246 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-04T20:16:18.210",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Wikipedia 12.0 contains a denial of service vulnerability that allows unauthenticated attackers to crash the application by submitting oversized input through the search functionality. Attackers can paste a large buffer of repeated characters into the search bar to trigger an application crash.",
+      "refs": "https://www.exploit-db.com/exploits/45324\nhttps://www.microsoft.com/en-us/p/wikipedia/9wzdncrfhwm4?activetab=pivot%3aoverviewtab",
+      "source": "NVD",
+      "time": "2026-04-05 01:25:14"
+    },
+    {
       "cve_id": "CVE-2026-35616",
       "title": "漏洞仓库: CVE-2026-35616-poc",
       "cvss_score": null,
@@ -238,54 +286,6 @@
       "refs": "https://plugins.trac.wordpress.org/changeset/3466230/visitors-traffic-real-time-statistics\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/bd8e86b0-5e06-44e0-a94c-b05581f46e5a?source=cve",
       "source": "NVD",
       "time": "2026-04-04 15:22:12"
-    },
-    {
-      "cve_id": "CVE-2026-1233",
-      "title": "高危漏洞: CVE-2026-1233 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-04T12:16:02.943",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Text to Speech for WP (AI Voices by Mementor) plugin for WordPress is vulnerable to sensitive information exposure in all versions up to, and including, 1.9.8. This is due to the plugin containing hardcoded MySQL database credentials for the vendor's external telemetry server in the `Mementor_TTS_Remote_Telemetry` class. This makes it possible for unauthenticated attackers to extract and decode these credentials, gaining unauthorized write access to the vendor's telemetry database.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3453258/text-to-speech-tts\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b8dc0b5e-87b9-4831-a92a-bbf6eb1346e2?source=cve",
-      "source": "NVD",
-      "time": "2026-04-04 15:22:05"
-    },
-    {
-      "cve_id": "CVE-2026-35570",
-      "title": "漏洞仓库: CVE-2026-35570",
-      "cvss_score": null,
-      "published_date": "2026-04-04T11:15:05Z",
-      "updated_date": "2026-04-04T11:16:23Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/Rickidevs/CVE-2026-35570",
-      "source": "GitHub",
-      "cve_overviews": "No English description available for this CVE.",
-      "time": "2026-04-04 12:33:56"
-    },
-    {
-      "cve_id": "CVE-2026-33701",
-      "title": "漏洞仓库: CVE-2026-33701-Unsafe-Deserialization-in-OpenTelemetry-Java-Agent-RMI-Instrumentation",
-      "cvss_score": null,
-      "published_date": "2026-04-04T11:14:42Z",
-      "updated_date": "2026-04-04T11:16:31Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-33701 Unsafe Deserialization in OpenTelemetry Java Agent RMI Instrumentation",
-      "refs": "https://github.com/pl4tyz/CVE-2026-33701-Unsafe-Deserialization-in-OpenTelemetry-Java-Agent-RMI-Instrumentation",
-      "source": "GitHub",
-      "cve_overviews": "OpenTelemetry Java Instrumentation provides OpenTelemetry auto-instrumentation and instrumentation libraries for Java. In versions prior to 2.26.1, the RMI instrumentation registered a custom endpoint that deserialized incoming data without applying serialization filters. On JDK version 16 and earlier, an attacker with network access to a JMX or RMI port on an instrumented JVM could exploit this to potentially achieve remote code execution. All three of the following conditions must be true to exploit this vulnerability: First, OpenTelemetry Java instrumentation is attached as a Java agent (`-javaagent`) on Java 16 or earlier. Second, JMX/RMI port has been explicitly configured via `-Dcom.sun.management.jmxremote.port` and is network-reachable. Third, gadget-chain-compatible library is present on the classpath. This results in arbitrary remote code execution with the privileges of the user running the instrumented JVM. For JDK >= 17, no action is required, but upgrading is strongly encouraged. For JDK < 17, upgrade to version 2.26.1 or later. As a workaround, set the system property `-Dotel.instrumentation.rmi.enabled=false` to disable the RMI integration.",
-      "time": "2026-04-04 12:33:47"
-    },
-    {
-      "cve_id": "CVE-2026-5425",
-      "title": "高危漏洞: CVE-2026-5425 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-04T09:16:20.500",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Widgets for Social Photo Feed plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'feed_data' parameter keys in all versions up to, and including, 1.7.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/changeset?old_path=social-photo-feed-widget/tags/1.7.8/social-photo-feed-widget.php&new_path=social-photo-feed-widget/tags/1.8/social-photo-feed-widget.php&old=3440215&new=3486529\nhttps://plugins.trac.wordpress.org/changeset?old_path=social-photo-feed-widget/tags/1.7.8/trustindex-feed-plugin.class.php&new_path=social-photo-feed-widget/tags/1.8/trustindex-feed-plugin.class.php&old=3440215&new=3486529\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/2584097a-8955-41c7-b009-c6502fe8b99b?source=cve",
-      "source": "NVD",
-      "time": "2026-04-04 12:33:32"
     }
   ]
 }
