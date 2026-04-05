@@ -2,6 +2,32 @@
   "latest": [
     {
       "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-29923",
+      "cvss_score": null,
+      "published_date": "2026-01-23T00:02:29Z",
+      "updated_date": "2026-04-05T19:00:54Z",
+      "vector_string": "N/A",
+      "description": "The pstrip64.sys kernel driver exposes an IOCTL that allows low-privileged users to map arbitrary ranges of physical memory into their own virtual address space. This primitive allows full read/write access to the system's physical RAM, enabling attackers to modify   critical kernel structures and escalate privileges to NT AUTHORITY\\SYSTEM.",
+      "refs": "https://github.com/Smarttfoxx/CVE-2026-29923",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-05 21:23:06"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-23398",
+      "cvss_score": null,
+      "published_date": "2026-04-05T20:48:59Z",
+      "updated_date": "2026-04-05T21:15:51Z",
+      "vector_string": "N/A",
+      "description": "icmp_tag_validation() NULL deref",
+      "refs": "https://github.com/JohannesLks/CVE-2026-23398",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-05 21:23:01"
+    },
+    {
+      "cve_id": "none",
       "title": "漏洞仓库: CVE-2026-30951",
       "cvss_score": null,
       "published_date": "2026-04-05T17:37:20Z",
@@ -262,28 +288,6 @@
       "source": "GitHub",
       "cve_overviews": "telnetd in GNU Inetutils through 2.7 allows remote authentication bypass via a \"-f root\" value for the USER environment variable.",
       "time": "2026-04-05 09:30:21"
-    },
-    {
-      "cve_id": "CVE-2026-5536",
-      "title": "高危漏洞: CVE-2026-5536 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-05T04:16:09.487",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in FedML-AI FedML up to 0.8.9. Affected is the function sendMessage of the file grpc_server.py of the component gRPC server. Executing a manipulation can lead to deserialization. The attack may be performed from remote. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/AnalogyC0de/public_exp/issues/26\nhttps://vuldb.com/submit/782201\nhttps://vuldb.com/vuln/355289",
-      "source": "NVD",
-      "time": "2026-04-05 06:55:05"
-    },
-    {
-      "cve_id": "CVE-2026-5534",
-      "title": "高危漏洞: CVE-2026-5534 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-05T03:16:00.800",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in itsourcecode Online Enrollment System 1.0. This affects an unknown function of the file /sms/user/index.php?view=edit&id=10 of the component Parameter Handler. Such manipulation of the argument USERID leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/ldan42008-ux/cve/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/782185",
-      "source": "NVD",
-      "time": "2026-04-05 06:54:56"
     }
   ]
 }
