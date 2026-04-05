@@ -1,6 +1,98 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-30951",
+      "cvss_score": null,
+      "published_date": "2026-04-05T17:37:20Z",
+      "updated_date": "2026-04-05T17:37:21Z",
+      "vector_string": "N/A",
+      "description": "Sequelize - ORM SQL Injection",
+      "refs": "https://github.com/EQSTLab/CVE-2026-30951",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-05 18:29:57"
+    },
+    {
+      "cve_id": "CVE-2026-28286",
+      "title": "漏洞仓库: zimaos-cve-2026-28286-arbitrary-file-write",
+      "cvss_score": null,
+      "published_date": "2026-04-05T18:01:16Z",
+      "updated_date": "2026-04-05T18:15:53Z",
+      "vector_string": "N/A",
+      "description": "ZimaOS CVE-2026-28286 arbitrary file write PoC & verification toolkit",
+      "refs": "https://github.com/Rushi9/zimaos-cve-2026-28286-arbitrary-file-write",
+      "source": "GitHub",
+      "cve_overviews": "ZimaOS is a fork of CasaOS, an operating system for Zima devices and x86-64 systems with UEFI. In version 1.5.2-beta3, the application enforces restrictions in the frontend/UI to prevent users from creating files or folders in internal OS paths. However, when interacting directly with the API, the restrictions are bypass-able. By sending a crafted request targeting paths like /etc, /usr, or other sensitive system directories, the API successfully creates files or directories in locations where normal users should have no write access. This indicates that the API does not properly validate the target path, allowing unauthorized operations on critical system directories. No known patch is publicly available.",
+      "time": "2026-04-05 18:29:53"
+    },
+    {
+      "cve_id": "CVE-2026-5584",
+      "title": "高危漏洞: CVE-2026-5584 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T17:16:57.660",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Fosowl agenticSeek 0.1.0. Impacted is the function PyInterpreter.execute of the file sources/tools/PyInterpreter.py of the component query Endpoint. Such manipulation leads to code injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/August829/CVEP/issues/29\nhttps://vuldb.com/submit/784052\nhttps://vuldb.com/vuln/355383",
+      "source": "NVD",
+      "time": "2026-04-05 18:29:45"
+    },
+    {
+      "cve_id": "CVE-2026-5577",
+      "title": "高危漏洞: CVE-2026-5577 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T16:16:19.683",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Song-Li cross_browser up to ca690f0fe6954fd9bcda36d071b68ed8682a786a. This affects an unknown part of the file flask/uniquemachine_app.py of the component details Endpoint. Such manipulation of the argument ID leads to sql injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wing3e/public_exp/issues/24\nhttps://vuldb.com/submit/783502\nhttps://vuldb.com/vuln/355347",
+      "source": "NVD",
+      "time": "2026-04-05 18:29:41"
+    },
+    {
+      "cve_id": "CVE-2026-5575",
+      "title": "高危漏洞: CVE-2026-5575 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T15:16:43.010",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in SourceCodester/jkev Record Management System 1.0. Affected by this vulnerability is an unknown functionality of the file index.php of the component Login. The manipulation of the argument Username results in sql injection. The attack may be launched remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/whatyourname12345/CVE/blob/main/PRMS/cve_SQL.md\nhttps://vuldb.com/submit/783472\nhttps://vuldb.com/vuln/355345",
+      "source": "NVD",
+      "time": "2026-04-05 18:29:36"
+    },
+    {
+      "cve_id": "CVE-2026-5573",
+      "title": "高危漏洞: CVE-2026-5573 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T15:16:41.880",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30. This impacts an unknown function of the file /fs. Executing a manipulation of the argument cwd can lead to unrestricted upload. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/shiky8/my--cve-vulnerability-research/blob/main/my_VulnDB_cves/CVE-TECHNOSTROBE-05-FileUpload.md\nhttps://vuldb.com/submit/783326\nhttps://vuldb.com/vuln/355343",
+      "source": "NVD",
+      "time": "2026-04-05 18:29:31"
+    },
+    {
+      "cve_id": "CVE-2026-5570",
+      "title": "高危漏洞: CVE-2026-5570 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T14:16:17.940",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30. The affected element is the function index_config of the file /LoginCB. This manipulation causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/shiky8/my--cve-vulnerability-research/blob/main/my_VulnDB_cves/CVE-TECHNOSTROBE-02-AuthBypass.md\nhttps://vuldb.com/submit/783323\nhttps://vuldb.com/vuln/355340",
+      "source": "NVD",
+      "time": "2026-04-05 18:29:25"
+    },
+    {
+      "cve_id": "CVE-2026-5569",
+      "title": "高危漏洞: CVE-2026-5569 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T14:16:17.727",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Technostrobe HI-LED-WR120-G2 5.5.0.1R6.03.30. Impacted is an unknown function of the file /Technostrobe/ of the component Endpoint. The manipulation results in improper access controls. The attack may be performed from remote. The exploit has been made public and could be used. Multiple endpoints are affected. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/shiky8/my--cve-vulnerability-research/blob/main/my_VulnDB_cves/CVE-TECHNOSTROBE-01-BrokenAccessControl.md\nhttps://vuldb.com/submit/783322\nhttps://vuldb.com/vuln/355339",
+      "source": "NVD",
+      "time": "2026-04-05 18:29:18"
+    },
+    {
       "cve_id": "CVE-2026-22557",
       "title": "漏洞仓库: CVE-2026-22557",
       "cvss_score": null,
@@ -192,104 +284,6 @@
       "refs": "https://github.com/ldan42008-ux/cve/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/782185",
       "source": "NVD",
       "time": "2026-04-05 06:54:56"
-    },
-    {
-      "cve_id": "CVE-2026-28363",
-      "title": "漏洞仓库: CVE-2026-28363",
-      "cvss_score": null,
-      "published_date": "2026-04-05T01:41:19Z",
-      "updated_date": "2026-04-05T01:45:19Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/kaleth4/CVE-2026-28363",
-      "source": "GitHub",
-      "cve_overviews": "In OpenClaw before 2026.2.23, tools.exec.safeBins validation for sort could be bypassed via GNU long-option abbreviations (such as --compress-prog) in allowlist mode, leading to approval-free execution paths that were intended to require approval. Only an exact string such as --compress-program was denied.",
-      "time": "2026-04-05 05:05:59"
-    },
-    {
-      "cve_id": "CVE-2026-3502",
-      "title": "漏洞仓库: CVE-2026-3502---TrueConf-Client-Update-Hijacking-PoC",
-      "cvss_score": null,
-      "published_date": "2026-04-04T22:39:53Z",
-      "updated_date": "2026-04-04T22:45:49Z",
-      "vector_string": "N/A",
-      "description": "Exploit para CVE-2026-3502 en TrueConf Client. Un atacante con control del servidor TrueConf local reemplaza la actualización legítima por un payload malicioso sin verificación de integridad, logrando ejecución remota de código y despliegue de malware Havoc en todos los clientes conectados (Operación TrueChaos).",
-      "refs": "https://github.com/fevar54/CVE-2026-3502---TrueConf-Client-Update-Hijacking-PoC",
-      "source": "GitHub",
-      "cve_overviews": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user.",
-      "time": "2026-04-05 01:25:35"
-    },
-    {
-      "cve_id": "CVE-2026-3502",
-      "title": "漏洞仓库: CVE-2026-3502-Scanner---TrueConf-Vulnerability-Detection-Tool",
-      "cvss_score": null,
-      "published_date": "2026-04-04T22:50:54Z",
-      "updated_date": "2026-04-04T22:55:06Z",
-      "vector_string": "N/A",
-      "description": "Herramienta de detección para CVE-2026-3502. Escanea servidores TrueConf sin verificación de actualizaciones, detecta clientes Windows vulnerables (≤8.5.3.884) y busca IOCs de TrueChaos: PowerISO, persistencia en registro y tareas programadas. Reportes JSON, HTML o CSV.",
-      "refs": "https://github.com/fevar54/CVE-2026-3502-Scanner---TrueConf-Vulnerability-Detection-Tool",
-      "source": "GitHub",
-      "cve_overviews": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user.",
-      "time": "2026-04-05 01:25:28"
-    },
-    {
-      "cve_id": "CVE-2026-5526",
-      "title": "高危漏洞: CVE-2026-5526 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-04T23:16:44.290",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in Tenda 4G03 Pro up to 1.0/1.1/04.03.01.53/192.168.0.1. Affected by this vulnerability is an unknown functionality of the file /bin/httpd. The manipulation results in improper access controls. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://vuldb.com/submit/782052\nhttps://vuldb.com/vuln/355279\nhttps://vuldb.com/vuln/355279/cti",
-      "source": "NVD",
-      "time": "2026-04-05 01:25:19"
-    },
-    {
-      "cve_id": "CVE-2018-25246",
-      "title": "高危漏洞: CVE-2018-25246 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-04T20:16:18.210",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Wikipedia 12.0 contains a denial of service vulnerability that allows unauthenticated attackers to crash the application by submitting oversized input through the search functionality. Attackers can paste a large buffer of repeated characters into the search bar to trigger an application crash.",
-      "refs": "https://www.exploit-db.com/exploits/45324\nhttps://www.microsoft.com/en-us/p/wikipedia/9wzdncrfhwm4?activetab=pivot%3aoverviewtab",
-      "source": "NVD",
-      "time": "2026-04-05 01:25:14"
-    },
-    {
-      "cve_id": "CVE-2026-35616",
-      "title": "漏洞仓库: CVE-2026-35616-poc",
-      "cvss_score": null,
-      "published_date": "2026-04-04T16:06:38Z",
-      "updated_date": "2026-04-04T16:32:47Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/z3r0h3ro/CVE-2026-35616-poc",
-      "source": "GitHub",
-      "cve_overviews": "A improper access control vulnerability in Fortinet FortiClientEMS 7.4.5 through 7.4.6 may allow an unauthenticated attacker to execute unauthorized code or commands via crafted requests.",
-      "time": "2026-04-04 18:30:14"
-    },
-    {
-      "cve_id": "CVE-2026-33331",
-      "title": "漏洞仓库: CVE-2026-33331",
-      "cvss_score": null,
-      "published_date": "2026-04-04T17:03:14Z",
-      "updated_date": "2026-04-04T17:18:31Z",
-      "vector_string": "N/A",
-      "description": "Proof-of-concept lab for stored XSS in orpc (CVE-2026-33331)",
-      "refs": "https://github.com/abhayclasher/CVE-2026-33331",
-      "source": "GitHub",
-      "cve_overviews": "oRPC is an tool that helps build APIs that are end-to-end type-safe and adhere to OpenAPI standards. Prior to version 1.13.9, a stored cross-site scripting (XSS) vulnerability exists in the OpenAPI documentation generation of orpc. If an attacker can control any field within the OpenAPI specification (such as info.description), they can break out of the JSON context and execute arbitrary JavaScript when a user views the generated API documentation. This issue has been patched in version 1.13.9.",
-      "time": "2026-04-04 18:29:54"
-    },
-    {
-      "cve_id": "CVE-2018-25255",
-      "title": "高危漏洞: CVE-2018-25255 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-04-04T14:16:21.907",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "10-Strike LANState 8.8 contains a local buffer overflow vulnerability in structured exception handling that allows local attackers to execute arbitrary code by crafting malicious LSM map files. Attackers can create a specially formatted LSM file with a payload in the ObjCaption parameter that overflows the buffer, overwrites the SEH chain, and executes shellcode when the file is opened in the application.",
-      "refs": "https://www.10-strike.com/lanstate/download.shtml\nhttps://www.10-strike.com/products.shtml\nhttps://www.exploit-db.com/exploits/45086",
-      "source": "NVD",
-      "time": "2026-04-04 18:29:32"
     }
   ]
 }
