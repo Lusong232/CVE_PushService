@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-28363",
+      "title": "漏洞仓库: CVE-2026-28363",
+      "cvss_score": null,
+      "published_date": "2026-04-05T01:41:19Z",
+      "updated_date": "2026-04-05T01:45:19Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/kaleth4/CVE-2026-28363",
+      "source": "GitHub",
+      "cve_overviews": "In OpenClaw before 2026.2.23, tools.exec.safeBins validation for sort could be bypassed via GNU long-option abbreviations (such as --compress-prog) in allowlist mode, leading to approval-free execution paths that were intended to require approval. Only an exact string such as --compress-program was denied.",
+      "time": "2026-04-05 05:05:59"
+    },
+    {
       "cve_id": "CVE-2026-3502",
       "title": "漏洞仓库: CVE-2026-3502---TrueConf-Client-Update-Hijacking-PoC",
       "cvss_score": null,
@@ -275,17 +288,6 @@
       "refs": "https://plugins.trac.wordpress.org/changeset?old_path=wpforo/tags/2.4.16/classes/Posts.php&new_path=wpforo/tags/2.4.17/classes/Posts.php&old=3471614&new=3483044\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f215e320-8563-4d25-9963-ed3664b4901d?source=cve",
       "source": "NVD",
       "time": "2026-04-04 15:22:17"
-    },
-    {
-      "cve_id": "CVE-2026-2936",
-      "title": "高危漏洞: CVE-2026-2936 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-04T12:16:03.090",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Visitor Traffic Real Time Statistics plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'page_title' parameter in all versions up to, and including, 8.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever an admin user accesses the Traffic by Title section.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3466230/visitors-traffic-real-time-statistics\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/bd8e86b0-5e06-44e0-a94c-b05581f46e5a?source=cve",
-      "source": "NVD",
-      "time": "2026-04-04 15:22:12"
     }
   ]
 }
