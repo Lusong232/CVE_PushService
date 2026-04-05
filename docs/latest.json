@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-24061",
+      "title": "漏洞仓库: CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
+      "cvss_score": null,
+      "published_date": "2026-04-05T07:28:39Z",
+      "updated_date": "2026-04-05T08:33:56Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
+      "source": "GitHub",
+      "cve_overviews": "telnetd in GNU Inetutils through 2.7 allows remote authentication bypass via a \"-f root\" value for the USER environment variable.",
+      "time": "2026-04-05 09:30:21"
+    },
+    {
       "cve_id": "CVE-2026-5536",
       "title": "高危漏洞: CVE-2026-5536 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -273,19 +286,6 @@
       "refs": "https://www.exploit-db.com/exploits/40706\nhttps://www.vulncheck.com/advisories/snews-cms-unrestricted-file-upload-via-snews-files",
       "source": "NVD",
       "time": "2026-04-04 18:28:10"
-    },
-    {
-      "cve_id": "CVE-2026-33579",
-      "title": "漏洞仓库: openclaw-security-checker",
-      "cvss_score": null,
-      "published_date": "2026-04-04T12:37:24Z",
-      "updated_date": "2026-04-04T12:37:26Z",
-      "vector_string": "N/A",
-      "description": "Check if your AI agent setup is vulnerable to CVE-2026-33579",
-      "refs": "https://github.com/atalovesyou/openclaw-security-checker",
-      "source": "GitHub",
-      "cve_overviews": "OpenClaw before 2026.3.28 contains a privilege escalation vulnerability in the /pair approve command path that fails to forward caller scopes into the core approval check. A caller with pairing privileges but without admin privileges can approve pending device requests asking for broader scopes including admin access by exploiting the missing scope validation in extensions/device-pair/index.ts and src/infra/device-pairing.ts.",
-      "time": "2026-04-04 15:22:36"
     }
   ]
 }
