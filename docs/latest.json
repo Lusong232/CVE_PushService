@@ -1,6 +1,107 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-25769",
+      "cvss_score": null,
+      "published_date": "2026-04-05T11:31:47Z",
+      "updated_date": "2026-04-05T11:45:48Z",
+      "vector_string": "N/A",
+      "description": "POC for deserialization of untrusted data in wazuh leading to RCE",
+      "refs": "https://github.com/njeru-codes/CVE-2026-25769",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-05 12:36:19"
+    },
+    {
+      "cve_id": "CVE-2026-5562",
+      "title": "高危漏洞: CVE-2026-5562 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T11:16:56.993",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in provectus kafka-ui up to 0.7.2. This impacts the function validateAccess of the file /api/smartfilters/testexecutions of the component Endpoint. The manipulation leads to code injection. The attack can be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://drive.google.com/file/d/18-Q4tb19y_7dwchnTCgcwfbox0Uj6oQd/view\nhttps://vuldb.com/submit/782941\nhttps://vuldb.com/vuln/355332",
+      "source": "NVD",
+      "time": "2026-04-05 12:36:13"
+    },
+    {
+      "cve_id": "CVE-2026-5555",
+      "title": "高危漏洞: CVE-2026-5555 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T10:16:19.307",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in code-projects Concert Ticket Reservation System 1.0. This affects an unknown part of the file /ConcertTicketReservationSystem-master/login.php of the component Parameter Handler. Executing a manipulation of the argument Email can lead to sql injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Wzl731/test/issues/5\nhttps://vuldb.com/submit/782875",
+      "source": "NVD",
+      "time": "2026-04-05 12:36:08"
+    },
+    {
+      "cve_id": "CVE-2026-5554",
+      "title": "高危漏洞: CVE-2026-5554 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T10:16:18.517",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in code-projects Concert Ticket Reservation System 1.0. Affected by this issue is some unknown functionality of the file /ConcertTicketReservationSystem-master/process_search.php of the component Parameter Handler. Performing a manipulation of the argument searching results in sql injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Wzl731/test/issues/4\nhttps://vuldb.com/submit/782874",
+      "source": "NVD",
+      "time": "2026-04-05 12:36:03"
+    },
+    {
+      "cve_id": "CVE-2026-5551",
+      "title": "高危漏洞: CVE-2026-5551 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T09:16:17.767",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in itsourcecode Free Hotel Reservation System 1.0. This vulnerability affects unknown code of the file /hotel/admin/login.php of the component Parameter Handler. The manipulation of the argument email results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/jasonwong666/cve/issues/1\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/782845",
+      "source": "NVD",
+      "time": "2026-04-05 12:35:57"
+    },
+    {
+      "cve_id": "CVE-2026-5550",
+      "title": "高危漏洞: CVE-2026-5550 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-05T08:16:25.100",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Tenda AC10 16.03.10.10_multi_TDE01. This affects the function fromSysToolChangePwd of the file /bin/httpd. The manipulation leads to stack-based buffer overflow. The attack may be initiated remotely. Multiple endpoints might be affected.",
+      "refs": "https://github.com/somanyerrors/tenda-ac10v4-vulnerabilities/blob/main/findings/HIGH-01-getvalue-229-callers.md\nhttps://vuldb.com/submit/782299\nhttps://vuldb.com/vuln/355314",
+      "source": "NVD",
+      "time": "2026-04-05 12:35:52"
+    },
+    {
+      "cve_id": "CVE-2026-5548",
+      "title": "高危漏洞: CVE-2026-5548 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-05T08:16:24.650",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Tenda AC10 16.03.10.10_multi_TDE01. Affected by this vulnerability is the function fromSysToolChangePwd of the file /bin/httpd. Performing a manipulation of the argument sys.userpass results in stack-based buffer overflow. The attack can be initiated remotely.",
+      "refs": "https://github.com/somanyerrors/tenda-ac10v4-vulnerabilities/blob/main/findings/CRITICAL-04-stackoverflow-fromsystoolchangepwd.md\nhttps://vuldb.com/submit/782297\nhttps://vuldb.com/vuln/355312",
+      "source": "NVD",
+      "time": "2026-04-05 12:35:47"
+    },
+    {
+      "cve_id": "CVE-2026-5544",
+      "title": "高危漏洞: CVE-2026-5544 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-05T06:16:01.760",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in UTT HiPER 1250GW up to 3.2.7-210907-180535. The impacted element is an unknown function of the file /goform/formRemoteControl. The manipulation of the argument Profile results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/jinxjinxboom/cve/issues/1\nhttps://vuldb.com/submit/782268\nhttps://vuldb.com/vuln/355297",
+      "source": "NVD",
+      "time": "2026-04-05 12:35:42"
+    },
+    {
+      "cve_id": "CVE-2026-5540",
+      "title": "高危漏洞: CVE-2026-5540 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T05:16:03.100",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in code-projects Simple Laundry System 1.0. This vulnerability affects unknown code of the file /modifymember.php of the component Parameter Handler. Such manipulation of the argument firstName leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/boyslikesports/vul-web/issues/4\nhttps://vuldb.com/submit/782222",
+      "source": "NVD",
+      "time": "2026-04-05 12:35:37"
+    },
+    {
       "cve_id": "CVE-2026-24061",
       "title": "漏洞仓库: CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
       "cvss_score": null,
@@ -187,105 +288,6 @@
       "refs": "https://www.exploit-db.com/exploits/46197\nhttps://www.microsoft.com/store/productId/9NQL2QC8S935\nhttps://www.vulncheck.com/advisories/microsoft-7-tik-denial-of-service-via-search",
       "source": "NVD",
       "time": "2026-04-04 18:28:54"
-    },
-    {
-      "cve_id": "CVE-2018-25241",
-      "title": "高危漏洞: CVE-2018-25241 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-04T14:16:19.623",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "VPN Browser+ 1.1.0.0 contains a denial of service vulnerability that allows unauthenticated attackers to crash the application by submitting oversized input through the search functionality. Attackers can paste a large buffer of characters into the search bar to trigger an unhandled exception that terminates the application.",
-      "refs": "https://www.exploit-db.com/exploits/46198\nhttps://www.microsoft.com/store/productId/9NFFFFS5Z2C7\nhttps://www.vulncheck.com/advisories/microsoft-vpn-browser-denial-of-service",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:49"
-    },
-    {
-      "cve_id": "CVE-2016-20061",
-      "title": "高危漏洞: CVE-2016-20061 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:18.930",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "sheed AntiVirus 2.3 contains an unquoted service path vulnerability in the ShavProt service that allows local attackers to escalate privileges by exploiting the service binary path. Attackers can insert a malicious executable in the unquoted path and trigger service restart or system reboot to execute code with LocalSystem privileges.",
-      "refs": "http://dl.sheedantivirus.ir/setup.exe\nhttp://sheedantivirus.ir/\nhttps://www.exploit-db.com/exploits/40497",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:44"
-    },
-    {
-      "cve_id": "CVE-2016-20060",
-      "title": "高危漏洞: CVE-2016-20060 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:18.757",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Hotspot Shield 6.0.3 contains an unquoted service path vulnerability in the hshld service binary that allows local attackers to escalate privileges by injecting malicious executables. Attackers can place executable files in the service path and upon service restart or system reboot, the malicious code executes with LocalSystem privileges.",
-      "refs": "https://www.exploit-db.com/exploits/40528\nhttps://www.hotspotshield.com\nhttps://www.hotspotshield.com/download/",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:40"
-    },
-    {
-      "cve_id": "CVE-2016-20059",
-      "title": "高危漏洞: CVE-2016-20059 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:18.557",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IObit Malware Fighter 4.3.1 contains an unquoted service path vulnerability in the IMFservice and LiveUpdateSvc services that allows local attackers to escalate privileges. Attackers can insert a malicious executable file in the unquoted service path and trigger privilege escalation when the service restarts or the system reboots, executing code with LocalSystem privileges.",
-      "refs": "http://www.iobit.com/downloadcenter.php?product=malware-fighter-free\nhttp://www.iobit.com/en/index.php\nhttps://www.exploit-db.com/exploits/40525",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:33"
-    },
-    {
-      "cve_id": "CVE-2016-20058",
-      "title": "高危漏洞: CVE-2016-20058 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:18.390",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Netgate AMITI Antivirus build 23.0.305 contains an unquoted service path vulnerability in the AmitiAvSrv and AmitiAntivirusHealth services that allows local attackers to escalate privileges. Attackers can place a malicious executable in the unquoted service path and trigger service restart or system reboot to execute code with LocalSystem privileges.",
-      "refs": "http://www.netgate.sk/\nhttp://www.netgate.sk/download/download.php?id=11\nhttps://www.exploit-db.com/exploits/40540",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:29"
-    },
-    {
-      "cve_id": "CVE-2016-20057",
-      "title": "高危漏洞: CVE-2016-20057 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:18.223",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NETGATE Registry Cleaner build 16.0.205 contains an unquoted service path vulnerability in the NGRegClnSrv service that allows local attackers to escalate privileges by exploiting the service binary path. Attackers can place a malicious executable in the unquoted path and trigger service restart or system reboot to execute code with LocalSystem privileges.",
-      "refs": "http://www.netgate.sk/\nhttp://www.netgate.sk/download/download.php?id=4\nhttps://www.exploit-db.com/exploits/40539",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:24"
-    },
-    {
-      "cve_id": "CVE-2016-20056",
-      "title": "高危漏洞: CVE-2016-20056 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:18.057",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Spy Emergency build 23.0.205 contains an unquoted service path vulnerability in the SpyEmrgHealth and SpyEmrgSrv services that allows local attackers to escalate privileges by inserting malicious executables. Attackers can place executable files in the unquoted service path and trigger service restart or system reboot to execute code with LocalSystem privileges.",
-      "refs": "http://www.spy-emergency.com/\nhttp://www.spy-emergency.com/download/download.php?id=1\nhttps://www.exploit-db.com/exploits/40550",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:20"
-    },
-    {
-      "cve_id": "CVE-2016-20055",
-      "title": "高危漏洞: CVE-2016-20055 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-04T14:16:17.863",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IObit Advanced SystemCare 10.0.2 contains an unquoted service path vulnerability in the AdvancedSystemCareService10 service that allows local attackers to escalate privileges. Attackers can place a malicious executable in the service path and trigger privilege escalation when the service restarts or the system reboots, executing code with LocalSystem privileges.",
-      "refs": "http://www.iobit.com/en/advancedsystemcarefree.php#\nhttp://www.iobit.com/en/index.php\nhttps://www.exploit-db.com/exploits/40577",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:16"
-    },
-    {
-      "cve_id": "CVE-2016-20052",
-      "title": "高危漏洞: CVE-2016-20052 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-04T14:16:17.520",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Snews CMS 1.7 contains an unrestricted file upload vulnerability that allows unauthenticated attackers to upload arbitrary files including PHP executables to the snews_files directory. Attackers can upload malicious PHP files through the multipart form-data upload endpoint and execute them by accessing the uploaded file path to achieve remote code execution.",
-      "refs": "https://www.exploit-db.com/exploits/40706\nhttps://www.vulncheck.com/advisories/snews-cms-unrestricted-file-upload-via-snews-files",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:10"
     }
   ]
 }
