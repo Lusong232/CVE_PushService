@@ -1,6 +1,63 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-22557",
+      "title": "漏洞仓库: CVE-2026-22557",
+      "cvss_score": null,
+      "published_date": "2026-04-05T14:31:35Z",
+      "updated_date": "2026-04-05T14:43:11Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-22557",
+      "refs": "https://github.com/0xBlackash/CVE-2026-22557",
+      "source": "GitHub",
+      "cve_overviews": "A malicious actor with access to the network could exploit a Path Traversal vulnerability found in the UniFi Network Application to access files on the underlying system that could be manipulated to access an underlying account.",
+      "time": "2026-04-05 15:23:35"
+    },
+    {
+      "cve_id": "CVE-2026-5567",
+      "title": "高危漏洞: CVE-2026-5567 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-05T13:17:14.707",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda M3 1.0.0.10. This vulnerability affects the function setAdvPolicyData of the file /goform/setAdvPolicyData of the component Destination Handler. Executing a manipulation of the argument policyType can lead to buffer overflow. The attack can be executed remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Moxxkidd/CVE/issues/2\nhttps://vuldb.com/submit/782999\nhttps://vuldb.com/vuln/355337",
+      "source": "NVD",
+      "time": "2026-04-05 15:23:19"
+    },
+    {
+      "cve_id": "CVE-2026-5566",
+      "title": "高危漏洞: CVE-2026-5566 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-05T13:17:14.520",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in UTT HiPER 1250GW up to 3.2.7-210907-180535. This affects the function strcpy of the file /goform/formNatStaticMap. Performing a manipulation of the argument NatBind results in buffer overflow. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
+      "refs": "https://github.com/Moxxkidd/CVE/issues/1\nhttps://vuldb.com/submit/782993\nhttps://vuldb.com/vuln/355336",
+      "source": "NVD",
+      "time": "2026-04-05 15:23:12"
+    },
+    {
+      "cve_id": "CVE-2026-5565",
+      "title": "高危漏洞: CVE-2026-5565 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T13:17:13.433",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Simple Laundry System 1.0. Affected by this issue is some unknown functionality of the file /delmemberinfo.php of the component Parameter Handler. Such manipulation of the argument userid leads to sql injection. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/mzhnqwqz/cve/issues/1\nhttps://vuldb.com/submit/782977",
+      "source": "NVD",
+      "time": "2026-04-05 15:23:03"
+    },
+    {
+      "cve_id": "CVE-2026-5564",
+      "title": "高危漏洞: CVE-2026-5564 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-05T12:16:18.927",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in code-projects Simple Laundry System 1.0. Affected by this vulnerability is an unknown functionality of the file /searchguest.php of the component Parameter Handler. This manipulation of the argument searchServiceId causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Kazamikazu/Ksec/issues/2\nhttps://vuldb.com/submit/782976",
+      "source": "NVD",
+      "time": "2026-04-05 15:22:57"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: CVE-2026-25769",
       "cvss_score": null,
@@ -233,61 +290,6 @@
       "refs": "https://www.10-strike.com/lanstate/download.shtml\nhttps://www.10-strike.com/products.shtml\nhttps://www.exploit-db.com/exploits/45086",
       "source": "NVD",
       "time": "2026-04-04 18:29:32"
-    },
-    {
-      "cve_id": "CVE-2018-25254",
-      "title": "高危漏洞: CVE-2018-25254 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-04T14:16:21.743",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NICO-FTP 3.0.1.19 contains a structured exception handler buffer overflow vulnerability that allows remote attackers to execute arbitrary code by sending crafted FTP commands. Attackers can connect to the FTP service and send oversized data in response handlers to overwrite SEH pointers and redirect execution to injected shellcode.",
-      "refs": "https://en.softonic.com/download/nico-ftp/windows/post-download\nhttps://www.exploit-db.com/exploits/45442\nhttps://www.vulncheck.com/advisories/nico-ftp-buffer-overflow-seh",
-      "source": "NVD",
-      "time": "2026-04-04 18:29:13"
-    },
-    {
-      "cve_id": "CVE-2018-25251",
-      "title": "高危漏洞: CVE-2018-25251 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-04-04T14:16:21.203",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Snes9K 0.0.9z contains a buffer overflow vulnerability in the Netplay Socket Port Number field that allows local attackers to trigger a structured exception handler (SEH) overwrite. Attackers can craft a malicious payload and paste it into the Socket Port Number field via the Netplay Options menu to achieve code execution through SEH chain exploitation.",
-      "refs": "https://sourceforge.net/projects/snes9k/\nhttps://sourceforge.net/projects/snes9k/files/latest/download\nhttps://www.exploit-db.com/exploits/45598",
-      "source": "NVD",
-      "time": "2026-04-04 18:29:06"
-    },
-    {
-      "cve_id": "CVE-2018-25250",
-      "title": "高危漏洞: CVE-2018-25250 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-04T14:16:21.033",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "MyBB Last User's Threads in Profile Plugin 1.2 contains a persistent cross-site scripting vulnerability that allows attackers to inject malicious scripts by crafting thread subjects with script tags. Attackers can create threads with script payloads in the subject field that execute when users visit the attacker's profile page.",
-      "refs": "https://community.mybb.com/mods.php?action=view&pid=910\nhttps://www.exploit-db.com/exploits/44339\nhttps://www.vulncheck.com/advisories/mybb-last-user-s-threads-in-profile-plugin-persistent-xss",
-      "source": "NVD",
-      "time": "2026-04-04 18:29:02"
-    },
-    {
-      "cve_id": "CVE-2018-25248",
-      "title": "高危漏洞: CVE-2018-25248 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-04T14:16:20.683",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "MyBB Downloads Plugin 2.0.3 contains a persistent cross-site scripting vulnerability that allows regular members to inject malicious scripts through the download title field. Attackers can submit a new download with HTML/JavaScript code in the title parameter, which executes when administrators validate the download in downloads.php.",
-      "refs": "https://community.mybb.com/mods.php?action=view&pid=854\nhttps://www.exploit-db.com/exploits/44400\nhttps://www.vulncheck.com/advisories/mybb-downloads-plugin-persistent-xss-via-downloads-php",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:58"
-    },
-    {
-      "cve_id": "CVE-2018-25245",
-      "title": "高危漏洞: CVE-2018-25245 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-04T14:16:20.330",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "7 Tik 1.0.1.0 contains a denial of service vulnerability that allows attackers to crash the application by submitting excessively long input strings to the search functionality. Attackers can paste a buffer of 7700 characters into the search bar to trigger an application crash.",
-      "refs": "https://www.exploit-db.com/exploits/46197\nhttps://www.microsoft.com/store/productId/9NQL2QC8S935\nhttps://www.vulncheck.com/advisories/microsoft-7-tik-denial-of-service-via-search",
-      "source": "NVD",
-      "time": "2026-04-04 18:28:54"
     }
   ]
 }
