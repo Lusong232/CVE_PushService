@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-22812",
+      "title": "漏洞仓库: CVE-2026-22812",
+      "cvss_score": null,
+      "published_date": "2026-04-06T07:22:53Z",
+      "updated_date": "2026-04-06T07:42:33Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-22812",
+      "refs": "https://github.com/0xBlackash/CVE-2026-22812",
+      "source": "GitHub",
+      "cve_overviews": "OpenCode is an open source AI coding agent. Prior to 1.0.216, OpenCode automatically starts an unauthenticated HTTP server that allows any local process (or any website via permissive CORS) to execute arbitrary shell commands with the user's privileges. This vulnerability is fixed in 1.0.216.",
+      "time": "2026-04-06 10:00:20"
+    },
+    {
       "cve_id": "CVE-2026-1668",
       "title": "漏洞仓库: cve-2026-1668-poc",
       "cvss_score": null,
@@ -267,17 +280,6 @@
       "refs": "http://coreftp.com/server/download/archive/CoreFTPServer653.exe\nhttp://www.coreftp.com/\nhttps://www.exploit-db.com/exploits/46532",
       "source": "NVD",
       "time": "2026-04-06 01:27:00"
-    },
-    {
-      "cve_id": "CVE-2019-25685",
-      "title": "高危漏洞: CVE-2019-25685 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-05T21:16:47.140",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "phpBB contains an arbitrary file upload vulnerability that allows authenticated attackers to upload malicious files by exploiting the plupload functionality and phar:// stream wrapper. Attackers can upload a crafted zip file containing serialized PHP objects that execute arbitrary code when deserialized through the imagick parameter in attachment settings.",
-      "refs": "https://www.exploit-db.com/exploits/46512\nhttps://www.vulncheck.com/advisories/phpbb-arbitrary-file-upload-via-phar-deserialization",
-      "source": "NVD",
-      "time": "2026-04-06 01:26:56"
     }
   ]
 }
