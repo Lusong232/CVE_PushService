@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5648",
+      "title": "高危漏洞: CVE-2026-5648 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T11:17:03.740",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in code-projects Simple Laundry System 1.0. This vulnerability affects unknown code of the file /userfinishregister.php of the component Parameter Handler. This manipulation of the argument firstName causes sql injection. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/yao536/cve/issues/2\nhttps://vuldb.com/submit/786194",
+      "source": "NVD",
+      "time": "2026-04-06 12:48:28"
+    },
+    {
+      "cve_id": "CVE-2026-5646",
+      "title": "高危漏洞: CVE-2026-5646 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T11:17:03.370",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Easy Blog Site 1.0. Affected by this issue is some unknown functionality of the file login.php. The manipulation of the argument username/password leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/MyMySSS/cve/blob/main/cve.md\nhttps://vuldb.com/submit/786150",
+      "source": "NVD",
+      "time": "2026-04-06 12:48:24"
+    },
+    {
+      "cve_id": "CVE-2026-5645",
+      "title": "高危漏洞: CVE-2026-5645 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T11:17:03.177",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in projectworlds Car Rental System 1.0. Affected by this vulnerability is an unknown functionality of the file /pay.php of the component Parameter Handler. Executing a manipulation of the argument mpesa can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/2840364044/SQL-Vulnerability-database/issues/1\nhttps://vuldb.com/submit/786149\nhttps://vuldb.com/vuln/355433",
+      "source": "NVD",
+      "time": "2026-04-06 12:48:19"
+    },
+    {
+      "cve_id": "CVE-2026-5642",
+      "title": "高危漏洞: CVE-2026-5642 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T10:16:02.760",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Cyber-III Student-Management-System up to 1a938fa61e9f735078e9b291d2e6215b4942af3f. This affects an unknown function of the file /viva/update.php of the component HTTP POST Request Handler. This manipulation of the argument Name causes improper authorization. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Cyber-III/Student-Management-System/\nhttps://github.com/Cyber-III/Student-Management-System/issues/236\nhttps://vuldb.com/submit/785857",
+      "source": "NVD",
+      "time": "2026-04-06 12:48:14"
+    },
+    {
+      "cve_id": "CVE-2026-5637",
+      "title": "高危漏洞: CVE-2026-5637 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T09:16:18.060",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in projectworlds Car Rental System 1.0. This vulnerability affects unknown code of the file /message_admin.php of the component Parameter Handler. Such manipulation of the argument Message leads to sql injection. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/eqiya17/collection-of-vulnerabilities/issues/13\nhttps://vuldb.com/submit/785951\nhttps://vuldb.com/vuln/355425",
+      "source": "NVD",
+      "time": "2026-04-06 12:48:04"
+    },
+    {
+      "cve_id": "CVE-2026-5634",
+      "title": "高危漏洞: CVE-2026-5634 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T08:16:39.700",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in projectworlds Car Rental Project 1.0. Affected by this vulnerability is an unknown functionality of the file /book_car.php of the component Parameter Handler. The manipulation of the argument fname leads to sql injection. The attack can be initiated remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/eqiya17/collection-of-vulnerabilities/issues/12\nhttps://vuldb.com/submit/785863\nhttps://vuldb.com/vuln/355422",
+      "source": "NVD",
+      "time": "2026-04-06 12:47:56"
+    },
+    {
+      "cve_id": "CVE-2026-5633",
+      "title": "高危漏洞: CVE-2026-5633 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T08:16:39.487",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in assafelovic gpt-researcher up to 3.4.3. Affected is an unknown function of the component ws Endpoint. Executing a manipulation of the argument source_urls can lead to server-side request forgery. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/assafelovic/gpt-researcher/\nhttps://github.com/assafelovic/gpt-researcher/issues/1696\nhttps://vuldb.com/submit/785876",
+      "source": "NVD",
+      "time": "2026-04-06 12:47:51"
+    },
+    {
+      "cve_id": "CVE-2026-5632",
+      "title": "高危漏洞: CVE-2026-5632 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T07:16:02.197",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in assafelovic gpt-researcher up to 3.4.3. This impacts an unknown function of the component HTTP REST API Endpoint. Performing a manipulation results in missing authentication. It is possible to initiate the attack remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/assafelovic/gpt-researcher/\nhttps://github.com/assafelovic/gpt-researcher/issues/1695\nhttps://vuldb.com/submit/785874",
+      "source": "NVD",
+      "time": "2026-04-06 12:47:46"
+    },
+    {
+      "cve_id": "CVE-2026-5631",
+      "title": "高危漏洞: CVE-2026-5631 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-06T07:16:01.983",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in assafelovic gpt-researcher up to 3.4.3. This affects the function extract_command_data of the file backend/server/server_utils.py of the component ws Endpoint. Such manipulation of the argument args leads to code injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/assafelovic/gpt-researcher/\nhttps://github.com/assafelovic/gpt-researcher/issues/1694\nhttps://vuldb.com/submit/785858",
+      "source": "NVD",
+      "time": "2026-04-06 12:47:42"
+    },
+    {
+      "cve_id": "CVE-2026-5629",
+      "title": "高危漏洞: CVE-2026-5629 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-06T06:16:22.310",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Belkin F9K1015 1.00.10. The affected element is the function formSetFirewall of the file /goform/formSetFirewall. The manipulation of the argument webpage results in stack-based buffer overflow. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/Belkin%20F9K1015/vul_13/README.md\nhttps://vuldb.com/submit/785556\nhttps://vuldb.com/vuln/355417",
+      "source": "NVD",
+      "time": "2026-04-06 12:47:37"
+    },
+    {
+      "cve_id": "CVE-2026-5628",
+      "title": "高危漏洞: CVE-2026-5628 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-06T06:16:22.087",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Belkin F9K1015 1.00.10. Impacted is the function formSetSystemSettings of the file /goform/formSetSystemSettings of the component Setting Handler. The manipulation of the argument webpage leads to stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/Belkin%20F9K1015/vul_12/README.md\nhttps://vuldb.com/submit/785555\nhttps://vuldb.com/vuln/355416",
+      "source": "NVD",
+      "time": "2026-04-06 12:47:32"
+    },
+    {
       "cve_id": "CVE-2026-22812",
       "title": "漏洞仓库: CVE-2026-22812",
       "cvss_score": null,
@@ -159,127 +280,6 @@
       "refs": "https://https://nvd.nist.gov/vuln/detail/CVE-2026-4272",
       "source": "NVD",
       "time": "2026-04-06 01:27:53"
-    },
-    {
-      "cve_id": "CVE-2019-25704",
-      "title": "高危漏洞: CVE-2019-25704 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:48.970",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the filter_user_mail parameter. Attackers can send crafted requests with malicious SQL statements to extract sensitive database information or modify data.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:48"
-    },
-    {
-      "cve_id": "CVE-2019-25702",
-      "title": "高危漏洞: CVE-2019-25702 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:48.810",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the id_project parameter. Attackers can send crafted requests with malicious SQL statements in the id_project parameter to extract sensitive database information or modify data.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:44"
-    },
-    {
-      "cve_id": "CVE-2019-25700",
-      "title": "高危漏洞: CVE-2019-25700 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:48.643",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the sort_direction parameter. Attackers can submit malicious SQL statements in the sort_direction parameter to extract sensitive database information or modify data.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:40"
-    },
-    {
-      "cve_id": "CVE-2019-25698",
-      "title": "高危漏洞: CVE-2019-25698 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:48.480",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the id_to_delete parameter. Attackers can send crafted requests with malicious SQL statements in the id_to_delete field to extract or modify sensitive database information.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:32"
-    },
-    {
-      "cve_id": "CVE-2019-25696",
-      "title": "高危漏洞: CVE-2019-25696 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:48.317",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the language_tag parameter. Attackers can submit malicious SQL statements in the language_tag parameter to extract sensitive database information or modify data.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:28"
-    },
-    {
-      "cve_id": "CVE-2019-25694",
-      "title": "高危漏洞: CVE-2019-25694 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:48.150",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the user2reset parameter. Attackers can send crafted requests with malicious SQL payloads to extract sensitive database information or modify data.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:24"
-    },
-    {
-      "cve_id": "CVE-2019-25692",
-      "title": "高危漏洞: CVE-2019-25692 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:47.990",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the 'id_to_modify' parameter. Attackers can send crafted requests with malicious SQL statements in the id_to_modify field to extract sensitive database information or modify data.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:20"
-    },
-    {
-      "cve_id": "CVE-2019-25690",
-      "title": "高危漏洞: CVE-2019-25690 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:47.820",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the mng_profile_id parameter. Attackers can send crafted requests with malicious SQL payloads in the mng_profile_id parameter to extract sensitive database information.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:16"
-    },
-    {
-      "cve_id": "CVE-2019-25688",
-      "title": "高危漏洞: CVE-2019-25688 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-05T21:16:47.650",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the menu_lev1 parameter. Attackers can send crafted requests with malicious SQL payloads in the menu_lev1 parameter to extract sensitive database information or modify database contents.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/46505\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:12"
-    },
-    {
-      "cve_id": "CVE-2019-25687",
-      "title": "高危漏洞: CVE-2019-25687 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-05T21:16:47.490",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pegasus CMS 1.0 contains a remote code execution vulnerability in the extra_fields.php plugin that allows unauthenticated attackers to execute arbitrary commands by exploiting unsafe eval functionality. Attackers can send POST requests to the submit.php endpoint with malicious PHP code in the action parameter to achieve code execution and obtain an interactive shell.",
-      "refs": "https://www.exploit-db.com/exploits/46542\nhttps://www.vulncheck.com/advisories/pegasus-cms-remote-code-execution-via-extra-fields-php\nhttps://www.wisdom.com.au/web/pegasus-cms",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:07"
-    },
-    {
-      "cve_id": "CVE-2019-25686",
-      "title": "高危漏洞: CVE-2019-25686 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-05T21:16:47.310",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Core FTP 2.0 build 653 contains a denial of service vulnerability in the PBSZ command that allows unauthenticated attackers to crash the service by sending a malformed command with an oversized buffer. Attackers can send a PBSZ command with a payload exceeding 211 bytes to trigger an access violation and crash the FTP server process.",
-      "refs": "http://coreftp.com/server/download/archive/CoreFTPServer653.exe\nhttp://www.coreftp.com/\nhttps://www.exploit-db.com/exploits/46532",
-      "source": "NVD",
-      "time": "2026-04-06 01:27:00"
     }
   ]
 }
