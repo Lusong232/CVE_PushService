@@ -1,6 +1,97 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-25197",
+      "title": "漏洞仓库: CVE-2026-25197",
+      "cvss_score": null,
+      "published_date": "2026-04-07T04:37:34Z",
+      "updated_date": "2026-04-07T04:37:36Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-25197: Authorization Bypass via IDOR — Gardyn Home Kit (ICSA-26-055-03)",
+      "refs": "https://github.com/MichaelAdamGroberman/CVE-2026-25197",
+      "source": "GitHub",
+      "cve_overviews": "A specific endpoint allows authenticated users to pivot to other user profiles by modifying the id number in the API call.",
+      "time": "2026-04-07 10:00:14"
+    },
+    {
+      "cve_id": "CVE-2026-28766",
+      "title": "漏洞仓库: CVE-2026-28766",
+      "cvss_score": null,
+      "published_date": "2026-04-07T04:37:37Z",
+      "updated_date": "2026-04-07T04:37:38Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-28766: Missing Authentication on User Account Endpoint — Gardyn Home Kit (ICSA-26-055-03)",
+      "refs": "https://github.com/MichaelAdamGroberman/CVE-2026-28766",
+      "source": "GitHub",
+      "cve_overviews": "A specific endpoint exposes all user account information for registered Gardyn users without requiring authentication.",
+      "time": "2026-04-07 09:59:57"
+    },
+    {
+      "cve_id": "CVE-2026-28767",
+      "title": "漏洞仓库: CVE-2026-28767",
+      "cvss_score": null,
+      "published_date": "2026-04-07T04:37:39Z",
+      "updated_date": "2026-04-07T04:37:41Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-28767: Missing Authentication on Admin Notifications Endpoint — Gardyn Home Kit (ICSA-26-055-03)",
+      "refs": "https://github.com/MichaelAdamGroberman/CVE-2026-28767",
+      "source": "GitHub",
+      "cve_overviews": "A specific administrative endpoint notifications is accessible without proper authentication.",
+      "time": "2026-04-07 09:59:51"
+    },
+    {
+      "cve_id": "CVE-2026-32646",
+      "title": "漏洞仓库: CVE-2026-32646",
+      "cvss_score": null,
+      "published_date": "2026-04-07T04:37:42Z",
+      "updated_date": "2026-04-07T04:37:44Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-32646: Missing Authentication on Admin Device Endpoint — Gardyn Home Kit (ICSA-26-055-03)",
+      "refs": "https://github.com/MichaelAdamGroberman/CVE-2026-32646",
+      "source": "GitHub",
+      "cve_overviews": "A specific administrative endpoint is accessible without proper authentication, exposing device management functions.",
+      "time": "2026-04-07 09:59:44"
+    },
+    {
+      "cve_id": "CVE-2026-32662",
+      "title": "漏洞仓库: CVE-2026-32662",
+      "cvss_score": null,
+      "published_date": "2026-04-07T04:37:45Z",
+      "updated_date": "2026-04-07T04:37:46Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-32662: Active Debug Code in Production — Gardyn Home Kit (ICSA-26-055-03)",
+      "refs": "https://github.com/MichaelAdamGroberman/CVE-2026-32662",
+      "source": "GitHub",
+      "cve_overviews": "Development and test API endpoints are present that mirror production functionality.",
+      "time": "2026-04-07 09:59:38"
+    },
+    {
+      "cve_id": "CVE-2026-20131",
+      "title": "漏洞仓库: Cisco-FMC-honeypot",
+      "cvss_score": null,
+      "published_date": "2026-04-07T03:35:37Z",
+      "updated_date": "2026-04-07T06:11:14Z",
+      "vector_string": "N/A",
+      "description": "Originally a Honeypot for CVE-2026-20131",
+      "refs": "https://github.com/Hassan-Pouladi/Cisco-FMC-honeypot",
+      "source": "GitHub",
+      "cve_overviews": "A vulnerability in the web-based management interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary Java code as root&nbsp;on an affected device.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root.\r\nNote: If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.",
+      "time": "2026-04-07 09:59:29"
+    },
+    {
+      "cve_id": "CVE-2026-34156",
+      "title": "漏洞仓库: CVE-2026-34156",
+      "cvss_score": null,
+      "published_date": "2026-04-07T08:31:59Z",
+      "updated_date": "2026-04-07T08:32:01Z",
+      "vector_string": "N/A",
+      "description": "NocoBase Sandbox Escape to RCE via console._stdout Prototype Chain Traversal (CVE-2026-34156)",
+      "refs": "https://github.com/franckboumendil/CVE-2026-34156",
+      "source": "GitHub",
+      "cve_overviews": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to version 2.0.28, NocoBase's Workflow Script Node executes user-supplied JavaScript inside a Node.js vm sandbox with a custom require allowlist (controlled by WORKFLOW_SCRIPT_MODULES env var). However, the console object passed into the sandbox context exposes host-realm WritableWorkerStdio stream objects via console._stdout and console._stderr. An authenticated attacker can traverse the prototype chain to escape the sandbox and achieve Remote Code Execution as root. This issue has been patched in version 2.0.28.",
+      "time": "2026-04-07 09:59:19"
+    },
+    {
       "cve_id": "CVE-2026-5692",
       "title": "高危漏洞: CVE-2026-5692 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -205,83 +296,6 @@
       "refs": "https://github.com/libsdl-org/SDL_image/security/advisories/GHSA-gq8w-x74c-h6p7",
       "source": "NVD",
       "time": "2026-04-07 01:25:10"
-    },
-    {
-      "cve_id": "CVE-2026-35442",
-      "title": "高危漏洞: CVE-2026-35442 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-06T22:16:22.853",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 11.17.0, aggregate functions (min, max) applied to fields with the conceal special type incorrectly return raw database values instead of the masked placeholder. When combined with groupBy, any authenticated user with read access to the affected collection can extract concealed field values, including static API tokens and two-factor authentication secrets from directus_users. This vulnerability is fixed in 11.17.0.",
-      "refs": "https://github.com/directus/directus/security/advisories/GHSA-38hg-ww64-rrwc",
-      "source": "NVD",
-      "time": "2026-04-07 01:25:05"
-    },
-    {
-      "cve_id": "CVE-2026-35412",
-      "title": "高危漏洞: CVE-2026-35412 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-06T22:16:22.397",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 11.16.1, Directus' TUS resumable upload endpoint (/files/tus) allows any authenticated user with basic file upload permissions to overwrite arbitrary existing files by UUID. The TUS controller performs only collection-level authorization checks, verifying the user has some permission on directus_files, but never validates item-level access to the specific file being replaced. As a result, row-level permission rules (e.g., \"users can only update their own files\") are completely bypassed via the TUS path while being correctly enforced on the standard REST upload path. This vulnerability is fixed in 11.16.1.",
-      "refs": "https://github.com/directus/directus/security/advisories/GHSA-qqmv-5p3g-px89",
-      "source": "NVD",
-      "time": "2026-04-07 01:25:01"
-    },
-    {
-      "cve_id": "CVE-2026-35409",
-      "title": "高危漏洞: CVE-2026-35409 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-06T22:16:21.930",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 11.16.0, a Server-Side Request Forgery (SSRF) protection bypass has been identified and fixed in Directus. The IP address validation mechanism used to block requests to local and private networks could be circumvented using IPv4-Mapped IPv6 address notation. This vulnerability is fixed in 11.16.0.",
-      "refs": "https://github.com/directus/directus/security/advisories/GHSA-wv3h-5fx7-966h",
-      "source": "NVD",
-      "time": "2026-04-07 01:24:54"
-    },
-    {
-      "cve_id": "CVE-2026-35408",
-      "title": "高危漏洞: CVE-2026-35408 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-04-06T22:16:21.557",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 11.17.0, Directus's Single Sign-On (SSO) login pages lacked a Cross-Origin-Opener-Policy (COOP) HTTP response header. Without this header, a malicious cross-origin window that opens the Directus login page retains the ability to access and manipulate the window object of that page. An attacker can exploit this to intercept and redirect the OAuth authorization flow to an attacker-controlled OAuth client, causing the victim to unknowingly grant access to their authentication provider account (e.g. Google, Discord). This vulnerability is fixed in 11.17.0.",
-      "refs": "https://github.com/directus/directus/security/advisories/GHSA-8m32-p958-jg99",
-      "source": "NVD",
-      "time": "2026-04-07 01:24:49"
-    },
-    {
-      "cve_id": "CVE-2026-35395",
-      "title": "高危漏洞: CVE-2026-35395 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-06T21:16:21.450",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WeGIA is a Web manager for charitable institutions. Prior to 3.6.9, WeGIA (Web gerenciador para instituições assistenciais) contains a SQL injection vulnerability in dao/memorando/DespachoDAO.php. The id_memorando parameter is extracted from $_REQUEST without validation and directly interpolated into SQL queries, allowing any authenticated user to execute arbitrary SQL commands against the database. This vulnerability is fixed in 3.6.9.",
-      "refs": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-43jm-pcrq-w7gv",
-      "source": "NVD",
-      "time": "2026-04-07 01:24:45"
-    },
-    {
-      "cve_id": "CVE-2026-35394",
-      "title": "高危漏洞: CVE-2026-35394 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-04-06T21:16:21.300",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:H",
-      "description": "Mobile Next is an MCP server for mobile development and automation. Prior to 0.0.50, the mobile_open_url tool in mobile-mcp passes user-supplied URLs directly to Android's intent system without any scheme validation, allowing execution of arbitrary Android intents, including USSD codes, phone calls, SMS messages, and content provider access. This vulnerability is fixed in 0.0.50.",
-      "refs": "https://github.com/mobile-next/mobile-mcp/security/advisories/GHSA-5qhv-x9j4-c3vm",
-      "source": "NVD",
-      "time": "2026-04-07 01:24:40"
-    },
-    {
-      "cve_id": "CVE-2026-35393",
-      "title": "高危漏洞: CVE-2026-35393 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-06T21:16:21.163",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.3, the POST multipart upload directory not sanitized. This vulnerability is fixed in 2.0.0-beta.3.",
-      "refs": "https://github.com/patrickhener/goshs/security/advisories/GHSA-jg56-wf8x-qrv5",
-      "source": "NVD",
-      "time": "2026-04-07 01:24:36"
     }
   ]
 }
