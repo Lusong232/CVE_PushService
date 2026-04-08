@@ -1,6 +1,118 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-33017",
+      "title": "漏洞仓库: CVE-2026-33017-Exploit",
+      "cvss_score": null,
+      "published_date": "2026-04-08T06:56:46Z",
+      "updated_date": "2026-04-08T06:57:18Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-33017 | Langflow Unauthenticated RCE (CVSS 9.8) | Blind exec, OOB exfil (GET/POST), reverse shell, auto-promote, bulk scanner",
+      "refs": "https://github.com/oscarmine/CVE-2026-33017-Exploit",
+      "source": "GitHub",
+      "cve_overviews": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
+      "time": "2026-04-08 07:07:48"
+    },
+    {
+      "cve_id": "CVE-2026-5726",
+      "title": "高危漏洞: CVE-2026-5726 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-04-08T03:16:07.700",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "ASDA-Soft Stack-based Buffer Overflow Vulnerability",
+      "refs": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00007_ASDA-Soft%20Stack-based%20Buffer%20Overflow%20Vulnerability%20(CVE-2026-5726).pdf",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:39"
+    },
+    {
+      "cve_id": "CVE-2026-3499",
+      "title": "高危漏洞: CVE-2026-3499 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-08T02:16:04.237",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Product Feed PRO for WooCommerce by AdTribes – Product Feeds for WooCommerce plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions 13.4.6 through 13.5.2.1. This is due to missing or incorrect nonce validation on the ajax_migrate_to_custom_post_type, ajax_adt_clear_custom_attributes_product_meta_keys, ajax_update_file_url_to_lower_case, ajax_use_legacy_filters_and_rules, and ajax_fix_duplicate_feed functions. This makes it possible for unauthenticated attackers to trigger feed migration, clear custom-attribute transient caches, rewrite feed file URLs to lowercase, toggle legacy filter and rule settings, and delete duplicated feed posts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3476067/woo-product-feed-pro\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5b645b88-85e0-4e89-bd95-444ab1db6df8?source=cve",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:35"
+    },
+    {
+      "cve_id": "CVE-2026-3296",
+      "title": "高危漏洞: CVE-2026-3296 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-08T02:16:04.067",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Everest Forms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.4.3 via deserialization of untrusted input from form entry metadata. This is due to the html-admin-page-entries-view.php file calling PHP's native unserialize() on stored entry meta values without passing the allowed_classes parameter. This makes it possible for unauthenticated attackers to inject a serialized PHP object payload through any public Everest Forms form field. The payload survives sanitize_text_field() sanitization (serialization control characters are not stripped) and is stored in the wp_evf_entrymeta database table. When an administrator views entries or views an individual entry, the unsafe unserialize() call processes the stored data without class restrictions.",
+      "refs": "https://plugins.trac.wordpress.org/browser/everest-forms/tags/3.4.3/includes/admin/views/html-admin-page-entries-view.php#L133\nhttps://plugins.trac.wordpress.org/browser/everest-forms/tags/3.4.3/includes/evf-core-functions.php#L5594\nhttps://plugins.trac.wordpress.org/browser/everest-forms/trunk/includes/admin/views/html-admin-page-entries-view.php#L133",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:30"
+    },
+    {
+      "cve_id": "CVE-2026-4788",
+      "title": "高危漏洞: CVE-2026-4788 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-04-08T01:16:41.220",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Tivoli Netcool Impact 7.1.0.0 through 7.1.0.37 stores sensitive information in log files that could be read by a local user.",
+      "refs": "https://www.ibm.com/support/pages/node/7268267",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:24"
+    },
+    {
+      "cve_id": "CVE-2026-3357",
+      "title": "高危漏洞: CVE-2026-3357 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-08T01:16:41.057",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Langflow Desktop 1.6.0 through 1.8.2 Langflow could allow an authenticated user to execute arbitrary code on the system, caused by an insecure default setting which permits the deserialization of untrusted data in the FAISS component.",
+      "refs": "https://www.ibm.com/support/pages/node/7268428",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:19"
+    },
+    {
+      "cve_id": "CVE-2026-1346",
+      "title": "高危漏洞: CVE-2026-1346 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-04-08T01:16:40.750",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 could allow a locally authenticated user to escalate their privileges to root due to execution with unnecessary privileges than required.",
+      "refs": "https://www.ibm.com/support/pages/node/7268253",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:14"
+    },
+    {
+      "cve_id": "CVE-2026-1343",
+      "title": "高危漏洞: CVE-2026-1343 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-08T01:16:40.503",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 allows an attacker to contact internal authentication endpoints which are protected by the Reverse Proxy.",
+      "refs": "https://www.ibm.com/support/pages/node/7268253",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:07"
+    },
+    {
+      "cve_id": "CVE-2026-5747",
+      "title": "高危漏洞: CVE-2026-5747 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-08T00:16:05.657",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "An out-of-bounds write issue in the virtio PCI transport in Amazon Firecracker 1.13.0 through 1.14.3 and 1.15.0 on x86_64 and aarch64 might allow a local guest user with root privileges to crash the Firecracker VMM process or potentially execute arbitrary code on the host via modification of virtio queue configuration registers after device activation. Achieving code execution on the host requires additional preconditions, such as the use of a custom guest kernel or specific snapshot configurations.\n\nTo remediate this, users should upgrade to Firecracker 1.14.4 or 1.15.1 and later.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-015-aws/\nhttps://github.com/firecracker-microvm/firecracker/releases/tag/v1.14.4\nhttps://github.com/firecracker-microvm/firecracker/releases/tag/v1.15.1",
+      "source": "NVD",
+      "time": "2026-04-08 07:07:03"
+    },
+    {
+      "cve_id": "CVE-2026-1342",
+      "title": "高危漏洞: CVE-2026-1342 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-04-08T00:16:03.860",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L",
+      "description": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 could allow a locally authenticated user to execute malicious scripts from outside of its control sphere.",
+      "refs": "https://www.ibm.com/support/pages/node/7268253",
+      "source": "NVD",
+      "time": "2026-04-08 07:06:59"
+    },
+    {
       "cve_id": "CVE-2026-27739",
       "title": "漏洞仓库: CVE-2026-27739-POC",
       "cvss_score": null,
@@ -168,120 +280,6 @@
       "refs": "https://github.com/openobserve/openobserve/commit/d1a5d8f65b432e2e82f83231390dec7f107e8d75\nhttps://github.com/openobserve/openobserve/security/advisories/GHSA-gcwf-3p7h-wm79",
       "source": "NVD",
       "time": "2026-04-08 01:24:38"
-    },
-    {
-      "cve_id": "CVE-2026-39356",
-      "title": "高危漏洞: CVE-2026-39356 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-07T20:16:29.610",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Drizzle is a modern TypeScript ORM. Prior to 0.45.2 and 1.0.0-beta.20, Drizzle ORM improperly escaped quoted SQL identifiers in its dialect-specific escapeName() implementations. In affected versions, embedded identifier delimiters were not escaped before the identifier was wrapped in quotes or backticks. As a result, applications that pass attacker-controlled input to APIs that construct SQL identifiers or aliases, such as sql.identifier(), .as(), may allow an attacker to terminate the quoted identifier and inject SQL. This vulnerability is fixed in 0.45.2 and 1.0.0-beta.20.",
-      "refs": "https://github.com/drizzle-team/drizzle-orm/security/advisories/GHSA-gpj5-g38j-94v9",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:34"
-    },
-    {
-      "cve_id": "CVE-2026-32864",
-      "title": "高危漏洞: CVE-2026-32864 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-07T20:16:26.460",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "There is a memory corruption vulnerability due to an out-of-bounds read in mgcore_SH_25_3!aligned_free() in NI LabVIEW.  This vulnerability may result in information disclosure or arbitrary code execution. Successful exploitation requires an attacker to get a user to open a specially crafted VI file. This vulnerability affects NI LabVIEW 2026 Q1 (26.1.0) and prior versions.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/memory-corruption-vulnerabilities-in-ni-labview.html",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:30"
-    },
-    {
-      "cve_id": "CVE-2026-32863",
-      "title": "高危漏洞: CVE-2026-32863 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-07T20:16:26.220",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "There is a memory corruption vulnerability due to an out-of-bounds read in sentry_transaction_context_set_operation() in NI LabVIEW.  This vulnerability may result in information disclosure or arbitrary code execution. Successful exploitation requires an attacker to get a user to open a specially crafted VI file. This vulnerability affects NI LabVIEW 2026 Q1 (26.1.0) and prior versions.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/memory-corruption-vulnerabilities-in-ni-labview.html",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:23"
-    },
-    {
-      "cve_id": "CVE-2026-32862",
-      "title": "高危漏洞: CVE-2026-32862 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-07T20:16:24.883",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "There is a memory corruption vulnerability due to an out-of-bounds write in ResFileFactory::InitResourceMgr() in NI LabVIEW.  This vulnerability may result in information disclosure or arbitrary code execution. Successful exploitation requires an attacker to get a user to open a specially crafted VI file. This vulnerability affects NI LabVIEW 2026 Q1 (26.1.0) and prior versions.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/memory-corruption-vulnerabilities-in-ni-labview.html",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:18"
-    },
-    {
-      "cve_id": "CVE-2026-32861",
-      "title": "高危漏洞: CVE-2026-32861 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-07T20:16:24.363",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "There is a memory corruption vulnerability due to an out-of-bounds write when loading a corrupted LVCLASS file in NI LabVIEW.  This vulnerability may result in information disclosure or arbitrary code execution. Successful exploitation requires an attacker to get a user to open a specially crafted .lvclass file. This vulnerability affects NI LabVIEW 2026 Q1 (26.1.0) and prior versions.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/lv-class-file-parsing-memory-corruption-vulnerability-in-ni-labview.html",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:13"
-    },
-    {
-      "cve_id": "CVE-2026-32860",
-      "title": "高危漏洞: CVE-2026-32860 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-07T20:16:24.040",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "There is a memory corruption vulnerability due to an out-of-bounds write when loading a corrupted LVLIB file in NI LabVIEW.  This vulnerability may result in information disclosure or arbitrary code execution. Successful exploitation requires an attacker to get a user to open a specially crafted .lvlib file. This vulnerability affects NI LabVIEW 2026 Q1 (26.1.0) and prior versions.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/lv-project-library-file-parsing-memory-corruption-vulnerability-in-ni-labview.html",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:09"
-    },
-    {
-      "cve_id": "CVE-2025-24818",
-      "title": "高危漏洞: CVE-2025-24818 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-04-07T16:16:22.813",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Nokia MantaRay NM is vulnerable to an OS command injection vulnerability due to improper neutralization of special elements used in an OS command in Log Search application.",
-      "refs": "https://www.nokia.com/we-are-nokia/security/product-security-advisory/cve-2025-24818/",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:04"
-    },
-    {
-      "cve_id": "CVE-2026-33034",
-      "title": "高危漏洞: CVE-2026-33034 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-07T15:17:39.393",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nASGI requests with a missing or understated `Content-Length` header could\r\nbypass the `DATA_UPLOAD_MAX_MEMORY_SIZE` limit when reading\r\n`HttpRequest.body`, allowing remote attackers to load an unbounded request body into\r\nmemory.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Superior for reporting this issue.",
-      "refs": "https://docs.djangoproject.com/en/dev/releases/security/\nhttps://groups.google.com/g/django-announce\nhttps://www.djangoproject.com/weblog/2026/apr/07/security-releases/",
-      "source": "NVD",
-      "time": "2026-04-08 01:23:58"
-    },
-    {
-      "cve_id": "CVE-2026-2699",
-      "title": "漏洞仓库: CVE-2026-2699",
-      "cvss_score": null,
-      "published_date": "2026-04-07T20:55:23Z",
-      "updated_date": "2026-04-07T20:55:24Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-2699",
-      "refs": "https://github.com/0xBlackash/CVE-2026-2699",
-      "source": "GitHub",
-      "cve_overviews": "Customer Managed ShareFile Storage Zones Controller (SZC) allows an unauthenticated attacker to access restricted configuration pages. This leads to changing system configuration and potential remote code execution.",
-      "time": "2026-04-07 21:38:02"
-    },
-    {
-      "cve_id": "none",
-      "title": "漏洞仓库: CVE-2026-5733",
-      "cvss_score": null,
-      "published_date": "2026-04-07T21:34:13Z",
-      "updated_date": "2026-04-07T21:34:14Z",
-      "vector_string": "N/A",
-      "description": "Improper Restriction of Operations within the Bounds of a Memory Buffer (CWE-119)",
-      "refs": "https://github.com/Lechansky/CVE-2026-5733",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-04-07 21:37:46"
     }
   ]
 }
