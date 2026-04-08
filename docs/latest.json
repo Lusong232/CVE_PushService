@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-27739",
+      "title": "漏洞仓库: CVE-2026-27739-POC",
+      "cvss_score": null,
+      "published_date": "2026-04-08T04:12:23Z",
+      "updated_date": "2026-04-08T04:12:56Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/mr-redoo7/CVE-2026-27739-POC",
+      "source": "GitHub",
+      "cve_overviews": "The Angular SSR is a server-rise rendering tool for Angular applications. Versions prior to 21.2.0-rc.1, 21.1.5, 20.3.17, and 19.2.21 have a Server-Side Request Forgery (SSRF) vulnerability in the Angular SSR request handling pipeline. The vulnerability exists because Angular’s internal URL reconstruction logic directly trusts and consumes user-controlled HTTP headers specifically the Host and `X-Forwarded-*` family to determine the application's base origin without any validation of the destination domain. Specifically, the framework didn't have checks for the host domain, path and character sanitization, and port validation. This vulnerability manifests in two primary ways: implicit relative URL resolution and explicit manual construction. When successfully exploited, this vulnerability allows for arbitrary internal request steering. This can lead to credential exfiltration, internal network probing, and a confidentiality breach. In order to be vulnerable, the victim application must use Angular SSR (Server-Side Rendering), the application must perform `HttpClient` requests using relative URLs OR manually construct URLs using the unvalidated `Host` / `X-Forwarded-*` headers using the `REQUEST` object, the application server must be reachable by an attacker who can influence these headers without strict validation from a front-facing proxy, and the infrastructure (Cloud, CDN, or Load Balancer) must not sanitize or validate incoming headers. Versions 21.2.0-rc.1, 21.1.5, 20.3.17, and 19.2.21 contain a patch. Some workarounds are available. Avoid using `req.headers` for URL construction. Instead, use trusted variables for base API paths. Those who cannot upgrade immediately should implement a middleware in their `server.ts` to enforce numeric ports and validated hostnames.",
+      "time": "2026-04-08 05:05:13"
+    },
+    {
       "cve_id": "CVE-2026-33017",
       "title": "漏洞仓库: CVE-2026-33017-Langflow-POC",
       "cvss_score": null,
@@ -269,17 +282,6 @@
       "source": "GitHub",
       "cve_overviews": "",
       "time": "2026-04-07 21:37:46"
-    },
-    {
-      "cve_id": "CVE-2026-5736",
-      "title": "高危漏洞: CVE-2026-5736 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-07T19:16:48.137",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in PowerJob 5.1.0/5.1.1/5.1.2. Impacted is an unknown function of the file powerjob-server/powerjob-server-starter/src/main/java/tech/powerjob/server/web/controller/InstanceController.java of the component detailPlus Endpoint. The manipulation of the argument customQuery leads to sql injection. Remote exploitation of the attack is possible. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/PowerJob/PowerJob/\nhttps://github.com/PowerJob/PowerJob/issues/1167\nhttps://github.com/PowerJob/PowerJob/pull/1166",
-      "source": "NVD",
-      "time": "2026-04-07 21:37:40"
     }
   ]
 }
