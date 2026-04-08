@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-0740",
+      "cvss_score": null,
+      "published_date": "2026-04-08T01:20:50Z",
+      "updated_date": "2026-04-08T15:27:08Z",
+      "vector_string": "N/A",
+      "description": "POC ",
+      "refs": "https://github.com/xShadow-Here/CVE-2026-0740",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-08 16:10:09"
+    },
+    {
+      "cve_id": "CVE-2026-39363",
+      "title": "漏洞仓库: CVE-2026-39363",
+      "cvss_score": null,
+      "published_date": "2026-04-08T15:31:49Z",
+      "updated_date": "2026-04-08T15:35:29Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-39363 AI  analysis",
+      "refs": "https://github.com/Firebasky/CVE-2026-39363",
+      "source": "GitHub",
+      "cve_overviews": "Vite is a frontend tooling framework for JavaScript. From 6.0.0 to before 6.4.2, 7.3.2, and 8.0.5, if it is possible to connect to the Vite dev server’s WebSocket without an Origin header, an attacker can invoke fetchModule via the custom WebSocket event vite:invoke and combine file://... with ?raw (or ?inline) to retrieve the contents of arbitrary files on the server as a JavaScript string (e.g., export default \"...\"). The access control enforced in the HTTP request path (such as server.fs.allow) is not applied to this WebSocket-based execution path. This vulnerability is fixed in 6.4.2, 7.3.2, and 8.0.5.",
+      "time": "2026-04-08 16:10:01"
+    },
+    {
       "cve_id": "CVE-2026-23980",
       "title": "漏洞仓库: CVE-2026-23980-Exploit",
       "cvss_score": null,
@@ -266,28 +292,6 @@
       "refs": "https://github.com/emmett-framework/emmett/security/advisories/GHSA-pr46-2v3c-5356",
       "source": "NVD",
       "time": "2026-04-08 01:25:37"
-    },
-    {
-      "cve_id": "CVE-2026-39846",
-      "title": "高危漏洞: CVE-2026-39846 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-04-07T22:16:23.597",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "SiYuan is a personal knowledge management system. Prior to 3.6.4, a malicious note synced to another user can trigger remote code execution in the SiYuan Electron desktop client. The root cause is that table caption content is stored without safe escaping and later unescaped into rendered HTML, creating a stored XSS sink. Because the desktop renderer runs with nodeIntegration enabled and contextIsolation disabled, attacker-controlled JavaScript executes with access to Node.js APIs. In practice, an attacker can import a crafted note into a synced workspace, wait for the victim to sync, and achieve code execution when the victim opens the note. This vulnerability is fixed in 3.6.4.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-phhp-9rm9-6gr2",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:30"
-    },
-    {
-      "cve_id": "CVE-2026-39397",
-      "title": "高危漏洞: CVE-2026-39397 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-04-07T21:17:18.160",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "@delmaredigital/payload-puck is a PayloadCMS plugin for integrating Puck visual page builder. Prior to 0.6.23, all /api/puck/* CRUD endpoint handlers registered by createPuckPlugin() called Payload's local API with the default overrideAccess: true, bypassing all collection-level access control. The access option passed to createPuckPlugin() and any access rules defined on Puck-registered collections were silently ignored on these endpoints. This vulnerability is fixed in 0.6.23.",
-      "refs": "https://github.com/delmaredigital/payload-puck/commit/9148201c6bbfa140d44546438027a2f8a70f79a4\nhttps://github.com/delmaredigital/payload-puck/issues/7\nhttps://github.com/delmaredigital/payload-puck/security/advisories/GHSA-65w6-pf7x-5g85",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:25"
     }
   ]
 }
