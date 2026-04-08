@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-34197",
+      "title": "漏洞仓库: CVE-2026-34197",
+      "cvss_score": null,
+      "published_date": "2026-04-08T07:28:49Z",
+      "updated_date": "2026-04-08T07:55:31Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-34197",
+      "refs": "https://github.com/0xBlackash/CVE-2026-34197",
+      "source": "GitHub",
+      "cve_overviews": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String). \n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext. \nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: .\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue.",
+      "time": "2026-04-08 09:59:52"
+    },
+    {
+      "cve_id": "CVE-2026-34197",
+      "title": "漏洞仓库: CVE-2026-34197",
+      "cvss_score": null,
+      "published_date": "2026-04-08T09:18:33Z",
+      "updated_date": "2026-04-08T09:26:09Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-34197 activemq PoC",
+      "refs": "https://github.com/dinosn/CVE-2026-34197",
+      "source": "GitHub",
+      "cve_overviews": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String). \n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext. \nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: .\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue.",
+      "time": "2026-04-08 09:59:38"
+    },
+    {
       "cve_id": "CVE-2026-33017",
       "title": "漏洞仓库: CVE-2026-33017-Exploit",
       "cvss_score": null,
@@ -258,28 +284,6 @@
       "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-cmcr-q4jf-p6q9",
       "source": "NVD",
       "time": "2026-04-08 01:24:47"
-    },
-    {
-      "cve_id": "CVE-2026-39369",
-      "title": "高危漏洞: CVE-2026-39369 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-04-07T20:16:31.320",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
-      "description": "WWBN AVideo is an open source video platform. In versions 26.0 and prior, objects/aVideoEncoderReceiveImage.json.php allowed an authenticated uploader to fetch attacker-controlled same-origin /videos/... URLs, bypass traversal scrubbing, and expose server-local files through the GIF poster storage path. The vulnerable GIF branch could be abused to read local files such as /etc/passwd or application source files and republish those bytes through a normal public GIF media URL.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-f4f9-627c-jh33",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:43"
-    },
-    {
-      "cve_id": "CVE-2026-39361",
-      "title": "高危漏洞: CVE-2026-39361 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-07T20:16:29.837",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "OpenObserve is a cloud-native observability platform. In 0.70.3 and earlier, the validate_enrichment_url function in src/handler/http/request/enrichment_table/mod.rs fails to block IPv6 addresses because Rust's url crate returns them with surrounding brackets (e.g. \"[::1]\" not \"::1\"). An authenticated attacker can reach internal services blocked from external access. On cloud deployments this enables retrieval of IAM credentials via AWS IMDSv1 (169.254.169.254), GCP metadata, or Azure IMDS. On self-hosted deployments it allows probing internal network services.",
-      "refs": "https://github.com/openobserve/openobserve/commit/d1a5d8f65b432e2e82f83231390dec7f107e8d75\nhttps://github.com/openobserve/openobserve/security/advisories/GHSA-gcwf-3p7h-wm79",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:38"
     }
   ]
 }
