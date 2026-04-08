@@ -1,6 +1,98 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-23980",
+      "title": "漏洞仓库: CVE-2026-23980-Exploit",
+      "cvss_score": null,
+      "published_date": "2026-04-08T10:46:10Z",
+      "updated_date": "2026-04-08T10:46:35Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-23980 | Apache Superset Authenticated SQLi (CVSS 6.5) | sqlmap-style enumeration, anonymous access, PostgreSQL + SQLite, bulk scanner",
+      "refs": "https://github.com/oscarmine/CVE-2026-23980-Exploit",
+      "source": "GitHub",
+      "cve_overviews": "Improper Neutralization of Special Elements used in a SQL Command ('SQL Injection') vulnerability in Apache Superset allows an authenticated user with read access to conduct error-based SQL injection via the sqlExpression or where parameters.\n\nThis issue affects Apache Superset: before 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.0, which fixes the issue.",
+      "time": "2026-04-08 12:59:28"
+    },
+    {
+      "cve_id": "CVE-2026-3288",
+      "title": "漏洞仓库: CVE-2026-3288-lab",
+      "cvss_score": null,
+      "published_date": "2026-04-08T11:26:02Z",
+      "updated_date": "2026-04-08T12:47:38Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/bvabhishek/CVE-2026-3288-lab",
+      "source": "GitHub",
+      "cve_overviews": "A security issue was discovered in ingress-nginx where the `nginx.ingress.kubernetes.io/rewrite-target` Ingress annotation can be used to inject configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.)",
+      "time": "2026-04-08 12:59:20"
+    },
+    {
+      "cve_id": "CVE-2026-33088",
+      "title": "高危漏洞: CVE-2026-33088 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-08T09:16:21.213",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Movable Type provided by Six Apart Ltd. contains an SQL Injection vulnerability which may allow an attacker to execute an arbitrary SQL statement.",
+      "refs": "https://jvn.jp/en/jp/JVN66473735/\nhttps://movabletype.org/news/2026/04/mt-907-released.html\nhttps://www.sixapart.jp/movabletype/news/2026/04/08-1100.html",
+      "source": "NVD",
+      "time": "2026-04-08 12:59:11"
+    },
+    {
+      "cve_id": "CVE-2026-25776",
+      "title": "高危漏洞: CVE-2026-25776 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-08T09:16:20.360",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability which may allow an attacker to execute arbitrary Perl script.",
+      "refs": "https://jvn.jp/en/jp/JVN66473735/\nhttps://movabletype.org/news/2026/04/mt-907-released.html\nhttps://www.sixapart.jp/movabletype/news/2026/04/08-1100.html",
+      "source": "NVD",
+      "time": "2026-04-08 12:59:06"
+    },
+    {
+      "cve_id": "CVE-2026-4808",
+      "title": "高危漏洞: CVE-2026-4808 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-08T07:16:22.517",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Gerador de Certificados – DevApps plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the moveUploadedFile() function in all versions up to, and including, 1.3.6. This makes it possible for authenticated attackers, with Administrator-level access and above, to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/gerador-de-certificados-devapps/trunk/admin/class-devapps-certificate-generator-admin.php#L346\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/870bf5fe-00c6-48fe-b9e6-e8233c689b71?source=cve",
+      "source": "NVD",
+      "time": "2026-04-08 12:59:01"
+    },
+    {
+      "cve_id": "CVE-2026-3535",
+      "title": "高危漏洞: CVE-2026-3535 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-08T07:16:21.417",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The DSGVO Google Web Fonts GDPR plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the `DSGVOGWPdownloadGoogleFonts()` function in all versions up to, and including, 1.1. The function is exposed via a `wp_ajax_nopriv_` hook, requiring no authentication. It fetches a user-supplied URL as a CSS file, extracts URLs from its content, and downloads those files to a publicly accessible directory without validating the file type. This makes it possible for unauthenticated attackers to upload arbitrary files including PHP webshells, leading to remote code execution. The exploit requires the site to use one of a handful of specific themes (twentyfifteen, twentyseventeen, twentysixteen, storefront, salient, or shapely).",
+      "refs": "https://plugins.trac.wordpress.org/browser/dsgvo-google-web-fonts-gdpr/tags/1.1/dsgvo-google-web-fonts-gdpr.php#L159\nhttps://plugins.trac.wordpress.org/browser/dsgvo-google-web-fonts-gdpr/tags/1.1/dsgvo-google-web-fonts-gdpr.php#L46\nhttps://plugins.trac.wordpress.org/browser/dsgvo-google-web-fonts-gdpr/trunk/dsgvo-google-web-fonts-gdpr.php#L159",
+      "source": "NVD",
+      "time": "2026-04-08 12:58:56"
+    },
+    {
+      "cve_id": "CVE-2026-24913",
+      "title": "高危漏洞: CVE-2026-24913 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-08T06:16:27.073",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SQL Injection vulnerability exists in MATCHA INVOICE 2.6.6 and earlier. If this vulnerability is exploited, information stored in the database may be obtained or altered by a user who can log in to the product.",
+      "refs": "https://jvn.jp/en/jp/JVN33581068/\nhttps://oss.icz.co.jp/news/?p=1386",
+      "source": "NVD",
+      "time": "2026-04-08 12:58:52"
+    },
+    {
+      "cve_id": "CVE-2026-4003",
+      "title": "高危漏洞: CVE-2026-4003 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-08T05:16:06.347",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Users manager – PN plugin for WordPress is vulnerable to Privilege Escalation via Arbitrary User Meta Update in all versions up to and including 1.1.15. This is due to a flawed authorization logic check in the userspn_ajax_nopriv_server() function within the 'userspn_form_save' case. The conditional only blocks unauthenticated users when the user_id is empty, but when a non-empty user_id is supplied, execution bypasses this check entirely and proceeds to update arbitrary user meta via update_user_meta() without any authentication or authorization verification. Additionally, the nonce required for this AJAX endpoint ('userspn-nonce') is exposed to all visitors via wp_localize_script on the public wp_enqueue_scripts hook, rendering the nonce check ineffective as a security control. This makes it possible for unauthenticated attackers to update arbitrary user metadata for any user account, including the userspn_secret_token field.",
+      "refs": "https://plugins.trac.wordpress.org/browser/userspn/tags/1.0.31/includes/class-userspn-ajax-nopriv.php#L186\nhttps://plugins.trac.wordpress.org/browser/userspn/tags/1.0.31/includes/class-userspn-ajax-nopriv.php#L190\nhttps://plugins.trac.wordpress.org/browser/userspn/tags/1.0.31/includes/class-userspn-ajax-nopriv.php#L233",
+      "source": "NVD",
+      "time": "2026-04-08 12:58:47"
+    },
+    {
       "cve_id": "CVE-2026-34197",
       "title": "漏洞仓库: CVE-2026-34197",
       "cvss_score": null,
@@ -196,94 +288,6 @@
       "refs": "https://github.com/delmaredigital/payload-puck/commit/9148201c6bbfa140d44546438027a2f8a70f79a4\nhttps://github.com/delmaredigital/payload-puck/issues/7\nhttps://github.com/delmaredigital/payload-puck/security/advisories/GHSA-65w6-pf7x-5g85",
       "source": "NVD",
       "time": "2026-04-08 01:25:25"
-    },
-    {
-      "cve_id": "CVE-2026-35533",
-      "title": "高危漏洞: CVE-2026-35533 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-07T21:17:17.870",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "mise manages dev tools like node, python, cmake, and terraform. From 2026.2.18 through 2026.4.5, mise loads trust-control settings from a local project .mise.toml before the trust check runs. An attacker who can place a malicious .mise.toml in a repository can make that same file appear trusted and then reach dangerous directives such as [env] _.source, templates, hooks, or tasks.",
-      "refs": "https://github.com/jdx/mise/security/advisories/GHSA-436v-8fw5-4mj8",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:21"
-    },
-    {
-      "cve_id": "CVE-2026-34045",
-      "title": "高危漏洞: CVE-2026-34045 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-07T21:17:17.557",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
-      "description": "Podman Desktop is a graphical tool for developing on containers and Kubernetes. Prior to 1.26.2, an unauthenticated HTTP server exposed by Podman Desktop allows any network attacker to remotely trigger denial-of-service conditions and extract sensitive information. By abusing missing connection limits and timeouts, an attacker can exhaust file descriptors and kernel memory, leading to application crash or full host freeze. Additionally, verbose error responses disclose internal paths and system details (including usernames on Windows), aiding further exploitation. The issue requires no authentication or user interaction and is exploitable over the network. This vulnerability is fixed in 1.26.2.",
-      "refs": "https://github.com/podman-desktop/podman-desktop/security/advisories/GHSA-2q88-39rh-gxvv",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:16"
-    },
-    {
-      "cve_id": "CVE-2026-29181",
-      "title": "高危漏洞: CVE-2026-29181 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-07T21:17:16.003",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.36.0 to 1.40.0, multi-value baggage: header extraction parses each header field-value independently and aggregates members across values. This allows an attacker to amplify cpu and allocations by sending many baggage: header lines, even when each individual value is within the 8192-byte per-value parse limit. This vulnerability is fixed in 1.41.0.",
-      "refs": "https://github.com/open-telemetry/opentelemetry-go/security/advisories/GHSA-mh2q-q3fh-2475",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:12"
-    },
-    {
-      "cve_id": "CVE-2026-5741",
-      "title": "高危漏洞: CVE-2026-5741 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-07T20:16:34.873",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in suvarchal docker-mcp-server up to 0.1.0. The impacted element is the function stop_container/remove_container/pull_image of the file src/index.ts of the component HTTP Interface. This manipulation causes os command injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/BruceJqs/public_exp/issues/1\nhttps://github.com/suvarchal/docker-mcp/issues/3\nhttps://vuldb.com/submit/786948",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:07"
-    },
-    {
-      "cve_id": "CVE-2026-5739",
-      "title": "高危漏洞: CVE-2026-5739 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-07T20:16:34.647",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in PowerJob 5.1.0/5.1.1/5.1.2. The affected element is the function GroovyEvaluator.evaluate of the file /openApi/addWorkflowNode of the component OpenAPI Endpoint. The manipulation of the argument nodeParams results in code injection. The attack can be executed remotely. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/PowerJob/PowerJob/\nhttps://github.com/PowerJob/PowerJob/issues/1168\nhttps://vuldb.com/submit/786936",
-      "source": "NVD",
-      "time": "2026-04-08 01:25:03"
-    },
-    {
-      "cve_id": "CVE-2026-39376",
-      "title": "高危漏洞: CVE-2026-39376 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-07T20:16:32.450",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FastFeedParser is a high performance RSS, Atom and RDF parser. Prior to 0.5.10, when parse() fetches a URL that returns an HTML page containing a <meta http-equiv=\"refresh\"> tag, it recursively calls itself with the redirect URL — with no depth limit, no visited-URL deduplication, and no redirect count cap. An attacker-controlled server that returns an infinite chain of HTML meta-refresh responses causes unbounded recursion, exhausting the Python call stack and crashing the process. This vulnerability can also be chained with the companion SSRF issue to reach internal network targets after bypassing the initial URL check. This vulnerability is fixed in 0.5.10.",
-      "refs": "https://github.com/kagisearch/fastfeedparser/security/advisories/GHSA-4gx2-pc4f-wq37",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:56"
-    },
-    {
-      "cve_id": "CVE-2026-39371",
-      "title": "高危漏洞: CVE-2026-39371 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-07T20:16:31.980",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "RedwoodSDK is a server-first React framework. From 1.0.0-beta.50 to 1.0.5, erver functions exported from \"use server\" files could be invoked via GET requests, bypassing their intended HTTP method. In cookie-authenticated applications, this allowed cross-site GET navigations to trigger state-changing functions, because browsers send SameSite=Lax cookies on top-level GET requests. This affected all server functions -- both serverAction() handlers and bare exported functions in \"use server\" files. This vulnerability is fixed in 1.0.6.",
-      "refs": "https://github.com/redwoodjs/sdk/security/advisories/GHSA-x8rx-789c-2pxq",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:52"
-    },
-    {
-      "cve_id": "CVE-2026-39370",
-      "title": "高危漏洞: CVE-2026-39370 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-07T20:16:31.520",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "WWBN AVideo is an open source video platform. In versions 26.0 and prior, objects/aVideoEncoder.json.php still allows attacker-controlled downloadURL values with common media or archive extensions such as .mp4, .mp3, .zip, .jpg, .png, .gif, and .webm to bypass SSRF validation. The server then fetches the response and stores it as media content. This allows an authenticated uploader to turn the upload-by-URL flow into a reliable SSRF response-exfiltration primitive. The vulnerability is caused by an incomplete fix for CVE-2026-27732.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-cmcr-q4jf-p6q9",
-      "source": "NVD",
-      "time": "2026-04-08 01:24:47"
     }
   ]
 }
