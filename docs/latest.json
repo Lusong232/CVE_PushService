@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5837",
+      "title": "高危漏洞: CVE-2026-5837 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T04:17:23.597",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in PHPGurukul News Portal Project 4.1. This affects an unknown part of the file /news-details.php. The manipulation of the argument Comment results in sql injection. The attack can be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/f1rstb100d/CVE/issues/25\nhttps://phpgurukul.com/\nhttps://vuldb.com/submit/789775",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:38"
+    },
+    {
+      "cve_id": "CVE-2026-5832",
+      "title": "高危漏洞: CVE-2026-5832 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T02:16:18.327",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in atototo api-lab-mcp up to 0.2.1. This affects the function analyze_api_spec/generate_test_scenarios/test_http_endpoint of the file src/mcp/http-server.ts of the component HTTP Interface. This manipulation of the argument source/url causes server-side request forgery. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/BruceJqs/public_exp/issues/6\nhttps://github.com/atototo/api-lab-mcp/\nhttps://github.com/atototo/api-lab-mcp/issues/4",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:34"
+    },
+    {
+      "cve_id": "CVE-2026-5830",
+      "title": "高危漏洞: CVE-2026-5830 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-09T02:16:17.920",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Tenda AC15 15.03.05.18. This affects the function websGetVar of the file /goform/SysToolChangePwd. Such manipulation of the argument oldPwd/newPwd/cfmPwd leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used.",
+      "refs": "https://files.catbox.moe/xrk8jb.zip\nhttps://vuldb.com/submit/789178\nhttps://vuldb.com/vuln/356277",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:29"
+    },
+    {
+      "cve_id": "CVE-2026-5829",
+      "title": "高危漏洞: CVE-2026-5829 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T02:16:17.727",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in code-projects Simple IT Discussion Forum 1.0. The impacted element is an unknown function of the file /pages/content.php. This manipulation of the argument post_id causes sql injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lonelyuan/vunls/issues/6\nhttps://vuldb.com/submit/788338",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:25"
+    },
+    {
+      "cve_id": "CVE-2026-5828",
+      "title": "高危漏洞: CVE-2026-5828 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T02:16:17.533",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in code-projects Simple IT Discussion Forum 1.0. The affected element is an unknown function of the file /functions/addcomment.php. The manipulation of the argument postid results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lonelyuan/vunls/issues/7\nhttps://vuldb.com/submit/788337",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:20"
+    },
+    {
+      "cve_id": "CVE-2026-4326",
+      "title": "高危漏洞: CVE-2026-4326 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-09T02:16:16.530",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Vertex Addons for Elementor plugin for WordPress is vulnerable to Missing Authorization in all versions up to and including 1.6.4. This is due to improper authorization enforcement in the activate_required_plugins() function. Specifically, the current_user_can('install_plugins') capability check does not terminate execution when it fails — it only sets an error message variable while allowing the plugin installation and activation code to execute. The error response is only sent after the installation and activation have already completed. This makes it possible for authenticated attackers, with Subscriber-level access and above, to install and activate arbitrary plugins from the WordPress.",
+      "refs": "https://plugins.trac.wordpress.org/browser/addons-for-elementor-builder/tags/1.6.4/app/Ajax.php#L229\nhttps://plugins.trac.wordpress.org/browser/addons-for-elementor-builder/tags/1.6.4/app/Ajax.php#L232\nhttps://plugins.trac.wordpress.org/browser/addons-for-elementor-builder/tags/1.6.4/app/Ajax.php#L264",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:13"
+    },
+    {
+      "cve_id": "CVE-2026-5827",
+      "title": "高危漏洞: CVE-2026-5827 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T01:16:50.380",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in code-projects Simple IT Discussion Forum 1.0. Impacted is an unknown function of the file /question-function.php. The manipulation of the argument content leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lonelyuan/vunls/issues/8\nhttps://vuldb.com/submit/788336",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:07"
+    },
+    {
+      "cve_id": "CVE-2026-5824",
+      "title": "高危漏洞: CVE-2026-5824 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T00:16:21.280",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Simple Laundry System 1.0. This affects an unknown part of the file /userchecklogin.php. Such manipulation of the argument userid leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lonelyuan/vunls/issues/1\nhttps://vuldb.com/submit/788302",
+      "source": "NVD",
+      "time": "2026-04-09 07:11:02"
+    },
+    {
+      "cve_id": "CVE-2026-5815",
+      "title": "高危漏洞: CVE-2026-5815 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-09T00:16:20.863",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in D-Link DIR-645 1.01/1.02/1.03. Impacted is the function hedwigcgi_main of the file /cgi-bin/hedwig.cgi. The manipulation results in stack-based buffer overflow. The attack can be launched remotely. The exploit is now public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/Pers1st0/CVE/blob/main/stack-based%20buffer%20overflow%20vulnerability%20exists%20in%20the%20hedwig.cgi%20of%20D-Link%20DIR-645.md\nhttps://github.com/Pers1st0/CVE/blob/main/stack-based%20buffer%20overflow%20vulnerability%20exists%20in%20the%20hedwig.cgi%20of%20D-Link%20DIR-645.md#poc\nhttps://vuldb.com/submit/788298",
+      "source": "NVD",
+      "time": "2026-04-09 07:10:57"
+    },
+    {
+      "cve_id": "CVE-2026-5814",
+      "title": "高危漏洞: CVE-2026-5814 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T00:16:19.827",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in PHPGurukul Online Course Registration 3.1. This issue affects some unknown processing of the file /admin/check_availability.php. The manipulation of the argument regno leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/f1rstb100d/CVE/issues/21\nhttps://phpgurukul.com/\nhttps://vuldb.com/submit/787698",
+      "source": "NVD",
+      "time": "2026-04-09 07:10:50"
+    },
+    {
       "cve_id": "CVE-2026-4747",
       "title": "漏洞仓库: CVE-2026-4747",
       "cvss_score": null,
@@ -174,116 +284,6 @@
       "refs": "https://github.com/khyrenz/parseusbs/commit/99f05996494e7e41ea0c7e13145ba20eb793e46b\nhttps://github.com/khyrenz/parseusbs/pull/10\nhttps://mobasi.ai/sentinel",
       "source": "NVD",
       "time": "2026-04-09 01:16:25"
-    },
-    {
-      "cve_id": "CVE-2026-40027",
-      "title": "高危漏洞: CVE-2026-40027 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-08T22:16:22.957",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
-      "description": "ALEAPP (Android Logs Events And Protobuf Parser) through 3.4.0 contains a path traversal vulnerability in the NQ_Vault.py artifact parser that uses attacker-controlled file_name_from values from a database directly as the output filename, allowing arbitrary file writes outside the report output directory. An attacker can embed a path traversal payload such as ../../../outside_written.bin in the database to write files to arbitrary locations, potentially achieving code execution by overwriting executable files or configuration.",
-      "refs": "https://github.com/abrignoni/ALEAPP/commit/0cafd8fe0027663420eb3d0fa821b2d1a713880d\nhttps://github.com/abrignoni/aleapp/pull/669\nhttps://mobasi.ai/sentinel",
-      "source": "NVD",
-      "time": "2026-04-09 01:16:18"
-    },
-    {
-      "cve_id": "CVE-2026-40024",
-      "title": "高危漏洞: CVE-2026-40024 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-08T22:16:22.430",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "The Sleuth Kit through 4.14.0 contains a path traversal vulnerability in tsk_recover that allows an attacker to write files to arbitrary locations outside the intended recovery directory via crafted filenames or directory paths with path traversal sequences in a filesystem image. An attacker can craft a malicious filesystem image with embedded /../ sequences in filenames that, when processed by tsk_recover, writes files outside the output directory, potentially achieving code execution by overwriting shell configuration or cron entries.",
-      "refs": "https://github.com/sleuthkit/sleuthkit/commit/a3f96b3bc36a8bb1a00c297f77110d4a6e7dd31b\nhttps://mobasi.ai/sentinel\nhttps://www.vulncheck.com/advisories/sleuth-kit-tsk-recover-path-traversal",
-      "source": "NVD",
-      "time": "2026-04-09 01:16:14"
-    },
-    {
-      "cve_id": "CVE-2026-5805",
-      "title": "高危漏洞: CVE-2026-5805 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-08T21:17:02.200",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in code-projects Easy Blog Site up to 1.0. The impacted element is an unknown function of the file /users/contact_us.php. Executing a manipulation of the argument Name can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://code-projects.org/\nhttps://github.com/ahmadmarz10-hub/CVEsMarz/blob/main/SQL%20Injection%20in%20Easy%20Blog%20Site%20PHP%20name%20Parameter.md\nhttps://vuldb.com/submit/787031",
-      "source": "NVD",
-      "time": "2026-04-09 01:16:10"
-    },
-    {
-      "cve_id": "CVE-2026-5436",
-      "title": "高危漏洞: CVE-2026-5436 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-08T21:17:01.690",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The MW WP Form plugin for WordPress is vulnerable to Arbitrary File Move/Read in all versions up to and including 5.1.1. This is due to insufficient validation of the $name parameter (upload field key) passed to the generate_user_file_dirpath() function, which uses WordPress's path_join() — a function that returns absolute paths unchanged, discarding the intended base directory. The attacker-controlled key is injected via the mwf_upload_files[] POST parameter, which is loaded into the plugin's Data model via _set_request_valiables(). During form processing, regenerate_upload_file_keys() iterates over these keys and calls generate_user_filepath() with the attacker-supplied key as the $name argument — the key survives validation because the targeted file (e.g., wp-config.php) genuinely exists at the absolute path. The _get_attachments() method then re-reads the same surviving keys and passes the resolved file path to move_temp_file_to_upload_dir(), which calls rename() to move the file into the uploads folder. This makes it possible for unauthenticated attackers to move arbitrary files on the server, which can easily lead to remote code execution when the right file is moved (such as wp-config.php). The vulnerability is only exploitable if a file upload field is added to the form and the “Saving inquiry data in database” option is enabled.",
-      "refs": "https://github.com/web-soudan/mw-wp-form/commit/f872ab18ca670f5867b2241745daa30cd0fab861\nhttps://plugins.trac.wordpress.org/browser/mw-wp-form/tags/5.1.1/classes/models/class.data.php#L591\nhttps://plugins.trac.wordpress.org/browser/mw-wp-form/tags/5.1.1/classes/models/class.directory.php#L138",
-      "source": "NVD",
-      "time": "2026-04-09 01:16:05"
-    },
-    {
-      "cve_id": "CVE-2026-39891",
-      "title": "高危漏洞: CVE-2026-39891 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T21:17:01.403",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the create_agent_centric_tools() function returns tools (like acp_create_file) that process file content using template rendering. When user input from agent.start() is passed directly into these tools without escaping, template expressions in the input are executed rather than treated as literal text. This vulnerability is fixed in 4.5.115.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-hwg5-x759-7wjg",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:58"
-    },
-    {
-      "cve_id": "CVE-2026-39890",
-      "title": "高危漏洞: CVE-2026-39890 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-08T21:17:01.267",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.loadAgentFromFile method uses the js-yaml library to parse YAML files without disabling dangerous tags (such as !!js/function and !!js/undefined). This allows an attacker to craft a malicious YAML file that, when parsed, executes arbitrary JavaScript code. An attacker can exploit this vulnerability by uploading a malicious agent definition file via the API endpoint, leading to remote code execution (RCE) on the server. This vulnerability is fixed in 4.5.115.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-32vr-5gcf-3pw2",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:53"
-    },
-    {
-      "cve_id": "CVE-2026-39889",
-      "title": "高危漏洞: CVE-2026-39889 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-08T21:17:01.130",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the A2U (Agent-to-User) event stream server in PraisonAI exposes all agent activity without authentication. The create_a2u_routes() function registers the following endpoints with NO authentication checks: /a2u/info, /a2u/subscribe, /a2u/events/{stream_name}, /a2u/events/sub/{id}, and /a2u/health. This vulnerability is fixed in 4.5.115.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-f292-66h9-fpmf",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:49"
-    },
-    {
-      "cve_id": "CVE-2026-39888",
-      "title": "高危漏洞: CVE-2026-39888 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-04-08T21:17:00.990",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in praisonaiagents.tools.python_tools defaults to sandbox_mode=\"sandbox\", which runs user code in a subprocess wrapped with a restricted __builtins__ dict and an AST-based blocklist. The AST blocklist embedded inside the subprocess wrapper (blocked_attrs of python_tools.py) contains only 11 attribute names — a strict subset of the 30+ names blocked in the direct-execution path. The four attributes that form a frame-traversal chain out of the sandbox are all absent from the subprocess list (__traceback__, tb_frame, f_back, and f_builtins). Chaining these attributes through a caught exception exposes the real Python builtins dict of the subprocess wrapper frame, from which exec can be retrieved and called under a non-blocked variable name — bypassing every remaining security layer. This vulnerability is fixed in 1.5.115.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qf73-2hrx-xprp",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:44"
-    },
-    {
-      "cve_id": "CVE-2026-39885",
-      "title": "高危漏洞: CVE-2026-39885 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-08T21:17:00.833",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "FrontMCP is a TypeScript-first framework for the Model Context Protocol (MCP). Prior to 2.3.0, the mcp-from-openapi library uses @apidevtools/json-schema-ref-parser to dereference $ref pointers in OpenAPI specifications without configuring any URL restrictions or custom resolvers. A malicious OpenAPI specification containing $ref values pointing to internal network addresses, cloud metadata endpoints, or local files will cause the library to fetch those resources during the initialize() call. This enables Server-Side Request Forgery (SSRF) and local file read attacks when processing untrusted OpenAPI specifications. This vulnerability is fixed in 2.3.0.",
-      "refs": "https://github.com/agentfront/frontmcp/releases/tag/v1.0.4\nhttps://github.com/agentfront/frontmcp/security/advisories/GHSA-v6ph-xcq9-qxxj",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:40"
-    },
-    {
-      "cve_id": "CVE-2026-39860",
-      "title": "高危漏洞: CVE-2026-39860 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-04-08T21:17:00.157",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Nix is a package manager for Linux and other Unix systems. A bug in the fix for CVE-2024-27297 allowed for arbitrary overwrites of files writable by the Nix process orchestrating the builds (typically the Nix daemon running as root in multi-user installations) by following symlinks during fixed-output derivation output registration. This affects sandboxed Linux builds - sandboxed macOS builds are unaffected. The location of the temporary output used for the output copy was located inside the build chroot. A symlink, pointing to an arbitrary location in the filesystem, could be created by the derivation builder at that path. During output registration, the Nix process (running in the host mount namespace) would follow that symlink and overwrite the destination with the derivation's output contents. In multi-user installations, this allows all users able to submit builds to the Nix daemon (allowed-users - defaulting to all users) to gain root privileges by modifying sensitive files. This vulnerability is fixed in 2.34.5, 2.33.4, 2.32.7, 2.31.4, 2.30.4, 2.29.3, and 2.28.6.",
-      "refs": "https://github.com/NixOS/nix/commit/244f3eee0bbc7f11e9b383a15ed7368e2c4becc9\nhttps://github.com/NixOS/nix/commit/4bc5a3510fa3735798f9ed3a2a30a3ea7b32343a\nhttps://github.com/NixOS/nix/commit/7794354a982449927ee7401cdeb573ddd16c4688",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:35"
     }
   ]
 }
