@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-34724",
+      "title": "漏洞仓库: CVE-2026-34724",
+      "cvss_score": null,
+      "published_date": "2026-04-09T14:23:13Z",
+      "updated_date": "2026-04-09T14:44:34Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-34724",
+      "refs": "https://github.com/0xBlackash/CVE-2026-34724",
+      "source": "GitHub",
+      "cve_overviews": "Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1, a server-side template injection vulnerability  which leads to RCE via AI Agent exists. Impact is limited to environments where an attacker can control or influence type_enrichment_data (typically high-privilege administrative configuration). This vulnerability is fixed in 7.0.1.",
+      "time": "2026-04-09 16:13:16"
+    },
+    {
+      "cve_id": "CVE-2026-21876",
+      "title": "漏洞仓库: CVE-2026-21876",
+      "cvss_score": null,
+      "published_date": "2026-01-07T15:30:51Z",
+      "updated_date": "2026-04-09T16:03:33Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-21876 OWASP ModSecurity CRS WAF bypass (docker container + minimal PoC).",
+      "refs": "https://github.com/daytriftnewgen/CVE-2026-21876",
+      "source": "GitHub",
+      "cve_overviews": "The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 4.22.0 and 3.3.8, the current rule 922110 has a bug when processing multipart requests with multiple parts. When the first rule in a chain iterates over a collection (like `MULTIPART_PART_HEADERS`), the capture variables (`TX:0`, `TX:1`) get overwritten with each iteration. Only the last captured value is available to the chained rule, which means malicious charsets in earlier parts can be missed if a later part has a legitimate charset. Versions 4.22.0 and 3.3.8 patch the issue.",
+      "time": "2026-04-09 16:13:07"
+    },
+    {
       "cve_id": "CVE-2026-21858",
       "title": "漏洞仓库: CVE-2026-21858",
       "cvss_score": null,
@@ -258,28 +284,6 @@
       "refs": "https://plugins.trac.wordpress.org/browser/addons-for-elementor-builder/tags/1.6.4/app/Ajax.php#L229\nhttps://plugins.trac.wordpress.org/browser/addons-for-elementor-builder/tags/1.6.4/app/Ajax.php#L232\nhttps://plugins.trac.wordpress.org/browser/addons-for-elementor-builder/tags/1.6.4/app/Ajax.php#L264",
       "source": "NVD",
       "time": "2026-04-09 07:11:13"
-    },
-    {
-      "cve_id": "CVE-2026-5827",
-      "title": "高危漏洞: CVE-2026-5827 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-09T01:16:50.380",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in code-projects Simple IT Discussion Forum 1.0. Impacted is an unknown function of the file /question-function.php. The manipulation of the argument content leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/lonelyuan/vunls/issues/8\nhttps://vuldb.com/submit/788336",
-      "source": "NVD",
-      "time": "2026-04-09 07:11:07"
-    },
-    {
-      "cve_id": "CVE-2026-5824",
-      "title": "高危漏洞: CVE-2026-5824 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-09T00:16:21.280",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in code-projects Simple Laundry System 1.0. This affects an unknown part of the file /userchecklogin.php. Such manipulation of the argument userid leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/lonelyuan/vunls/issues/1\nhttps://vuldb.com/submit/788302",
-      "source": "NVD",
-      "time": "2026-04-09 07:11:02"
     }
   ]
 }
