@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4747",
+      "title": "漏洞仓库: CVE-2026-4747",
+      "cvss_score": null,
+      "published_date": "2026-04-09T04:31:30Z",
+      "updated_date": "2026-04-09T04:32:18Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/kaleth4/CVE-2026-4747",
+      "source": "GitHub",
+      "cve_overviews": "Each RPCSEC_GSS data packet is validated by a routine which checks a signature in the packet.  This routine copies a portion of the packet into a stack buffer, but fails to ensure that the buffer is sufficiently large, and a malicious client can trigger a stack overflow.  Notably, this does not require the client to authenticate itself first.\n\nAs kgssapi.ko's RPCSEC_GSS implementation is vulnerable, remote code execution in the kernel is possible by an authenticated user that is able to send packets to the kernel's NFS server while kgssapi.ko is loaded into the kernel.\n\nIn userspace, applications which have librpcgss_sec loaded and run an RPC server are vulnerable to remote code execution from any client able to send it packets.  We are not aware of any such applications in the FreeBSD base system.",
+      "time": "2026-04-09 05:03:17"
+    },
+    {
       "cve_id": "CVE-2026-25253",
       "title": "漏洞仓库: start-here",
       "cvss_score": null,
@@ -271,17 +284,6 @@
       "refs": "https://github.com/NixOS/nix/commit/244f3eee0bbc7f11e9b383a15ed7368e2c4becc9\nhttps://github.com/NixOS/nix/commit/4bc5a3510fa3735798f9ed3a2a30a3ea7b32343a\nhttps://github.com/NixOS/nix/commit/7794354a982449927ee7401cdeb573ddd16c4688",
       "source": "NVD",
       "time": "2026-04-09 01:15:35"
-    },
-    {
-      "cve_id": "CVE-2026-39429",
-      "title": "高危漏洞: CVE-2026-39429 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-08T21:16:59.313",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "kcp is a Kubernetes-like control plane for form-factors and use-cases beyond Kubernetes and container workloads. Prior to 0.30.3 and 0.29.3, the cache server is directly exposed by the root shard and has no authentication or authorization in place. This allows anyone who can access the root shard to read and write to the cache server. This vulnerability is fixed in 0.30.3 and 0.29.3.",
-      "refs": "https://github.com/kcp-dev/kcp/releases/tag/v0.29.3\nhttps://github.com/kcp-dev/kcp/releases/tag/v0.30.3\nhttps://github.com/kcp-dev/kcp/security/advisories/GHSA-3j3q-wp9x-585p",
-      "source": "NVD",
-      "time": "2026-04-09 01:15:28"
     }
   ]
 }
