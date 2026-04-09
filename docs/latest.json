@@ -1,6 +1,153 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-31402",
+      "title": "漏洞仓库: CVE-2026-31402",
+      "cvss_score": null,
+      "published_date": "2026-04-09T19:10:44Z",
+      "updated_date": "2026-04-09T19:31:39Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-31402",
+      "refs": "https://github.com/0xBlackash/CVE-2026-31402",
+      "source": "GitHub",
+      "cve_overviews": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: fix heap overflow in NFSv4.0 LOCK replay cache\n\nThe NFSv4.0 replay cache uses a fixed 112-byte inline buffer\n(rp_ibuf[NFSD4_REPLAY_ISIZE]) to store encoded operation responses.\nThis size was calculated based on OPEN responses and does not account\nfor LOCK denied responses, which include the conflicting lock owner as\na variable-length field up to 1024 bytes (NFS4_OPAQUE_LIMIT).\n\nWhen a LOCK operation is denied due to a conflict with an existing lock\nthat has a large owner, nfsd4_encode_operation() copies the full encoded\nresponse into the undersized replay buffer via read_bytes_from_xdr_buf()\nwith no bounds check. This results in a slab-out-of-bounds write of up\nto 944 bytes past the end of the buffer, corrupting adjacent heap memory.\n\nThis can be triggered remotely by an unauthenticated attacker with two\ncooperating NFSv4.0 clients: one sets a lock with a large owner string,\nthen the other requests a conflicting lock to provoke the denial.\n\nWe could fix this by increasing NFSD4_REPLAY_ISIZE to allow for a full\nopaque, but that would increase the size of every stateowner, when most\nlockowners are not that large.\n\nInstead, fix this by checking the encoded response length against\nNFSD4_REPLAY_ISIZE before copying into the replay buffer. If the\nresponse is too large, set rp_buflen to 0 to skip caching the replay\npayload. The status is still cached, and the client already received the\ncorrect response on the original request.",
+      "time": "2026-04-09 21:40:10"
+    },
+    {
+      "cve_id": "CVE-2026-34197",
+      "title": "漏洞仓库: CVE-2026-34197",
+      "cvss_score": null,
+      "published_date": "2026-04-09T19:41:30Z",
+      "updated_date": "2026-04-09T19:42:54Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-34197 — Apache ActiveMQ RCE via Jolokia API | PoC Exploit",
+      "refs": "https://github.com/KONDORDEVSECURITYCORP/CVE-2026-34197",
+      "source": "GitHub",
+      "cve_overviews": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String).\n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext.\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\n\n\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ All: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: before 5.19.4, from 6.0.0 before 6.2.3.\n\n\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue",
+      "time": "2026-04-09 21:39:58"
+    },
+    {
+      "cve_id": "CVE-2026-39912",
+      "title": "高危漏洞: CVE-2026-39912 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-09T19:16:25.920",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "V2Board 1.6.1 through 1.7.4 and Xboard through 0.1.9 expose authentication tokens in HTTP response bodies of the loginWithMailLink endpoint when the login_with_mail_link_enable feature is active. Unauthenticated attackers can POST to the loginWithMailLink endpoint with a known email address to receive the full authentication URL in the response, then exchange the token at the token2Login endpoint to obtain a valid bearer token with complete account access including admin privileges.",
+      "refs": "https://chocapikk.com/posts/2026/xboard-v2board-account-takeover/\nhttps://github.com/cedar2025/Xboard/blob/1fe6531924cc1ec662a88b9ef725afcf78d660bc/app/Http/Controllers/V1/Passport/AuthController.php#L51\nhttps://github.com/cedar2025/Xboard/blob/1fe6531924cc1ec662a88b9ef725afcf78d660bc/app/Services/Auth/MailLinkService.php#L49",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:40"
+    },
+    {
+      "cve_id": "CVE-2026-5971",
+      "title": "高危漏洞: CVE-2026-5971 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T18:17:04.723",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in FoundationAgents MetaGPT up to 0.8.1. This vulnerability affects the function ActionNode.xml_fill of the file metagpt/actions/action_node.py of the component XML Handler. Executing a manipulation can lead to improper neutralization of directives in dynamically evaluated code. The attack may be launched remotely. The exploit has been published and may be used. The project was informed of the problem early through a pull request but has not reacted yet.",
+      "refs": "https://github.com/FoundationAgents/MetaGPT/\nhttps://github.com/FoundationAgents/MetaGPT/issues/1928\nhttps://github.com/FoundationAgents/MetaGPT/issues/1956",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:34"
+    },
+    {
+      "cve_id": "CVE-2026-5970",
+      "title": "高危漏洞: CVE-2026-5970 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-09T18:17:04.497",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in FoundationAgents MetaGPT up to 0.8.1. This affects the function check_solution of the component HumanEvalBenchmark/MBPPBenchmark. Performing a manipulation results in code injection. The attack may be initiated remotely. The exploit is now public and may be used. The project was informed of the problem early through a pull request but has not reacted yet.",
+      "refs": "https://github.com/FoundationAgents/MetaGPT/\nhttps://github.com/FoundationAgents/MetaGPT/issues/1942\nhttps://github.com/FoundationAgents/MetaGPT/pull/1988",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:30"
+    },
+    {
+      "cve_id": "CVE-2026-5329",
+      "title": "高危漏洞: CVE-2026-5329 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-04-09T18:17:04.253",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Rapid7 Velociraptor versions prior to 0.76.2 contain an improper input validation vulnerability in the client monitoring message handler on the Velociraptor server (primarily Linux) that allows an authenticated remote attacker  to write to arbitrary internal server queues via a crafted monitoring message with a malicious queue name. The server handler that receives client monitoring messages does not sufficiently validate the queue name supplied by the client, allowing a rogue client to write arbitrary messages to privileged internal queues. This may lead to remote code execution on the Velociraptor server. Rapid7 Hosted Velociraptor instances are not affected by this vulnerability.",
+      "refs": "https://docs.velociraptor.app/announcements/advisories/cve-2026-5329/",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:25"
+    },
+    {
+      "cve_id": "CVE-2026-40070",
+      "title": "高危漏洞: CVE-2026-40070 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-09T18:17:03.203",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "BSV Ruby SDK is the Ruby SDK for the BSV blockchain. From 0.3.1 to before 0.8.2, BSV::Wallet::WalletClient#acquire_certificate persists certificate records to storage without verifying the certifier's signature over the certificate contents. In acquisition_protocol: 'direct', the caller supplies all certificate fields (including signature:) and the record is written to storage verbatim. In acquisition_protocol: 'issuance', the client POSTs to a certifier URL and writes whatever signature the response body contains, also without verification. An attacker who can reach either API (or who controls a certifier endpoint targeted by the issuance path) can forge identity certificates that subsequently appear authentic to list_certificates and prove_certificate.",
+      "refs": "https://brc.dev/52\nhttps://github.com/sgbett/bsv-ruby-sdk/commit/4992e8a265fd914a7eeb0405c69d1ff0122a84cc\nhttps://github.com/sgbett/bsv-ruby-sdk/issues/305",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:21"
+    },
+    {
+      "cve_id": "CVE-2026-40069",
+      "title": "高危漏洞: CVE-2026-40069 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-09T18:17:03.043",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "BSV Ruby SDK is the Ruby SDK for the BSV blockchain. From 0.1.0 to before 0.8.2, BSV::Network::ARC's failure detection only recognises REJECTED and DOUBLE_SPEND_ATTEMPTED. ARC responses with txStatus values of INVALID, MALFORMED, MINED_IN_STALE_BLOCK, or any ORPHAN-containing extraInfo / txStatus are silently treated as successful broadcasts. Applications that gate actions on broadcaster success are tricked into trusting transactions that were never accepted by the network. This vulnerability is fixed in 0.8.2.",
+      "refs": "https://github.com/sgbett/bsv-ruby-sdk/commit/4992e8a265fd914a7eeb0405c69d1ff0122a84cc\nhttps://github.com/sgbett/bsv-ruby-sdk/issues/305\nhttps://github.com/sgbett/bsv-ruby-sdk/pull/306",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:16"
+    },
+    {
+      "cve_id": "CVE-2026-39983",
+      "title": "高危漏洞: CVE-2026-39983 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-04-09T18:17:02.503",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "description": "basic-ftp is an FTP client for Node.js. Prior to 5.2.1, basic-ftp allows FTP command injection via CRLF sequences (\\r\\n) in file path parameters passed to high-level path APIs such as cd(), remove(), rename(), uploadFrom(), downloadTo(), list(), and removeDir(). The library's protectWhitespace() helper only handles leading spaces and returns other paths unchanged, while FtpContext.send() writes the resulting command string directly to the control socket with \\r\\n appended. This lets attacker-controlled path strings split one intended FTP command into multiple commands. This vulnerability is fixed in 5.2.1.",
+      "refs": "https://github.com/patrickjuchli/basic-ftp/commit/2ecc8e2c500c5234115f06fd1dbde1aa03d70f4b\nhttps://github.com/patrickjuchli/basic-ftp/releases/tag/v5.2.1\nhttps://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-chqc-8p9q-pq6q",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:11"
+    },
+    {
+      "cve_id": "CVE-2026-39981",
+      "title": "高危漏洞: CVE-2026-39981 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-09T18:17:02.350",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AGiXT is a dynamic AI Agent Automation Platform. Prior to 1.9.2, the safe_join() function in the essential_abilities extension fails to validate that resolved file paths remain within the designated agent workspace. An authenticated attacker can use directory traversal sequences to read, write, or delete arbitrary files on the server hosting the AGiXT instance. This vulnerability is fixed in 1.9.2.",
+      "refs": "https://github.com/Josh-XT/AGiXT/commit/2079ea5a88fa671a921bf0b5eba887a5a1b73d5f\nhttps://github.com/Josh-XT/AGiXT/releases/tag/v1.9.2\nhttps://github.com/Josh-XT/AGiXT/security/advisories/GHSA-5gfj-64gh-mgmw",
+      "source": "NVD",
+      "time": "2026-04-09 21:39:05"
+    },
+    {
+      "cve_id": "CVE-2026-39980",
+      "title": "高危漏洞: CVE-2026-39980 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-09T18:17:02.203",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 6.9.5, the safeEjs.ts file does not properly sanitize EJS templates. Users with the Manage customization capability can run arbitrary JavaScript in the context of the OpenCTI platform process during notifier template execution. This vulnerability is fixed in 6.9.5.",
+      "refs": "https://github.com/OpenCTI-Platform/opencti/releases/tag/6.9.5\nhttps://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-jv9r-jw2f-rhrf",
+      "source": "NVD",
+      "time": "2026-04-09 21:38:55"
+    },
+    {
+      "cve_id": "CVE-2026-39911",
+      "title": "高危漏洞: CVE-2026-39911 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-09T18:17:01.870",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Hashgraph Guardian through version 3.5.0 contains an unsandboxed JavaScript execution vulnerability in the Custom Logic policy block worker that allows authenticated Standard Registry users to execute arbitrary code by passing user-supplied JavaScript expressions directly to the Node.js Function() constructor without isolation. Attackers can import native Node.js modules to read arbitrary files from the container filesystem, access process environment variables containing sensitive credentials such as RSA private keys, JWT signing keys, and API tokens, and forge valid authentication tokens for any user including administrators.",
+      "refs": "https://github.com/hashgraph/guardian/pull/5929\nhttps://www.vulncheck.com/advisories/hashgraph-guardian-unsandboxed-javascript-execution-rce",
+      "source": "NVD",
+      "time": "2026-04-09 21:38:48"
+    },
+    {
+      "cve_id": "CVE-2026-1584",
+      "title": "高危漏洞: CVE-2026-1584 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-09T18:16:44.047",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in gnutls. A remote, unauthenticated attacker can exploit this vulnerability by sending a specially crafted ClientHello message with an invalid Pre-Shared Key (PSK) binder value during the TLS handshake. This can lead to a NULL pointer dereference, causing the server to crash and resulting in a remote Denial of Service (DoS) condition.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-1584\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2435258",
+      "source": "NVD",
+      "time": "2026-04-09 21:38:41"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: CVE-2026-1375",
       "cvss_score": null,
@@ -141,149 +288,6 @@
       "refs": "https://github.com/mtrojnar/osslsigncode/commit/cbee1e723c5a8547302bd841ad9943ed8144db68\nhttps://github.com/mtrojnar/osslsigncode/releases/tag/2.12\nhttps://github.com/mtrojnar/osslsigncode/security/advisories/GHSA-hx87-8754-xvh4",
       "source": "NVD",
       "time": "2026-04-09 18:51:57"
-    },
-    {
-      "cve_id": "CVE-2026-39843",
-      "title": "高危漏洞: CVE-2026-39843 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-09T16:16:31.087",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Plane is an an open-source project management tool. From 0.28.0 to before 1.3.0, the remediation of GHSA-jcc6-f9v6-f7jw is incomplete which could lead to the same full read Server-Side Request Forgery when a normal html page contains a link tag with an href that redirects to a private IP address is supplied to Add link by an authenticated attacker with low privileges. Redirects for the main page URL are validated, but not the favicon fetch path. fetch_and_encode_favicon() still uses requests.get(favicon_url, ...) with the default redirect-following. This vulnerability is fixed in 1.3.0.",
-      "refs": "https://github.com/makeplane/plane/security/advisories/GHSA-9fr2-pprw-pp9j",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:52"
-    },
-    {
-      "cve_id": "CVE-2026-34578",
-      "title": "高危漏洞: CVE-2026-34578 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-09T15:16:10.777",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.6, OPNsense's LDAP authentication connector passes the login username directly into an LDAP search filter without calling ldap_escape(). An unauthenticated attacker can inject LDAP filter metacharacters into the username field of the WebGUI login page to enumerate valid LDAP usernames in the configured directory. When the LDAP server configuration includes an Extended Query to restrict login to members of a specific group, the same injection can be used to bypass that group membership restriction and authenticate as any LDAP user whose password is known, regardless of group membership. This vulnerability is fixed in 26.1.6.",
-      "refs": "https://github.com/opnsense/core/commit/016f66cb4620cd48183fa97843f343bb71813c6e\nhttps://github.com/opnsense/core/security/advisories/GHSA-jpm7-f59c-mp54",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:45"
-    },
-    {
-      "cve_id": "CVE-2026-4660",
-      "title": "高危漏洞: CVE-2026-4660 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-09T14:16:32.993",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "HashiCorp’s go-getter library up to v1.8.5 may allow arbitrary file reads on the file system during certain git operations through a maliciously crafted URL. This vulnerability, CVE-2026-4660, is fixed in go-getter v1.8.6. This vulnerability does not affect the go-getter/v2 branch and package.",
-      "refs": "https://discuss.hashicorp.com/t/hcsec-2026-04-go-getter-may-allow-to-arbitrary-filesystem-reads-through-git-operations/77311",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:39"
-    },
-    {
-      "cve_id": "CVE-2025-57735",
-      "title": "高危漏洞: CVE-2025-57735 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-09T11:16:20.757",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "When user logged out, the JWT token the user had authtenticated with was not invalidated, which could lead to reuse of that token in case it was intercepted. In Airflow 3.2 we implemented the mechanism that implements token invalidation at logout. Users who are concerned about the logout scenario and possibility of intercepting the tokens, should upgrade to Airflow 3.2+\n\n\n\nUsers are recommended to upgrade to version 3.2.0, which fixes this issue.",
-      "refs": "https://github.com/apache/airflow/pull/56633\nhttps://github.com/apache/airflow/pull/61339\nhttps://lists.apache.org/thread/ovn8mpd8zkc604hojt7x3wsw3kc60x98",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:35"
-    },
-    {
-      "cve_id": "CVE-2025-62188",
-      "title": "高危漏洞: CVE-2025-62188 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-09T10:16:20.260",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "An Exposure of Sensitive Information to an Unauthorized Actor vulnerability exists in Apache DolphinScheduler.\n\nThis vulnerability may allow unauthorized actors to access sensitive information, including database credentials.\n\n\nThis issue affects Apache DolphinScheduler versions 3.1.*.\n\n\nUsers are recommended to upgrade to:\n\n\n\n\n\n\n\n  *  version ≥ 3.2.0 if using 3.1.x\n\n\n\n\n\n\nAs a temporary workaround, users who cannot upgrade immediately may restrict the exposed management endpoints by setting the following environment variable:\n\n\n```\nMANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE=health,metrics,prometheus\n```\n\nAlternatively, add the following configuration to the application.yaml file:\n\n\n```\nmanagement:\n   endpoints:\n     web:\n        exposure:\n          include: health,metrics,prometheus\n```\n\nThis issue has been reported as CVE-2023-48796:\n\n https://cveprocess.apache.org/cve5/CVE-2023-48796",
-      "refs": "https://lists.apache.org/thread/ffrmkcwgr2lcz0f5nnnyswhpn3fytsvo\nhttps://www.cve.org/CVERecord?id=CVE-2023-48796",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:31"
-    },
-    {
-      "cve_id": "CVE-2026-5915",
-      "title": "高危漏洞: CVE-2026-5915 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-08T22:16:31.460",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in WebML in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/494341335",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:27"
-    },
-    {
-      "cve_id": "CVE-2026-5914",
-      "title": "高危漏洞: CVE-2026-5914 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T22:16:31.343",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type Confusion in CSS in Google Chrome prior to 147.0.7727.55 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/490023239",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:22"
-    },
-    {
-      "cve_id": "CVE-2026-5912",
-      "title": "高危漏洞: CVE-2026-5912 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T22:16:31.110",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Integer overflow in WebRTC in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/486498791",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:16"
-    },
-    {
-      "cve_id": "CVE-2026-5910",
-      "title": "高危漏洞: CVE-2026-5910 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T22:16:30.900",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/485212874",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:10"
-    },
-    {
-      "cve_id": "CVE-2026-5909",
-      "title": "高危漏洞: CVE-2026-5909 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T22:16:30.790",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/485203821",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:06"
-    },
-    {
-      "cve_id": "CVE-2026-5908",
-      "title": "高危漏洞: CVE-2026-5908 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T22:16:30.677",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/485115554",
-      "source": "NVD",
-      "time": "2026-04-09 18:51:02"
-    },
-    {
-      "cve_id": "CVE-2026-5907",
-      "title": "高危漏洞: CVE-2026-5907 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-08T22:16:30.580",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
-      "description": "Insufficient data validation in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory read via a crafted video file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/484665123",
-      "source": "NVD",
-      "time": "2026-04-09 18:50:57"
-    },
-    {
-      "cve_id": "CVE-2026-5866",
-      "title": "高危漏洞: CVE-2026-5866 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-08T22:16:26.130",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/492218537",
-      "source": "NVD",
-      "time": "2026-04-09 18:50:52"
     }
   ]
 }
