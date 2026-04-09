@@ -1,6 +1,32 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5173",
+      "title": "漏洞仓库: CVE-2026-5173",
+      "cvss_score": null,
+      "published_date": "2026-04-09T08:24:32Z",
+      "updated_date": "2026-04-09T08:37:52Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-5173",
+      "refs": "https://github.com/0xBlackash/CVE-2026-5173",
+      "source": "GitHub",
+      "cve_overviews": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.9.6 before 18.8.9, 18.9 before 18.9.5, and 18.10 before 18.10.3 that could have allowed an authenticated user to invoke unintended server-side methods through websocket connections due to improper access control.",
+      "time": "2026-04-09 10:04:09"
+    },
+    {
+      "cve_id": "CVE-2026-34197",
+      "title": "漏洞仓库: CVE-2026-34197-Apache-ActiveMQ-RCE",
+      "cvss_score": null,
+      "published_date": "2026-04-09T09:44:08Z",
+      "updated_date": "2026-04-09T09:47:55Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-34197",
+      "refs": "https://github.com/AtoposX-J/CVE-2026-34197-Apache-ActiveMQ-RCE",
+      "source": "GitHub",
+      "cve_overviews": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String).\n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext.\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\n\n\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ All: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: before 5.19.4, from 6.0.0 before 6.2.3.\n\n\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue",
+      "time": "2026-04-09 10:04:03"
+    },
+    {
       "cve_id": "CVE-2026-5837",
       "title": "高危漏洞: CVE-2026-5837 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -262,28 +288,6 @@
       "refs": "https://github.com/ufrisk/MemProcFS/commit/df80e6e83641f5004025ce661e6dd8139028d7b5\nhttps://github.com/ufrisk/MemProcFS/releases/tag/v5.17\nhttps://mobasi.ai/sentinel",
       "source": "NVD",
       "time": "2026-04-09 01:16:35"
-    },
-    {
-      "cve_id": "CVE-2026-40030",
-      "title": "高危漏洞: CVE-2026-40030 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-08T22:16:23.483",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "parseusbs before 1.9 contains an OS command injection vulnerability where the volume listing path argument (-v flag) is passed unsanitized into an os.popen() shell command with ls, allowing arbitrary command injection via crafted volume path arguments containing shell metacharacters. An attacker can provide a crafted volume path via the -v flag that injects arbitrary commands during volume content enumeration.",
-      "refs": "https://github.com/khyrenz/parseusbs/commit/99f05996494e7e41ea0c7e13145ba20eb793e46b\nhttps://github.com/khyrenz/parseusbs/pull/10\nhttps://mobasi.ai/sentinel",
-      "source": "NVD",
-      "time": "2026-04-09 01:16:29"
-    },
-    {
-      "cve_id": "CVE-2026-40029",
-      "title": "高危漏洞: CVE-2026-40029 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-08T22:16:23.303",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "parseusbs before 1.9 contains an OS command injection vulnerability in parseUSBs.py where LNK file paths are passed unsanitized into an os.popen() shell command, allowing arbitrary command execution via crafted .lnk filenames containing shell metacharacters. An attacker can craft a .lnk filename with embedded shell metacharacters that execute arbitrary commands on the forensic examiner's machine during USB artifact parsing.",
-      "refs": "https://github.com/khyrenz/parseusbs/commit/99f05996494e7e41ea0c7e13145ba20eb793e46b\nhttps://github.com/khyrenz/parseusbs/pull/10\nhttps://mobasi.ai/sentinel",
-      "source": "NVD",
-      "time": "2026-04-09 01:16:25"
     }
   ]
 }
