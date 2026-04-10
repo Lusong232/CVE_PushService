@@ -1,6 +1,56 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-APK",
+      "cvss_score": null,
+      "published_date": "2026-04-10T13:20:26Z",
+      "updated_date": "2026-04-10T13:30:04Z",
+      "vector_string": "N/A",
+      "description": "Cve Scanner Made using fluterr",
+      "refs": "https://github.com/zax-universe/CVE-2026-APK",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-10 15:41:50"
+    },
+    {
+      "cve_id": "CVE-2026-29923",
+      "title": "漏洞仓库: CVE-2026-29923",
+      "cvss_score": null,
+      "published_date": "2026-04-10T12:48:55Z",
+      "updated_date": "2026-04-10T14:47:34Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/athenasec16/CVE-2026-29923",
+      "source": "GitHub",
+      "cve_overviews": "The pstrip64.sys driver in EnTech Taiwan PowerStrip <=3.90.736 allows local users to escalate privileges to SYSTEM via a crafted IOCTL request enabling unprivileged users to map arbitrary physical memory into their address space and modify critical kernel structures.",
+      "time": "2026-04-10 15:41:45"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-39983",
+      "cvss_score": null,
+      "published_date": "2026-04-10T15:11:48Z",
+      "updated_date": "2026-04-10T15:13:33Z",
+      "vector_string": "N/A",
+      "description": "Advisory for basic-ftp ⌯⌲ 20 mill weekly downloads",
+      "refs": "https://github.com/zebbernCVE/CVE-2026-39983",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-10 15:41:34"
+    },
+    {
+      "cve_id": "CVE-2026-5412",
+      "title": "高危漏洞: CVE-2026-5412 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-04-10T13:16:45.780",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "In Juju versions prior to 2.9.57 and 3.6.21, an authorization issue exists in the Controller facade. An authenticated user can call the CloudSpec API method to extract the cloud credentials used to bootstrap the controller. This allows a low-privileged user to access sensitive credentials. This issue is resolved in Juju versions 2.9.57 and 3.6.21.",
+      "refs": "https://github.com/juju/juju/pull/22205\nhttps://github.com/juju/juju/pull/22206\nhttps://github.com/juju/juju/security/advisories/GHSA-w5fq-8965-c969",
+      "source": "NVD",
+      "time": "2026-04-10 15:41:25"
+    },
+    {
       "cve_id": "CVE-2026-4162",
       "title": "高危漏洞: CVE-2026-4162 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -232,58 +282,6 @@
       "source": "GitHub",
       "cve_overviews": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'NF_FU_AJAX_Controllers_Uploads::handle_upload' function in all versions up to, and including, 3.3.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability was partially patched in version 3.3.25 and fully patched in version 3.3.27.",
       "time": "2026-04-10 10:01:00"
-    },
-    {
-      "cve_id": "CVE-2026-39376",
-      "title": "漏洞仓库: CVE-2026-39376",
-      "cvss_score": null,
-      "published_date": "2026-04-10T05:39:38Z",
-      "updated_date": "2026-04-10T05:40:38Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-39376(Infinite redirect loop DoS via meta-refresh chain)",
-      "refs": "https://github.com/redyank/CVE-2026-39376",
-      "source": "GitHub",
-      "cve_overviews": "FastFeedParser is a high performance RSS, Atom and RDF parser. Prior to 0.5.10, when parse() fetches a URL that returns an HTML page containing a <meta http-equiv=\"refresh\"> tag, it recursively calls itself with the redirect URL — with no depth limit, no visited-URL deduplication, and no redirect count cap. An attacker-controlled server that returns an infinite chain of HTML meta-refresh responses causes unbounded recursion, exhausting the Python call stack and crashing the process. This vulnerability can also be chained with the companion SSRF issue to reach internal network targets after bypassing the initial URL check. This vulnerability is fixed in 0.5.10.",
-      "time": "2026-04-10 07:16:02"
-    },
-    {
-      "cve_id": "CVE-2026-29000",
-      "title": "漏洞仓库: CVE-2026-29000",
-      "cvss_score": null,
-      "published_date": "2026-04-10T05:23:54Z",
-      "updated_date": "2026-04-10T06:33:46Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/Gajraj238/CVE-2026-29000",
-      "source": "GitHub",
-      "cve_overviews": "pac4j-jwt versions prior to 4.5.9, 5.7.9, and 6.3.3 contain an authentication bypass vulnerability in JwtAuthenticator when processing encrypted JWTs that allows remote attackers to forge authentication tokens. Attackers who possess the server's RSA public key can create a JWE-wrapped PlainJWT with arbitrary subject and role claims, bypassing signature verification to authenticate as any user including administrators.",
-      "time": "2026-04-10 07:15:53"
-    },
-    {
-      "cve_id": "none",
-      "title": "漏洞仓库: exploit-CVE-2026-23744",
-      "cvss_score": null,
-      "published_date": "2026-04-10T05:52:49Z",
-      "updated_date": "2026-04-10T06:37:14Z",
-      "vector_string": "N/A",
-      "description": "MCPJam Inspector is a local-first development platform for MCP servers. In versions 1.4.2 (and earlier), a RCE flaw lets attackers send crafted HTTP request that installs an MCP server and runs code remotely, because the service listens on 0.0.0.0 (instead of 127.0.0.1) by default.",
-      "refs": "https://github.com/luiskrnr/exploit-CVE-2026-23744",
-      "source": "GitHub",
-      "cve_overviews": "",
-      "time": "2026-04-10 07:15:40"
-    },
-    {
-      "cve_id": "CVE-2026-23869",
-      "title": "漏洞仓库: CVE-2026-23869",
-      "cvss_score": null,
-      "published_date": "2026-04-10T06:34:17Z",
-      "updated_date": "2026-04-10T06:45:49Z",
-      "vector_string": "N/A",
-      "description": "POC for CVE-2026-23869",
-      "refs": "https://github.com/yohannslm/CVE-2026-23869",
-      "source": "GitHub",
-      "cve_overviews": "A denial of service vulnerability exists in React Server Components, affecting the following packages: react-server-dom-parcel, react-server-dom-turbopack and react-server-dom-webpack (versions 19.0.0 through 19.0.4, 19.1.0 through 19.1.5, and 19.2.0 through 19.2.4). The vulnerability is triggered by sending specially crafted HTTP requests to Server Function endpoints.The payload of the HTTP request causes excessive CPU usage for up to a minute ending in a thrown error that is catchable.",
-      "time": "2026-04-10 07:15:34"
     }
   ]
 }
