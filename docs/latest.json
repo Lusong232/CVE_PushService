@@ -1,6 +1,71 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-39376",
+      "title": "漏洞仓库: CVE-2026-39376",
+      "cvss_score": null,
+      "published_date": "2026-04-10T05:39:38Z",
+      "updated_date": "2026-04-10T05:40:38Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-39376(Infinite redirect loop DoS via meta-refresh chain)",
+      "refs": "https://github.com/redyank/CVE-2026-39376",
+      "source": "GitHub",
+      "cve_overviews": "FastFeedParser is a high performance RSS, Atom and RDF parser. Prior to 0.5.10, when parse() fetches a URL that returns an HTML page containing a <meta http-equiv=\"refresh\"> tag, it recursively calls itself with the redirect URL — with no depth limit, no visited-URL deduplication, and no redirect count cap. An attacker-controlled server that returns an infinite chain of HTML meta-refresh responses causes unbounded recursion, exhausting the Python call stack and crashing the process. This vulnerability can also be chained with the companion SSRF issue to reach internal network targets after bypassing the initial URL check. This vulnerability is fixed in 0.5.10.",
+      "time": "2026-04-10 07:16:02"
+    },
+    {
+      "cve_id": "CVE-2026-29000",
+      "title": "漏洞仓库: CVE-2026-29000",
+      "cvss_score": null,
+      "published_date": "2026-04-10T05:23:54Z",
+      "updated_date": "2026-04-10T06:33:46Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/Gajraj238/CVE-2026-29000",
+      "source": "GitHub",
+      "cve_overviews": "pac4j-jwt versions prior to 4.5.9, 5.7.9, and 6.3.3 contain an authentication bypass vulnerability in JwtAuthenticator when processing encrypted JWTs that allows remote attackers to forge authentication tokens. Attackers who possess the server's RSA public key can create a JWE-wrapped PlainJWT with arbitrary subject and role claims, bypassing signature verification to authenticate as any user including administrators.",
+      "time": "2026-04-10 07:15:53"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: exploit-CVE-2026-23744",
+      "cvss_score": null,
+      "published_date": "2026-04-10T05:52:49Z",
+      "updated_date": "2026-04-10T06:37:14Z",
+      "vector_string": "N/A",
+      "description": "MCPJam Inspector is a local-first development platform for MCP servers. In versions 1.4.2 (and earlier), a RCE flaw lets attackers send crafted HTTP request that installs an MCP server and runs code remotely, because the service listens on 0.0.0.0 (instead of 127.0.0.1) by default.",
+      "refs": "https://github.com/luiskrnr/exploit-CVE-2026-23744",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-10 07:15:40"
+    },
+    {
+      "cve_id": "CVE-2026-23869",
+      "title": "漏洞仓库: CVE-2026-23869",
+      "cvss_score": null,
+      "published_date": "2026-04-10T06:34:17Z",
+      "updated_date": "2026-04-10T06:45:49Z",
+      "vector_string": "N/A",
+      "description": "POC for CVE-2026-23869",
+      "refs": "https://github.com/yohannslm/CVE-2026-23869",
+      "source": "GitHub",
+      "cve_overviews": "A denial of service vulnerability exists in React Server Components, affecting the following packages: react-server-dom-parcel, react-server-dom-turbopack and react-server-dom-webpack (versions 19.0.0 through 19.0.4, 19.1.0 through 19.1.5, and 19.2.0 through 19.2.4). The vulnerability is triggered by sending specially crafted HTTP requests to Server Function endpoints.The payload of the HTTP request causes excessive CPU usage for up to a minute ending in a thrown error that is catchable.",
+      "time": "2026-04-10 07:15:34"
+    },
+    {
+      "cve_id": "CVE-2026-3909",
+      "title": "漏洞仓库: CVE-2026-3909",
+      "cvss_score": null,
+      "published_date": "2026-04-10T05:20:07Z",
+      "updated_date": "2026-04-10T07:01:51Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/anansi2safe/CVE-2026-3909",
+      "source": "GitHub",
+      "cve_overviews": "Out of bounds write in Skia in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)",
+      "time": "2026-04-10 07:15:27"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: CVE-2026-34197",
       "cvss_score": null,
@@ -233,63 +298,6 @@
       "source": "GitHub",
       "cve_overviews": "The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 4.22.0 and 3.3.8, the current rule 922110 has a bug when processing multipart requests with multiple parts. When the first rule in a chain iterates over a collection (like `MULTIPART_PART_HEADERS`), the capture variables (`TX:0`, `TX:1`) get overwritten with each iteration. Only the last captured value is available to the chained rule, which means malicious charsets in earlier parts can be missed if a later part has a legitimate charset. Versions 4.22.0 and 3.3.8 patch the issue.",
       "time": "2026-04-10 01:29:24"
-    },
-    {
-      "cve_id": "CVE-2026-1312",
-      "title": "漏洞仓库: CVE-2026-1312-Testing",
-      "cvss_score": null,
-      "published_date": "2026-04-10T01:21:46Z",
-      "updated_date": "2026-04-10T01:21:46Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/alpinine/CVE-2026-1312-Testing",
-      "source": "GitHub",
-      "cve_overviews": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`.QuerySet.order_by()` is subject to SQL injection in column aliases containing periods when the same alias is, using a suitably crafted dictionary, with dictionary expansion, used in `FilteredRelation`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Solomon Kebede for reporting this issue.",
-      "time": "2026-04-10 01:29:18"
-    },
-    {
-      "cve_id": "CVE-2026-5988",
-      "title": "高危漏洞: CVE-2026-5988 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-09T23:17:02.343",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda F451 1.0.0.7. This impacts the function formWrlsafeset of the file /goform/AdvSetWrlsafeset. Performing a manipulation of the argument mit_ssid results in stack-based buffer overflow. The attack can be initiated remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/Jimi-Lab/cve/issues/4\nhttps://vuldb.com/submit/792857\nhttps://vuldb.com/vuln/356542",
-      "source": "NVD",
-      "time": "2026-04-10 01:29:09"
-    },
-    {
-      "cve_id": "CVE-2026-5985",
-      "title": "高危漏洞: CVE-2026-5985 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-09T23:17:01.710",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in code-projects Simple IT Discussion Forum 1.0. The affected element is an unknown function of the file /crud.php. The manipulation of the argument user_Id results in sql injection. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://code-projects.org/\nhttps://github.com/2581565901/thebugihadfind/issues/1\nhttps://vuldb.com/submit/791897",
-      "source": "NVD",
-      "time": "2026-04-10 01:29:04"
-    },
-    {
-      "cve_id": "CVE-2026-34424",
-      "title": "高危漏洞: CVE-2026-34424 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-09T23:17:00.540",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Smart Slider 3 Pro version 3.5.1.35 for WordPress and Joomla contains a multi-stage remote access toolkit injected through a compromised update system that allows unauthenticated attackers to execute arbitrary code and commands. Attackers can trigger pre-authentication remote shell execution via HTTP headers, establish authenticated backdoors accepting arbitrary PHP code or OS commands, create hidden administrator accounts, exfiltrate credentials and access keys, and maintain persistence through multiple injection points including must-use plugins and core file modifications.",
-      "refs": "https://mysites.guru/blog/smart-slider-3-pro-supply-chain-compromise/\nhttps://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/\nhttps://patchstack.com/database/wordpress/plugin/nextend-smart-slider3-pro/vulnerability/wordpress-smart-slider-3-plugin-3-5-1-35-backdoor-vulnerability",
-      "source": "NVD",
-      "time": "2026-04-10 01:28:57"
-    },
-    {
-      "cve_id": "CVE-2026-5984",
-      "title": "高危漏洞: CVE-2026-5984 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-09T22:16:37.873",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in D-Link DIR-605L 2.13B01. Impacted is the function formSetLog of the file /goform/formSetLog of the component POST Request Handler. The manipulation of the argument curTime leads to buffer overflow. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/D-Link-DIR-605L-formSetLog-33153a41781f8038bbbcc04073d7875b?source=copy_link\nhttps://vuldb.com/submit/791857\nhttps://vuldb.com/vuln/356538",
-      "source": "NVD",
-      "time": "2026-04-10 01:28:53"
     }
   ]
 }
