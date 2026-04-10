@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-0740",
+      "title": "漏洞仓库: CVE-2026-0740",
+      "cvss_score": null,
+      "published_date": "2026-04-07T18:34:14Z",
+      "updated_date": "2026-04-10T08:42:04Z",
+      "vector_string": "N/A",
+      "description": "Ninja Forms File Uploads <= 3.3.26 - Unauthenticated Arbitrary File Upload to RCE (CVE-2026-0740)",
+      "refs": "https://github.com/whattheslime/CVE-2026-0740",
+      "source": "GitHub",
+      "cve_overviews": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'NF_FU_AJAX_Controllers_Uploads::handle_upload' function in all versions up to, and including, 3.3.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability was partially patched in version 3.3.25 and fully patched in version 3.3.27.",
+      "time": "2026-04-10 10:01:00"
+    },
+    {
       "cve_id": "CVE-2026-39376",
       "title": "漏洞仓库: CVE-2026-39376",
       "cvss_score": null,
@@ -285,19 +298,6 @@
       "refs": "https://github.com/Jimi-Lab/cve/issues/5\nhttps://vuldb.com/submit/792858\nhttps://vuldb.com/vuln/356543",
       "source": "NVD",
       "time": "2026-04-10 05:17:05"
-    },
-    {
-      "cve_id": "CVE-2026-21876",
-      "title": "漏洞仓库: CVE-2026-21876",
-      "cvss_score": null,
-      "published_date": "2026-04-09T23:30:57Z",
-      "updated_date": "2026-04-09T23:50:11Z",
-      "vector_string": "N/A",
-      "description": "[Reupload] CVE-2026-21876 minimal PoC with docker container.",
-      "refs": "https://github.com/daytriftnewgen/CVE-2026-21876",
-      "source": "GitHub",
-      "cve_overviews": "The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 4.22.0 and 3.3.8, the current rule 922110 has a bug when processing multipart requests with multiple parts. When the first rule in a chain iterates over a collection (like `MULTIPART_PART_HEADERS`), the capture variables (`TX:0`, `TX:1`) get overwritten with each iteration. Only the last captured value is available to the chained rule, which means malicious charsets in earlier parts can be missed if a later part has a legitimate charset. Versions 4.22.0 and 3.3.8 patch the issue.",
-      "time": "2026-04-10 01:29:24"
     }
   ]
 }
