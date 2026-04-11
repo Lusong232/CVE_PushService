@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5809",
+      "title": "高危漏洞: CVE-2026-5809 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-04-11T08:16:05.503",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
+      "description": "The wpForo Forum plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to and including 3.0.2. This is due to a two-step logic flaw: the topic_add() and topic_edit() action handlers accept arbitrary user-supplied data[*] arrays from $_REQUEST and store them as postmeta without restricting which fields may contain array values. Because 'body' is included in the allowed topic fields list, an attacker can supply data[body][fileurl] with an arbitrary file path (e.g., wp-config.php or an absolute server path). This poisoned fileurl is persisted to the plugin's custom postmeta database table. Subsequently, when the attacker submits wpftcf_delete[]=body on a topic_edit request, the add_file() method retrieves the stored postmeta record, extracts the attacker-controlled fileurl, passes it through wpforo_fix_upload_dir() which only rewrites legitimate wpforo upload paths and returns all other paths unchanged, and then calls wp_delete_file() on the unvalidated path. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files writable by the PHP process on the server, including critical files such as wp-config.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wpforo/tags/3.0.2/classes/Actions.php#L746\nhttps://plugins.trac.wordpress.org/browser/wpforo/tags/3.0.2/classes/Actions.php#L761\nhttps://plugins.trac.wordpress.org/browser/wpforo/tags/3.0.2/classes/PostMeta.php#L402",
+      "source": "NVD",
+      "time": "2026-04-11 12:35:10"
+    },
+    {
+      "cve_id": "CVE-2026-34621",
+      "title": "高危漏洞: CVE-2026-34621 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-04-11T07:16:03.633",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+      "refs": "https://helpx.adobe.com/security/products/acrobat/apsb26-43.html",
+      "source": "NVD",
+      "time": "2026-04-11 12:35:00"
+    },
+    {
       "cve_id": "CVE-2026-33229",
       "title": "漏洞仓库: CVE-2026-33229",
       "cvss_score": null,
@@ -256,30 +278,6 @@
       "refs": "https://www.zerodayinitiative.com/advisories/ZDI-26-192/",
       "source": "NVD",
       "time": "2026-04-11 06:50:16"
-    },
-    {
-      "cve_id": "CVE-2026-3690",
-      "title": "高危漏洞: CVE-2026-3690 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-04-11T01:16:15.990",
-      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "OpenClaw Canvas Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of OpenClaw. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the implementation of the the authentication function for canvas endpoints. The issue results from improper implementation of authentication. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-29311.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vvjh-f6p9-5vcf\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-228/",
-      "source": "NVD",
-      "time": "2026-04-11 06:50:09"
-    },
-    {
-      "cve_id": "CVE-2026-4350",
-      "title": "漏洞仓库: CVE-2026-4350",
-      "cvss_score": null,
-      "published_date": "2026-04-11T02:46:23Z",
-      "updated_date": "2026-04-11T02:51:46Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-4350 - Perfmatters WordPress Arbitrary File Deletion",
-      "refs": "https://github.com/whyiamsobusy/CVE-2026-4350",
-      "source": "GitHub",
-      "cve_overviews": "The Perfmatters plugin for WordPress is vulnerable to arbitrary file deletion via path traversal in all versions up to, and including, 2.5.9.1. This is due to the `PMCS::action_handler()` method processing the `$_GET['delete']` parameter without any sanitization, authorization check, or nonce verification. The unsanitized filename is concatenated with the storage directory path and passed to `unlink()`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary files on the server by using `../` path traversal sequences, including `wp-config.php` which would force WordPress into the installation wizard and allow full site takeover.",
-      "time": "2026-04-11 04:49:30"
     }
   ]
 }
