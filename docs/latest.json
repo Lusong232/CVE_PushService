@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-33229",
+      "title": "漏洞仓库: CVE-2026-33229",
+      "cvss_score": null,
+      "published_date": "2026-04-11T08:18:52Z",
+      "updated_date": "2026-04-11T08:31:31Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/azefzafyoussef/CVE-2026-33229",
+      "source": "GitHub",
+      "cve_overviews": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Prior to 17.4.8 and 17.10.1, an improperly protected scripting API allows any user with script right to bypass the sandboxing of the Velocity scripting API and execute, e.g., arbitrary Python scripts, allowing full access to the XWiki instance and thereby compromising the confidentiality, integrity and availability of the whole instance. Note that script right already constitutes a high level of access that we don't recommend giving to untrusted users. This vulnerability is fixed in 17.4.8 and 17.10.1.",
+      "time": "2026-04-11 09:31:33"
+    },
+    {
       "cve_id": "CVE-2026-23869",
       "title": "漏洞仓库: CVE-2026-23869-Exploit",
       "cvss_score": null,
@@ -267,19 +280,6 @@
       "source": "GitHub",
       "cve_overviews": "The Perfmatters plugin for WordPress is vulnerable to arbitrary file deletion via path traversal in all versions up to, and including, 2.5.9.1. This is due to the `PMCS::action_handler()` method processing the `$_GET['delete']` parameter without any sanitization, authorization check, or nonce verification. The unsanitized filename is concatenated with the storage directory path and passed to `unlink()`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary files on the server by using `../` path traversal sequences, including `wp-config.php` which would force WordPress into the installation wizard and allow full site takeover.",
       "time": "2026-04-11 04:49:30"
-    },
-    {
-      "cve_id": "CVE-2026-30862",
-      "title": "漏洞仓库: CVE-2026-30862",
-      "cvss_score": null,
-      "published_date": "2026-03-09T13:24:42Z",
-      "updated_date": "2026-04-10T22:48:05Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-30862 | appsmith Privilege Escalation(xss)",
-      "refs": "https://github.com/drkim-dev/CVE-2026-30862",
-      "source": "GitHub",
-      "cve_overviews": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 1.96, a Critical Stored XSS vulnerability exists in the Table Widget (TableWidgetV2). The root cause is a lack of HTML sanitization in the React component rendering pipeline, allowing malicious attributes to be interpolated into the DOM. By leveraging the \"Invite Users\" feature, an attacker with a regular user account (user@gmail.com) can force a System Administrator to execute a high-privileged API call (/api/v1/admin/env), resulting in a Full Administrative Account Takeover. This vulnerability is fixed in 1.96.",
-      "time": "2026-04-11 01:20:27"
     }
   ]
 }
