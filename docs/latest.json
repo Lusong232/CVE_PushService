@@ -1,6 +1,30 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-39987",
+      "title": "漏洞仓库: CVE-2026-39987",
+      "cvss_score": null,
+      "published_date": "2026-04-12T21:12:35Z",
+      "updated_date": "2026-04-12T21:12:35Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-39987",
+      "refs": "https://github.com/0xBlackash/CVE-2026-39987",
+      "source": "GitHub",
+      "cve_overviews": "marimo is a reactive Python notebook. Prior to 0.23.0, Marimo has a Pre-Auth RCE vulnerability. The terminal WebSocket endpoint /terminal/ws lacks authentication validation, allowing an unauthenticated attacker to obtain a full PTY shell and execute arbitrary system commands. Unlike other WebSocket endpoints (e.g., /ws) that correctly call validate_auth() for authentication, the /terminal/ws endpoint only checks the running mode and platform support before accepting connections, completely skipping authentication verification. This vulnerability is fixed in 0.23.0.",
+      "time": "2026-04-12 21:24:53"
+    },
+    {
+      "cve_id": "CVE-2026-40393",
+      "title": "高危漏洞: CVE-2026-40393 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-12T19:16:20.797",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Mesa before 25.3.6 and 26 before 26.0.1, out-of-bounds memory access can occur in WebGPU because the amount of to-be-allocated data depends on an untrusted party, and is then used for alloca.",
+      "refs": "https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/39866\nhttps://lists.freedesktop.org/archives/mesa-dev/2026-February/226597.html",
+      "source": "NVD",
+      "time": "2026-04-12 21:24:43"
+    },
+    {
       "cve_id": "CVE-2024-25082, CVE-2025-2945, CVE-2025-59528, CVE-2025-66034, CVE-2025-8110, CVE-2026-23520",
       "title": "漏洞仓库: HTB",
       "cvss_score": null,
@@ -264,28 +288,6 @@
       "refs": "https://github.com/zhayujie/chatgpt-on-wechat/issues/2733\nhttps://github.com/zhayujie/chatgpt-on-wechat/issues/2733#issue-4177804035\nhttps://vuldb.com/submit/793554",
       "source": "NVD",
       "time": "2026-04-12 12:39:16"
-    },
-    {
-      "cve_id": "CVE-2026-6124",
-      "title": "高危漏洞: CVE-2026-6124 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-12T09:16:18.163",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Tenda F451 1.0.0.7. This vulnerability affects the function fromSafeMacFilter of the file /goform/SafeMacFilter of the component httpd. Executing a manipulation of the argument page/menufacturer can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/Jimi-Lab/cve/issues/16\nhttps://vuldb.com/submit/792874\nhttps://vuldb.com/vuln/356987",
-      "source": "NVD",
-      "time": "2026-04-12 12:39:11"
-    },
-    {
-      "cve_id": "CVE-2026-6123",
-      "title": "高危漏洞: CVE-2026-6123 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-12T09:16:17.060",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda F451 1.0.0.7. This affects the function fromAddressNat of the file /goform/addressNat of the component httpd. Performing a manipulation of the argument entrys results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
-      "refs": "https://github.com/Jimi-Lab/cve/issues/15\nhttps://vuldb.com/submit/792873\nhttps://vuldb.com/submit/792879",
-      "source": "NVD",
-      "time": "2026-04-12 12:39:05"
     }
   ]
 }
