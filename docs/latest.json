@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6114",
+      "title": "高危漏洞: CVE-2026-6114 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-12T04:16:49.267",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Totolink A7100RU 7.4cu.2313_b20191024. Affected by this issue is the function setNetworkCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Performing a manipulation of the argument proto results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_179/README.md\nhttps://vuldb.com/submit/792247\nhttps://vuldb.com/vuln/356974",
+      "source": "NVD",
+      "time": "2026-04-12 05:16:00"
+    },
+    {
+      "cve_id": "CVE-2026-6113",
+      "title": "高危漏洞: CVE-2026-6113 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-12T04:16:49.037",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Totolink A7100RU 7.4cu.2313_b20191024. Affected by this vulnerability is the function setTtyServiceCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Such manipulation of the argument ttyEnable leads to os command injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_178/README.md\nhttps://vuldb.com/submit/792246\nhttps://vuldb.com/vuln/356973",
+      "source": "NVD",
+      "time": "2026-04-12 05:15:56"
+    },
+    {
+      "cve_id": "CVE-2026-6112",
+      "title": "高危漏洞: CVE-2026-6112 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-12T04:16:47.133",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Totolink A7100RU 7.4cu.2313_b20191024. Affected is the function setRadvdCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument maxRtrAdvInterval causes os command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_177/README.md\nhttps://vuldb.com/submit/792245\nhttps://vuldb.com/vuln/356972",
+      "source": "NVD",
+      "time": "2026-04-12 05:15:51"
+    },
+    {
+      "cve_id": "CVE-2026-6110",
+      "title": "高危漏洞: CVE-2026-6110 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-12T03:16:08.630",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in FoundationAgents MetaGPT up to 0.8.1. This affects the function generate_thoughts of the file metagpt/strategy/tot.py of the component Tree-of-Thought Solver. The manipulation leads to code injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/FoundationAgents/MetaGPT/\nhttps://github.com/FoundationAgents/MetaGPT/issues/1933\nhttps://github.com/FoundationAgents/MetaGPT/pull/1946",
+      "source": "NVD",
+      "time": "2026-04-12 05:15:44"
+    },
+    {
+      "cve_id": "CVE-2026-1116",
+      "title": "高危漏洞: CVE-2026-1116 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-04-12T03:16:07.600",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "A Cross-site Scripting (XSS) vulnerability was identified in the `from_dict` method of the `AppLollmsMessage` class in parisneo/lollms prior to version 2.2.0. The vulnerability arises from the lack of sanitization or HTML encoding of the `content` field when deserializing user-provided data. This allows an attacker to inject malicious HTML or JavaScript payloads, which can be executed in the context of another user's browser. Exploitation of this vulnerability can lead to account takeover, session hijacking, or wormable attacks.",
+      "refs": "https://github.com/parisneo/lollms/commit/9767b882dbc893c388a286856beeaead69b8292a\nhttps://huntr.com/bounties/d3d076a7-2a51-4e07-8d0e-91e28e76788e",
+      "source": "NVD",
+      "time": "2026-04-12 05:15:37"
+    },
+    {
       "cve_id": "CVE-2026-22243",
       "title": "漏洞仓库: CVE-2026-22243",
       "cvss_score": null,
@@ -255,67 +310,6 @@
       "source": "GitHub",
       "cve_overviews": "Black is the uncompromising Python code formatter. Black provides a GitHub action for formatting code. This action supports an option, use_pyproject: true, for reading the version of Black to use from the repository pyproject.toml. A malicious pull request could edit pyproject.toml to use a direct URL reference to a malicious repository. This could lead to arbitrary code execution in the context of the GitHub Action. Attackers could then gain access to secrets or permissions available in the context of the action. Version 26.3.0 fixes this vulnerability.",
       "time": "2026-04-11 15:24:21"
-    },
-    {
-      "cve_id": "CVE-2026-22557",
-      "title": "漏洞仓库: CVE-2026-22557-PoC",
-      "cvss_score": null,
-      "published_date": "2026-04-11T14:21:58Z",
-      "updated_date": "2026-04-11T14:33:16Z",
-      "vector_string": "N/A",
-      "description": "PoC for UniFi Network Application Pre-Auth Path Traversal (CVE-2026-22557)",
-      "refs": "https://github.com/ThePotatoOfDoom/CVE-2026-22557-PoC",
-      "source": "GitHub",
-      "cve_overviews": "A malicious actor with access to the network could exploit a Path Traversal vulnerability found in the UniFi Network Application to access files on the underlying system that could be manipulated to access an underlying account.",
-      "time": "2026-04-11 15:24:10"
-    },
-    {
-      "cve_id": "CVE-2026-39866",
-      "title": "漏洞仓库: CVE-2026-39866",
-      "cvss_score": null,
-      "published_date": "2026-04-11T15:01:15Z",
-      "updated_date": "2026-04-11T15:22:08Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/abhayclasher/CVE-2026-39866",
-      "source": "GitHub",
-      "cve_overviews": "No English description available for this CVE.",
-      "time": "2026-04-11 15:24:01"
-    },
-    {
-      "cve_id": "CVE-2026-5809",
-      "title": "高危漏洞: CVE-2026-5809 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-11T08:16:05.503",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "The wpForo Forum plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to and including 3.0.2. This is due to a two-step logic flaw: the topic_add() and topic_edit() action handlers accept arbitrary user-supplied data[*] arrays from $_REQUEST and store them as postmeta without restricting which fields may contain array values. Because 'body' is included in the allowed topic fields list, an attacker can supply data[body][fileurl] with an arbitrary file path (e.g., wp-config.php or an absolute server path). This poisoned fileurl is persisted to the plugin's custom postmeta database table. Subsequently, when the attacker submits wpftcf_delete[]=body on a topic_edit request, the add_file() method retrieves the stored postmeta record, extracts the attacker-controlled fileurl, passes it through wpforo_fix_upload_dir() which only rewrites legitimate wpforo upload paths and returns all other paths unchanged, and then calls wp_delete_file() on the unvalidated path. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files writable by the PHP process on the server, including critical files such as wp-config.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wpforo/tags/3.0.2/classes/Actions.php#L746\nhttps://plugins.trac.wordpress.org/browser/wpforo/tags/3.0.2/classes/Actions.php#L761\nhttps://plugins.trac.wordpress.org/browser/wpforo/tags/3.0.2/classes/PostMeta.php#L402",
-      "source": "NVD",
-      "time": "2026-04-11 12:35:10"
-    },
-    {
-      "cve_id": "CVE-2026-34621",
-      "title": "高危漏洞: CVE-2026-34621 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-04-11T07:16:03.633",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/acrobat/apsb26-43.html",
-      "source": "NVD",
-      "time": "2026-04-11 12:35:00"
-    },
-    {
-      "cve_id": "CVE-2026-33229",
-      "title": "漏洞仓库: CVE-2026-33229",
-      "cvss_score": null,
-      "published_date": "2026-04-11T08:18:52Z",
-      "updated_date": "2026-04-11T08:31:31Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/azefzafyoussef/CVE-2026-33229",
-      "source": "GitHub",
-      "cve_overviews": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Prior to 17.4.8 and 17.10.1, an improperly protected scripting API allows any user with script right to bypass the sandboxing of the Velocity scripting API and execute, e.g., arbitrary Python scripts, allowing full access to the XWiki instance and thereby compromising the confidentiality, integrity and availability of the whole instance. Note that script right already constitutes a high level of access that we don't recommend giving to untrusted users. This vulnerability is fixed in 17.4.8 and 17.10.1.",
-      "time": "2026-04-11 09:31:33"
     }
   ]
 }
