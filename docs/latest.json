@@ -1,6 +1,45 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2024-25082, CVE-2025-2945, CVE-2025-59528, CVE-2025-66034, CVE-2025-8110, CVE-2026-23520",
+      "title": "漏洞仓库: HTB",
+      "cvss_score": null,
+      "published_date": "2026-02-22T14:54:39Z",
+      "updated_date": "2026-04-12T15:19:56Z",
+      "vector_string": "N/A",
+      "description": "HackTheBox (HTB) writeups and exploit kits: Silentium, VariaType, Fries, Garfield, Hercules, Kobold, Pirate, CCTV, DevArea, HiddenPath, LockedAway, Interpreter — CVE-2025-59528, CVE-2025-8110, CVE-2025-2945, CVE-2026-23520, CVE-2025-66034, CVE-2024-25082",
+      "refs": "https://github.com/secopssite/HTB",
+      "source": "GitHub",
+      "cve_overviews": "Splinefont in FontForge through 20230101 allows command injection via crafted archives or compressed files.\nRemote Code Execution security vulnerability in pgAdmin 4  (Query Tool and Cloud Deployment modules).\n\nThe vulnerability is associated with the 2 POST endpoints; /sqleditor/query_tool/download, where the query_commited parameter and /cloud/deploy endpoint, where the high_availability parameter is unsafely passed to the Python eval() function, allowing arbitrary code execution.\n\n\nThis issue affects pgAdmin 4: before 9.2.\nFlowise is a drag & drop user interface to build a customized large language model flow. In version 3.0.5, Flowise is vulnerable to remote code execution. The CustomMCP node allows users to input configuration settings for connecting to an external MCP server. This node parses the user-provided mcpServerConfig string to build the MCP server configuration. However, during this process, it executes JavaScript code without any security validation. Specifically, inside the convertToValidJSONString function, user input is directly passed to the Function() constructor, which evaluates and executes the input as JavaScript code. Since this runs with full Node.js runtime privileges, it can access dangerous modules such as child_process and fs. This issue has been patched in version 3.0.6.\nfontTools is a library for manipulating fonts, written in Python. In versions from 4.33.0 to before 4.60.2, the fonttools varLib (or python3 -m fontTools.varLib) script has an arbitrary file write vulnerability that leads to remote code execution when a malicious .designspace file is processed. The vulnerability affects the main() code path of fontTools.varLib, used by the fonttools varLib CLI and any code that invokes fontTools.varLib.main(). This issue has been patched in version 4.60.2.\nImproper Symbolic link handling in the PutContents API in Gogs allows Local Execution of Code.\nArcane provides modern docker management. Prior to 1.13.0, Arcane has a command injection in the updater service. Arcane’s updater service supported lifecycle labels com.getarcaneapp.arcane.lifecycle.pre-update and com.getarcaneapp.arcane.lifecycle.post-update that allowed defining a command to run before or after a container update. The label value is passed directly to /bin/sh -c without sanitization or validation. Because any authenticated user (not limited to administrators) can create projects through the API, an attacker can create a project that specifies one of these lifecycle labels with a malicious command. When an administrator later triggers a container update (either manually or via scheduled update checks), Arcane reads the lifecycle label and executes its value as a shell command inside the container. This vulnerability is fixed in 1.13.0.",
+      "time": "2026-04-12 18:34:40"
+    },
+    {
+      "cve_id": "CVE-2026-33017",
+      "title": "漏洞仓库: CVE-2026-33017-Exploit",
+      "cvss_score": null,
+      "published_date": "2026-04-12T15:44:31Z",
+      "updated_date": "2026-04-12T15:44:41Z",
+      "vector_string": "N/A",
+      "description": "Exploit for CVE-2026-33017 — Unauthenticated RCE in Langflow <= 1.8.2 via exec() in flow build endpoint",
+      "refs": "https://github.com/oscar-mine/CVE-2026-33017-Exploit",
+      "source": "GitHub",
+      "cve_overviews": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
+      "time": "2026-04-12 18:34:17"
+    },
+    {
+      "cve_id": "CVE-2026-23980",
+      "title": "漏洞仓库: CVE-2026-23980-Exploit",
+      "cvss_score": null,
+      "published_date": "2026-04-12T15:44:33Z",
+      "updated_date": "2026-04-12T15:44:42Z",
+      "vector_string": "N/A",
+      "description": "Exploit for CVE-2026-23980 — Authenticated error-based SQL injection in Apache Superset < 6.0.0 via sqlExpression bypass",
+      "refs": "https://github.com/oscar-mine/CVE-2026-23980-Exploit",
+      "source": "GitHub",
+      "cve_overviews": "Improper Neutralization of Special Elements used in a SQL Command ('SQL Injection') vulnerability in Apache Superset allows an authenticated user with read access to conduct error-based SQL injection via the sqlExpression or where parameters.\n\nThis issue affects Apache Superset: before 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.0, which fixes the issue.",
+      "time": "2026-04-12 18:34:09"
+    },
+    {
       "cve_id": "CVE-2019-25713",
       "title": "高危漏洞: CVE-2019-25713 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -247,39 +286,6 @@
       "refs": "https://github.com/Jimi-Lab/cve/issues/15\nhttps://vuldb.com/submit/792873\nhttps://vuldb.com/submit/792879",
       "source": "NVD",
       "time": "2026-04-12 12:39:05"
-    },
-    {
-      "cve_id": "CVE-2026-6122",
-      "title": "高危漏洞: CVE-2026-6122 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-12T08:16:37.700",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Tenda F451 1.0.0.7. Affected by this issue is the function frmL7ProtForm of the file /goform/L7Prot of the component httpd. Such manipulation of the argument page leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/Jimi-Lab/cve/issues/14\nhttps://vuldb.com/submit/792872\nhttps://vuldb.com/vuln/356985",
-      "source": "NVD",
-      "time": "2026-04-12 12:39:00"
-    },
-    {
-      "cve_id": "CVE-2026-6121",
-      "title": "高危漏洞: CVE-2026-6121 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-12T08:16:36.467",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Tenda F451 1.0.0.7. Affected by this vulnerability is the function WrlclientSet of the file /goform/WrlclientSet of the component httpd. This manipulation of the argument GO causes stack-based buffer overflow. The attack may be initiated remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/Jimi-Lab/cve/issues/12\nhttps://vuldb.com/submit/792865\nhttps://vuldb.com/vuln/356984",
-      "source": "NVD",
-      "time": "2026-04-12 12:38:56"
-    },
-    {
-      "cve_id": "CVE-2026-6120",
-      "title": "高危漏洞: CVE-2026-6120 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-12T06:16:22.187",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda F451 1.0.0.7. Affected is the function fromDhcpListClient of the file /goform/DhcpListClient of the component httpd. The manipulation of the argument page results in stack-based buffer overflow. The attack can be launched remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/Jimi-Lab/cve/issues/11\nhttps://vuldb.com/submit/792864\nhttps://vuldb.com/vuln/356983",
-      "source": "NVD",
-      "time": "2026-04-12 12:38:50"
     }
   ]
 }
