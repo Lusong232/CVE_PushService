@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-34621",
+      "title": "漏洞仓库: CVE-2026-34621",
+      "cvss_score": null,
+      "published_date": "2026-04-13T13:00:37Z",
+      "updated_date": "2026-04-13T13:01:24Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/ercihan/CVE-2026-34621",
+      "source": "GitHub",
+      "cve_overviews": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+      "time": "2026-04-13 13:01:57"
+    },
+    {
       "cve_id": "CVE-2026-31281",
       "title": "漏洞仓库: CVE-2026-31281",
       "cvss_score": null,
@@ -271,17 +284,6 @@
       "refs": "https://consumer.huawei.com/en/support/bulletin/2026/4/\nhttps://consumer.huawei.com/en/support/bulletinvision/2026/4/",
       "source": "NVD",
       "time": "2026-04-13 05:34:22"
-    },
-    {
-      "cve_id": "CVE-2026-6152",
-      "title": "高危漏洞: CVE-2026-6152 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T03:16:03.097",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in code-projects Vehicle Showroom Management System 1.0. This issue affects some unknown processing of the file /util/StaffAddingFunction.php. This manipulation of the argument STAFF_ID causes sql injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://code-projects.org/\nhttps://github.com/zheng-lv/CVE-/issues/3\nhttps://vuldb.com/submit/796312",
-      "source": "NVD",
-      "time": "2026-04-13 05:34:18"
     }
   ]
 }
