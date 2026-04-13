@@ -1,6 +1,19 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: biotime-CVE-2026-000-Auth-rce",
+      "cvss_score": null,
+      "published_date": "2026-03-31T08:54:01Z",
+      "updated_date": "2026-04-13T15:00:43Z",
+      "vector_string": "N/A",
+      "description": "Biotime 9.5 auth rce ",
+      "refs": "https://github.com/r3m0t3nu11/biotime-CVE-2026-000-Auth-rce",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-13 16:07:00"
+    },
+    {
       "cve_id": "CVE-2026-34621",
       "title": "漏洞仓库: CVE-2026-34621",
       "cvss_score": null,
@@ -273,17 +286,6 @@
       "refs": "https://consumer.huawei.com/en/support/bulletin/2026/4/\nhttps://consumer.huawei.com/en/support/bulletinwearables/2026/4/",
       "source": "NVD",
       "time": "2026-04-13 05:34:29"
-    },
-    {
-      "cve_id": "CVE-2026-34853",
-      "title": "高危漏洞: CVE-2026-34853 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-13T04:16:12.217",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Permission bypass vulnerability in the LBS module.\nImpact: Successful exploitation of this vulnerability may affect availability.",
-      "refs": "https://consumer.huawei.com/en/support/bulletin/2026/4/\nhttps://consumer.huawei.com/en/support/bulletinvision/2026/4/",
-      "source": "NVD",
-      "time": "2026-04-13 05:34:22"
     }
   ]
 }
