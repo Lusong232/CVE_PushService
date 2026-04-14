@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-40313",
+      "title": "高危漏洞: CVE-2026-40313 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-14T04:17:13.890",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "PraisonAI is a multi-agent teams system. In versions 4.5.139 and below, the GitHub Actions workflows are vulnerable to ArtiPACKED attack, a known credential leakage vector caused by using actions/checkout without setting persist-credentials: false. By default, actions/checkout writes the GITHUB_TOKEN (and sometimes ACTIONS_RUNTIME_TOKEN) into the .git/config file for persistence, and if any subsequent workflow step uploads artifacts (build outputs, logs, test results, etc.), these tokens can be inadvertently included. Since PraisonAI is a public repository, any user with read access can download these artifacts and extract the leaked tokens, potentially enabling an attacker to push malicious code, poison releases and PyPI/Docker packages, steal repository secrets, and execute a full supply chain compromise affecting all downstream users. The issue spans numerous workflow and action files across .github/workflows/ and .github/actions/. This issue has been fixed in version 4.5.140.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-3959-6v5q-45q2\nhttps://thehackernews.com/2024/08/github-vulnerability-artipacked-exposes.html\nhttps://unit42.paloaltonetworks.com/github-repo-artifacts-leak-tokens",
+      "source": "NVD",
+      "time": "2026-04-14 05:16:30"
+    },
+    {
+      "cve_id": "CVE-2026-40289",
+      "title": "高危漏洞: CVE-2026-40289 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-14T04:17:12.710",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "PraisonAI is a multi-agent teams system. In versions below 4.5.139 of PraisonAI and 1.5.140 of praisonaiagents, the browser bridge (praisonai browser start) is vulnerable to unauthenticated remote session hijacking due to missing authentication and a bypassable origin check on its /ws WebSocket endpoint. The server binds to 0.0.0.0 by default and only validates the Origin header when one is present, meaning any non-browser client that omits the header is accepted without restriction. An unauthenticated network attacker can connect, send a start_session message, and the server will route it to the first idle browser-extension WebSocket (effectively hijacking that session) and then broadcast all resulting automation actions and outputs back to the attacker. This enables unauthorized remote control of connected browser automation sessions, leakage of sensitive page context and automation results, and misuse of model-backed browser actions in any environment where the bridge is network-reachable. This issue has been fixed in versions 4.5.139 of PraisonAI and 1.5.140 of praisonaiagents.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-8x8f-54wf-vv92",
+      "source": "NVD",
+      "time": "2026-04-14 05:16:26"
+    },
+    {
+      "cve_id": "CVE-2026-40288",
+      "title": "高危漏洞: CVE-2026-40288 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-14T04:17:12.210",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "PraisonAI is a multi-agent teams system. In versions below 4.5.139 of PraisonAI and 1.5.140 of praisonaiagents, the workflow engine is vulnerable to arbitrary command and code execution through untrusted YAML files. When praisonai workflow run <file.yaml> loads a YAML file with type: job, the JobWorkflowExecutor in job_workflow.py processes steps that support run: (shell commands via subprocess.run()), script: (inline Python via exec()), and python: (arbitrary Python script execution)—all without any validation, sandboxing, or user confirmation. The affected code paths include action_run() in workflow.py and _exec_shell(), _exec_inline_python(), and _exec_python_script() in job_workflow.py. An attacker who can supply or influence a workflow YAML file (particularly in CI pipelines, shared repositories, or multi-tenant deployment environments) can achieve full arbitrary command execution on the host system, compromising the machine and any accessible data or credentials. This issue has been fixed in versions 4.5.139 of PraisonAI and 1.5.140 of praisonaiagents.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-vc46-vw85-3wvm",
+      "source": "NVD",
+      "time": "2026-04-14 05:16:19"
+    },
+    {
+      "cve_id": "CVE-2026-40287",
+      "title": "高危漏洞: CVE-2026-40287 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-04-14T04:17:11.977",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "PraisonAI is a multi-agent teams system. Versions 4.5.138 and below are vulnerable to arbitrary code execution through automatic, unsanitized import of a tools.py file from the current working directory. Components including call.py (import_tools_from_file()), tool_resolver.py (_load_local_tools()), and CLI tool-loading paths blindly import ./tools.py at startup without any validation, sandboxing, or user confirmation. An attacker who can place a malicious tools.py in the directory where PraisonAI is launched (such as through a shared project, cloned repository, or writable workspace) achieves immediate arbitrary Python code execution in the host environment. This compromises the full PraisonAI process, the host system, and any connected data or credentials. This issue has been fixed in version 4.5.139.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-g985-wjh9-qxxc",
+      "source": "NVD",
+      "time": "2026-04-14 05:16:11"
+    },
+    {
+      "cve_id": "CVE-2026-6264",
+      "title": "高危漏洞: CVE-2026-6264 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-14T03:16:09.050",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A critical vulnerability in the Talend JobServer and Talend Runtime allows unauthenticated remote code execution via the JMX monitoring port. The attack vector is the JMX monitoring port of the Talend JobServer. The vulnerability can be mitigated for the Talend JobServer by requiring TLS client authentication for the monitoring port; however, the patch must be applied for full mitigation. For Talend ESB Runtime, the vulnerability can be mitigated by disabling the JobServer JMX monitoring port, which is disabled by default from the R2024-07-RT patch.",
+      "refs": "https://community.qlik.com/t5/Official-Support-Articles/Critical-Security-fix-for-the-Qlik-Talend-JobServer-and-Talend/tac-p/2541974",
+      "source": "NVD",
+      "time": "2026-04-14 05:16:06"
+    },
+    {
+      "cve_id": "CVE-2026-6227",
+      "title": "高危漏洞: CVE-2026-6227 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-14T03:16:08.887",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The BackWPup plugin for WordPress is vulnerable to Local File Inclusion via the `block_name` parameter of the `/wp-json/backwpup/v1/getblock` REST endpoint in all versions up to, and including, 5.6.6 due to a non-recursive `str_replace()` sanitization of path traversal sequences. This makes it possible for authenticated attackers, with Administrator-level access and above, to include arbitrary PHP files on the server via crafted traversal sequences (e.g., `....//`), which can be leveraged to read sensitive files such as `wp-config.php` or achieve remote code execution in certain configurations. Administrators have the ability to grant individual users permission to handle backups, which may then allow lower-level users to exploit this vulnerability.",
+      "refs": "https://plugins.trac.wordpress.org/browser/backwpup/tags/5.6.5/inc/Utils/BackWPupHelpers.php#L23\nhttps://plugins.trac.wordpress.org/browser/backwpup/tags/5.6.5/inc/Utils/BackWPupHelpers.php#L40\nhttps://plugins.trac.wordpress.org/browser/backwpup/tags/5.6.5/src/Frontend/API/Rest.php#L52",
+      "source": "NVD",
+      "time": "2026-04-14 05:16:01"
+    },
+    {
+      "cve_id": "CVE-2026-4388",
+      "title": "高危漏洞: CVE-2026-4388 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-14T03:16:08.720",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Form Maker by 10Web plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Matrix field (Text Box input type) in form submissions in all versions up to, and including, 1.15.40. This is due to insufficient input sanitization (`sanitize_text_field` strips tags but not quotes) and missing output escaping when rendering submission data in the admin Submissions view. This makes it possible for unauthenticated attackers to inject arbitrary JavaScript through a form submission that executes in the browser of an administrator who views the submission details.",
+      "refs": "https://plugins.trac.wordpress.org/browser/form-maker/tags/1.15.37/admin/views/FormMakerSubmits.php#L166\nhttps://plugins.trac.wordpress.org/browser/form-maker/tags/1.15.37/admin/views/FormMakerSubmits.php#L169\nhttps://plugins.trac.wordpress.org/browser/form-maker/tags/1.15.37/frontend/models/form_maker.php#L2352",
+      "source": "NVD",
+      "time": "2026-04-14 05:15:54"
+    },
+    {
+      "cve_id": "CVE-2026-4365",
+      "title": "高危漏洞: CVE-2026-4365 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-14T02:16:05.767",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The LearnPress plugin for WordPress is vulnerable to unauthorized data deletion due to a missing capability check on the `delete_question_answer()` function in all versions up to, and including, 4.3.2.8. The plugin exposes a `wp_rest` nonce in public frontend HTML (`lpData`) to unauthenticated visitors, and uses that nonce as the only security gate for the `lp-load-ajax` AJAX dispatcher. The `delete_question_answer` action has no capability or ownership check. This makes it possible for unauthenticated attackers to delete any quiz answer option by sending a crafted POST request with a publicly available nonce.",
+      "refs": "https://plugins.trac.wordpress.org/browser/learnpress/trunk/inc/Ajax/AbstractAjax.php#L33\nhttps://plugins.trac.wordpress.org/browser/learnpress/trunk/inc/Ajax/EditQuestionAjax.php#L285\nhttps://plugins.trac.wordpress.org/browser/learnpress/trunk/inc/class-lp-assets.php#L177",
+      "source": "NVD",
+      "time": "2026-04-14 05:15:48"
+    },
+    {
+      "cve_id": "CVE-2026-4352",
+      "title": "高危漏洞: CVE-2026-4352 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-14T02:16:05.613",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The JetEngine plugin for WordPress is vulnerable to SQL Injection via the Custom Content Type (CCT) REST API search endpoint in all versions up to, and including, 3.8.6.1. This is due to the `_cct_search` parameter being interpolated directly into a SQL query string via `sprintf()` without sanitization or use of `$wpdb->prepare()`. WordPress REST API's `wp_unslash()` call on `$_GET` strips the `wp_magic_quotes()` protection, allowing single-quote-based injection. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The Custom Content Types module must be enabled with at least one CCT configured with a public REST GET endpoint for exploitation.",
+      "refs": "https://crocoblock.com/plugins/jetengine/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/29a5701f-92f7-4a02-a990-b189a381cff5?source=cve",
+      "source": "NVD",
+      "time": "2026-04-14 05:15:44"
+    },
+    {
+      "cve_id": "CVE-2026-34256",
+      "title": "高危漏洞: CVE-2026-34256 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-04-14T01:16:03.530",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+      "description": "Due to a missing authorization check in SAP ERP and SAP S/4HANA (Private Cloud and On-Premise), an authenticated attacker could execute a particular ABAP report to overwrite any existing eight?character executable ABAP report without authorization. If the overwritten report is subsequently executed, the intended functionality could become unavailable. Successful exploitation impacts availability, with a limited impact on integrity confined to the affected report, while confidentiality remains unaffected.",
+      "refs": "https://me.sap.com/notes/3731908\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-04-14 05:15:38"
+    },
+    {
+      "cve_id": "CVE-2026-40164",
+      "title": "高危漏洞: CVE-2026-40164 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-14T00:16:07.360",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "jq is a command-line JSON processor. Before commit 0c7d133c3c7e37c00b6d46b658a02244fdd3c784, jq used MurmurHash3 with a hardcoded, publicly visible seed (0x432A9843) for all JSON object hash table operations, which allowed an attacker to precompute key collisions offline. By supplying a crafted JSON object (~100 KB) where all keys hashed to the same bucket, hash table lookups degraded from O(1) to O(n), turning any jq expression into an O(n²) operation and causing significant CPU exhaustion. This affected common jq use cases such as CI/CD pipelines, web services, and data processing scripts, and was far more practical to exploit than existing heap overflow issues since it required only a small payload. This issue has been patched in commit 0c7d133c3c7e37c00b6d46b658a02244fdd3c784.",
+      "refs": "https://github.com/jqlang/jq/commit/0c7d133c3c7e37c00b6d46b658a02244fdd3c784\nhttps://github.com/jqlang/jq/security/advisories/GHSA-wwj8-gxm6-jc29",
+      "source": "NVD",
+      "time": "2026-04-14 05:15:33"
+    },
+    {
+      "cve_id": "CVE-2026-27681",
+      "title": "高危漏洞: CVE-2026-27681 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-04-14T00:16:06.560",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Due to insufficient authorization checks in SAP Business Planning and Consolidation and SAP Business Warehouse, an authenticated user can execute crafted SQL statements to read, modify, and delete database data. This leads to a high impact on the confidentiality, integrity, and availability of the system.",
+      "refs": "https://me.sap.com/notes/3719353\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-04-14 05:15:29"
+    },
+    {
       "cve_id": "none",
       "title": "漏洞仓库: CVE-2026-34621-POC",
       "cvss_score": null,
@@ -150,138 +282,6 @@
       "refs": "http://nitro.com",
       "source": "NVD",
       "time": "2026-04-14 01:29:06"
-    },
-    {
-      "cve_id": "CVE-2025-66769",
-      "title": "高危漏洞: CVE-2025-66769 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T16:16:24.620",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A NULL pointer dereference in Nitro PDF Pro for Windows v14.41.1.4 allows attackers to cause a Denial of Service (DoS) via a crafted XFA packet.",
-      "refs": "https://jeroscope.com/advisories/2025/jero-2025-015/\nhttps://www.gonitro.com/",
-      "source": "NVD",
-      "time": "2026-04-14 01:29:01"
-    },
-    {
-      "cve_id": "CVE-2026-30999",
-      "title": "高危漏洞: CVE-2026-30999 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T15:17:32.827",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A heap buffer overflow in the av_bprint_finalize() function of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
-      "refs": "https://excellent-oatmeal-319.notion.site/CVE-2026-30999-Memory-Leak-e0d88ac53e2e42c1b5ef9aa3497e27b6\nhttps://ffmpeg.org/doxygen/7.0/zmqsend_8c_source.html\nhttps://github.com/FFmpeg/FFmpeg/blob/master/tools/zmqsend.c",
-      "source": "NVD",
-      "time": "2026-04-14 01:28:56"
-    },
-    {
-      "cve_id": "CVE-2026-30998",
-      "title": "高危漏洞: CVE-2026-30998 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T15:17:32.697",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An improper resource deallocation and closure vulnerability in the tools/zmqsend.c component of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input file.",
-      "refs": "https://excellent-oatmeal-319.notion.site/CVE-2026-30998-Resource-Leak-3265a71f9cca4dc58df4632ce8b60a50\nhttps://ffmpeg.org/doxygen/7.0/zmqsend_8c_source.html\nhttps://github.com/FFmpeg/FFmpeg/blob/master/tools/zmqsend.c",
-      "source": "NVD",
-      "time": "2026-04-14 01:28:51"
-    },
-    {
-      "cve_id": "CVE-2026-30997",
-      "title": "高危漏洞: CVE-2026-30997 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T15:17:32.570",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An out-of-bounds read in the read_global_param() function (libavcodec/av1dec.c) of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
-      "refs": "https://excellent-oatmeal-319.notion.site/CVE-2026-30997-Out-of-Bounds-Access-a7929817b9794568b2f7774397c7d65f\nhttps://github.com/FFmpeg/FFmpeg",
-      "source": "NVD",
-      "time": "2026-04-14 01:28:45"
-    },
-    {
-      "cve_id": "CVE-2026-6200",
-      "title": "高危漏洞: CVE-2026-6200 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T19:16:58.240",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Tenda F456 1.0.0.5. The affected element is the function formwebtypelibrary of the file /goform/webtypelibrary. This manipulation of the argument menufacturer/Go causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_117/README.md\nhttps://vuldb.com/submit/797472\nhttps://vuldb.com/vuln/357122",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:30"
-    },
-    {
-      "cve_id": "CVE-2026-6199",
-      "title": "高危漏洞: CVE-2026-6199 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T19:16:58.033",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda F456 1.0.0.5. Impacted is the function fromqossetting of the file /goform/qossetting. The manipulation of the argument page results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_116/README.md\nhttps://vuldb.com/submit/797471\nhttps://vuldb.com/vuln/357121",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:23"
-    },
-    {
-      "cve_id": "CVE-2026-6198",
-      "title": "高危漏洞: CVE-2026-6198 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T19:16:57.817",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Tenda F456 1.0.0.5. This issue affects the function fromNatStaticSetting of the file /goform/NatStaticSetting. The manipulation of the argument page leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_115/README.md\nhttps://vuldb.com/submit/797470\nhttps://vuldb.com/vuln/357120",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:18"
-    },
-    {
-      "cve_id": "CVE-2026-6197",
-      "title": "高危漏洞: CVE-2026-6197 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T19:16:57.610",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Tenda F456 1.0.0.5. This vulnerability affects the function formWrlsafeset of the file /goform/AdvSetWrlsafeset. Executing a manipulation of the argument mit_ssid can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been published and may be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_114/README.md\nhttps://vuldb.com/submit/797468\nhttps://vuldb.com/vuln/357119",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:14"
-    },
-    {
-      "cve_id": "CVE-2026-40044",
-      "title": "高危漏洞: CVE-2026-40044 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-13T19:16:52.290",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pachno 1.0.6 contains a deserialization vulnerability that allows unauthenticated attackers to execute arbitrary code by injecting malicious serialized objects into cache files. Attackers can write PHP object payloads to world-writable cache files with predictable names in the cache directory, which are unserialized during framework bootstrap before authentication checks occur.",
-      "refs": "https://www.vulncheck.com/advisories/pachno-filecache-deserialization-remote-code-execution\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5986.php",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:10"
-    },
-    {
-      "cve_id": "CVE-2026-40042",
-      "title": "高危漏洞: CVE-2026-40042 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-13T19:16:51.960",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pachno 1.0.6 contains an XML external entity injection vulnerability that allows unauthenticated attackers to read arbitrary files by exploiting unsafe XML parsing in the TextParser helper. Attackers can inject malicious XML entities through wiki table syntax and inline tags in issue descriptions, comments, and wiki articles to trigger entity resolution via simplexml_load_string() without LIBXML_NONET restrictions.",
-      "refs": "https://www.vulncheck.com/advisories/pachno-wiki-textparser-xml-external-entity-injection\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5984.php",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:05"
-    },
-    {
-      "cve_id": "CVE-2026-40040",
-      "title": "高危漏洞: CVE-2026-40040 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T19:16:51.617",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pachno 1.0.6 contains an unrestricted file upload vulnerability that allows authenticated users to upload arbitrary file types by bypassing ineffective extension filtering to the /uploadfile endpoint. Attackers can upload executable files .php5 scripts to web-accessible directories and execute them to achieve remote code execution on the server.",
-      "refs": "https://www.vulncheck.com/advisories/pachno-unrestricted-file-upload-remote-code-execution\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5982.php",
-      "source": "NVD",
-      "time": "2026-04-13 21:40:01"
-    },
-    {
-      "cve_id": "CVE-2026-40038",
-      "title": "高危漏洞: CVE-2026-40038 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-13T19:16:51.263",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Pachno 1.0.6 contains a stored cross-site scripting vulnerability that allows attackers to execute arbitrary HTML and script code by injecting malicious payloads into POST parameters. Attackers can inject scripts through the value, comment_body, article_content, description, and message parameters across multiple controllers, which are stored in the database and executed in users' browser sessions due to improper sanitization via Request::getRawParameter() or Request::getParameter() calls.",
-      "refs": "https://www.vulncheck.com/advisories/pachno-stored-cross-site-scripting-via-multiple-parameters\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5980.php",
-      "source": "NVD",
-      "time": "2026-04-13 21:39:56"
     }
   ]
 }
