@@ -1,6 +1,45 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-35517",
+      "title": "漏洞仓库: CVE-2026-35517",
+      "cvss_score": null,
+      "published_date": "2026-04-14T06:26:12Z",
+      "updated_date": "2026-04-14T06:32:35Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-35517 Pi-hole FTLDNS Remote Code Execution via Newline Injection (CVSS 8.8). Python & Nmap NSE detection scripts with full technical breakdown. A newline character in the dns.upstreams parameter gives authenticated attackers command execution on the host. Five related injection vectors all patched in FTL v6.6.",
+      "refs": "https://github.com/keraattin/CVE-2026-35517",
+      "source": "GitHub",
+      "cve_overviews": "FTLDNS (pihole-FTL) provides an interactive API and also generates statistics for Pi-hole's Web interface. From 6.0 to before 6.6, the Pi-hole FTL engine contains a Remote Code Execution (RCE) vulnerability in the upstream DNS servers configuration parameter (dns.upstreams). This vulnerability allows an authenticated attacker to inject arbitrary dnsmasq configuration directives through newline characters, ultimately achieving command execution on the underlying system. This vulnerability is fixed in 6.6.",
+      "time": "2026-04-14 07:18:47"
+    },
+    {
+      "cve_id": "CVE-2026-40175",
+      "title": "漏洞仓库: audit-axios",
+      "cvss_score": null,
+      "published_date": "2026-04-14T05:51:04Z",
+      "updated_date": "2026-04-14T07:00:16Z",
+      "vector_string": "N/A",
+      "description": "Scan local repos for vulnerable axios versions (CVE-2026-40175) and patch interactively",
+      "refs": "https://github.com/surri/audit-axios",
+      "source": "GitHub",
+      "cve_overviews": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, the Axios library is vulnerable to a specific \"Gadget\" attack chain that allows Prototype Pollution in any third-party dependency to be escalated into Remote Code Execution (RCE) or Full Cloud Compromise (via AWS IMDSv2 bypass). This vulnerability is fixed in 1.15.0.",
+      "time": "2026-04-14 07:18:41"
+    },
+    {
+      "cve_id": "CVE-2026-22692",
+      "title": "漏洞仓库: CVE-2026-22692",
+      "cvss_score": null,
+      "published_date": "2026-04-14T05:54:02Z",
+      "updated_date": "2026-04-14T07:10:15Z",
+      "vector_string": "N/A",
+      "description": "CVE-2026-22692 - Critical Twig Sandbox Bypass via collect()->mapInto() allowing RCE/LFI/XXE in October CMS",
+      "refs": "https://github.com/lukasz-rybak/CVE-2026-22692",
+      "source": "GitHub",
+      "cve_overviews": "No English description available for this CVE.",
+      "time": "2026-04-14 07:18:34"
+    },
+    {
       "cve_id": "CVE-2026-40313",
       "title": "高危漏洞: CVE-2026-40313 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -249,39 +288,6 @@
       "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-063/e468dd4b-5090-4ef8-89d8-939903c08e83",
       "source": "NVD",
       "time": "2026-04-14 01:29:22"
-    },
-    {
-      "cve_id": "CVE-2026-33901",
-      "title": "高危漏洞: CVE-2026-33901 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T21:16:25.497",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "ImageMagick is free and open-source software used for editing and manipulating digital images. In versions below both 7.1.2-19 and 6.9.13-44, a heap buffer overflow occurs in the MVG decoder that could result in an out of bounds write when processing a crafted image. This issue has been fixed in versions 6.9.13-44 and 7.1.2-19.",
-      "refs": "https://github.com/ImageMagick/ImageMagick/commit/4c72003e9e54a4ebaa938d239e75f5d285527ebe\nhttps://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-x9h5-r9v2-vcww\nhttps://github.com/dlemstra/Magick.NET/releases/tag/14.12.0",
-      "source": "NVD",
-      "time": "2026-04-14 01:29:18"
-    },
-    {
-      "cve_id": "CVE-2026-32605",
-      "title": "高危漏洞: CVE-2026-32605 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T20:16:33.787",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "nimiq/core-rs-albatross is a Rust implementation of the Nimiq Proof-of-Stake protocol based on the Albatross consensus algorithm. Prior to version 1.3.0, an untrusted peer could crash a validator by publishing a signed tendermint proposal message where signer == validators.num_validators(). ProposalSender::send uses > instead of >= for the signer bounds check, so the equality case passes and reaches validators.get_validator_by_slot_band(signer), which panics with an out-of-bounds index before any signature verification runs. This issue has been fixed in version 1.3.0.",
-      "refs": "https://github.com/nimiq/core-rs-albatross/commit/9199364b60c7acae4219800d194bbe07d2997b8c\nhttps://github.com/nimiq/core-rs-albatross/pull/3661\nhttps://github.com/nimiq/core-rs-albatross/releases/tag/v1.3.0",
-      "source": "NVD",
-      "time": "2026-04-14 01:29:11"
-    },
-    {
-      "cve_id": "CVE-2025-69624",
-      "title": "高危漏洞: CVE-2025-69624 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-13T16:16:24.740",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Nitro PDF Pro for Windows 14.41.1.4 contains a NULL pointer dereference vulnerability in the JavaScript implementation of app.alert(). When app.alert() is called with more than one argument and the first argument evaluates to null (for example, app.alert(app.activeDocs, true) when app.activeDocs is null), the engine routes the call through a fallback path intended for non-string arguments. In this path, js_ValueToString() is invoked on the null value and returns an invalid string pointer, which is then passed to JS_GetStringChars() without validation. Dereferencing this pointer leads to an access violation and application crash when opening a crafted PDF.",
-      "refs": "http://nitro.com",
-      "source": "NVD",
-      "time": "2026-04-14 01:29:06"
     }
   ]
 }
