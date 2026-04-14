@@ -209,7 +209,7 @@ def update_latest_json(vuln_info, message):
 
     # 插入到最前面，保留最近 10 条
     latest.insert(0, new_msg)
-    data = {"latest": latest[:25]}
+    data = {"latest": latest[:100]}
 
     # 写回文件
     with open(JSON_FILE, "w", encoding="utf-8") as f:
