@@ -8,6 +8,8 @@ from pkg.utils import *
 from typing import List, Dict, Optional
 import logging
 from serverchan_sdk import sc_send
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 # 获取环境变量
 SCKEY = os.getenv("SCKEY")
@@ -273,18 +275,28 @@ def update_gh_json(repo_info):
         if overviews:
             cve_overviews_text = "\n".join(overviews)   # 完整内容
 
+    beijing_time = datetime.now(ZoneInfo("Asia/Shanghai"))
+    if repo_info['created_at']:
+        utc_str = repo_info['created_at']
+        # 假设输入格式为 "2026-04-06T05:16:01.590" 无时区标识，视为 UTC
+        # 直接解析为 naive datetime，然后加上 8 小时
+        utc_dt = datetime.fromisoformat(utc_str)
+        beijing_dt = utc_dt + timedelta(hours=8)
+        published_date = beijing_dt.strftime("%Y-%m-%d %H:%M:%S")
+    else:
+        published_date = None
     new_msg = {
         "cve_id": ', '.join(repo_info['cve_ids']) if repo_info['cve_ids'] else 'none',
         "title": f"漏洞仓库: {repo_info['name']}",
         "cvss_score": None,
-        "published_date": repo_info['created_at'],        # 创建时间
+        "published_date": published_date,        # 创建时间
         "updated_date": repo_info['pushed_at'],           # 最后更新时间
         "vector_string": "N/A",
         "description": repo_info['description'],          # 完整描述
         "refs": repo_info['url'],
         "source": "GitHub",
         "cve_overviews": cve_overviews_text,              # 完整漏洞概述
-        "time": dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")   # 修改：使用 dt.datetime
+        "time": beijing_time.strftime("%Y-%m-%d %H:%M:%S")  # 修改：使用 dt.datetime
     }
 
     # 读取现有 JSON（如果存在）
