@@ -14,6 +14,7 @@ from serverchan_sdk import sc_send
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 # 基本配置
 SCKEY = os.getenv("SCKEY")
@@ -172,11 +173,20 @@ def update_latest_json(vuln_info, message):
     """
     # 构造新消息对象（精简版，便于展示）
     beijing_time = datetime.now(ZoneInfo("Asia/Shanghai"))
+    if vuln_info.get('published_date'):
+        utc_str = vuln_info['published_date']
+        # 假设输入格式为 "2026-04-06T05:16:01.590" 无时区标识，视为 UTC
+        # 直接解析为 naive datetime，然后加上 8 小时
+        utc_dt = datetime.fromisoformat(utc_str)
+        beijing_dt = utc_dt + timedelta(hours=8)
+        published_date = beijing_dt.strftime("%Y-%m-%d %H:%M:%S")
+    else:
+        published_date = None
     new_msg = {
         "cve_id": vuln_info['id'],
         "title": f"高危漏洞: {vuln_info['id']} (CVSS {vuln_info['cvss_score']})",
         "cvss_score": vuln_info['cvss_score'],
-        "published_date": vuln_info['published_date'],
+        "published_date": published_date,
         "vector_string": vuln_info['vector_string'],
         "description": vuln_info['description'],                     # 完整描述
         "refs": vuln_info['refs'],                                   # 完整链接（换行分隔）
