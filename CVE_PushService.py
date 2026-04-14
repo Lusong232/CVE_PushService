@@ -12,6 +12,8 @@ from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
 from serverchan_sdk import sc_send
 from datetime import datetime
+from zoneinfo import ZoneInfo
+from datetime import datetime
 
 # 基本配置
 SCKEY = os.getenv("SCKEY")
@@ -169,6 +171,7 @@ def update_latest_json(vuln_info, message):
     message: 推送的完整 Markdown 内容（可选）
     """
     # 构造新消息对象（精简版，便于展示）
+    beijing_time = datetime.now(ZoneInfo("Asia/Shanghai"))
     new_msg = {
         "cve_id": vuln_info['id'],
         "title": f"高危漏洞: {vuln_info['id']} (CVSS {vuln_info['cvss_score']})",
@@ -178,7 +181,7 @@ def update_latest_json(vuln_info, message):
         "description": vuln_info['description'],                     # 完整描述
         "refs": vuln_info['refs'],                                   # 完整链接（换行分隔）
         "source": vuln_info['source'],
-        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "time": beijing_time.strftime("%Y-%m-%d %H:%M:%S")
     }
 
     # 读取现有 JSON（如果存在）
