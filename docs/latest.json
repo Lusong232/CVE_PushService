@@ -1,6 +1,201 @@
 {
   "latest": [
     {
+      "cve_id": "none",
+      "title": "漏洞仓库: CVE-2026-34621-POC",
+      "cvss_score": null,
+      "published_date": "2026-04-13T19:23:59Z",
+      "updated_date": "2026-04-13T19:31:58Z",
+      "vector_string": "N/A",
+      "description": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability that could result in arbitrary code execution in the context of the current user.",
+      "refs": "https://github.com/eduardorossi84/CVE-2026-34621-POC",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-14 01:30:13"
+    },
+    {
+      "cve_id": "CVE-2026-40175",
+      "title": "漏洞仓库: CVE-2026-40175",
+      "cvss_score": null,
+      "published_date": "2026-04-14T00:15:32Z",
+      "updated_date": "2026-04-14T00:15:32Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/kengzzzz/CVE-2026-40175",
+      "source": "GitHub",
+      "cve_overviews": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, the Axios library is vulnerable to a specific \"Gadget\" attack chain that allows Prototype Pollution in any third-party dependency to be escalated into Remote Code Execution (RCE) or Full Cloud Compromise (via AWS IMDSv2 bypass). This vulnerability is fixed in 1.15.0.",
+      "time": "2026-04-14 01:30:09"
+    },
+    {
+      "cve_id": "none",
+      "title": "漏洞仓库: onboarding-gta-9991961259350-4-14-2026-3-54-55-AM-CvE",
+      "cvss_score": null,
+      "published_date": "2026-04-14T00:54:56Z",
+      "updated_date": "2026-04-14T00:55:49Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/cortex-e2e-gh-actions/onboarding-gta-9991961259350-4-14-2026-3-54-55-AM-CvE",
+      "source": "GitHub",
+      "cve_overviews": "",
+      "time": "2026-04-14 01:30:02"
+    },
+    {
+      "cve_id": "CVE-2026-39987",
+      "title": "漏洞仓库: CVE-2026-39987_exploit",
+      "cvss_score": null,
+      "published_date": "2026-04-13T23:34:47Z",
+      "updated_date": "2026-04-14T01:23:04Z",
+      "vector_string": "N/A",
+      "description": null,
+      "refs": "https://github.com/mki9/CVE-2026-39987_exploit",
+      "source": "GitHub",
+      "cve_overviews": "marimo is a reactive Python notebook. Prior to 0.23.0, Marimo has a Pre-Auth RCE vulnerability. The terminal WebSocket endpoint /terminal/ws lacks authentication validation, allowing an unauthenticated attacker to obtain a full PTY shell and execute arbitrary system commands. Unlike other WebSocket endpoints (e.g., /ws) that correctly call validate_auth() for authentication, the /terminal/ws endpoint only checks the running mode and platform support before accepting connections, completely skipping authentication verification. This vulnerability is fixed in 0.23.0.",
+      "time": "2026-04-14 01:29:58"
+    },
+    {
+      "cve_id": "CVE-2026-6224",
+      "title": "高危漏洞: CVE-2026-6224 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-13T22:16:30.757",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in nocobase plugin-workflow-javascript up to 2.0.23. This issue affects the function createSafeConsole of the file packages/plugins/@nocobase/plugin-workflow-javascript/src/server/Vm.js. Performing a manipulation results in sandbox issue. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Pai-777/ai-cve/blob/main/docs/cve-drafts/nocobase-workflow-javascript-sandbox-escape.en.md\nhttps://vuldb.com/submit/785881\nhttps://vuldb.com/vuln/357142",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:45"
+    },
+    {
+      "cve_id": "CVE-2026-33908",
+      "title": "高危漏洞: CVE-2026-33908 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T22:16:28.997",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "ImageMagick is free and open-source software used for editing and manipulating digital images. In versions below both 7.1.2-19 and 6.9.13-44, Magick frees the memory of the XML tree via the `DestroyXMLTree()` function; however, this process is executed recursively with no depth limit imposed. When Magick processes an XML file with deeply nested structures, it will exhaust the stack memory, resulting in a Denial of Service (DoS) attack. This issue has been fixed in versions 6.9.13-44 and 7.1.2-19.",
+      "refs": "https://github.com/ImageMagick/ImageMagick/commit/ccdc01180276aa2cb3d4a32a611aa4f417061cd8\nhttps://github.com/ImageMagick/ImageMagick/releases/tag/7.1.2-19\nhttps://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-fwvm-ggf6-2p4x",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:40"
+    },
+    {
+      "cve_id": "CVE-2026-22566",
+      "title": "高危漏洞: CVE-2026-22566 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T22:16:28.437",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An Improper Access Control vulnerability could allow a malicious actor with access to the UniFi Play network to obtain UniFi Play WiFi credentials.  \n\nAffected Products:\nUniFi Play PowerAmp (Version 1.0.35 and earlier) \nUniFi Play Audio Port  (Version 1.0.24 and earlier)  \n\nMitigation:\nUpdate UniFi Play PowerAmp to Version 1.0.38 or later \nUpdate UniFi Play Audio Port  to Version 1.1.9 or later",
+      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-063/e468dd4b-5090-4ef8-89d8-939903c08e83",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:36"
+    },
+    {
+      "cve_id": "CVE-2026-22564",
+      "title": "高危漏洞: CVE-2026-22564 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-13T22:16:28.187",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An Improper Access Control vulnerability could allow a malicious actor with access to the UniFi Play network to enable SSH to make unauthorized changes to the system.  \n\nAffected Products:\nUniFi Play PowerAmp (Version 1.0.35 and earlier) \nUniFi Play Audio Port  (Version 1.0.24 and earlier)  \n\nMitigation:\nUpdate UniFi Play PowerAmp to Version 1.0.38 or later \nUpdate UniFi Play Audio Port  to Version 1.1.9 or later",
+      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-063/e468dd4b-5090-4ef8-89d8-939903c08e83",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:31"
+    },
+    {
+      "cve_id": "CVE-2026-22563",
+      "title": "高危漏洞: CVE-2026-22563 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-13T22:16:28.050",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A series of Improper Input Validation vulnerabilities could allow a Command Injection by a malicious actor with access to the UniFi Play network.\n \nAffected Products:\nUniFi Play PowerAmp (Version 1.0.35 and earlier) \nUniFi Play Audio Port  (Version 1.0.24 and earlier)  \n\nMitigation:\nUpdate UniFi Play PowerAmp to Version 1.0.38 or later \nUpdate UniFi Play Audio Port  to Version 1.1.9 or later",
+      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-063/e468dd4b-5090-4ef8-89d8-939903c08e83",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:27"
+    },
+    {
+      "cve_id": "CVE-2026-22562",
+      "title": "高危漏洞: CVE-2026-22562 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-13T22:16:27.870",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A malicious actor with access to the UniFi Play network could exploit a Path Traversal vulnerability found in the device firmware to write files on the system that could be used for a remote code execution (RCE).\n \nAffected Products:\nUniFi Play PowerAmp (Version 1.0.35 and earlier) UniFi Play Audio Port  (Version 1.0.24 and earlier)  \nMitigation:\nUpdate UniFi Play PowerAmp to Version 1.0.38 or later Update UniFi Play Audio Port  to Version 1.1.9 or later",
+      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-063/e468dd4b-5090-4ef8-89d8-939903c08e83",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:22"
+    },
+    {
+      "cve_id": "CVE-2026-33901",
+      "title": "高危漏洞: CVE-2026-33901 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T21:16:25.497",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "ImageMagick is free and open-source software used for editing and manipulating digital images. In versions below both 7.1.2-19 and 6.9.13-44, a heap buffer overflow occurs in the MVG decoder that could result in an out of bounds write when processing a crafted image. This issue has been fixed in versions 6.9.13-44 and 7.1.2-19.",
+      "refs": "https://github.com/ImageMagick/ImageMagick/commit/4c72003e9e54a4ebaa938d239e75f5d285527ebe\nhttps://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-x9h5-r9v2-vcww\nhttps://github.com/dlemstra/Magick.NET/releases/tag/14.12.0",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:18"
+    },
+    {
+      "cve_id": "CVE-2026-32605",
+      "title": "高危漏洞: CVE-2026-32605 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T20:16:33.787",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "nimiq/core-rs-albatross is a Rust implementation of the Nimiq Proof-of-Stake protocol based on the Albatross consensus algorithm. Prior to version 1.3.0, an untrusted peer could crash a validator by publishing a signed tendermint proposal message where signer == validators.num_validators(). ProposalSender::send uses > instead of >= for the signer bounds check, so the equality case passes and reaches validators.get_validator_by_slot_band(signer), which panics with an out-of-bounds index before any signature verification runs. This issue has been fixed in version 1.3.0.",
+      "refs": "https://github.com/nimiq/core-rs-albatross/commit/9199364b60c7acae4219800d194bbe07d2997b8c\nhttps://github.com/nimiq/core-rs-albatross/pull/3661\nhttps://github.com/nimiq/core-rs-albatross/releases/tag/v1.3.0",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:11"
+    },
+    {
+      "cve_id": "CVE-2025-69624",
+      "title": "高危漏洞: CVE-2025-69624 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T16:16:24.740",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Nitro PDF Pro for Windows 14.41.1.4 contains a NULL pointer dereference vulnerability in the JavaScript implementation of app.alert(). When app.alert() is called with more than one argument and the first argument evaluates to null (for example, app.alert(app.activeDocs, true) when app.activeDocs is null), the engine routes the call through a fallback path intended for non-string arguments. In this path, js_ValueToString() is invoked on the null value and returns an invalid string pointer, which is then passed to JS_GetStringChars() without validation. Dereferencing this pointer leads to an access violation and application crash when opening a crafted PDF.",
+      "refs": "http://nitro.com",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:06"
+    },
+    {
+      "cve_id": "CVE-2025-66769",
+      "title": "高危漏洞: CVE-2025-66769 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T16:16:24.620",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A NULL pointer dereference in Nitro PDF Pro for Windows v14.41.1.4 allows attackers to cause a Denial of Service (DoS) via a crafted XFA packet.",
+      "refs": "https://jeroscope.com/advisories/2025/jero-2025-015/\nhttps://www.gonitro.com/",
+      "source": "NVD",
+      "time": "2026-04-14 01:29:01"
+    },
+    {
+      "cve_id": "CVE-2026-30999",
+      "title": "高危漏洞: CVE-2026-30999 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T15:17:32.827",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A heap buffer overflow in the av_bprint_finalize() function of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
+      "refs": "https://excellent-oatmeal-319.notion.site/CVE-2026-30999-Memory-Leak-e0d88ac53e2e42c1b5ef9aa3497e27b6\nhttps://ffmpeg.org/doxygen/7.0/zmqsend_8c_source.html\nhttps://github.com/FFmpeg/FFmpeg/blob/master/tools/zmqsend.c",
+      "source": "NVD",
+      "time": "2026-04-14 01:28:56"
+    },
+    {
+      "cve_id": "CVE-2026-30998",
+      "title": "高危漏洞: CVE-2026-30998 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T15:17:32.697",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An improper resource deallocation and closure vulnerability in the tools/zmqsend.c component of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input file.",
+      "refs": "https://excellent-oatmeal-319.notion.site/CVE-2026-30998-Resource-Leak-3265a71f9cca4dc58df4632ce8b60a50\nhttps://ffmpeg.org/doxygen/7.0/zmqsend_8c_source.html\nhttps://github.com/FFmpeg/FFmpeg/blob/master/tools/zmqsend.c",
+      "source": "NVD",
+      "time": "2026-04-14 01:28:51"
+    },
+    {
+      "cve_id": "CVE-2026-30997",
+      "title": "高危漏洞: CVE-2026-30997 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-13T15:17:32.570",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An out-of-bounds read in the read_global_param() function (libavcodec/av1dec.c) of FFmpeg v8.0.1 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
+      "refs": "https://excellent-oatmeal-319.notion.site/CVE-2026-30997-Out-of-Bounds-Access-a7929817b9794568b2f7774397c7d65f\nhttps://github.com/FFmpeg/FFmpeg",
+      "source": "NVD",
+      "time": "2026-04-14 01:28:45"
+    },
+    {
       "cve_id": "CVE-2026-6200",
       "title": "高危漏洞: CVE-2026-6200 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -87,201 +282,6 @@
       "refs": "https://www.vulncheck.com/advisories/pachno-stored-cross-site-scripting-via-multiple-parameters\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5980.php",
       "source": "NVD",
       "time": "2026-04-13 21:39:56"
-    },
-    {
-      "cve_id": "CVE-2026-6196",
-      "title": "高危漏洞: CVE-2026-6196 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T18:16:32.560",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda F456 1.0.0.5. This affects the function fromexeCommand of the file /goform/exeCommand. Performing a manipulation of the argument cmdinput results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_113/README.md\nhttps://vuldb.com/submit/797467\nhttps://vuldb.com/vuln/357118",
-      "source": "NVD",
-      "time": "2026-04-13 21:39:52"
-    },
-    {
-      "cve_id": "CVE-2026-6195",
-      "title": "高危漏洞: CVE-2026-6195 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-13T18:16:32.353",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Totolink A7100RU 7.4cu.2313_b20191024. Affected by this issue is the function setPasswordCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Such manipulation of the argument admpass leads to os command injection. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_198/README.md\nhttps://vuldb.com/submit/797460\nhttps://vuldb.com/vuln/357117",
-      "source": "NVD",
-      "time": "2026-04-13 21:39:47"
-    },
-    {
-      "cve_id": "CVE-2026-6194",
-      "title": "高危漏洞: CVE-2026-6194 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T18:16:32.107",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in Totolink A3002MU B20211125.1046. Affected by this vulnerability is the function sub_410188 of the file /boafrm/formWlanSetup of the component HTTP Request Handler. This manipulation of the argument wan-url causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://github.com/zhuchan770/vulnerability/blob/main/A3002MU/formWlanSetup/ToToLinkA3002MU%20formWlanSetup%20339996b67c9780caafb2d351dfd8a889.md\nhttps://vuldb.com/submit/797452\nhttps://vuldb.com/vuln/357116",
-      "source": "NVD",
-      "time": "2026-04-13 21:39:42"
-    },
-    {
-      "cve_id": "CVE-2026-32316",
-      "title": "高危漏洞: CVE-2026-32316 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-13T18:16:29.420",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
-      "description": "jq is a command-line JSON processor. An integer overflow vulnerability exists through version 1.8.1 within the jvp_string_append() and jvp_string_copy_replace_bad functions, where concatenating strings with a combined length exceeding 2^31 bytes causes a 32-bit unsigned integer overflow in the buffer allocation size calculation, resulting in a drastically undersized heap buffer. Subsequent memory copy operations then write the full string data into this undersized buffer, causing a heap buffer overflow classified as CWE-190 (Integer Overflow) leading to CWE-122 (Heap-based Buffer Overflow). Any system evaluating untrusted jq queries is affected, as an attacker can crash the process or potentially achieve further exploitation through heap corruption by crafting queries that produce extremely large strings. The root cause is the absence of string size bounds checking, unlike arrays and objects which already have size limits. The issue has been addressed in commit e47e56d226519635768e6aab2f38f0ab037c09e5.",
-      "refs": "https://github.com/jqlang/jq/commit/e47e56d226519635768e6aab2f38f0ab037c09e5\nhttps://github.com/jqlang/jq/security/advisories/GHSA-q3h9-m34w-h76f",
-      "source": "NVD",
-      "time": "2026-04-13 21:39:38"
-    },
-    {
-      "cve_id": "CVE-2026-28291",
-      "title": "高危漏洞: CVE-2026-28291 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-13T18:16:28.760",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "simple-git enables running native Git commands from JavaScript. Versions up to and including 3.31.1 allow execution of arbitrary commands through Git option manipulation, bypassing safety checks meant to block dangerous options like -u and --upload-pack. The flaw stems from an incomplete fix for CVE-2022-25860, as Git's flexible option parsing allows numerous character combinations (e.g., -vu, -4u, -nu) to circumvent the regular-expression-based blocklist in the unsafe operations plugin. Due to the virtually infinite number of valid option variants that Git accepts, a complete blocklist-based mitigation may be infeasible without fully emulating Git's option parsing behavior. This issue has been fixed in version 3.32.0.",
-      "refs": "https://github.com/steveukx/git-js/blob/789c13ebabcf18ebe0b3a0c88ebb4037dede42e3/simple-git/src/lib/plugins/block-unsafe-operations-plugin.ts#L26\nhttps://github.com/steveukx/git-js/releases/tag/simple-git%403.32.0\nhttps://github.com/steveukx/git-js/security/advisories/GHSA-jcxm-m3jx-f287",
-      "source": "NVD",
-      "time": "2026-04-13 21:39:28"
-    },
-    {
-      "cve_id": "CVE-2026-6227",
-      "title": "漏洞仓库: CVE-2026-6227",
-      "cvss_score": null,
-      "published_date": "2026-04-13T16:16:54Z",
-      "updated_date": "2026-04-13T16:22:31Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/Pixel-DefaultBR/CVE-2026-6227",
-      "source": "GitHub",
-      "cve_overviews": "No English description available for this CVE.",
-      "time": "2026-04-13 19:02:53"
-    },
-    {
-      "cve_id": "CVE-2026-39987",
-      "title": "漏洞仓库: marimo_CVE-2026-39987_RCE_PoC",
-      "cvss_score": null,
-      "published_date": "2026-04-13T18:06:46Z",
-      "updated_date": "2026-04-13T18:14:16Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-39987 - Marimo < 0.23.0 Pre-Auth RCE (WebSocket) PoC de explotación - Conecta a /terminal/ws sin autenticación Author: Fevar54 Date: 2026-04-13 Severity: CRITICAL CVSS: 9.3",
-      "refs": "https://github.com/fevar54/marimo_CVE-2026-39987_RCE_PoC",
-      "source": "GitHub",
-      "cve_overviews": "marimo is a reactive Python notebook. Prior to 0.23.0, Marimo has a Pre-Auth RCE vulnerability. The terminal WebSocket endpoint /terminal/ws lacks authentication validation, allowing an unauthenticated attacker to obtain a full PTY shell and execute arbitrary system commands. Unlike other WebSocket endpoints (e.g., /ws) that correctly call validate_auth() for authentication, the /terminal/ws endpoint only checks the running mode and platform support before accepting connections, completely skipping authentication verification. This vulnerability is fixed in 0.23.0.",
-      "time": "2026-04-13 19:02:47"
-    },
-    {
-      "cve_id": "CVE-2026-35616",
-      "title": "漏洞仓库: CVE-2026-35616",
-      "cvss_score": null,
-      "published_date": "2026-04-13T18:49:00Z",
-      "updated_date": "2026-04-13T18:55:19Z",
-      "vector_string": "N/A",
-      "description": "CVE-2026-35616 - FortiClient EMS Pre-Authentication API Bypass (CVSS 9.1, CISA KEV). Python & Nmap NSE detection scripts with full technical breakdown. One forged HTTP header bypasses authentication on FortiClient EMS 7.4.5–7.4.6, granting full admin API access to all managed endpoints.",
-      "refs": "https://github.com/keraattin/CVE-2026-35616",
-      "source": "GitHub",
-      "cve_overviews": "A improper access control vulnerability in Fortinet FortiClientEMS 7.4.5 through 7.4.6 may allow an unauthenticated attacker to execute unauthorized code or commands via crafted requests.",
-      "time": "2026-04-13 19:02:30"
-    },
-    {
-      "cve_id": "CVE-2026-33017",
-      "title": "漏洞仓库: CVE-2026-33017-lab",
-      "cvss_score": null,
-      "published_date": "2026-04-13T18:33:25Z",
-      "updated_date": "2026-04-13T18:57:00Z",
-      "vector_string": "N/A",
-      "description": null,
-      "refs": "https://github.com/Spydomain/CVE-2026-33017-lab",
-      "source": "GitHub",
-      "cve_overviews": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
-      "time": "2026-04-13 19:02:23"
-    },
-    {
-      "cve_id": "CVE-2026-6193",
-      "title": "高危漏洞: CVE-2026-6193 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T17:16:32.557",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in PHPGurukul Daily Expense Tracking System 1.1. Affected is an unknown function of the file /register.php. The manipulation of the argument email results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/f1rstb100d/CVE/issues/47\nhttps://phpgurukul.com/\nhttps://vuldb.com/submit/797433",
-      "source": "NVD",
-      "time": "2026-04-13 19:02:13"
-    },
-    {
-      "cve_id": "CVE-2026-6189",
-      "title": "高危漏洞: CVE-2026-6189 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T17:16:31.693",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in SourceCodester Pharmacy Sales and Inventory System 1.0. The affected element is an unknown function of the file /ajax.php?action=login. Such manipulation of the argument Username leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/lingzezzz/lingze/issues/1\nhttps://vuldb.com/submit/797377\nhttps://vuldb.com/vuln/357111",
-      "source": "NVD",
-      "time": "2026-04-13 19:02:09"
-    },
-    {
-      "cve_id": "CVE-2026-6188",
-      "title": "高危漏洞: CVE-2026-6188 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T16:16:36.380",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in SourceCodester Pharmacy Sales and Inventory System 1.0. Impacted is an unknown function of the file /ajax.php?action=delete_sales. This manipulation of the argument ID causes sql injection. It is possible to initiate the attack remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/lingzezzz/lingze/issues/2\nhttps://vuldb.com/submit/797376\nhttps://vuldb.com/vuln/357110",
-      "source": "NVD",
-      "time": "2026-04-13 19:02:01"
-    },
-    {
-      "cve_id": "CVE-2026-6187",
-      "title": "高危漏洞: CVE-2026-6187 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T16:16:36.017",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in SourceCodester Pharmacy Sales and Inventory System 1.0. This issue affects some unknown processing of the file /ajax.php?action=chk_prod_availability. The manipulation of the argument ID results in sql injection. The attack may be performed from remote. The exploit is now public and may be used.",
-      "refs": "https://github.com/lingzezzz/lingze/issues/3\nhttps://vuldb.com/submit/797375\nhttps://vuldb.com/vuln/357109",
-      "source": "NVD",
-      "time": "2026-04-13 19:01:57"
-    },
-    {
-      "cve_id": "CVE-2026-6186",
-      "title": "高危漏洞: CVE-2026-6186 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T16:16:35.827",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in UTT HiPER 1200GW up to 2.5.3-170306. This vulnerability affects the function strcpy of the file /goform/formNatStaticMap. The manipulation of the argument NatBind leads to buffer overflow. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/lin-3-start/lin-cve/blob/main/Amao/1.md\nhttps://vuldb.com/submit/797304\nhttps://vuldb.com/vuln/357108",
-      "source": "NVD",
-      "time": "2026-04-13 19:01:52"
-    },
-    {
-      "cve_id": "CVE-2026-6183",
-      "title": "高危漏洞: CVE-2026-6183 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T15:17:49.697",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in code-projects Simple Content Management System 1.0. Affected by this issue is some unknown functionality of the file /web/index.php. Performing a manipulation of the argument ID results in sql injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Xmyronn/simple-cms-sqli-id-parameter\nhttps://vuldb.com/submit/797264",
-      "source": "NVD",
-      "time": "2026-04-13 19:01:47"
-    },
-    {
-      "cve_id": "CVE-2026-6182",
-      "title": "高危漏洞: CVE-2026-6182 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-13T15:17:49.487",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in code-projects Simple Content Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /web/admin/login.php. Such manipulation of the argument User leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Xmyronn/simple-cms-sqli-login-bypass-CVE-HUNT-\nhttps://vuldb.com/submit/797263",
-      "source": "NVD",
-      "time": "2026-04-13 19:01:42"
-    },
-    {
-      "cve_id": "CVE-2026-33858",
-      "title": "高危漏洞: CVE-2026-33858 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-13T15:17:33.343",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dag Authors, who normally should not be able to execute code in the webserver context could craft XCom payload causing the webserver to execute arbitrary code. Since Dag Authors are already highly trusted, severity of this issue is Low.\n\n\nUsers are recommended to upgrade to Apache Airflow 3.2.0, which resolves this issue.",
-      "refs": "https://github.com/apache/airflow/pull/64148\nhttps://lists.apache.org/thread/1npt3o2x81s0gw9tmfcv4n7p1z9hdmy0\nhttp://www.openwall.com/lists/oss-security/2026/04/13/7",
-      "source": "NVD",
-      "time": "2026-04-13 19:01:37"
     }
   ]
 }
