@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41492",
+      "title": "高危漏洞: CVE-2026-41492 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-25 03:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dgraph is an open source distributed GraphQL database. Prior to 25.3.3, Dgraphl exposes the process command line through the unauthenticated /debug/vars endpoint on Alpha. Because the admin token is commonly supplied via the --security \"token=...\" startup flag, an unauthenticated attacker can retrieve that token and replay it in the X-Dgraph-AuthToken header to access admin-only endpoints. This is a variant of the previously fixed /debug/pprof/cmdline issue, but the current fix is incomplete because it blocks only /debug/pprof/cmdline and still serves http.DefaultServeMux, which includes expvar's /debug/vars handler. This vulnerability is fixed in 25.3.3.",
+      "refs": "https://github.com/dgraph-io/dgraph/releases/tag/v25.3.3\nhttps://github.com/dgraph-io/dgraph/security/advisories/GHSA-vvf7-6rmr-m29q",
+      "source": "NVD",
+      "time": "2026-04-25 05:40:22"
+    },
+    {
+      "cve_id": "CVE-2026-41421",
+      "title": "高危漏洞: CVE-2026-41421 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-25 03:17:13",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.6.5, SiYuan desktop renders notification messages as raw HTML inside an Electron renderer. The notification route POST /api/notification/pushMsg accepts a user-controlled msg value, forwards it through the backend broadcast layer, and the frontend inserts it into the DOM with insertAdjacentHTML(...) at message.ts. On desktop builds, this is not limited to ordinary XSS. Electron windows are created with nodeIntegration: true, contextIsolation: false, and webSecurity: false at main.js. As a result, JavaScript executed from the notification sink can directly access Node APIs and escalate to desktop code execution. This vulnerability is fixed in 3.6.5.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-grjj-6f6g-cq8q",
+      "source": "NVD",
+      "time": "2026-04-25 05:40:18"
+    },
+    {
+      "cve_id": "CVE-2026-41419",
+      "title": "高危漏洞: CVE-2026-41419 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-04-25 03:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+      "description": "4ga Boards is a boards system for realtime project management. Prior to 3.3.5, a path traversal vulnerability allows an authenticated user with board import privileges to make the server ingest arbitrary host files as board attachments during BOARDS archive import. Once imported, the file can be downloaded through the normal application interface, resulting in unauthorized local file disclosure. This vulnerability is fixed in 3.3.5.",
+      "refs": "https://github.com/RARgames/4gaBoards/security/advisories/GHSA-rrjq-7x8g-cmgm",
+      "source": "NVD",
+      "time": "2026-04-25 05:40:14"
+    },
+    {
+      "cve_id": "CVE-2026-41414",
+      "title": "高危漏洞: CVE-2026-41414 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-04-25 03:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:N",
+      "description": "Skim is a fuzzy finder designed to through files, lines, and commands. The generate-files job in .github/workflows/pr.yml checks out attacker-controlled fork code and executes it via cargo run, with access to SKIM_RS_BOT_PRIVATE_KEY and GITHUB_TOKEN (contents:write). No gates prevent exploitation - any GitHub user can trigger this by opening a pull request from a fork. This vulnerability is fixed with commit bf63404ad51985b00ed304690ba9d477860a5a75.",
+      "refs": "https://github.com/skim-rs/skim/commit/bf63404ad51985b00ed304690ba9d477860a5a75\nhttps://github.com/skim-rs/skim/security/advisories/GHSA-9g93-rxr5-xhqw",
+      "source": "NVD",
+      "time": "2026-04-25 05:40:06"
+    },
+    {
+      "cve_id": "CVE-2026-41328",
+      "title": "高危漏洞: CVE-2026-41328 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-25 03:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Dgraph is an open source distributed GraphQL database. Prior to 25.3.3, a vulnerability has been found in Dgraph that gives an unauthenticated attacker full read access to every piece of data in the database. This affects Dgraph's default configuration where ACL is not enabled. The attack requires two HTTP POSTs to port 8080. The first sets up a schema predicate with @unique @index(exact) @lang via /alter (also unauthenticated in default config). The second sends a crafted JSON mutation to /mutate?commitNow=true where a JSON key contains the predicate name followed by @ and a DQL injection payload in the language tag position. The injection exploits the addQueryIfUnique function in edgraph/server.go, which constructs DQL queries using fmt.Sprintf with unsanitized predicateName that includes the raw pred.Lang value. The Lang field is extracted from JSON mutation keys by x.PredicateLang(), which splits on @, and is never validated by any function in the codebase. The attacker injects a closing parenthesis to escape the eq() function, adds an arbitrary named query block, and uses a # comment to neutralize trailing template syntax. The injected query executes server-side and its results are returned in the HTTP response. This vulnerability is fixed in 25.3.3.",
+      "refs": "https://github.com/dgraph-io/dgraph/security/advisories/GHSA-x92x-px7w-4gx4",
+      "source": "NVD",
+      "time": "2026-04-25 05:40:02"
+    },
+    {
+      "cve_id": "CVE-2026-41327",
+      "title": "高危漏洞: CVE-2026-41327 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-04-25 03:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Dgraph is an open source distributed GraphQL database. Prior to 25.3.3, a vulnerability has been found in Dgraph that gives an unauthenticated attacker full read access to every piece of data in the database. This affects Dgraph's default configuration where ACL is not enabled. The attack is a single HTTP POST to /mutate?commitNow=true containing a crafted cond field in an upsert mutation. The cond value is concatenated directly into a DQL query string via strings.Builder.WriteString after only a cosmetic strings.Replace transformation. No escaping, parameterization, or structural validation is applied. An attacker injects an additional DQL query block into the cond string, which the DQL parser accepts as a syntactically valid named query block. The injected query executes server-side and its results are returned in the HTTP response. This vulnerability is fixed in 25.3.3.",
+      "refs": "https://github.com/dgraph-io/dgraph/releases/tag/v25.3.3\nhttps://github.com/dgraph-io/dgraph/security/advisories/GHSA-mrxx-39g5-ph77\nhttps://github.com/dgraph-io/dgraph/security/advisories/GHSA-mrxx-39g5-ph77",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:55"
+    },
+    {
+      "cve_id": "CVE-2026-33666",
+      "title": "高危漏洞: CVE-2026-33666 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-25 03:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Zserio is a framework for serializing structured data with a compact and efficient way with low overhead. Prior to 2.18.1, in BitStreamReader.h readBytes() / readString(), the setBitPosition() bounds check receives the overflowed value and is completely bypassed. The code then reads len bytes (512 MB) from a buffer that is only a few bytes long, causing a segmentation fault. This vulnerability is fixed in 2.18.1.",
+      "refs": "https://github.com/ndsev/zserio/security/advisories/GHSA-fjwv-6wcr-vqwj",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:51"
+    },
+    {
+      "cve_id": "CVE-2026-33662",
+      "title": "高危漏洞: CVE-2026-33662 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-25 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. From 3.8.0 to 4.10, in the function emsa_pkcs1_v1_5_encode() in core/drivers/crypto/crypto_api/acipher/rsassa.c, the amount of padding needed, \"PS size\", is calculated by subtracting the size of the digest and other fields required for the EMA-PKCS1-v1_5 encoding from the size of the modulus of the key. By selecting a small enough modulus, this subtraction can overflow. The padding is added as a string of 0xFF bytes with a call to memset(), and an underflowed integer will cause the memset() call to overwrite until OP-TEE crashes. This only affects platforms registering RSA acceleration.",
+      "refs": "https://github.com/OP-TEE/optee_os/security/advisories/GHSA-4cf8-v5g3-73gr",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:46"
+    },
+    {
+      "cve_id": "CVE-2026-33524",
+      "title": "高危漏洞: CVE-2026-33524 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-25 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Zserio is a framework for serializing structured data with a compact and efficient way with low overhead. Prior to 2.18.1, a crafted payload as small as 4-5 bytes can force memory allocations of up to 16 GB, crashing any process with an OOM error (Denial of Service). This vulnerability is fixed in 2.18.1.",
+      "refs": "https://github.com/ndsev/zserio/security/advisories/GHSA-cwq5-8pvq-j65j",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:42"
+    },
+    {
+      "cve_id": "CVE-2026-42043",
+      "title": "高危漏洞: CVE-2026-42043 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-25 02:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios request can use any address in the 127.0.0.0/8 range (other than 127.0.0.1) to completely bypass the NO_PROXY protection. This vulnerability is due to an incomplete for CVE-2025-62718, This vulnerability is fixed in 1.15.1 and 0.31.1.",
+      "refs": "https://github.com/axios/axios/security/advisories/GHSA-pmwg-cvhr-8vh7",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:38"
+    },
+    {
+      "cve_id": "CVE-2026-42035",
+      "title": "高危漏洞: CVE-2026-42035 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-04-25 02:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, a prototype pollution gadget exists in the Axios HTTP adapter (lib/adapters/http.js) that allows an attacker to inject arbitrary HTTP headers into outgoing requests. The vulnerability exploits duck-type checking of the data payload, where if Object.prototype is polluted with getHeaders, append, pipe, on, once, and Symbol.toStringTag, Axios misidentifies any plain object payload as a FormData instance and calls the attacker-controlled getHeaders() function, merging the returned headers into the outgoing request. The vulnerable code resides exclusively in lib/adapters/http.js. The prototype pollution source does not need to originate from Axios itself — any prototype pollution primitive in any dependency in the application's dependency tree is sufficient to trigger this gadget. This vulnerability is fixed in 1.15.1 and 0.31.1.",
+      "refs": "https://github.com/axios/axios/security/advisories/GHSA-6chq-wfr3-2hj9\nhttps://github.com/axios/axios/security/advisories/GHSA-6chq-wfr3-2hj9",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:33"
+    },
+    {
+      "cve_id": "CVE-2026-42033",
+      "title": "高危漏洞: CVE-2026-42033 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-04-25 02:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, when Object.prototype has been polluted by any co-dependency with keys that axios reads without a hasOwnProperty guard, an attacker can (a) silently intercept and modify every JSON response before the application sees it, or (b) fully hijack the underlying HTTP transport, gaining access to request credentials, headers, and body. The precondition is prototype pollution from a separate source in the same process. This vulnerability is fixed in 1.15.1 and 0.31.1.",
+      "refs": "https://github.com/axios/axios/security/advisories/GHSA-pf86-5x62-jrwf\nhttps://github.com/axios/axios/security/advisories/GHSA-pf86-5x62-jrwf",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:29"
+    },
+    {
+      "cve_id": "CVE-2026-23902",
+      "title": "高危漏洞: CVE-2026-23902 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-24 20:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Incorrect Authorization vulnerability in Apache DolphinScheduler allows authenticated users with system login permissions to use tenants that are not defined on the platform during workflow execution.\n\nThis issue affects Apache DolphinScheduler versions prior to 3.4.1. \n\nUsers are recommended to upgrade to version 3.4.1, which fixes this issue.",
+      "refs": "https://lists.apache.org/thread/hy4ntb2gys8150zfmnxhsd5ph0hoh7s9\nhttp://www.openwall.com/lists/oss-security/2026/04/24/1",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:25"
+    },
+    {
+      "cve_id": "CVE-2026-41044",
+      "title": "高危漏洞: CVE-2026-41044 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-24 19:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ, Apache ActiveMQ Broker, Apache ActiveMQ All.\n\nAn authenticated attacker can use the admin web console page to construct a malicious broker name that bypasses name validation to include an xbean binding that can be later used by a VM transport to load a remote Spring XML application.\nThe attacker can then use the DestinationView mbean to send a message to trigger a VM transport creation that will reference this malicious broker name which can lead to loading the malicious Spring XML context file.\n\n\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\nThis issue affects Apache ActiveMQ: before 5.19.6, from 6.0.0 before 6.2.5; Apache ActiveMQ Broker: before 5.19.6, from 6.0.0 before 6.2.5; Apache ActiveMQ All: before 5.19.6, from 6.0.0 before 6.2.5.\n\nUsers are recommended to upgrade to version 6.2.5 or 5.19.6, which fixes the issue.",
+      "refs": "https://activemq.apache.org/security-advisories.data/CVE-2026-41044-announcement.txt\nhttp://www.openwall.com/lists/oss-security/2026/04/23/6",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:19"
+    },
+    {
+      "cve_id": "CVE-2026-40466",
+      "title": "高危漏洞: CVE-2026-40466 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-24 19:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ All, Apache ActiveMQ.\n\n\n\nAn authenticated attacker may bypass the fix in CVE-2026-34197 by adding a connector using an HTTP Discovery transport via BrokerView.addNetworkConnector or BrokerView.addConnector through Jolokia if the activemq-http module is on the classpath.\nA malicious HTTP endpoint can return a VM transport through the HTTP URI which will bypass the validation added in CVE-2026-34197. The attacker can then use the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext.\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\n\nThis issue affects Apache ActiveMQ Broker: before 5.19.6, from 6.0.0 before 6.2.5; Apache ActiveMQ All: before 5.19.6, from 6.0.0 before 6.2.5; Apache ActiveMQ: before 5.19.6, from 6.0.0 before 6.2.5.\n\nUsers are recommended to upgrade to version 5.19.6 or 6.2.5, which fixes the issue.",
+      "refs": "https://activemq.apache.org/security-advisories.data/CVE-2026-34197-announcement.txt",
+      "source": "NVD",
+      "time": "2026-04-25 05:39:11"
+    },
+    {
       "cve_id": "CVE-2026-6912",
       "title": "高危漏洞: CVE-2026-6912 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -934,171 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-33999\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2451106",
       "source": "NVD",
       "time": "2026-04-24 23:59:22"
-    },
-    {
-      "cve_id": "CVE-2026-23751",
-      "title": "高危漏洞: CVE-2026-23751 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 00:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Kofax Capture, now referred to as Tungsten Capture, version 6.0.0.0 (other versions may be affected) exposes a deprecated .NET Remoting HTTP channel on port 2424 via the Ascent Capture Service that is accessible without authentication and uses a default, publicly known endpoint identifier. An unauthenticated remote attacker can exploit .NET Remoting object unmarshalling techniques to instantiate a remote System.Net.WebClient object and read arbitrary files from the server filesystem, write attacker-controlled files to the server, or coerce NTLMv2 authentication to an attacker-controlled host, enabling sensitive credential disclosure, denial of service, remote code execution, or lateral movement depending on service account privileges and network environment.",
-      "refs": "https://docshield.tungstenautomation.com/Portal/Products/en_US/KC/11.1.0-40hy9nfk91/KC.htm\nhttps://gist.github.com/VAMorales/3888941d6e5efdd4b2e673e999f68ca2\nhttps://www.vulncheck.com/advisories/kofax-capture-unauthenticated-file-read-write-smb-coercion-via-net-remoting",
-      "source": "NVD",
-      "time": "2026-04-24 23:59:14"
-    },
-    {
-      "cve_id": "CVE-2025-62373",
-      "title": "高危漏洞: CVE-2025-62373 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 00:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pipecat is an open-source Python framework for building real-time voice and multimodal conversational agents. Versions 0.0.41 through 0.0.93 have a vulnerability in `LivekitFrameSerializer` – an optional, non-default, undocumented frame serializer class (now deprecated) intended for LiveKit integration. The class's `deserialize()` method uses Python's `pickle.loads()` on data received from WebSocket clients without any validation or sanitization. This means that a malicious WebSocket client can send a crafted pickle payload to execute arbitrary code on the Pipecat server. The vulnerable code resides in `src/pipecat/serializers/livekit.py` (around line 73), where untrusted WebSocket message data is passed directly into `pickle.loads()` for deserialization. If a Pipecat server is configured to use LivekitFrameSerializer and is listening on an external interface (e.g. 0.0.0.0), an attacker on the network (or the internet, if the service is exposed) could achieve remote code execution (RCE) on the server by sending a malicious pickle payload. Version 0.0.94 contains a fix. Users of Pipecat should avoid or replace unsafe deserialization and improve network security configuration. The best mitigation is to stop using the vulnerable LivekitFrameSerializer altogether. Those who require LiveKit functionality should upgrade to the latest Pipecat version and switch to the recommended `LiveKitTransport` or another secure method provided by the framework. Additionally, always follow secure coding practices: never trust client-supplied data, and avoid Python pickle (or similar unsafe deserialization) in network-facing components.",
-      "refs": "https://github.com/pipecat-ai/pipecat/security/advisories/GHSA-c2jg-5cp7-6wc7\nhttps://github.com/pipecat-ai/pipecat/security/advisories/GHSA-c2jg-5cp7-6wc7",
-      "source": "NVD",
-      "time": "2026-04-24 23:59:06"
-    },
-    {
-      "cve_id": "CVE-2026-40688",
-      "title": "高危漏洞: CVE-2026-40688 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-15 07:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A out-of-bounds write vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.3, FortiWeb 7.6.0 through 7.6.6, FortiWeb 7.4.0 through 7.4.11 may allow attacker to execute unauthorized code or commands via <insert attack vector here>",
-      "refs": "https://fortiguard.fortinet.com/psirt/FG-IR-26-127",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:48"
-    },
-    {
-      "cve_id": "CVE-2026-39399",
-      "title": "高危漏洞: CVE-2026-39399 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-04-15 07:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-      "description": "NuGet Gallery is a package repository that powers nuget.org. A security vulnerability exists in the NuGetGallery backend job’s handling of .nuspec files within NuGet packages. An attacker can supply a crafted nuspec file with malicious metadata, leading to cross package metadata injection that may result in remote code execution (RCE) and/or arbitrary blob writes due to insufficient input validation. The issue is exploitable via URI fragment injection using unsanitized package identifiers, allowing an attacker to control the resolved blob path. This enables writes to arbitrary blobs within the storage container, not limited to .nupkg files, resulting in potential tampering of existing content. This issue has been patched in commit 0e80f87628349207cdcaf55358491f8a6f1ca276.",
-      "refs": "https://github.com/NuGet/NuGetGallery/commit/0e80f87628349207cdcaf55358491f8a6f1ca276\nhttps://github.com/NuGet/NuGetGallery/security/advisories/GHSA-9r3h-v4hx-rhfr",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:44"
-    },
-    {
-      "cve_id": "CVE-2026-39387",
-      "title": "高危漏洞: CVE-2026-39387 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-15 07:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "BoidCMS is an open-source, PHP-based flat-file CMS for building simple websites and blogs, using JSON as its database. Versions prior to 2.1.3 are vulnerable to a critical Local File Inclusion (LFI) attack via the tpl parameter, which can lead to Remote Code Execution (RCE).The application fails to sanitize the tpl (template) parameter during page creation and updates. This parameter is passed directly to a require_once() statement without path validation. An authenticated administrator can exploit this by injecting path traversal sequences (../) into the tpl value to escape the intended theme directory and include arbitrary files — specifically, files from the server's media/ directory. When combined with the file upload functionality, this becomes a full RCE chain: an attacker can first upload a file with embedded PHP code (e.g., disguised as image data), then use the path traversal vulnerability to include that file via require_once(), executing the embedded code with web server privileges. This issue has been fixed in version 2.1.3.",
-      "refs": "https://github.com/BoidCMS/BoidCMS/releases/tag/v2.1.3\nhttps://github.com/BoidCMS/BoidCMS/security/advisories/GHSA-45xp-xw54-6cv6",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:39"
-    },
-    {
-      "cve_id": "CVE-2026-35589",
-      "title": "高危漏洞: CVE-2026-35589 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-04-15 07:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "nanobot is a personal AI assistant. Versions prior to 0.1.5 contain a Cross-Site WebSocket Hijacking (CSWSH) vulnerability exists in the bridge's WebSocket server in bridge/src/server.ts, resulting from an incomplete remediation of CVE-2026-2577. The original fix changed the binding from 0.0.0.0 to 127.0.0.1 and added an optional BRIDGE_TOKEN parameter, but token authentication is disabled by default and the server does not validate the Origin header during the WebSocket handshake. Because browsers do not enforce the Same-Origin Policy on WebSockets unless the server explicitly denies cross-origin connections, any website visited by a user running the bridge can establish a WebSocket connection to ws://127.0.0.1:3001/ and gain full access to the bridge API. This allows an attacker to hijack the WhatsApp session, read incoming messages, steal authentication QR codes, and send messages on behalf of the user. This issue has bee fixed in version 0.1.5.",
-      "refs": "https://github.com/HKUDS/nanobot/releases/tag/v0.1.5\nhttps://github.com/HKUDS/nanobot/security/advisories/GHSA-v5j3-4q66-58cf",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:32"
-    },
-    {
-      "cve_id": "CVE-2026-35031",
-      "title": "高危漏洞: CVE-2026-35031 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-04-15 07:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Jellyfin is an open source self hosted media server. Versions prior to 10.11.7 contain a vulnerability chain in the subtitle upload endpoint (POST /Videos/{itemId}/Subtitles), where the Format field is not validated, allowing path traversal via the file extension and enabling arbitrary file write. This arbitrary file write can be chained into arbitrary file read via .strm files, database extraction, admin privilege escalation, and ultimately remote code execution as root via ld.so.preload. Exploitation requires an administrator account or a user that has been explicitly granted the \"Upload Subtitles\" permission. This issue has been fixed in version 10.11.7. If users are unable to upgrade immediately, they can grant non-administrator users Subtitle upload permissions to reduce attack surface.",
-      "refs": "https://github.com/jellyfin/jellyfin/releases/tag/v10.11.7\nhttps://github.com/jellyfin/jellyfin/security/advisories/GHSA-j2hf-x4q5-47j3",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:28"
-    },
-    {
-      "cve_id": "CVE-2026-34457",
-      "title": "高危漏洞: CVE-2026-34457 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-15 07:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "OAuth2 Proxy is a reverse proxy that provides authentication using OAuth2 providers. Versions prior to 7.15.2 contain a configuration-dependent authentication bypass in deployments where OAuth2 Proxy is used with an auth_request-style integration (such as nginx auth_request) and either --ping-user-agent is set or --gcp-healthchecks is enabled. In affected configurations, OAuth2 Proxy treats any request with the configured health check User-Agent value as a successful health check regardless of the requested path, allowing an unauthenticated remote attacker to bypass authentication and access protected upstream resources. Deployments that do not use auth_request-style subrequests or that do not enable --ping-user-agent/--gcp-healthchecks are not affected. This issue is fixed in 7.15.2.",
-      "refs": "https://github.com/oauth2-proxy/oauth2-proxy/releases/tag/v7.15.2\nhttps://github.com/oauth2-proxy/oauth2-proxy/security/advisories/GHSA-5hvv-m4w4-gf6v",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:23"
-    },
-    {
-      "cve_id": "CVE-2026-33023",
-      "title": "高危漏洞: CVE-2026-33023 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-15 07:16:27",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "libsixel is a SIXEL encoder/decoder implementation derived from kmiya's sixel. In versions 1.8.7 and prior, when built with the --with-gdk-pixbuf2 option, a use-after-free vulnerability exists in load_with_gdkpixbuf() in loader.c. The cleanup path manually frees the sixel_frame_t object and its internal buffers without consulting the reference count, even though the object was created via the refcounted constructor sixel_frame_new() and exposed to the public callback. A callback that calls sixel_frame_ref(frame) to retain a logically valid reference will hold a dangling pointer after sixel_helper_load_image_file() returns, and any subsequent access to the frame or its fields triggers a use-after-free confirmed by AddressSanitizer. The root cause is a consistency failure between two cleanup strategies in the same codebase: sixel_frame_unref() is used in load_with_builtin() but raw free() is used in load_with_gdkpixbuf(). An attacker supplying a crafted image to any application built against libsixel with gdk-pixbuf2 support can trigger this reliably, potentially leading to information disclosure, memory corruption, or code execution. This issue has been fixed in version 1.8.7-r1.",
-      "refs": "https://github.com/saitoha/libsixel/releases/tag/v1.8.7-r1\nhttps://github.com/saitoha/libsixel/security/advisories/GHSA-hr25-g2j6-qjw6",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:19"
-    },
-    {
-      "cve_id": "CVE-2026-33021",
-      "title": "高危漏洞: CVE-2026-33021 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-15 07:16:27",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
-      "description": "libsixel is a SIXEL encoder/decoder implementation derived from kmiya's sixel. Versions 1.8.7 and prior contain a use-after-free vulnerability in sixel_encoder_encode_bytes() because sixel_frame_init() stores the caller-owned pixel buffer pointer directly in frame->pixels without making a defensive copy. When a resize operation is triggered, sixel_frame_convert_to_rgb888() unconditionally frees this caller-owned buffer and replaces it with a new internal allocation, leaving the caller with a dangling pointer. Any subsequent access to the original buffer by the caller constitutes a use-after-free, confirmed by AddressSanitizer. An attacker who controls incoming frames can trigger this bug repeatedly and predictably, resulting in a reliable crash with potential for code execution. This issue has been fixed in version 1.8.7-r1.",
-      "refs": "https://github.com/saitoha/libsixel/releases/tag/v1.8.7-r1\nhttps://github.com/saitoha/libsixel/security/advisories/GHSA-j6m5-2cc7-3whc",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:11"
-    },
-    {
-      "cve_id": "CVE-2026-27298",
-      "title": "高危漏洞: CVE-2026-27298 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-15 07:16:26",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Adobe Framemaker versions 2022.8 and earlier are affected by an Access of Resource Using Incompatible Type ('Type Confusion') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/framemaker/apsb26-36.html",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:07"
-    },
-    {
-      "cve_id": "CVE-2026-27297",
-      "title": "高危漏洞: CVE-2026-27297 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-15 07:16:26",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Adobe Framemaker versions 2022.8 and earlier are affected by an Integer Underflow (Wrap or Wraparound) vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/framemaker/apsb26-36.html",
-      "source": "NVD",
-      "time": "2026-04-15 09:28:02"
-    },
-    {
-      "cve_id": "CVE-2026-27296",
-      "title": "高危漏洞: CVE-2026-27296 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-15 07:16:26",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Adobe Framemaker versions 2022.8 and earlier are affected by an Integer Underflow (Wrap or Wraparound) vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/framemaker/apsb26-36.html",
-      "source": "NVD",
-      "time": "2026-04-15 09:27:57"
-    },
-    {
-      "cve_id": "CVE-2026-27295",
-      "title": "高危漏洞: CVE-2026-27295 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-15 07:16:26",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Adobe Framemaker versions 2022.8 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/framemaker/apsb26-36.html",
-      "source": "NVD",
-      "time": "2026-04-15 09:27:53"
-    },
-    {
-      "cve_id": "CVE-2026-27294",
-      "title": "高危漏洞: CVE-2026-27294 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-15 07:16:26",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Adobe Framemaker versions 2022.8 and earlier are affected by an out-of-bounds read vulnerability when parsing a crafted file, which could result in a read past the end of an allocated memory structure. An attacker could leverage this vulnerability to execute code in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/framemaker/apsb26-36.html",
-      "source": "NVD",
-      "time": "2026-04-15 09:27:48"
     }
   ]
 }
