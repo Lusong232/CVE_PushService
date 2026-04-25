@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6987",
+      "title": "高危漏洞: CVE-2026-6987 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-26 01:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in PicoClaw up to 0.2.4. Impacted is an unknown function of the file /api/gateway/restart of the component Web Launcher Management Plane. Performing a manipulation results in command injection. It is possible to initiate the attack remotely. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/sipeed/picoclaw/issues/2307\nhttps://vuldb.com/submit/796336\nhttps://vuldb.com/vuln/359530",
+      "source": "NVD",
+      "time": "2026-04-26 02:36:32"
+    },
+    {
+      "cve_id": "CVE-2026-6980",
+      "title": "高危漏洞: CVE-2026-6980 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-25 22:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Divyanshu-hash GitPilot-MCP up to 9ed9f153ba4158a2ad230ee4871b25130da29ffd. This impacts the function repo_path of the file main.py. Such manipulation of the argument command leads to command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wing3e/public_exp/issues/38\nhttps://vuldb.com/submit/795502\nhttps://vuldb.com/vuln/359523",
+      "source": "NVD",
+      "time": "2026-04-26 02:36:24"
+    },
+    {
       "cve_id": "CVE-2026-6977",
       "title": "高危漏洞: CVE-2026-6977 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html\nhttps://issues.chromium.org/issues/493652473",
       "source": "NVD",
       "time": "2026-04-25 00:00:24"
-    },
-    {
-      "cve_id": "CVE-2026-31181",
-      "title": "高危漏洞: CVE-2026-31181 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 02:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue was discovered in ToToLink A3300R firmware v17.0.0cu.557_B20221024 allowing attackers to execute arbitrary commands via the stunServerAddr parameter to /cgi-bin/cstecgi.cgi.",
-      "refs": "https://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-server-addr-cmd-injection\nhttps://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-server-addr-cmd-injection",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:18"
-    },
-    {
-      "cve_id": "CVE-2026-31178",
-      "title": "高危漏洞: CVE-2026-31178 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 02:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue was discovered in ToToLink A3300R firmware v17.0.0cu.557_B20221024 allowing attackers to execute arbitrary commands via the stunMaxAlive parameter to /cgi-bin/cstecgi.cgi.",
-      "refs": "https://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-max-alive-cmd-injection\nhttps://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-max-alive-cmd-injection",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:13"
     }
   ]
 }
