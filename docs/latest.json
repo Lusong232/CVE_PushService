@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6992",
+      "title": "高危漏洞: CVE-2026-6992 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-26 02:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Linksys MR9600 2.0.6.206937. This affects the function BTRequestGetSmartConnectStatus of the file /etc/init.d/run_central2.sh of the component JNAP Action Handler. The manipulation of the argument pin leads to os command injection. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/utmost3/cve/issues/2\nhttps://vuldb.com/submit/797086\nhttps://vuldb.com/vuln/359544",
+      "source": "NVD",
+      "time": "2026-04-26 05:28:08"
+    },
+    {
+      "cve_id": "CVE-2026-6988",
+      "title": "高危漏洞: CVE-2026-6988 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 02:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda HG10 HG7_HG9_HG10re_300001138_en_xpon. This issue affects the function formRoute of the file /boaform/formRouting of the component Boa Service. This manipulation of the argument nextHop causes buffer overflow. It is possible to initiate the attack remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/xyh4ck/iot_poc/blob/main/Tenda/HG10/01_Buffer_Overflow_nextHop/README.md\nhttps://vuldb.com/submit/796427\nhttps://vuldb.com/vuln/359540",
+      "source": "NVD",
+      "time": "2026-04-26 05:28:04"
+    },
+    {
       "cve_id": "CVE-2026-6987",
       "title": "高危漏洞: CVE-2026-6987 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html\nhttps://issues.chromium.org/issues/493315759",
       "source": "NVD",
       "time": "2026-04-25 00:00:35"
-    },
-    {
-      "cve_id": "CVE-2026-6920",
-      "title": "高危漏洞: CVE-2026-6920 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-04-24 02:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds read in GPU in Google Chrome on Android prior to 147.0.7727.117 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html\nhttps://issues.chromium.org/issues/499891888",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:28"
-    },
-    {
-      "cve_id": "CVE-2026-6919",
-      "title": "高危漏洞: CVE-2026-6919 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-04-24 02:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in DevTools in Google Chrome prior to 147.0.7727.117 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html\nhttps://issues.chromium.org/issues/493652473",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:24"
     }
   ]
 }
