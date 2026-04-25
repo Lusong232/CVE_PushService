@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6977",
+      "title": "高危漏洞: CVE-2026-6977 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-25 19:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in vanna-ai vanna up to 2.0.2. The affected element is an unknown function of the component Legacy Flask API. The manipulation leads to improper authorization. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/yidaozhongqing/York/issues/2\nhttps://vuldb.com/submit/795331\nhttps://vuldb.com/vuln/359520",
+      "source": "NVD",
+      "time": "2026-04-25 20:39:58"
+    },
+    {
+      "cve_id": "CVE-2026-6951",
+      "title": "高危漏洞: CVE-2026-6951 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-25 14:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Versions of the package simple-git before 3.36.0 are vulnerable to Remote Code Execution (RCE) due to an incomplete fix for [CVE-2022-25912](https://security.snyk.io/vuln/SNYK-JS-SIMPLEGIT-3112221) that blocks the -c option but not the equivalent --config form. If untrusted input can reach the options argument passed to simple-git, an attacker may still achieve remote code execution by enabling protocol.ext.allow=always and using an ext:: clone source.",
+      "refs": "https://gist.github.com/KKC73/02d1d97f3410756095b501fda0ac8ca6\nhttps://github.com/steveukx/git-js/commit/89a2294febed5dfe737c4c735d936bb6018746a8\nhttps://security.snyk.io/vuln/SNYK-JS-SIMPLEGIT-15456078",
+      "source": "NVD",
+      "time": "2026-04-25 20:39:51"
+    },
+    {
       "cve_id": "CVE-2026-42171",
       "title": "高危漏洞: CVE-2026-42171 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-max-alive-cmd-injection\nhttps://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-max-alive-cmd-injection",
       "source": "NVD",
       "time": "2026-04-25 00:00:13"
-    },
-    {
-      "cve_id": "CVE-2026-31177",
-      "title": "高危漏洞: CVE-2026-31177 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 02:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue was discovered in ToToLink A3300R firmware v17.0.0cu.557_B20221024 allowing attackers to execute arbitrary commands via the stunMinAlive parameter to /cgi-bin/cstecgi.cgi.",
-      "refs": "https://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-min-alive-cmd-injection\nhttps://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-min-alive-cmd-injection",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:07"
-    },
-    {
-      "cve_id": "CVE-2026-31175",
-      "title": "高危漏洞: CVE-2026-31175 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 02:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue was discovered in ToToLink A3300R firmware v17.0.0cu.557_B20221024 allowing attackers to execute arbitrary commands via the stunEnable parameter to /cgi-bin/cstecgi.cgi.",
-      "refs": "https://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-enable-cmd-injection\nhttps://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-stun-enable-cmd-injection",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:02"
     }
   ]
 }
