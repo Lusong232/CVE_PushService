@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7033",
+      "title": "高危漏洞: CVE-2026-7033 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 19:16:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Tenda F456 1.0.0.5. Affected by this vulnerability is the function fromSafeClientFilter of the file /goform/SafeClientFilter. Such manipulation of the argument menufacturer/Go leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_123/README.md\nhttps://vuldb.com/submit/798454\nhttps://vuldb.com/vuln/359613",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:46"
+    },
+    {
+      "cve_id": "CVE-2026-7032",
+      "title": "高危漏洞: CVE-2026-7032 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 19:16:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda F456 1.0.0.5. Affected is the function SafeEmailFilter of the file /goform/SafeEmailFilter. This manipulation of the argument page causes buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_122/README.md\nhttps://vuldb.com/submit/798453\nhttps://vuldb.com/vuln/359612",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:41"
+    },
+    {
+      "cve_id": "CVE-2026-7031",
+      "title": "高危漏洞: CVE-2026-7031 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 18:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tenda F456 1.0.0.5. This impacts the function fromSafeMacFilter of the file /goform/SafeMacFilter. The manipulation of the argument page results in buffer overflow. It is possible to launch the attack remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_121/README.md\nhttps://vuldb.com/submit/798452\nhttps://vuldb.com/vuln/359611",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:34"
+    },
+    {
+      "cve_id": "CVE-2026-7030",
+      "title": "高危漏洞: CVE-2026-7030 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 18:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Tenda F456 1.0.0.5. This affects the function fromRouteStatic of the file /goform/RouteStatic. The manipulation of the argument page leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_120/README.md\nhttps://vuldb.com/submit/798451\nhttps://vuldb.com/vuln/359610",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:29"
+    },
+    {
+      "cve_id": "CVE-2026-7029",
+      "title": "高危漏洞: CVE-2026-7029 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 17:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Tenda F456 1.0.0.5. The impacted element is the function fromaddressNat of the file /goform/addressNat. Executing a manipulation of the argument menufacturer/Go can lead to buffer overflow. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_119/README.md\nhttps://vuldb.com/submit/798450\nhttps://vuldb.com/vuln/359609",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:25"
+    },
+    {
+      "cve_id": "CVE-2026-7025",
+      "title": "高危漏洞: CVE-2026-7025 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-26 16:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Typecho up to 1.3.0. This vulnerability affects the function Service::sendPingHandle of the file var/Widget/Service.php of the component Ping Back Service Endpoint. The manipulation of the argument X-Pingback/link results in server-side request forgery. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/submit/797772\nhttps://vuldb.com/vuln/359605\nhttps://vuldb.com/vuln/359605/cti",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:17"
+    },
+    {
+      "cve_id": "CVE-2026-7022",
+      "title": "高危漏洞: CVE-2026-7022 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-26 14:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SmythOS sre up to 0.0.15. Affected is the function AgentRuntime of the file packages/core/src/subsystems/AgentManager/AgentRuntime.class.ts of the component HTTP Header Handler. Such manipulation of the argument X-DEBUG-RUN/X-DEBUG-INJ leads to improper authentication. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/c6a4a6a5f4c8b9e758f72c07ca0cd30d\nhttps://vuldb.com/submit/797643\nhttps://vuldb.com/vuln/359601",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:10"
+    },
+    {
+      "cve_id": "CVE-2026-7019",
+      "title": "高危漏洞: CVE-2026-7019 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-26 13:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Tenda F456 1.0.0.5. The impacted element is the function fromP2pListFilter of the file /goform/P2pListFilter. The manipulation of the argument menufacturer/Go leads to buffer overflow. The attack is possible to be carried out remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_118/README.md\nhttps://vuldb.com/submit/797473\nhttps://vuldb.com/vuln/359598",
+      "source": "NVD",
+      "time": "2026-04-26 20:42:03"
+    },
+    {
       "cve_id": "CVE-2026-42255",
       "title": "高危漏洞: CVE-2026-42255 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1011,94 +1099,6 @@
       "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-2x8m-83vc-6wv4\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-2x8m-83vc-6wv4",
       "source": "NVD",
       "time": "2026-04-25 00:01:44"
-    },
-    {
-      "cve_id": "CVE-2026-41271",
-      "title": "高危漏洞: CVE-2026-41271 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, a Server-Side Request Forgery (SSRF) vulnerability exists in FlowiseAI's POST/GET API Chain components that allows unauthenticated attackers to force the server to make arbitrary HTTP requests to internal and external systems. By injecting malicious prompt templates, attackers can bypass the intended API documentation constraints and redirect requests to sensitive internal services, potentially leading to internal network reconnaissance and data exfiltration. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-6r77-hqx7-7vw8\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-6r77-hqx7-7vw8",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:39"
-    },
-    {
-      "cve_id": "CVE-2026-41270",
-      "title": "高危漏洞: CVE-2026-41270 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, a Server-Side Request Forgery (SSRF) protection bypass vulnerability exists in the Custom Function feature. While the application implements SSRF protection via HTTP_DENY_LIST for axios and node-fetch libraries, the built-in Node.js http, https, and net modules are allowed in the NodeVM sandbox without equivalent protection. This allows authenticated users to bypass SSRF controls and access internal network resources (e.g., cloud provider metadata services) This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-xhmj-rg95-44hv",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:33"
-    },
-    {
-      "cve_id": "CVE-2026-41269",
-      "title": "高危漏洞: CVE-2026-41269 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, the Chatflow configuration file upload settings can be modified to allow the application/javascript MIME type. This lets an attacker upload .js files even though the frontend doesn’t normally allow JavaScript uploads. This enables attackers to persistently store malicious Node.js web shells on the server, potentially leading to Remote Code Execution (RCE). This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-rh7v-6w34-w2rr",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:26"
-    },
-    {
-      "cve_id": "CVE-2026-41268",
-      "title": "高危漏洞: CVE-2026-41268 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, Flowise is vulnerable to a critical unauthenticated remote command execution (RCE) vulnerability. It can be exploited via a parameter override bypass using the FILE-STORAGE:: keyword combined with a NODE_OPTIONS environment variable injection. This allows for the execution of arbitrary system commands with root privileges within the containerized Flowise instance, requiring only a single HTTP request and no authentication or knowledge of the instance. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cvrr-qhgw-2mm6\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cvrr-qhgw-2mm6",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:21"
-    },
-    {
-      "cve_id": "CVE-2026-41267",
-      "title": "高危漏洞: CVE-2026-41267 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, an improper mass assignment (JSON injection) vulnerability in the account registration endpoint of Flowise Cloud allows unauthenticated attackers to inject server-managed fields and nested objects during account creation. This enables client-controlled manipulation of ownership metadata, timestamps, organization association, and role mappings, breaking trust boundaries in a multi-tenant environment. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-48m6-ch88-55mj\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-48m6-ch88-55mj",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:16"
-    },
-    {
-      "cve_id": "CVE-2026-41138",
-      "title": "高危漏洞: CVE-2026-41138 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-04-24 04:16:14",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, there is a remote code execution vulnerability in AirtableAgent.ts caused by lack of input verification when using Pandas. The user’s input is directly applied to the question parameter within the prompt template and it is reflected to the Python code without any sanitization. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-f228-chmx-v6j6",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:07"
-    },
-    {
-      "cve_id": "CVE-2026-41246",
-      "title": "高危漏洞: CVE-2026-41246 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-24 03:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
-      "description": "Contour is a Kubernetes ingress controller using Envoy proxy. From v1.19.0 to before v1.33.4, v1.32.5, and v1.31.6, Contour's Cookie Rewriting feature is vulnerable to Lua code injection. An attacker with RBAC permissions to create or modify HTTPProxy resources can craft a malicious value in spec.routes[].cookieRewritePolicies[].pathRewrite.value or spec.routes[].services[].cookieRewritePolicies[].pathRewrite.value that results in arbitrary code execution in the Envoy proxy. The cookie rewriting feature is internally implemented using Envoy's HTTP Lua filter. User-controlled values are interpolated into Lua source code using Go text/template without sufficient sanitization. The injected code only executes when processing traffic on the attacker's own route, which they already control. However, since Envoy runs as shared infrastructure, the injected code can also read Envoy's xDS client credentials from the filesystem or cause denial of service for other tenants sharing the Envoy instance. This vulnerability is fixed in v1.33.4, v1.32.5, and v1.31.6.",
-      "refs": "https://github.com/projectcontour/contour/releases/tag/v1.31.6\nhttps://github.com/projectcontour/contour/releases/tag/v1.32.5\nhttps://github.com/projectcontour/contour/releases/tag/v1.33.4",
-      "source": "NVD",
-      "time": "2026-04-25 00:01:00"
-    },
-    {
-      "cve_id": "CVE-2026-41241",
-      "title": "高危漏洞: CVE-2026-41241 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-04-24 03:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "pretalx is a conference planning tool. Prior to 2026.1.0, The organiser search in the pretalx backend rendered submission titles, speaker display names, and user names/emails into the result dropdown using innerHTML string interpolation. Any user who controls one of those fields (which includes any registered user whose display name is looked up by an administrator) could include HTML or JavaScript that would execute in an organiser's browser when the organiser's search query matched the malicious record. This vulnerability is fixed in 2026.1.0.",
-      "refs": "https://github.com/pretalx/pretalx/security/advisories/GHSA-cjcx-jfp2-f7m2",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:49"
     }
   ]
 }
