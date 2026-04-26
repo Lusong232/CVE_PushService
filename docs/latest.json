@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-42255",
+      "title": "高危漏洞: CVE-2026-42255 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-04-26 12:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L",
+      "description": "Technitium DNS Server before 15.0 allows DNS traffic amplification via cyclic name server delegation.",
+      "refs": "https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md#technitium-dns-server-change-log",
+      "source": "NVD",
+      "time": "2026-04-26 13:31:10"
+    },
+    {
       "cve_id": "CVE-2026-7002",
       "title": "高危漏洞: CVE-2026-7002 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/pretalx/pretalx/security/advisories/GHSA-cjcx-jfp2-f7m2",
       "source": "NVD",
       "time": "2026-04-25 00:00:49"
-    },
-    {
-      "cve_id": "CVE-2026-40886",
-      "title": "高危漏洞: CVE-2026-40886 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-04-24 03:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. From 3.6.5 to 4.0.4, an unchecked array index in the pod informer's podGCFromPod() function causes a controller-wide panic when a workflow pod carries a malformed workflows.argoproj.io/pod-gc-strategy annotation. Because the panic occurs inside an informer goroutine (outside the controller's recover() scope), it crashes the entire controller process. The poisoned pod persists across restarts, causing a crash loop that halts all workflow processing until the pod is manually deleted. This vulnerability is fixed in 4.0.5 and 3.7.14.",
-      "refs": "https://github.com/argoproj/argo-workflows/security/advisories/GHSA-5jv8-h7qh-rf5p",
-      "source": "NVD",
-      "time": "2026-04-25 00:00:41"
     }
   ]
 }
