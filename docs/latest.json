@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7064",
+      "title": "高危漏洞: CVE-2026-7064 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 07:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in AgentDeskAI browser-tools-mcp up to 1.2.0. This issue affects some unknown processing of the file browser-tools-server/browser-connector.ts. Executing a manipulation can lead to os command injection. The attack may be performed from remote. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/AgentDeskAI/browser-tools-mcp/\nhttps://github.com/AgentDeskAI/browser-tools-mcp/issues/232\nhttps://vuldb.com/submit/798616",
+      "source": "NVD",
+      "time": "2026-04-27 09:52:01"
+    },
+    {
+      "cve_id": "CVE-2026-7063",
+      "title": "高危漏洞: CVE-2026-7063 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 07:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Employee Management System 1.0. This vulnerability affects unknown code of the file /370project/process/eprocess.php of the component Endpoint. Performing a manipulation of the argument pwd results in sql injection. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/ahmadmarz10-hub/CVEsMarz/blob/main/SQL%20Injection%20in%20Employee%20Management%20System%20PHP%20mailuid%20Parameter.md\nhttps://vuldb.com/submit/798615",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:57"
+    },
+    {
+      "cve_id": "CVE-2026-7062",
+      "title": "高危漏洞: CVE-2026-7062 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 07:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in Intina47 context-sync up to 2.0.0. This affects an unknown part of the file src/git-integration.ts of the component Git Integration. Such manipulation leads to os command injection. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Intina47/context-sync/\nhttps://github.com/Intina47/context-sync/issues/31\nhttps://github.com/wing3e/public_exp/issues/22",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:53"
+    },
+    {
+      "cve_id": "CVE-2026-7061",
+      "title": "高危漏洞: CVE-2026-7061 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 06:17:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Toowiredd chatgpt-mcp-server up to 0.1.0. Affected by this issue is some unknown functionality of the file src/services/docker.service.ts of the component MCP/HTTP. This manipulation causes os command injection. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Toowiredd/chatgpt-mcp-server/\nhttps://github.com/Toowiredd/chatgpt-mcp-server/issues/8\nhttps://github.com/wing3e/public_exp/issues/28",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:45"
+    },
+    {
+      "cve_id": "CVE-2026-7060",
+      "title": "高危漏洞: CVE-2026-7060 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 06:17:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in liyupi yu-picture up to a053632c41340152bf75b66b3c543d129123d8ec. This impacts the function PageRequest of the file yu-picture-backend/src/main/java/com/yupi/yupicturebackend/service/impl/PictureServiceImpl.java of the component MyBatis-Plus. Executing a manipulation of the argument sortField can lead to sql injection. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. Applying a patch is advised to resolve this issue. The project was informed of the problem early through a pull request but has not reacted yet.",
+      "refs": "https://github.com/liyupi/yu-picture/\nhttps://github.com/liyupi/yu-picture/issues/4\nhttps://github.com/liyupi/yu-picture/pull/3",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:41"
+    },
+    {
+      "cve_id": "CVE-2026-7058",
+      "title": "高危漏洞: CVE-2026-7058 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 06:17:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in 666ghj MiroFish up to 0.1.2. The impacted element is the function SimulationIPCClient.send_command of the file backend/app/services/simulation_ipc.py of the component Inter-Process Communication. Such manipulation leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/666ghj/MiroFish/\nhttps://github.com/666ghj/MiroFish/issues/488\nhttps://vuldb.com/submit/798603",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:36"
+    },
+    {
+      "cve_id": "CVE-2026-7057",
+      "title": "高危漏洞: CVE-2026-7057 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 06:17:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda F456 1.0.0.5. The affected element is an unknown function of the file /goform/setcfm of the component httpd. This manipulation of the argument funcname/funcpara1 causes buffer overflow. It is possible to initiate the attack remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_128/README.md\nhttps://vuldb.com/submit/798459\nhttps://vuldb.com/vuln/359630",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:32"
+    },
+    {
+      "cve_id": "CVE-2026-7056",
+      "title": "高危漏洞: CVE-2026-7056 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 06:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tenda F456 1.0.0.5. Impacted is the function fromSafeUrlFilter of the file /goform/SafeUrlFilter of the component httpd. The manipulation of the argument page results in buffer overflow. The attack may be performed from remote. The exploit is now public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_127/README.md\nhttps://vuldb.com/submit/798458\nhttps://vuldb.com/submit/798462",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:28"
+    },
+    {
+      "cve_id": "CVE-2026-7055",
+      "title": "高危漏洞: CVE-2026-7055 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 06:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Tenda F456 1.0.0.5. This issue affects the function fromVirtualSer of the file /goform/VirtualSer of the component httpd. The manipulation of the argument menufacturer/Go leads to buffer overflow. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_126/README.md\nhttps://vuldb.com/submit/798457\nhttps://vuldb.com/vuln/359628",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:23"
+    },
+    {
+      "cve_id": "CVE-2026-7054",
+      "title": "高危漏洞: CVE-2026-7054 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 06:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Tenda F456 1.0.0.5. This vulnerability affects the function fromPptpUserAdd of the file /goform/PPTPDClient of the component httpd. Executing a manipulation of the argument opttype/usernamewith can lead to buffer overflow. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_125/README.md\nhttps://vuldb.com/submit/798456\nhttps://vuldb.com/vuln/359627",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:19"
+    },
+    {
+      "cve_id": "CVE-2026-7053",
+      "title": "高危漏洞: CVE-2026-7053 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 06:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Tenda F456 1.0.0.5. This affects the function frmL7ProtForm of the file /goform/L7Prot of the component httpd. Performing a manipulation of the argument page results in buffer overflow. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_124/README.md\nhttps://vuldb.com/submit/798455\nhttps://vuldb.com/vuln/359626",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:15"
+    },
+    {
+      "cve_id": "CVE-2026-7042",
+      "title": "高危漏洞: CVE-2026-7042 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 06:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in 666ghj MiroFish up to 0.1.2. This affects the function create_app of the file backend/app/__init__.py of the component REST API Endpoint. Executing a manipulation can lead to missing authentication. It is possible to launch the attack remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/666ghj/MiroFish/\nhttps://github.com/666ghj/MiroFish/issues/487\nhttps://vuldb.com/submit/798583",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:10"
+    },
+    {
+      "cve_id": "CVE-2018-25294",
+      "title": "高危漏洞: CVE-2018-25294 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-27 06:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "CEWE Photoshow 6.3.4 contains a buffer overflow vulnerability in the login dialog that allows attackers to crash the application by submitting oversized input. Attackers can inject 4000 bytes of data into the email address and password fields to trigger a denial of service condition.",
+      "refs": "https://cewe-photoworld.com/\nhttps://cewe-photoworld.com/creator-software/windows-download\nhttps://www.exploit-db.com/exploits/45211",
+      "source": "NVD",
+      "time": "2026-04-27 09:51:04"
+    },
+    {
+      "cve_id": "CVE-2018-25283",
+      "title": "高危漏洞: CVE-2018-25283 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-04-27 06:17:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "iSmartViewPro 1.5 contains a structured exception handling (SEH) buffer overflow vulnerability in the 'Save Path for Snapshot and Record file' field that allows local attackers to execute arbitrary code. Attackers can input a crafted payload exceeding 260 bytes through the System Setup interface to overwrite SEH records and execute shellcode with application privileges.",
+      "refs": "https://securimport.com/university/videovigilancia-ip/software/493-software-ismartviewpro-v1-5\nhttps://www.exploit-db.com/exploits/45349\nhttps://www.vulncheck.com/advisories/ismartviewpro-buffer-overflow-via-savepath-parameter",
+      "source": "NVD",
+      "time": "2026-04-27 09:50:58"
+    },
+    {
+      "cve_id": "CVE-2018-25263",
+      "title": "高危漏洞: CVE-2018-25263 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-04-27 06:17:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Faleemi Desktop Software 1.8.2 contains a local buffer overflow vulnerability in the Device alias field that allows local attackers to trigger a structured exception handler (SEH) overwrite. Attackers can craft a malicious payload and paste it into the Device alias field within the Managing Log interface to execute arbitrary code with calculator proof-of-concept execution.",
+      "refs": "http://support.faleemi.com/fsc776/Faleemi_v1.8.exe\nhttps://www.exploit-db.com/exploits/45492\nhttps://www.vulncheck.com/advisories/faleemi-desktop-software-local-buffer-overflow-seh",
+      "source": "NVD",
+      "time": "2026-04-27 09:50:53"
+    },
+    {
       "cve_id": "CVE-2026-6786",
       "title": "高危漏洞: CVE-2026-6786 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -934,171 +1099,6 @@
       "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-111-12.json\nhttps://senselive.io/contact\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-111-12",
       "source": "NVD",
       "time": "2026-04-25 00:03:40"
-    },
-    {
-      "cve_id": "CVE-2026-27841",
-      "title": "高危漏洞: CVE-2026-27841 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-24 08:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "A vulnerability in SenseLive X3050's web management interface allows state-changing operations to be triggered without proper Cross-Site Request Forgery (CSRF) protections. Because the application does not enforce server-side validation of request origin or implement CSRF tokens, a malicious external webpage could cause a user's browser to submit unauthorized configuration requests to the device.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-111-12.json\nhttps://senselive.io/contact\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-111-12",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:35"
-    },
-    {
-      "cve_id": "CVE-2026-25775",
-      "title": "高危漏洞: CVE-2026-25775 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 08:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability in SenseLive X3050’s remote management service allows firmware retrieval and update operations to be performed without authentication or authorization. The service accepts firmware-related requests from any reachable host and does not verify user privileges, integrity of uploaded images, or the authenticity of provided firmware.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-111-12.json\nhttps://senselive.io/contact\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-111-12",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:30"
-    },
-    {
-      "cve_id": "CVE-2026-41361",
-      "title": "高危漏洞: CVE-2026-41361 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-24 06:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "OpenClaw before 2026.3.28 contains an SSRF guard bypass vulnerability that fails to block four IPv6 special-use ranges. Attackers can exploit this by crafting URLs targeting internal or non-routable IPv6 addresses to bypass SSRF protections.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g86v-f9qv-rh6m\nhttps://www.vulncheck.com/advisories/openclaw-ssrf-guard-bypass-via-ipv6-special-use-ranges",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:24"
-    },
-    {
-      "cve_id": "CVE-2026-41359",
-      "title": "高危漏洞: CVE-2026-41359 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-24 06:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
-      "description": "OpenClaw before 2026.3.28 contains a privilege escalation vulnerability allowing authenticated operators with write permissions to access admin-class Telegram configuration and cron persistence settings via the send endpoint. Attackers with operator.write credentials can exploit insufficient access controls to reach sensitive administrative functionality and modify persistence mechanisms.",
-      "refs": "https://github.com/openclaw/openclaw/commit/b7d70ade3b9900dbe97bd73be9c02e924ff3c986\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-767m-xrhc-fxm7\nhttps://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-operator-write-to-admin-class-telegram-config-and-cron-persistence",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:20"
-    },
-    {
-      "cve_id": "CVE-2026-41355",
-      "title": "高危漏洞: CVE-2026-41355 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-24 06:16:42",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenShell before 2026.3.28 contains an arbitrary code execution vulnerability in mirror mode that converts untrusted sandbox files into workspace hooks. Attackers with mirror mode access can execute arbitrary code on the host during gateway startup by exploiting enabled workspace hooks.",
-      "refs": "https://github.com/openclaw/openclaw/commit/c02ee8a3a4cb390b23afdf21317aa8b2096854d1\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-42mx-vp8m-j7qh\nhttps://www.vulncheck.com/advisories/openshell-arbitrary-code-execution-via-mirror-mode-sandbox-file-conversion",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:15"
-    },
-    {
-      "cve_id": "CVE-2026-41353",
-      "title": "高危漏洞: CVE-2026-41353 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-24 06:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "OpenClaw before 2026.3.22 contains an access control bypass vulnerability in the allowProfiles feature that allows attackers to circumvent profile restrictions through persistent profile mutation and runtime profile selection. Remote attackers can exploit this by manipulating browser proxy profiles at runtime to access restricted profiles and bypass intended access controls.",
-      "refs": "https://github.com/openclaw/openclaw/commit/eac93507c36ccd0c359fba18fa466ef6448be8a5\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-h5hg-h7rr-gpf3\nhttps://www.vulncheck.com/advisories/openclaw-allowprofiles-bypass-via-profile-mutation-and-runtime-selection",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:09"
-    },
-    {
-      "cve_id": "CVE-2026-41352",
-      "title": "高危漏洞: CVE-2026-41352 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-24 06:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.31 contains a remote code execution vulnerability where a device-paired node can bypass the node scope gate authentication mechanism. Attackers with device pairing credentials can execute arbitrary node commands on the host system without proper node pairing validation.",
-      "refs": "https://github.com/openclaw/openclaw/commit/3886b65ef21d02808c1a106fa1f9f69e22f71c32\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-xj9w-5r6q-x6v4\nhttps://www.vulncheck.com/advisories/openclaw-remote-code-execution-via-node-scope-gate-bypass",
-      "source": "NVD",
-      "time": "2026-04-25 00:03:04"
-    },
-    {
-      "cve_id": "CVE-2026-41349",
-      "title": "高危漏洞: CVE-2026-41349 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-24 06:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.28 contains an agentic consent bypass vulnerability allowing LLM agents to silently disable execution approval via config.patch parameter. Remote attackers can exploit this to bypass security controls and execute unauthorized operations without user consent.",
-      "refs": "https://github.com/openclaw/openclaw/commit/76411b2afc4ae721e36c12e0ea24fd23e2fed61e\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-v3qc-wrwx-j3pw\nhttps://www.vulncheck.com/advisories/openclaw-agentic-consent-bypass-via-config-patch",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:59"
-    },
-    {
-      "cve_id": "CVE-2026-41347",
-      "title": "高危漏洞: CVE-2026-41347 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-24 06:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "OpenClaw before 2026.3.31 lacks browser-origin validation in HTTP operator endpoints when operating in trusted-proxy mode, allowing cross-site request forgery attacks. Attackers can exploit this by sending malicious requests from a browser in trusted-proxy deployments to perform unauthorized actions on HTTP operator endpoints.",
-      "refs": "https://github.com/openclaw/openclaw/commit/6b3f99a11f4d070fa5ed2533abbb3d7329ea4f0d\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-mhr7-2xmv-4c4q\nhttps://www.vulncheck.com/advisories/openclaw-cross-site-request-forgery-via-missing-browser-origin-validation-in-http-operator-endpoints",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:53"
-    },
-    {
-      "cve_id": "CVE-2026-41342",
-      "title": "高危漏洞: CVE-2026-41342 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-24 06:16:40",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "OpenClaw before 2026.3.28 contains an authentication bypass vulnerability in the remote onboarding component that persists unauthenticated discovery endpoints without explicit trust confirmation. Attackers can spoof discovery endpoints to redirect onboarding toward malicious gateways and capture gateway credentials or traffic.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3cw3-5vxw-g2h3\nhttps://www.vulncheck.com/advisories/openclaw-unauthenticated-discovery-endpoint-credential-exfiltration-via-remote-onboarding",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:47"
-    },
-    {
-      "cve_id": "CVE-2026-41336",
-      "title": "高危漏洞: CVE-2026-41336 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-24 06:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.3.31 allows workspace .env files to override the OPENCLAW_BUNDLED_HOOKS_DIR environment variable, enabling loading of attacker-controlled hook code. Attackers can replace trusted default-on bundled hooks from untrusted workspaces to execute arbitrary code.",
-      "refs": "https://github.com/openclaw/openclaw/commit/330a9f98cb29c79b1c16a2117e03d6276a0d6289\nhttps://github.com/openclaw/openclaw/security/advisories/GHSA-3qpv-xf3v-mm45\nhttps://www.vulncheck.com/advisories/openclaw-arbitrary-hook-code-execution-via-openclaw-bundled-hooks-dir-environment-variable-override",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:41"
-    },
-    {
-      "cve_id": "CVE-2026-35431",
-      "title": "高危漏洞: CVE-2026-35431 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-04-24 06:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Server-side request forgery (ssrf) in Microsoft Entra ID Entitlement Management allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35431",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:37"
-    },
-    {
-      "cve_id": "CVE-2026-33819",
-      "title": "高危漏洞: CVE-2026-33819 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-04-24 06:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Deserialization of untrusted data in Microsoft Bing allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33819",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:29"
-    },
-    {
-      "cve_id": "CVE-2026-33102",
-      "title": "高危漏洞: CVE-2026-33102 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-04-24 06:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Url redirection to untrusted site ('open redirect') in M365 Copilot allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33102",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:25"
-    },
-    {
-      "cve_id": "CVE-2026-32210",
-      "title": "高危漏洞: CVE-2026-32210 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-04-24 06:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Server-side request forgery (ssrf) in Microsoft Dynamics 365 (Online) allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32210",
-      "source": "NVD",
-      "time": "2026-04-25 00:02:20"
     }
   ]
 }
