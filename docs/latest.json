@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7149",
+      "title": "高危漏洞: CVE-2026-7149 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-28 03:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in dexhunter kaggle-mcp up to 406127ffcb2b91b8c10e20e6c2ca787fbc1dc92d. This vulnerability affects the function prepare_kaggle_dataset of the file src/kaggle_mcp/server.py. The manipulation of the argument competition_id leads to path traversal. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/dexhunter/kaggle-mcp/\nhttps://github.com/dexhunter/kaggle-mcp/issues/1\nhttps://vuldb.com/submit/802052",
+      "source": "NVD",
+      "time": "2026-04-28 05:46:10"
+    },
+    {
+      "cve_id": "CVE-2026-7147",
+      "title": "高危漏洞: CVE-2026-7147 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-28 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in JoeCastrom mcp-chat-studio up to 1.5.0. Affected by this issue is some unknown functionality of the file server/routes/llm.js of the component LLM Models API. Performing a manipulation of the argument req.query.base_url results in server-side request forgery. Remote exploitation of the attack is possible. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/JoeCastrom/mcp-chat-studio/\nhttps://github.com/JoeCastrom/mcp-chat-studio/issues/4\nhttps://vuldb.com/submit/801896",
+      "source": "NVD",
+      "time": "2026-04-28 05:46:06"
+    },
+    {
+      "cve_id": "CVE-2026-7146",
+      "title": "高危漏洞: CVE-2026-7146 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-28 02:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in AlejandroArciniegas mcp-data-vis up to de5a51525a69822290eaee569a1ab447b490746d. Affected by this vulnerability is the function axios of the file src/servers/web-scraper/server.js of the component HTTP Request Handler. Such manipulation leads to server-side request forgery. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/AlejandroArciniegas/mcp-data-vis/\nhttps://github.com/AlejandroArciniegas/mcp-data-vis/issues/1\nhttps://vuldb.com/submit/801895",
+      "source": "NVD",
+      "time": "2026-04-28 05:46:01"
+    },
+    {
+      "cve_id": "CVE-2025-69689",
+      "title": "高危漏洞: CVE-2025-69689 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-28 02:16:53",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The Fan Control application V251 contains an improper privilege handling vulnerability in its Open File Dialog. The dialog processes user-supplied paths with elevated permissions, which can be exploited by a local attacker to perform actions with administrator-level privileges.",
+      "refs": "https://getfancontrol.com\nhttps://gist.github.com/ahrixia/7c89bb3f1af6e85aeedde5ddb557a529\nhttps://github.com/Rem0o/FanControl.Releases",
+      "source": "NVD",
+      "time": "2026-04-28 05:45:57"
+    },
+    {
+      "cve_id": "CVE-2026-38934",
+      "title": "高危漏洞: CVE-2026-38934 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-28 01:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Cross Site Request Forgery vulnerability in diskoverdata diskover-community v.2.3.5. and before allows a remote attacker to escalate privileges and obtain sensitive information via the public/settings_process.php",
+      "refs": "http://diskover-community.com\nhttp://diskoverdata.com\nhttps://github.com/VadlaReddySai/diskoverdata-cve-writeups/blob/main/CVE-2026-38934",
+      "source": "NVD",
+      "time": "2026-04-28 05:45:52"
+    },
+    {
       "cve_id": "CVE-2026-7140",
       "title": "高危漏洞: CVE-2026-7140 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://vuldb.com/submit/797772\nhttps://vuldb.com/vuln/359605\nhttps://vuldb.com/vuln/359605/cti",
       "source": "NVD",
       "time": "2026-04-26 20:42:17"
-    },
-    {
-      "cve_id": "CVE-2026-7022",
-      "title": "高危漏洞: CVE-2026-7022 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-26 14:16:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in SmythOS sre up to 0.0.15. Affected is the function AgentRuntime of the file packages/core/src/subsystems/AgentManager/AgentRuntime.class.ts of the component HTTP Header Handler. Such manipulation of the argument X-DEBUG-RUN/X-DEBUG-INJ leads to improper authentication. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/c6a4a6a5f4c8b9e758f72c07ca0cd30d\nhttps://vuldb.com/submit/797643\nhttps://vuldb.com/vuln/359601",
-      "source": "NVD",
-      "time": "2026-04-26 20:42:10"
-    },
-    {
-      "cve_id": "CVE-2026-7019",
-      "title": "高危漏洞: CVE-2026-7019 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-26 13:16:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Tenda F456 1.0.0.5. The impacted element is the function fromP2pListFilter of the file /goform/P2pListFilter. The manipulation of the argument menufacturer/Go leads to buffer overflow. The attack is possible to be carried out remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_118/README.md\nhttps://vuldb.com/submit/797473\nhttps://vuldb.com/vuln/359598",
-      "source": "NVD",
-      "time": "2026-04-26 20:42:03"
-    },
-    {
-      "cve_id": "CVE-2026-42255",
-      "title": "高危漏洞: CVE-2026-42255 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-26 12:16:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L",
-      "description": "Technitium DNS Server before 15.0 allows DNS traffic amplification via cyclic name server delegation.",
-      "refs": "https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md#technitium-dns-server-change-log",
-      "source": "NVD",
-      "time": "2026-04-26 13:31:10"
-    },
-    {
-      "cve_id": "CVE-2026-7002",
-      "title": "高危漏洞: CVE-2026-7002 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-26 06:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in KLiK SocialMediaWebsite up to 1.0.1. This vulnerability affects unknown code of the file /includes/get_message_ajax.php of the component Private Message Handler. Executing a manipulation of the argument c_id can lead to sql injection. It is possible to launch the attack remotely.",
-      "refs": "https://vuldb.com/submit/797302\nhttps://vuldb.com/vuln/359561\nhttps://vuldb.com/vuln/359561/cti",
-      "source": "NVD",
-      "time": "2026-04-26 09:47:06"
-    },
-    {
-      "cve_id": "CVE-2026-6992",
-      "title": "高危漏洞: CVE-2026-6992 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-26 02:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Linksys MR9600 2.0.6.206937. This affects the function BTRequestGetSmartConnectStatus of the file /etc/init.d/run_central2.sh of the component JNAP Action Handler. The manipulation of the argument pin leads to os command injection. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/utmost3/cve/issues/2\nhttps://vuldb.com/submit/797086\nhttps://vuldb.com/vuln/359544",
-      "source": "NVD",
-      "time": "2026-04-26 05:28:08"
     }
   ]
 }
