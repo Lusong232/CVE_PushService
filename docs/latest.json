@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7101",
+      "title": "高危漏洞: CVE-2026-7101 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 17:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Tenda F456 1.0.0.5. This affects the function fromWrlclientSet of the file /goform/WrlclientSet of the component httpd. The manipulation leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_139/README.md\nhttps://vuldb.com/submit/798474\nhttps://vuldb.com/vuln/359676",
+      "source": "NVD",
+      "time": "2026-04-27 18:54:12"
+    },
+    {
+      "cve_id": "CVE-2026-7100",
+      "title": "高危漏洞: CVE-2026-7100 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 17:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda F456 1.0.0.5. The impacted element is the function fromNatlimitof of the file /goform/Natlimit of the component httpd. Executing a manipulation can lead to buffer overflow. The attack may be launched remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_138/README.md\nhttps://vuldb.com/submit/798473\nhttps://vuldb.com/vuln/359675",
+      "source": "NVD",
+      "time": "2026-04-27 18:54:07"
+    },
+    {
+      "cve_id": "CVE-2026-7099",
+      "title": "高危漏洞: CVE-2026-7099 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 17:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tenda F456 1.0.0.5. The affected element is the function formQuickIndex of the file /goform/QuickIndex of the component httpd. Performing a manipulation of the argument mit_linktype results in buffer overflow. The attack may be initiated remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_137/README.md\nhttps://vuldb.com/submit/798472\nhttps://vuldb.com/vuln/359674",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:59"
+    },
+    {
+      "cve_id": "CVE-2026-7098",
+      "title": "高危漏洞: CVE-2026-7098 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 17:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Tenda F456 1.0.0.5. Impacted is the function fromDhcpListClient of the file /goform/DhcpListClient of the component httpd. Such manipulation of the argument page leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_136/README.md\nhttps://vuldb.com/submit/798471\nhttps://vuldb.com/vuln/359673",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:54"
+    },
+    {
+      "cve_id": "CVE-2026-42379",
+      "title": "高危漏洞: CVE-2026-42379 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-04-27 17:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Insertion of Sensitive Information Into Sent Data vulnerability in WPDeveloper Templately allows Retrieve Embedded Sensitive Data.This issue affects Templately: from n/a through 3.6.1.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/templately/vulnerability/wordpress-templately-plugin-3-6-1-sensitive-data-exposure-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:50"
+    },
+    {
+      "cve_id": "CVE-2026-41635",
+      "title": "高危漏洞: CVE-2026-41635 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-04-27 17:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Apache MINA's AbstractIoBuffer.resolveClass() contains two branches, one of them (for static classes or primitive types) does not check the class at all, bypassing the classname allowlist and allowing arbitrary code to be executed.\n\n\n\n\nThe fix checks if the class is present in the accepted class filter before calling Class.forName(). \n\n\n\n\n\n\nAffected versions are Apache MINA 2.0.0 <= 2.0.27, 2.1.0 <= 2.1.10, and\n\n\n2.2.0 <= 2.2.5.\n\n\n\n\n\nThe problem is resolved in Apache MINA 2.0.28, 2.1.11, and 2.2.6 by \napplying the classname allowlist earlier.\n\n\n\n\n\nAffected are applications using Apache MINA that call  IoBuffer.getObject().\n\n\n\n\n\nApplications using Apache MINA are advised to upgrade.",
+      "refs": "https://lists.apache.org/thread/1l91w1mqsb3lwfd504fs045ylxntt2tm",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:42"
+    },
+    {
+      "cve_id": "CVE-2026-7097",
+      "title": "高危漏洞: CVE-2026-7097 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 16:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Tenda F456 1.0.0.5. This issue affects the function fromwebExcptypemanFilter of the file /goform/webExcptypemanFilter of the component httpd. This manipulation of the argument page causes buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_135/README.md\nhttps://vuldb.com/submit/798470\nhttps://vuldb.com/vuln/359672",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:38"
+    },
+    {
+      "cve_id": "CVE-2026-7096",
+      "title": "高危漏洞: CVE-2026-7096 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-27 16:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Tenda HG3 2.0 300003070. This vulnerability affects the function formgponConf of the file /boaform/admin/formgponConf. The manipulation of the argument fmgpon_loid results in os command injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://vuldb.com/submit/800796\nhttps://vuldb.com/vuln/359671\nhttps://vuldb.com/vuln/359671/cti",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:33"
+    },
+    {
+      "cve_id": "CVE-2026-7094",
+      "title": "高危漏洞: CVE-2026-7094 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 15:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in ShadowCloneLabs GlutamateMCPServers up to e2de73280b01e5d943593dd1aa2c01c5b9112f78. Affected by this issue is some unknown functionality of the file src/puppeteer/index.ts of the component puppeteer_navigate. Executing a manipulation of the argument url can lead to server-side request forgery. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/BruceJqs/public_exp/issues/7\nhttps://github.com/ShadowCloneLabs/GlutamateMCPServers/\nhttps://github.com/ShadowCloneLabs/GlutamateMCPServers/issues/8",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:28"
+    },
+    {
+      "cve_id": "CVE-2026-7088",
+      "title": "高危漏洞: CVE-2026-7088 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 14:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in SourceCodester Pharmacy Sales and Inventory System 1.0. The affected element is an unknown function of the file /ajax.php?action=save_receiving. Executing a manipulation of the argument ID can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/nidieaaa/test/issues/3\nhttps://vuldb.com/submit/800062\nhttps://vuldb.com/vuln/359663",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:20"
+    },
+    {
+      "cve_id": "CVE-2026-7087",
+      "title": "高危漏洞: CVE-2026-7087 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-27 14:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in SourceCodester Pharmacy Sales and Inventory System 1.0. Impacted is an unknown function of the file /ajax.php?action=save_sales. Performing a manipulation of the argument ID results in sql injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/nidieaaa/test/issues/2\nhttps://vuldb.com/submit/800060\nhttps://vuldb.com/vuln/359662",
+      "source": "NVD",
+      "time": "2026-04-27 18:53:11"
+    },
+    {
       "cve_id": "CVE-2026-7082",
       "title": "高危漏洞: CVE-2026-7082 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3prp-9gf7-4rxx",
       "source": "NVD",
       "time": "2026-04-25 02:37:44"
-    },
-    {
-      "cve_id": "CVE-2026-41276",
-      "title": "高危漏洞: CVE-2026-41276 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 04:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, this vulnerability allows remote attackers to bypass authentication on affected installations of FlowiseAI Flowise. Authentication is not required to exploit this vulnerability. The specific flaw exists within the resetPassword method of the AccountService class. There is no check performed to ensure that a password reset token has actually been generated for a user account. By default the value of the reset token stored in a users account is null, or an empty string if they've reset their password before. An attacker with knowledge of the user's email address can submit a request to the \"/api/v1/account/reset-password\" endpoint containing a null or empty string reset token value and reset that user's password to a value of their choosing. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-f6hc-c5jr-878p",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:40"
-    },
-    {
-      "cve_id": "CVE-2026-41275",
-      "title": "高危漏洞: CVE-2026-41275 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-24 04:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, the password reset functionality on cloud.flowiseai.com sends a reset password link over the unsecured HTTP protocol instead of HTTPS. This behavior introduces the risk of a man-in-the-middle (MITM) attack, where an attacker on the same network as the user (e.g., public Wi-Fi) can intercept the reset link and gain unauthorized access to the victim’s account. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-x5w6-38gp-mrqh\nhttps://hackerone.com/reports/1888915",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:35"
-    },
-    {
-      "cve_id": "CVE-2026-41273",
-      "title": "高危漏洞: CVE-2026-41273 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, Flowise contains an authentication bypass vulnerability that allows an unauthenticated attacker to obtain OAuth 2.0 access tokens associated with a public chatflow. By accessing a public chatflow configuration endpoint, an attacker can retrieve internal workflow data, including OAuth credential identifiers, which can then be used to refresh and obtain valid OAuth 2.0 access tokens without authentication. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-6f7g-v4pp-r667",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:29"
-    },
-    {
-      "cve_id": "CVE-2026-41266",
-      "title": "高危漏洞: CVE-2026-41266 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-24 04:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, /api/v1/public-chatbotConfig/:id ep exposes sensitive data including API keys, HTTP authorization headers and internal configuration without any authentication. An attacker with knowledge just of a chatflow UUID can retrieve credentials stored in password type fields and HTTP headers, leading to credential theft and more. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-4jpm-cgx2-8h37",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:25"
-    },
-    {
-      "cve_id": "CVE-2026-41265",
-      "title": "高危漏洞: CVE-2026-41265 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 04:16:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, the specific flaw exists within the run method of the Airtable_Agents class. The issue results from the lack of proper sandboxing when evaluating an LLM generated python script. Using prompt injection techniques, an unauthenticated attacker with the ability to send prompts to a chatflow using the Airtable Agent node may convince an LLM to respond with a malicious python script that executes attacker controlled commands on the flowise server. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-v38x-c887-992f\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-v38x-c887-992f",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:20"
-    },
-    {
-      "cve_id": "CVE-2026-41264",
-      "title": "高危漏洞: CVE-2026-41264 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 04:16:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, the specific flaw exists within the run method of the CSV_Agents class. The issue results from the lack of proper sandboxing when evaluating an LLM generated python script. An attacker can leverage this vulnerability to execute code in the context of the user running the server. Using prompt injection techniques, an unauthenticated attacker with the ability to send prompts to a chatflow using the CSV Agent node may convince an LLM to respond with a malicious python script that executes attacker controlled commands on the Flowise server. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3hjv-c53m-58jj\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3hjv-c53m-58jj",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:14"
-    },
-    {
-      "cve_id": "CVE-2026-41137",
-      "title": "高危漏洞: CVE-2026-41137 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-24 04:16:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.0, The CSVAgent allows providing a custom Pandas CSV read code. Due to lack of sanitization, an attacker can provide a command injection payload that will get interpolated and executed by the server. This vulnerability is fixed in 3.1.0.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-9wc7-mj3f-74xv\nhttps://github.com/FlowiseAI/Flowise/security/advisories/GHSA-9wc7-mj3f-74xv",
-      "source": "NVD",
-      "time": "2026-04-25 02:37:07"
-    },
-    {
-      "cve_id": "CVE-2026-5367",
-      "title": "高危漏洞: CVE-2026-5367 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-04-24 21:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "A flaw was found in OVN (Open Virtual Network). A remote attacker, by sending crafted DHCPv6 (Dynamic Host Configuration Protocol for IPv6) SOLICIT packets with an inflated Client ID length, could cause the ovn-controller to read beyond the bounds of a packet. This out-of-bounds read can lead to the disclosure of sensitive information stored in heap memory, which is then returned to the attacker's virtual machine port.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-5367\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2455863\nhttp://www.openwall.com/lists/oss-security/2026/04/20/3",
-      "source": "NVD",
-      "time": "2026-04-25 00:05:48"
-    },
-    {
-      "cve_id": "CVE-2026-21515",
-      "title": "高危漏洞: CVE-2026-21515 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-04-24 21:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Exposure of sensitive information to an unauthorized actor in Azure IOT Central allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21515",
-      "source": "NVD",
-      "time": "2026-04-25 00:05:44"
-    },
-    {
-      "cve_id": "CVE-2026-21728",
-      "title": "高危漏洞: CVE-2026-21728 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-24 17:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Tempo queries with large limits can cause large memory allocations which can impact the availability of the service, depending on its deployment strategy.\n\nMitigation can be done by setting max_result_limit in the search config, e.g. to 262144 (2^18).",
-      "refs": "https://grafana.com/security/security-advisories/cve-2026-21728",
-      "source": "NVD",
-      "time": "2026-04-25 00:05:40"
-    },
-    {
-      "cve_id": "CVE-2026-1952",
-      "title": "高危漏洞: CVE-2026-1952 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-24 15:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Delta Electronics AS320T has denial of service via the undocumented subfunction vulnerability.",
-      "refs": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00006_AS320T%20Multiple%20vulnerabilities%20(CVE-2026-1949,%201950,%201951,%201952).pdf",
-      "source": "NVD",
-      "time": "2026-04-25 00:05:33"
     }
   ]
 }
