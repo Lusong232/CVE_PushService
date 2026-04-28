@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3323",
+      "title": "高危漏洞: CVE-2026-3323 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-04-28 19:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An unsecured configuration interface on affected devices allows unauthenticated remote attackers to access sensitive information, including hashed credentials and access codes.",
+      "refs": "https://certvde.com/en/advisories/VDE-2026-016\nhttps://vega.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-016.json",
+      "source": "NVD",
+      "time": "2026-04-28 21:28:33"
+    },
+    {
+      "cve_id": "CVE-2026-7279",
+      "title": "高危漏洞: CVE-2026-7279 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-04-28 18:16:04",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AVACAST developed by eMPIA Technology, has a DLL Hijacking vulnerability, allowing authenticated local attackers to place a malicious DLL in a specific directory, resulting in arbitrary code execution with system privileges when the system loads the DLL.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-10885-02d83-2.html\nhttps://www.twcert.org.tw/tw/cp-132-10884-f9c21-1.html",
+      "source": "NVD",
+      "time": "2026-04-28 21:28:25"
+    },
+    {
       "cve_id": "CVE-2026-7248",
       "title": "高危漏洞: CVE-2026-7248 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/directorist-booking/vulnerability/wordpress-directorist-booking-plugin-2-4-1-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-04-28 00:19:36"
-    },
-    {
-      "cve_id": "CVE-2026-41409",
-      "title": "高危漏洞: CVE-2026-41409 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-27 18:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The fix for CVE-2024-52046 in Apache MINA AbstractIoBuffer.getObject() was incomplete. The classname allowlist of classes allowed to be deserialized was applied too late after a static initializer in a class to be read might already have been executed.\n\n\n\n\nAffected versions are Apache MINA 2.0.0 <= 2.0.27, 2.1.0 <= 2.1.10, and 2.2.0 <= 2.2.5.\n\n\n\n\nThe problem is resolved in Apache MINA 2.0.28, 2.1.11, and 2.2.6 by \napplying the classname allowlist earlier.\n\n\n\n\nAffected are applications using Apache MINA that call IoBuffer.getObject().\n\n\n\n\nApplications using Apache MINA are advised to upgrade",
-      "refs": "https://lists.apache.org/thread/9ddvsq6c4l5bhwq8l14sob4f8qjvx5c9",
-      "source": "NVD",
-      "time": "2026-04-28 00:19:27"
-    },
-    {
-      "cve_id": "CVE-2026-7101",
-      "title": "高危漏洞: CVE-2026-7101 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-27 17:16:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Tenda F456 1.0.0.5. This affects the function fromWrlclientSet of the file /goform/WrlclientSet of the component httpd. The manipulation leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new/blob/main/F456/vul_139/README.md\nhttps://vuldb.com/submit/798474\nhttps://vuldb.com/vuln/359676",
-      "source": "NVD",
-      "time": "2026-04-27 18:54:12"
     }
   ]
 }
