@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-42167",
+      "title": "高危漏洞: CVE-2026-42167 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-29 07:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "mod_sql in ProFTPD before 1.3.10rc1 allows remote attackers to execute arbitrary code via a username, in scenarios where there is logging of USER requests with an expansion such as %U, and the SQL backend allows commands (e.g., COPY TO PROGRAM).",
+      "refs": "http://www.proftpd.org/docs/RELEASE_NOTES-1.3.10rc1\nhttps://github.com/ZeroPathAI/proftpd-CVE-2026-42167-poc\nhttps://github.com/proftpd/proftpd/issues/2052",
+      "source": "NVD",
+      "time": "2026-04-29 10:01:07"
+    },
+    {
+      "cve_id": "CVE-2026-7319",
+      "title": "高危漏洞: CVE-2026-7319 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-29 06:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in elinsky execution-system-mcp 0.1.0. The impacted element is the function _get_context_file_path of the file src/execution_system_mcp/server.py of the component add_action Tool. This manipulation of the argument context causes path traversal. The attack can be initiated remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/elinsky/execution-system-mcp/\nhttps://github.com/elinsky/execution-system-mcp/issues/1\nhttps://vuldb.com/submit/803085",
+      "source": "NVD",
+      "time": "2026-04-29 10:01:02"
+    },
+    {
+      "cve_id": "CVE-2026-7316",
+      "title": "高危漏洞: CVE-2026-7316 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-29 06:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in eiliyaabedini aider-mcp up to 667b914301aada695aab0e46d1fb3a7d5e32c8af. Affected is an unknown function of the file aider_mcp.py of the component code_with_ai. The manipulation of the argument working_dir/editable_files leads to command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/eiliyaabedini/aider-mcp/\nhttps://github.com/eiliyaabedini/aider-mcp/issues/1\nhttps://vuldb.com/submit/803082",
+      "source": "NVD",
+      "time": "2026-04-29 10:00:58"
+    },
+    {
+      "cve_id": "CVE-2026-7315",
+      "title": "高危漏洞: CVE-2026-7315 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-29 06:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in eiceblue spire-pdf-mcp-server 0.1.1. This impacts the function get_pdf_path of the file src/spire_pdf_mcp/server.py of the component PDF File Handler. Executing a manipulation of the argument filepath can lead to path traversal. The attack can be launched remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/eiceblue/spire-pdf-mcp-server/\nhttps://github.com/eiceblue/spire-pdf-mcp-server/issues/1\nhttps://vuldb.com/submit/803081",
+      "source": "NVD",
+      "time": "2026-04-29 10:00:52"
+    },
+    {
+      "cve_id": "CVE-2026-7314",
+      "title": "高危漏洞: CVE-2026-7314 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-29 06:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in eiceblue spire-doc-mcp-server 1.0.0. This affects the function get_doc_path of the file src/spire_doc_mcp/api/base.py. Performing a manipulation of the argument document_name results in path traversal. The attack can be initiated remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/eiceblue/spire-doc-mcp-server/\nhttps://github.com/eiceblue/spire-doc-mcp-server/issues/1\nhttps://vuldb.com/submit/803080",
+      "source": "NVD",
+      "time": "2026-04-29 10:00:48"
+    },
+    {
+      "cve_id": "CVE-2026-41649",
+      "title": "高危漏洞: CVE-2026-41649 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-04-29 06:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Outline is a service that allows for collaborative documentation. The `shares.create` API endpoint starting in version 0.86.0 and prior to version 1.7.0 has an insecure direct object reference.. When both `collectionId` and `documentId` are provided in the request, the authorization logic only checks access to the collection, completely ignoring the document. This allows an authenticated attacker to generate a valid public share link for any document on the platform, including documents belonging to other workspaces. The full document contents can then be retrieved via the `documents.info` endpoint. Version 1.7.0 contains a patch.",
+      "refs": "https://github.com/outline/outline/commit/1b91a295e10f58a1088c54f533773788325ff460\nhttps://github.com/outline/outline/releases/tag/v1.7.0\nhttps://github.com/outline/outline/security/advisories/GHSA-23jj-rp48-w7q7",
+      "source": "NVD",
+      "time": "2026-04-29 10:00:41"
+    },
+    {
+      "cve_id": "CVE-2026-7322",
+      "title": "高危漏洞: CVE-2026-7322 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-28 23:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Memory safety bugs present in Firefox ESR 115.35.0, Firefox ESR 140.10.0 and Firefox 150.0.0. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.1, Firefox ESR 140.10.1, and Firefox ESR 115.35.1.",
+      "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=2021904%2C2022731%2C2027158%2C2027733%2C2027973%2C2027976%2C2028231%2C2028731%2C2028886%2C2029067%2C2029700%2C2029724%2C2029806%2C2029814%2C2030108%2C2030111%2C2031524%2C2031921%2C2032040\nhttps://www.mozilla.org/security/advisories/mfsa2026-35/\nhttps://www.mozilla.org/security/advisories/mfsa2026-36/",
+      "source": "NVD",
+      "time": "2026-04-29 10:00:34"
+    },
+    {
       "cve_id": "CVE-2026-42432",
       "title": "高危漏洞: CVE-2026-42432 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-113-03.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-113-03\nhttps://www.milesight.com/support/download/firmware",
       "source": "NVD",
       "time": "2026-04-28 13:50:22"
-    },
-    {
-      "cve_id": "CVE-2026-7194",
-      "title": "高危漏洞: CVE-2026-7194 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 07:16:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in SourceCodester Pharmacy Sales and Inventory System 1.0. This impacts an unknown function of the file /ajax.php?action=save_product. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://github.com/bfs045313-wq/cv3-protect/issues/2\nhttps://vuldb.com/submit/800977\nhttps://vuldb.com/vuln/359798",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:49"
-    },
-    {
-      "cve_id": "CVE-2026-28747",
-      "title": "高危漏洞: CVE-2026-28747 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-28 07:16:02",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A weak key generation vulnerability exists in specific firmware versions of Milesight AIOT cameras allows authorization to be bypassed.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-113-03.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-113-03\nhttps://www.milesight.com/support/download/firmware",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:44"
-    },
-    {
-      "cve_id": "CVE-2026-7178",
-      "title": "高危漏洞: CVE-2026-7178 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 06:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in ChatGPTNextWeb NextChat up to 2.16.1. This affects the function storeUrl of the file app/api/artifacts/route.ts of the component Artifacts Endpoint. This manipulation of the argument ID causes server-side request forgery. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://gist.github.com/YLChen-007/43252d45d75e8bdd2d45136fd6ffe8a5\nhttps://github.com/ChatGPTNextWeb/NextChat/\nhttps://github.com/ChatGPTNextWeb/NextChat/issues/6741",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:40"
-    },
-    {
-      "cve_id": "CVE-2026-7177",
-      "title": "高危漏洞: CVE-2026-7177 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 06:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in ChatGPTNextWeb NextChat up to 2.16.1. Affected by this issue is the function proxyHandler of the file app/api/[provider]/[...path]/route.ts. The manipulation results in server-side request forgery. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://gist.github.com/YLChen-007/da6b00024f5b7e1d4fa0658c19b77fbf\nhttps://github.com/ChatGPTNextWeb/NextChat/\nhttps://github.com/ChatGPTNextWeb/NextChat/issues/6742",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:36"
-    },
-    {
-      "cve_id": "CVE-2026-7160",
-      "title": "高危漏洞: CVE-2026-7160 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-28 06:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Tenda HG3 2.0. This vulnerability affects the function formTracert of the file /boaform/formTracert. Executing a manipulation of the argument datasize can lead to command injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://vuldb.com/submit/802079\nhttps://vuldb.com/vuln/359759\nhttps://vuldb.com/vuln/359759/cti",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:27"
-    },
-    {
-      "cve_id": "CVE-2026-7159",
-      "title": "高危漏洞: CVE-2026-7159 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 06:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in douinc mkdocs-mcp-plugin up to 0.4.1. This affects the function read_document/list_documents of the file server.py. Performing a manipulation of the argument docs_dir/file_path results in path traversal. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor confirms, that the \"fix will be published within a few days.\"",
-      "refs": "https://github.com/douinc/mkdocs-mcp-plugin/\nhttps://github.com/douinc/mkdocs-mcp-plugin/issues/6\nhttps://github.com/douinc/mkdocs-mcp-plugin/issues/6#issuecomment-4223718119",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:23"
-    },
-    {
-      "cve_id": "CVE-2026-7191",
-      "title": "高危漏洞: CVE-2026-7191 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-04-28 05:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper use of the static-eval npm package in the open source solution qnabot-on-aws versions 7.2.4 and earlier may allow an authenticated administrator to execute arbitrary code within the fulfillment Lambda execution context by injecting a crafted conditional chaining expression via the Content Designer interface, which bypasses the intended expression sandbox through JavaScript prototype manipulation. This may grant direct access to backend resources (Lambda environment variables, OpenSearch indices, S3 objects, DynamoDB tables) that are not exposed through normal administrative interfaces.\n\nWe recommend you upgrade to version 7.3.0 or above.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-020-aws/\nhttps://github.com/aws-solutions/qnabot-on-aws/releases/tag/v7.3.0",
-      "source": "NVD",
-      "time": "2026-04-28 09:59:18"
     }
   ]
 }
