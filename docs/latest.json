@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7402",
+      "title": "高危漏洞: CVE-2026-7402 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-30 21:16:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Improper Control of Interaction Frequency vulnerability in MeWare Software Development Inc. PDKS allows Flooding.\n\nThis issue affects PDKS: from V16.20200313 before VMYR_3.5.2025117.",
+      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0141",
+      "source": "NVD",
+      "time": "2026-05-01 00:13:50"
+    },
+    {
+      "cve_id": "CVE-2026-7399",
+      "title": "高危漏洞: CVE-2026-7399 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-04-30 21:16:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Authorization bypass through User-Controlled key vulnerability in MeWare Software Development Inc. PDKS allows Privilege Abuse.\n\nThis issue affects PDKS: from V16.20200313 before VMYR_3.5.2025117.",
+      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0141",
+      "source": "NVD",
+      "time": "2026-05-01 00:13:45"
+    },
+    {
+      "cve_id": "CVE-2026-41882",
+      "title": "高危漏洞: CVE-2026-41882 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-04-30 20:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "In JetBrains IntelliJ IDEA before 2024.3.7.1, \n2025.1.7.1,\n2025.2.6.2,  \n2025.3.4.1, \n2026.1.1 reading arbitrary local files was possible via built-in web server",
+      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
+      "source": "NVD",
+      "time": "2026-05-01 00:13:39"
+    },
+    {
+      "cve_id": "CVE-2026-42800",
+      "title": "高危漏洞: CVE-2026-42800 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-04-30 18:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "NULL pointer dereference vulnerability in ASR1903 in ASR Lapwing_Linux on Linux (ims_client modules) allows Pointer Manipulation.\n\n This vulnerability is associated with program files sip/utils/src/sipuri.c.",
+      "refs": "https://www.asrmicro.com/en/goods/psirt?cid=44",
+      "source": "NVD",
+      "time": "2026-05-01 00:13:34"
+    },
+    {
       "cve_id": "CVE-2026-42799",
       "title": "高危漏洞: CVE-2026-42799 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1055,50 +1099,6 @@
       "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24186\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5819\nhttps://www.cve.org/CVERecord?id=CVE-2026-24186",
       "source": "NVD",
       "time": "2026-04-29 05:50:30"
-    },
-    {
-      "cve_id": "CVE-2026-24178",
-      "title": "高危漏洞: CVE-2026-24178 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-29 03:36:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA NVFlare Dashboard contains a vulnerability in the user management and authentication system where an unauthenticated attacker may cause authorization bypass through user-controlled key. A successful exploit of this vulnerability may lead to privilege escalation, data tampering, information disclosure, code execution, and denial of service.",
-      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24178\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5819\nhttps://www.cve.org/CVERecord?id=CVE-2026-24178",
-      "source": "NVD",
-      "time": "2026-04-29 05:50:26"
-    },
-    {
-      "cve_id": "CVE-2026-41873",
-      "title": "高危漏洞: CVE-2026-41873 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-29 00:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "** UNSUPPORTED WHEN ASSIGNED ** Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in Pony Mail leading to admin account takeover.\n\nThis issue affects all versions of the Lua implementation of Pony Mail. There is a Python implementation under development under the name \"Pony Mail Foal\" that is not affected by this issue, but hasn't been released yet.\n\nAs the Lua implementation of this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://lists.apache.org/thread/1c7jtxjobh280kqc13fzw1cg57xrz951",
-      "source": "NVD",
-      "time": "2026-04-29 05:50:22"
-    },
-    {
-      "cve_id": "CVE-2026-38651",
-      "title": "高危漏洞: CVE-2026-38651 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-04-29 00:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Authentication Bypass vulnerability exists in Netmaker versions prior to 1.5.0. The VerifyHostToken function in logic/jwts.go fails to validate the JWT signature when verifying host tokens. An attacker can forge a JWT signed with any arbitrary key and use it to impersonate any host in the network, gaining access to sensitive information",
-      "refs": "https://github.com/gravitl/netmaker/commit/5309aa70d464ef565911369714d661a61481a79b\nhttps://www.zyenra.com/advisories/netmaker-jwt-verification-bypass\nhttps://www.zyenra.com/blog/netmaker-jwt-verification-bypass",
-      "source": "NVD",
-      "time": "2026-04-29 05:50:18"
-    },
-    {
-      "cve_id": "CVE-2026-7323",
-      "title": "高危漏洞: CVE-2026-7323 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Memory safety bugs present in Firefox ESR 140.10.0, Thunderbird ESR 140.10.0, Firefox 150.0.0 and Thunderbird 150.0.0. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.1 and Firefox ESR 140.10.1.",
-      "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=2028537%2C2029911%2C2031121%2C2033602\nhttps://www.mozilla.org/security/advisories/mfsa2026-35/\nhttps://www.mozilla.org/security/advisories/mfsa2026-36/",
-      "source": "NVD",
-      "time": "2026-04-29 05:50:14"
     }
   ]
 }
