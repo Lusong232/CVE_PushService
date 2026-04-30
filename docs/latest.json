@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7470",
+      "title": "高危漏洞: CVE-2026-7470 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-30 11:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda 4G300 US_4G300V1.0Mt_V1.01.42_CN_TDC01. Affected is the function sub_427C3C of the file /goform/SafeMacFilter. This manipulation of the argument page causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+      "refs": "https://github.com/Axelioc/CVE/blob/main/Tenda/US_4G300/sub_427C3C/sub_427C3C.md\nhttps://vuldb.com/submit/804269\nhttps://vuldb.com/vuln/360206",
+      "source": "NVD",
+      "time": "2026-04-30 13:49:40"
+    },
+    {
+      "cve_id": "CVE-2026-7468",
+      "title": "高危漏洞: CVE-2026-7468 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-30 09:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in 1024-lab smart-admin up to 3.30.0. This affects an unknown function of the file /smart-admin-api/druid/index.html of the component Demo Site. The manipulation leads to improper access controls. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/1024-lab/smart-admin/\nhttps://github.com/1024-lab/smart-admin/issues/117\nhttps://vuldb.com/submit/804228",
+      "source": "NVD",
+      "time": "2026-04-30 13:49:34"
+    },
+    {
+      "cve_id": "CVE-2026-7446",
+      "title": "高危漏洞: CVE-2026-7446 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-04-30 08:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in VetCoders mcp-server-semgrep 1.0.0. This affects the function analyze_results/filter_results/export_results/compare_results/scan_directory/create_rule of the file src/index.ts of the component MCP Interface. The manipulation of the argument ID results in os command injection. The attack can be executed remotely. The exploit is now public and may be used. Upgrading to version 1.0.1 is able to mitigate this issue. The patch is identified as 141335da044e53c3f5b315e0386e01238405b771. It is advisable to upgrade the affected component.",
+      "refs": "https://github.com/VetCoders/mcp-server-semgrep/\nhttps://github.com/VetCoders/mcp-server-semgrep/commit/141335da044e53c3f5b315e0386e01238405b771\nhttps://github.com/VetCoders/mcp-server-semgrep/issues/12",
+      "source": "NVD",
+      "time": "2026-04-30 13:49:25"
+    },
+    {
       "cve_id": "CVE-2026-7443",
       "title": "高危漏洞: CVE-2026-7443 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://arandasoft.com/en/productos/aranda-service-management/\nhttps://docs.arandasoft.com/at-v8-release-notes/en/pages/release_pdf/file_server.html\nhttps://github.com/brandonperezlara/CVE-2025-67223",
       "source": "NVD",
       "time": "2026-04-29 03:19:44"
-    },
-    {
-      "cve_id": "CVE-2026-5435",
-      "title": "高危漏洞: CVE-2026-5435 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 21:19:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "The deprecated functions ns_printrrf, ns_printrr and fp_nquery in the GNU C Library version 2.2 and newer fail to enforce the caller-supplied buffer length, and can result in an out-of-bounds write when printing TSIG records.",
-      "refs": "https://inbox.sourceware.org/libc-announce/7a655d55-276f-41fe-b550-feb3ebb2ce91@redhat.com/T/#u\nhttps://sourceware.org/bugzilla/show_bug.cgi?id=34033",
-      "source": "NVD",
-      "time": "2026-04-29 03:19:37"
-    },
-    {
-      "cve_id": "CVE-2026-7321",
-      "title": "高危漏洞: CVE-2026-7321 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-04-28 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Sandbox escape due to incorrect boundary conditions in the WebRTC: Networking component. This vulnerability was fixed in Firefox ESR 140.10.1.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2029461\nhttps://www.mozilla.org/security/advisories/mfsa2026-36/",
-      "source": "NVD",
-      "time": "2026-04-29 00:47:51"
-    },
-    {
-      "cve_id": "CVE-2026-7289",
-      "title": "高危漏洞: CVE-2026-7289 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-28 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in D-Link DIR-825M 1.1.12. This issue affects the function sub_414BA8 of the file /boafrm/formWanConfigSetup. The manipulation of the argument submit-url results in buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/Kiciot/cve/issues/3\nhttps://vuldb.com/submit/803025\nhttps://vuldb.com/vuln/359947",
-      "source": "NVD",
-      "time": "2026-04-29 00:47:46"
     }
   ]
 }
