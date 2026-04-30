@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-42799",
+      "title": "高危漏洞: CVE-2026-42799 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-04-30 17:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "Out-of-bounds read vulnerability in ASR Kestrel (nr_fw modules) allows Overflow Buffers.\n\n This vulnerability is associated with program files Code/Nr/nr_fw/RA/src/NrPwrCtrl.C.\n\n\n\nThis issue affects Kestrel: before 2026/02/10.",
+      "refs": "https://www.asrmicro.com/en/goods/psirt?cid=44",
+      "source": "NVD",
+      "time": "2026-04-30 18:46:24"
+    },
+    {
+      "cve_id": "CVE-2026-22070",
+      "title": "高危漏洞: CVE-2026-22070 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-04-30 17:16:02",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:H",
+      "description": "ColorOS Assistant has an unauthenticated start-download channel, leading to file path traversal.",
+      "refs": "https://security.oppo.com/en/noticeDetail?notice_only_key=NOTICE-2049764240746881024",
+      "source": "NVD",
+      "time": "2026-04-30 18:46:17"
+    },
+    {
+      "cve_id": "CVE-2026-5402",
+      "title": "高危漏洞: CVE-2026-5402 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-04-30 15:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "TLS protocol dissector heap overflow in Wireshark 4.6.0 to 4.6.4 allows denial of service and possible code execution",
+      "refs": "https://gitlab.com/wireshark/wireshark/-/issues/21090\nhttps://www.wireshark.org/security/wnpa-sec-2026-14.html",
+      "source": "NVD",
+      "time": "2026-04-30 18:46:12"
+    },
+    {
+      "cve_id": "CVE-2025-13030",
+      "title": "高危漏洞: CVE-2025-13030 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-04-30 14:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "All versions of the package django-mdeditor are vulnerable to Missing Authentication for Critical Function in the image upload endpoint. An attacker can upload malicious files and achieve arbitrary code execution since this endpoint lacks authentication protection and proper sanitisation of file names.",
+      "refs": "https://github.com/pylixm/django-mdeditor/blob/e8dd73fb8571ddff2e7a20a4bfa88c376cc33b62/mdeditor/views.py%23L25\nhttps://github.com/pylixm/django-mdeditor/commit/3e80f9edcabc5d2fc136b05a501964b8a5e97cfe\nhttps://github.com/pylixm/django-mdeditor/issues/151",
+      "source": "NVD",
+      "time": "2026-04-30 18:46:05"
+    },
+    {
       "cve_id": "CVE-2026-7470",
       "title": "高危漏洞: CVE-2026-7470 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=2028537%2C2029911%2C2031121%2C2033602\nhttps://www.mozilla.org/security/advisories/mfsa2026-35/\nhttps://www.mozilla.org/security/advisories/mfsa2026-36/",
       "source": "NVD",
       "time": "2026-04-29 05:50:14"
-    },
-    {
-      "cve_id": "CVE-2026-41636",
-      "title": "高危漏洞: CVE-2026-41636 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-28 18:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Uncontrolled Recursion vulnerability in Apache Thrift Node.js bindings\n\nThis issue affects Apache Thrift: before 0.23.0.\n\nUsers are recommended to upgrade to version 0.23.0, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/lb4j0zyd5f3g36cos0wql925przpnwql\nhttp://www.openwall.com/lists/oss-security/2026/04/28/1",
-      "source": "NVD",
-      "time": "2026-04-29 05:50:09"
-    },
-    {
-      "cve_id": "CVE-2026-7324",
-      "title": "高危漏洞: CVE-2026-7324 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-28 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Memory safety bugs present in Firefox 150.0.0 and Thunderbird 150.0.0. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.1.",
-      "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=2029419%2C2029717%2C2029769%2C2029886\nhttps://www.mozilla.org/security/advisories/mfsa2026-35/",
-      "source": "NVD",
-      "time": "2026-04-29 03:19:57"
-    },
-    {
-      "cve_id": "CVE-2026-7320",
-      "title": "高危漏洞: CVE-2026-7320 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-28 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Information disclosure due to incorrect boundary conditions in the Audio/Video component. This vulnerability was fixed in Firefox 150.0.1, Firefox ESR 140.10.1, and Firefox ESR 115.35.1.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2027433\nhttps://www.mozilla.org/security/advisories/mfsa2026-35/\nhttps://www.mozilla.org/security/advisories/mfsa2026-36/",
-      "source": "NVD",
-      "time": "2026-04-29 03:19:52"
-    },
-    {
-      "cve_id": "CVE-2025-67223",
-      "title": "高危漏洞: CVE-2025-67223 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-28 23:16:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Aranda File Server (AFS) component in Aranda Software Aranda Service Desk before 8.3.12 stores daily activity logs with predictable names in a publicly accessible directory, which allows unauthenticated remote attackers to obtain direct virtual paths of uploaded files and bypass access controls to download sensitive documents containing PII.",
-      "refs": "https://arandasoft.com/en/productos/aranda-service-management/\nhttps://docs.arandasoft.com/at-v8-release-notes/en/pages/release_pdf/file_server.html\nhttps://github.com/brandonperezlara/CVE-2025-67223",
-      "source": "NVD",
-      "time": "2026-04-29 03:19:44"
     }
   ]
 }
