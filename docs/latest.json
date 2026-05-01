@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7590",
+      "title": "高危漏洞: CVE-2026-7590 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 03:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in eyal-gor p_69_branch_monkey_mcp up to 69bc71874ce40050ef45fde5a435855f18af3373. The affected element is an unknown function of the file branch_monkey_mcp/bridge_and_local_actions/routes/advanced.py of the component Preview Endpoint. Such manipulation of the argument dev_script leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/eyal-gor/p_69_branch_monkey_mcp/\nhttps://github.com/eyal-gor/p_69_branch_monkey_mcp/issues/8\nhttps://vuldb.com/submit/804413",
+      "source": "NVD",
+      "time": "2026-05-02 05:44:06"
+    },
+    {
+      "cve_id": "CVE-2025-52347",
+      "title": "高危漏洞: CVE-2025-52347 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-02 03:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An issue in the component DirectIo64.sys of PassMark BurnInTest v11.0 Build 1011, OSForensics v11.1 Build 1007, and PerformanceTest v11.1 Build 1004 allows attackers to access kernel memory and escalate privileges via a crafted IOCTL 0x8011E044 call.",
+      "refs": "https://github.com/netero1010/Vulnerability-Disclosure/tree/main/CVE-2025-52347\nhttps://www.osforensics.com/whats-new.html\nhttps://www.passmark.com/products/burnintest/history.php",
+      "source": "NVD",
+      "time": "2026-05-02 05:44:01"
+    },
+    {
+      "cve_id": "CVE-2026-37457",
+      "title": "高危漏洞: CVE-2026-37457 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 02:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An off-by-one out-of-bounds write vulnerability in the bgp_flowspec_op_decode() function (bgpd/bgp_flowspec_util.c) of FRRouting (FRR) stable/10.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted FlowSpec component.",
+      "refs": "https://github.com/FRRouting/frr/commit/0e6882bc72c0278988a47b2f0f73b7a91099a25c",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:57"
+    },
+    {
+      "cve_id": "CVE-2025-63548",
+      "title": "高危漏洞: CVE-2025-63548 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 02:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An issue in Eprosima Micro-XREC-DDS Agent v.3.0.1 allows a remote attacker to cause a denial of service via a packet specially crafted to bear a non-valid value in any Boolean field.",
+      "refs": "https://github.com/eProsima/Micro-XRCE-DDS-Agent/issues/389\nhttps://github.com/j4kb4dw0lf/CVEs/blob/main/README.md",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:49"
+    },
+    {
+      "cve_id": "CVE-2025-63547",
+      "title": "高危漏洞: CVE-2025-63547 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 02:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An issue in Eprosima Micro-XREC-DDS Agent v.3.0.1 allows a remote attacker to cause a denial of service via a crafted packet to the MTU length field",
+      "refs": "https://github.com/eProsima/Micro-XRCE-DDS-Agent/issues/390\nhttps://github.com/j4kb4dw0lf/CVEs/blob/main/README.md",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:45"
+    },
+    {
+      "cve_id": "CVE-2026-42485",
+      "title": "高危漏洞: CVE-2026-42485 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 01:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "AGL agl-service-can-low-level contains a stack buffer overflow in the uds-c library. The send_diagnostic_request function in uds.c allocates a 6-byte stack buffer (MAX_DIAGNOSTIC_PAYLOAD_SIZE=6) but copies up to 7 bytes (MAX_UDS_REQUEST_PAYLOAD_LENGTH=7) via memcpy at an offset of 1+pid_length (2-3 bytes), resulting in 1-4 bytes of controlled stack overflow. The payload_length field (uint8_t) has no bounds check against the destination buffer. On 32-bit ARM automotive ECUs without stack canaries, this can lead to return address overwrite and RCE.",
+      "refs": "https://gerrit.automotivelinux.org/gerrit/apps/agl-service-can-low-level\nhttps://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:39"
+    },
+    {
+      "cve_id": "CVE-2026-42469",
+      "title": "高危漏洞: CVE-2026-42469 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-02 01:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "Buffer overflow vulnerability in Open Vehicle Monitoring System 3 (OVMS3) 3.3.005. In canformat_canswitch.cpp the parser does not properly validate a CANswitch DLC value, allowing remote attackers to cause a denial of service or possibly execute arbitrary code via crafted CANswitch frames.",
+      "refs": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:35"
+    },
+    {
+      "cve_id": "CVE-2026-42468",
+      "title": "高危漏洞: CVE-2026-42468 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-02 01:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Buffer overflow vulnerability in Open Vehicle Monitoring System 3 (OVMS3) 3.3.005. In canformat_pcap.cpp , the parser's phdr.len field is not properly validated, allowing remote attackers to cause a denial of service or possibly execute arbitrary code via crafted PCAP input.",
+      "refs": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:30"
+    },
+    {
+      "cve_id": "CVE-2026-42467",
+      "title": "高危漏洞: CVE-2026-42467 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 01:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An issue was discovered in Open-SAE-J1939 thru commit b6caf884df46435e539b1ecbf92b6c29b345bdfe (2025-11-30) in SAE_J1939_Read_Binary_Data_Transfer_DM16 causing a denial of service via crafted CAN frame on the J1939 bus.",
+      "refs": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:26"
+    },
+    {
+      "cve_id": "CVE-2026-37538",
+      "title": "高危漏洞: CVE-2026-37538 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 01:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Buffer overflow vulnerability in socketcand 0.4.2 in file socketcand.c in function main allows attackers to cause a denial of service or other unspecified impacts via crafted bus_name.",
+      "refs": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381\nhttps://github.com/dschanoeh/socketcand",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:21"
+    },
+    {
+      "cve_id": "CVE-2026-37530",
+      "title": "高危漏洞: CVE-2026-37530 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 01:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "AGL agl-service-can-low-level thru 17.1.12 contains a stack buffer overflow in the uds-c library. The send_diagnostic_request function in uds.c allocates a 6-byte stack buffer (MAX_DIAGNOSTIC_PAYLOAD_SIZE=6) but copies up to 7 bytes (MAX_UDS_REQUEST_PAYLOAD_LENGTH=7) via memcpy at an offset of 1+pid_length (2-3 bytes), resulting in 1-4 bytes of controlled stack overflow. The payload_length field (uint8_t) has no bounds check against the destination buffer. On 32-bit ARM automotive ECUs without stack canaries, this can lead to return address overwrite and RCE.",
+      "refs": "https://gerrit.automotivelinux.org/gerrit/apps/agl-service-can-low-level\nhttps://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:16"
+    },
+    {
+      "cve_id": "CVE-2026-42473",
+      "title": "高危漏洞: CVE-2026-42473 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-02 00:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The session and cache handlers use unserialize() on data from the filesystem in the FileHandler object.",
+      "refs": "https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975\nhttps://github.com/mix-php/mix\nhttps://github.com/mix-php/mix/blob/v2.2.17/src/sync-invoke/src/Server.php",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:11"
+    },
+    {
+      "cve_id": "CVE-2026-42472",
+      "title": "高危漏洞: CVE-2026-42472 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-02 00:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The session and cache handlers use unserialize() on data from Redis in the RedisHandler object.",
+      "refs": "https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975\nhttps://github.com/mix-php/mix\nhttps://github.com/mix-php/mix/blob/v2.2.17/src/sync-invoke/src/Server.php",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:06"
+    },
+    {
+      "cve_id": "CVE-2026-42471",
+      "title": "高危漏洞: CVE-2026-42471 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-02 00:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The sync-invoke client (Connection.php:76) calls unserialize() on data received from the server response, enabling client-side RCE if connecting to a malicious server.",
+      "refs": "https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975\nhttps://github.com/mix-php/mix\nhttps://github.com/mix-php/mix/blob/v2.2.17/src/sync-invoke/src/Server.php",
+      "source": "NVD",
+      "time": "2026-05-02 05:43:01"
+    },
+    {
+      "cve_id": "CVE-2026-22166",
+      "title": "高危漏洞: CVE-2026-22166 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-02 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "A web page that contains unusual WebGPU content loaded into the GPU GLES render process and can trigger write UAF crash in the GPU GLES user-space shared library. On certain platforms, when the process executing graphics workload has system privileges this could enable subsequent exploit on the system.",
+      "refs": "https://www.imaginationtech.com/gpu-driver-vulnerabilities/",
+      "source": "NVD",
+      "time": "2026-05-02 05:42:55"
+    },
+    {
       "cve_id": "CVE-2026-37541",
       "title": "高危漏洞: CVE-2026-37541 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -934,171 +1099,6 @@
       "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
       "source": "NVD",
       "time": "2026-05-01 00:13:39"
-    },
-    {
-      "cve_id": "CVE-2026-42800",
-      "title": "高危漏洞: CVE-2026-42800 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-04-30 18:16:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "NULL pointer dereference vulnerability in ASR1903 in ASR Lapwing_Linux on Linux (ims_client modules) allows Pointer Manipulation.\n\n This vulnerability is associated with program files sip/utils/src/sipuri.c.",
-      "refs": "https://www.asrmicro.com/en/goods/psirt?cid=44",
-      "source": "NVD",
-      "time": "2026-05-01 00:13:34"
-    },
-    {
-      "cve_id": "CVE-2026-42799",
-      "title": "高危漏洞: CVE-2026-42799 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-04-30 17:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "Out-of-bounds read vulnerability in ASR Kestrel (nr_fw modules) allows Overflow Buffers.\n\n This vulnerability is associated with program files Code/Nr/nr_fw/RA/src/NrPwrCtrl.C.\n\n\n\nThis issue affects Kestrel: before 2026/02/10.",
-      "refs": "https://www.asrmicro.com/en/goods/psirt?cid=44",
-      "source": "NVD",
-      "time": "2026-04-30 18:46:24"
-    },
-    {
-      "cve_id": "CVE-2026-22070",
-      "title": "高危漏洞: CVE-2026-22070 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-30 17:16:02",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:H",
-      "description": "ColorOS Assistant has an unauthenticated start-download channel, leading to file path traversal.",
-      "refs": "https://security.oppo.com/en/noticeDetail?notice_only_key=NOTICE-2049764240746881024",
-      "source": "NVD",
-      "time": "2026-04-30 18:46:17"
-    },
-    {
-      "cve_id": "CVE-2026-5402",
-      "title": "高危漏洞: CVE-2026-5402 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-30 15:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "TLS protocol dissector heap overflow in Wireshark 4.6.0 to 4.6.4 allows denial of service and possible code execution",
-      "refs": "https://gitlab.com/wireshark/wireshark/-/issues/21090\nhttps://www.wireshark.org/security/wnpa-sec-2026-14.html",
-      "source": "NVD",
-      "time": "2026-04-30 18:46:12"
-    },
-    {
-      "cve_id": "CVE-2025-13030",
-      "title": "高危漏洞: CVE-2025-13030 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-04-30 14:16:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "All versions of the package django-mdeditor are vulnerable to Missing Authentication for Critical Function in the image upload endpoint. An attacker can upload malicious files and achieve arbitrary code execution since this endpoint lacks authentication protection and proper sanitisation of file names.",
-      "refs": "https://github.com/pylixm/django-mdeditor/blob/e8dd73fb8571ddff2e7a20a4bfa88c376cc33b62/mdeditor/views.py%23L25\nhttps://github.com/pylixm/django-mdeditor/commit/3e80f9edcabc5d2fc136b05a501964b8a5e97cfe\nhttps://github.com/pylixm/django-mdeditor/issues/151",
-      "source": "NVD",
-      "time": "2026-04-30 18:46:05"
-    },
-    {
-      "cve_id": "CVE-2026-7470",
-      "title": "高危漏洞: CVE-2026-7470 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-30 11:16:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Tenda 4G300 US_4G300V1.0Mt_V1.01.42_CN_TDC01. Affected is the function sub_427C3C of the file /goform/SafeMacFilter. This manipulation of the argument page causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
-      "refs": "https://github.com/Axelioc/CVE/blob/main/Tenda/US_4G300/sub_427C3C/sub_427C3C.md\nhttps://vuldb.com/submit/804269\nhttps://vuldb.com/vuln/360206",
-      "source": "NVD",
-      "time": "2026-04-30 13:49:40"
-    },
-    {
-      "cve_id": "CVE-2026-7468",
-      "title": "高危漏洞: CVE-2026-7468 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 09:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in 1024-lab smart-admin up to 3.30.0. This affects an unknown function of the file /smart-admin-api/druid/index.html of the component Demo Site. The manipulation leads to improper access controls. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/1024-lab/smart-admin/\nhttps://github.com/1024-lab/smart-admin/issues/117\nhttps://vuldb.com/submit/804228",
-      "source": "NVD",
-      "time": "2026-04-30 13:49:34"
-    },
-    {
-      "cve_id": "CVE-2026-7446",
-      "title": "高危漏洞: CVE-2026-7446 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 08:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in VetCoders mcp-server-semgrep 1.0.0. This affects the function analyze_results/filter_results/export_results/compare_results/scan_directory/create_rule of the file src/index.ts of the component MCP Interface. The manipulation of the argument ID results in os command injection. The attack can be executed remotely. The exploit is now public and may be used. Upgrading to version 1.0.1 is able to mitigate this issue. The patch is identified as 141335da044e53c3f5b315e0386e01238405b771. It is advisable to upgrade the affected component.",
-      "refs": "https://github.com/VetCoders/mcp-server-semgrep/\nhttps://github.com/VetCoders/mcp-server-semgrep/commit/141335da044e53c3f5b315e0386e01238405b771\nhttps://github.com/VetCoders/mcp-server-semgrep/issues/12",
-      "source": "NVD",
-      "time": "2026-04-30 13:49:25"
-    },
-    {
-      "cve_id": "CVE-2026-7443",
-      "title": "高危漏洞: CVE-2026-7443 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 07:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in BurtTheCoder mcp-dnstwist up to 1.0.4. Affected by this vulnerability is the function fuzz_domain of the file src/index.ts of the component MCP Interface. Executing a manipulation of the argument Request can lead to os command injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/BruceJqs/public_exp/issues/22\nhttps://github.com/BurtTheCoder/mcp-dnstwist/\nhttps://github.com/BurtTheCoder/mcp-dnstwist/issues/13",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:38"
-    },
-    {
-      "cve_id": "CVE-2026-7420",
-      "title": "高危漏洞: CVE-2026-7420 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-30 07:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in UTT HiPER 1250GW up to 3.2.7-210907-180535. Impacted is the function strcpy of the file route/goform/ConfigAdvideo. The manipulation of the argument Profile results in buffer overflow. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/kirlic123/IOTvulner/blob/main/4035/5/5.md\nhttps://vuldb.com/submit/803997\nhttps://vuldb.com/vuln/360157",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:33"
-    },
-    {
-      "cve_id": "CVE-2026-7419",
-      "title": "高危漏洞: CVE-2026-7419 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-30 07:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in UTT HiPER 1250GW up to 3.2.7-210907-180535. This issue affects the function strcpy of the file route/goform/formTaskEdit_ap. The manipulation of the argument Profile leads to buffer overflow. Remote exploitation of the attack is possible. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/kirlic123/IOTvulner/blob/main/4035/2/2.md\nhttps://vuldb.com/submit/803994\nhttps://vuldb.com/vuln/360156",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:26"
-    },
-    {
-      "cve_id": "CVE-2026-7418",
-      "title": "高危漏洞: CVE-2026-7418 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-30 06:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in UTT HiPER 1250GW up to 3.2.7-210907-180535. This vulnerability affects the function strcpy of the file route/goform/NTP. Executing a manipulation of the argument Profile can lead to buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/kirlic123/IOTvulner/blob/main/4035/1/1.md\nhttps://vuldb.com/submit/803993\nhttps://vuldb.com/vuln/360155",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:21"
-    },
-    {
-      "cve_id": "CVE-2026-7417",
-      "title": "高危漏洞: CVE-2026-7417 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 06:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in Algovate xhs-mcp 0.8.11. This affects the function xhs_publish_content of the file src/server/mcp.server.ts of the component MCP Interface. Performing a manipulation of the argument media_paths results in server-side request forgery. The attack may be initiated remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/Algovate/xhs-mcp/\nhttps://github.com/Algovate/xhs-mcp/issues/6\nhttps://github.com/BruceJqs/public_exp/issues/21",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:16"
-    },
-    {
-      "cve_id": "CVE-2026-7416",
-      "title": "高危漏洞: CVE-2026-7416 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 06:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in PolarVista xcode-mcp-server 1.0.0. This issue affects the function build_project/run_tests of the file src/index.ts of the component MCP Interface. The manipulation of the argument Request results in os command injection. The attack may be launched remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/BruceJqs/public_exp/issues/19\nhttps://github.com/PolarVista/Xcode-mcp-server/\nhttps://github.com/PolarVista/Xcode-mcp-server/issues/4",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:12"
-    },
-    {
-      "cve_id": "CVE-2026-7404",
-      "title": "高危漏洞: CVE-2026-7404 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 05:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in getsimpletool mcpo-simple-server up to 0.2.0. Affected is the function delete_shared_prompt of the file src/mcpo_simple_server/services/prompt_manager/base_manager.py. This manipulation of the argument detail causes relative path traversal. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/getsimpletool/mcpo-simple-server/\nhttps://github.com/getsimpletool/mcpo-simple-server/issues/4\nhttps://vuldb.com/submit/803612",
-      "source": "NVD",
-      "time": "2026-04-30 10:04:07"
     }
   ]
 }
