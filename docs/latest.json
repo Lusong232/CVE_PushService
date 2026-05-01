@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7548",
+      "title": "高危漏洞: CVE-2026-7548 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-01 11:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Totolink NR1800X 9.1.0u.6279_B20210910. This affects the function sub_41A68C of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument setUssd results in command injection. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/newym/cve/blob/main/totolink%20nr1800x%20command%20injection.md\nhttps://vuldb.com/submit/804417\nhttps://vuldb.com/vuln/360358",
+      "source": "NVD",
+      "time": "2026-05-01 14:00:10"
+    },
+    {
+      "cve_id": "CVE-2026-7546",
+      "title": "高危漏洞: CVE-2026-7546 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-01 11:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Totolink NR1800X 9.1.0u.6279_B20210910. The impacted element is the function find_host_ip of the component lighttpd. Such manipulation of the argument Host leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/newym/cve/blob/main/totolinknr1800x.md\nhttps://vuldb.com/submit/804404\nhttps://vuldb.com/vuln/360357",
+      "source": "NVD",
+      "time": "2026-05-01 14:00:06"
+    },
+    {
+      "cve_id": "CVE-2026-7545",
+      "title": "高危漏洞: CVE-2026-7545 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-01 10:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in SourceCodester Advanced School Management System 1.0. The affected element is an unknown function of the file commonController.php of the component checkEmail Endpoint. This manipulation causes sql injection. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/eqwerwq/CVE/issues/2\nhttps://vuldb.com/submit/804340\nhttps://vuldb.com/vuln/360356",
+      "source": "NVD",
+      "time": "2026-05-01 14:00:00"
+    },
+    {
+      "cve_id": "CVE-2026-7538",
+      "title": "高危漏洞: CVE-2026-7538 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-01 10:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Totolink A8000RU 7.1cu.643_b20200521. This issue affects the function Vulnerability of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. The manipulation of the argument proto leads to os command injection. The attack may be initiated remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_329/README.md\nhttps://vuldb.com/submit/804321\nhttps://vuldb.com/vuln/360354",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:54"
+    },
+    {
+      "cve_id": "CVE-2026-7519",
+      "title": "高危漏洞: CVE-2026-7519 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-01 09:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Fujian Apex LiveBOS up to 2.0. Impacted is an unknown function of the file /feed/UploadImage.do of the component Endpoint. Such manipulation of the argument filename leads to path traversal. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.1 is recommended to address this issue. Upgrading the affected component is advised.",
+      "refs": "https://my.feishu.cn/docx/TCyMdptvaoTQCvxkHLbceJZCnge?from=from_copylink\nhttps://vuldb.com/submit/804096\nhttps://vuldb.com/vuln/360333",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:49"
+    },
+    {
+      "cve_id": "CVE-2026-7513",
+      "title": "高危漏洞: CVE-2026-7513 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-01 08:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in UTT HiPER 1200GW up to 2.5.3-170306. The impacted element is the function strcpy of the file /goform/formRemoteControl. The manipulation leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/kirlic123/IOTvulner/blob/main/4035/4/4.md\nhttps://vuldb.com/submit/803996\nhttps://vuldb.com/vuln/360324",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:45"
+    },
+    {
+      "cve_id": "CVE-2026-7512",
+      "title": "高危漏洞: CVE-2026-7512 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-01 08:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in UTT HiPER 1200GW up to 2.5.3-1703. The affected element is the function strcpy of the file /goform/formUser. Executing a manipulation can lead to buffer overflow. The attack can be launched remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/kirlic123/IOTvulner/tree/main/4035/3\nhttps://vuldb.com/submit/803995\nhttps://vuldb.com/vuln/360323",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:38"
+    },
+    {
+      "cve_id": "CVE-2026-5656",
+      "title": "高危漏洞: CVE-2026-5656 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-05-01 08:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Profile import path traversal in Wireshark 4.6.0 to 4.6.4 and 4.4.0 to 4.4.14 allows denial of service and possible code execution",
+      "refs": "https://gitlab.com/wireshark/wireshark/-/issues/21115\nhttps://www.wireshark.org/security/wnpa-sec-2026-21.html",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:32"
+    },
+    {
+      "cve_id": "CVE-2026-5405",
+      "title": "高危漏洞: CVE-2026-5405 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-01 08:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "RDP protocol dissector crash in Wireshark 4.6.0 to 4.6.4 and 4.4.0 to 4.4.14 allows denial of service and possible code execution",
+      "refs": "https://gitlab.com/wireshark/wireshark/-/issues/21105\nhttps://www.wireshark.org/security/wnpa-sec-2026-17.html",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:26"
+    },
+    {
+      "cve_id": "CVE-2026-5403",
+      "title": "高危漏洞: CVE-2026-5403 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-01 08:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "SBC codec crash in Wireshark 4.6.0 to 4.6.4 and 4.4.0 to 4.4.14 allows denial of service and possible code execution",
+      "refs": "https://gitlab.com/wireshark/wireshark/-/issues/21103\nhttps://www.wireshark.org/security/wnpa-sec-2026-16.html",
+      "source": "NVD",
+      "time": "2026-05-01 13:59:20"
+    },
+    {
       "cve_id": "CVE-2026-7506",
       "title": "高危漏洞: CVE-2026-7506 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/cpan-authors/Text-CSV_XS/commit/c17f31a5f2bf36674748eb4b6e25672f0571a224.patch\nhttps://metacpan.org/release/HMBRAND/Text-CSV_XS-1.62/changes\nhttp://www.openwall.com/lists/oss-security/2026/04/29/17",
       "source": "NVD",
       "time": "2026-04-30 10:01:17"
-    },
-    {
-      "cve_id": "CVE-2026-5161",
-      "title": "高危漏洞: CVE-2026-5161 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-29 23:16:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper link resolution before file access ('link following') vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus About allows Symlink Attack.\n\nThis issue affects Pardus About: before v1.2.1.",
-      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0131",
-      "source": "NVD",
-      "time": "2026-04-30 10:01:12"
-    },
-    {
-      "cve_id": "CVE-2026-5141",
-      "title": "高危漏洞: CVE-2026-5141 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-29 23:16:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper Privilege Management, Improper Access Control, Incorrect privilege assignment vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus Software Center allows Hijacking a privileged process.\n\nThis issue affects Pardus Software Center: from 1.0.2 before 1.0.3.",
-      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0131",
-      "source": "NVD",
-      "time": "2026-04-30 10:01:07"
-    },
-    {
-      "cve_id": "CVE-2026-41952",
-      "title": "高危漏洞: CVE-2026-41952 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-29 23:16:06",
-      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Local privilege escalation due to improper input validation. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.93212, Acronis Cyber Protect Cloud Agent (Windows) before build 42183.",
-      "refs": "https://security-advisory.acronis.com/advisories/SEC-7790",
-      "source": "NVD",
-      "time": "2026-04-30 10:01:03"
-    },
-    {
-      "cve_id": "CVE-2026-41220",
-      "title": "高危漏洞: CVE-2026-41220 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-29 23:16:05",
-      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Local privilege escalation due to improper input validation. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.93212, Acronis Cyber Protect Cloud Agent (Windows) before build 42183.",
-      "refs": "https://security-advisory.acronis.com/advisories/SEC-10296",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:57"
-    },
-    {
-      "cve_id": "CVE-2026-36841",
-      "title": "高危漏洞: CVE-2026-36841 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-04-29 23:16:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "TOTOLINK N200RE V5 was discovered to contain a command injection vulnerability via the macstr and bandstr parameters in the formMapDelDevice function.",
-      "refs": "https://github.com/0xmania/cve/tree/main/TOTOLINK-N200RE_V5-cstecgi-formMapDelDevice-CommandInjection\nhttps://github.com/0xmania/cve/tree/main/TOTOLINK-N200RE_V5-cstecgi-formMapDelDevice-CommandInjection",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:50"
-    },
-    {
-      "cve_id": "CVE-2026-36837",
-      "title": "高危漏洞: CVE-2026-36837 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-29 23:16:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "TOTOLINK A3002RU V3 <= V3.0.0-B20220304.1804 was discovered to contain a stack-based buffer overflow via the hostname parameter in the formMapDelDevice function.",
-      "refs": "https://github.com/0xmania/cve/tree/main/TOTOLINK-A3002RUV3.0-boa-formMapDelDevice-StackOverflow\nhttps://github.com/0xmania/cve/tree/main/TOTOLINK-A3002RUV3.0-boa-formMapDelDevice-StackOverflow",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:45"
-    },
-    {
-      "cve_id": "CVE-2026-5140",
-      "title": "高危漏洞: CVE-2026-5140 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-04-29 22:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of CRLF sequences ('CRLF injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus allows Authentication Bypass.\n\nThis issue affects Pardus: from <=0.6.4 before 0.8.0.",
-      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0131",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:40"
-    },
-    {
-      "cve_id": "CVE-2026-42524",
-      "title": "高危漏洞: CVE-2026-42524 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-04-29 22:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Jenkins HTML Publisher Plugin 427 and earlier does not escape job name and URL in the legacy wrapper file, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers with Item/Configure permission.",
-      "refs": "https://www.jenkins.io/security/advisory/2026-04-29/#SECURITY-3706",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:35"
-    },
-    {
-      "cve_id": "CVE-2026-42523",
-      "title": "高危漏洞: CVE-2026-42523 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-04-29 22:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job URL as part of JavaScript implementing validation of the feature \"GitHub hook trigger for GITScm polling\", resulting in a stored cross-site scripting (XSS) vulnerability exploitable by non-anonymous attackers with Overall/Read permission.",
-      "refs": "https://www.jenkins.io/security/advisory/2026-04-29/#SECURITY-3704",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:30"
-    },
-    {
-      "cve_id": "CVE-2026-42520",
-      "title": "高危漏洞: CVE-2026-42520 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-29 22:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Jenkins Credentials Binding Plugin 719.v80e905ef14eb_ and earlier does not sanitize file names for file and zip file credentials, allowing attackers able to provide credentials to a job to write files to arbitrary locations on the node filesystem, which can lead to remote code execution if Jenkins is configured to allow a low-privileged user to configure file or zip file credentials used for a job running on the built-in node.",
-      "refs": "https://www.jenkins.io/security/advisory/2026-04-29/#SECURITY-3672",
-      "source": "NVD",
-      "time": "2026-04-30 10:00:24"
     }
   ]
 }
