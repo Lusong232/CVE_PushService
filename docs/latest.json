@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7579",
+      "title": "高危漏洞: CVE-2026-7579 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-01 20:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in AstrBotDevs AstrBot up to 4.16.0. This issue affects some unknown processing of the file astrbot/dashboard/routes/auth.py of the component Dashboard. The manipulation leads to hard-coded credentials. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/AstrBotDevs/AstrBot/\nhttps://github.com/AstrBotDevs/AstrBot/security/advisories/GHSA-vrqm-xcfv-286r\nhttps://github.com/Dave-gilmore-aus/security-advisories/blob/main/AstrBot-Security-Advisory",
+      "source": "NVD",
+      "time": "2026-05-01 23:46:28"
+    },
+    {
+      "cve_id": "CVE-2026-3772",
+      "title": "高危漏洞: CVE-2026-3772 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-01 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The WP Editor plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2.9.2. This is due to missing nonce verification in the 'add_plugins_page' and 'add_themes_page' functions. This makes it possible for unauthenticated attackers to overwrite arbitrary plugin and theme PHP files with attacker-controlled code via a forged request, granted they can trick a site administrator into performing an action such as clicking a link.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-editor/trunk/classes/WPEditorPlugins.php#L60\nhttps://plugins.trac.wordpress.org/browser/wp-editor/trunk/classes/WPEditorThemes.php#L103\nhttps://plugins.trac.wordpress.org/changeset/3480577/",
+      "source": "NVD",
+      "time": "2026-05-01 23:46:20"
+    },
+    {
       "cve_id": "CVE-2026-42779",
       "title": "高危漏洞: CVE-2026-42779 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/wazuh/wazuh/releases/tag/v4.14.4\nhttps://github.com/wazuh/wazuh/security/advisories/GHSA-m8rw-v4f6-8787\nhttps://github.com/wazuh/wazuh/security/advisories/GHSA-m8rw-v4f6-8787",
       "source": "NVD",
       "time": "2026-04-30 10:02:23"
-    },
-    {
-      "cve_id": "CVE-2026-5712",
-      "title": "高危漏洞: CVE-2026-5712 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-04-30 02:16:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "This vulnerability impacts all versions of IdentityIQ and allows an authenticated identity that is the requestor or assignee of a work item to edit the definition of a role without having an assigned capability that would allow role editing.",
-      "refs": "https://www.sailpoint.com/security-advisories/sailpoint-identityiq-role-editor-incorrect-authorization-vulnerability-cve-2026-5712",
-      "source": "NVD",
-      "time": "2026-04-30 10:02:19"
-    },
-    {
-      "cve_id": "CVE-2026-0204",
-      "title": "高危漏洞: CVE-2026-0204 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-04-30 01:16:40",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability in the access control mechanism of SonicOS may allow certain management interface functions to be accessible under specific conditions.",
-      "refs": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0004",
-      "source": "NVD",
-      "time": "2026-04-30 10:02:14"
     }
   ]
 }
