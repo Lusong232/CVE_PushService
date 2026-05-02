@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7644",
+      "title": "高危漏洞: CVE-2026-7644 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 23:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in ChatGPTNextWeb NextChat up to 2.16.1. Affected is the function addMcpServer of the file app/mcp/actions.ts. The manipulation leads to improper authorization. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/ChatGPTNextWeb/NextChat/\nhttps://github.com/ChatGPTNextWeb/NextChat/issues/6757\nhttps://vuldb.com/submit/806851",
+      "source": "NVD",
+      "time": "2026-05-03 02:43:05"
+    },
+    {
+      "cve_id": "CVE-2026-7632",
+      "title": "高危漏洞: CVE-2026-7632 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 22:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in code-projects Online Hospital Management System 1.0. This affects an unknown function of the file /viewappointment.php. This manipulation of the argument delid causes sql injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Sh1tKing/cve/blob/main/time-blind-sql.md\nhttps://vuldb.com/submit/806633",
+      "source": "NVD",
+      "time": "2026-05-03 02:43:00"
+    },
+    {
+      "cve_id": "CVE-2026-7630",
+      "title": "高危漏洞: CVE-2026-7630 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 22:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in innocommerce InnoShop up to 0.7.8. The affected element is the function InstallServiceProvider::boot of the file innopacks/install/src/InstallServiceProvider.php of the component Installation Endpoint. The manipulation leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The identifier of the patch is 45758e4ec22451ab944ae2ae826b1e70f6450dc9. It is recommended to apply a patch to fix this issue.",
+      "refs": "https://github.com/innocommerce/innoshop/\nhttps://github.com/innocommerce/innoshop/commit/45758e4ec22451ab944ae2ae826b1e70f6450dc9\nhttps://github.com/innocommerce/innoshop/issues/314",
+      "source": "NVD",
+      "time": "2026-05-03 02:42:55"
+    },
+    {
+      "cve_id": "CVE-2026-2554",
+      "title": "高危漏洞: CVE-2026-2554 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-02 22:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.25 via the 'wcfm_delete_wcfm_customer' due to missing validation on the 'customerid' user controlled key. This makes it possible for authenticated attackers, with Vendor-level access and above, to delete arbitrary users, including Administrators.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wc-frontend-manager/tags/6.7.24/core/class-wcfm-customer.php#L386\nhttps://plugins.trac.wordpress.org/changeset/3483695/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/21e397a4-0b32-4b13-a46b-c465acea0796?source=cve",
+      "source": "NVD",
+      "time": "2026-05-03 02:42:48"
+    },
+    {
       "cve_id": "CVE-2026-6320",
       "title": "高危漏洞: CVE-2026-6320 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1055,50 +1099,6 @@
       "refs": "https://code-projects.org/\nhttps://github.com/xyh4ck/iot_poc/blob/main/TOTOLINK/A800R/02_Buffer_Overflow_setWiFiMultipleConfig.md\nhttps://vuldb.com/submit/803120",
       "source": "NVD",
       "time": "2026-05-01 10:03:19"
-    },
-    {
-      "cve_id": "CVE-2026-6543",
-      "title": "高危漏洞: CVE-2026-6543 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 06:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow Desktop 1.0.0 through 1.8.4 Langflow allows an attacker to execute arbitrary commands with the privileges of the process running Langflow. This allows reading sensitive environment variables (API keys, DB credentials), modifying files, or launching further attacks on the internal network.",
-      "refs": "https://www.ibm.com/support/pages/node/7271092",
-      "source": "NVD",
-      "time": "2026-05-01 10:03:12"
-    },
-    {
-      "cve_id": "CVE-2026-6389",
-      "title": "高危漏洞: CVE-2026-6389 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 06:16:26",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "IBM Turbonomic prometurbo agent 8.16.0 through 8.17.6 IBM Turbonomic Application Resource Management grants excessive cluster‑wide permissions, including unrestricted read access to all secrets. An attacker that compromises the operator or its service account can exfiltrate sensitive credentials, escalate privileges, and potentially achieve full cluster compromise.",
-      "refs": "https://www.ibm.com/support/pages/node/7270720",
-      "source": "NVD",
-      "time": "2026-05-01 10:02:51"
-    },
-    {
-      "cve_id": "CVE-2026-7435",
-      "title": "高危漏洞: CVE-2026-7435 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-01 05:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SSCMS v7.4.0 contains a SQL injection vulnerability in the stl:sqlContent tag where the queryString attribute is passed directly to database execution without parameterization or sanitization. Attackers can craft encrypted payloads submitted to the /api/stl/actions/dynamic endpoint to execute arbitrary SQL statements, leading to unauthorized database access, data disclosure, authentication bypass, data modification, or complete database compromise.",
-      "refs": "https://github.com/siteserver/cms\nhttps://github.com/siteserver/cms/issues/3891\nhttps://www.vulncheck.com/advisories/sscms-sql-injection-via-stl-sqlcontent-querystring",
-      "source": "NVD",
-      "time": "2026-05-01 10:02:44"
-    },
-    {
-      "cve_id": "CVE-2026-4503",
-      "title": "高危漏洞: CVE-2026-4503 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-01 05:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "IBM Langflow Desktop 1.0.0 through 1.8.4 Langflow could allow an unauthenticated user to view other users' images due to an indirect object reference through a user-controlled key.",
-      "refs": "https://www.ibm.com/support/pages/node/7271099",
-      "source": "NVD",
-      "time": "2026-05-01 10:02:37"
     }
   ]
 }
