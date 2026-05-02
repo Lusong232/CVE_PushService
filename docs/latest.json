@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7598",
+      "title": "高危漏洞: CVE-2026-7598 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 06:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in libssh2 up to 1.11.1. The impacted element is the function userauth_password of the file src/userauth.c. Such manipulation of the argument username_len/password_len leads to integer overflow. The attack may be launched remotely. The name of the patch is 256d04b60d80bf1190e96b0ad1e91b2174d744b1. A patch should be applied to remediate this issue.",
+      "refs": "https://github.com/libssh2/libssh2/\nhttps://github.com/libssh2/libssh2/commit/256d04b60d80bf1190e96b0ad1e91b2174d744b1\nhttps://github.com/libssh2/libssh2/pull/1858",
+      "source": "NVD",
+      "time": "2026-05-02 09:51:26"
+    },
+    {
+      "cve_id": "CVE-2026-7594",
+      "title": "高危漏洞: CVE-2026-7594 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 05:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Flux159 mcp-game-asset-gen 0.1.0. Affected is the function image_to_3d_async of the file src/index.ts of the component MCP Interface. The manipulation of the argument statusFile results in path traversal. The attack can be executed remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Flux159/mcp-game-asset-gen/\nhttps://github.com/Flux159/mcp-game-asset-gen/issues/3\nhttps://vuldb.com/submit/805508",
+      "source": "NVD",
+      "time": "2026-05-02 09:51:22"
+    },
+    {
+      "cve_id": "CVE-2026-7593",
+      "title": "高危漏洞: CVE-2026-7593 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 05:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in Sunwood-ai-labs command-executor-mcp-server up to 0.1.0. This impacts the function execute_command of the file src/index.ts of the component MCP Interface. The manipulation leads to os command injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Sunwood-ai-labs/command-executor-mcp-server/\nhttps://github.com/Sunwood-ai-labs/command-executor-mcp-server/issues/6\nhttps://vuldb.com/submit/805507",
+      "source": "NVD",
+      "time": "2026-05-02 09:51:17"
+    },
+    {
+      "cve_id": "CVE-2026-7592",
+      "title": "高危漏洞: CVE-2026-7592 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-02 04:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in itsourcecode Courier Management System 1.0. This affects an unknown function of the file /edit_staff.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/ltranquility/submit/issues/11\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/804453",
+      "source": "NVD",
+      "time": "2026-05-02 09:51:11"
+    },
+    {
+      "cve_id": "CVE-2026-30363",
+      "title": "高危漏洞: CVE-2026-30363 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-02 03:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "flipperzero-firmware commit ad2a80 was discovered to contain a stack overflow in the \"Main\" function.",
+      "refs": "https://gist.github.com/k6dpvrmm8z-glitch/7db9fb648a18ffcd8600bea436486884\nhttps://github.com/flipperdevices/flipperzero-firmware/issues/4332\nhttps://gist.github.com/k6dpvrmm8z-glitch/7db9fb648a18ffcd8600bea436486884",
+      "source": "NVD",
+      "time": "2026-05-02 09:51:07"
+    },
+    {
+      "cve_id": "CVE-2026-37534",
+      "title": "高危漏洞: CVE-2026-37534 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-02 01:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Integer underflow vulnerability in Open-SAE-J1939 thru commit b6caf884df46435e539b1ecbf92b6c29b345bdfe (2025-11-30) in SAE_J1939_Read_Transport_Protocol_Data_Transfer,allows attackers to write to arbitrary memory via crafted sequence number from the CAN frame.",
+      "refs": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381\nhttps://github.com/DanielMartensson/Open-SAE-J1939",
+      "source": "NVD",
+      "time": "2026-05-02 09:51:02"
+    },
+    {
+      "cve_id": "CVE-2026-22167",
+      "title": "高危漏洞: CVE-2026-22167 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-02 00:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Software installed and run as a non-privileged user may conduct improper GPU system calls to force GPU to write to arbitrary physical memory pages.\n\n\n\nUnder certain circumstances this exploit could be used to corrupt data pages not allocated by the GPU driver but memory pages in use by the kernel and drivers running on the platform altering their behaviour.\n\n\n\nThis attack can lead the GPU to perform write operations on restricted internal GPU buffers that can lead to a second order affect of corrupted arbitrary physical memory.",
+      "refs": "https://www.imaginationtech.com/gpu-driver-vulnerabilities/",
+      "source": "NVD",
+      "time": "2026-05-02 09:50:57"
+    },
+    {
+      "cve_id": "CVE-2026-22165",
+      "title": "高危漏洞: CVE-2026-22165 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-02 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "A web page that contains unusual WebGPU content loaded into the GPU GLES render process and can trigger a write UAF crash in the GPU GLES user-space shared library. On certain platforms, when the process executing graphics workload has system privileges this could enable further exploits on the device.",
+      "refs": "https://www.imaginationtech.com/gpu-driver-vulnerabilities/",
+      "source": "NVD",
+      "time": "2026-05-02 09:50:50"
+    },
+    {
       "cve_id": "CVE-2026-7590",
       "title": "高危漏洞: CVE-2026-7590 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1011,94 +1099,6 @@
       "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:17.libnv.asc",
       "source": "NVD",
       "time": "2026-05-01 03:06:19"
-    },
-    {
-      "cve_id": "CVE-2026-7164",
-      "title": "高危漏洞: CVE-2026-7164 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-04-30 16:16:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Incorrect packet validation allowed unbounded recursion parsing SCTP chunk parameters.  This can eventually result in a stack overflow and panic.\n\nRemote attackers can craft packets which cause affected systems to panic.  This affects any system where pf is configured to process traffic, independent of the configured ruleset.",
-      "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:14.pf.asc",
-      "source": "NVD",
-      "time": "2026-05-01 03:06:13"
-    },
-    {
-      "cve_id": "CVE-2026-7270",
-      "title": "高危漏洞: CVE-2026-7270 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-04-30 15:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An operator precedence bug in the kernel results in a scenario where a buffer overflow causes attacker-controlled data to overwrite adjacent execve(2) argument buffers.\n\nThe bug may be exploitable by an unprivileged user to obtain superuser privileges.",
-      "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:13.exec.asc",
-      "source": "NVD",
-      "time": "2026-05-01 03:06:09"
-    },
-    {
-      "cve_id": "CVE-2026-42511",
-      "title": "高危漏洞: CVE-2026-42511 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 15:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "The BOOTP file field is written to the lease file without escaping embedded double-quotes, allowing injection of arbitrary dhclient.conf directives.  When the lease file is subsequently re-parsed by dhclient, e.g., after a system restart, an attacker-controlled field from the lease is passed to dhclient-script(8), which evaluates it.\n\nA rogue DHCP server may be able to execute arbirary code as root on a system running dhclient.",
-      "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:12.dhclient.asc",
-      "source": "NVD",
-      "time": "2026-05-01 03:06:03"
-    },
-    {
-      "cve_id": "CVE-2026-7381",
-      "title": "高危漏洞: CVE-2026-7381 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-30 07:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Plack::Middleware::XSendfile versions through 1.0053 for Perl can allow client-controlled path rewriting.\n\nPlack::Middleware::XSendfile allows the variation setting (sendfile type) to be set by the client via the X-Sendfile-Type header, if it is not considered in the middleware constructor or the Plack environment.\n\nA malicious client can set the X-Sendfile-Type header to \"X-Accel-Redirect\" to services running behind nginx reverse proxies, and then set the X-Accel-Mapping to map the path to an arbitrary file on the server.\n\nSince 1.0053, Plack::Middleware::XSendfile is deprecated and will be removed from future releases of Plack.\n\nThis is similar to CVE-2025-61780 for Rack::Sendfile, although Plack::Middleware::XSendfile has some mitigations that disallow regular expressions to be used in the mapping, and only apply the mapping for the \"X-Accel-Redirect\" type.",
-      "refs": "https://metacpan.org/release/MIYAGAWA/Plack-1.0053/changes\nhttps://metacpan.org/release/MIYAGAWA/Plack-1.0053/view/lib/Plack/Middleware/XSendfile.pm#DEPRECATION-NOTICE\nhttps://nvd.nist.gov/vuln/detail/CVE-2025-61780",
-      "source": "NVD",
-      "time": "2026-05-01 03:05:57"
-    },
-    {
-      "cve_id": "CVE-2025-50328",
-      "title": "高危漏洞: CVE-2025-50328 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-04-30 05:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability in B1 Free Archiver v1.5.86 allows files extracted from downloaded archives to bypass Windows Mark of the Web (MotW) protections. When an archive is downloaded from the internet and extracted using B1 Free Archiver, the software fails to propagate the 'Zone.Identifier' alternate data stream to the extracted files. As a result, these files can be executed without triggering Windows Defender SmartScreen warnings or security prompts, enabling untrusted code execution without standard security restrictions.",
-      "refs": "https://b1.org/\nhttps://github.com/math69b/B1FREE/blob/main/B1%20Free%20Archiver%20version\nhttps://github.com/math69b/B1FREE/blob/main/B1%20Free%20Archiver%20version",
-      "source": "NVD",
-      "time": "2026-05-01 03:05:50"
-    },
-    {
-      "cve_id": "CVE-2026-7402",
-      "title": "高危漏洞: CVE-2026-7402 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-30 21:16:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Improper Control of Interaction Frequency vulnerability in MeWare Software Development Inc. PDKS allows Flooding.\n\nThis issue affects PDKS: from V16.20200313 before VMYR_3.5.2025117.",
-      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0141",
-      "source": "NVD",
-      "time": "2026-05-01 00:13:50"
-    },
-    {
-      "cve_id": "CVE-2026-7399",
-      "title": "高危漏洞: CVE-2026-7399 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-04-30 21:16:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Authorization bypass through User-Controlled key vulnerability in MeWare Software Development Inc. PDKS allows Privilege Abuse.\n\nThis issue affects PDKS: from V16.20200313 before VMYR_3.5.2025117.",
-      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0141",
-      "source": "NVD",
-      "time": "2026-05-01 00:13:45"
-    },
-    {
-      "cve_id": "CVE-2026-41882",
-      "title": "高危漏洞: CVE-2026-41882 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-04-30 20:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "In JetBrains IntelliJ IDEA before 2024.3.7.1, \n2025.1.7.1,\n2025.2.6.2,  \n2025.3.4.1, \n2026.1.1 reading arbitrary local files was possible via built-in web server",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-05-01 00:13:39"
     }
   ]
 }
