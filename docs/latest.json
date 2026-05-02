@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-43824",
+      "title": "高危漏洞: CVE-2026-43824 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-02 10:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "In Argo CD 3.2.0 before 3.2.11 and 3.3.0 before 3.3.9, ServerSideDiff allows reading cleartext Kubernetes Secret data.",
+      "refs": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-3v3m-wc6v-x4x3",
+      "source": "NVD",
+      "time": "2026-05-02 13:28:48"
+    },
+    {
       "cve_id": "CVE-2026-7598",
       "title": "高危漏洞: CVE-2026-7598 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:16.libnv.asc",
       "source": "NVD",
       "time": "2026-05-01 03:06:23"
-    },
-    {
-      "cve_id": "CVE-2026-35547",
-      "title": "高危漏洞: CVE-2026-35547 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-04-30 17:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "When processing the header of an incoming message, libnv failed to properly validate the message size.\n\nThe lack of validation allows a malicious program to write outside the bounds of a heap allocation.  This can trigger a crash or system panic, and it may be possible for an unprivileged user to exploit the bug to elevate their privileges.",
-      "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:17.libnv.asc",
-      "source": "NVD",
-      "time": "2026-05-01 03:06:19"
     }
   ]
 }
