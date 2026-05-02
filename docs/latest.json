@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6320",
+      "title": "高危漏洞: CVE-2026-6320 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Salon Booking System – Free Version plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 10.30.25. This is due to the public booking flow accepting attacker-controlled file-field values and later using those stored values as trusted paths for email attachments. This makes it possible for unauthenticated attackers to read arbitrary local files and exfiltrate them via booking confirmation email attachments.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3512110/salon-booking-system\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e91b8082-e1c7-4989-82db-20e255b52854?source=cve",
+      "source": "NVD",
+      "time": "2026-05-02 23:38:20"
+    },
+    {
+      "cve_id": "CVE-2026-4100",
+      "title": "高危漏洞: CVE-2026-4100 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-02 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+      "description": "The Paid Memberships Pro plugin for WordPress is vulnerable to unauthorized modification and disruption of Stripe webhook configuration in all versions up to, and including, 3.6.5. This is due to missing capability checks on the `wp_ajax_pmpro_stripe_create_webhook`, `wp_ajax_pmpro_stripe_delete_webhook`, and `wp_ajax_pmpro_stripe_rebuild_webhook` AJAX handlers. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete, create, or rebuild the site's Stripe webhook, disrupting all payment processing, subscription renewal synchronization, cancellation handling, and failed payment management.",
+      "refs": "https://github.com/strangerstudios/paid-memberships-pro/pull/3615\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5b333a3d-e416-42aa-9722-5406df0a64b3?source=cve",
+      "source": "NVD",
+      "time": "2026-05-02 23:38:16"
+    },
+    {
+      "cve_id": "CVE-2026-4062",
+      "title": "高危漏洞: CVE-2026-4062 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Geo Mashup plugin for WordPress is vulnerable to Time-Based SQL Injection via the 'object_ids' and 'exclude_object_ids' parameters in all versions up to, and including, 1.13.18. This is due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL query. The `esc_sql()` function is applied but is ineffective because the values are placed in an unquoted `IN(...)` / `NOT IN(...)` SQL context — `esc_sql()` only escapes quote characters and provides no protection against parenthesis or SQL keyword injection. Additionally, while a numeric-only sanitizer exists in `sanitize_query_args()`, it is only applied in the AJAX code path and not in the `render-map.php` or template tag code paths. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a time-based blind approach.",
+      "refs": "https://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1755\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1759\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/render-map.php#L166",
+      "source": "NVD",
+      "time": "2026-05-02 23:38:10"
+    },
+    {
+      "cve_id": "CVE-2026-4061",
+      "title": "高危漏洞: CVE-2026-4061 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Geo Mashup plugin for WordPress is vulnerable to Time-Based SQL Injection via the 'map_post_type' parameter in all versions up to, and including, 1.13.18. This is due to the `SearchResults` hook explicitly calling `stripslashes_deep($_POST)` which removes WordPress magic quotes protection, followed by the unsanitized `map_post_type` value being concatenated into an `IN(...)` clause without `esc_sql()` or `$wpdb->prepare()`. The 'any' branch of the same code correctly applies `array_map('esc_sql', ...)`, but the else branch does not. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a time-based blind approach. Exploitation requires the Geo Search feature to be enabled in plugin settings.",
+      "refs": "https://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1748\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/php/Hooks/SearchResults.php#L39\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/php/Search.php#L152",
+      "source": "NVD",
+      "time": "2026-05-02 23:38:02"
+    },
+    {
+      "cve_id": "CVE-2026-4060",
+      "title": "高危漏洞: CVE-2026-4060 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-02 20:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Geo Mashup plugin for WordPress is vulnerable to Time-Based SQL Injection via the 'sort' parameter in all versions up to, and including, 1.13.18. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. The `esc_sql()` function is applied but is ineffective in the `ORDER BY` context because the value is not enclosed in quotes. Additionally, while a `sanitize_sort_arg()` allowlist-based sanitizer was added in version 1.13.18, it is only applied in the AJAX code path (`sanitize_query_args()`) and not in the `render-map.php` or template tag code paths. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a time-based blind approach.",
+      "refs": "https://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1767\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1785\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/render-map.php#L166",
+      "source": "NVD",
+      "time": "2026-05-02 23:37:55"
+    },
+    {
       "cve_id": "CVE-2026-7491",
       "title": "高危漏洞: CVE-2026-7491 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1044,61 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7271099",
       "source": "NVD",
       "time": "2026-05-01 10:02:37"
-    },
-    {
-      "cve_id": "CVE-2026-7461",
-      "title": "高危漏洞: CVE-2026-7461 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-01 03:16:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of inputs used in an OS command in the FSx Windows File Server volume mounting component in Amazon ECS Agent on Windows before version 1.103.0 might allow a remote authenticated threat actor to execute shell commands with SYSTEM privileges on the underlying host via a specially crafted username field in an ECS task definition. This issue requires permissions to register ECS task definitions or write to the Secrets Manager or SSM Parameter Store credentials used by the FSx volume configuration.\n\nTo remediate this issue, users should upgrade to version 1.103.0.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-024-aws/\nhttps://github.com/aws/amazon-ecs-agent/releases/tag/v1.103.0",
-      "source": "NVD",
-      "time": "2026-05-01 05:48:36"
-    },
-    {
-      "cve_id": "CVE-2026-40904",
-      "title": "高危漏洞: CVE-2026-40904 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-01 03:16:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes multiple dataset and dataRequest endpoints that authorize low-privileged project members at the team level instead of binding the requested dataset_id, dataRequest id, and connection_id to the caller's allowed projects. An authenticated attacker who only has access to one project inside a team can read, execute, create, update, and delete datasets and data requests that belong to other projects in the same team. The issue is exploitable remotely with ordinary project-level credentials and leads to cross-project data disclosure and unauthorized use of victim-side database or API connections. This issue has been patched in version 5.0.0.",
-      "refs": "https://github.com/chartbrew/chartbrew/releases/tag/v5.0.0\nhttps://github.com/chartbrew/chartbrew/security/advisories/GHSA-jq95-gqww-vhm3",
-      "source": "NVD",
-      "time": "2026-05-01 05:48:32"
-    },
-    {
-      "cve_id": "CVE-2026-40601",
-      "title": "高危漏洞: CVE-2026-40601 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-01 03:16:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes POST /api/chart/:chart_id/query without authentication. The endpoint only checks team.allowReportRefresh and does not verify that the target chart belongs to a public report, that the project is public, or that sharing policy allows the operation. An unauthenticated attacker who knows a chart identifier can trigger a data refresh and retrieve the current data of private charts. This issue has been patched in version 5.0.0.",
-      "refs": "https://github.com/chartbrew/chartbrew/releases/tag/v5.0.0\nhttps://github.com/chartbrew/chartbrew/security/advisories/GHSA-cpr6-mhgm-893w",
-      "source": "NVD",
-      "time": "2026-05-01 05:48:28"
-    },
-    {
-      "cve_id": "CVE-2026-40600",
-      "title": "高危漏洞: CVE-2026-40600 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-01 03:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew allows authenticated users with access to one project to update or delete a SharePolicy record that belongs to a different project. The affected routes authorize the caller against the project in the URL path, but they never verify that policy_id belongs to that project. This permits cross-project modification of dashboard sharing rules, including visibility, password requirements, allowed parameters, and expiration settings. This issue has been patched in version 5.0.0.",
-      "refs": "https://github.com/chartbrew/chartbrew/releases/tag/v5.0.0\nhttps://github.com/chartbrew/chartbrew/security/advisories/GHSA-pq8h-2h99-39xm",
-      "source": "NVD",
-      "time": "2026-05-01 05:48:21"
-    },
-    {
-      "cve_id": "CVE-2026-40595",
-      "title": "高危漏洞: CVE-2026-40595 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-01 03:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes public chart retrieval and export routes that only verify project-level public access and, for exports, a team-level export toggle. The routes do not verify whether the target chart is actually allowed on the public report or whether the governing SharePolicy permits public access. An unauthenticated attacker who knows a chart identifier in a public project can read or export chart data for charts that were intentionally hidden from the report. This issue has been patched in version 5.0.0.",
-      "refs": "https://github.com/chartbrew/chartbrew/releases/tag/v5.0.0\nhttps://github.com/chartbrew/chartbrew/security/advisories/GHSA-mq7q-6xh6-5649",
-      "source": "NVD",
-      "time": "2026-05-01 05:48:17"
     }
   ]
 }
