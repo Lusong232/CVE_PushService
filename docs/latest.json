@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7670",
+      "title": "高危漏洞: CVE-2026-7670 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-03 07:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in Jinher OA 1.0. The affected element is an unknown function of the file /C6/JHSoft.Web.PlanSummarize/UserSel.aspx. This manipulation of the argument DeptIDList causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/zzlln/cvecve/issues/1\nhttps://vuldb.com/submit/799506\nhttps://vuldb.com/vuln/360818",
+      "source": "NVD",
+      "time": "2026-05-03 09:53:53"
+    },
+    {
+      "cve_id": "CVE-2026-7668",
+      "title": "高危漏洞: CVE-2026-7668 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-03 05:16:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in MikroTik RouterOS 6.49.8. This vulnerability affects the function ASN1_STRING_data in the library nova/lib/www/scep.p of the component SCEP Endpoint. The manipulation of the argument transactionID/messageType leads to out-of-bounds read. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/ezio315/cve/issues/4\nhttps://vuldb.com/submit/798623\nhttps://vuldb.com/vuln/360804",
+      "source": "NVD",
+      "time": "2026-05-03 09:53:46"
+    },
+    {
       "cve_id": "CVE-2026-7644",
       "title": "高危漏洞: CVE-2026-7644 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/nextlevelbuilder/goclaw/\nhttps://github.com/nextlevelbuilder/goclaw/commit/406022e79f4a18b3070a446712080571eff11e30\nhttps://github.com/nextlevelbuilder/goclaw/issues/866",
       "source": "NVD",
       "time": "2026-05-01 10:03:31"
-    },
-    {
-      "cve_id": "CVE-2026-7551",
-      "title": "高危漏洞: CVE-2026-7551 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 06:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "HKUDS OpenHarness contains a remote code execution vulnerability in the /bridge slash command that allows remote senders accepted by configuration to execute arbitrary operating system commands. Attackers can invoke the /bridge spawn command with attacker-controlled command text that is forwarded to the bridge session manager and executed through the shared shell subprocess helper, allowing them to spawn shell sessions as the OpenHarness process user and access local files, credentials, workspace state, and repository contents.",
-      "refs": "https://github.com/HKUDS/OpenHarness/commit/438e37309778e19060dfe7b172eb142e543c4cd6\nhttps://github.com/HKUDS/OpenHarness/pull/208\nhttps://www.vulncheck.com/advisories/hkuds-openharness-remote-command-execution-via-bridge-slash-command",
-      "source": "NVD",
-      "time": "2026-05-01 10:03:26"
-    },
-    {
-      "cve_id": "CVE-2026-7503",
-      "title": "高危漏洞: CVE-2026-7503 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 06:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in code-projects for Plugin 4.1.2cu.5137. The impacted element is the function setWiFiMultipleConfig in the library /lib/cste_modules/wireless.so of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument wepkey2 results in buffer overflow. The attack can be launched remotely. The exploit is now public and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/xyh4ck/iot_poc/blob/main/TOTOLINK/A800R/02_Buffer_Overflow_setWiFiMultipleConfig.md\nhttps://vuldb.com/submit/803120",
-      "source": "NVD",
-      "time": "2026-05-01 10:03:19"
     }
   ]
 }
