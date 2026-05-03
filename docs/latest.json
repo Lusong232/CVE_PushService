@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7695",
+      "title": "高危漏洞: CVE-2026-7695 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-03 21:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Acrel Electrical EEMS Enterprise Power Operation and Maintenance Cloud Platform 1.3.0. This affects an unknown function of the file /SubstationWEBV2/main/elecMaxMinAvgValue. The manipulation of the argument fCircuitids leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/QoXfwTAOiiYw2OkO0vAc7b7SnGg\nhttps://vuldb.com/submit/803275\nhttps://vuldb.com/vuln/360864",
+      "source": "NVD",
+      "time": "2026-05-03 23:38:02"
+    },
+    {
+      "cve_id": "CVE-2026-7694",
+      "title": "高危漏洞: CVE-2026-7694 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-03 20:15:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in Acrel Electrical ECEMS Enterprise Microgrid Energy Efficiency Management System 1.3.0. The impacted element is an unknown function of the file /SubstationWEBV2/main/elecMaxMinAvgValue. Executing a manipulation of the argument fCircuitids can lead to sql injection. The attack can be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/WZMewApmsiT3PMkCJfzcASEznOb\nhttps://vuldb.com/submit/803271\nhttps://vuldb.com/vuln/360863",
+      "source": "NVD",
+      "time": "2026-05-03 23:37:55"
+    },
+    {
       "cve_id": "CVE-2026-7685",
       "title": "高危漏洞: CVE-2026-7685 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_329/README.md\nhttps://vuldb.com/submit/804321\nhttps://vuldb.com/vuln/360354",
       "source": "NVD",
       "time": "2026-05-01 13:59:54"
-    },
-    {
-      "cve_id": "CVE-2026-7519",
-      "title": "高危漏洞: CVE-2026-7519 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-01 09:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in Fujian Apex LiveBOS up to 2.0. Impacted is an unknown function of the file /feed/UploadImage.do of the component Endpoint. Such manipulation of the argument filename leads to path traversal. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.1 is recommended to address this issue. Upgrading the affected component is advised.",
-      "refs": "https://my.feishu.cn/docx/TCyMdptvaoTQCvxkHLbceJZCnge?from=from_copylink\nhttps://vuldb.com/submit/804096\nhttps://vuldb.com/vuln/360333",
-      "source": "NVD",
-      "time": "2026-05-01 13:59:49"
-    },
-    {
-      "cve_id": "CVE-2026-7513",
-      "title": "高危漏洞: CVE-2026-7513 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 08:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in UTT HiPER 1200GW up to 2.5.3-170306. The impacted element is the function strcpy of the file /goform/formRemoteControl. The manipulation leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/kirlic123/IOTvulner/blob/main/4035/4/4.md\nhttps://vuldb.com/submit/803996\nhttps://vuldb.com/vuln/360324",
-      "source": "NVD",
-      "time": "2026-05-01 13:59:45"
     }
   ]
 }
