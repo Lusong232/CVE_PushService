@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7747",
+      "title": "高危漏洞: CVE-2026-7747 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-04 17:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Totolink N300RH 3.2.4-B20220812. Affected by this vulnerability is the function loginauth of the file /cgi-bin/cstecgi.cgi of the component Parameter Handler. Performing a manipulation of the argument Password results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/TOTOLINK-N300RH-loginauth_password-34553a41781f80c0ad36f4d95122fd40?pvs=73\nhttps://vuldb.com/submit/807201\nhttps://vuldb.com/vuln/360922",
+      "source": "NVD",
+      "time": "2026-05-04 18:56:39"
+    },
+    {
+      "cve_id": "CVE-2025-14320",
+      "title": "高危漏洞: CVE-2025-14320 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-04 17:15:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Tegsoft Management and Information Services Trade Limited Company Online Support Application allows Reflected XSS.\n\nThis issue affects Online Support Application: from V3 through 31122025.",
+      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0142",
+      "source": "NVD",
+      "time": "2026-05-04 18:56:35"
+    },
+    {
+      "cve_id": "CVE-2026-7736",
+      "title": "高危漏洞: CVE-2026-7736 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 15:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in osrg GoBGP up to 4.3.0. Affected by this vulnerability is the function parseRibEntry of the file pkg/packet/mrt/mrt.go. Executing a manipulation can lead to integer underflow. It is possible to launch the attack remotely. Upgrading to version 4.4.0 addresses this issue. This patch is called 76d911046344a3923cbe573364197aa081944592. It is suggested to upgrade the affected component.",
+      "refs": "https://github.com/osrg/gobgp/\nhttps://github.com/osrg/gobgp/commit/76d911046344a3923cbe573364197aa081944592\nhttps://github.com/osrg/gobgp/releases/tag/v4.4.0",
+      "source": "NVD",
+      "time": "2026-05-04 18:56:26"
+    },
+    {
+      "cve_id": "CVE-2026-7735",
+      "title": "高危漏洞: CVE-2026-7735 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 14:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in osrg GoBGP up to 4.3.0. Affected is the function PathAttributeAigp.DecodeFromBytes of the file pkg/packet/bgp/bgp.go of the component AIGP Attribute Parser. Performing a manipulation results in buffer overflow. It is possible to initiate the attack remotely. Upgrading to version 4.4.0 is able to address this issue. The patch is named 51ad1ada06cb41ce47b7066799981816f50b7ced. The affected component should be upgraded.",
+      "refs": "https://github.com/osrg/gobgp/\nhttps://github.com/osrg/gobgp/commit/51ad1ada06cb41ce47b7066799981816f50b7ced\nhttps://github.com/osrg/gobgp/releases/tag/v4.4.0",
+      "source": "NVD",
+      "time": "2026-05-04 18:56:21"
+    },
+    {
+      "cve_id": "CVE-2026-7733",
+      "title": "高危漏洞: CVE-2026-7733 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 14:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in funadmin up to 7.1.0-rc6. This affects the function UploadService::chunkUpload of the file app/common/service/UploadService.php of the component Frontend Chunked Upload Endpoint. This manipulation of the argument File causes unrestricted upload. The attack is possible to be carried out remotely. The exploit has been published and may be used. Patch name: 59. To fix this issue, it is recommended to deploy a patch.",
+      "refs": "https://gitee.com/funadmin/funadmin/\nhttps://gitee.com/funadmin/funadmin/issues/IJ8NXT\nhttps://gitee.com/funadmin/funadmin/pulls/59",
+      "source": "NVD",
+      "time": "2026-05-04 18:56:16"
+    },
+    {
+      "cve_id": "CVE-2026-7727",
+      "title": "高危漏洞: CVE-2026-7727 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 13:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Shandong Hoteam Software PDM Product Data Management System up to 8.3.9. This affects the function GetQueryMachineGridOnePageData of the file /Base/BaseService.asmx/DataService. This manipulation of the argument SortOrder causes sql injection. The attack can be initiated remotely. Upgrading to version 8.3.10 is able to mitigate this issue. You should upgrade the affected component.",
+      "refs": "https://en.hoteamsoft.com/pdm\nhttps://ucn9h68n9289.feishu.cn/wiki/KvbxwRlmRihO8ZkT1E1c64pdngh\nhttps://vuldb.com/submit/803268",
+      "source": "NVD",
+      "time": "2026-05-04 18:56:10"
+    },
+    {
       "cve_id": "CVE-2026-7723",
       "title": "高危漏洞: CVE-2026-7723 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1033,72 +1099,6 @@
       "refs": "https://gist.github.com/sgInnora/107f2eb20367e47d58c911e38d56a91f",
       "source": "NVD",
       "time": "2026-05-02 02:57:33"
-    },
-    {
-      "cve_id": "CVE-2026-42483",
-      "title": "高危漏洞: CVE-2026-42483 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 22:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A heap-based buffer overflow in the Kerberos hash parser in hashcat v7.1.2 allows an attacker to cause a denial of service or possibly execute arbitrary code via a crafted Kerberos hash file. The issue affects module_hash_decode in multiple Kerberos-related modules because account_info_len is calculated from untrusted delimiter positions without upper-bound validation before memcpy copies the data into a fixed-size account_info buffer.",
-      "refs": "https://gist.github.com/sgInnora/107f2eb20367e47d58c911e38d56a91f",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:29"
-    },
-    {
-      "cve_id": "CVE-2026-42482",
-      "title": "高危漏洞: CVE-2026-42482 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 22:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A stack-based buffer overflow in mangle_to_hex_lower() and mangle_to_hex_upper() in src/rp_cpu.c in hashcat v7.1.2 allows an attacker to cause a denial of service or possibly execute arbitrary code via a crafted rule file, or via the -j or -k rule options used with password candidates of 128 or more characters. The vulnerability is caused by a bounds check that fails to account for the 2x expansion that occurs when password bytes are converted to hexadecimal.",
-      "refs": "https://gist.github.com/sgInnora/107f2eb20367e47d58c911e38d56a91f",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:24"
-    },
-    {
-      "cve_id": "CVE-2026-40912",
-      "title": "高危漏洞: CVE-2026-40912 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-01 05:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3.6.14, and 3.7.0-rc.2, there is a high severity authentication bypass vulnerability in Traefik's StripPrefixRegex middleware when used in combination with ForwardAuth, BasicAuth, or DigestAuth. The middleware matches the regex against the decoded URL path but uses the resulting byte length to slice the percent-encoded raw path. When a dot (or multiple dots) appears in the prefix portion of the URL, the raw path after stripping becomes a dot-segment (e.g. /./admin/secret). ForwardAuth receives this dot-segment path in X-Forwarded-Uri, which does not match the protected path patterns and therefore allows the request through. The backend then normalizes the dot-segment to the real path per RFC 3986 and serves the protected content An unauthenticated attacker can exploit this against any backend that performs dot-segment normalization. This issue has been patched in versions 2.11.43, 3.6.14, and 3.7.0-rc.2.",
-      "refs": "https://github.com/traefik/traefik/releases/tag/v2.11.43\nhttps://github.com/traefik/traefik/releases/tag/v3.6.14\nhttps://github.com/traefik/traefik/releases/tag/v3.7.0-rc.2",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:19"
-    },
-    {
-      "cve_id": "CVE-2026-39858",
-      "title": "高危漏洞: CVE-2026-39858 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-01 05:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3.6.14, and 3.7.0-rc.2, there is a high severity authentication bypass vulnerability in Traefik's ForwardAuth and snippet-based authentication middleware. Traefik's forwarded-header sanitization logic targets only canonical header names (e.g., X-Forwarded-Proto) and does not strip or normalize alias variants that use underscores instead of dashes (e.g., X_Forwarded_Proto). These unsanitized alias headers are forwarded intact to the authentication backend. When the backend normalizes underscore and dash header forms equivalently, an attacker can inject spoofed trust context — such as a trusted scheme or host — through the alias headers and bypass authentication on protected routes without valid credentials. This issue has been patched in versions 2.11.43, 3.6.14, and 3.7.0-rc.2.",
-      "refs": "https://github.com/traefik/traefik/releases/tag/v2.11.43\nhttps://github.com/traefik/traefik/releases/tag/v3.6.14\nhttps://github.com/traefik/traefik/releases/tag/v3.7.0-rc.2",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:12"
-    },
-    {
-      "cve_id": "CVE-2026-35051",
-      "title": "高危漏洞: CVE-2026-35051 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-01 05:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3.6.14, and 3.7.0-rc.2, there is an authentication bypass vulnerability in Traefik's ForwardAuth middleware when trustForwardHeader=false is configured and Traefik is deployed behind a trusted upstream proxy. This issue has been patched in versions 2.11.43, 3.6.14, and 3.7.0-rc.2.",
-      "refs": "https://github.com/traefik/traefik/releases/tag/v2.11.43\nhttps://github.com/traefik/traefik/releases/tag/v3.6.14\nhttps://github.com/traefik/traefik/releases/tag/v3.7.0-rc.2",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:07"
-    },
-    {
-      "cve_id": "CVE-2026-7579",
-      "title": "高危漏洞: CVE-2026-7579 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-01 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in AstrBotDevs AstrBot up to 4.16.0. This issue affects some unknown processing of the file astrbot/dashboard/routes/auth.py of the component Dashboard. The manipulation leads to hard-coded credentials. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/AstrBotDevs/AstrBot/\nhttps://github.com/AstrBotDevs/AstrBot/security/advisories/GHSA-vrqm-xcfv-286r\nhttps://github.com/Dave-gilmore-aus/security-advisories/blob/main/AstrBot-Security-Advisory",
-      "source": "NVD",
-      "time": "2026-05-01 23:46:28"
     }
   ]
 }
