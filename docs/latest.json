@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6266",
+      "title": "高危漏洞: CVE-2026-6266 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-05-04 22:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "A flaw was found in the AAP gateway. The user auto-link strategy, introduced in AAP 2.6, automatically links an external Identity Provider (IDP) identity to an existing AAP user account based on email matching without verifying email ownership. This allows a remote attacker to potentially hijack a victim's account or gain unauthorized access to other accounts, including administrative accounts, by manipulating the IDP-provided email.",
+      "refs": "https://access.redhat.com/errata/RHSA-2026:13508\nhttps://access.redhat.com/security/cve/CVE-2026-6266\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2458142",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:45"
+    },
+    {
+      "cve_id": "CVE-2025-58074",
+      "title": "高危漏洞: CVE-2025-58074 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-04 22:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A privilege escalation vulnerability exists during the installation of Norton Secure VPN via the Microsoft Store. A low-privilege user can replace files during the installation process, which may result in deletion of arbitrary files that can lead to elevation of privileges.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2276\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2025-2276",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:39"
+    },
+    {
+      "cve_id": "CVE-2026-7482",
+      "title": "高危漏洞: CVE-2026-7482 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-04 21:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "description": "Ollama before 0.17.1 contains a heap out-of-bounds read vulnerability in the GGUF model loader. The /api/create endpoint accepts an attacker-supplied GGUF file in which the declared tensor offset and size exceed the file's actual length; during quantization in fs/ggml/gguf.go and server/quantization.go (WriteTo()), the server reads past the allocated heap buffer. The leaked memory contents may include environment variables, API keys, system prompts, and concurrent users' conversation data, and can be exfiltrated by uploading the resulting model artifact through the /api/push endpoint to an attacker-controlled registry. The /api/create and /api/push endpoints have no authentication in the upstream distribution. Default deployments bind to 127.0.0.1, but the documented OLLAMA_HOST=0.0.0.0 configuration is widely used in practice (large public-internet exposure observed).",
+      "refs": "https://github.com/ollama/ollama/commit/88d57d0483cca907e0b23a968c83627a20b21047\nhttps://github.com/ollama/ollama/pull/14406\nhttps://github.com/ollama/ollama/releases/tag/v0.17.1",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:33"
+    },
+    {
+      "cve_id": "CVE-2026-34059",
+      "title": "高危漏洞: CVE-2026-34059 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-04 21:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Buffer Over-read vulnerability in Apache HTTP Server.\n\nThis issue affects Apache HTTP Server: through 2.4.66.\n\nUsers are recommended to upgrade to version 2.4.67, which fixes the issue.",
+      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:29"
+    },
+    {
+      "cve_id": "CVE-2026-3120",
+      "title": "高危漏洞: CVE-2026-3120 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-04 20:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Profelis Information and Consulting Trade and Industry Limited Company SambaBox allows OS Command Injection.\n\nThis issue affects SambaBox: from 5.1 before 5.3.",
+      "refs": "https://www.usom.gov.tr/bildirim/tr-26-0155",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:23"
+    },
+    {
+      "cve_id": "CVE-2026-7750",
+      "title": "高危漏洞: CVE-2026-7750 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-04 18:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Totolink N300RH 3.2.4-B20220812. This vulnerability affects the function setMacFilterRules of the file /cgi-bin/cstecgi.cgi of the component POST Request Handler. The manipulation of the argument mac_address results in buffer overflow. The attack may be launched remotely. The exploit is now public and may be used.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/TOTOLINK-N300RH-setMacFilterRules-34553a41781f809cb952cdcb71ce90d8\nhttps://vuldb.com/submit/807204\nhttps://vuldb.com/vuln/360925",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:17"
+    },
+    {
+      "cve_id": "CVE-2026-7749",
+      "title": "高危漏洞: CVE-2026-7749 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-04 18:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Totolink N300RH 3.2.4-B20220812. This affects the function setWanConfig of the file /cgi-bin/cstecgi.cgi of the component POST Request Handler. The manipulation of the argument priDns leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/TOTOLINK-N300RH-setWanConfig-34553a41781f80ed8500d9b8d54074f2\nhttps://vuldb.com/submit/807203\nhttps://vuldb.com/vuln/360924",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:12"
+    },
+    {
+      "cve_id": "CVE-2026-7748",
+      "title": "高危漏洞: CVE-2026-7748 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-04 18:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Totolink N300RH 3.2.4-B20220812. Affected by this issue is the function setUpgradeFW of the file /cgi-bin/cstecgi.cgi of the component POST Request Handler. Executing a manipulation of the argument FileName can lead to buffer overflow. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/TOTOLINK-N300RH-setUpgradeFW-34553a41781f80abb1d1c627d7ff4329?pvs=73\nhttps://vuldb.com/submit/807202\nhttps://vuldb.com/vuln/360923",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:07"
+    },
+    {
+      "cve_id": "CVE-2026-33846",
+      "title": "高危漏洞: CVE-2026-33846 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-04 18:15:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A heap buffer overflow vulnerability exists in the DTLS handshake fragment reassembly logic of GnuTLS. The issue arises in merge_handshake_packet() where incoming handshake fragments are matched and merged based solely on handshake type, without validating that the message_length field remains consistent across all fragments of the same logical message. An attacker can exploit this by sending crafted DTLS fragments with conflicting message_length values, causing the implementation to allocate a buffer based on a smaller initial fragment and subsequently write beyond its bounds using larger, inconsistent fragments. Because the merge operation does not enforce proper bounds checking against the allocated buffer size, this results in an out-of-bounds write on the heap. The vulnerability is remotely exploitable without authentication via the DTLS handshake path and can lead to application crashes or potential memory corruption.",
+      "refs": "https://access.redhat.com/errata/RHSA-2026:13274\nhttps://access.redhat.com/security/cve/CVE-2026-33846\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2450625",
+      "source": "NVD",
+      "time": "2026-05-05 00:26:02"
+    },
+    {
       "cve_id": "CVE-2026-7747",
       "title": "高危漏洞: CVE-2026-7747 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1000,105 +1099,6 @@
       "refs": "https://gerrit.automotivelinux.org/gerrit/apps/agl-service-can-low-level\nhttps://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
       "source": "NVD",
       "time": "2026-05-02 02:58:21"
-    },
-    {
-      "cve_id": "CVE-2026-37531",
-      "title": "高危漏洞: CVE-2026-37531 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-02 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "AGL app-framework-main thru 17.1.12 contains a Zip Slip path traversal vulnerability (CWE-22) combined with a TOCTOU race condition (CWE-367) in the widget installation flow. The is_valid_filename function in wgtpkg-zip.c validates ZIP entry names but does not check for dot notation directory traversal sequences it only blocks absolute paths. The zread extraction function uses openat(workdirfd, filename, O_CREAT) which resolves dot notation values relative to the work directory, allowing files to be written anywhere on the filesystem. Critically, in function install_widget in file wgtpkg-install.c, extraction via zread occurs BEFORE signature verification via check_all_signatures. Even if signature verification fails, the error cleanup (remove_workdir) only deletes the temporary work directory files written outside via path traversal persist permanently.",
-      "refs": "https://gerrit.automotivelinux.org/gerrit/src/app-framework-main\nhttps://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
-      "source": "NVD",
-      "time": "2026-05-02 02:58:15"
-    },
-    {
-      "cve_id": "CVE-2026-37526",
-      "title": "高危漏洞: CVE-2026-37526 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-02 01:16:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "AGL app-framework-binder (afb-daemon) through v19.90.0 allows any local process to execute privileged supervision commands (Exit, Do, Sclose, Config, Trace, Debug, Token, slist) without authentication via the abstract Unix socket @urn:AGL:afs:supervision:socket. The on_supervision_call function in src/afb-supervision.c dispatches all 8 commands without any credential verification. The abstract socket has no DAC protection, as acknowledged in the official CAUTION comment in src/afs-supervision.h. This allows a low-privileged local process to kill the daemon (DoS via Exit command), execute arbitrary API calls (via Do command), close arbitrary user sessions (via Sclose command), or leak the entire global configuration (via Config command). The vulnerability was introduced in commit b8c9d5de384efcfa53ebdb3f0053d7b3723777e1 on 2017-06-29.",
-      "refs": "https://gerrit.automotivelinux.org/gerrit/src/app-framework-binder\nhttps://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
-      "source": "NVD",
-      "time": "2026-05-02 02:58:11"
-    },
-    {
-      "cve_id": "CVE-2026-37525",
-      "title": "高危漏洞: CVE-2026-37525 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-02 01:16:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "AGL app-framework-binder (afb-daemon) through v19.90.0 contains a privilege escalation vulnerability in the supervision Do command. The on_supervision_call function in src/afb-supervision.c explicitly nullifies the request credentials by calling afb_context_change_cred(&xreq->context, NULL) before dispatching an attacker-controlled API call via xapi->itf->call(xapi->closure, xreq). The NULL propagation chain through afb-context.c:110 (context->credentials = afb_cred_addref(NULL)) and afb-cred.c:163 (returns NULL when cred is NULL) confirms that credentials are zeroed before the target API executes. The attacker controls both api and verb parameters via JSON input, allowing execution of any registered API with a NULL credential context. APIs that rely on context->credentials for authorization decisions may fail open when receiving NULL credentials, enabling privilege escalation. This vulnerability was introduced in commit abbb4599f0b921c6f434b6bd02bcfb277eecf745 on 2018-02-14.",
-      "refs": "https://gerrit.automotivelinux.org/gerrit/src/app-framework-binder\nhttps://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
-      "source": "NVD",
-      "time": "2026-05-02 02:58:04"
-    },
-    {
-      "cve_id": "CVE-2026-37554",
-      "title": "高危漏洞: CVE-2026-37554 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-02 00:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An issue was discovered in Vanetza V2X v26.02 allowing remote unauthorized attackers to cause a denial of service. The vulnerability exists in the GeoNetworking packet processing pipeline where OpenSSL exceptions from ECC point validation (invalid compressed point, point not on curve) are not properly caught by the Router::indicate() call chain. The openssl_wrapper.cpp check() function (line 19) throws openssl::Exception when OpenSSL operations fail. The parser's catch block in parse_secured() should catch these, but the exception escapes through subsequent processing stages (indicate_common, indicate_extended). This causes std::terminate, crashing the V2X receiver.",
-      "refs": "https://gist.github.com/sgInnora/45128ae15d52df7238680a8f2da8359f\nhttps://github.com/riebl/vanetza\nhttps://github.com/riebl/vanetza/blob/master/vanetza/geonet/router.cpp",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:59"
-    },
-    {
-      "cve_id": "CVE-2026-37552",
-      "title": "高危漏洞: CVE-2026-37552 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-02 00:16:30",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The sync-invoke TCP server (Server.php:87) receives data from a TCP socket, passes it directly to Opis\\Closure\\unserialize(), then executes the result via call_user_func(). No authentication or signature verification exists on the TCP connection. An attacker with access to the localhost TCP port (server binds 127.0.0.1) can send a crafted serialized PHP closure to achieve arbitrary code execution.",
-      "refs": "https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975\nhttps://github.com/mix-php/mix\nhttps://github.com/mix-php/mix/blob/v2.2.17/src/sync-invoke/src/Server.php",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:54"
-    },
-    {
-      "cve_id": "CVE-2026-42478",
-      "title": "高危漏洞: CVE-2026-42478 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-01 23:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An issue was discovered in VrmlData_IndexedFaceSet::TShape in the VRML V2.0 parser in Open CASCADE Technology (OCCT) V8_0_0_rc5 allows attackers to cause a denial of service via a crafted VRML file. The issue occurs because malformed VRML input can trigger dereference of a corrupt or unvalidated pointer during shape construction in libTKDEVRML.so.",
-      "refs": "https://gist.github.com/sgInnora/dfba083d04906283e9c92aea78e2d94a",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:49"
-    },
-    {
-      "cve_id": "CVE-2026-42477",
-      "title": "高危漏洞: CVE-2026-42477 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-01 23:16:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
-      "description": "A heap-based out-of-bounds read vulnerability in RWObj_Reader::read in the OBJ file parser in Open CASCADE Technology (OCCT) V8_0_0_rc5 allows user-assisted attackers to cause a denial of service or obtain sensitive information by persuading a victim to open a crafted OBJ file. The issue occurs because Standard_ReadLineBuffer::ReadLine() can return a 1-byte buffer for a minimal OBJ line, and RWObj_Reader::read() calls pushIndices(aLine + 2) without validating the buffer length.",
-      "refs": "https://gist.github.com/sgInnora/dfba083d04906283e9c92aea78e2d94a",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:45"
-    },
-    {
-      "cve_id": "CVE-2026-42476",
-      "title": "高危漏洞: CVE-2026-42476 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-01 23:16:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
-      "description": "Two heap-based out-of-bounds read vulnerabilities in the STL ASCII file parser in Open CASCADE Technology (OCCT) V8_0_0_rc5 exist in RWStl_Reader::ReadAscii because buffers returned by Standard_ReadLineBuffer::ReadLine() are not properly length-validated before strncasecmp or direct byte access. User-assisted attackers can trigger these issues by persuading a victim to open a crafted STL file with extremely short lines, resulting in a denial of service or possible information disclosure.",
-      "refs": "https://gist.github.com/sgInnora/dfba083d04906283e9c92aea78e2d94a",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:38"
-    },
-    {
-      "cve_id": "CVE-2026-42484",
-      "title": "高危漏洞: CVE-2026-42484 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 22:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A heap-based buffer overflow in hex_to_binary in the PKZIP hash parser in hashcat v7.1.2 allows an attacker to cause a denial of service or possibly execute arbitrary code via a crafted PKZIP hash file. The issue affects modules 17200, 17210, 17220, 17225, and 17230. When data_type_enum<=1, attacker-controlled hex data from a user-supplied hash string is decoded into a fixed-size buffer without proper input-length validation.",
-      "refs": "https://gist.github.com/sgInnora/107f2eb20367e47d58c911e38d56a91f",
-      "source": "NVD",
-      "time": "2026-05-02 02:57:33"
     }
   ]
 }
