@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7723",
+      "title": "高危漏洞: CVE-2026-7723 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 11:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in PrefectHQ prefect up to 3.6.13. Affected is an unknown function of the file /api/events/in of the component WebSocket Endpoint. Executing a manipulation can lead to missing authentication. The attack may be performed from remote. The exploit has been published and may be used. Upgrading to version 3.6.14 is able to address this issue. This patch is called 0d3ab3c2d3f9f98abfafdf7b9f6d4f8ed3925e40. It is recommended to upgrade the affected component.",
+      "refs": "https://gist.github.com/nedlir/f1ab8aa038aafbcc6beeef21fab1d74f\nhttps://github.com/PrefectHQ/prefect/\nhttps://github.com/PrefectHQ/prefect/commit/0d3ab3c2d3f9f98abfafdf7b9f6d4f8ed3925e40",
+      "source": "NVD",
+      "time": "2026-05-04 13:56:13"
+    },
+    {
+      "cve_id": "CVE-2026-7719",
+      "title": "高危漏洞: CVE-2026-7719 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-04 10:15:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Totolink WA300 5.2cu.7112_B20190227. The affected element is the function loginauth of the file /cgi-bin/cstecgi.cgi of the component POST Request Handler. The manipulation of the argument http_host results in buffer overflow. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/TOTOLINK-WA300-loginAuth-34553a41781f8050b8ffc9e90a103cd5\nhttps://vuldb.com/submit/807197\nhttps://vuldb.com/vuln/360895",
+      "source": "NVD",
+      "time": "2026-05-04 13:56:07"
+    },
+    {
+      "cve_id": "CVE-2026-7717",
+      "title": "高危漏洞: CVE-2026-7717 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-04 09:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Totolink WA300 5.2cu.7112_B20190227. This issue affects the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi of the component POST Request Handler. Executing a manipulation of the argument File can lead to buffer overflow. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/TOTOLINK-WA300-UploadCustomModule-34553a41781f80a8a287e48a7fb04de9\nhttps://vuldb.com/submit/807193\nhttps://vuldb.com/vuln/360893",
+      "source": "NVD",
+      "time": "2026-05-04 13:56:02"
+    },
+    {
+      "cve_id": "CVE-2026-7372",
+      "title": "高危漏洞: CVE-2026-7372 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-05-04 09:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A stack overflow vulnerability exists in the WebCam Server Login functionality of GeoVision GV-VMS V20 20.0.2. A specially crafted HTTP request can lead to an arbitrary code execution. An attacker can make an unauthenticated HTTP request to trigger this vulnerability.\n\n#### Stack-overflow via unconstrained sscanf\n\nThe call to `sscanf` at [1] to split the `Buffer` variable into the `username` and `password` variables doesn't limit the size of the extracted content to match the destination buffers' sizes. In this case, if either the username or password decoded from the authorization string exceeds `40` characters (the size the stack variables  `username` and `password`) then a stack overflow will occur. \n\n\n\nThe data is controlled by an attacker, but sronger constraints (e.g. no null bytes) may make exploitation harder. A successful attack could  lead to full code execution as SYSTEM on the machine running the service.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:57"
+    },
+    {
+      "cve_id": "CVE-2026-7371",
+      "title": "高危漏洞: CVE-2026-7371 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-04 09:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Multiple reflected cross-site scripting (xss) vulnerabilities exist in the Web Interface / ssi.cgi functionality of GeoVision LPC2011/LPC2211 1.10. A specially crafted malicious url can lead to an arbitrary javascript code execution. An attacker can provide a crafted URL to trigger this vulnerability. Reflected XXS via the error message for requesting non-existing page.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:53"
+    },
+    {
+      "cve_id": "CVE-2026-7161",
+      "title": "高危漏洞: CVE-2026-7161 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-05-04 09:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:H",
+      "description": "An insufficient encryption vulnerability exists in the Device Authentication functionality of GeoVision GV-IP Device Utility 9.0.5. Listening to broadcast packets can lead to credentials leak. An attacker can listen to broadcast messages to trigger this vulnerability.\n\n\nWhen interacting with various Geovision devices on the network, the utility may send privileged commands; in order to do so, the username and password of the device need to be provided. In some instances the command is broadcasted over UDP and the username/password are encrypted using a cryptographic protocol that appears to be derivated from Blowfish. However the symmetric key used for the encryption is also included in the packet, and thus the security of the username/password only relies on the \"obscurity\" of the encryption scheme. An attacker on the same LAN can listen to the broadcast traffic once an admin user interacts with the device, and decrypt the credentials using their own implementation of the algorithm. With this password the attacker would have full control over the device configuration, allowing them to change its ip address or even reset it to factory default.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:49"
+    },
+    {
+      "cve_id": "CVE-2026-42370",
+      "title": "高危漏洞: CVE-2026-42370 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-05-04 09:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A stack overflow vulnerability exists in the WebCam Server Login functionality of GeoVision GV-VMS V20 20.0.2. A specially crafted HTTP request can lead to an arbitrary code execution. An attacker can make an unauthenticated HTTP request to trigger this vulnerability.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:41"
+    },
+    {
+      "cve_id": "CVE-2026-42369",
+      "title": "高危漏洞: CVE-2026-42369 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-04 09:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "GV-VMS V20 is a Video Monitoring Software used to gather the feeds of many surveillance cameras and manage other security devices. It is a native application accessed locally, but it is also possible to enable remote access via the \"WebCam Server\" feature.  Once enabled, it is possible to access to the management and monitoring feature via a regular Web interface. This webersever is another native application, compiled without ASLR, which makes exploitation much easier and more likely. \n\n\n\nMost of the features require authentication before being reachable and leverage a standard login page to grant access. However the `gvapi` endpoint uses its own authentication mechanism via an `HTTP Authorization` header. It supports both `Basic` authentication and the `Digest` modes of authentication.  \n\n\n\n#### Stack-overflow via unbound copy of base64 decoded string\n\nThe `b64decoder` string is sized dynamically, but it is then copied to the `Buffer` stack variable one character at the time at [0], and there's no bound-check. As such, if the decoded string is bigger than 256 characters (the size of the `Buffer` variable) then a stack overflow occurs. Because the data can be fully controlled by an attacker and lack of ASLR, this vulnerability can easily be exploited to gain full code execution as SYSTEM on the machine running the service.",
+      "refs": "https://https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:37"
+    },
+    {
+      "cve_id": "CVE-2026-42368",
+      "title": "高危漏洞: CVE-2026-42368 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-05-04 09:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A privilege escalation vulnerability exists in the Web Interface functionality of GeoVision LPC2011/LPC2211 1.10. A specially crafted HTTP request can lead to execute priviledged operation. An attacker can visit a webpage to trigger this vulnerability.",
+      "refs": "https://https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:29"
+    },
+    {
+      "cve_id": "CVE-2026-42366",
+      "title": "高危漏洞: CVE-2026-42366 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-04 09:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Multiple reflected cross-site scripting (xss) vulnerabilities exist in the Web Interface / ssi.cgi functionality of GeoVision LPC2011/LPC2211 1.10. A specially crafted malicious url can lead to an arbitrary javascript code execution. An attacker can provide a crafted URL to trigger this vulnerability.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:24"
+    },
+    {
+      "cve_id": "CVE-2026-42365",
+      "title": "高危漏洞: CVE-2026-42365 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-04 09:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "A guessable session cookie vulnerability exists in the Web Interface functionality of GeoVision LPC2011/LPC2211 1.10. A specially crafted series of HTTP requests can lead to an authentication bypas. An attacker can bruteforce session cookies to trigger this vulnerability.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:15"
+    },
+    {
+      "cve_id": "CVE-2026-42364",
+      "title": "高危漏洞: CVE-2026-42364 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-05-04 09:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "An os command injection vulnerability exists in the DdnsSetting.cgi functionality of GeoVision LPC2011/LPC2211 1.10. A specially crafted DDNS configuration can lead to arbitrary command execution. An attacker can modify a configuration value to trigger this vulnerability.",
+      "refs": "https://talosintelligence.com/vulnerability_reports/\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:09"
+    },
+    {
+      "cve_id": "CVE-2026-7711",
+      "title": "高危漏洞: CVE-2026-7711 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 08:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in MindsDB up to 26.01. This impacts the function exec of the file mindsdb/integrations/handlers/byom_handler/proc_wrapper.py of the component Engine Handler. Executing a manipulation can lead to unrestricted upload. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/nn0nkey/JD-Security-SHENYI-Team/blob/main/MindsDB_BYOM_RCE.md\nhttps://vuldb.com/submit/806822\nhttps://vuldb.com/vuln/360887",
+      "source": "NVD",
+      "time": "2026-05-04 13:55:03"
+    },
+    {
+      "cve_id": "CVE-2026-7710",
+      "title": "高危漏洞: CVE-2026-7710 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-04 08:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in YunaiV yudao-cloud up to 3.8.0. This affects the function doFilterInternal of the file JwtAuthenticationTokenFilter.java of the component Ruoyi-Vue-Pro. Performing a manipulation of the argument mock-token results in improper authentication. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/9str0IL/CVE/issues/5\nhttps://vuldb.com/submit/806493\nhttps://vuldb.com/vuln/360886",
+      "source": "NVD",
+      "time": "2026-05-04 13:54:58"
+    },
+    {
       "cve_id": "CVE-2026-7703",
       "title": "高危漏洞: CVE-2026-7703 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -945,160 +1099,6 @@
       "refs": "https://github.com/AstrBotDevs/AstrBot/\nhttps://github.com/AstrBotDevs/AstrBot/security/advisories/GHSA-vrqm-xcfv-286r\nhttps://github.com/Dave-gilmore-aus/security-advisories/blob/main/AstrBot-Security-Advisory",
       "source": "NVD",
       "time": "2026-05-01 23:46:28"
-    },
-    {
-      "cve_id": "CVE-2026-3772",
-      "title": "高危漏洞: CVE-2026-3772 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The WP Editor plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2.9.2. This is due to missing nonce verification in the 'add_plugins_page' and 'add_themes_page' functions. This makes it possible for unauthenticated attackers to overwrite arbitrary plugin and theme PHP files with attacker-controlled code via a forged request, granted they can trick a site administrator into performing an action such as clicking a link.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wp-editor/trunk/classes/WPEditorPlugins.php#L60\nhttps://plugins.trac.wordpress.org/browser/wp-editor/trunk/classes/WPEditorThemes.php#L103\nhttps://plugins.trac.wordpress.org/changeset/3480577/",
-      "source": "NVD",
-      "time": "2026-05-01 23:46:20"
-    },
-    {
-      "cve_id": "CVE-2026-42779",
-      "title": "高危漏洞: CVE-2026-42779 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 19:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The fix for CVE-2026-41635 was not applied to the 2.1.X and 2.2.X branches. Here was the original issue description:\n\n\n\n\n\n\n\n\n\n\n\nApache MINA's AbstractIoBuffer.resolveClass() contains two branches, one of them (for static classes or primitive types) does not check the class at all, bypassing the classname allowlist and allowing arbitrary code to be executed.\n\n\n\n\nThe fix checks if the class is present in the accepted class filter before calling Class.forName(). \n\n\n\n\n\n\nAffected versions are Apache MINA 2.1.0 <= 2.1.11, and 2.2.0 <= 2.2.6.\n\n\n\n\n\nThe problem is resolved in Apache MINA 2.1.12, and 2.2.7 by \napplying the classname allowlist earlier.\n\n\n\n\n\nAffected are applications using Apache MINA that call  IoBuffer.getObject().\n\n\n\n\n\nApplications using Apache MINA are advised to upgrade.",
-      "refs": "https://lists.apache.org/thread/fhlx5k91hrkgyzh7yk1nghrn3k27gxy0",
-      "source": "NVD",
-      "time": "2026-05-01 20:55:57"
-    },
-    {
-      "cve_id": "CVE-2026-42778",
-      "title": "高危漏洞: CVE-2026-42778 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 19:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The fix for CVE-2026-41409 was not applied to the 2.1.X and 2.2.X branches. Here was the original issue description:\n\n\n\n\nThe fix for CVE-2024-52046 in Apache MINA AbstractIoBuffer.getObject() was incomplete. The classname allowlist of classes allowed to be deserialized was applied too late after a static initializer in a class to be read might already have been executed.\n\n\n\n\nAffected versions are Apache MINA 2.1.0 <= 2.1.11, and 2.2.0 <= 2.2.6.\n\n\n\n\nThe problem is resolved in Apache MINA 2.1.12, and 2.2.7 by \napplying the classname allowlist earlier.\n\n\n\n\nAffected are applications using Apache MINA that call IoBuffer.getObject().\n\n\n\n\nApplications using Apache MINA are advised to upgrade\n\n\n\n\n\n\nThe fix for CVE-2024-52046 in Apache MINA AbstractIoBuffer.getObject() was incomplete. The classname allowlist of classes allowed to be deserialized was applied too late after a static initializer in a class to be read might already have been executed.\n\n\n\n\nAffected versions are Apache MINA 2.1.0 <= 2.1.110, and 2.2.0 <= 2.2.6.\n\n\n\n\nThe problem is resolved in Apache MINA 2.1.12, and 2.2.7 by \napplying the classname allowlist earlier.\n\n\n\n\nAffected are applications using Apache MINA that call IoBuffer.getObject().\n\n\n\n\nApplications using Apache MINA are advised to upgrade",
-      "refs": "https://lists.apache.org/thread/fhlx5k91hrkgyzh7yk1nghrn3k27gxy0",
-      "source": "NVD",
-      "time": "2026-05-01 20:55:53"
-    },
-    {
-      "cve_id": "CVE-2026-7567",
-      "title": "高危漏洞: CVE-2026-7567 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 18:15:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Temporary Login plugin for WordPress is vulnerable to Authentication Bypass in versions up to and including 1.0.0. This is due to improper input validation in the maybe_login_temporary_user() function, which fails to verify that the 'temp-login-token' GET parameter is a scalar string before processing it. When the parameter is supplied as an array, PHP's empty() check is bypassed and sanitize_key() returns an empty string, which is then passed as the meta_value to get_users(). WordPress ignores an empty meta_value and returns all users matching the meta_key '_temporary_login_token', allowing authentication without a valid token. This makes it possible for unauthenticated attackers to authenticate as any active temporary login user by sending a single crafted GET request.",
-      "refs": "https://plugins.trac.wordpress.org/browser/temporary-login/tags/1.0.0/core/admin.php#L135\nhttps://plugins.trac.wordpress.org/browser/temporary-login/tags/1.0.0/core/admin.php#L179\nhttps://plugins.trac.wordpress.org/browser/temporary-login/tags/1.0.0/core/options.php#L157",
-      "source": "NVD",
-      "time": "2026-05-01 20:55:44"
-    },
-    {
-      "cve_id": "CVE-2026-43003",
-      "title": "高危漏洞: CVE-2026-43003 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-05-01 17:16:17",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "An issue was discovered in OpenStack ironic-python-agent 1.0.0 through 11.5.0. Ironic Python Agent (IPA) sometimes executes grub-install from within a chroot of the deployed partition image, leading to code execution in the case of a malicious image.",
-      "refs": "https://bugs.launchpad.net/ironic-python-agent/+bug/2148310\nhttps://github.com/openstack/ironic-python-agent/blob/236b33abffe6688afc39c21e351cc3889b3db2dd/ironic_python_agent/efi_utils.py#L134-L139",
-      "source": "NVD",
-      "time": "2026-05-01 18:16:07"
-    },
-    {
-      "cve_id": "CVE-2026-43001",
-      "title": "高危漏洞: CVE-2026-43001 (CVSS 7.9)",
-      "cvss_score": 7.9,
-      "published_date": "2026-05-01 17:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:L",
-      "description": "An issue was discovered in OpenStack Keystone 13 through 29. POST /v3/credentials did not validate that the caller-supplied project_id for an EC2-type credential matched the project of the authenticating application credential. This allowed an attacker holding an unrestricted application credential for project A to create an EC2 credential targeting project B; a subsequent /v3/ec2tokens exchange would then issue a Keystone token scoped to project B while still carrying the original app_cred_id, enabling cross-project lateral movement within the credential owner's role footprint.",
-      "refs": "https://bugs.launchpad.net/keystone/+bug/2149775\nhttps://review.opendev.org/c/openstack/keystone/+/985804",
-      "source": "NVD",
-      "time": "2026-05-01 18:16:03"
-    },
-    {
-      "cve_id": "CVE-2026-42403",
-      "title": "高危漏洞: CVE-2026-42403 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-01 17:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Apache Neethi does not properly detect circular references in policy definitions. When a WS-Policy document contains circular policy references (where Policy A references Policy B which references Policy A), the policy normalization process can enter an infinite loop or cause excessive recursion, leading to a stack overflow or application hang. An attacker can craft malicious policy documents with circular references to cause a Denial of Service condition\n\nUsers are recommended to upgrade to version 3.2.2, which fixes this issue.",
-      "refs": "https://lists.apache.org/thread/zm6t8skkkskjwk1881l4m4n0l7dqclzo",
-      "source": "NVD",
-      "time": "2026-05-01 18:15:55"
-    },
-    {
-      "cve_id": "CVE-2026-42402",
-      "title": "高危漏洞: CVE-2026-42402 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-01 17:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Apache Neethi is vulnerable to a Denial of Service attack through algorithmic complexity in policy normalization. Specially crafted WS-Policy documents can trigger an exponential Cartesian cross-product expansion during the normalization process, causing unbounded memory allocation that exhausts the JVM heap. This occurs when the normalization process generates an excessive number of policy alternatives without bounds, leading to runtime memory exhaustion.\n\nUsers should upgrade to 3.2.2 which limits the maximum number of normalized policy alternatives.",
-      "refs": "https://lists.apache.org/thread/p826j0phhmr9f83wzpmys1y0bdfrr2q4",
-      "source": "NVD",
-      "time": "2026-05-01 18:15:50"
-    },
-    {
-      "cve_id": "CVE-2026-7584",
-      "title": "高危漏洞: CVE-2026-7584 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-01 16:16:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The LabOne Q serialization framework uses a class-loading mechanism (import_cls) to dynamically import and instantiate Python classes during deserialization. Prior to the fix, this mechanism accepted arbitrary fully-qualified class names from the serialized data without any validation of the target class or restriction on which modules could be imported. An attacker can craft a serialized experiment file that causes the deserialization engine to import and instantiate arbitrary Python classes with attacker-controlled constructor arguments, resulting in arbitrary code execution in the context of the user running the Python process. Exploitation requires the victim to load a malicious file using LabOne Q's deserialization functions, for example a compromised experiment file shared for collaboration or support purposes.",
-      "refs": "https://www.zhinst.com/support/security/2026/zi-sa-2026-002/",
-      "source": "NVD",
-      "time": "2026-05-01 18:15:45"
-    },
-    {
-      "cve_id": "CVE-2026-7555",
-      "title": "高危漏洞: CVE-2026-7555 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-01 14:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in itsourcecode Electronic Judging System 1.0. This affects an unknown part of the file /intrams/login.php. Such manipulation of the argument Username leads to sql injection. The attack can be launched remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/nidieaaa/test/issues/9\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/805852",
-      "source": "NVD",
-      "time": "2026-05-01 18:15:40"
-    },
-    {
-      "cve_id": "CVE-2026-7550",
-      "title": "高危漏洞: CVE-2026-7550 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-01 13:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in SourceCodester Pharmacy Sales and Inventory System 1.0. Affected is an unknown function of the file /ajax.php?action=save_customer. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/khairulazly760530-cell/cves/issues/2\nhttps://vuldb.com/submit/805539\nhttps://vuldb.com/vuln/360360",
-      "source": "NVD",
-      "time": "2026-05-01 18:15:35"
-    },
-    {
-      "cve_id": "CVE-2026-7549",
-      "title": "高危漏洞: CVE-2026-7549 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-01 13:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in SourceCodester Pharmacy Sales and Inventory System 1.0. This impacts an unknown function of the file /ajax.php?action=delete_customer. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed from remote. The exploit has been published and may be used.",
-      "refs": "https://github.com/khairulazly760530-cell/cves/issues/3\nhttps://vuldb.com/submit/805538\nhttps://vuldb.com/vuln/360359",
-      "source": "NVD",
-      "time": "2026-05-01 18:15:31"
-    },
-    {
-      "cve_id": "CVE-2026-7548",
-      "title": "高危漏洞: CVE-2026-7548 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-01 11:16:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Totolink NR1800X 9.1.0u.6279_B20210910. This affects the function sub_41A68C of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument setUssd results in command injection. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/newym/cve/blob/main/totolink%20nr1800x%20command%20injection.md\nhttps://vuldb.com/submit/804417\nhttps://vuldb.com/vuln/360358",
-      "source": "NVD",
-      "time": "2026-05-01 14:00:10"
-    },
-    {
-      "cve_id": "CVE-2026-7546",
-      "title": "高危漏洞: CVE-2026-7546 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-01 11:16:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Totolink NR1800X 9.1.0u.6279_B20210910. The impacted element is the function find_host_ip of the component lighttpd. Such manipulation of the argument Host leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/newym/cve/blob/main/totolinknr1800x.md\nhttps://vuldb.com/submit/804404\nhttps://vuldb.com/vuln/360357",
-      "source": "NVD",
-      "time": "2026-05-01 14:00:06"
     }
   ]
 }
