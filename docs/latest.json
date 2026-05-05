@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7855",
+      "title": "高危漏洞: CVE-2026-7855 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-06 03:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in D-Link DI-8100 16.07.26A1. Affected by this issue is the function tggl_asp of the file /tggl.asp of the component HTTP Request Handler. Performing a manipulation of the argument Name results in buffer overflow. The attack can be initiated remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/draw-ctf/report/blob/main/DI-8100/tggl_asp_overflow.md\nhttps://vuldb.com/submit/807841\nhttps://vuldb.com/vuln/361132",
+      "source": "NVD",
+      "time": "2026-05-06 05:54:02"
+    },
+    {
+      "cve_id": "CVE-2026-7854",
+      "title": "高危漏洞: CVE-2026-7854 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-06 03:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in D-Link DI-8100 16.07.26A1. Affected by this vulnerability is the function url_rule_asp of the file /url_rule.asp of the component POST Parameter Handler. Such manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/draw-ctf/report/blob/main/DI-8100/url_rule_asp_overflow.md\nhttps://vuldb.com/submit/807838\nhttps://vuldb.com/vuln/361131",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:57"
+    },
+    {
+      "cve_id": "CVE-2026-42997",
+      "title": "高危漏洞: CVE-2026-42997 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-06 03:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "An issue was discovered in idrac in OpenStack Ironic before 35.0.1. During import, a user invoking molds can request authorization to be sent to a remote endpoint. The credential forwarded is a time-limited Keystone token (which provides access to all OpenStack services Ironic is authorized for); or basic credentials configured for molds storage. The fixed versions are 26.1.6, 29.0.5, 32.0.1, and 35.0.1.",
+      "refs": "https://www.openwall.com/lists/oss-security/2026/05/05/10",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:51"
+    },
+    {
+      "cve_id": "CVE-2026-27960",
+      "title": "高危漏洞: CVE-2026-27960 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-06 03:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. In versions 6.6.0 through 6.9.12, there is a privilege escalation vulnerability that can be exploited by unauthenticated attackers to query the API as any existing user, including the default admin account. This issue has been fixed in version 6.9.13. As a workaround, the default admin can be disabled using the `APP__ADMIN__EXTERNALLY_MANAGED` configuration.",
+      "refs": "https://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-6vvv-vmfr-xhrx",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:47"
+    },
+    {
+      "cve_id": "CVE-2026-7853",
+      "title": "高危漏洞: CVE-2026-7853 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-06 02:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in D-Link DI-8100 16.07.26A1. Affected is the function sprintf of the file /auto_reboot.asp of the component HTTP Handler. This manipulation of the argument enable/time causes buffer overflow. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/draw-ctf/report/blob/main/DI-8100/auto_reboot_asp_overflow.md\nhttps://vuldb.com/submit/807837\nhttps://vuldb.com/vuln/361130",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:43"
+    },
+    {
+      "cve_id": "CVE-2026-7851",
+      "title": "高危漏洞: CVE-2026-7851 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-06 02:16:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in D-Link DI-8100 16.07.26A1. This affects the function sprintf of the file yyxz.asp. The manipulation of the argument ID leads to stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/draw-ctf/report/blob/main/DI-8100/yyxz_dlink_asp_overflow.md\nhttps://vuldb.com/submit/807798\nhttps://vuldb.com/vuln/361128",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:38"
+    },
+    {
+      "cve_id": "CVE-2026-36356",
+      "title": "高危漏洞: CVE-2026-36356 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-05 22:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The GoAhead web server on MeiG Smart FORGE_SLT711 devices (firmware MDM9607.LE.1.0-00110-STD.PROD-1) allows unauthenticated OS command injection via the /action/SetRemoteAccessCfg endpoint.",
+      "refs": "http://forgeslt711.com\nhttp://meig.com\nhttps://github.com/totekuh/CVE-2026-36356",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:32"
+    },
+    {
+      "cve_id": "CVE-2026-36355",
+      "title": "高危漏洞: CVE-2026-36355 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-05 22:16:08",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The rtl8192cd Wi-Fi kernel driver in the Realtek rtl819x Jungle SDK (all known versions through v3.4.14B) does not perform any access control checks on the write_mem (ioctl 0x89F5) and read_mem (ioctl 0x89F6) debug handlers, which are compiled into production builds via the unconditionally defined _IOCTL_DEBUG_CMD_ macro in 8192cd_cfg.h",
+      "refs": "http://realtek.com\nhttps://github.com/totekuh/CVE-2026-36355\nhttps://github.com/totekuh/CVE-2026-36355",
+      "source": "NVD",
+      "time": "2026-05-06 05:53:27"
+    },
+    {
       "cve_id": "CVE-2026-7412",
       "title": "高危漏洞: CVE-2026-7412 (CVSS 8.6)",
       "cvss_score": 8.6,
@@ -1011,94 +1099,6 @@
       "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/may-2026-bulletin.html",
       "source": "NVD",
       "time": "2026-05-05 03:15:08"
-    },
-    {
-      "cve_id": "CVE-2026-24781",
-      "title": "高危漏洞: CVE-2026-24781 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability through the inspect function. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.",
-      "refs": "https://github.com/patriksimek/vm2/commit/8d30d93213c1898b3e035298b89a814970dd1189\nhttps://github.com/patriksimek/vm2/commit/bdd3d15e57bc4ec5e70365cd79f7cb0256e5f88c\nhttps://github.com/patriksimek/vm2/commit/fd266d084e0a3322d0f71ba2a8dc4c96cd030228",
-      "source": "NVD",
-      "time": "2026-05-05 03:15:03"
-    },
-    {
-      "cve_id": "CVE-2026-24120",
-      "title": "高危漏洞: CVE-2026-24120 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.10.5, the fix for CVE-2023-37466 is insufficient and can be circumvented allowing attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.10.5.",
-      "refs": "https://github.com/patriksimek/vm2/releases/tag/v3.10.5\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-qvjj-29qf-hp7p",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:59"
-    },
-    {
-      "cve_id": "CVE-2026-24118",
-      "title": "高危漏洞: CVE-2026-24118 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.",
-      "refs": "https://github.com/patriksimek/vm2/commit/2b5f3e3a060d9088f5e1cdd585d683d491f990a3\nhttps://github.com/patriksimek/vm2/commit/f9b700b1c7d9ef2df416666cb24e0b659140cc74\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.0",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:55"
-    },
-    {
-      "cve_id": "CVE-2026-24082",
-      "title": "高危漏洞: CVE-2026-24082 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-05 01:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory Corruption when copying data from a freed source while executing performance counter deselect operation.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/may-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:51"
-    },
-    {
-      "cve_id": "CVE-2025-47408",
-      "title": "高危漏洞: CVE-2025-47408 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-05 01:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory corruption when another driver calls an IOCTL with invalid input/output buffer.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/may-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:43"
-    },
-    {
-      "cve_id": "CVE-2025-47407",
-      "title": "高危漏洞: CVE-2025-47407 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-05 01:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory corruption while creating a process on the digital signal processor due to allocation failure at the kernel level.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/may-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:39"
-    },
-    {
-      "cve_id": "CVE-2025-47405",
-      "title": "高危漏洞: CVE-2025-47405 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-05 01:16:20",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory corruption when processing camera sensor input/output control codes with invalid output buffers.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/may-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:34"
-    },
-    {
-      "cve_id": "CVE-2026-40563",
-      "title": "高危漏洞: CVE-2026-40563 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-05 00:16:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Description:\nImproper Control of Generation of Code ('Code Injection') vulnerability in Apache Atlas\nApache Atlas exposes a DSL search endpoint that accepts user-supplied query strings. Attacker can alter Gremlin traversal logic within grammar-allowed characters to access unintended data\n\n\n\n\nAffect Version:\nThis issue affects Apache Atlas: from 0.8 through 2.4.0.\n\n\n\nFor the affect version >= 2.0, vulnerability is only when Atlas is deployed with below non-default configuration.\n\n\natlas.dsl.executor.traversal=false\n\n\n\nMitigation:\nUsers are recommended to upgrade to version 2.5.0, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/vd0oggmqxl2k1skm0z2f9p0plx7jhmfl\nhttp://www.openwall.com/lists/oss-security/2026/05/03/9",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:30"
     }
   ]
 }
