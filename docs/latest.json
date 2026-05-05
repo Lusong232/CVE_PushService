@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7810",
+      "title": "高危漏洞: CVE-2026-7810 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-05 12:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in UsamaK98 python-notebook-mcp up to a05a232815809a7e425b5fa7be26e0d4369894c2. Impacted is the function create_notebook/read_notebook/edit_cell/add_cell of the file server.py. This manipulation causes path traversal. It is possible to initiate the attack remotely. The exploit has been published and may be used. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/UsamaK98/python-notebook-mcp/\nhttps://github.com/UsamaK98/python-notebook-mcp/issues/5\nhttps://vuldb.com/submit/807748",
+      "source": "NVD",
+      "time": "2026-05-05 13:35:00"
+    },
+    {
+      "cve_id": "CVE-2026-5294",
+      "title": "高危漏洞: CVE-2026-5294 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-05 12:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Geeky Bot plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 1.2.2. This is due to a nopriv AJAX route allowing attacker-controlled model/function dispatch and reaching a plugin installer helper that downloads and unzips attacker-supplied ZIP files into wp-content/plugins/. This makes it possible for unauthenticated attackers to perform arbitrary plugin installation and achieve remote code execution.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3497169/geeky-bot\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/a1817c58-e807-4ef2-a382-28ca2fd5239e?source=cve",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:53"
+    },
+    {
+      "cve_id": "CVE-2026-4803",
+      "title": "高危漏洞: CVE-2026-4803 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-05 12:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Royal Elementor Addons plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'status' parameter in the wpr_update_form_action_meta AJAX action in all versions up to, and including, 1.7.1056. This is due to insufficient input sanitization and output escaping, combined with a publicly leaked nonce that allows unauthenticated access to the AJAX handler. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/royal-elementor-addons/trunk/classes/modules/forms/wpr-actions-status.php#L21\nhttps://plugins.trac.wordpress.org/browser/royal-elementor-addons/trunk/classes/modules/forms/wpr-actions-status.php#L73\nhttps://plugins.trac.wordpress.org/browser/royal-elementor-addons/trunk/classes/modules/forms/wpr-submissions-cpt.php#L23",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:49"
+    },
+    {
+      "cve_id": "CVE-2026-3456",
+      "title": "高危漏洞: CVE-2026-3456 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-05 12:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The GeekyBot — Generate AI Content Without Prompt, Chatbot and Lead Generation plugin for WordPress is vulnerable to SQL Injection via the 'attributekey' parameter in versions up to, and including, 1.2.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3474168/geeky-bot\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/4c716fd3-6297-4b3a-a796-65f68f2986cf?source=cve",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:42"
+    },
+    {
+      "cve_id": "CVE-2026-35228",
+      "title": "高危漏洞: CVE-2026-35228 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-05-05 12:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Vulnerability in the Oracle MCP Server Helper Tool product of Oracle Open Source Projects (component: helper tool). The supported versions that is affected is 1.0.1-1.0.156. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle MCP Server Helper Tool. Successful attacks of this vulnerability can result in Oracle MCP Server Helper Tool executing malicious SQL.",
+      "refs": "https://www.oracle.com/security-alerts/all-oracle-cves-outside-other-oracle-public-documents.html",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:37"
+    },
+    {
+      "cve_id": "CVE-2026-5100",
+      "title": "高危漏洞: CVE-2026-5100 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-05 11:15:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The AWP Classifieds plugin for WordPress is vulnerable to SQL Injection via the 'regions' parameter array keys in versions up to, and including, 4.4.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L168\nhttps://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L174\nhttps://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L63",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:29"
+    },
+    {
+      "cve_id": "CVE-2025-13618",
+      "title": "高危漏洞: CVE-2025-13618 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-05 11:15:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Mentoring plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 1.2.8. This is due to the plugin not properly restricting the roles that users can register with in the mentoring_process_registration() function. This makes it possible for unauthenticated attackers to register with administrator-level user accounts.",
+      "refs": "https://mentoring-wp.dreamsmarketplace.com/documentation/changelog.html\nhttps://themeforest.net/item/mentoring-education-wordpress-theme/36457081\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/7192fb4c-0434-4e11-a2a7-c205b8d6b68e?source=cve",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:24"
+    },
+    {
+      "cve_id": "CVE-2026-5722",
+      "title": "高危漏洞: CVE-2026-5722 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-05 10:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MoreConvert Pro plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.9.14. This is due to the guest waitlist verification flow not invalidating or regenerating verification tokens when the customer email address is changed. This makes it possible for unauthenticated attackers to authenticate as existing users, including administrators, by obtaining a valid guest verification token for an attacker-controlled email, changing the same guest customer email to the target account email through the public waitlist flow, and then using the original verification link.",
+      "refs": "https://moreconvert.com/changelog/\nhttps://wordpress.org/plugins/smart-wishlist-for-more-convert/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/fe887475-f7e8-4fda-a793-bc6f37b70f3e?source=cve",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:18"
+    },
+    {
+      "cve_id": "CVE-2026-44028",
+      "title": "高危漏洞: CVE-2026-44028 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-05 09:16:06",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "An issue was discovered in Nix before 2.34.7 and Lix before 2.95.2. Unbounded recursion in the NAR (Nix Archive) parser could lead to a stack-to-heap overflow when the parser is run on a coroutine stack. The stack is allocated without a guard page, which means that a stack overflow could overwrite memory on the heap and could allow arbitrary code execution as the Nix daemon (run as root in multi-user installations) if ASLR hardening is bypassed. This can be exploited by all users able to connect to the daemon (e.g., in Nix, this is configurable via the allowed-users setting, defaulting to all users). The fixed versions are 2.34.7, 2.33.6, 2.32.8, 2.31.5, 2.30.5, 2.29.4, and 2.28.7 for Nix (introduced in 2.24.4); and 2.95.2, 2.94.2, and 2.93.4 for Lix (introduced in 2.93.0).",
+      "refs": "https://discourse.nixos.org/t/security-advisory-local-privilege-escalation-in-lix-and-nix/77407\nhttps://github.com/NixOS/nix/security/advisories/GHSA-vh5x-56v6-4368\nhttps://www.openwall.com/lists/oss-security/2026/05/04/32",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:13"
+    },
+    {
+      "cve_id": "CVE-2026-7788",
+      "title": "高危漏洞: CVE-2026-7788 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-05 08:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in Axle-Bucamp MCP-Docusaurus up to 404bc028e15ec304c9a045528560f4b5f27a17e0. The affected element is the function update_document/continue_document/delete_document/get_content of the file app/routes/document.py. Performing a manipulation of the argument DOCS_DIR/path results in path traversal. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Axle-Bucamp/MCP-Docusaurus/\nhttps://github.com/Axle-Bucamp/MCP-Docusaurus/issues/2\nhttps://vuldb.com/submit/807746",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:08"
+    },
+    {
+      "cve_id": "CVE-2026-7785",
+      "title": "高危漏洞: CVE-2026-7785 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-05 08:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in A-G-U-P-T-A wireshark-mcp edaf604416fbc94a201b4043092d4a1b09a12275/400c3da70074f22f3cce7ccb65304cafc7089c89. This affects the function quick_capture of the file pyshark_mcp.py. The manipulation results in os command injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/A-G-U-P-T-A/wireshark-mcp/\nhttps://github.com/A-G-U-P-T-A/wireshark-mcp/issues/1\nhttps://vuldb.com/submit/807745",
+      "source": "NVD",
+      "time": "2026-05-05 13:34:04"
+    },
+    {
+      "cve_id": "CVE-2026-7784",
+      "title": "高危漏洞: CVE-2026-7784 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-05 08:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in RTGS2017 NagaAgent up to 5.1.0. This issue affects some unknown processing of the file apiserver/routes/extensions.py of the component Skills Endpoint. Such manipulation of the argument Name leads to path traversal. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/RTGS2017/NagaAgent/\nhttps://github.com/RTGS2017/NagaAgent/issues/311\nhttps://vuldb.com/submit/807744",
+      "source": "NVD",
+      "time": "2026-05-05 13:33:56"
+    },
+    {
       "cve_id": "CVE-2026-7791",
       "title": "高危漏洞: CVE-2026-7791 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/hmKunlun/lbt-t300-hw1/blob/main/generate_conf_router(Channel).md\nhttps://vuldb.com/submit/800708\nhttps://vuldb.com/submit/800709",
       "source": "NVD",
       "time": "2026-05-03 13:49:52"
-    },
-    {
-      "cve_id": "CVE-2026-7674",
-      "title": "高危漏洞: CVE-2026-7674 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-03 10:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Shenzhen Libituo Technology LBT-T300-HW1 up to 1.2.8. This issue affects the function start_single_service of the component Web Management Interface. Executing a manipulation of the argument vpn_pptp_server/vpn_l2tp_server can lead to buffer overflow. The attack can be executed remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/hmKunlun/lbt-t300-hw1/blob/main/reselov_vpn_server%EF%BC%88vpn_pptp_server%EF%BC%89.md\nhttps://vuldb.com/submit/800705\nhttps://vuldb.com/submit/800706",
-      "source": "NVD",
-      "time": "2026-05-03 13:49:46"
-    },
-    {
-      "cve_id": "CVE-2026-7670",
-      "title": "高危漏洞: CVE-2026-7670 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-03 07:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in Jinher OA 1.0. The affected element is an unknown function of the file /C6/JHSoft.Web.PlanSummarize/UserSel.aspx. This manipulation of the argument DeptIDList causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/zzlln/cvecve/issues/1\nhttps://vuldb.com/submit/799506\nhttps://vuldb.com/vuln/360818",
-      "source": "NVD",
-      "time": "2026-05-03 09:53:53"
-    },
-    {
-      "cve_id": "CVE-2026-7668",
-      "title": "高危漏洞: CVE-2026-7668 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-03 05:16:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in MikroTik RouterOS 6.49.8. This vulnerability affects the function ASN1_STRING_data in the library nova/lib/www/scep.p of the component SCEP Endpoint. The manipulation of the argument transactionID/messageType leads to out-of-bounds read. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/ezio315/cve/issues/4\nhttps://vuldb.com/submit/798623\nhttps://vuldb.com/vuln/360804",
-      "source": "NVD",
-      "time": "2026-05-03 09:53:46"
-    },
-    {
-      "cve_id": "CVE-2026-7644",
-      "title": "高危漏洞: CVE-2026-7644 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-02 23:16:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in ChatGPTNextWeb NextChat up to 2.16.1. Affected is the function addMcpServer of the file app/mcp/actions.ts. The manipulation leads to improper authorization. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/ChatGPTNextWeb/NextChat/\nhttps://github.com/ChatGPTNextWeb/NextChat/issues/6757\nhttps://vuldb.com/submit/806851",
-      "source": "NVD",
-      "time": "2026-05-03 02:43:05"
-    },
-    {
-      "cve_id": "CVE-2026-7632",
-      "title": "高危漏洞: CVE-2026-7632 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-02 22:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in code-projects Online Hospital Management System 1.0. This affects an unknown function of the file /viewappointment.php. This manipulation of the argument delid causes sql injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Sh1tKing/cve/blob/main/time-blind-sql.md\nhttps://vuldb.com/submit/806633",
-      "source": "NVD",
-      "time": "2026-05-03 02:43:00"
-    },
-    {
-      "cve_id": "CVE-2026-7630",
-      "title": "高危漏洞: CVE-2026-7630 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-02 22:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in innocommerce InnoShop up to 0.7.8. The affected element is the function InstallServiceProvider::boot of the file innopacks/install/src/InstallServiceProvider.php of the component Installation Endpoint. The manipulation leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The identifier of the patch is 45758e4ec22451ab944ae2ae826b1e70f6450dc9. It is recommended to apply a patch to fix this issue.",
-      "refs": "https://github.com/innocommerce/innoshop/\nhttps://github.com/innocommerce/innoshop/commit/45758e4ec22451ab944ae2ae826b1e70f6450dc9\nhttps://github.com/innocommerce/innoshop/issues/314",
-      "source": "NVD",
-      "time": "2026-05-03 02:42:55"
-    },
-    {
-      "cve_id": "CVE-2026-2554",
-      "title": "高危漏洞: CVE-2026-2554 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-02 22:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.25 via the 'wcfm_delete_wcfm_customer' due to missing validation on the 'customerid' user controlled key. This makes it possible for authenticated attackers, with Vendor-level access and above, to delete arbitrary users, including Administrators.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wc-frontend-manager/tags/6.7.24/core/class-wcfm-customer.php#L386\nhttps://plugins.trac.wordpress.org/changeset/3483695/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/21e397a4-0b32-4b13-a46b-c465acea0796?source=cve",
-      "source": "NVD",
-      "time": "2026-05-03 02:42:48"
-    },
-    {
-      "cve_id": "CVE-2026-6320",
-      "title": "高危漏洞: CVE-2026-6320 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Salon Booking System – Free Version plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 10.30.25. This is due to the public booking flow accepting attacker-controlled file-field values and later using those stored values as trusted paths for email attachments. This makes it possible for unauthenticated attackers to read arbitrary local files and exfiltrate them via booking confirmation email attachments.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3512110/salon-booking-system\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e91b8082-e1c7-4989-82db-20e255b52854?source=cve",
-      "source": "NVD",
-      "time": "2026-05-02 23:38:20"
-    },
-    {
-      "cve_id": "CVE-2026-4100",
-      "title": "高危漏洞: CVE-2026-4100 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
-      "description": "The Paid Memberships Pro plugin for WordPress is vulnerable to unauthorized modification and disruption of Stripe webhook configuration in all versions up to, and including, 3.6.5. This is due to missing capability checks on the `wp_ajax_pmpro_stripe_create_webhook`, `wp_ajax_pmpro_stripe_delete_webhook`, and `wp_ajax_pmpro_stripe_rebuild_webhook` AJAX handlers. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete, create, or rebuild the site's Stripe webhook, disrupting all payment processing, subscription renewal synchronization, cancellation handling, and failed payment management.",
-      "refs": "https://github.com/strangerstudios/paid-memberships-pro/pull/3615\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5b333a3d-e416-42aa-9722-5406df0a64b3?source=cve",
-      "source": "NVD",
-      "time": "2026-05-02 23:38:16"
-    },
-    {
-      "cve_id": "CVE-2026-4062",
-      "title": "高危漏洞: CVE-2026-4062 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Geo Mashup plugin for WordPress is vulnerable to Time-Based SQL Injection via the 'object_ids' and 'exclude_object_ids' parameters in all versions up to, and including, 1.13.18. This is due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL query. The `esc_sql()` function is applied but is ineffective because the values are placed in an unquoted `IN(...)` / `NOT IN(...)` SQL context — `esc_sql()` only escapes quote characters and provides no protection against parenthesis or SQL keyword injection. Additionally, while a numeric-only sanitizer exists in `sanitize_query_args()`, it is only applied in the AJAX code path and not in the `render-map.php` or template tag code paths. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a time-based blind approach.",
-      "refs": "https://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1755\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1759\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/render-map.php#L166",
-      "source": "NVD",
-      "time": "2026-05-02 23:38:10"
-    },
-    {
-      "cve_id": "CVE-2026-4061",
-      "title": "高危漏洞: CVE-2026-4061 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Geo Mashup plugin for WordPress is vulnerable to Time-Based SQL Injection via the 'map_post_type' parameter in all versions up to, and including, 1.13.18. This is due to the `SearchResults` hook explicitly calling `stripslashes_deep($_POST)` which removes WordPress magic quotes protection, followed by the unsanitized `map_post_type` value being concatenated into an `IN(...)` clause without `esc_sql()` or `$wpdb->prepare()`. The 'any' branch of the same code correctly applies `array_map('esc_sql', ...)`, but the else branch does not. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a time-based blind approach. Exploitation requires the Geo Search feature to be enabled in plugin settings.",
-      "refs": "https://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1748\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/php/Hooks/SearchResults.php#L39\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/php/Search.php#L152",
-      "source": "NVD",
-      "time": "2026-05-02 23:38:02"
-    },
-    {
-      "cve_id": "CVE-2026-4060",
-      "title": "高危漏洞: CVE-2026-4060 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-02 20:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Geo Mashup plugin for WordPress is vulnerable to Time-Based SQL Injection via the 'sort' parameter in all versions up to, and including, 1.13.18. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. The `esc_sql()` function is applied but is ineffective in the `ORDER BY` context because the value is not enclosed in quotes. Additionally, while a `sanitize_sort_arg()` allowlist-based sanitizer was added in version 1.13.18, it is only applied in the AJAX code path (`sanitize_query_args()`) and not in the `render-map.php` or template tag code paths. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a time-based blind approach.",
-      "refs": "https://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1767\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/geo-mashup-db.php#L1785\nhttps://plugins.trac.wordpress.org/browser/geo-mashup/trunk/render-map.php#L166",
-      "source": "NVD",
-      "time": "2026-05-02 23:37:55"
     }
   ]
 }
