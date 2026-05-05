@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6322",
+      "title": "高危漏洞: CVE-2026-6322 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-05 19:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "fast-uri normalize() decoded percent-encoded authority delimiters inside the host component and then re-emitted them as raw delimiters during serialization. A host that combined an allowed domain, an encoded at-sign, and a different domain was re-emitted with the at-sign as a raw userinfo separator, changing the URI's authority to the second domain. Applications that normalize untrusted URLs before host allowlist checks, redirect validation, or outbound request routing can be steered to a different authority than the input appeared to specify. Versions <= 3.1.1 are affected. Update to 3.1.2 or later.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fast-uri/security/advisories/GHSA-v39h-62p7-jpjc",
+      "source": "NVD",
+      "time": "2026-05-05 21:12:19"
+    },
+    {
       "cve_id": "CVE-2026-3359",
       "title": "高危漏洞: CVE-2026-3359 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://ucn9h68n9289.feishu.cn/wiki/Yslcw7QqWiRjUZkCcvkcJI62n2c\nhttps://vuldb.com/submit/804048\nhttps://vuldb.com/vuln/360867",
       "source": "NVD",
       "time": "2026-05-04 02:43:20"
-    },
-    {
-      "cve_id": "CVE-2026-7695",
-      "title": "高危漏洞: CVE-2026-7695 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-03 21:16:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in Acrel Electrical EEMS Enterprise Power Operation and Maintenance Cloud Platform 1.3.0. This affects an unknown function of the file /SubstationWEBV2/main/elecMaxMinAvgValue. The manipulation of the argument fCircuitids leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://ucn9h68n9289.feishu.cn/wiki/QoXfwTAOiiYw2OkO0vAc7b7SnGg\nhttps://vuldb.com/submit/803275\nhttps://vuldb.com/vuln/360864",
-      "source": "NVD",
-      "time": "2026-05-03 23:38:02"
     }
   ]
 }
