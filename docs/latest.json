@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7412",
+      "title": "高危漏洞: CVE-2026-7412 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-06 00:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "In Eclipse BaSyx Java Server SDK versions prior to 2.0.0-milestone-10, the Operation Delegation feature fails to validate the destination URI of delegated requests. An unauthenticated remote attacker can exploit this design flaw to force the BaSyx server to execute blind HTTP POST requests to arbitrary internal or external targets. This allows an attacker to bypass network segmentation and pivot into isolated internal IT/OT infrastructure or target Cloud Metadata services (IMDS).",
+      "refs": "https://gitlab.eclipse.org/security/cve-assignment/-/issues/103\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/issues/423",
+      "source": "NVD",
+      "time": "2026-05-06 03:05:21"
+    },
+    {
+      "cve_id": "CVE-2026-7411",
+      "title": "高危漏洞: CVE-2026-7411 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-06 00:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "In Eclipse BaSyx Java Server SDK versions prior to 2.0.0-milestone-10, inadequate path normalization in the Submodel HTTP API allows an unauthenticated remote attacker to perform a path traversal attack. By supplying a maliciously crafted fileName parameter during a file upload operation, an attacker can bypass intended storage boundaries and write arbitrary files to any location on the host filesystem accessible by the Java process. This can lead to Remote Code Execution (RCE) and complete system compromise.",
+      "refs": "https://gitlab.eclipse.org/security/cve-assignment/-/issues/102\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/issues/423",
+      "source": "NVD",
+      "time": "2026-05-06 03:05:16"
+    },
+    {
+      "cve_id": "CVE-2026-29168",
+      "title": "高危漏洞: CVE-2026-29168 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-05 22:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache HTTP Server's  mod_md via OCSP response data.\n\nThis issue affects Apache HTTP Server: from 2.4.30 through 2.4.66.\n\nUsers are recommended to upgrade to version 2.4.67, which fixes the issue.",
+      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html\nhttp://www.openwall.com/lists/oss-security/2026/05/05/6",
+      "source": "NVD",
+      "time": "2026-05-06 03:05:12"
+    },
+    {
+      "cve_id": "CVE-2025-67796",
+      "title": "高危漏洞: CVE-2025-67796 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-05 04:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "IKUS Rdiffweb before 2.10.5 has an improper authorization flaw that allows an attacker with any valid or stolen access token to act as other users. The API does not enforce binding between the authenticated subject and the targeted user/tenant, so crafted requests can read or modify other users data and, in some cases, perform privileged actions. This issue may enable cross-tenant access. Fixed in version 2.10.6.",
+      "refs": "https://gitlab.com/ikus-soft/rdiffweb\nhttps://gitlab.com/ikus-soft/rdiffweb#2106-2025-10-02",
+      "source": "NVD",
+      "time": "2026-05-06 03:05:08"
+    },
+    {
       "cve_id": "CVE-2026-7834",
       "title": "高危漏洞: CVE-2026-7834 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://lists.apache.org/thread/vd0oggmqxl2k1skm0z2f9p0plx7jhmfl\nhttp://www.openwall.com/lists/oss-security/2026/05/03/9",
       "source": "NVD",
       "time": "2026-05-05 03:14:30"
-    },
-    {
-      "cve_id": "CVE-2026-29169",
-      "title": "高危漏洞: CVE-2026-29169 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-04 23:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A NULL pointer dereference in mod_dav_lock in Apache HTTP Server 2.4.66 and earlier may allow an attacker to crash the server with a malicious request.mod_dav_lock is not used internally by mod_dav or mod_dav_fs.\n\nThe only known use-case for mod_dav_lock was mod_dav_svn from Apache Subversion earlier than version 1.2.0.\n\nUsers are recommended to upgrade to version 2.4.66, which fixes this issue, or remove mod_dav_lock.",
-      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:24"
-    },
-    {
-      "cve_id": "CVE-2026-23918",
-      "title": "高危漏洞: CVE-2026-23918 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-04 23:16:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Double Free and possible RCE vulnerability in Apache HTTP Server with the HTTP/2 protocol.\n\nThis issue affects Apache HTTP Server: 2.4.66.\n\nUsers are recommended to upgrade to version 2.4.67, which fixes the issue.",
-      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:14:18"
-    },
-    {
-      "cve_id": "CVE-2026-6266",
-      "title": "高危漏洞: CVE-2026-6266 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-04 22:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "A flaw was found in the AAP gateway. The user auto-link strategy, introduced in AAP 2.6, automatically links an external Identity Provider (IDP) identity to an existing AAP user account based on email matching without verifying email ownership. This allows a remote attacker to potentially hijack a victim's account or gain unauthorized access to other accounts, including administrative accounts, by manipulating the IDP-provided email.",
-      "refs": "https://access.redhat.com/errata/RHSA-2026:13508\nhttps://access.redhat.com/security/cve/CVE-2026-6266\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2458142",
-      "source": "NVD",
-      "time": "2026-05-05 00:26:45"
-    },
-    {
-      "cve_id": "CVE-2025-58074",
-      "title": "高危漏洞: CVE-2025-58074 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-04 22:16:28",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A privilege escalation vulnerability exists during the installation of Norton Secure VPN via the Microsoft Store. A low-privilege user can replace files during the installation process, which may result in deletion of arbitrary files that can lead to elevation of privileges.",
-      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2276\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2025-2276",
-      "source": "NVD",
-      "time": "2026-05-05 00:26:39"
     }
   ]
 }
