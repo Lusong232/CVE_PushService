@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7857",
+      "title": "高危漏洞: CVE-2026-7857 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-06 04:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in D-Link DI-8100 16.07.26A1. This vulnerability affects the function sprintf of the file /user_group.asp of the component CGI Handler. The manipulation leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/draw-ctf/report/blob/main/DI-8100/user_group_asp_overflow.md\nhttps://vuldb.com/submit/807853\nhttps://vuldb.com/vuln/361134",
+      "source": "NVD",
+      "time": "2026-05-06 09:53:48"
+    },
+    {
+      "cve_id": "CVE-2026-7856",
+      "title": "高危漏洞: CVE-2026-7856 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-06 04:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in D-Link DI-8100 16.07.26A1. This affects an unknown part of the file /url_member.asp of the component Web Management Interface. Executing a manipulation of the argument Name can lead to buffer overflow. The attack can be launched remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/draw-ctf/report/blob/main/DI-8100/url_member_asp_overflow.md\nhttps://vuldb.com/submit/807849\nhttps://vuldb.com/vuln/361133",
+      "source": "NVD",
+      "time": "2026-05-06 09:53:44"
+    },
+    {
+      "cve_id": "CVE-2026-44331",
+      "title": "高危漏洞: CVE-2026-44331 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-06 04:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In ProFTPD through 1.3.9a before 7666224, a SQL injection vulnerability in sqltab_fetch_clients_cb() in contrib/mod_wrap2_sql.c allows a remote attacker to inject arbitrary SQL commands via a crafted domain name that is accessed in a reverse DNS lookup. When \"UseReverseDNS on\" is enabled, the attacker-supplied hostname is passed unescaped into SQL queries. The character restrictions of DNS names may affect exploitability.",
+      "refs": "https://github.com/proftpd/proftpd/commit/766622456440fbca33abd7927c523673a11d1ed1\nhttps://github.com/proftpd/proftpd/issues/2057",
+      "source": "NVD",
+      "time": "2026-05-06 09:53:39"
+    },
+    {
+      "cve_id": "CVE-2026-6918",
+      "title": "高危漏洞: CVE-2026-6918 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-05 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In Eclipse Open9J versions 0.21 to 0.58, a pre-authentication remote attacker can crash JITServer by sending a 32-byte crafted TCP message.",
+      "refs": "https://github.com/eclipse-openj9/openj9/pull/23793\nhttps://github.com/eclipse-openj9/openj9/security/advisories/GHSA-q393-vr4c-969r\nhttps://github.com/eclipse-openj9/openj9/security/advisories/GHSA-q393-vr4c-969r",
+      "source": "NVD",
+      "time": "2026-05-06 09:53:35"
+    },
+    {
       "cve_id": "CVE-2026-7855",
       "title": "高危漏洞: CVE-2026-7855 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/EvoMap/evolver/releases/tag/v1.69.3\nhttps://github.com/EvoMap/evolver/security/advisories/GHSA-r466-rxw4-3j9j",
       "source": "NVD",
       "time": "2026-05-05 03:15:28"
-    },
-    {
-      "cve_id": "CVE-2026-29514",
-      "title": "高危漏洞: CVE-2026-29514 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-05 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NetBox versions 4.3.5 through 4.5.4 contain a remote code execution vulnerability in the RenderTemplateMixin.get_environment_params() method that allows authenticated users with exporttemplate or configtemplate permissions to execute arbitrary code by specifying malicious Python callables in the environment_params field. Attackers can bypass Jinja2 SandboxedEnvironment protections by setting the finalize parameter to any importable Python callable such as subprocess.getoutput, which is invoked on every rendered expression outside the sandbox's call interception mechanism, achieving remote code execution as the NetBox service user.",
-      "refs": "https://chocapikk.com/posts/2026/netbox-export-template-rce/\nhttps://github.com/netbox-community/netbox/issues/22079\nhttps://github.com/netbox-community/netbox/pull/22078",
-      "source": "NVD",
-      "time": "2026-05-05 03:15:23"
-    },
-    {
-      "cve_id": "CVE-2026-26956",
-      "title": "高危漏洞: CVE-2026-26956 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. In version 3.10.4, vm2 is vulnerable to full sandbox escape with arbitrary code execution. Attacker code inside VM.run() obtains host process object and runs host commands with zero host cooperation. This issue has been patched in version 3.10.5.",
-      "refs": "https://github.com/patriksimek/vm2/releases/tag/v3.10.5\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-ffh4-j6h5-pg66",
-      "source": "NVD",
-      "time": "2026-05-05 03:15:16"
-    },
-    {
-      "cve_id": "CVE-2026-26332",
-      "title": "高危漏洞: CVE-2026-26332 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, SuppressedError allows attackers to escape the sandbox and run arbitrary code. This issue has been patched in version 3.11.0.",
-      "refs": "https://github.com/patriksimek/vm2/releases/tag/v3.11.0\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-55hx-c926-fr95",
-      "source": "NVD",
-      "time": "2026-05-05 03:15:12"
-    },
-    {
-      "cve_id": "CVE-2026-25293",
-      "title": "高危漏洞: CVE-2026-25293 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-05 01:16:22",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Buffer overflow due to incorrect authorization in PLC FW",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/may-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-05-05 03:15:08"
     }
   ]
 }
