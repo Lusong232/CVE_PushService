@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7841",
+      "title": "高危漏洞: CVE-2026-7841 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-06 16:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A remote code execution vulnerability\nexists in Notification Settings on GeoVision GV-ASWeb 6.2.0. An authenticated\nuser with System Setting permissions can execute arbitrary commands on the\nserver by sending a crafted HTTP POST request to the ASWebCommon.srf backend\nendpoint to bypass the frontend restrictions.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-05-06 18:56:38"
+    },
+    {
+      "cve_id": "CVE-2026-7448",
+      "title": "高危漏洞: CVE-2026-7448 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-06 16:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'first_name' parameter in all versions up to, and including, 5.5.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.3.2/lib/controllers/activities_controller.php#L270\nhttps://plugins.trac.wordpress.org/browser/latepoint/tags/5.3.2/lib/helpers/email_helper.php#L50\nhttps://plugins.trac.wordpress.org/browser/latepoint/tags/5.3.2/lib/helpers/replacer_helper.php#L276",
+      "source": "NVD",
+      "time": "2026-05-06 18:56:34"
+    },
+    {
+      "cve_id": "CVE-2026-7332",
+      "title": "高危漏洞: CVE-2026-7332 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-06 16:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'booking_form_page_url' parameter in all versions up to, and including, 5.5.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The malicious activity log entry is written to the database even when Stripe is not configured, because the latepoint_order_intent_created action hook fires before the Stripe Connect account ID is validated, meaning a fully functional Stripe integration is not required for exploitation.",
+      "refs": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.4.1/lib/controllers/activities_controller.php#L214\nhttps://plugins.trac.wordpress.org/browser/latepoint/tags/5.4.1/lib/controllers/stripe_connect_controller.php#L260\nhttps://plugins.trac.wordpress.org/browser/latepoint/tags/5.4.1/lib/helpers/activities_helper.php#L83",
+      "source": "NVD",
+      "time": "2026-05-06 18:56:28"
+    },
+    {
       "cve_id": "CVE-2025-71256",
       "title": "高危漏洞: CVE-2025-71256 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1066,39 +1099,6 @@
       "refs": "https://lists.apache.org/thread/8tfsr8y7pgq6rdcvjx95hkcr47td671r\nhttp://www.openwall.com/lists/oss-security/2026/05/02/10",
       "source": "NVD",
       "time": "2026-05-05 03:16:16"
-    },
-    {
-      "cve_id": "CVE-2026-42376",
-      "title": "高危漏洞: CVE-2026-42376 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "D-Link DIR-456U Hardware Revision A1 (End-of-Life, EOL) contains a hardcoded telnet backdoor. The device starts a telnet daemon at boot via /etc/init0.d/S80telnetd.sh with the username \"Alphanetworks\" and the static password \"whdrv01_dlob_dir456U\" read from /etc/config/image_sign. The custom telnetd binary accepts a -u user:password flag, and the custom login binary uses strcmp() to validate credentials. Successful authentication grants an unauthenticated attacker on the local network a root shell with full administrative control. The device has reached End-of-Life (EOL) and will not receive patches.",
-      "refs": "https://www.securin.io/zero-day/cve-2026-42376-hardcoded-telnet-backdoor-in-d-link-dir-456u-a1-end-of-life-\nhttps://www.securin.io/zero-day/cve-2026-42376-hardcoded-telnet-backdoor-in-d-link-dir-456u-a1-end-of-life-",
-      "source": "NVD",
-      "time": "2026-05-05 03:16:09"
-    },
-    {
-      "cve_id": "CVE-2026-42375",
-      "title": "高危漏洞: CVE-2026-42375 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "D-Link DIR-600L Hardware Revision A1 (End-of-Life) contains a hardcoded telnet backdoor. The device starts a telnet daemon at boot via /bin/telnetd.sh with the username \"Alphanetworks\" and the static password \"wrgn35_dlwbr_dir600l\" read from /etc/alpha_config/image_sign. The custom telnetd binary accepts a -u user:password flag, and the custom login binary uses strcmp() to validate credentials. Successful authentication grants an unauthenticated attacker on the local network a root shell with full administrative control. The device has reached End-of-Life (EOL) and will not receive patches.",
-      "refs": "https://www.securin.io/zero-day/cve-2026-42375-hardcoded-telnet-backdoor-in-d-link-dir-600l-a1-end-of-life-\nhttps://www.securin.io/zero-day/cve-2026-42375-hardcoded-telnet-backdoor-in-d-link-dir-600l-a1-end-of-life-",
-      "source": "NVD",
-      "time": "2026-05-05 03:16:02"
-    },
-    {
-      "cve_id": "CVE-2026-42374",
-      "title": "高危漏洞: CVE-2026-42374 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 01:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "D-Link DIR-600L Hardware Revision B1 (End-of-Life) contains a hardcoded telnet backdoor. The device starts a telnet daemon at boot via /bin/telnetd.sh with the username \"Alphanetworks\" and the static password \"wrgn61_dlwbr_dir600L\" read from /etc/alpha_config/image_sign. The custom telnetd binary accepts a -u user:password flag, and the custom login binary uses strcmp() to validate credentials. Successful authentication grants an unauthenticated attacker on the local network a root shell with full administrative control.  The device has reached End-of-Life (EOL) and will not receive patches.",
-      "refs": "https://www.securin.io/zero-day/cve-2026-42374-hardcoded-telnet-backdoor-in-d-link-dir-600l-b1-end-of-life-\nhttps://www.securin.io/zero-day/cve-2026-42374-hardcoded-telnet-backdoor-in-d-link-dir-600l-b1-end-of-life-",
-      "source": "NVD",
-      "time": "2026-05-05 03:15:58"
     }
   ]
 }
