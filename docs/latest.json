@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41938",
+      "title": "高危漏洞: CVE-2026-41938 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vvveb before version 1.0.8.2 contains an unrestricted file upload vulnerability in the media upload handler that allows authenticated users with media-upload permissions to bypass extension restrictions by uploading a .htaccess file to map .phtml extensions to the PHP handler. Attackers can upload a .phtml file containing arbitrary PHP code and trigger execution by sending an unauthenticated HTTP GET request to the uploaded file, resulting in remote code execution with web server privileges.",
+      "refs": "https://github.com/givanz/Vvveb/commit/54a9e846fb94192f1b31ae81d81d25c874662e6a\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.2\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-wwmv-4g9g-p48g",
+      "source": "NVD",
+      "time": "2026-05-07 05:51:59"
+    },
+    {
+      "cve_id": "CVE-2026-41936",
+      "title": "高危漏洞: CVE-2026-41936 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-07 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Vvveb before version 1.0.8.2 contains an XML external entity (XXE) injection vulnerability in the admin Tools/Import feature that allows authenticated site_admin users to read arbitrary files and modify database records. Attackers can exploit the XML parser configuration in system/import/xml.php to inject file:// or php://filter entity references that are resolved and persisted into the application database, enabling arbitrary file disclosure and administrator password hash overwriting for privilege escalation.",
+      "refs": "https://github.com/givanz/Vvveb/commit/86f7128a18edebe0ff47e3855558467eb0ef9106\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.2\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-rfxr-4xpm-wrp7",
+      "source": "NVD",
+      "time": "2026-05-07 05:51:54"
+    },
+    {
+      "cve_id": "CVE-2026-41934",
+      "title": "高危漏洞: CVE-2026-41934 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vvveb before version 1.0.8.2 contains an authenticated remote code execution vulnerability in the admin code editor that allows low-privilege authenticated users to execute arbitrary code by exploiting insufficient file extension restrictions. Attackers with editor, author, contributor, or site_admin roles can write a malicious .htaccess file to map arbitrary extensions to the PHP handler, then upload PHP code with that extension to achieve unauthenticated remote code execution when the file is accessed via HTTP.",
+      "refs": "https://github.com/givanz/Vvveb/commit/1196561276a3f49da5a714fef89ac9a6c6f9e33b\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.2\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-vfjj-gcvv-w248",
+      "source": "NVD",
+      "time": "2026-05-07 05:51:49"
+    },
+    {
+      "cve_id": "CVE-2026-41930",
+      "title": "高危漏洞: CVE-2026-41930 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-07 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vvveb before version 1.0.8.2 contains a hard-coded credentials vulnerability in its docker-compose-apache.yaml configuration that allows unauthenticated attackers to access the bundled phpMyAdmin container with pre-configured database credentials. Attackers can connect to the phpMyAdmin port to gain unrestricted read and write access to the entire Vvveb database, including administrator password hashes, customer personally identifiable information, and order data, enabling account takeover and data manipulation.",
+      "refs": "https://github.com/givanz/Vvveb/commit/f85ca7c2bc389bda3cc2eca87b2514581a628c32\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.2\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-g38h-mr9p-fjmf",
+      "source": "NVD",
+      "time": "2026-05-07 05:51:43"
+    },
+    {
+      "cve_id": "CVE-2024-30151",
+      "title": "高危漏洞: CVE-2024-30151 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-05-07 03:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "HCL BigFix Service Management (SX)  is affected by a Broken Access Control vulnerability leading to privilege escalation. This could allow unauthorized users to gain elevated privileges, bypassing intended access restrictions. This may result in exposure of sensitive data or unauthorized system modifications",
+      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0127782",
+      "source": "NVD",
+      "time": "2026-05-07 05:51:38"
+    },
+    {
       "cve_id": "CVE-2026-7875",
       "title": "高危漏洞: CVE-2026-7875 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-accepts-serializer/security/advisories/GHSA-qxhc-wx3p-2wmg",
       "source": "NVD",
       "time": "2026-05-05 09:55:16"
-    },
-    {
-      "cve_id": "CVE-2026-6321",
-      "title": "高危漏洞: CVE-2026-6321 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 04:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "fast-uri decoded percent-encoded path separators and dot segments before applying dot-segment removal in its normalize() and equal() functions. Encoded path data was treated like real slashes and parent-directory references, so distinct URIs could collapse onto the same normalized path. Applications that normalize or compare attacker-controlled URLs to enforce path-based policy can be bypassed, with a path that appears confined under an allowed prefix normalizing to a different location. Versions <= 3.1.0 are affected. Update to 3.1.1 or later.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fast-uri/security/advisories/GHSA-q3j6-qgpj-74h6",
-      "source": "NVD",
-      "time": "2026-05-05 09:55:10"
-    },
-    {
-      "cve_id": "CVE-2026-37459",
-      "title": "高危漏洞: CVE-2026-37459 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 02:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer underflow in FRRouting (FRR) stable/10.0 to stable/10.6 allows attackers to cause a Denial of Service (DoS) via supplying a crafted BGP UPDATE message.",
-      "refs": "https://github.com/FRRouting/frr/commit/693a2e02687cdc9d16501275e05136edea9650d9",
-      "source": "NVD",
-      "time": "2026-05-05 09:55:03"
-    },
-    {
-      "cve_id": "CVE-2026-29199",
-      "title": "高危漏洞: CVE-2026-29199 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-04 15:15:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "phpBB before 3.3.16 is vulnerable to Host Header Injection that can lead to password rest link poisoning. When force_server_vars is disabled, the servers hostname may be extracted from the HTTP Host header which is used to generate the password reset link URL. An attacker who can manipulate the Host header (e.g. through misconfigured host setup or missing header validation by the webserver) can cause password reset emails to contain a link pointing to an attacker-controlled domain, potentially leading to account takeover.",
-      "refs": "https://hackerone.com/reports/3543246",
-      "source": "NVD",
-      "time": "2026-05-05 09:54:55"
-    },
-    {
-      "cve_id": "CVE-2026-42154",
-      "title": "高危漏洞: CVE-2026-42154 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 03:16:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Prometheus is an open-source monitoring system and time series database. Prior to versions 3.5.3 and 3.11.3, the remote read endpoint (/api/v1/read) does not validate the declared decoded length in a snappy-compressed request body before allocating memory. An unauthenticated attacker can send a small payload that causes a huge heap allocation per request. Under concurrent load this can exhaust available memory and crash the Prometheus process. This issue has been patched in versions 3.5.3 and 3.11.3.",
-      "refs": "https://github.com/prometheus/prometheus/pull/18584\nhttps://github.com/prometheus/prometheus/pull/18585\nhttps://github.com/prometheus/prometheus/releases/tag/v3.11.3",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:55"
-    },
-    {
-      "cve_id": "CVE-2026-42151",
-      "title": "高危漏洞: CVE-2026-42151 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 03:16:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Prometheus is an open-source monitoring system and time series database. Prior to versions 3.5.3 and 3.11.3, the client_secret field in the Azure AD remote write OAuth configuration (storage/remote/azuread) was typed as string instead of Secret. Prometheus redacts fields of type Secret when serving the configuration via the /-/config HTTP API endpoint. Because the field was a plain string, the Azure OAuth client secret was exposed in plaintext to any user or process with access to that endpoint. This issue has been patched in versions 3.5.3 and 3.11.3.",
-      "refs": "https://github.com/prometheus/prometheus/pull/18587\nhttps://github.com/prometheus/prometheus/pull/18590\nhttps://github.com/prometheus/prometheus/releases/tag/v3.11.3",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:51"
     }
   ]
 }
