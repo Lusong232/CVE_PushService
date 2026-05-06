@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7875",
+      "title": "高危漏洞: CVE-2026-7875 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 01:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "NanoClaw contains a host/container filesystem boundary vulnerability in outbound attachment handling and outbox cleanup that allows a compromised or prompt-injected container to read files outside the intended outbox directory by supplying crafted messages_out.id and content.files values or creating symlinked outbox files. Attackers can exploit this vulnerability to trigger host-side reads of arbitrary files and in some cases achieve recursive deletion of paths outside the intended cleanup target.",
+      "refs": "https://github.com/qwibitai/nanoclaw/commit/7814e45570edf0024a1a5c2ba9fbc9cb3a49f7f7\nhttps://github.com/qwibitai/nanoclaw/pull/2001",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:40"
+    },
+    {
+      "cve_id": "CVE-2026-42503",
+      "title": "高危漏洞: CVE-2026-42503 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 01:16:23",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "gopls by default communicates via pipe. However, -port and -listen flags are supported as means of debugging.\nIf -listen is given a value without an explicit host (e.g. :8080), or -port is used, gopls will listen on 0.0.0.0. \nAs a result, users might inadvertently cause gopls to bind 0.0.0.0.\nThis can allow a malicious party on the same network to execute code arbitrarily via gopls.",
+      "refs": "https://go.dev/cl/774381\nhttps://go.dev/issue/79211",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:36"
+    },
+    {
+      "cve_id": "CVE-2026-23870",
+      "title": "高危漏洞: CVE-2026-23870 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-07 01:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A denial of service vulnerability could be triggered by sending specially crafted HTTP requests to server function endpoints, this could lead to server crashes, out-of-memory exceptions or excessive CPU usage; affecting the following packages: react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack (versions 19.0.0 through 19.0.5, 19.1.0 through 19.1.6, and 19.2.0 through 19.2.5).",
+      "refs": "https://github.com/facebook/react/security/advisories/GHSA-rv78-f8rc-xrxh",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:31"
+    },
+    {
+      "cve_id": "CVE-2026-20188",
+      "title": "高危漏洞: CVE-2026-20188 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-07 01:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A vulnerability in the connection-handling mechanism of Cisco Crosswork Network Controller (CNC) and Cisco Network Services Orchestrator (NSO) could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected system.\r\n\r\nThis vulnerability is due to an inadequate implementation of rate-limiting on incoming network connections. An attacker could exploit this vulnerability by sending a large number of connection requests to an affected system. A successful exploit could allow the attacker to exhaust available connection resources, causing Cisco CNC and Cisco NSO to become unresponsive and resulting in a DoS condition for legitimate users and dependent services. A manual reboot of the system is required to recover from this condition.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-dos-7Egqyc",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:27"
+    },
+    {
+      "cve_id": "CVE-2026-20185",
+      "title": "高危漏洞: CVE-2026-20185 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-07 01:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+      "description": "A vulnerability in the Simple Network Management Protocol (SNMP) subsystem of&nbsp;Cisco 350 Series Managed Switches (SG350) and Cisco 350X Series Stackable Managed Switches (SG350X)&nbsp;firmware could allow an authenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.&nbsp;\r\n\r\nThis vulnerability is due to improper error handling when parsing response data for a specific SNMP request. An attacker could exploit this vulnerability by sending a specific SNMP request to an affected device. A successful exploit could allow the attacker to cause the device to reload unexpectedly, resulting in a DoS condition.\r\nThis vulnerability affects SNMP versions 1, 2c, and 3. To exploit this vulnerability through SNMPv2c or earlier, the attacker must know a valid read-write or read-only SNMP community string for the affected system. To exploit this vulnerability through SNMPv3, the attacker must have valid SNMP user credentials for the affected system.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sg350-snmp-dos-GEFZr2Tj",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:22"
+    },
+    {
+      "cve_id": "CVE-2026-20167",
+      "title": "高危漏洞: CVE-2026-20167 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-07 01:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+      "description": "A vulnerability in the web-based management interface of Cisco IoT Field Network Director could allow an authenticated, remote attacker with low privileges to cause a DoS condition on a remotely managed router.\r\n\r\nThis vulnerability is due to improper error handling. An attacker could exploit this vulnerability by submitting crafted input to the web-based management interface. A successful exploit could allow the attacker to request unauthorized files from a remote router, causing the router to reload and resulting in a DoS condition.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iot-fnd-dos-n8N26Q4u",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:18"
+    },
+    {
+      "cve_id": "CVE-2026-20035",
+      "title": "高危漏洞: CVE-2026-20035 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-07 01:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "A vulnerability in the web UI of Cisco Unity Connection Web Inbox could allow an unauthenticated, remote attacker to conduct SSRF attacks through an affected device.\r\n\r\nThis vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to send arbitrary network requests that are sourced from the affected device.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-unity-rce-ssrf-hENhuASy",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:12"
+    },
+    {
+      "cve_id": "CVE-2026-20034",
+      "title": "高危漏洞: CVE-2026-20034 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 01:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability in the web-based management interface of Cisco Unity Connection could allow an authenticated, remote attacker to execute arbitrary code on an affected device.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to execute arbitrary code as root, possibly resulting in the complete compromise of a targeted device.&nbsp;To exploit this vulnerability, the attacker must have valid user credentials on the affected device.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-unity-rce-ssrf-hENhuASy",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:07"
+    },
+    {
+      "cve_id": "CVE-2026-6691",
+      "title": "高危漏洞: CVE-2026-6691 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-07 00:16:11",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The MongoDB C Driver's Cyrus SASL integration performs unsafe string copying during username canonicalization, enabling a heap buffer overflow before any authentication or network traffic. This may be triggered by passing untrusted input in the username of a MongoDB URI with authMechanism=GSSAPI.",
+      "refs": "https://jira.mongodb.org/browse/CDRIVER-6134",
+      "source": "NVD",
+      "time": "2026-05-07 03:22:03"
+    },
+    {
+      "cve_id": "CVE-2026-28780",
+      "title": "高危漏洞: CVE-2026-28780 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-06 06:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Heap-based Buffer Overflow vulnerability in mod_proxy_ajp of Apache HTTP Server.\nIf mod_proxy_ajp connects to a malicious AJP server this AJP server can send a malicious AJP message back to mod_proxy_ajp and cause it to write 4 attacker controlled bytes after the end of a heap based buffer.\n\nThis issue affects Apache HTTP Server: through 2.4.66.\n\nUsers are recommended to upgrade to version 2.4.67, which fixes the issue.",
+      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html\nhttp://www.openwall.com/lists/oss-security/2026/05/05/9",
+      "source": "NVD",
+      "time": "2026-05-07 03:21:56"
+    },
+    {
+      "cve_id": "CVE-2024-52911",
+      "title": "高危漏洞: CVE-2024-52911 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-06 04:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Bitcoin Core through 28.x has a security issue, the details of which are not disclosed. The earliest affected version is 0.14.",
+      "refs": "https://bitcoincore.org\nhttps://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/\nhttps://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures",
+      "source": "NVD",
+      "time": "2026-05-07 03:21:50"
+    },
+    {
       "cve_id": "CVE-2026-5081",
       "title": "高危漏洞: CVE-2026-5081 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/prometheus/prometheus/pull/18587\nhttps://github.com/prometheus/prometheus/pull/18590\nhttps://github.com/prometheus/prometheus/releases/tag/v3.11.3",
       "source": "NVD",
       "time": "2026-05-05 05:53:51"
-    },
-    {
-      "cve_id": "CVE-2026-25863",
-      "title": "高危漏洞: CVE-2026-25863 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 03:16:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Conditional Fields for Contact Form 7 WordPress plugin through version 2.6.7 contains an uncontrolled resource consumption vulnerability in the Wpcf7cfMailParser class where the hide_hidden_mail_fields_regex_callback() method reads an iteration count directly from user-supplied POST parameters without validation or upper bound enforcement. Unauthenticated attackers can supply an arbitrarily large integer value through the REST API endpoint to cause unbounded loop execution with multiple preg_replace() operations, exhausting server memory and crashing the PHP process.",
-      "refs": "https://wordpress.org/plugins/cf7-conditional-fields/#developers\nhttps://www.vulncheck.com/advisories/conditional-fields-for-contact-form-7-dos-via-uncontrolled-resource-consumption",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:44"
-    },
-    {
-      "cve_id": "CVE-2026-43616",
-      "title": "高危漏洞: CVE-2026-43616 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-05 02:16:32",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "Detect-It-Easy prior to 3.21 contains a path traversal vulnerability that allows attackers to write arbitrary files to the filesystem by crafting malicious archive entries with relative traversal sequences or absolute paths. Attackers can exploit insufficient path normalization during archive extraction to write files outside the intended extraction directory and achieve persistent code execution by overwriting user startup scripts.",
-      "refs": "https://github.com/horsicq/DIE-engine/commit/7fd300b926daf19707b2a36f0abe8b60a51308ee\nhttps://github.com/horsicq/DIE-engine/commit/cbbe1688e58ffd430d284bf65f336973f083db69\nhttps://github.com/horsicq/DIE-engine/releases/tag/3.21",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:40"
-    },
-    {
-      "cve_id": "CVE-2026-42796",
-      "title": "高危漏洞: CVE-2026-42796 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-05 02:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Arelle before 2.39.10 contains an unauthenticated remote code execution vulnerability in the /rest/configure REST endpoint that accepts a plugins query parameter and forwards it to the plugin manager without authentication or authorization. Attackers can supply a URL to a malicious Python file through the plugins parameter, causing the Arelle webserver to download and execute the attacker-controlled code within the Arelle process with its privileges.",
-      "refs": "https://github.com/Arelle/Arelle/pull/2320\nhttps://github.com/Arelle/Arelle/releases/tag/2.39.10\nhttps://www.vulncheck.com/advisories/arelle-unauthenticated-rce-via-rest-configure",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:36"
-    },
-    {
-      "cve_id": "CVE-2026-42088",
-      "title": "高危漏洞: CVE-2026-42088 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-05 02:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "OpenC3 COSMOS provides the functionality needed to send commands to and receive data from one or more embedded systems. Prior to version 7.0.0-rc3, the Script Runner widget allows users to execute Python and Ruby scripts directly from the openc3-COSMOS-script-runner-api container. Because all the docker containers share a network, users can execute specially crafted scripts to bypass the API permissions check and perform administrative actions, including reading and modifying data inside the Redis database, which can be used to read secrets and change COSMOS settings, as well as read and write to the buckets service, which holds configuration, log, and plugin files. These actions are normally only available from the Admin Console or with administrative privileges. Any user with permission to create and run scripts can connect to any service in the docker network. This issue has been patched in version 7.0.0-rc3.",
-      "refs": "https://github.com/OpenC3/cosmos/releases/tag/v7.0.0\nhttps://github.com/OpenC3/cosmos/releases/tag/v7.0.0-rc3\nhttps://github.com/OpenC3/cosmos/security/advisories/GHSA-2wvh-87g2-89hr",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:32"
-    },
-    {
-      "cve_id": "CVE-2026-42087",
-      "title": "高危漏洞: CVE-2026-42087 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-05 02:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "OpenC3 COSMOS provides the functionality needed to send commands to and receive data from one or more embedded systems. From version 6.7.0 to before version 7.0.0-rc3, a SQL injection vulnerability exists in the Time-Series Database (TSDB) component of COSMOS. The tsdb_lookup function in the cvt_model.rb file directly places user-supplied input into a SQL query without sanitizing the input. As a result, a user can break out of the initial SQL statement and execute arbitrary SQL commands, including deleting data. This issue has been patched in version 7.0.0-rc3.",
-      "refs": "https://github.com/OpenC3/cosmos/commit/9ba60c09c8836a37a2e4ea67ab35fe403e041415\nhttps://github.com/OpenC3/cosmos/releases/tag/v7.0.0-rc3\nhttps://github.com/OpenC3/cosmos/security/advisories/GHSA-v529-vhwc-wfc5",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:28"
-    },
-    {
-      "cve_id": "CVE-2026-42084",
-      "title": "高危漏洞: CVE-2026-42084 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-05 02:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "OpenC3 COSMOS provides the functionality needed to send commands to and receive data from one or more embedded systems. Prior to versions 6.10.5 and 7.0.0-rc3, the OpenC3 password change functionality allows a user to change their password without providing the old password, by accepting a valid session token instead. In assumed breach scenarios, this behaviour can be exploited by an attacker who has already obtained a valid session token, to gain persistence in hijacked account (including admin) and prevent legitimate users from accessing the account. This issue has been patched in versions 6.10.5 and 7.0.0-rc3.",
-      "refs": "https://github.com/OpenC3/cosmos/commit/2e623714e3426d5ae81b6f8239d4a2a6937ef776\nhttps://github.com/OpenC3/cosmos/releases/tag/v6.10.5\nhttps://github.com/OpenC3/cosmos/releases/tag/v7.0.0-rc3",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:24"
-    },
-    {
-      "cve_id": "CVE-2026-41571",
-      "title": "高危漏洞: CVE-2026-41571 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-05-05 02:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Note Mark is an open-source note-taking application. In version 0.19.2, IsPasswordMatch in backend/db/models.go falls back to a hard-coded bcrypt(\"null\") placeholder whenever a user has no stored password. OIDC-registered users are created with an empty password, so anyone who submits password: \"null\" to the internal login endpoint receives a valid session for that user. The bypass is unauthenticated and requires no user interaction. This issue has been patched in version 0.19.3.",
-      "refs": "https://github.com/enchant97/note-mark/releases/tag/v0.19.3\nhttps://github.com/enchant97/note-mark/security/advisories/GHSA-pxf8-6wqm-r6hh",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:19"
-    },
-    {
-      "cve_id": "CVE-2026-41471",
-      "title": "高危漏洞: CVE-2026-41471 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 02:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Easy PayPal Events & Tickets plugin for WordPress versions 1.3 and earlier contain an information disclosure vulnerability in the QR code scanning endpoint that allows unauthenticated attackers to enumerate and retrieve all customer order records. Attackers can iterate over sequential WordPress post IDs through the scan_qr.php endpoint to harvest the complete set of orders stored in the database without requiring authentication or prior knowledge of specific order identifiers. This plugin was officially closed as of 2026-03-18.",
-      "refs": "https://gist.github.com/4lec4st/9fd04b4bfadb3f7e388f61588f5f2564\nhttps://wordpress.org/plugins/easy-paypal-events-tickets\nhttps://www.vulncheck.com/advisories/easy-paypal-events-tickets-information-disclosure-via-qr-code-endpoint",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:12"
-    },
-    {
-      "cve_id": "CVE-2026-32834",
-      "title": "高危漏洞: CVE-2026-32834 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-05 02:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Easy PayPal Events & Tickets plugin for WordPress version 1.3 and earlier contain a hardcoded authentication bypass vulnerability in the QR code scanning functionality that allows unauthenticated remote attackers to bypass hash verification by supplying 'test' as the hash parameter. Attackers can access the vulnerable endpoint via the add_wpeevent_button_qr action to retrieve sensitive order details including PayPal transaction IDs, customer email addresses, purchase amounts, and ticket information for any order with a known or guessed post ID. This plugin was officially closed as of 2026-03-18.",
-      "refs": "https://gist.github.com/4lec4st/eb20f9934f8c23b4b241f74a8d884ce9\nhttps://wordpress.org/plugins/easy-paypal-events-tickets\nhttps://www.vulncheck.com/advisories/easy-paypal-events-tickets-authentication-bypass-via-qr-code-scanning",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:08"
-    },
-    {
-      "cve_id": "CVE-2026-29004",
-      "title": "高危漏洞: CVE-2026-29004 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-05 02:16:26",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "BusyBox before commit 42202bf contains a heap buffer overflow vulnerability in the DHCPv6 client (udhcpc6) DNS_SERVERS option handler in networking/udhcp/d6_dhcpc.c that allows network-adjacent attackers to trigger memory corruption by sending a crafted DHCPv6 response with a malformed D6_OPT_DNS_SERVERS option. Attackers can exploit incorrect heap buffer allocation calculations in the option_to_env() function to cause denial of service or achieve arbitrary code execution on embedded systems without heap hardening.",
-      "refs": "https://busybox.net/\nhttps://github.com/vda-linux/busybox_mirror/commit/42202bfb1e6ac51fa995beda8be4d7b654aeee2a\nhttps://github.com/vda-linux/busybox_mirror/commit/d368f3f7836d1c2484c8f839316e5c93e76d4409",
-      "source": "NVD",
-      "time": "2026-05-05 05:53:04"
-    },
-    {
-      "cve_id": "CVE-2026-0073",
-      "title": "高危漏洞: CVE-2026-0073 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-05 02:16:26",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In adbd_tls_verify_cert of auth.cpp, there is a possible bypass of wireless ADB mutual authentication due to a logic error in the code. This could lead to remote (proximal/adjacent) code execution as the shell user with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
-      "source": "NVD",
-      "time": "2026-05-05 05:52:59"
     }
   ]
 }
