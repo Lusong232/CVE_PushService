@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5081",
+      "title": "高危漏洞: CVE-2026-5081 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-06 21:16:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Apache::Session::Generate::ModUniqueId versions from 1.54 through 1.94 for Perl session ids are insecure.\n\nApache::Session::Generate::ModUniqueId (added in version 1.54) uses the value of the UNIQUE_ID environment variable for the session id. The UNIQUE_ID variable is set by the Apache mod_unique_id plugin, which generates unique ids for the request. The id is based on the IPv4 address, the process id, the epoch time, a 16-bit counter and a thread index, with no obfuscation.\n\nThe server IP is often available to the public, and if not available, can be guessed from previous session ids being issued. The process ids may also be guessed from previous session ids. The timestamp is easily guessed (and leaked in the HTTP Date response header).\n\nThe purpose of mod_unique_id is to assign a unique id to requests so that events can be correlated in different logs. The id is not designed, nor is it suitable for security purposes.",
+      "refs": "https://httpd.apache.org/docs/current/mod/mod_unique_id.html\nhttps://metacpan.org/pod/Apache::Session::Generate::Random",
+      "source": "NVD",
+      "time": "2026-05-07 00:23:25"
+    },
+    {
+      "cve_id": "CVE-2026-40562",
+      "title": "高危漏洞: CVE-2026-40562 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-06 21:16:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Gazelle versions through 0.49 for Perl allows HTTP Request Smuggling via Improper Header Precedence.\n\nGazelle incorrectly prioritizes \"Content-Length\" over \"Transfer-Encoding: chunked\" when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence.\n\nAn attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy.",
+      "refs": "https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.3\nhttps://security.metacpan.org/patches/G/Gazelle/0.49/CVE-2026-40562-r1.patch",
+      "source": "NVD",
+      "time": "2026-05-07 00:23:21"
+    },
+    {
+      "cve_id": "CVE-2025-31951",
+      "title": "高危漏洞: CVE-2025-31951 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-06 20:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "HCL BigFix RunBookAI is affected by a Unvalidated Command Input / Potential Command Smuggling vulnerability. A flaw in a component's input handling was identified that could permit unauthorized command execution.",
+      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0130444",
+      "source": "NVD",
+      "time": "2026-05-07 00:23:16"
+    },
+    {
+      "cve_id": "CVE-2026-43646",
+      "title": "高危漏洞: CVE-2026-43646 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-06 18:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Wicket.\n\nThis issue affects Apache Wicket: from 8.0.0 through 8.17.0, from 9.0.0 through 9.22.0, from 10.0.0 through 10.8.0.\n\nUsers are recommended to upgrade to version 10.9.0, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread/6zqcvjyz4lsqty1z2g5hg7pl5fqk88rs\nhttp://www.openwall.com/lists/oss-security/2026/05/06/3",
+      "source": "NVD",
+      "time": "2026-05-07 00:23:11"
+    },
+    {
+      "cve_id": "CVE-2026-1719",
+      "title": "高危漏洞: CVE-2026-1719 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-06 18:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Gravity Bookings Premium plugin for WordPress is vulnerable to SQL Injection in all versions up to, and including, 2.5.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://gravitybooking.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ce032abe-ee9d-4be1-ac97-5fa95d598e85?source=cve",
+      "source": "NVD",
+      "time": "2026-05-07 00:23:07"
+    },
+    {
+      "cve_id": "CVE-2026-23479",
+      "title": "高危漏洞: CVE-2026-23479 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-06 01:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Redis is an in-memory data structure store. In redis-server from 7.2.0 until 8.6.3, the unblock client flow does not handle an error return from `processCommandAndResetClient` when re-executing a blocked command. If a blocked client is evicted during this flow, an authenticated attacker can trigger a use-after-free that may lead to remote code execution. This has been patched in version 8.6.3.",
+      "refs": "https://github.com/redis/redis/releases/tag/8.6.3\nhttps://github.com/redis/redis/security/advisories/GHSA-93m2-935m-8rj3",
+      "source": "NVD",
+      "time": "2026-05-07 00:23:02"
+    },
+    {
       "cve_id": "CVE-2026-7841",
       "title": "高危漏洞: CVE-2026-7841 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1033,72 +1099,6 @@
       "refs": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
       "source": "NVD",
       "time": "2026-05-05 05:52:59"
-    },
-    {
-      "cve_id": "CVE-2025-70069",
-      "title": "高危漏洞: CVE-2025-70069 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-04 22:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An issue in Assimp v.6.0.2 allows a remote attacker to cause a denial of service via the FBXConverter.cpp and ConvertMeshMultiMaterial() method",
-      "refs": "http://assimp.com\nhttps://gist.github.com/GunP4ng/9080ae7f0470c889a59cc3bfca445223",
-      "source": "NVD",
-      "time": "2026-05-05 05:52:54"
-    },
-    {
-      "cve_id": "CVE-2026-24072",
-      "title": "高危漏洞: CVE-2026-24072 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-04 21:16:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An escalation of privilege bug in various modules in Apache HTTP 2.4.66 and earlier allows local .htaccess authors to read files with the privileges of the httpd user.\n\nUsers are recommended to upgrade to version 2.4.67, which fixes this issue.",
-      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html\nhttp://www.openwall.com/lists/oss-security/2026/05/04/18",
-      "source": "NVD",
-      "time": "2026-05-05 05:52:50"
-    },
-    {
-      "cve_id": "CVE-2026-42812",
-      "title": "高危漏洞: CVE-2026-42812 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-05 01:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "In Apache Iceberg, the table's metadata files are control files: they tell readers\nwhich data files belong to the table and which table version to read.\n\n\n\n`write.metadata.path` is an optional table property that tells Polaris\nwhere to\nwrite those metadata files. \nFor a table already registered in a\nPolaris-managed\ncatalog, changing only that property through an `ALTER TABLE`-style settings\nchange (not a row-level `INSERT`, `SELECT`, `UPDATE`, or `DELETE`) bypasses\nthe commit-time branch that is supposed to revalidate storage locations.\n\nThe full persisted / credential-vending variant requires the affected\ncatalog\nto have `polaris.config.allow.unstructured.table.location=true`, with\n`allowedLocations` broad enough to include the attacker-chosen target.\n\n\n`allowedLocations` is the admin-configured allowlist of storage paths that\nthe\ncatalog is allowed to use. Public project materials suggest that this flag\nis a\nreal supported compatibility / layout mode, not just a contrived lab-only\nprerequisite.\n\n\nIn that configuration, a user who can change table settings can cause Apache Polaris\nitself to write new table metadata to an attacker-chosen reachable storage\nlocation before the intended location-validation branch runs.\n\nIf the later concrete-path validation also accepts that location, Polaris\npersists the resulting metadata path into stored table state. Later\ntable-load\nand credential APIs can then return temporary cloud-storage credentials for\nthe\nsame location without revalidating it. In plain terms, Polaris can later\nhand\nout temporary storage access for the same attacker-chosen area.\n\nThat attacker-chosen area does not need to be limited to the poisoned\ntable's\nown files. If it is a broader storage prefix, another table's prefix, or,\ndepending on configuration or provider behavior, even a bucket/container\nroot,\nthe resulting disclosure or corruption scope can extend to any data and\nmetadata Polaris can reach there.\n\n\n\nThe practical consequences are therefore similar to the staged-create\ncredential-vending issue already discussed: data and metadata reachable in\nthat\nstorage scope can be exposed and, if write-capable credentials are later\nissued, modified, corrupted, or removed. Even before that later credential\nstep, Polaris itself performs the metadata write to the unchecked location.\n\nSo the core issue is not only later credential vending. \n\nThe primary defect\nis\nthat Polaris skips its intended location checks before performing a\nsecurity-\nsensitive metadata write when only `write.metadata.path` changes.\n\n\n\nWhen `polaris.config.allow.unstructured.table.location=false`, current code\nreview suggests the later `updateTableLike(...)` validation usually rejects\nout-of-tree metadata locations before the unsafe path is persisted. That may\nreduce the persisted / credential-vending variant, but it does not prevent\nthe\nunderlying defect: Polaris still skips the intended pre-write location check\nwhen only `write.metadata.path` changes.",
-      "refs": "https://lists.apache.org/thread/wxd2wj3p0smvrk84msv317wg5tp3jtw9\nhttp://www.openwall.com/lists/oss-security/2026/05/02/13",
-      "source": "NVD",
-      "time": "2026-05-05 03:16:38"
-    },
-    {
-      "cve_id": "CVE-2026-42811",
-      "title": "高危漏洞: CVE-2026-42811 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-05 01:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "In plain terms, Apache Polaris is supposed to issue short-lived GCS credentials\nthat\nonly work for one table's files, but a crafted namespace or table name can\ncause those credentials to work across the configured bucket instead.\n\n\nApache Polaris builds Google Cloud Storage downscoped credentials by creating a\nCredential Access Boundary (CAB) with CEL conditions that are intended to\nrestrict access to the requested table's storage path.\n\n\n\nThe relevant CEL string is built from the bucket name and the table path.\nThat\ntable path is derived from namespace and table identifiers. In current code,\nthat path appears to be inserted into the CEL expression without escaping.\n\n\n\nAs a result, a namespace or table identifier containing a single quote and\nother URI-safe CEL fragments can break out of the intended quoted string and\nchange the meaning of the CEL condition.\n\n\n\nIn private testing against Polaris 1.4.0 on real Google Cloud Storage, it was confirmed that Polaris accepted a crafted identifier and returned delegated\nGCS\ncredentials whose CEL path restriction had effectively collapsed.\n\n\nThose delegated credentials could then:\n\n\n- list another table's object prefix;\n\n- read another table's metadata control file (Iceberg metadata JSON);\n\n- create and delete an object under another table's object prefix;\n\n- and also list, read, create, and delete objects under an unrelated\nexternal\nprefix in the same bucket that was not part of any table path.\n\n\n\nThat last point is important. The issue is not limited to \"another table\".\nIn\nthe confirmed setup, once Apache Polaris returned credentials for the crafted\ntable,\nthe path restriction inside the configured bucket was effectively gone.\n\nThe practical effect is that temporary credentials for one crafted table\ncan be\nbroader than the table Polaris was asked to authorize, and can become\neffectively bucket-wide within the configured bucket.\n\n\n\nThe current GCS testing used a Polaris principal with broad catalog\nprivileges for setup. A separate least-privilege Polaris RBAC variant\nhas not yet been tested on GCS. However, the storage-credential\nbroadening behavior itself has been confirmed on GCS.",
-      "refs": "https://lists.apache.org/thread/hovn5hmkj9wj7v9cd8sn67svg03klgvg\nhttp://www.openwall.com/lists/oss-security/2026/05/02/12",
-      "source": "NVD",
-      "time": "2026-05-05 03:16:31"
-    },
-    {
-      "cve_id": "CVE-2026-42810",
-      "title": "高危漏洞: CVE-2026-42810 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-05 01:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Apache Polaris accepts literal `*` characters in namespace and table names. When it\nlater builds temporary S3 access policies for delegated table access, those\nsame characters appear to be reused unescaped in S3 IAM resource patterns\nand\n`s3:prefix` conditions.\n\n\n\nIn S3 IAM policy matching, `*` is treated as a wildcard rather than as\nordinary text. That means temporary credentials issued for one crafted table\ncan match the storage path of a different table.\n\n\n\nIn private testing against Polaris 1.4.0 using Polaris' AWS S3 temporary-\ncredential path on both MinIO and real AWS S3, credentials returned for\ncrafted tables such as `f*.t1`, `f*.*`, `*.*`, and `foo.*` could reach other\ntables' S3 locations.\n\n\nThe confirmed behavior includes:\n\n\n- reading another table's metadata control file ([Iceberg metadata JSON]);\n\n- listing another table's exact S3 table prefix ([table prefix]);\n\n- and, when write delegation was returned for the crafted table, creating\nand\ndeleting an object under another table's exact S3 table prefix.\n\n\n\nA control case using ordinary different names did not allow the same\ncross-table access.\n\n\n\nA least-privilege AWS S3 variant was also confirmed in which the attacker\nprincipal had no Polaris permissions on the victim table and only the\nminimal permissions required to create and use a crafted wildcard table\n(namespace-scoped `TABLE_CREATE` and `TABLE_WRITE_DATA` on `*`). In that\nsetup, direct Polaris access to `foo.t1` remained forbidden, but the\nattacker\ncould still create and load `*.*`, receive delegated S3 credentials, and use\nthose credentials to list, read, create, and delete objects under `foo.t1`.\n\n\n\nIn Iceberg, the metadata JSON file is a control file: it tells readers which\ndata files belong to the table, which snapshots exist, and which table\nversion\nto read. So unauthorized access to it is already a meaningful\nconfidentiality\nproblem. The confirmed write-capable variant means the issue is not limited\nto\ndisclosure.",
-      "refs": "https://lists.apache.org/thread/gg3qq9sqg4hdjmprqy46p40xmln61dm9",
-      "source": "NVD",
-      "time": "2026-05-05 03:16:23"
-    },
-    {
-      "cve_id": "CVE-2026-42809",
-      "title": "高危漏洞: CVE-2026-42809 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-05 01:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Apache Polaris can issue broad temporary (\"vended\") storage credentials during\nstaged\ntable creation before the effective table location has been validated or\ndurably reserved. \nThose temporary credentials are meant to limit the scope\nof\naccessible table data and metadata, but this scope limitation becomes\nattacker-\ndirected because the attacker can choose a reachable target location.\n\n\n\nIn the confirmed variant, if the caller supplies a custom `location` during\nstage create and requests credential vending, Apache Polaris uses that location to\nconstruct delegated storage credentials immediately. The stage-create path\nitself neither runs the normal location validation nor the overlap checks\nbefore those credentials are issued.\n\n\n\nClosely related to that, the staged-create flow also accepts\n`write.data.path` / `write.metadata.path` in the request properties and\nfeeds\nthose location overrides into the same effective table location set used for\ncredential vending. Those fields are secondary to the main custom-`location`\nexploit, but they are still attacker-influenced location inputs that should\nbe\nvalidated before any credentials are issued.",
-      "refs": "https://lists.apache.org/thread/8tfsr8y7pgq6rdcvjx95hkcr47td671r\nhttp://www.openwall.com/lists/oss-security/2026/05/02/10",
-      "source": "NVD",
-      "time": "2026-05-05 03:16:16"
     }
   ]
 }
