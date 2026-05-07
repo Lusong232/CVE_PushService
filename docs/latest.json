@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41670",
+      "title": "高危漏洞: CVE-2026-41670 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-07 12:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "Admidio is an open-source user management solution. Prior to version 5.0.9, the SAML IdP implementation in Admidio's SSO module uses the AssertionConsumerServiceURL value directly from incoming SAML AuthnRequest messages as the destination for the SAML response, without validating it against the registered ACS URL (smc_acs_url) stored in the database for the corresponding service provider client. An attacker who knows the Entity ID of a registered SP client can craft a SAML AuthnRequest with an arbitrary AssertionConsumerServiceURL, causing the IdP to send the signed SAML response -- containing user identity attributes (login name, email, roles, profile fields) -- to an attacker-controlled URL. This issue has been patched in version 5.0.9.",
+      "refs": "https://github.com/Admidio/admidio/releases/tag/v5.0.9\nhttps://github.com/Admidio/admidio/security/advisories/GHSA-p9w9-87c8-m235",
+      "source": "NVD",
+      "time": "2026-05-07 13:53:01"
+    },
+    {
+      "cve_id": "CVE-2026-41669",
+      "title": "高危漏洞: CVE-2026-41669 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-07 12:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "Admidio is an open-source user management solution. Prior to version 5.0.9, the Admidio SAML Identity Provider implementation discards the return value of its validateSignature() method at both call sites (handleSSORequest() line 418 and handleSLORequest() line 613). The method returns error strings on failure rather than throwing exceptions, but the developer believed it would throw (per comments on lines 416 and 611). This means the smc_require_auth_signed configuration option is completely ineffective — unsigned or invalidly-signed SAML AuthnRequests and LogoutRequests are processed identically to properly signed ones. This issue has been patched in version 5.0.9.",
+      "refs": "https://github.com/Admidio/admidio/releases/tag/v5.0.9\nhttps://github.com/Admidio/admidio/security/advisories/GHSA-25cw-98hg-g3cg",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:57"
+    },
+    {
+      "cve_id": "CVE-2026-41660",
+      "title": "高危漏洞: CVE-2026-41660 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-07 12:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Admidio is an open-source user management solution. Prior to version 5.0.9, a logic error in Admidio's two-factor authentication reset inverts the authorization check. Non-admin users cannot remove their own TOTP configuration, but they can remove other users' TOTP, including administrators. A group leader with profile edit rights on an admin account can strip that admin's 2FA. This issue has been patched in version 5.0.9.",
+      "refs": "https://github.com/Admidio/admidio/releases/tag/v5.0.9\nhttps://github.com/Admidio/admidio/security/advisories/GHSA-rh3w-4ccx-prf9",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:52"
+    },
+    {
+      "cve_id": "CVE-2026-41640",
+      "title": "高危漏洞: CVE-2026-41640 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-07 12:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to version 2.0.39, the queryParentSQL() function in the core database package constructs a recursive CTE query by joining nodeIds with string concatenation instead of using parameterized queries. The nodeIds array contains primary key values read from database rows. An attacker who can create a record with a malicious string primary key can inject arbitrary SQL when any subsequent request triggers recursive eager loading on that collection. This issue has been patched in version 2.0.39.",
+      "refs": "https://github.com/nocobase/nocobase/commit/202e2b8efe44ba90adbf1087f6f70881ff947604\nhttps://github.com/nocobase/nocobase/pull/9133\nhttps://github.com/nocobase/nocobase/releases/tag/v2.0.39",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:45"
+    },
+    {
+      "cve_id": "CVE-2026-41201",
+      "title": "高危漏洞: CVE-2026-41201 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-07 12:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. In version 0.31.4.0, an attacker can achieve Full Account Takeover & Privilege Escalation via Stored DOM XSS in backup module filename field manipulated via a sql file that tampers with the file name field to contain hidden XSS payload. This issue has been patched in version 0.31.5.0.",
+      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.5.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-qxpq-82f3-xj47",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:40"
+    },
+    {
+      "cve_id": "CVE-2026-41142",
+      "title": "高危漏洞: CVE-2026-41142 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 12:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "OpenEXR provides the specification and reference implementation of the EXR file format, an image storage format for the motion picture industry. From versions 3.0.0 to before 3.2.9, 3.3.0 to before 3.3.11, and 3.4.0 to before 3.4.11, there is an integer overflow in ImageChannel::resize that leads to heap OOB write via OpenEXRUtil public API. This issue has been patched in versions 3.2.9, 3.3.11, and 3.4.11.",
+      "refs": "https://github.com/AcademySoftwareFoundation/openexr/commit/0592ee539f33c122c90f09238579b902d838afb4\nhttps://github.com/AcademySoftwareFoundation/openexr/pull/2367\nhttps://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-m25w-72cj-q6mg",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:35"
+    },
+    {
+      "cve_id": "CVE-2026-41002",
+      "title": "高危漏洞: CVE-2026-41002 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-07 12:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "The base directory (`spring.cloud.config.server.git.basedir`) used by the Spring Cloud Config Server to clone Git repositories to is susceptible to time-of-check-time-of-use (TOCTOU) attacks.\nSpring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.",
+      "refs": "https://spring.io/security/cve-2026-41002",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:31"
+    },
+    {
+      "cve_id": "CVE-2026-40982",
+      "title": "高危漏洞: CVE-2026-40982 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-07 12:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Spring Cloud Config allows applications to serve arbitrary text and binary files through the spring-cloud-config-server module. A malicious user, or attacker, can send a request using a specially crafted URL that can lead to a directory traversal attack.\nSpring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.",
+      "refs": "https://spring.io/security/cve-2026-40982",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:24"
+    },
+    {
+      "cve_id": "CVE-2026-40981",
+      "title": "高危漏洞: CVE-2026-40981 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-07 12:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "When using Google Secrets Manager as a backend for the Spring Cloud Config server a client can craft a request to the config server potentially exposing secrets from unintended GCP projects.\nSpring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.",
+      "refs": "https://spring.io/security/cve-2026-40981",
+      "source": "NVD",
+      "time": "2026-05-07 13:52:20"
+    },
+    {
       "cve_id": "CVE-2026-40281",
       "title": "高危漏洞: CVE-2026-40281 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1000,105 +1099,6 @@
       "refs": "https://jira.mongodb.org/browse/CDRIVER-6134",
       "source": "NVD",
       "time": "2026-05-07 03:22:03"
-    },
-    {
-      "cve_id": "CVE-2026-28780",
-      "title": "高危漏洞: CVE-2026-28780 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-06 06:16:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Heap-based Buffer Overflow vulnerability in mod_proxy_ajp of Apache HTTP Server.\nIf mod_proxy_ajp connects to a malicious AJP server this AJP server can send a malicious AJP message back to mod_proxy_ajp and cause it to write 4 attacker controlled bytes after the end of a heap based buffer.\n\nThis issue affects Apache HTTP Server: through 2.4.66.\n\nUsers are recommended to upgrade to version 2.4.67, which fixes the issue.",
-      "refs": "https://httpd.apache.org/security/vulnerabilities_24.html\nhttp://www.openwall.com/lists/oss-security/2026/05/05/9",
-      "source": "NVD",
-      "time": "2026-05-07 03:21:56"
-    },
-    {
-      "cve_id": "CVE-2024-52911",
-      "title": "高危漏洞: CVE-2024-52911 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-06 04:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Bitcoin Core through 28.x has a security issue, the details of which are not disclosed. The earliest affected version is 0.14.",
-      "refs": "https://bitcoincore.org\nhttps://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/\nhttps://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures",
-      "source": "NVD",
-      "time": "2026-05-07 03:21:50"
-    },
-    {
-      "cve_id": "CVE-2026-5081",
-      "title": "高危漏洞: CVE-2026-5081 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-06 21:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Apache::Session::Generate::ModUniqueId versions from 1.54 through 1.94 for Perl session ids are insecure.\n\nApache::Session::Generate::ModUniqueId (added in version 1.54) uses the value of the UNIQUE_ID environment variable for the session id. The UNIQUE_ID variable is set by the Apache mod_unique_id plugin, which generates unique ids for the request. The id is based on the IPv4 address, the process id, the epoch time, a 16-bit counter and a thread index, with no obfuscation.\n\nThe server IP is often available to the public, and if not available, can be guessed from previous session ids being issued. The process ids may also be guessed from previous session ids. The timestamp is easily guessed (and leaked in the HTTP Date response header).\n\nThe purpose of mod_unique_id is to assign a unique id to requests so that events can be correlated in different logs. The id is not designed, nor is it suitable for security purposes.",
-      "refs": "https://httpd.apache.org/docs/current/mod/mod_unique_id.html\nhttps://metacpan.org/pod/Apache::Session::Generate::Random",
-      "source": "NVD",
-      "time": "2026-05-07 00:23:25"
-    },
-    {
-      "cve_id": "CVE-2026-40562",
-      "title": "高危漏洞: CVE-2026-40562 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-06 21:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Gazelle versions through 0.49 for Perl allows HTTP Request Smuggling via Improper Header Precedence.\n\nGazelle incorrectly prioritizes \"Content-Length\" over \"Transfer-Encoding: chunked\" when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence.\n\nAn attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy.",
-      "refs": "https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.3\nhttps://security.metacpan.org/patches/G/Gazelle/0.49/CVE-2026-40562-r1.patch",
-      "source": "NVD",
-      "time": "2026-05-07 00:23:21"
-    },
-    {
-      "cve_id": "CVE-2025-31951",
-      "title": "高危漏洞: CVE-2025-31951 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-06 20:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "HCL BigFix RunBookAI is affected by a Unvalidated Command Input / Potential Command Smuggling vulnerability. A flaw in a component's input handling was identified that could permit unauthorized command execution.",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0130444",
-      "source": "NVD",
-      "time": "2026-05-07 00:23:16"
-    },
-    {
-      "cve_id": "CVE-2026-43646",
-      "title": "高危漏洞: CVE-2026-43646 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-06 18:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Wicket.\n\nThis issue affects Apache Wicket: from 8.0.0 through 8.17.0, from 9.0.0 through 9.22.0, from 10.0.0 through 10.8.0.\n\nUsers are recommended to upgrade to version 10.9.0, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/6zqcvjyz4lsqty1z2g5hg7pl5fqk88rs\nhttp://www.openwall.com/lists/oss-security/2026/05/06/3",
-      "source": "NVD",
-      "time": "2026-05-07 00:23:11"
-    },
-    {
-      "cve_id": "CVE-2026-1719",
-      "title": "高危漏洞: CVE-2026-1719 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-06 18:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Gravity Bookings Premium plugin for WordPress is vulnerable to SQL Injection in all versions up to, and including, 2.5.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://gravitybooking.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ce032abe-ee9d-4be1-ac97-5fa95d598e85?source=cve",
-      "source": "NVD",
-      "time": "2026-05-07 00:23:07"
-    },
-    {
-      "cve_id": "CVE-2026-23479",
-      "title": "高危漏洞: CVE-2026-23479 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-06 01:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Redis is an in-memory data structure store. In redis-server from 7.2.0 until 8.6.3, the unblock client flow does not handle an error return from `processCommandAndResetClient` when re-executing a blocked command. If a blocked client is evicted during this flow, an authenticated attacker can trigger a use-after-free that may lead to remote code execution. This has been patched in version 8.6.3.",
-      "refs": "https://github.com/redis/redis/releases/tag/8.6.3\nhttps://github.com/redis/redis/security/advisories/GHSA-93m2-935m-8rj3",
-      "source": "NVD",
-      "time": "2026-05-07 00:23:02"
-    },
-    {
-      "cve_id": "CVE-2026-7841",
-      "title": "高危漏洞: CVE-2026-7841 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-06 16:16:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A remote code execution vulnerability\nexists in Notification Settings on GeoVision GV-ASWeb 6.2.0. An authenticated\nuser with System Setting permissions can execute arbitrary commands on the\nserver by sending a crafted HTTP POST request to the ASWebCommon.srf backend\nendpoint to bypass the frontend restrictions.",
-      "refs": "https://www.geovision.com.tw/cyber_security.php",
-      "source": "NVD",
-      "time": "2026-05-06 18:56:38"
     }
   ]
 }
