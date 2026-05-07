@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8083",
+      "title": "高危漏洞: CVE-2026-8083 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-08 03:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Pharmacy Sales and Inventory System 1.0. This affects an unknown part of the file /ajax.php?action=save_user. The manipulation of the argument ID results in sql injection. The attack can be executed remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/zhi-cyber/cve-2/issues/1\nhttps://vuldb.com/submit/807848\nhttps://vuldb.com/vuln/361837",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:33"
+    },
+    {
+      "cve_id": "CVE-2026-44742",
+      "title": "高危漏洞: CVE-2026-44742 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-08 03:16:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Postorius through 1.3.13 does not escape HTML in the message subject when rendering it in the Held messages pop-up, as exploited in the wild in May 2026.",
+      "refs": "https://gitlab.com/mailman/postorius/-/commit/c4706abd05ba6bcf472fc674b160d3a9d6a4868b\nhttps://gitlab.com/mailman/postorius/-/issues/620\nhttps://gitlab.com/mailman/postorius/-/merge_requests/972",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:29"
+    },
+    {
+      "cve_id": "CVE-2026-44244",
+      "title": "高危漏洞: CVE-2026-44244 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-08 03:16:02",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GitPython is a python library used to interact with Git repositories. Prior to version 3.1.49, GitConfigParser.set_value() passes values to Python's configparser without validating for newlines. GitPython's own _write() converts embedded newlines into indented continuation lines (e.g. \\n becomes \\n\\t), but Git still accepts an indented [core] stanza as a section header — so the injected core.hooksPath becomes effective configuration. Any Git operation that invokes hooks (commit, merge, checkout) will then execute scripts from the attacker-controlled path. This issue has been patched in version 3.1.49.",
+      "refs": "https://github.com/gitpython-developers/GitPython/releases/tag/3.1.49\nhttps://github.com/gitpython-developers/GitPython/security/advisories/GHSA-v87r-6q3f-2j67",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:24"
+    },
+    {
+      "cve_id": "CVE-2026-42284",
+      "title": "高危漏洞: CVE-2026-42284 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-08 03:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GitPython is a python library used to interact with Git repositories. Prior to version 3.1.47, _clone() validates multi_options as the original list, then executes shlex.split(\" \".join(multi_options)). A string like \"--branch main --config core.hooksPath=/x\" passes validation (starts with --branch), but after split becomes [\"--branch\", \"main\", \"--config\", \"core.hooksPath=/x\"]. Git applies the config and executes attacker hooks during clone. This issue has been patched in version 3.1.47.",
+      "refs": "https://github.com/gitpython-developers/GitPython/releases/tag/3.1.47\nhttps://github.com/gitpython-developers/GitPython/security/advisories/GHSA-x2qx-6953-8485",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:20"
+    },
+    {
+      "cve_id": "CVE-2026-42215",
+      "title": "高危漏洞: CVE-2026-42215 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-08 03:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GitPython is a python library used to interact with Git repositories. From version 3.1.30 to before version 3.1.47, GitPython blocks dangerous Git options such as --upload-pack and --receive-pack by default, but the equivalent Python kwargs upload_pack and receive_pack bypass that check. If an application passes attacker-controlled kwargs into Repo.clone_from(), Remote.fetch(), Remote.pull(), or Remote.push(), this leads to arbitrary command execution even when allow_unsafe_options is left at its default value of False. This issue has been patched in version 3.1.47.",
+      "refs": "https://github.com/gitpython-developers/GitPython/releases/tag/3.1.47\nhttps://github.com/gitpython-developers/GitPython/security/advisories/GHSA-rpm5-65cw-6hj4",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:16"
+    },
+    {
+      "cve_id": "CVE-2026-42214",
+      "title": "高危漏洞: CVE-2026-42214 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-08 03:16:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Notepad Next is a cross-platform, reimplementation of Notepad++. Prior to version 0.14, NotepadNext's detectLanguageFromExtension() function interpolates a file's extension directly into a Lua script without sanitization. An attacker can craft a filename whose extension contains Lua code, which executes automatically when the victim opens the file in NotepadNext. Because luaL_openlibs() is called unconditionally, the full os, io, and package libraries are available to the injected code, enabling arbitrary command execution. This issue has been patched in version 0.14.",
+      "refs": "https://github.com/dail8859/NotepadNext/commit/f3ca1b10aca52f05fd7f4f5ebf9b566d6cd95ccc\nhttps://github.com/dail8859/NotepadNext/releases/tag/v0.14\nhttps://github.com/dail8859/NotepadNext/security/advisories/GHSA-m5fq-c9x5-w54g",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:10"
+    },
+    {
+      "cve_id": "CVE-2026-41906",
+      "title": "高危漏洞: CVE-2026-41906 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-08 03:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+      "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.214, the Change Customer modal correctly hides out-of-scope customers through the mailbox-filtered search endpoint, but the backend conversation_change_customer action accepts any supplied customer_email. A low-privileged agent can forge a request and bind a visible conversation to a hidden customer in another mailbox. This issue has been patched in version 1.8.214.",
+      "refs": "https://github.com/freescout-help-desk/freescout/releases/tag/1.8.214\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-p6hg-2cwg-rrx9",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:06"
+    },
+    {
+      "cve_id": "CVE-2026-41905",
+      "title": "高危漏洞: CVE-2026-41905 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-08 03:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.217, Helper::sanitizeRemoteUrl() in app/Misc/Helper.php follows HTTP redirects via curlGetLastRedirectedUrl() but then re-validates the original URL instead of the final redirect destination. An attacker who can supply any URL that passes the initial host check can redirect FreeScout to internal HTTP services (cloud metadata, internal APIs, RFC1918 ranges) that would normally be blocked. This issue has been patched in version 1.8.217.",
+      "refs": "https://github.com/freescout-help-desk/freescout/releases/tag/1.8.217\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-22wf-848c-c856",
+      "source": "NVD",
+      "time": "2026-05-08 05:46:02"
+    },
+    {
+      "cve_id": "CVE-2026-41904",
+      "title": "高危漏洞: CVE-2026-41904 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-08 03:16:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.217, a user with updateAutoReply permission can store an XSS payload in the mailbox auto-reply message. The payload is rendered unescaped in the auto-reply email sent to every customer who contacts the mailbox. Email clients do not enforce CSP, so the payload executes in the customer's webmail / mail-client context. This issue has been patched in version 1.8.217.",
+      "refs": "https://github.com/freescout-help-desk/freescout/releases/tag/1.8.217\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-q3fh-rj9h-jfrc",
+      "source": "NVD",
+      "time": "2026-05-08 05:45:57"
+    },
+    {
+      "cve_id": "CVE-2026-41902",
+      "title": "高危漏洞: CVE-2026-41902 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-08 03:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.217, the /user-setup/{hash} endpoint accepts a 60-character random invite_hash to set a new user's password. The endpoint performs no expiration check — the hash remains valid indefinitely until consumed. Combined with realistic hash-leakage scenarios (forwarded invite emails, HTTP referrer to external CDNs on the setup page, server-side log exposure, abandoned invite emails in shared inboxes), this enables unauthenticated permanent account takeover months or years after invite issuance. If the leaked invite was sent to an admin, the takeover yields admin access. This issue has been patched in version 1.8.217.",
+      "refs": "https://github.com/freescout-help-desk/freescout/releases/tag/1.8.217\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-hqff-cwx7-3jpm",
+      "source": "NVD",
+      "time": "2026-05-08 05:45:50"
+    },
+    {
+      "cve_id": "CVE-2026-37709",
+      "title": "高危漏洞: CVE-2026-37709 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-08 02:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Insecure Permissions vulnerability in grokability snipe-it v.8.4.0 and before and fixed after 2026-03-10 commit 676a9958 allows a remote attacker to execute arbitrary code via the app/Http/Controllers/Api/UploadedFilesController.php component",
+      "refs": "https://github.com/grokability/snipe-it/commit/676a9958895a77de340565e7a0b17ae744664904\nhttps://github.com/grokability/snipe-it/security/advisories/GHSA-xg82-2hrv-hf64",
+      "source": "NVD",
+      "time": "2026-05-08 05:45:45"
+    },
+    {
       "cve_id": "CVE-2026-7415",
       "title": "高危漏洞: CVE-2026-7415 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -978,127 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496607380",
       "source": "NVD",
       "time": "2026-05-07 10:01:10"
-    },
-    {
-      "cve_id": "CVE-2026-7956",
-      "title": "高危漏洞: CVE-2026-7956 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-07 03:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Navigation in Google Chrome prior to 148.0.7778.96 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496463315",
-      "source": "NVD",
-      "time": "2026-05-07 10:01:05"
-    },
-    {
-      "cve_id": "CVE-2026-7951",
-      "title": "高危漏洞: CVE-2026-7951 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out of bounds write in WebRTC in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496266456",
-      "source": "NVD",
-      "time": "2026-05-07 10:01:01"
-    },
-    {
-      "cve_id": "CVE-2026-7948",
-      "title": "高危漏洞: CVE-2026-7948 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-07 03:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Race in Chromoting in Google Chrome on Windows prior to 148.0.7778.96 allowed a local attacker to perform privilege escalation via a malicious file. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496193452",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:57"
-    },
-    {
-      "cve_id": "CVE-2026-7940",
-      "title": "高危漏洞: CVE-2026-7940 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in V8 in Google Chrome prior to 148.0.7778.96 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code inside a sandbox via a crafted Chrome Extension. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/493631402",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:49"
-    },
-    {
-      "cve_id": "CVE-2026-7938",
-      "title": "高危漏洞: CVE-2026-7938 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in CSS in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/492735384",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:44"
-    },
-    {
-      "cve_id": "CVE-2026-7930",
-      "title": "高危漏洞: CVE-2026-7930 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Cookies in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to perform privilege escalation via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/434825208",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:40"
-    },
-    {
-      "cve_id": "CVE-2026-7929",
-      "title": "高危漏洞: CVE-2026-7929 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-07 03:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in MediaRecording in Google Chrome prior to 148.0.7778.96 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504660052",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:35"
-    },
-    {
-      "cve_id": "CVE-2026-7928",
-      "title": "高危漏洞: CVE-2026-7928 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebRTC in Google Chrome on Windows prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504612429",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:30"
-    },
-    {
-      "cve_id": "CVE-2026-7927",
-      "title": "高危漏洞: CVE-2026-7927 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type Confusion in Runtime in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502830119",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:25"
-    },
-    {
-      "cve_id": "CVE-2026-7926",
-      "title": "高危漏洞: CVE-2026-7926 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 03:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in PresentationAPI in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502249087",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:20"
-    },
-    {
-      "cve_id": "CVE-2026-7925",
-      "title": "高危漏洞: CVE-2026-7925 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-07 03:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Chromoting in Google Chrome on Windows prior to 148.0.7778.96 allowed a local attacker to perform OS-level privilege escalation via a malicious file. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/501833981",
-      "source": "NVD",
-      "time": "2026-05-07 10:00:12"
     }
   ]
 }
