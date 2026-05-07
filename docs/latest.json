@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2025-68060",
+      "title": "高危漏洞: CVE-2025-68060 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-07 17:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WPMart Team Member allows Blind SQL Injection.\n\nThis issue affects Team Member: from n/a through 8.5.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/team-showcase-supreme/vulnerability/wordpress-team-member-plugin-8-5-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-07 19:01:22"
+    },
+    {
+      "cve_id": "CVE-2025-1978",
+      "title": "高危漏洞: CVE-2025-1978 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-05-07 17:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "Remote Code Execution Vulnerability in Hitachi Storage Navigator and the maintenance console in Hitachi Virtual Storage Platform G130, G150, G350, G370, G700, G900, F350, F370, F700, F900, Hitachi Virtual Storage Platform E390, E590, E790, E990, E1090, E390H, E590H, E790H, E1090H, Hitachi Virtual Storage Platform One Block 23, One Block 24, One Block 26, One Block 28.\n\nThis issue affects Virtual Storage Platform G130, G150, G350, G370, G700, G900, F350, F370, F700, F900, Hitachi Virtual Storage Platform E390, E590, E790, E990, E1090, E390H, E590H, E790H, E1090H, Hitachi Virtual Storage Platform One Block 23, One Block 24, One Block 26, One Block 28  : before DKCMAIN Ver. 88-08-16-xx/00, SVP Ver. 88-08-18-xx/00, before DKCMAIN Ver. 93-07-26-xx/00, SVP Ver. 93-07-26-xx/00, before DKCMAIN Ver. A3-04-02-xx/00, MPC Ver. A3-04-02-xx/00, before DKCMAIN Ver. A3-03-41-xx/00, MPC Ver. A3-03-41-xx/00, before DKCMAIN Ver. A3-03-03-xx/00, MPC Ver. A3-03-03-xx/00.",
+      "refs": "https://www.hitachi.com/products/it/storage-solutions/sec_info/2026/2026_307.html",
+      "source": "NVD",
+      "time": "2026-05-07 19:01:17"
+    },
+    {
+      "cve_id": "CVE-2024-43384",
+      "title": "高危漏洞: CVE-2024-43384 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-05-07 17:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A low privileged remote attacker can gain the root password due to improper removal of sensitive information before storage or transfer.",
+      "refs": "https://certvde.com/en/advisories/VDE-2024-039",
+      "source": "NVD",
+      "time": "2026-05-07 19:01:12"
+    },
+    {
+      "cve_id": "CVE-2025-9661",
+      "title": "高危漏洞: CVE-2025-9661 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-07 16:16:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OS command injection vulneravility in the management gui (maintenance utility) of Hitachi Virtual Storage Platform One Block 23, 24, 26 and 28.\n\nThis issue affects Hitachi Virtual Storage Platform One Block 23/24/26/28: before DKCMAIN A3-04-21-40/00, ESM A3-04-21/00.",
+      "refs": "https://www.hitachi.com/products/it/storage-solutions/sec_info/2026/2026_309.html",
+      "source": "NVD",
+      "time": "2026-05-07 19:01:07"
+    },
+    {
+      "cve_id": "CVE-2026-7252",
+      "title": "高危漏洞: CVE-2026-7252 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-07 14:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The WP-Optimize – Cache, Compress images, Minify & Clean database to boost page speed & performance plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the unscheduled_original_file_deletion function in all versions up to, and including, 4.5.2 This makes it possible for authenticated attackers, with author-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This is possible because 'original-file' is a public (non-protected) meta key — it does not begin with an underscore — allowing Authors to freely create or modify it on their own attachment posts via the standard Edit Media form or the REST API.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-optimize/tags/4.5.2/includes/class-updraft-smush-manager.php#L1645\nhttps://plugins.trac.wordpress.org/browser/wp-optimize/tags/4.5.2/includes/class-updraft-smush-manager.php#L1649\nhttps://plugins.trac.wordpress.org/browser/wp-optimize/tags/4.5.2/includes/class-updraft-smush-manager.php#L81",
+      "source": "NVD",
+      "time": "2026-05-07 19:01:03"
+    },
+    {
+      "cve_id": "CVE-2026-6692",
+      "title": "高危漏洞: CVE-2026-6692 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 14:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Slider Revolution plugin for WordPress is vulnerable to Arbitrary File Upload in versions 7.0.0 to 7.0.10 via the '_get_media_url' and '_check_file_path' function. This is due to insufficient file type validation. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. The vulnerability was partially patched in version 7.0.10 and fully patched in version 7.0.11.",
+      "refs": "https://www.sliderrevolution.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/a2e802a6-d2f1-47cc-883a-89110e569168?source=cve",
+      "source": "NVD",
+      "time": "2026-05-07 19:00:59"
+    },
+    {
+      "cve_id": "CVE-2026-4348",
+      "title": "高危漏洞: CVE-2026-4348 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-07 14:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The BetterDocs Pro plugin for WordPress is vulnerable to SQL Injection via the `get_current_letter_docs` and `docs_sort_by_letter` AJAX actions in all versions up to, and including, 3.7.0. This is due to the `limit` POST parameter being interpolated directly into a SQL query string before being passed to `$wpdb->prepare()`, which only parameterizes other variables. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The Encyclopedia feature must be enabled in BetterDocs Pro settings for the vulnerability to be exploitable.",
+      "refs": "https://betterdocs.co/changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5c0f02ad-f5f1-42b1-8116-e391aaa85430?source=cve",
+      "source": "NVD",
+      "time": "2026-05-07 19:00:54"
+    },
+    {
+      "cve_id": "CVE-2026-41641",
+      "title": "高危漏洞: CVE-2026-41641 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-07 14:16:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to version 2.0.39, the checkSQL() validation function that blocks dangerous SQL keywords (e.g., pg_read_file, LOAD_FILE, dblink) is applied on the collections:create and sqlCollection:execute endpoints but is entirely missing on the sqlCollection:update endpoint. An attacker with collection management permissions can create a SQL collection with benign SQL, then update it with arbitrary SQL that bypasses all validation, and query the collection to execute the injected SQL and exfiltrate data. This issue has been patched in version 2.0.39.",
+      "refs": "https://github.com/nocobase/nocobase/commit/851aee543efa894142e0f7be03eb55d9cec06a91\nhttps://github.com/nocobase/nocobase/pull/9134\nhttps://github.com/nocobase/nocobase/releases/tag/v2.0.39",
+      "source": "NVD",
+      "time": "2026-05-07 19:00:47"
+    },
+    {
+      "cve_id": "CVE-2026-41143",
+      "title": "高危漏洞: CVE-2026-41143 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 14:16:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "YesWiki is a wiki system written in PHP. Prior to version 4.6.1, YesWiki bazar module contains a SQL injection vulnerability in tools/bazar/services/EntryManager.php at line 704. The $data['id_fiche'] value (sourced from $_POST['id_fiche']) is concatenated directly into a raw SQL query without any sanitization or parameterization. This issue has been patched in version 4.6.1.",
+      "refs": "https://github.com/YesWiki/yeswiki/releases/tag/v4.6.1\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-f58v-p6j9-24c2",
+      "source": "NVD",
+      "time": "2026-05-07 19:00:40"
+    },
+    {
+      "cve_id": "CVE-2026-41139",
+      "title": "高危漏洞: CVE-2026-41139 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-07 14:16:04",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Math.js is an extensive math library for JavaScript and Node.js. From version 13.1.0 to before version 15.2.0, arbitrary JavaScript can be executed via the expression parser of mathjs. This issue has been patched in version 15.2.0.",
+      "refs": "https://github.com/josdejong/mathjs/commit/0aee2f61866e35ffa0aef915221cdf6b026ffdd4\nhttps://github.com/josdejong/mathjs/commit/bcf0da46f0b8577ec03c9ecd7bff8b5c2543a611\nhttps://github.com/josdejong/mathjs/pull/3656",
+      "source": "NVD",
+      "time": "2026-05-07 19:00:35"
+    },
+    {
       "cve_id": "CVE-2026-41670",
       "title": "高危漏洞: CVE-2026-41670 (CVSS 8.2)",
       "cvss_score": 8.2,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/givanz/Vvveb/commit/f85ca7c2bc389bda3cc2eca87b2514581a628c32\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.2\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-g38h-mr9p-fjmf",
       "source": "NVD",
       "time": "2026-05-07 05:51:43"
-    },
-    {
-      "cve_id": "CVE-2024-30151",
-      "title": "高危漏洞: CVE-2024-30151 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-07 03:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "HCL BigFix Service Management (SX)  is affected by a Broken Access Control vulnerability leading to privilege escalation. This could allow unauthorized users to gain elevated privileges, bypassing intended access restrictions. This may result in exposure of sensitive data or unauthorized system modifications",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0127782",
-      "source": "NVD",
-      "time": "2026-05-07 05:51:38"
-    },
-    {
-      "cve_id": "CVE-2026-7875",
-      "title": "高危漏洞: CVE-2026-7875 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 01:16:24",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "NanoClaw contains a host/container filesystem boundary vulnerability in outbound attachment handling and outbox cleanup that allows a compromised or prompt-injected container to read files outside the intended outbox directory by supplying crafted messages_out.id and content.files values or creating symlinked outbox files. Attackers can exploit this vulnerability to trigger host-side reads of arbitrary files and in some cases achieve recursive deletion of paths outside the intended cleanup target.",
-      "refs": "https://github.com/qwibitai/nanoclaw/commit/7814e45570edf0024a1a5c2ba9fbc9cb3a49f7f7\nhttps://github.com/qwibitai/nanoclaw/pull/2001",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:40"
-    },
-    {
-      "cve_id": "CVE-2026-42503",
-      "title": "高危漏洞: CVE-2026-42503 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 01:16:23",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "gopls by default communicates via pipe. However, -port and -listen flags are supported as means of debugging.\nIf -listen is given a value without an explicit host (e.g. :8080), or -port is used, gopls will listen on 0.0.0.0. \nAs a result, users might inadvertently cause gopls to bind 0.0.0.0.\nThis can allow a malicious party on the same network to execute code arbitrarily via gopls.",
-      "refs": "https://go.dev/cl/774381\nhttps://go.dev/issue/79211",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:36"
-    },
-    {
-      "cve_id": "CVE-2026-23870",
-      "title": "高危漏洞: CVE-2026-23870 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-07 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A denial of service vulnerability could be triggered by sending specially crafted HTTP requests to server function endpoints, this could lead to server crashes, out-of-memory exceptions or excessive CPU usage; affecting the following packages: react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack (versions 19.0.0 through 19.0.5, 19.1.0 through 19.1.6, and 19.2.0 through 19.2.5).",
-      "refs": "https://github.com/facebook/react/security/advisories/GHSA-rv78-f8rc-xrxh",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:31"
-    },
-    {
-      "cve_id": "CVE-2026-20188",
-      "title": "高危漏洞: CVE-2026-20188 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-07 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A vulnerability in the connection-handling mechanism of Cisco Crosswork Network Controller (CNC) and Cisco Network Services Orchestrator (NSO) could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected system.\r\n\r\nThis vulnerability is due to an inadequate implementation of rate-limiting on incoming network connections. An attacker could exploit this vulnerability by sending a large number of connection requests to an affected system. A successful exploit could allow the attacker to exhaust available connection resources, causing Cisco CNC and Cisco NSO to become unresponsive and resulting in a DoS condition for legitimate users and dependent services. A manual reboot of the system is required to recover from this condition.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-dos-7Egqyc",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:27"
-    },
-    {
-      "cve_id": "CVE-2026-20185",
-      "title": "高危漏洞: CVE-2026-20185 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-07 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "A vulnerability in the Simple Network Management Protocol (SNMP) subsystem of&nbsp;Cisco 350 Series Managed Switches (SG350) and Cisco 350X Series Stackable Managed Switches (SG350X)&nbsp;firmware could allow an authenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.&nbsp;\r\n\r\nThis vulnerability is due to improper error handling when parsing response data for a specific SNMP request. An attacker could exploit this vulnerability by sending a specific SNMP request to an affected device. A successful exploit could allow the attacker to cause the device to reload unexpectedly, resulting in a DoS condition.\r\nThis vulnerability affects SNMP versions 1, 2c, and 3. To exploit this vulnerability through SNMPv2c or earlier, the attacker must know a valid read-write or read-only SNMP community string for the affected system. To exploit this vulnerability through SNMPv3, the attacker must have valid SNMP user credentials for the affected system.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sg350-snmp-dos-GEFZr2Tj",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:22"
-    },
-    {
-      "cve_id": "CVE-2026-20167",
-      "title": "高危漏洞: CVE-2026-20167 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-07 01:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "A vulnerability in the web-based management interface of Cisco IoT Field Network Director could allow an authenticated, remote attacker with low privileges to cause a DoS condition on a remotely managed router.\r\n\r\nThis vulnerability is due to improper error handling. An attacker could exploit this vulnerability by submitting crafted input to the web-based management interface. A successful exploit could allow the attacker to request unauthorized files from a remote router, causing the router to reload and resulting in a DoS condition.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iot-fnd-dos-n8N26Q4u",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:18"
-    },
-    {
-      "cve_id": "CVE-2026-20035",
-      "title": "高危漏洞: CVE-2026-20035 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-07 01:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "A vulnerability in the web UI of Cisco Unity Connection Web Inbox could allow an unauthenticated, remote attacker to conduct SSRF attacks through an affected device.\r\n\r\nThis vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to send arbitrary network requests that are sourced from the affected device.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-unity-rce-ssrf-hENhuASy",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:12"
-    },
-    {
-      "cve_id": "CVE-2026-20034",
-      "title": "高危漏洞: CVE-2026-20034 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 01:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability in the web-based management interface of Cisco Unity Connection could allow an authenticated, remote attacker to execute arbitrary code on an affected device.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to execute arbitrary code as root, possibly resulting in the complete compromise of a targeted device.&nbsp;To exploit this vulnerability, the attacker must have valid user credentials on the affected device.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-unity-rce-ssrf-hENhuASy",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:07"
-    },
-    {
-      "cve_id": "CVE-2026-6691",
-      "title": "高危漏洞: CVE-2026-6691 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-07 00:16:11",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The MongoDB C Driver's Cyrus SASL integration performs unsafe string copying during username canonicalization, enabling a heap buffer overflow before any authentication or network traffic. This may be triggered by passing untrusted input in the username of a MongoDB URI with authMechanism=GSSAPI.",
-      "refs": "https://jira.mongodb.org/browse/CDRIVER-6134",
-      "source": "NVD",
-      "time": "2026-05-07 03:22:03"
     }
   ]
 }
