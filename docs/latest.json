@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7330",
+      "title": "高危漏洞: CVE-2026-7330 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-08 17:16:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Auto Affiliate Links plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 6.8.8 This is due to insufficient input sanitization on the 'url' POST parameter in the aal_url_stats_save_action() function and a complete absence of output escaping in aal_display_clicks(), where the stored value is echoed directly into an anchor element's href attribute and inner text without esc_url(), esc_attr(), or esc_html(). This makes it possible for unauthenticated attackers to inject arbitrary web scripts into the admin statistics page that execute in an administrator's browser when the page is visited, leveraging a publicly exposed nonce and an unauthenticated AJAX endpoint registered via the wp_ajax_nopriv_ hook.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-auto-affiliate-links/tags/6.8.6/aal_stats.php#L225\nhttps://plugins.trac.wordpress.org/browser/wp-auto-affiliate-links/tags/6.8.6/aal_stats.php#L278\nhttps://plugins.trac.wordpress.org/browser/wp-auto-affiliate-links/tags/6.8.6/aal_stats.php#L304",
+      "source": "NVD",
+      "time": "2026-05-08 18:17:21"
+    },
+    {
+      "cve_id": "CVE-2026-5127",
+      "title": "高危漏洞: CVE-2026-5127 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-08 17:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The User Frontend: AI Powered Frontend Posting, User Directory, Profile, Membership & User Registration plugin for WordPress is vulnerable to Deserialization of Untrusted Data in versions up to, and including, 4.3.1 This is due to insufficient input validation and type checking on the wpuf_files parameter during form submission, combined with unconditional deserialization via maybe_unserialize() when displaying post content. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary PHP objects, which can be leveraged to execute arbitrary code, delete arbitrary files, or perform other malicious actions if a POP chain is present on the target system.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-user-frontend/tags/4.2.10/includes/Ajax/Frontend_Form_Ajax.php#L35\nhttps://plugins.trac.wordpress.org/browser/wp-user-frontend/tags/4.2.10/includes/Ajax/Frontend_Form_Ajax.php#L36\nhttps://plugins.trac.wordpress.org/browser/wp-user-frontend/tags/4.2.10/includes/Traits/FieldableTrait.php#L429",
+      "source": "NVD",
+      "time": "2026-05-08 18:17:16"
+    },
+    {
+      "cve_id": "CVE-2026-8138",
+      "title": "高危漏洞: CVE-2026-8138 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-08 13:16:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Tenda CX12L 16.03.53.12. This issue affects the function formSetPPTPServer of the file /goform/SetPptpServerCfg”. The manipulation results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/cve-a/lvdan/issues/6\nhttps://vuldb.com/submit/808867\nhttps://vuldb.com/vuln/361927",
+      "source": "NVD",
+      "time": "2026-05-08 18:17:12"
+    },
+    {
+      "cve_id": "CVE-2026-8137",
+      "title": "高危漏洞: CVE-2026-8137 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-08 13:16:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Totolink X5000R 9.1.0u.6369_B20230113. This vulnerability affects the function sub_458E40 of the file /boafrm/formDdns. The manipulation of the argument submit-url leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/Kiciot/cve/issues/4\nhttps://vuldb.com/submit/808863\nhttps://vuldb.com/vuln/361926",
+      "source": "NVD",
+      "time": "2026-05-08 18:17:05"
+    },
+    {
       "cve_id": "CVE-2026-8133",
       "title": "高危漏洞: CVE-2026-8133 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/AcademySoftwareFoundation/openexr/commit/0592ee539f33c122c90f09238579b902d838afb4\nhttps://github.com/AcademySoftwareFoundation/openexr/pull/2367\nhttps://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-m25w-72cj-q6mg",
       "source": "NVD",
       "time": "2026-05-07 13:52:35"
-    },
-    {
-      "cve_id": "CVE-2026-41002",
-      "title": "高危漏洞: CVE-2026-41002 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-07 12:16:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "The base directory (`spring.cloud.config.server.git.basedir`) used by the Spring Cloud Config Server to clone Git repositories to is susceptible to time-of-check-time-of-use (TOCTOU) attacks.\nSpring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.",
-      "refs": "https://spring.io/security/cve-2026-41002",
-      "source": "NVD",
-      "time": "2026-05-07 13:52:31"
-    },
-    {
-      "cve_id": "CVE-2026-40982",
-      "title": "高危漏洞: CVE-2026-40982 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-07 12:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Spring Cloud Config allows applications to serve arbitrary text and binary files through the spring-cloud-config-server module. A malicious user, or attacker, can send a request using a specially crafted URL that can lead to a directory traversal attack.\nSpring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.",
-      "refs": "https://spring.io/security/cve-2026-40982",
-      "source": "NVD",
-      "time": "2026-05-07 13:52:24"
-    },
-    {
-      "cve_id": "CVE-2026-40981",
-      "title": "高危漏洞: CVE-2026-40981 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-07 12:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "When using Google Secrets Manager as a backend for the Spring Cloud Config server a client can craft a request to the config server potentially exposing secrets from unintended GCP projects.\nSpring Cloud Config 3.1.x: affected from 3.1.0 through 3.1.13 (inclusive); upgrade to 3.1.14 or greater (Enterprise Support Only). Spring Cloud Config 4.1.x: affected from 4.1.0 through 4.1.9 (inclusive); upgrade to 4.1.10 or greater (Enterprise Support Only). Spring Cloud Config 4.2.x: affected from 4.2.0 through 4.2.6 (inclusive); upgrade to 4.2.7 or greater (Enterprise Support Only). Spring Cloud Config 4.3.x: affected from 4.3.0 through 4.3.2 (inclusive); upgrade to 4.3.3 or greater. Spring Cloud Config 5.0.x: affected from 5.0.0 through 5.0.2 (inclusive); upgrade to 5.0.3 or greater.",
-      "refs": "https://spring.io/security/cve-2026-40981",
-      "source": "NVD",
-      "time": "2026-05-07 13:52:20"
-    },
-    {
-      "cve_id": "CVE-2026-40281",
-      "title": "高危漏洞: CVE-2026-40281 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-07 05:16:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. In versions 8.30.1 and earlier, the metadata write endpoint validates metadata keys for control characters but leaves metadata values unsanitized. A newline character in a metadata value splits the ExifTool stdin line into two separate arguments, allowing injection of arbitrary ExifTool pseudo-tags such as -FileName, -Directory, -SymLink, and -HardLink. This is a bypass of the incomplete key-sanitization fix introduced in v8.30.1. An unauthenticated attacker can rename or move any PDF being processed to an arbitrary path in the container filesystem, overwrite arbitrary files, or create symlinks and hard links at arbitrary paths.",
-      "refs": "https://github.com/gotenberg/gotenberg/commit/405f1069c026bb08f319fb5a44e5c67c33208318\nhttps://github.com/gotenberg/gotenberg/security/advisories/GHSA-q7r4-hc83-hf2q",
-      "source": "NVD",
-      "time": "2026-05-07 10:04:30"
     }
   ]
 }
