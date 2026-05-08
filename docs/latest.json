@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2025-66467",
+      "title": "高危漏洞: CVE-2025-66467 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-05-08 21:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Missing MinIO policy cleanup on bucket deletion via Apache CloudStack allows users to retain access to buckets which they previously owned. If another user creates a new bucket with the same name, the previous owners can gain unauthorized read and write access to it by using the previously generated access and secret keys.\n\nUsers are recommended to upgrade to Apache CloudStack versions 4.20.3.0 or 4.22.0.1, or later, which fixes this issue.",
+      "refs": "https://lists.apache.org/thread/n8mt5b7wkpysstb8w7rr9f02kc5cq2xm",
+      "source": "NVD",
+      "time": "2026-05-09 00:09:16"
+    },
+    {
+      "cve_id": "CVE-2022-50994",
+      "title": "高危漏洞: CVE-2022-50994 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-08 21:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "DrayTek Vigor 2960 firmware versions prior to 1.5.1.4 contain an OS command injection vulnerability in the CGI login handler that allows unauthenticated remote attackers to execute arbitrary commands by injecting shell metacharacters into the formpassword parameter. Attackers can exploit unsanitized input passed to the otp_check.sh script to achieve remote code execution with web server privileges. Exploitation requires knowledge of a valid username and that the target account has MOTP authentication enabled.",
+      "refs": "https://www.draytek.co.uk/support/downloads/vigor-2960/older-firmware/firmware-1514?task=download.send&id=2597:readme-v2960-1514&catid=1251\nhttps://www.draytek.com/about/newsroom/2021/2021/end-of-life-notification-vigor2960\nhttps://www.vulncheck.com/advisories/draytek-vigor-2960-os-command-injection-via-mainfunction-cgi",
+      "source": "NVD",
+      "time": "2026-05-09 00:09:09"
+    },
+    {
+      "cve_id": "CVE-2026-8153",
+      "title": "高危漏洞: CVE-2026-8153 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-08 20:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OS command injection in Dashboard Server interface in Universal Robots PolyScope versions prior to 5.21.1 allows unauthenticated attacker to craft commands that will execute code on the robot's OS.",
+      "refs": "https://www.universal-robots.com/developer/communication-protocol/dashboard-server/",
+      "source": "NVD",
+      "time": "2026-05-09 00:09:03"
+    },
+    {
       "cve_id": "CVE-2026-7330",
       "title": "高危漏洞: CVE-2026-7330 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/Admidio/admidio/releases/tag/v5.0.9\nhttps://github.com/Admidio/admidio/security/advisories/GHSA-rh3w-4ccx-prf9",
       "source": "NVD",
       "time": "2026-05-07 13:52:52"
-    },
-    {
-      "cve_id": "CVE-2026-41640",
-      "title": "高危漏洞: CVE-2026-41640 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-07 12:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to version 2.0.39, the queryParentSQL() function in the core database package constructs a recursive CTE query by joining nodeIds with string concatenation instead of using parameterized queries. The nodeIds array contains primary key values read from database rows. An attacker who can create a record with a malicious string primary key can inject arbitrary SQL when any subsequent request triggers recursive eager loading on that collection. This issue has been patched in version 2.0.39.",
-      "refs": "https://github.com/nocobase/nocobase/commit/202e2b8efe44ba90adbf1087f6f70881ff947604\nhttps://github.com/nocobase/nocobase/pull/9133\nhttps://github.com/nocobase/nocobase/releases/tag/v2.0.39",
-      "source": "NVD",
-      "time": "2026-05-07 13:52:45"
-    },
-    {
-      "cve_id": "CVE-2026-41201",
-      "title": "高危漏洞: CVE-2026-41201 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-07 12:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. In version 0.31.4.0, an attacker can achieve Full Account Takeover & Privilege Escalation via Stored DOM XSS in backup module filename field manipulated via a sql file that tampers with the file name field to contain hidden XSS payload. This issue has been patched in version 0.31.5.0.",
-      "refs": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.5.0\nhttps://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-qxpq-82f3-xj47",
-      "source": "NVD",
-      "time": "2026-05-07 13:52:40"
-    },
-    {
-      "cve_id": "CVE-2026-41142",
-      "title": "高危漏洞: CVE-2026-41142 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-07 12:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenEXR provides the specification and reference implementation of the EXR file format, an image storage format for the motion picture industry. From versions 3.0.0 to before 3.2.9, 3.3.0 to before 3.3.11, and 3.4.0 to before 3.4.11, there is an integer overflow in ImageChannel::resize that leads to heap OOB write via OpenEXRUtil public API. This issue has been patched in versions 3.2.9, 3.3.11, and 3.4.11.",
-      "refs": "https://github.com/AcademySoftwareFoundation/openexr/commit/0592ee539f33c122c90f09238579b902d838afb4\nhttps://github.com/AcademySoftwareFoundation/openexr/pull/2367\nhttps://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-m25w-72cj-q6mg",
-      "source": "NVD",
-      "time": "2026-05-07 13:52:35"
     }
   ]
 }
