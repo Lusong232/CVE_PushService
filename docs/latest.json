@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3828",
+      "title": "高危漏洞: CVE-2026-3828 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-09 17:16:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Some Hikvision switch products (discontinued since December 2023) are vulnerable to authenticated remote command execution due to insufficient input validation. Attackers with valid credentials can exploit this flaw by sending crafted packets containing malicious commands to affected devices, leading to arbitrary command execution.",
+      "refs": "https://www.hikvision.com/en/support/cybersecurity/security-advisory/command-execution-vulnerability-in-some-hikvision-switch-product/",
+      "source": "NVD",
+      "time": "2026-05-09 20:54:04"
+    },
+    {
+      "cve_id": "CVE-2026-42560",
+      "title": "高危漏洞: CVE-2026-42560 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-09 14:16:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "auth provides authentication via oauth2, direct and email. From versions 1.18.0 to before 1.25.2 and 2.0.0 to before 2.1.2, the Patreon OAuth provider maps every authenticated Patreon account to the same local user.ID, instead of deriving a unique ID from the Patreon account returned by Patreon. In practice, this means all Patreon-authenticated users of an application using this library are collapsed into a single local identity. Any application that trusts token.User.ID as the stable account key can end up mixing or fully merging unrelated Patreon users, which can lead to cross-account access, privilege confusion, and subscription-state leakage. This issue has been patched in versions 1.25.2 and 2.1.2.",
+      "refs": "https://github.com/go-pkgz/auth/commit/c0b15ee72a8401da83c01781c16636c521f42698\nhttps://github.com/go-pkgz/auth/releases/tag/v1.25.2\nhttps://github.com/go-pkgz/auth/releases/tag/v2.1.2",
+      "source": "NVD",
+      "time": "2026-05-09 20:53:58"
+    },
+    {
       "cve_id": "CVE-2026-42301",
       "title": "高危漏洞: CVE-2026-42301 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/redshadowword-cell/CVE/issues/12\nhttps://vuldb.com/submit/808775\nhttps://vuldb.com/vuln/361921",
       "source": "NVD",
       "time": "2026-05-08 13:23:23"
-    },
-    {
-      "cve_id": "CVE-2026-8130",
-      "title": "高危漏洞: CVE-2026-8130 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 12:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in SourceCodester SUP Online Shopping 1.0. This affects an unknown function of the file /admin/message.php. The manipulation of the argument seenid leads to sql injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/redshadowword-cell/CVE/issues/11\nhttps://vuldb.com/submit/808774\nhttps://vuldb.com/vuln/361920",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:18"
-    },
-    {
-      "cve_id": "CVE-2026-8129",
-      "title": "高危漏洞: CVE-2026-8129 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 12:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in SourceCodester SUP Online Shopping 1.0. The impacted element is an unknown function of the file wishlist.php. Executing a manipulation of the argument delwlistid can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/redshadowword-cell/CVE/issues/10\nhttps://vuldb.com/submit/808773\nhttps://vuldb.com/vuln/361919",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:14"
     }
   ]
 }
