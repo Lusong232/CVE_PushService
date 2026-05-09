@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-42301",
+      "title": "高危漏洞: CVE-2026-42301 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-09 12:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "pyp2spec generates working Fedora RPM spec file for Python projects. Prior to version 0.14.1, pyp2spec was writing PyPI package metadata (e.g. the summary field) into the generated spec file without escaping RPM macro directives. When a packager then runs rpmbuild, those directives get evaluated, so a malicious package can execute arbitrary commands on the build machine. This issue has been patched in version 0.14.1.",
+      "refs": "https://github.com/befeleme/pyp2spec/releases/tag/v0.14.1\nhttps://github.com/befeleme/pyp2spec/security/advisories/GHSA-r35x-v8p8-xvhw",
+      "source": "NVD",
+      "time": "2026-05-09 13:41:12"
+    },
+    {
+      "cve_id": "CVE-2026-42296",
+      "title": "高危漏洞: CVE-2026-42296 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-09 12:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Prior to versions 3.7.14 and 4.0.5, a user with create Workflow permission can bypass templateReferencing: Strict to get host network access, switch service accounts, override pod security context, add tolerations to schedule on control-plane nodes, or enable SA token mounting. This defeats the stated purpose of the feature. The practical impact depends on what Kubernetes-level controls are in place. Clusters with PodSecurity admission or OPA/Gatekeeper would independently block some of these (like hostNetwork). Clusters that rely on Argo's Strict mode as the primary enforcement layer are fully exposed. This issue has been patched in versions 3.7.14 and 4.0.5.",
+      "refs": "https://github.com/argoproj/argo-workflows/commit/534f4ff1cbd86908e8ff76d97d553ad5a49a950d\nhttps://github.com/argoproj/argo-workflows/releases/tag/v3.7.14\nhttps://github.com/argoproj/argo-workflows/releases/tag/v4.0.5",
+      "source": "NVD",
+      "time": "2026-05-09 13:41:05"
+    },
+    {
+      "cve_id": "CVE-2026-41311",
+      "title": "高危漏洞: CVE-2026-41311 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-09 12:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to version 10.25.7, a circular block reference in {% layout %} / {% block %} causes an infinite recursive loop, consuming all available memory (~4GB) and crashing the Node.js process with FATAL ERROR: JavaScript heap out of memory. This allows any user who can submit a Liquid template to perform a Denial of Service attack. This issue has been patched in version 10.25.7.",
+      "refs": "https://github.com/harttle/liquidjs/commit/e2311dfd6e82f73509308aa8a3a1fafc92e226f0\nhttps://github.com/harttle/liquidjs/releases/tag/v10.25.7\nhttps://github.com/harttle/liquidjs/security/advisories/GHSA-4rc3-7j7w-m548",
+      "source": "NVD",
+      "time": "2026-05-09 13:40:07"
+    },
+    {
+      "cve_id": "CVE-2026-6665",
+      "title": "高危漏洞: CVE-2026-6665 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-09 09:16:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SCRAM code in PgBouncer before 1.25.2 did not check the return value of strlcat() correctly when building the contents of the SCRAM client-final-message. A malicious backend that sends a SCRAM server-final-message with a long nonce can trigger a stack overflow.",
+      "refs": "https://www.pgbouncer.org/changelog.html#pgbouncer-125x",
+      "source": "NVD",
+      "time": "2026-05-09 13:40:02"
+    },
+    {
+      "cve_id": "CVE-2026-6664",
+      "title": "高危漏洞: CVE-2026-6664 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-09 09:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An integer overflow in network packet parsing code in PgBouncer before 1.25.2 bypasses a boundary check and can lead to a crash. An unauthenticated remote attacker can crash PgBouncer with a malformed SCRAM authentication packet.",
+      "refs": "https://www.pgbouncer.org/changelog.html#pgbouncer-125x",
+      "source": "NVD",
+      "time": "2026-05-09 13:39:57"
+    },
+    {
+      "cve_id": "CVE-2026-41705",
+      "title": "高危漏洞: CVE-2026-41705 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-09 09:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+      "description": "Spring AI's MilvusVectorStore#doDelete(List) implementation is vulnerable to filter-expression injection via unsanitized document IDs.\nSpring AI 1.0.x: affected from 1.0.0 through latest 1.0.x; upgrade to 1.0.7 or greater. Spring AI 1.1.x: affected from 1.1.0 through latest 1.1.x; upgrade to 1.1.6 or greater.",
+      "refs": "https://spring.io/security/cve-2026-41705",
+      "source": "NVD",
+      "time": "2026-05-09 13:39:45"
+    },
+    {
+      "cve_id": "CVE-2026-44313",
+      "title": "高危漏洞: CVE-2026-44313 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-09 08:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+      "description": "Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages. Prior to version 2.13.0, a Server-Side Request Forgery (SSRF) vulnerability in the fetchTitleAndHeaders function allows authenticated users to make arbitrary HTTP requests to internal services due to insufficient URL validation that only checks for \"http://\" or \"https://\" prefixes. This issue has been patched in version 2.13.0.",
+      "refs": "https://github.com/linkwarden/linkwarden/security/advisories/GHSA-5qpc-x7rv-hvmp",
+      "source": "NVD",
+      "time": "2026-05-09 13:39:36"
+    },
+    {
       "cve_id": "CVE-2026-42556",
       "title": "高危漏洞: CVE-2026-42556 (CVSS 8.9)",
       "cvss_score": 8.9,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/redshadowword-cell/CVE/issues/10\nhttps://vuldb.com/submit/808773\nhttps://vuldb.com/vuln/361919",
       "source": "NVD",
       "time": "2026-05-08 13:23:14"
-    },
-    {
-      "cve_id": "CVE-2026-43943",
-      "title": "高危漏洞: CVE-2026-43943 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-08 12:16:23",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to version 3.7.9, a code execution (RCE) vulnerability exists in electerm's SFTP open with system editor or \"Edit with custom editor\" feature. When a user opts to edit a file using open with system editor or open with a custom editor, the filename is passed directly into a command line without sanitization. A malicious actor controlling the SSH server or user OS can exploit this by crafting a filename containing shell metacharacters. If a victim subsequently attempts to edit this file, the injected commands are executed on their machine with the user's privileges. This could allow the attacker to run arbitrary code, install malware, or move laterally within the network. This issue has been patched in version 3.7.9.",
-      "refs": "https://github.com/electerm/electerm/commit/24ce7103e264cffe6eb5476c0506a2379e6f8333\nhttps://github.com/electerm/electerm/releases/tag/v3.7.9\nhttps://github.com/electerm/electerm/security/advisories/GHSA-q4p8-8j9m-8hxj",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:07"
-    },
-    {
-      "cve_id": "CVE-2026-43941",
-      "title": "高危漏洞: CVE-2026-43941 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-08 12:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. In versions 3.8.15 and prior, Electerm's terminal hyperlink handler passes any URL clicked in the terminal directly to shell.openExternal without any protocol validation. An attacker who controls terminal output (e.g., via a malicious SSH server, compromised remote host, or malicious plugin rendering terminal content) can thus achieve arbitrary code execution or local file access on the victim's machine, requiring only that the victim clicks a displayed link. At time of publication, there are no publicly available patches.",
-      "refs": "https://github.com/electerm/electerm/security/advisories/GHSA-fwf6-j56g-m97c",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:02"
-    },
-    {
-      "cve_id": "CVE-2026-43940",
-      "title": "高危漏洞: CVE-2026-43940 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-08 12:16:23",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to version 3.7.16, the runWidget function in src/app/widgets/load-widget.js constructs a file path by directly concatenating user‑supplied widget identifiers without any sanitisation. Because runWidget is exposed to the renderer process via an asynchronous IPC handler with no input validation, an attacker who achieves JavaScript execution inside the renderer (for example, through a malicious plugin or a cross‑site scripting flaw in the built‑in webview) can abuse a path traversal (../) to load and execute an arbitrary JavaScript file anywhere on the victim’s filesystem. This gives the attacker local code execution with the full privileges of the electerm process, leading to complete system compromise. This issue has been patched in version 3.7.16.",
-      "refs": "https://github.com/electerm/electerm/releases/tag/v3.7.16\nhttps://github.com/electerm/electerm/security/advisories/GHSA-f77v-9vpc-6pjm",
-      "source": "NVD",
-      "time": "2026-05-08 13:22:58"
-    },
-    {
-      "cve_id": "CVE-2026-42275",
-      "title": "高危漏洞: CVE-2026-42275 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-08 12:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "zrok is software for sharing web services, files, and network resources. Prior to version 2.0.2, the zrok WebDAV drive backend (davServer.Dir) restricts path traversal through lexical normalization but does not prevent symlink following. When a symbolic link inside the shared DriveRoot points to a location outside that root, remote WebDAV consumers can read files and—on shares without OS-level permission restrictions—write or overwrite files anywhere on the host filesystem accessible to the zrok process. This issue has been patched in version 2.0.2.",
-      "refs": "https://github.com/openziti/zrok/commit/459bcfc1e121decae1b1d11c37ad94e4ed5bbf2e\nhttps://github.com/openziti/zrok/releases/tag/v2.0.2\nhttps://github.com/openziti/zrok/security/advisories/GHSA-74m3-9qvm-rp9h",
-      "source": "NVD",
-      "time": "2026-05-08 13:22:53"
-    },
-    {
-      "cve_id": "CVE-2026-42264",
-      "title": "高危漏洞: CVE-2026-42264 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-08 12:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Axios is a promise based HTTP client for the browser and Node.js. From version 1.0.0 to before version 1.15.2, fFive config properties (auth, baseURL, socketPath, beforeRedirect, and insecureHTTPParser) in the HTTP adapter are read via direct property access without hasOwnProperty guards, making them exploitable as prototype pollution gadgets. When Object.prototype is polluted by another dependency in the same process, axios silently picks up these polluted values on every outbound HTTP request. This issue has been patched in version 1.15.2.",
-      "refs": "https://github.com/axios/axios/commit/47915144662f2733e6c051bdcb895a8c8f0586aa\nhttps://github.com/axios/axios/pull/10779\nhttps://github.com/axios/axios/releases/tag/v1.15.2",
-      "source": "NVD",
-      "time": "2026-05-08 13:22:49"
-    },
-    {
-      "cve_id": "CVE-2026-42261",
-      "title": "高危漏洞: CVE-2026-42261 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-08 12:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "PromptHub is an all-in-one AI toolbox for prompt, skill, and agent management. From version 0.4.9 to before version 0.5.4, apps/web/src/routes/skills.ts exposes an authenticated endpoint POST /api/skills/fetch-remote that fetches a user-supplied URL server-side and reflects the response body (up to 5 MB) back to the caller. The SSRF protection in apps/web/src/utils/remote-http.ts (isPrivateIPv6) attempts to block private/loopback destinations, but multiple alternate-but-valid IPv6 representations bypass the check. The bypasses reach any IPv4 address (loopback, RFC1918, link-local) via IPv4-mapped IPv6 in hex form, and the canonical ::1 via any representation that isn't the literal string \"::1\". Any authenticated user (role: user or admin) can trigger the SSRF. On deployments configured with ALLOW_REGISTRATION=true — a supported and documented configuration — this means any internet user who can register. This issue has been patched in version 0.5.4.",
-      "refs": "https://github.com/legeling/PromptHub/releases/tag/v0.5.4\nhttps://github.com/legeling/PromptHub/security/advisories/GHSA-9fhh-fjfg-5mr6",
-      "source": "NVD",
-      "time": "2026-05-08 13:22:44"
-    },
-    {
-      "cve_id": "CVE-2026-41900",
-      "title": "高危漏洞: CVE-2026-41900 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-08 12:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenLearnX is an open-source, decentralized learning and assessment platform. Prior to version 2.0.3, a remote code execution (RCE) vulnerability was identified in the OpenLearnX code execution environment, allowing sandbox escape and arbitrary command execution. This issue has been patched in version 2.0.3.",
-      "refs": "https://github.com/th30d4y/OpenLearnX/commit/14765d7d1856d564747c55c5412e2f38feab079e\nhttps://github.com/th30d4y/OpenLearnX/releases/tag/v2.0.3-security-fix\nhttps://github.com/th30d4y/OpenLearnX/security/advisories/GHSA-8h25-q488-4hxw",
-      "source": "NVD",
-      "time": "2026-05-08 13:22:36"
     }
   ]
 }
