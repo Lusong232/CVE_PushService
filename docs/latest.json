@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8234",
+      "title": "高危漏洞: CVE-2026-8234 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 15:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in EFM ipTIME A8004T 14.18.2. This vulnerability affects the function formWifiBasicSet of the file /goform/WifiBasicSet. The manipulation of the argument security_5g leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Kiciot/cve/issues/5\nhttps://vuldb.com/submit/808865\nhttps://vuldb.com/vuln/362454",
+      "source": "NVD",
+      "time": "2026-05-10 20:54:52"
+    },
+    {
       "cve_id": "CVE-2026-8216",
       "title": "高危漏洞: CVE-2026-8216 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://www.draytek.co.uk/support/downloads/vigor-2960/older-firmware/firmware-1514?task=download.send&id=2597:readme-v2960-1514&catid=1251\nhttps://www.draytek.com/about/newsroom/2021/2021/end-of-life-notification-vigor2960\nhttps://www.vulncheck.com/advisories/draytek-vigor-2960-os-command-injection-via-mainfunction-cgi",
       "source": "NVD",
       "time": "2026-05-09 00:09:09"
-    },
-    {
-      "cve_id": "CVE-2026-8153",
-      "title": "高危漏洞: CVE-2026-8153 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-08 20:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OS command injection in Dashboard Server interface in Universal Robots PolyScope versions prior to 5.21.1 allows unauthenticated attacker to craft commands that will execute code on the robot's OS.",
-      "refs": "https://www.universal-robots.com/developer/communication-protocol/dashboard-server/",
-      "source": "NVD",
-      "time": "2026-05-09 00:09:03"
     }
   ]
 }
