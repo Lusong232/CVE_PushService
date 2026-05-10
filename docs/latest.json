@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-42606",
+      "title": "高危漏洞: CVE-2026-42606 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-10 04:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "AzuraCast is a self-hosted, all-in-one web radio management suite. Prior to version 0.23.6, the ApplyXForwarded middleware unconditionally trusts the client-supplied X-Forwarded-Host HTTP header with no trusted proxy allowlist. An unauthenticated attacker can poison the password reset URL sent to any user by injecting this header when triggering the forgot-password flow. When the victim clicks the poisoned link, their reset token is exfiltrated to the attacker's server. The attacker then uses the token on the real instance to reset the victim's password and destroy their 2FA configuration, achieving full account takeover. This issue has been patched in version 0.23.6.",
+      "refs": "https://github.com/AzuraCast/AzuraCast/commit/7c622a18b451533de317e53862b1f84acf4efd85\nhttps://github.com/AzuraCast/AzuraCast/releases/tag/0.23.6\nhttps://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-gv7r-3mr9-h5x8",
+      "source": "NVD",
+      "time": "2026-05-10 09:57:01"
+    },
+    {
+      "cve_id": "CVE-2026-42605",
+      "title": "高危漏洞: CVE-2026-42605 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 04:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AzuraCast is a self-hosted, all-in-one web radio management suite. Prior to version 0.23.6, the currentDirectory request parameter in the Flow.js media upload endpoint (POST /api/station/{station_id}/files/upload) is not sanitized for path traversal sequences. When combined with a local filesystem storage backend (the default), an authenticated user with media management permissions can write arbitrary files outside the station's media storage directory, achieving remote code execution by writing a PHP webshell to the web root. This issue has been patched in version 0.23.6.",
+      "refs": "https://github.com/AzuraCast/AzuraCast/commit/18c793b4427eb49e67a2fea99a89f1c9d9dd808d\nhttps://github.com/AzuraCast/AzuraCast/releases/tag/0.23.6\nhttps://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-vp2f-cqqp-478j",
+      "source": "NVD",
+      "time": "2026-05-10 09:56:57"
+    },
+    {
+      "cve_id": "CVE-2026-42575",
+      "title": "高危漏洞: CVE-2026-42575 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-10 04:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "apko allows users to build and publish OCI container images built from apk packages. Prior to version 1.2.7, apko verifies the signature on APKINDEX.tar.gz but never compares individually downloaded .apk packages against the checksum recorded in the signed index. The checksum is parsed and available via ChecksumString(), and the downloaded package control hash is computed, but the two values are never compared in getPackageImpl(). Mismatched packages are silently accepted. An attacker who can substitute download responses (compromised mirror, HTTP repository, poisoned CDN cache) can install arbitrary packages into built images. This issue has been patched in version 1.2.7.",
+      "refs": "https://github.com/chainguard-dev/apko/commit/a118c3d604107532b5525bd4bee2fb369a6228aa\nhttps://github.com/chainguard-dev/apko/releases/tag/v1.2.7\nhttps://github.com/chainguard-dev/apko/security/advisories/GHSA-hcwr-pq9g-rq3m",
+      "source": "NVD",
+      "time": "2026-05-10 09:56:52"
+    },
+    {
+      "cve_id": "CVE-2026-42574",
+      "title": "高危漏洞: CVE-2026-42574 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-10 04:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "apko allows users to build and publish OCI container images built from apk packages. From version 0.14.8 to before version 1.2.5, a crafted .apk could install a TypeSymlink tar entry whose target pointed outside the build root, and a subsequent directory-creation or file-write entry in the same or later archive could traverse that symlink to reach host paths the build user could write to. This issue has been patched in version 1.2.5.",
+      "refs": "https://github.com/chainguard-dev/apko/commit/f5a96e1299ac81c7ea9441705ec467688086f442\nhttps://github.com/chainguard-dev/apko/pull/2187\nhttps://github.com/chainguard-dev/apko/releases/tag/v1.2.5",
+      "source": "NVD",
+      "time": "2026-05-10 09:56:48"
+    },
+    {
+      "cve_id": "CVE-2026-42569",
+      "title": "高危漏洞: CVE-2026-42569 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-05-10 04:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "description": "phpVMS is a PHP application to run and simulate an airline. Prior to version 7.0.6, a critical vulnerability in phpVMS allowed unauthenticated access to a legacy import feature. This issue has been patched in version 7.0.6.",
+      "refs": "https://github.com/phpvms/phpvms/commit/f59ba8e0e8fc25c60c3faf14e526cfd49df3f7dc\nhttps://github.com/phpvms/phpvms/releases/tag/7.0.6\nhttps://github.com/phpvms/phpvms/releases/tag/7.0.7",
+      "source": "NVD",
+      "time": "2026-05-10 09:56:44"
+    },
+    {
+      "cve_id": "CVE-2026-42562",
+      "title": "高危漏洞: CVE-2026-42562 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-05-10 04:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Plainpad is a self hosted note taking app. Prior to version 1.1.1, Plainpad allows a low-privilege authenticated user to self-escalate to administrator by submitting admin=true in PUT /api.php/v1/users/{id}. The endpoint directly persists the admin attribute from user input, and the escalated account can immediately access admin-only routes. This issue has been patched in version 1.1.1.",
+      "refs": "https://github.com/alextselegidis/plainpad/commit/9216a876d27b22c3d9259551636d803f7cb075fc\nhttps://github.com/alextselegidis/plainpad/issues/138\nhttps://github.com/alextselegidis/plainpad/releases/tag/1.1.1",
+      "source": "NVD",
+      "time": "2026-05-10 09:56:39"
+    },
+    {
       "cve_id": "CVE-2026-3828",
       "title": "高危漏洞: CVE-2026-3828 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1033,72 +1099,6 @@
       "refs": "https://plugins.trac.wordpress.org/browser/wp-auto-affiliate-links/tags/6.8.6/aal_stats.php#L225\nhttps://plugins.trac.wordpress.org/browser/wp-auto-affiliate-links/tags/6.8.6/aal_stats.php#L278\nhttps://plugins.trac.wordpress.org/browser/wp-auto-affiliate-links/tags/6.8.6/aal_stats.php#L304",
       "source": "NVD",
       "time": "2026-05-08 18:17:21"
-    },
-    {
-      "cve_id": "CVE-2026-5127",
-      "title": "高危漏洞: CVE-2026-5127 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-08 17:16:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The User Frontend: AI Powered Frontend Posting, User Directory, Profile, Membership & User Registration plugin for WordPress is vulnerable to Deserialization of Untrusted Data in versions up to, and including, 4.3.1 This is due to insufficient input validation and type checking on the wpuf_files parameter during form submission, combined with unconditional deserialization via maybe_unserialize() when displaying post content. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary PHP objects, which can be leveraged to execute arbitrary code, delete arbitrary files, or perform other malicious actions if a POP chain is present on the target system.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wp-user-frontend/tags/4.2.10/includes/Ajax/Frontend_Form_Ajax.php#L35\nhttps://plugins.trac.wordpress.org/browser/wp-user-frontend/tags/4.2.10/includes/Ajax/Frontend_Form_Ajax.php#L36\nhttps://plugins.trac.wordpress.org/browser/wp-user-frontend/tags/4.2.10/includes/Traits/FieldableTrait.php#L429",
-      "source": "NVD",
-      "time": "2026-05-08 18:17:16"
-    },
-    {
-      "cve_id": "CVE-2026-8138",
-      "title": "高危漏洞: CVE-2026-8138 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-08 13:16:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda CX12L 16.03.53.12. This issue affects the function formSetPPTPServer of the file /goform/SetPptpServerCfg”. The manipulation results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/cve-a/lvdan/issues/6\nhttps://vuldb.com/submit/808867\nhttps://vuldb.com/vuln/361927",
-      "source": "NVD",
-      "time": "2026-05-08 18:17:12"
-    },
-    {
-      "cve_id": "CVE-2026-8137",
-      "title": "高危漏洞: CVE-2026-8137 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-08 13:16:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Totolink X5000R 9.1.0u.6369_B20230113. This vulnerability affects the function sub_458E40 of the file /boafrm/formDdns. The manipulation of the argument submit-url leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/Kiciot/cve/issues/4\nhttps://vuldb.com/submit/808863\nhttps://vuldb.com/vuln/361926",
-      "source": "NVD",
-      "time": "2026-05-08 18:17:05"
-    },
-    {
-      "cve_id": "CVE-2026-8133",
-      "title": "高危漏洞: CVE-2026-8133 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 12:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in zyx0814 FilePress up to 2.2.0. Affected by this vulnerability is an unknown functionality of the file dzz/shares/admin.php of the component Shares Filelist API. Such manipulation of the argument order leads to sql injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The name of the patch is e20ec58414103f781858f2951d178e19b1736664. A patch should be applied to remediate this issue.",
-      "refs": "https://github.com/xiaohaiyang-ai/Web-Security-Research/tree/main/FilePress/Shares-API-PreAuth-SQLi\nhttps://github.com/zyx0814/FilePress/\nhttps://github.com/zyx0814/FilePress/commit/e20ec58414103f781858f2951d178e19b1736664",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:33"
-    },
-    {
-      "cve_id": "CVE-2026-8132",
-      "title": "高危漏洞: CVE-2026-8132 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 12:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in CodeAstro Leave Management System 1.0. Affected is an unknown function of the file /login.php. This manipulation of the argument txt_username causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://codeastro.com/\nhttps://github.com/yihaofuweng/cve/issues/64\nhttps://vuldb.com/submit/808784",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:29"
-    },
-    {
-      "cve_id": "CVE-2026-8131",
-      "title": "高危漏洞: CVE-2026-8131 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 12:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in SourceCodester SUP Online Shopping 1.0. This impacts an unknown function of the file /admin/replymsg.php. The manipulation of the argument msgid results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/redshadowword-cell/CVE/issues/12\nhttps://vuldb.com/submit/808775\nhttps://vuldb.com/vuln/361921",
-      "source": "NVD",
-      "time": "2026-05-08 13:23:23"
     }
   ]
 }
