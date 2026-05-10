@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2022-50944",
+      "title": "高危漏洞: CVE-2022-50944 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Aero CMS 0.0.1 contains a PHP code injection vulnerability that allows authenticated attackers to execute arbitrary PHP code by uploading malicious files through the image parameter. Attackers can upload PHP files with embedded code to the admin posts.php endpoint with source=add_post parameter, and the uploaded files are executed by the server.",
+      "refs": "https://github.com/MegaTKC/AeroCMS\nhttps://www.exploit-db.com/exploits/51085\nhttps://www.vulncheck.com/advisories/aero-cms-php-code-injection-via-posts-php",
+      "source": "NVD",
+      "time": "2026-05-10 23:44:14"
+    },
+    {
+      "cve_id": "CVE-2021-47949",
+      "title": "高危漏洞: CVE-2021-47949 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "CyberPanel 2.1 contains a command execution vulnerability that allows authenticated attackers to read arbitrary files and execute remote code by exploiting symlink attacks through the filemanager controller endpoint. Attackers can manipulate the completeStartingPath parameter in POST requests to /filemanager/controller to create symbolic links, read sensitive files like database credentials, and execute arbitrary shell commands through the /websites/fetchFolderDetails endpoint.",
+      "refs": "https://cyberpanel.net/\nhttps://github.com/usmannasir/cyberpanel\nhttps://www.exploit-db.com/exploits/50230",
+      "source": "NVD",
+      "time": "2026-05-10 23:44:10"
+    },
+    {
+      "cve_id": "CVE-2021-47945",
+      "title": "高危漏洞: CVE-2021-47945 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Argus Surveillance DVR 4.0 contains an unquoted service path vulnerability in the DVRWatchdog service that allows local attackers to escalate privileges by exploiting the service binary path. Attackers can place a malicious executable in the Program Files directory to be executed with LocalSystem privileges when the service starts.",
+      "refs": "https://www.exploit-db.com/exploits/50261\nhttps://www.vulncheck.com/advisories/argus-surveillance-dvr-unquoted-service-path-privilege-escalation",
+      "source": "NVD",
+      "time": "2026-05-10 23:44:03"
+    },
+    {
+      "cve_id": "CVE-2021-47944",
+      "title": "高危漏洞: CVE-2021-47944 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "memono Notepad 4.2 contains a denial of service vulnerability that allows attackers to crash the application by pasting excessively long character buffers into note fields. Attackers can generate a payload containing 350000 repeated characters and paste it twice into a new note to trigger an application crash on iOS devices.",
+      "refs": "https://www.exploit-db.com/exploits/49977\nhttps://www.vulncheck.com/advisories/memono-notepad-denial-of-service-via-buffer-overflow",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:59"
+    },
+    {
+      "cve_id": "CVE-2021-47943",
+      "title": "高危漏洞: CVE-2021-47943 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "TextPattern CMS 4.8.7 contains a remote code execution vulnerability that allows authenticated attackers to execute arbitrary commands by uploading malicious PHP files through the file upload functionality. Attackers can upload a PHP shell via the Files section in the content area and execute commands by accessing the uploaded file at /textpattern/files/ with GET parameters passed to the system function.",
+      "refs": "https://www.exploit-db.com/exploits/49996\nhttps://www.exploit-db.com/exploits/50415\nhttps://www.vulncheck.com/advisories/textpattern-cms-remote-code-execution-via-file-upload",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:53"
+    },
+    {
+      "cve_id": "CVE-2021-47941",
+      "title": "高危漏洞: CVE-2021-47941 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "WordPress Plugin Survey & Poll 1.5.7.3 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the wp_sap cookie parameter. Attackers can craft SQL payloads in the cookie to extract sensitive database information including usernames, passwords, and other confidential data from the WordPress database.",
+      "refs": "http://modalsurvey.pantherius.com/\nhttps://www.exploit-db.com/exploits/50269\nhttps://www.vulncheck.com/advisories/wordpress-plugin-survey-poll-sql-injection-via-sss-params",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:47"
+    },
+    {
+      "cve_id": "CVE-2021-47940",
+      "title": "高危漏洞: CVE-2021-47940 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WordPress Plugin Download From Files version 1.48 and earlier contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by exploiting the AJAX fileupload action. Attackers can send POST requests to the admin-ajax.php endpoint with the download_from_files_617_fileupload action, manipulating the allowExt parameter to bypass file type restrictions and upload executable files like PHP shells to the web root.",
+      "refs": "https://wordpress.org/plugins/download-from-files/\nhttps://www.exploit-db.com/exploits/50287\nhttps://www.vulncheck.com/advisories/wordpress-download-from-files-arbitrary-file-upload",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:43"
+    },
+    {
+      "cve_id": "CVE-2021-47939",
+      "title": "高危漏洞: CVE-2021-47939 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Evolution CMS 3.1.6 contains a remote code execution vulnerability that allows authenticated users with module creation permissions to execute arbitrary system commands by injecting PHP code into module parameters. Attackers can send POST requests to /manager/index.php with malicious PHP code in the 'post' parameter to create modules that execute arbitrary commands when invoked.",
+      "refs": "https://evo.im/\nhttps://github.com/evolution-cms/evolution/releases\nhttps://www.exploit-db.com/exploits/50296",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:38"
+    },
+    {
+      "cve_id": "CVE-2021-47938",
+      "title": "高危漏洞: CVE-2021-47938 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ImpressCMS 1.4.2 contains a remote code execution vulnerability in the autotasks administrative interface that allows authenticated attackers to execute arbitrary PHP code by injecting malicious code into the sat_code parameter. Attackers can authenticate, submit a POST request to /modules/system/admin.php?fct=autotasks&op=mod with crafted sat_code containing PHP commands, which creates an executable file that accepts arbitrary commands via GET parameters.",
+      "refs": "https://www.exploit-db.com/exploits/50298\nhttps://www.impresscms.org/\nhttps://www.impresscms.org/modules/downloads/",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:31"
+    },
+    {
+      "cve_id": "CVE-2021-47937",
+      "title": "高危漏洞: CVE-2021-47937 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "e107 CMS 2.3.0 contains a remote code execution vulnerability that allows authenticated users with theme installation permissions to execute arbitrary commands by uploading malicious theme files. Attackers can upload a crafted theme package through the theme.php endpoint that deploys a web shell to the e107_themes directory, then execute system commands via the payload.php script.",
+      "refs": "https://e107.org/\nhttps://e107.org/download\nhttps://www.exploit-db.com/exploits/50315",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:26"
+    },
+    {
+      "cve_id": "CVE-2021-47936",
+      "title": "高危漏洞: CVE-2021-47936 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-10 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OpenCATS 0.9.4 contains a remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary commands by uploading malicious PHP files disguised as resume attachments. Attackers can upload PHP payloads through the careers job application endpoint and execute system commands via POST requests to the uploaded file in the upload directory.",
+      "refs": "https://github.com/opencats/OpenCATS\nhttps://www.exploit-db.com/exploits/50585\nhttps://www.opencats.org/",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:21"
+    },
+    {
+      "cve_id": "CVE-2021-47935",
+      "title": "高危漏洞: CVE-2021-47935 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-10 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Sentry 8.2.0 contains a remote code execution vulnerability that allows authenticated superusers to execute arbitrary commands by injecting malicious pickle-serialized objects through the audit log entry data parameter. Attackers can submit crafted POST requests to the admin audit log endpoint with base64-encoded compressed pickle payloads in the data field to achieve code execution with application privileges.",
+      "refs": "https://sentry.io/welcome/\nhttps://www.exploit-db.com/exploits/50318\nhttps://www.vulncheck.com/advisories/sentry-remote-code-execution-via-pickle-deserialization",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:14"
+    },
+    {
+      "cve_id": "CVE-2021-47933",
+      "title": "高危漏洞: CVE-2021-47933 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-10 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WordPress MStore API 2.0.6 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to the REST API endpoint. Attackers can upload PHP files with arbitrary names to the config_file endpoint to achieve remote code execution on the server.",
+      "refs": "https://wordpress.org/plugins/mstore-api/\nhttps://www.exploit-db.com/exploits/50379\nhttps://www.vulncheck.com/advisories/wordpress-mstore-api-arbitrary-file-upload",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:09"
+    },
+    {
+      "cve_id": "CVE-2021-47932",
+      "title": "高危漏洞: CVE-2021-47932 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-10 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WordPress TheCartPress 1.5.3.6 contains an unauthenticated privilege escalation vulnerability that allows attackers to create administrator accounts by submitting crafted requests to the AJAX handler. Attackers can send POST requests to the tcp_register_and_login_ajax action with tcp_role set to administrator to gain full administrative access without authentication.",
+      "refs": "https://wordpress.org/plugin/thecartpress\nhttps://www.exploit-db.com/exploits/50378\nhttps://www.vulncheck.com/advisories/wordpress-thecartpress-privilege-escalation-unauthenticated",
+      "source": "NVD",
+      "time": "2026-05-10 23:43:03"
+    },
+    {
+      "cve_id": "CVE-2021-47930",
+      "title": "高危漏洞: CVE-2021-47930 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-10 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Balbooa Joomla Forms Builder 2.0.6 contains an unauthenticated SQL injection vulnerability in the form submission handler that allows remote attackers to execute arbitrary SQL queries. Attackers can send POST requests to the com_baforms component with malicious JSON payloads in the 'id' field parameter to extract sensitive database information.",
+      "refs": "https://www.balbooa.com/\nhttps://www.exploit-db.com/exploits/50447\nhttps://www.vulncheck.com/advisories/balbooa-joomla-forms-builder-sql-injection-unauthenticated",
+      "source": "NVD",
+      "time": "2026-05-10 23:42:58"
+    },
+    {
+      "cve_id": "CVE-2021-47928",
+      "title": "高危漏洞: CVE-2021-47928 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-10 21:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Opencart TMD Vendor System 3.x contains a blind SQL injection vulnerability that allows unauthenticated attackers to extract database information by injecting SQL code through the product_id parameter. Attackers can craft malicious SQL queries using time-based or content-based blind injection techniques to enumerate usernames, emails, and password reset codes from the oc_user table.",
+      "refs": "https://www.exploit-db.com/exploits/50493\nhttps://www.opencartextensions.in/\nhttps://www.opencartextensions.in/opencart-multi-vendor-multi-seller-marketplace",
+      "source": "NVD",
+      "time": "2026-05-10 23:42:46"
+    },
+    {
+      "cve_id": "CVE-2021-47923",
+      "title": "高危漏洞: CVE-2021-47923 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-10 21:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OpenCart 3.0.3.8 contains a session fixation vulnerability that allows attackers to hijack user sessions by injecting arbitrary values into the OCSESSID cookie. Attackers can set malicious OCSESSID cookie values that the server accepts and maintains, enabling session takeover and unauthorized access to user accounts.",
+      "refs": "https://www.exploit-db.com/exploits/50555\nhttps://www.opencart.com/\nhttps://www.vulncheck.com/advisories/opencart-session-fixation-via-ocsessid-cookie",
+      "source": "NVD",
+      "time": "2026-05-10 23:42:40"
+    },
+    {
       "cve_id": "CVE-2026-8234",
       "title": "高危漏洞: CVE-2026-8234 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -912,193 +1099,6 @@
       "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-xcmw-grxf-wjhj",
       "source": "NVD",
       "time": "2026-05-09 03:04:48"
-    },
-    {
-      "cve_id": "CVE-2026-41512",
-      "title": "高危漏洞: CVE-2026-41512 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-08 22:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "ai-scanner is an AI model safety scanner built on NVIDIA garak. From version 1.0.0 to before version 1.4.1, there is a remote code execution vulnerability via JavaScript injection in `BrowserAutomation::PlaywrightService`. This issue has been patched in version 1.4.1.",
-      "refs": "https://github.com/0din-ai/ai-scanner/releases/tag/v1.4.1\nhttps://github.com/0din-ai/ai-scanner/security/advisories/GHSA-r27j-xxgx-f5vr",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:44"
-    },
-    {
-      "cve_id": "CVE-2026-41507",
-      "title": "高危漏洞: CVE-2026-41507 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-08 22:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "math-codegen generates code from mathematical expressions. Prior to version 0.4.3, string literal content passed to cg.parse() is injected verbatim into a new Function() body without sanitization. This allows an attacker to execute arbitrary system commands when user-controlled input reaches the parser. Any application exposing a math evaluation endpoint where user input flows into cg.parse() is vulnerable to full RCE. This issue has been patched in version 0.4.3.",
-      "refs": "https://github.com/mauriciopoppe/math-codegen/commit/4bb52d3030683362b3559ee8dd91350555a05f6b\nhttps://github.com/mauriciopoppe/math-codegen/pull/11\nhttps://github.com/mauriciopoppe/math-codegen/security/advisories/GHSA-p6x5-p4xf-cc4r",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:40"
-    },
-    {
-      "cve_id": "CVE-2026-41497",
-      "title": "高危漏洞: CVE-2026-41497 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-08 22:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PraisonAI is a multi-agent teams system. Prior to version 4.6.9, the fix for PraisonAI's MCP command handling does not add a command allowlist or argument validation to parse_mcp_command(), allowing arbitrary executables like bash, python, or /bin/sh with inline code execution flags to pass through to subprocess execution. This issue has been patched in version 4.6.9.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/commit/47bff65413beaa3c21bf633c1fae4e684348368c\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-9qhq-v63v-fv3j\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-9qhq-v63v-fv3j",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:35"
-    },
-    {
-      "cve_id": "CVE-2026-41496",
-      "title": "高危漏洞: CVE-2026-41496 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-08 22:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "PraisonAI is a multi-agent teams system. Prior to praisonai version 4.6.9 and praisonaiagents version 1.6.9, the fix for CVE-2026-40315 added input validation to SQLiteConversationStore only. Nine sibling backends — MySQL, PostgreSQL, async SQLite/MySQL/PostgreSQL, Turso, SingleStore, Supabase, SurrealDB — pass table_prefix straight into f-string SQL. Same root cause, same code pattern, same exploitation. 52 unvalidated injection points across the codebase. postgres.py additionally accepts an unvalidated schema parameter used directly in DDL. This issue has been patched in praisonai version 4.6.9 and praisonaiagents version 1.6.9.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-rg3h-x3jw-7jm5",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:28"
-    },
-    {
-      "cve_id": "CVE-2026-41491",
-      "title": "高危漏洞: CVE-2026-41491 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-08 22:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge. From versions 1.3.0 to before 1.15.14, 1.16.0-rc.1 to before 1.16.14, and 1.17.0-rc.1 to before 1.17.5, a vulnerability has been found in Dapr that allows bypassing access control policies for service invocation using reserved URL characters and path traversal sequences in method paths. The ACL normalized the method path independently from the dispatch layer, so the ACL evaluated one path while the target application received a different one. This issue has been patched in versions 1.15.14, 1.16.14, and 1.17.5.",
-      "refs": "https://github.com/dapr/dapr/pull/9589\nhttps://github.com/dapr/dapr/security/advisories/GHSA-85gx-3qv6-4463",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:24"
-    },
-    {
-      "cve_id": "CVE-2026-43284",
-      "title": "高危漏洞: CVE-2026-43284 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-08 16:16:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: esp: avoid in-place decrypt on shared skb frags\n\nMSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP\nmarks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(),\nso later paths that may modify packet data can first make a private\ncopy. The IPv4/IPv6 datagram append paths did not set this flag when\nsplicing pages into UDP skbs.\n\nThat leaves an ESP-in-UDP packet made from shared pipe pages looking\nlike an ordinary uncloned nonlinear skb. ESP input then takes the no-COW\nfast path for uncloned skbs without a frag_list and decrypts in place\nover data that is not owned privately by the skb.\n\nMark IPv4/IPv6 datagram splice frags with SKBFL_SHARED_FRAG, matching\nTCP. Also make ESP input fall back to skb_cow_data() when the flag is\npresent, so ESP does not decrypt externally backed frags in place.\nPrivate nonlinear skb frags still use the existing fast path.\n\nThis intentionally does not change ESP output. In esp_output_head(),\nthe path that appends the ESP trailer to existing skb tailroom without\ncalling skb_cow_data() is not reachable for nonlinear skbs:\nskb_tailroom() returns zero when skb->data_len is nonzero, while ESP\ntailen is positive. Thus ESP output will either use the separate\ndestination-frag path or fall back to skb_cow_data().",
-      "refs": "https://git.kernel.org/stable/c/50ed1e7873100f77abad20fd31c51029bc49cd03\nhttps://git.kernel.org/stable/c/52646cbd00e765a6db9c3afe9535f26218276034\nhttps://git.kernel.org/stable/c/5d55c7336f8032d434adcc5fab987ccc93a44aec",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:20"
-    },
-    {
-      "cve_id": "CVE-2026-4935",
-      "title": "高危漏洞: CVE-2026-4935 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-08 15:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The OttoKit: All-in-One Automation Platform WordPress plugin before 1.1.23 does not properly sanitize user input before using it in a SQL statement, which could allow unauthenticated attackers to perform SQL injection attacks.",
-      "refs": "https://wpscan.com/vulnerability/54bc1bf4-1033-49e2-aff9-a14c834c35bd/",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:12"
-    },
-    {
-      "cve_id": "CVE-2025-67888",
-      "title": "高危漏洞: CVE-2025-67888 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 15:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "An issue was discovered in Control Web Panel (CWP) before 0.9.8.1209. User input passed via the \"key\" GET parameter to /admin/index.php (when the \"api\" parameter is set) is not properly sanitized before being used to execute OS commands. This can be exploited by unauthenticated attackers to inject and execute arbitrary OS commands with the privileges of root on the web server. Softaculous or SitePad must be present.",
-      "refs": "https://karmainsecurity.com/KIS-2025-09\nhttps://wiki.centos-webpanel.com/cwp-security-instructions\nhttp://seclists.org/fulldisclosure/2025/Dec/25",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:08"
-    },
-    {
-      "cve_id": "CVE-2024-51092",
-      "title": "高危漏洞: CVE-2024-51092 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-08 14:16:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "LibreNMS before 24.10.0 allows a remote attacker to execute arbitrary code via OS command injection involving AboutController.php's index(), SettingsController.php's update(), and PollDevice.php's initRrdDirectory().",
-      "refs": "https://github.com/librenms/librenms/security/advisories/GHSA-x645-6pf9-xwxw\nhttps://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/http/librenms_authenticated_rce_cve_2024_51092.rb\nhttps://github.com/librenms/librenms/security/advisories/GHSA-x645-6pf9-xwxw",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:04"
-    },
-    {
-      "cve_id": "CVE-2024-27686",
-      "title": "高危漏洞: CVE-2024-27686 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-08 14:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Mikrotik RouterOS (x86) 6.40.5 through 6.49.10 (fixed in 7) allows a remote attacker to cause a denial of service (device crash) via crafted packet data to the SMB service on TCP port 445.",
-      "refs": "https://github.com/ice-wzl/RouterOS-SMB-DOS-POC\nhttps://www.exploit-db.com/exploits/51931",
-      "source": "NVD",
-      "time": "2026-05-09 03:04:00"
-    },
-    {
-      "cve_id": "CVE-2023-42344",
-      "title": "高危漏洞: CVE-2023-42344 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-08 13:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Alkacon OpenCms before 10.5.1 allows remote unauthenticated attackers to obtain sensitive information via a cmis-online/query XXE attack on a Chemistry servlet.",
-      "refs": "https://labs.watchtowr.com/xxe-you-can-depend-on-me-opencms/\nhttps://github.com/projectdiscovery/nuclei-templates/issues/8864",
-      "source": "NVD",
-      "time": "2026-05-09 03:03:55"
-    },
-    {
-      "cve_id": "CVE-2022-26522",
-      "title": "高危漏洞: CVE-2022-26522 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-08 13:16:08",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The socket connection handler in aswArPot.sys in the Avast and AVG Windows Anti Rootkit driver before 22.1 allows local attackers to execute arbitrary code in kernel mode or cause a denial of service (memory corruption and OS crash) due to a double fetch vulnerability at aswArPot+0xc4a3.",
-      "refs": "https://www.avast.com/bug-bounty\nhttps://www.sentinelone.com/labs/vulnerabilities-in-avast-and-avg-put-millions-at-risk/",
-      "source": "NVD",
-      "time": "2026-05-09 03:03:50"
-    },
-    {
-      "cve_id": "CVE-2026-42501",
-      "title": "高危漏洞: CVE-2026-42501 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-08 04:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A malicious module proxy can exploit a flaw in the go command's validation of module checksums to bypass checksum database validation. This vulnerability affects any user using an untrusted module proxy (GOMODPROXY) or checksum database (GOSUMDB). A malicious module proxy can serve altered versions of the Go toolchain. When selecting a different version of the Go toolchain than the currently installed toolchain (due to the GOTOOLCHAIN environment variable, or a go.work or go.mod with a toolchain line), the go command will download and execute a toolchain provided by the module proxy. A malicious module proxy can bypass checksum database validation for this downloaded toolchain. Since this vulnerability affects the security of toolchain downloads, setting GOTOOLCHAIN to a fixed version is not sufficient. You must upgrade your base Go toolchain. The go tool always validates the hash of a toolchain before executing it, so fixed versions will refuse to execute any cached, altered versions of the toolchain. The go tool trusts go.sum files to contain accurate hashes of the current module's dependencies. A malicious proxy exploiting this vulnerability to serve an altered module will have caused an incorrect hash to be recorded in the go.sum. Users who have configured a non-trusted GOPROXY can determine if they have been affected by running \"rm go.sum ; go mod tidy ; go mod verify\", which will revalidate all dependencies of the current module. The specific flaw in more detail: The go command consults the checksum database to validate downloaded modules, when a module is not listed in the go.sum file. It verifies that the module hash reported by the checksum database matches the hash of the downloaded module. If, however, the checksum database returns a successful response that contains no entry for the module, the go command incorrectly permitted validation to succeed. A module proxy may mirror or proxy the checksum database, in which case the go command will not connect to the checksum database directly. Checksums reported by the checksum database are cryptographically signed, so a malicious proxy cannot alter the reported checksum for a module. However, a proxy which returns an empty checksum response, or a checksum response for an unrelated module, could cause the go command to proceed as if a downloaded module has been validated.",
-      "refs": "https://go.dev/cl/775321\nhttps://go.dev/issue/79070\nhttps://groups.google.com/g/golang-announce/c/qcCIEXso47M",
-      "source": "NVD",
-      "time": "2026-05-09 03:03:46"
-    },
-    {
-      "cve_id": "CVE-2026-39820",
-      "title": "高危漏洞: CVE-2026-39820 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-08 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Well-crafted inputs reaching ParseAddress, ParseAddressList, and ParseDate were able to trigger excessive CPU exhaustion and memory allocations.",
-      "refs": "https://go.dev/cl/759940\nhttps://go.dev/issue/78566\nhttps://groups.google.com/g/golang-announce/c/qcCIEXso47M",
-      "source": "NVD",
-      "time": "2026-05-09 03:03:39"
-    },
-    {
-      "cve_id": "CVE-2026-33811",
-      "title": "高危漏洞: CVE-2026-33811 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-08 04:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "When using LookupCNAME with the cgo DNS resolver, a very long CNAME response can trigger a double-free of C memory and a crash.",
-      "refs": "https://go.dev/cl/767860\nhttps://go.dev/issue/78803\nhttps://groups.google.com/g/golang-announce/c/qcCIEXso47M",
-      "source": "NVD",
-      "time": "2026-05-09 03:03:34"
-    },
-    {
-      "cve_id": "CVE-2025-66467",
-      "title": "高危漏洞: CVE-2025-66467 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-05-08 21:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Missing MinIO policy cleanup on bucket deletion via Apache CloudStack allows users to retain access to buckets which they previously owned. If another user creates a new bucket with the same name, the previous owners can gain unauthorized read and write access to it by using the previously generated access and secret keys.\n\nUsers are recommended to upgrade to Apache CloudStack versions 4.20.3.0 or 4.22.0.1, or later, which fixes this issue.",
-      "refs": "https://lists.apache.org/thread/n8mt5b7wkpysstb8w7rr9f02kc5cq2xm",
-      "source": "NVD",
-      "time": "2026-05-09 00:09:16"
-    },
-    {
-      "cve_id": "CVE-2022-50994",
-      "title": "高危漏洞: CVE-2022-50994 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-08 21:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "DrayTek Vigor 2960 firmware versions prior to 1.5.1.4 contain an OS command injection vulnerability in the CGI login handler that allows unauthenticated remote attackers to execute arbitrary commands by injecting shell metacharacters into the formpassword parameter. Attackers can exploit unsanitized input passed to the otp_check.sh script to achieve remote code execution with web server privileges. Exploitation requires knowledge of a valid username and that the target account has MOTP authentication enabled.",
-      "refs": "https://www.draytek.co.uk/support/downloads/vigor-2960/older-firmware/firmware-1514?task=download.send&id=2597:readme-v2960-1514&catid=1251\nhttps://www.draytek.com/about/newsroom/2021/2021/end-of-life-notification-vigor2960\nhttps://www.vulncheck.com/advisories/draytek-vigor-2960-os-command-injection-via-mainfunction-cgi",
-      "source": "NVD",
-      "time": "2026-05-09 00:09:09"
     }
   ]
 }
