@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4802",
+      "title": "高危漏洞: CVE-2026-4802 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-05-11 22:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in Cockpit. This vulnerability allows a remote attacker to achieve arbitrary command execution on the host by exploiting unsanitized user-controlled parameters within crafted links in the system logs user interface (UI). An attacker can inject shell metacharacters and command substitutions into these parameters, leading to the execution of arbitrary shell commands on the affected system. This could result in a complete system compromise.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-4802\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2451155\nhttps://github.com/cockpit-project/cockpit/blob/e204cd130/pkg/systemd/logsJournal.jsx#L206-L210",
+      "source": "NVD",
+      "time": "2026-05-12 01:18:39"
+    },
+    {
+      "cve_id": "CVE-2025-10470",
+      "title": "高危漏洞: CVE-2025-10470 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-11 20:16:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+      "description": "The Magic Link authentication flow accepts multiple invalid authentication requests without adequate rate limiting or resource control, leading to uncontrolled memory usage growth.\n\nThis vulnerability can result in a denial-of-service condition, causing service unavailability for deployments that utilize the Magic Link authenticator. The impact is limited to these specific deployments and requires repeated invalid authentication attempts to trigger.",
+      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2025-4469/",
+      "source": "NVD",
+      "time": "2026-05-12 01:18:34"
+    },
+    {
+      "cve_id": "CVE-2026-43500",
+      "title": "高危漏洞: CVE-2026-43500 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-11 16:16:16",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nrxrpc: Also unshare DATA/RESPONSE packets when paged frags are present\n\nThe DATA-packet handler in rxrpc_input_call_event() and the RESPONSE\nhandler in rxrpc_verify_response() copy the skb to a linear one before\ncalling into the security ops only when skb_cloned() is true.  An skb\nthat is not cloned but still carries externally-owned paged fragments\n(e.g. SKBFL_SHARED_FRAG set by splice() into a UDP socket via\n__ip_append_data, or a chained skb_has_frag_list()) falls through to\nthe in-place decryption path, which binds the frag pages directly into\nthe AEAD/skcipher SGL via skb_to_sgvec().\n\nExtend the gate to also unshare when skb_has_frag_list() or\nskb_has_shared_frag() is true.  This catches the splice-loopback vector\nand other externally-shared frag sources while preserving the\nzero-copy fast path for skbs whose frags are kernel-private (e.g. NIC\npage_pool RX, GRO).  The OOM/trace handling already in place is reused.",
+      "refs": "https://git.kernel.org/stable/c/3eae0f4f9f7206a4801efa5e0235c25bbd5a412c\nhttps://git.kernel.org/stable/c/aa54b1d27fe0c2b78e664a34fd0fdf7cd1960d71\nhttps://git.kernel.org/stable/c/d45179f8795222ce858770dc619abe51f9d24411",
+      "source": "NVD",
+      "time": "2026-05-12 01:18:28"
+    },
+    {
       "cve_id": "CVE-2026-41951",
       "title": "高危漏洞: CVE-2026-41951 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1066,39 +1099,6 @@
       "refs": "https://gist.github.com/dwilliams27/a4e26fe747c8561d608f7549804bd85f\nhttps://github.com/debevv/nanoMODBUS\nhttps://github.com/debevv/nanoMODBUS/blob/master/nanomodbus.c#L580-L615",
       "source": "NVD",
       "time": "2026-05-09 03:05:21"
-    },
-    {
-      "cve_id": "CVE-2026-41588",
-      "title": "高危漏洞: CVE-2026-41588 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-05-08 23:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "RELATE is a web-based courseware package. Prior to commit 2f68e16, there is a timing attack vulnerability in course/auth.py — check_sign_in_key(). This issue has been patched via commit 2f68e16.",
-      "refs": "https://github.com/inducer/relate/commit/2f68e16cd3b96d25c188c1aa3f7e13cdb15cdaeb\nhttps://github.com/inducer/relate/security/advisories/GHSA-78j7-9xr9-2728",
-      "source": "NVD",
-      "time": "2026-05-09 03:05:17"
-    },
-    {
-      "cve_id": "CVE-2026-41576",
-      "title": "高危漏洞: CVE-2026-41576 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-08 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
-      "description": "Brave CMS is an open-source CMS. Prior to commit 6c56603, the contact form is publicly accessible (no authentication required). User-supplied message text is passed through PHP's nl2br() function, which converts newlines to <br> tags but does not escape HTML. The resulting string is then passed to a Blade email template using the unescaped {!! $msg !!} directive. The resulting content is then rendered in a Blade email template using the unescaped {!! $msg !!} directive. Because HTML is not sanitized, arbitrary markup can be injected into the email body. While modern HTML-capable email clients (Gmail or Outlook Web) typically block JavaScript execution, they still render HTML content. This allows attackers to craft convincing phishing interfaces inside the email sent to the administrator. This issue has been patched via commit 6c56603.",
-      "refs": "https://github.com/Ajax30/BraveCMS-2.0/commit/6c5660373cf5f0ca9181603280427aca46ef11ea\nhttps://github.com/Ajax30/BraveCMS-2.0/security/advisories/GHSA-x7cg-8grr-grvx",
-      "source": "NVD",
-      "time": "2026-05-09 03:05:12"
-    },
-    {
-      "cve_id": "CVE-2026-41570",
-      "title": "高危漏洞: CVE-2026-41570 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-08 23:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PHPUnit is a testing framework for PHP. In versions 12.5.21 and 13.1.5, PHPUnit forwards PHP INI settings to child processes (used for isolated/PHPT test execution) as -d name=value command-line arguments without neutralizing INI metacharacters. Because PHP's INI parser interprets \" as a string delimiter, ; as the start of a comment, and most importantly a newline as a directive separator, a value containing a newline is parsed by the child process as multiple INI directives. An attacker able to influence a single INI value can therefore inject arbitrary additional directives into the child's configuration, including auto_prepend_file, extension, disable_functions, open_basedir, and others. Setting auto_prepend_file to an attacker-controlled path yields remote code execution in the child process. This issue has been patched in versions 12.5.22 and 13.1.6.",
-      "refs": "https://github.com/sebastianbergmann/phpunit/pull/6592\nhttps://github.com/sebastianbergmann/phpunit/security/advisories/GHSA-qrr6-mg7r-m243\nhttps://github.com/sebastianbergmann/phpunit/pull/6592",
-      "source": "NVD",
-      "time": "2026-05-09 03:05:08"
     }
   ]
 }
