@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-43993",
+      "title": "高危漏洞: CVE-2026-43993 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-13 01:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:L",
+      "description": "JunoClaw is an agentic AI platform built on Juno Network. Prior to 0.x.y-security-1, the WAVS bridge's computeDataVerify called fetch() on agent-supplied URLs without validating scheme, port, or resolved IP, resulting in an SSRF vulnerability. This vulnerability is fixed in 0.x.y-security-1.",
+      "refs": "https://github.com/Dragonmonk111/junoclaw/commit/a168608\nhttps://github.com/Dragonmonk111/junoclaw/releases/tag/v0.x.y-security-1\nhttps://github.com/Dragonmonk111/junoclaw/security/advisories/GHSA-q545-mvjf-q9pg",
+      "source": "NVD",
+      "time": "2026-05-13 03:28:01"
+    },
+    {
+      "cve_id": "CVE-2026-43992",
+      "title": "高危漏洞: CVE-2026-43992 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-13 01:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "JunoClaw is an agentic AI platform built on Juno Network. Prior to 0.x.y-security-1, every MCP write tool (send_tokens, execute_contract, instantiate_contract, upload_wasm, ibc_transfer, etc.) accepted 'mnemonic: string' as an explicit tool-call parameter. The BIP-39 seed was consequently embedded in the LLM tool-call JSON, exposing it to any transport, log, or telemetry surface in the path between the LLM provider and the MCP process. This vulnerability is fixed in 0.x.y-security-1.",
+      "refs": "https://github.com/Dragonmonk111/junoclaw/commit/339701e\nhttps://github.com/Dragonmonk111/junoclaw/releases/tag/v0.x.y-security-1\nhttps://github.com/Dragonmonk111/junoclaw/security/advisories/GHSA-j75q-8xvm-6c48",
+      "source": "NVD",
+      "time": "2026-05-13 03:27:57"
+    },
+    {
+      "cve_id": "CVE-2026-43991",
+      "title": "高危漏洞: CVE-2026-43991 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-13 01:16:21",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "JunoClaw is an agentic AI platform built on Juno Network. Prior to 0.x.y-security-1, substring-based blocklist in plugin-shell's command-safety check could be bypassed by adversarial argument constructions, allowing unauthorized command execution on the host when combined with the companion advisory. Pre-patch, the check was applied to the raw command string rather than the parsed first token. This vulnerability is fixed in 0.x.y-security-1.",
+      "refs": "https://github.com/Dragonmonk111/junoclaw/commit/2bc54f6\nhttps://github.com/Dragonmonk111/junoclaw/security/advisories/GHSA-fvq5-79h6-952c",
+      "source": "NVD",
+      "time": "2026-05-13 03:27:53"
+    },
+    {
+      "cve_id": "CVE-2026-43990",
+      "title": "高危漏洞: CVE-2026-43990 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-13 01:16:20",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "JunoClaw is an agentic AI platform built on Juno Network. Prior to 0.x.y-security-1, plugin-shell's run_command wrapped every agent-supplied command in 'sh -c' / 'cmd /C' and passed the full argument string to the shell's parser, allowing shell metacharacters in agent-supplied arguments to be interpreted as command syntax. This vulnerability is fixed in 0.x.y-security-1.",
+      "refs": "https://github.com/Dragonmonk111/junoclaw/commit/2bc54f6\nhttps://github.com/Dragonmonk111/junoclaw/releases/tag/v0.x.y-security-1\nhttps://github.com/Dragonmonk111/junoclaw/security/advisories/GHSA-gpvm-3chf-2649",
+      "source": "NVD",
+      "time": "2026-05-13 03:27:48"
+    },
+    {
+      "cve_id": "CVE-2026-43989",
+      "title": "高危漏洞: CVE-2026-43989 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-05-13 01:16:20",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
+      "description": "JunoClaw is an agentic AI platform built on Juno Network. Prior to 0.x.y-security-1, the upload_wasm MCP tool accepted a filesystem path from the agent and uploaded whatever bytes the path resolved to, with no validation of location, symlink target, file size, or file format. This vulnerability is fixed in 0.x.y-security-1.",
+      "refs": "https://github.com/Dragonmonk111/junoclaw/commit/a7886cd\nhttps://github.com/Dragonmonk111/junoclaw/releases/tag/v0.x.y-security-1\nhttps://github.com/Dragonmonk111/junoclaw/security/advisories/GHSA-rw59-34hw-pmwp",
+      "source": "NVD",
+      "time": "2026-05-13 03:27:43"
+    },
+    {
       "cve_id": "CVE-2026-8111",
       "title": "高危漏洞: CVE-2026-8111 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/outline/outline/security/advisories/GHSA-gf8h-cv9v-q4fw",
       "source": "NVD",
       "time": "2026-05-12 10:04:42"
-    },
-    {
-      "cve_id": "CVE-2026-43888",
-      "title": "高危漏洞: CVE-2026-43888 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-12 06:22:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:H",
-      "description": "Outline is a service that allows for collaborative documentation. Prior to 1.7.0, ZipHelper.extract computes the extraction path for each entry by passing a full filesystem path through trimFileAndExt, a filename helper that calls path.basename on its input when truncating. When a zip entry's nested path is long enough to push the joined filesystem path over MAX_PATH_LENGTH (4096 bytes), trimFileAndExt silently drops all directory components and returns a bare filename. fs.createWriteStream then opens the file relative to the process working directory instead of inside the extraction sandbox, and the escaped file persists after import cleanup because cleanupExtractedData only removes the temporary extraction directory. This vulnerability is fixed in 1.7.0.",
-      "refs": "https://github.com/outline/outline/security/advisories/GHSA-hw32-2v7j-mgqc",
-      "source": "NVD",
-      "time": "2026-05-12 10:04:38"
-    },
-    {
-      "cve_id": "CVE-2026-43887",
-      "title": "高危漏洞: CVE-2026-43887 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-12 06:22:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Outline is a service that allows for collaborative documentation. From 0.84.0 to 1.6.1, the Outline comment section permits users to mention other users; however, the backend does not validate or sanitize the href attribute associated with these mentions. As a result, potentially dangerous protocols (e.g., javascript:) are not filtered, introducing a risk of client-side code execution. This vulnerability is fixed in 1.7.0.",
-      "refs": "https://github.com/outline/outline/security/advisories/GHSA-rqrg-f3qc-xvgh",
-      "source": "NVD",
-      "time": "2026-05-12 10:04:34"
-    },
-    {
-      "cve_id": "CVE-2026-43886",
-      "title": "高危漏洞: CVE-2026-43886 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-12 06:22:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N",
-      "description": "Outline is a service that allows for collaborative documentation. From 0.84.0 to 1.6.1, a logic error in OAuthInterface.validateScope() uses Array.some() to validate requested OAuth scopes, causing the function to accept the entire scope array if any single scope is valid. An attacker can smuggle the wildcard * scope by requesting scope=read *, escalating a read-only OAuth token to full unrestricted API access including write, delete, and admin operations. This vulnerability is fixed in 1.7.0.",
-      "refs": "https://github.com/outline/outline/security/advisories/GHSA-7732-6qrg-wjf4",
-      "source": "NVD",
-      "time": "2026-05-12 10:04:29"
-    },
-    {
-      "cve_id": "CVE-2026-43884",
-      "title": "高危漏洞: CVE-2026-43884 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-12 06:22:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "WWBN AVideo is an open source video platform. In versions up to and including 29.0, two endpoints (plugin/AI/receiveAsync.json.php and objects/EpgParser.php) in AVideo call isSSRFSafeURL() to validate user-supplied URLs, then fetch them using bare file_get_contents() without disabling PHP's automatic redirect following. An attacker can supply a URL pointing to a server they control that returns a 302 redirect to an internal/cloud-metadata address (e.g., http://169.254.169.254/latest/meta-data/). Since isSSRFSafeURL() only validates the initial URL, the redirect target bypasses all SSRF protections. Commit 603e7bf77a835584387327e35560262feb075db3 contains an updated fix.",
-      "refs": "https://github.com/WWBN/AVideo/commit/603e7bf77a835584387327e35560262feb075db3\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-2hch-c97c-g99x",
-      "source": "NVD",
-      "time": "2026-05-12 10:04:25"
-    },
-    {
-      "cve_id": "CVE-2026-43873",
-      "title": "高危漏洞: CVE-2026-43873 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-12 06:22:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "WWBN AVideo is an open source video platform. In versions up to and including 29.0, plugin/CloneSite/cloneClient.json.php echoes the local CloneSite shared secret ($objClone->myKey, a constant md5($global['systemRootPath'] . $global['salt'])) into the HTTP response body on every unauthenticated request. The unauthenticated error branch was intended to reject non-admin callers without a valid key, but the rejection message interpolates the expected key before die(). When the victim has CloneSite configured with a remote cloneSiteURL (standard federation/backup setup), the leaked myKey is exactly the credential that authenticates the victim to that remote server's cloneServer.json.php, allowing the attacker to impersonate the victim and trigger a full mysqldump of the remote's database to the remote's public videos/clones/ directory Commit e6566f56a28f4556b2a0a09d03717a719dcb49da contains an updated fix.",
-      "refs": "https://github.com/WWBN/AVideo/commit/e6566f56a28f4556b2a0a09d03717a719dcb49da\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-qm9p-p5pw-jrx2",
-      "source": "NVD",
-      "time": "2026-05-12 10:04:21"
     }
   ]
 }
