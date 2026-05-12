@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7287",
+      "title": "高危漏洞: CVE-2026-7287 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-12 12:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "** UNSUPPORTED WHEN ASSIGNED ** A buffer overflow vulnerability in the formWep(), formWlAc(), formPasswordSetup(), formUpgradeCert(), and formDelcert() functions of the “webs” binary in Zyxel NWA1100-N customized firmware version 1.00(AACE.1)C0 could allow an attacker to trigger a denial-of-service (DoS) condition by sending a crafted HTTP request to a vulnerable device.",
+      "refs": "https://www.zyxel.com/global/en/support/end-of-life",
+      "source": "NVD",
+      "time": "2026-05-12 13:58:21"
+    },
+    {
+      "cve_id": "CVE-2026-7256",
+      "title": "高危漏洞: CVE-2026-7256 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-12 12:16:29",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI program of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to execute operating system (OS) commands on a vulnerable device by sending a crafted HTTP request.",
+      "refs": "https://www.zyxel.com/global/en/support/end-of-life",
+      "source": "NVD",
+      "time": "2026-05-12 13:58:17"
+    },
+    {
+      "cve_id": "CVE-2026-45430",
+      "title": "高危漏洞: CVE-2026-45430 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-12 12:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L",
+      "description": "The Salesforce module before 1.x-1.0.1 for Backdrop CMS does not properly use a random state parameter to protect the authorization flow against CSRF attacks.",
+      "refs": "https://backdropcms.org/security/backdrop-sa-contrib-2026-001",
+      "source": "NVD",
+      "time": "2026-05-12 13:58:12"
+    },
+    {
+      "cve_id": "CVE-2026-34263",
+      "title": "高危漏洞: CVE-2026-34263 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-12 11:16:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Due to improper Spring Security configuration, SAP Commerce cloud allows an unauthenticated user to perform malicious configuration upload and code injection, resulting in arbitrary server-side code execution, leading to high impact on Confidentiality, Integrity, and Availability of the application.",
+      "refs": "https://me.sap.com/notes/3733064\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-05-12 13:58:06"
+    },
+    {
+      "cve_id": "CVE-2026-34260",
+      "title": "高危漏洞: CVE-2026-34260 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-12 11:16:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:H",
+      "description": "SAP S/4HANA (SAP Enterprise Search for ABAP) contains a SQL injection vulnerability that allows an authenticated attacker to inject malicious SQL statements through user-controlled input. The application directly concatenates this malicious user input into SQL queries, which are then passed to the underlying database without proper validation or sanitization. Upon successful exploitation, an attacker may gain unauthorized access to sensitive database information and could potentially crash the application. This vulnerability has a high impact on the confidentiality and availability of the application, while integrity remains unaffected.",
+      "refs": "https://me.sap.com/notes/3724838\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-05-12 13:57:59"
+    },
+    {
+      "cve_id": "CVE-2026-34259",
+      "title": "高危漏洞: CVE-2026-34259 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-12 11:16:11",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Due to an OS Command Execution vulnerability in SAP Forecasting & Replenishment, an authenticated attacker with administrative authorizations could abuse a non-remote-enabled function to execute arbitrary operating system commands. Successful exploitation could allow the attacker to read or modify any system data or shut down the system, resulting in a complete compromise of confidentiality, integrity, and availability.",
+      "refs": "https://me.sap.com/notes/3732471\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-05-12 13:57:50"
+    },
+    {
+      "cve_id": "CVE-2026-45321",
+      "title": "高危漏洞: CVE-2026-45321 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-12 09:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "On 2026-05-11, between approximately 19:20 and 19:26 UTC, 84 malicious versions across 42 @tanstack/* packages were published to the npm registry. The publishes were authenticated via the legitimate GitHub Actions OIDC trusted-publisher binding for TanStack/router, but the publish workflow itself was not modified. The attacker chained three known vulnerability classes — a pull_request_target \"Pwn Request\" misconfiguration, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of the OIDC token from the Actions runner process — to publish credential-stealing malware under a trusted identity. Each affected package received exactly two malicious versions, published a few minutes apart.",
+      "refs": "https://github.com/TanStack/router/issues/7383\nhttps://github.com/TanStack/router/security/advisories/GHSA-g7cv-rxg3-hmpx",
+      "source": "NVD",
+      "time": "2026-05-12 13:57:43"
+    },
+    {
       "cve_id": "CVE-2026-43914",
       "title": "高危漏洞: CVE-2026-43914 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/AzuraCast/AzuraCast/commit/18c793b4427eb49e67a2fea99a89f1c9d9dd808d\nhttps://github.com/AzuraCast/AzuraCast/releases/tag/0.23.6\nhttps://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-vp2f-cqqp-478j",
       "source": "NVD",
       "time": "2026-05-10 09:56:57"
-    },
-    {
-      "cve_id": "CVE-2026-42575",
-      "title": "高危漏洞: CVE-2026-42575 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-10 04:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "apko allows users to build and publish OCI container images built from apk packages. Prior to version 1.2.7, apko verifies the signature on APKINDEX.tar.gz but never compares individually downloaded .apk packages against the checksum recorded in the signed index. The checksum is parsed and available via ChecksumString(), and the downloaded package control hash is computed, but the two values are never compared in getPackageImpl(). Mismatched packages are silently accepted. An attacker who can substitute download responses (compromised mirror, HTTP repository, poisoned CDN cache) can install arbitrary packages into built images. This issue has been patched in version 1.2.7.",
-      "refs": "https://github.com/chainguard-dev/apko/commit/a118c3d604107532b5525bd4bee2fb369a6228aa\nhttps://github.com/chainguard-dev/apko/releases/tag/v1.2.7\nhttps://github.com/chainguard-dev/apko/security/advisories/GHSA-hcwr-pq9g-rq3m",
-      "source": "NVD",
-      "time": "2026-05-10 09:56:52"
-    },
-    {
-      "cve_id": "CVE-2026-42574",
-      "title": "高危漏洞: CVE-2026-42574 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-10 04:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "apko allows users to build and publish OCI container images built from apk packages. From version 0.14.8 to before version 1.2.5, a crafted .apk could install a TypeSymlink tar entry whose target pointed outside the build root, and a subsequent directory-creation or file-write entry in the same or later archive could traverse that symlink to reach host paths the build user could write to. This issue has been patched in version 1.2.5.",
-      "refs": "https://github.com/chainguard-dev/apko/commit/f5a96e1299ac81c7ea9441705ec467688086f442\nhttps://github.com/chainguard-dev/apko/pull/2187\nhttps://github.com/chainguard-dev/apko/releases/tag/v1.2.5",
-      "source": "NVD",
-      "time": "2026-05-10 09:56:48"
-    },
-    {
-      "cve_id": "CVE-2026-42569",
-      "title": "高危漏洞: CVE-2026-42569 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-05-10 04:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
-      "description": "phpVMS is a PHP application to run and simulate an airline. Prior to version 7.0.6, a critical vulnerability in phpVMS allowed unauthenticated access to a legacy import feature. This issue has been patched in version 7.0.6.",
-      "refs": "https://github.com/phpvms/phpvms/commit/f59ba8e0e8fc25c60c3faf14e526cfd49df3f7dc\nhttps://github.com/phpvms/phpvms/releases/tag/7.0.6\nhttps://github.com/phpvms/phpvms/releases/tag/7.0.7",
-      "source": "NVD",
-      "time": "2026-05-10 09:56:44"
-    },
-    {
-      "cve_id": "CVE-2026-42562",
-      "title": "高危漏洞: CVE-2026-42562 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-10 04:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Plainpad is a self hosted note taking app. Prior to version 1.1.1, Plainpad allows a low-privilege authenticated user to self-escalate to administrator by submitting admin=true in PUT /api.php/v1/users/{id}. The endpoint directly persists the admin attribute from user input, and the escalated account can immediately access admin-only routes. This issue has been patched in version 1.1.1.",
-      "refs": "https://github.com/alextselegidis/plainpad/commit/9216a876d27b22c3d9259551636d803f7cb075fc\nhttps://github.com/alextselegidis/plainpad/issues/138\nhttps://github.com/alextselegidis/plainpad/releases/tag/1.1.1",
-      "source": "NVD",
-      "time": "2026-05-10 09:56:39"
-    },
-    {
-      "cve_id": "CVE-2026-3828",
-      "title": "高危漏洞: CVE-2026-3828 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-09 17:16:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Some Hikvision switch products (discontinued since December 2023) are vulnerable to authenticated remote command execution due to insufficient input validation. Attackers with valid credentials can exploit this flaw by sending crafted packets containing malicious commands to affected devices, leading to arbitrary command execution.",
-      "refs": "https://www.hikvision.com/en/support/cybersecurity/security-advisory/command-execution-vulnerability-in-some-hikvision-switch-product/",
-      "source": "NVD",
-      "time": "2026-05-09 20:54:04"
-    },
-    {
-      "cve_id": "CVE-2026-42560",
-      "title": "高危漏洞: CVE-2026-42560 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-09 14:16:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "auth provides authentication via oauth2, direct and email. From versions 1.18.0 to before 1.25.2 and 2.0.0 to before 2.1.2, the Patreon OAuth provider maps every authenticated Patreon account to the same local user.ID, instead of deriving a unique ID from the Patreon account returned by Patreon. In practice, this means all Patreon-authenticated users of an application using this library are collapsed into a single local identity. Any application that trusts token.User.ID as the stable account key can end up mixing or fully merging unrelated Patreon users, which can lead to cross-account access, privilege confusion, and subscription-state leakage. This issue has been patched in versions 1.25.2 and 2.1.2.",
-      "refs": "https://github.com/go-pkgz/auth/commit/c0b15ee72a8401da83c01781c16636c521f42698\nhttps://github.com/go-pkgz/auth/releases/tag/v1.25.2\nhttps://github.com/go-pkgz/auth/releases/tag/v2.1.2",
-      "source": "NVD",
-      "time": "2026-05-09 20:53:58"
-    },
-    {
-      "cve_id": "CVE-2026-42301",
-      "title": "高危漏洞: CVE-2026-42301 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-09 12:16:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "pyp2spec generates working Fedora RPM spec file for Python projects. Prior to version 0.14.1, pyp2spec was writing PyPI package metadata (e.g. the summary field) into the generated spec file without escaping RPM macro directives. When a packager then runs rpmbuild, those directives get evaluated, so a malicious package can execute arbitrary commands on the build machine. This issue has been patched in version 0.14.1.",
-      "refs": "https://github.com/befeleme/pyp2spec/releases/tag/v0.14.1\nhttps://github.com/befeleme/pyp2spec/security/advisories/GHSA-r35x-v8p8-xvhw",
-      "source": "NVD",
-      "time": "2026-05-09 13:41:12"
     }
   ]
 }
