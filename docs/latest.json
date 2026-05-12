@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6690",
+      "title": "高危漏洞: CVE-2026-6690 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-12 17:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The LifePress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'n' parameter of the lp_update_mds AJAX action in all versions up to, and including, 2.2.2. This is due to the `wp_ajax_nopriv_lp_update_mds` action being registered without nonce verification or capability checks, combined with insufficient input sanitization and output escaping when the series name is rendered in the admin settings page. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/lifepress/tags/2.2.2/includes/admin/class-admin-ajax.php#L110\nhttps://plugins.trac.wordpress.org/browser/lifepress/tags/2.2.2/includes/admin/class-admin-ajax.php#L25\nhttps://plugins.trac.wordpress.org/browser/lifepress/tags/2.2.2/includes/class-metrics.php#L355",
+      "source": "NVD",
+      "time": "2026-05-12 19:13:31"
+    },
+    {
+      "cve_id": "CVE-2026-39432",
+      "title": "高危漏洞: CVE-2026-39432 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-12 17:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Missing Authorization vulnerability in Arraytics Timetics allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Timetics: from n/a through 1.0.53.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/timetics/vulnerability/wordpress-timetics-plugin-1-0-53-broken-access-control-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-12 19:13:26"
+    },
+    {
+      "cve_id": "CVE-2026-2993",
+      "title": "高危漏洞: CVE-2026-2993 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-12 17:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The AI Chatbot & Workflow Automation by AIWU plugin for WordPress is vulnerable to SQL Injection in versions up to, and including, 1.4.17 due to insufficient escaping on user supplied parameters and lack of sufficient preparation on the existing SQL query in the getListForTbl() function. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. NOTE: This issue is partially mitigated by a patch in version 1.4.11 that adds a nonce check for a nonce that is only available to administrators.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ai-copilot-content-generator/tags/1.4.6/classes/controller.php#L104\nhttps://plugins.trac.wordpress.org/browser/ai-copilot-content-generator/tags/1.4.6/classes/controller.php#L114\nhttps://plugins.trac.wordpress.org/browser/ai-copilot-content-generator/tags/1.4.6/classes/controller.php#L132",
+      "source": "NVD",
+      "time": "2026-05-12 19:13:21"
+    },
+    {
+      "cve_id": "CVE-2026-41872",
+      "title": "高危漏洞: CVE-2026-41872 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-12 14:16:09",
+      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "\"Kura Sushi Official App\" provided by EPG, Inc. is vulnerable to improper certificate validation. A man-in-the-middle attack may allow eavesdropping on, or altering, the communication on push notifications between the affected application and the relevant server.",
+      "refs": "https://apps.apple.com/jp/app/id942355925\nhttps://jvn.jp/en/jp/JVN38632731/\nhttps://play.google.com/store/apps/details?id=jp.co.kura_corpo&hl=ja",
+      "source": "NVD",
+      "time": "2026-05-12 19:13:17"
+    },
+    {
       "cve_id": "CVE-2026-7287",
       "title": "高危漏洞: CVE-2026-7287 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1055,50 +1099,6 @@
       "refs": "https://www.exploit-db.com/exploits/50555\nhttps://www.opencart.com/\nhttps://www.vulncheck.com/advisories/opencart-session-fixation-via-ocsessid-cookie",
       "source": "NVD",
       "time": "2026-05-10 23:42:40"
-    },
-    {
-      "cve_id": "CVE-2026-8234",
-      "title": "高危漏洞: CVE-2026-8234 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-10 15:16:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in EFM ipTIME A8004T 14.18.2. This vulnerability affects the function formWifiBasicSet of the file /goform/WifiBasicSet. The manipulation of the argument security_5g leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/Kiciot/cve/issues/5\nhttps://vuldb.com/submit/808865\nhttps://vuldb.com/vuln/362454",
-      "source": "NVD",
-      "time": "2026-05-10 20:54:52"
-    },
-    {
-      "cve_id": "CVE-2026-8216",
-      "title": "高危漏洞: CVE-2026-8216 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-10 09:16:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in Industrial Application Software IAS Canias ERP 8.03. This issue affects the function iasServerRemoteInterface.doAction of the component Java RMI Session Management. Such manipulation leads to improper authentication. The attack can be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://vuldb.com/submit/808244\nhttps://vuldb.com/vuln/362433\nhttps://vuldb.com/vuln/362433/cti",
-      "source": "NVD",
-      "time": "2026-05-10 13:55:10"
-    },
-    {
-      "cve_id": "CVE-2026-42606",
-      "title": "高危漏洞: CVE-2026-42606 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-10 04:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "AzuraCast is a self-hosted, all-in-one web radio management suite. Prior to version 0.23.6, the ApplyXForwarded middleware unconditionally trusts the client-supplied X-Forwarded-Host HTTP header with no trusted proxy allowlist. An unauthenticated attacker can poison the password reset URL sent to any user by injecting this header when triggering the forgot-password flow. When the victim clicks the poisoned link, their reset token is exfiltrated to the attacker's server. The attacker then uses the token on the real instance to reset the victim's password and destroy their 2FA configuration, achieving full account takeover. This issue has been patched in version 0.23.6.",
-      "refs": "https://github.com/AzuraCast/AzuraCast/commit/7c622a18b451533de317e53862b1f84acf4efd85\nhttps://github.com/AzuraCast/AzuraCast/releases/tag/0.23.6\nhttps://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-gv7r-3mr9-h5x8",
-      "source": "NVD",
-      "time": "2026-05-10 09:57:01"
-    },
-    {
-      "cve_id": "CVE-2026-42605",
-      "title": "高危漏洞: CVE-2026-42605 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-10 04:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "AzuraCast is a self-hosted, all-in-one web radio management suite. Prior to version 0.23.6, the currentDirectory request parameter in the Flow.js media upload endpoint (POST /api/station/{station_id}/files/upload) is not sanitized for path traversal sequences. When combined with a local filesystem storage backend (the default), an authenticated user with media management permissions can write arbitrary files outside the station's media storage directory, achieving remote code execution by writing a PHP webshell to the web root. This issue has been patched in version 0.23.6.",
-      "refs": "https://github.com/AzuraCast/AzuraCast/commit/18c793b4427eb49e67a2fea99a89f1c9d9dd808d\nhttps://github.com/AzuraCast/AzuraCast/releases/tag/0.23.6\nhttps://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-vp2f-cqqp-478j",
-      "source": "NVD",
-      "time": "2026-05-10 09:56:57"
     }
   ]
 }
