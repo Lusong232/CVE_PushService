@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-2347",
+      "title": "高危漏洞: CVE-2026-2347 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-14 18:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Authorization bypass through User-Controlled key vulnerability in Akilli Commerce Software Technologies Ltd. Co. E-Commerce Website allows Session Hijacking.\n\nThis issue affects E-Commerce Website: before 4.5.001.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0222",
+      "source": "NVD",
+      "time": "2026-05-14 21:30:03"
+    },
+    {
+      "cve_id": "CVE-2025-11024",
+      "title": "高危漏洞: CVE-2025-11024 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-14 18:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Akilli Commerce Software Technologies Ltd. Co. E-Commerce Website allows Blind SQL Injection.\n\nThis issue affects E-Commerce Website: before 4.5.001.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0222",
+      "source": "NVD",
+      "time": "2026-05-14 21:29:57"
+    },
+    {
       "cve_id": "CVE-2026-6514",
       "title": "高危漏洞: CVE-2026-6514 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1077,28 +1099,6 @@
       "refs": "https://my.f5.com/manage/s/article/K000161040",
       "source": "NVD",
       "time": "2026-05-14 03:40:58"
-    },
-    {
-      "cve_id": "CVE-2026-32643",
-      "title": "高危漏洞: CVE-2026-32643 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-14 00:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "A vulnerability exists in BIG-IP and BIG-IQ systems where a highly privileged, authenticated attacker with at least the Certificate Manager role can modify configuration objects that allow running arbitrary commands.  Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000160972",
-      "source": "NVD",
-      "time": "2026-05-14 03:40:54"
-    },
-    {
-      "cve_id": "CVE-2026-20916",
-      "title": "高危漏洞: CVE-2026-20916 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-14 00:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "An authenticated iControl REST user with low privileges can create or modify arbitrary files through an undisclosed iControl REST endpoint on the BIG-IQ system.\n Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000158029",
-      "source": "NVD",
-      "time": "2026-05-14 03:40:50"
     }
   ]
 }
