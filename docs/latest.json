@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8686",
+      "title": "高危漏洞: CVE-2026-8686 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 03:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Missing bounds validation in the MQTT v5.0 property parser in coreMQTT before 5.0.1 allows an MQTT broker to cause a denial of service by sending a crafted packet.\n\n\n\nTo remediate this issue, users should upgrade to v5.0.1.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-032-aws/\nhttps://github.com/FreeRTOS/coreMQTT/releases/tag/v5.0.1\nhttps://github.com/FreeRTOS/coreMQTT/security/advisories/GHSA-6qh9-r6jp-2wxc",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:41"
+    },
+    {
+      "cve_id": "CVE-2026-46408",
+      "title": "高危漏洞: CVE-2026-46408 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-16 03:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, the checkout endpoint accepts a user-controlled cart_id and uses it to enter the payment flow without verifying cart ownership. A logged-in attacker can therefore reuse another user's cart data in their own checkout session. This vulnerability is fixed in 1.0.8.3.",
+      "refs": "https://github.com/givanz/Vvveb/security/advisories/GHSA-rmh2-wv73-xpqh",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:36"
+    },
+    {
+      "cve_id": "CVE-2026-46407",
+      "title": "高危漏洞: CVE-2026-46407 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-16 03:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, the backend admin/auth-token endpoint allows an authenticated administrator to load another administrator's REST API token list by supplying that user's admin_id. This can disclose sensitive API tokens belonging to other administrators. This vulnerability is fixed in 1.0.8.3.",
+      "refs": "https://github.com/givanz/Vvveb/security/advisories/GHSA-5g3g-x6mf-pwr6",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:32"
+    },
+    {
+      "cve_id": "CVE-2026-46367",
+      "title": "高危漏洞: CVE-2026-46367 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-16 03:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "phpMyFAQ before 4.1.2 contains a stored cross-site scripting vulnerability in Utils::parseUrl() that allows authenticated users to inject JavaScript via malformed URLs in comments. Attackers can craft URLs with unescaped quotes to inject event handlers, stealing admin session cookies and achieving full application takeover when visitors view affected FAQ pages.",
+      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9525-27vj-c8r8\nhttps://www.vulncheck.com/advisories/phpmyfaq-stored-xss-via-utils-parseurl-in-comment-rendering",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:24"
+    },
+    {
+      "cve_id": "CVE-2026-46366",
+      "title": "高危漏洞: CVE-2026-46366 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 03:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "phpMyFAQ before 4.1.2 contains an information disclosure vulnerability in the getIdFromSolutionId() method that lacks permission filtering, allowing unauthenticated attackers to enumerate restricted FAQ entries and read their titles via the /solution_id_{id}.html endpoint. Attackers can sequentially iterate solution IDs to discover all FAQs including those restricted to specific users or groups, leaking sensitive metadata through redirect Location headers and page canonical links.",
+      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-99qv-g4x9-mgc3\nhttps://www.vulncheck.com/advisories/phpmyfaq-unauthenticated-information-disclosure-via-getidfromsolutionid-permission-bypass",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:18"
+    },
+    {
+      "cve_id": "CVE-2026-46364",
+      "title": "高危漏洞: CVE-2026-46364 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-16 03:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "phpMyFAQ before 4.1.2 contains an unauthenticated SQL injection vulnerability in BuiltinCaptcha::garbageCollector() and BuiltinCaptcha::saveCaptcha() methods that interpolate unsanitized User-Agent headers into DELETE and INSERT queries. Unauthenticated attackers can exploit the public GET /api/captcha endpoint by crafting malicious User-Agent headers to perform time-based blind SQL injection, extracting sensitive data including user credentials, admin tokens, and SMTP credentials from the database.",
+      "refs": "https://github.com/thorsten/phpMyFAQ/commit/b9f25109fddb38eee19987183798638d07943f92\nhttps://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-289f-fq7w-6q2w\nhttps://www.vulncheck.com/advisories/phpmyfaq-sql-injection-via-user-agent-header-in-builtincaptcha",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:14"
+    },
+    {
+      "cve_id": "CVE-2026-46359",
+      "title": "高危漏洞: CVE-2026-46359 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 03:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "phpMyFAQ before 4.1.2 contains a sql injection vulnerability in CurrentUser::setTokenData that allows authenticated attackers to execute arbitrary SQL by injecting malicious OAuth token claims. Attackers with Azure AD accounts containing SQL metacharacters in display names or JWT claims can break out of string literals and execute arbitrary database queries.",
+      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pm8c-3qq3-72w7\nhttps://www.vulncheck.com/advisories/phpmyfaq-sql-injection-in-currentuser-settokendata-via-unescaped-oauth-token-fields",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:09"
+    },
+    {
+      "cve_id": "CVE-2026-45010",
+      "title": "高危漏洞: CVE-2026-45010 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-16 03:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "phpMyFAQ before 4.1.2 contains an improper restriction of excessive authentication attempts vulnerability in the /admin/check endpoint, which accepts arbitrary user-id parameters without session binding or rate limiting. Unauthenticated attackers can brute-force any user's six-digit TOTP code by submitting POST requests with sequential token values, bypassing two-factor authentication to gain full administrative access.",
+      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9pq7-mfwh-xx2j\nhttps://www.vulncheck.com/advisories/phpmyfaq-unauthenticated-two-factor-authentication-brute-force-via-admin-check-endpoint",
+      "source": "NVD",
+      "time": "2026-05-16 05:50:05"
+    },
+    {
+      "cve_id": "CVE-2026-44826",
+      "title": "高危漏洞: CVE-2026-44826 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 03:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.2, Vvveb CMS does not validate the sign of the quantity parameter on the cart-add endpoint. Submitting a negative integer is accepted by the server and treated as a normal positive line-item, but with the sign carried through into every downstream computation: line total, sub-total, taxes, and grand total all become negative numbers. The customer-facing cart UI then displays a negative grand total to the user, the checkout flow accepts the negative cart, and the resulting order is persisted in the merchant's database with a negative total column. From the merchant's order management dashboard, this surfaces as a real order with a negative total — an \"the merchant owes the customer money\" record that no legitimate workflow ever creates. This vulnerability is fixed in 1.0.8.2.",
+      "refs": "https://github.com/givanz/Vvveb/security/advisories/GHSA-75x2-j47j-mg8j",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:59"
+    },
+    {
+      "cve_id": "CVE-2021-47966",
+      "title": "高危漏洞: CVE-2021-47966 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-16 03:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "PHP Timeclock 1.04 contains time-based and boolean-based blind SQL injection vulnerabilities in the login_userid parameter of login.php that allows unauthenticated attackers to extract database contents. Attackers can submit crafted POST requests with SQL payloads using SLEEP functions or RLIKE conditional statements to dump sensitive database information including employee names and credentials.",
+      "refs": "http://timeclock.sourceforge.net\nhttps://sourceforge.net/projects/timeclock/files/PHP%20Timeclock/PHP%20Timeclock%201.04/\nhttps://www.exploit-db.com/exploits/49849",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:54"
+    },
+    {
+      "cve_id": "CVE-2021-47965",
+      "title": "高危漏洞: CVE-2021-47965 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-16 03:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WordPress Plugin WP Super Edit 2.5.4 and earlier contains an unrestricted file upload vulnerability in the FCKeditor component that allows attackers to upload dangerous file types without validation. Attackers can upload arbitrary files through the filemanager upload endpoint to achieve remote code execution and complete system compromise.",
+      "refs": "https://wordpress.org\nhttps://wordpress.org/plugins/wp-super-edit/\nhttps://www.exploit-db.com/exploits/49839",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:49"
+    },
+    {
+      "cve_id": "CVE-2021-47964",
+      "title": "高危漏洞: CVE-2021-47964 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-16 03:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Schlix CMS 2.2.6-6 contains a remote code execution vulnerability that allows authenticated attackers to execute arbitrary PHP code by uploading malicious extension packages through the block manager. Attackers can upload a crafted ZIP file containing PHP code in the packageinfo.inc file and trigger execution by accessing the About tab of the installed extension.",
+      "refs": "https://www.exploit-db.com/exploits/49838\nhttps://www.schlix.com/\nhttps://www.schlix.com/downloads/schlix-cms/schlix-cms-v2.2.6-6.zip",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:45"
+    },
+    {
+      "cve_id": "CVE-2021-47963",
+      "title": "高危漏洞: CVE-2021-47963 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-16 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Anote 1.0 contains a persistent cross-site scripting vulnerability that allows attackers to execute arbitrary code by injecting malicious payloads into markdown files stored within the application. Attackers can craft malicious markdown files with embedded JavaScript that executes system commands when opened, enabling remote code execution on the victim's computer.",
+      "refs": "https://github.com/AnotherNote/anote\nhttps://www.exploit-db.com/exploits/49836\nhttps://www.vulncheck.com/advisories/anote-persistent-cross-site-scripting-remote-code-execution",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:38"
+    },
+    {
+      "cve_id": "CVE-2021-47959",
+      "title": "高危漏洞: CVE-2021-47959 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "WordPress Plugin WPGraphQL 1.3.5 contains a denial of service vulnerability that allows unauthenticated attackers to exhaust server resources by sending batched GraphQL queries with duplicated fields. Attackers can send POST requests to the GraphQL endpoint with amplified field duplication payloads to trigger server out-of-memory conditions and MySQL connection errors.",
+      "refs": "https://www.exploit-db.com/exploits/49807\nhttps://www.vulncheck.com/advisories/wordpress-plugin-wpgraphql-denial-of-service\nhttps://www.wpgraphql.com/",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:32"
+    },
+    {
+      "cve_id": "CVE-2026-35194",
+      "title": "高危漏洞: CVE-2026-35194 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-16 00:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Code injection in SQL code generation in Apache Flink 1.15.0 through 1.20.x and 2.0.0 through 2.x allows authenticated users with query submission privileges to execute arbitrary code on TaskManagers via maliciously crafted SQL queries. The vulnerability affects JSON functions (1.15.0+) and LIKE expressions with ESCAPE clauses (1.17.0+). User-controlled strings are interpolated into generated Java code without proper escaping, allowing attackers to break out of string literals and inject arbitrary expressions.\n\nUsers are recommended to upgrade to either version 1.20.4, 2.0.2, 2.1.2 or 2.2.1, which fixes this issue.",
+      "refs": "https://lists.apache.org/thread/qh52bw4hhvy7n2owd8b3bt51mz0lvj9x",
+      "source": "NVD",
+      "time": "2026-05-16 05:49:26"
+    },
+    {
       "cve_id": "CVE-2026-8695",
       "title": "高危漏洞: CVE-2026-8695 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -934,171 +1099,6 @@
       "refs": "https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-fwj3-42wh-8673",
       "source": "NVD",
       "time": "2026-05-15 06:03:22"
-    },
-    {
-      "cve_id": "CVE-2026-42897",
-      "title": "高危漏洞: CVE-2026-42897 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-15 02:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897",
-      "source": "NVD",
-      "time": "2026-05-15 06:03:16"
-    },
-    {
-      "cve_id": "CVE-2026-42334",
-      "title": "高危漏洞: CVE-2026-42334 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 02:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.9, 7.8.9, 8.22.1, and 9.1.6, a vulnerability allows bypassing Mongoose’s sanitizeFilter query sanitization mechanism via the $nor operator. When sanitizeFilter is enabled, Mongoose wraps query operators in $eq to neutralize them. However, prior to the fix, $nor was not included in the set of logical operators that are recursively sanitized. Because $nor accepts an array (like $and and $or), and arrays do not trigger hasDollarKeys(), malicious operators such as $ne, $gt, or $regex could be injected inside a $nor clause without being sanitized. This vulnerability is fixed in 6.13.9, 7.8.9, 8.22.1, and 9.1.6.",
-      "refs": "https://github.com/Automattic/mongoose/security/advisories/GHSA-wpg9-53fq-2r8h",
-      "source": "NVD",
-      "time": "2026-05-15 06:03:12"
-    },
-    {
-      "cve_id": "CVE-2026-41615",
-      "title": "高危漏洞: CVE-2026-41615 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-15 02:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Exposure of sensitive information to an unauthorized actor in Microsoft Authenticator allows an unauthorized attacker to disclose information over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41615",
-      "source": "NVD",
-      "time": "2026-05-15 06:03:07"
-    },
-    {
-      "cve_id": "CVE-2025-15024",
-      "title": "高危漏洞: CVE-2025-15024 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-15 02:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Yordam Information Technology Consulting, Training and Electronic Systems Industry and Trade Inc. Library Automation System allows Remote Code Inclusion.\n\nThis issue affects Library Automation System: from v.19.5 before v.22.1.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0240",
-      "source": "NVD",
-      "time": "2026-05-15 06:03:03"
-    },
-    {
-      "cve_id": "CVE-2025-15023",
-      "title": "高危漏洞: CVE-2025-15023 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-15 02:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Incorrect Authorization vulnerability in Yordam Information Technology Consulting, Training and Electronic Systems Industry and Trade Inc. Library Automation System allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Library Automation System: from v.19.5 before v.22.1.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0240",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:58"
-    },
-    {
-      "cve_id": "CVE-2026-44827",
-      "title": "高危漏洞: CVE-2026-44827 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-15 01:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Diffusers is the a library for  pretrained diffusion models. Prior to 0.38.0, diffusers 0.37.0 allows remote code execution without the trust_remote_code=True safeguard when loading pipelines from Hugging Face Hub repositories. The _resolve_custom_pipeline_and_cls function in pipeline_loading_utils.py performs string interpolation on the custom_pipeline parameter using f\"{custom_pipeline}.py\". When custom_pipeline is not supplied by the user, it defaults to None, which Python interpolates as the literal string \"None.py\". If an attacker publishes a Hub repository containing a file named None.py with a class that subclasses DiffusionPipeline, the file is automatically downloaded and executed during a standard DiffusionPipeline.from_pretrained() call with no additional keyword arguments. The trust_remote_code check in DiffusionPipeline.download() is bypassed because it evaluates custom_pipeline is not None as False (since the kwarg was never supplied), while the downstream code path that actually loads the module resolves the None value into a valid filename. An attacker can achieve silent arbitrary code execution by publishing a malicious model repository with a None.py file and a standard-looking model_index.json that references a legitimate pipeline class name, requiring only that a victim calls from_pretrained on the repository. This vulnerability is fixed in 0.38.0.",
-      "refs": "https://github.com/huggingface/diffusers/security/advisories/GHSA-j7w6-vpvq-j3gm\nhttps://github.com/huggingface/diffusers/security/advisories/GHSA-j7w6-vpvq-j3gm",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:53"
-    },
-    {
-      "cve_id": "CVE-2026-44516",
-      "title": "高危漏洞: CVE-2026-44516 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-15 01:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Valtimo is an open-source business process automation platform. From 12.4.0 to 12.33.0 and 13.26.0, the LoggingRestClientCustomizer in the web module automatically intercepts all outgoing HTTP calls made via Spring's RestClient and logs the full request body, response body, and response headers. When an error response is received, this information is included in the thrown HttpClientErrorException message, which is logged at ERROR level by Spring's default exception handling — regardless of the application's DEBUG log level setting. This vulnerability is fixed in 12.33.0 and 13.26.0.",
-      "refs": "https://github.com/valtimo-platform/valtimo/security/advisories/GHSA-3jh5-rr2q-xfv7",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:46"
-    },
-    {
-      "cve_id": "CVE-2026-44513",
-      "title": "高危漏洞: CVE-2026-44513 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-15 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Diffusers is the a library for  pretrained diffusion models. Prior to 0.38.0, a trust_remote_code bypass in DiffusionPipeline.from_pretrained allows arbitrary remote code execution despite the user passing trust_remote_code=False (or omitting it, which is the default). The vulnerability has three variants, all sharing the same root cause — the trust_remote_code gate was implemented inside DiffusionPipeline.download() rather than at the actual dynamic-module load site, so any code path that bypassed or short-circuited download() also bypassed the security check. DiffusionPipeline.from_pretrained('repoA', custom_pipeline='attacker/repoB', trust_remote_code=False) — the gate evaluated against repoA's file list rather than repoB's, so repoB's pipeline.py was loaded and executed. DiffusionPipeline.from_pretrained('/local/snapshot', custom_pipeline='attacker/repoB', trust_remote_code=False) — the local-path branch never invoked download(), so the gate was never reached and remote code from repoB executed. DiffusionPipeline.from_pretrained('/local/snapshot', trust_remote_code=False) where the snapshot contains custom component files (e.g. unet/my_unet_model.py) referenced from model_index.json — same root cause; the local path skipped download() and custom component code executed. This vulnerability is fixed in 0.38.0.",
-      "refs": "https://github.com/huggingface/diffusers/security/advisories/GHSA-98h9-4798-4q5v",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:41"
-    },
-    {
-      "cve_id": "CVE-2026-44511",
-      "title": "高危漏洞: CVE-2026-44511 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-15 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Katalyst Koi is a framework for building Rails admin functionality. Prior to 4.20.0 and 5.6.0, admin session cookies were not invalidated when an admin user logged out. An attacker with access to a valid admin session cookie could continue to access admin functionality after logout, until the cookie expired or session secrets were rotated. This vulnerability is fixed in 4.20.0 and 5.6.0.",
-      "refs": "https://github.com/katalyst/koi/security/advisories/GHSA-4cx3-3c38-j9vv",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:33"
-    },
-    {
-      "cve_id": "CVE-2026-42555",
-      "title": "高危漏洞: CVE-2026-42555 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-15 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Valtimo is an open-source business process automation platform. com.ritense.valtimo:document from 12.0.0 to before 12.32.0, com.ritense.valtimo:case from 13.0.0 to before 13.23.0, and com.ritense.valtimo:contract from 13.4.0 to before 13.23.0 evaluate Spring Expression Language (SpEL) expressions from user-supplied input using StandardEvaluationContext, which provides unrestricted access to Java types and methods. An authenticated user with the ADMIN role can achieve Remote Code Execution and credential exfiltration. This vulnerability is fixed in com.ritense.valtimo:document 2.32.0, com.ritense.valtimo:case 13.23.0, and com.ritense.valtimo:contract 13.23.0.",
-      "refs": "https://github.com/valtimo-platform/valtimo/security/advisories/GHSA-j7j9-5253-f7vh",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:28"
-    },
-    {
-      "cve_id": "CVE-2026-20224",
-      "title": "高危漏洞: CVE-2026-20224 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-15 01:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to read arbitrary files that are stored in an affected system. The attacker does not need to have valid user credentials.\r\n\r\nThis vulnerability is due to improper handling of XML External Entity (XXE) entries when parsing an XML file. An attacker could exploit this vulnerability by sending a crafted request to an affected system. A successful exploit could allow the attacker to read arbitrary files that are stored in the affected system.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-mltvnps2-JxpWm7R\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:24"
-    },
-    {
-      "cve_id": "CVE-2026-20182",
-      "title": "高危漏洞: CVE-2026-20182 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-15 01:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "May 2026: This security advisory provides the details and fix information for a vulnerability that was discovered and fixed after the  was disclosed in February 2026. This new advisory is for a new vulnerability in the control connection handshaking. The  section of this advisory includes Show Control Connections guidance to help with system checks.&nbsp;\r\n\r\nA vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\r\nThis vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to the affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20182",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:19"
-    },
-    {
-      "cve_id": "CVE-2026-42596",
-      "title": "高危漏洞: CVE-2026-42596 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-05-15 00:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.31.0, the default deny-lists used by Gotenberg's downloadFrom feature and webhook feature are bypassable. Because the filter is regex-based and case-sensitive, an unauthenticated attacker can supply URLs such as http://[::ffff:127.0.0.1]:... and reach loopback or private HTTP services that the default deny-list is intended to block. This crosses a real security boundary because an external caller can force the server to make outbound requests to internal-only targets. This vulnerability is fixed in 8.31.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-4vmc-gm8v-m35h",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:11"
-    },
-    {
-      "cve_id": "CVE-2026-42595",
-      "title": "高危漏洞: CVE-2026-42595 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-15 00:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.32.0, Gotenberg's Chromium URL-to-PDF endpoint (/forms/chromium/convert/url) has no default protection against HTTP/HTTPS-based SSRF. The default deny-list regex only blocks file:// URIs. An unauthenticated attacker can point Chromium at any internal IP — including loopback, RFC 1918 ranges, and cloud metadata endpoints — and receive the response rendered as a PDF. Additionally, even when operators configure a custom deny-list, the protection is bypassed via HTTP redirects. Gotenberg's Chromium instance follows 302 redirects from an attacker-controlled external URL to internal targets without re-validating the redirect destination against the deny-list. This vulnerability is fixed in 8.32.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-chwh-f6gm-r836",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:07"
-    },
-    {
-      "cve_id": "CVE-2026-42594",
-      "title": "高危漏洞: CVE-2026-42594 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 00:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.32.0, the webhook middleware spawns a goroutine that holds a reference to the request's echo.Context after the synchronous handler returns ErrAsyncProcess and Echo recycles the context back to its sync.Pool. When a concurrent request claims the recycled context, c.Reset() clears the store. If the webhook goroutine reaches hardTimeoutMiddleware at that moment, an unchecked type assertion on a nil store entry panics outside any recover() scope, crashing the Gotenberg process. Any anonymous caller reaches the webhook path (default webhook-deny-list filters only the webhook destination, not the submitter). A single-source stress of ~24 webhook requests plus ~60 GET /version requests crashes the process in about two seconds. This vulnerability is fixed in 8.32.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-r33j-c622-r6qp",
-      "source": "NVD",
-      "time": "2026-05-15 06:02:02"
     }
   ]
 }
