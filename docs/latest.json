@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41964",
+      "title": "高危漏洞: CVE-2026-41964 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-15 18:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Permission control vulnerability in the web. Impact: Successful exploitation of this vulnerability may affect availability.",
+      "refs": "https://consumer.huawei.com/en/support/bulletin/2026/5/\nhttps://consumer.huawei.com/en/support/bulletinlaptops/2026/5/",
+      "source": "NVD",
+      "time": "2026-05-15 21:30:24"
+    },
+    {
+      "cve_id": "CVE-2026-8398",
+      "title": "高危漏洞: CVE-2026-8398 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-15 17:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A supply chain attack compromised the official installation packages of DAEMON Tools Lite (Windows versions 12.5.0.2421 through 12.5.0.2434), distributed from the legitimate website daemon-tools.cc between approximately April 8, 2026, and May 5, 2026. Attackers gained unauthorized access to the vendor's (AVB Disc Soft) build or distribution infrastructure and trojanized three binaries: DTHelper.exe, DiscSoftBusServiceLite.exe, and DTShellHlp.exe. These files were digitally signed with the legitimate AVB Disc Soft code-signing certificate, allowing the malicious installers to appear trustworthy and bypass signature-based detection.",
+      "refs": "https://blog.daemon-tools.cc/post/security-incident\nhttps://securelist.com/tr/daemon-tools-backdoor/119654/",
+      "source": "NVD",
+      "time": "2026-05-15 21:30:17"
+    },
+    {
+      "cve_id": "CVE-2026-6403",
+      "title": "高危漏洞: CVE-2026-6403 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-15 17:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Quick Playground plugin for WordPress is vulnerable to Path Traversal in versions up to and including 1.3.3. This is due to insufficient path validation in the qckply_zip_theme() function, which appends a user-controlled 'stylesheet' parameter directly to the theme root directory path without sanitizing directory traversal sequences. This makes it possible for unauthenticated attackers to trigger the creation of a ZIP archive containing arbitrary files from the server's filesystem — including wp-config.",
+      "refs": "https://plugins.trac.wordpress.org/browser/quick-playground/tags/1.3.1/api.php#L62\nhttps://plugins.trac.wordpress.org/browser/quick-playground/tags/1.3.1/api.php#L631\nhttps://plugins.trac.wordpress.org/browser/quick-playground/tags/1.3.1/utility.php#L162",
+      "source": "NVD",
+      "time": "2026-05-15 21:30:13"
+    },
+    {
+      "cve_id": "CVE-2026-6228",
+      "title": "高危漏洞: CVE-2026-6228 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-15 17:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to Privilege Escalation in versions up to and including 3.28.36. This is due to insufficient authorization checks in the role field update mechanism combined with overly permissive capabilities for the admin_form post type. The admin_form custom post type uses 'capability_type' => 'page', which grants editors the ability to create and edit forms. When an editor creates an edit_user form, they can manipulate the form configuration to include 'administrator' in the role_options array by directly submitting POST data to wp-admin/post.php, bypassing the UI restrictions in feadmin_get_user_roles(). When the form is subsequently submitted, the pre_update_value() function in class-role.php only validates that the submitted role exists in the form's role_options array (lines 107-110), but fails to verify that the current user has permission to assign that specific role. This makes it possible for unauthenticated attackers to first register as editors (via a public new_user form), then create an edit_user form with administrator in the allowed roles, and finally use that form to escalate their own privileges to administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/acf-frontend-form-element/trunk/main/admin/admin-pages/forms/post-types.php#L53\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/trunk/main/frontend/fields/user/class-role.php#L113\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/trunk/main/frontend/forms/actions/user.php#L517",
+      "source": "NVD",
+      "time": "2026-05-15 21:30:08"
+    },
+    {
+      "cve_id": "CVE-2026-5229",
+      "title": "高危漏洞: CVE-2026-5229 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-15 17:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Form Notify plugin for WordPress is vulnerable to Authentication Bypass in versions up to and including 1.1.10. This is due to the plugin trusting user-controlled cookie data to determine which WordPress account to authenticate after a LINE OAuth login. When LINE doesn't provide an email address (which is common), the plugin falls back to reading the 'form_notify_line_email' cookie value without verifying that the LINE account is associated with that email address. This makes it possible for unauthenticated attackers to gain access to any user account on the site, including administrator accounts, by completing a LINE OAuth flow with their own LINE account while injecting a malicious cookie containing the target victim's email address.",
+      "refs": "https://github.com/oberonlai/form-notify/commit/5eab0ea\nhttps://github.com/oberonlai/form-notify/commit/9780764\nhttps://plugins.trac.wordpress.org/browser/form-notify/tags/1.1.08/src/APIs/Line/Login/Route.php#L116-L118",
+      "source": "NVD",
+      "time": "2026-05-15 21:30:01"
+    },
+    {
+      "cve_id": "CVE-2026-4094",
+      "title": "高危漏洞: CVE-2026-4094 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-15 15:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The FOX – Currency Switcher Professional for WooCommerce plugin for WordPress is vulnerable to unauthorized data loss due to a missing capability check on the 'admin_head' function in all versions up to, and including, 1.4.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to delete the entire multi-currency configuration by visiting any wp-admin page with the `woocs_reset` parameter appended. Additionally, because no nonce is verified, this is also exploitable via Cross-Site Request Forgery against any administrator. The vulnerability may also be exploited by Subscriber-level users if the site is configured to allow Subscriber access to 'wp-admin' pages.",
+      "refs": "https://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/woocs.php#L1167\nhttps://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/woocs.php#L1168\nhttps://plugins.trac.wordpress.org/changeset/3483839/",
+      "source": "NVD",
+      "time": "2026-05-15 21:29:56"
+    },
+    {
+      "cve_id": "CVE-2026-41702",
+      "title": "高危漏洞: CVE-2026-41702 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-15 15:16:18",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "VMware Fusion contains a TOCTOU (Time-of-check Time-of-use) vulnerability that occurs during an operation performed by a SETUID binary. A malicious actor with local non-administrative user privileges may exploit this vulnerability to escalate privileges to root on the system where Fusion is installed.",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37454",
+      "source": "NVD",
+      "time": "2026-05-15 21:29:51"
+    },
+    {
+      "cve_id": "CVE-2026-28761",
+      "title": "高危漏洞: CVE-2026-28761 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-15 14:16:20",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Cross-site request forgery vulnerability exists in Musetheque V4 Information Disclosure for IPKNOWLEDGE V4L1 rev2203.0 and earlier. If a user views a malicious page while logged-in to the affected product, unexpected operations may be done.",
+      "refs": "https://jvn.jp/en/jp/JVN69128376/",
+      "source": "NVD",
+      "time": "2026-05-15 21:29:46"
+    },
+    {
       "cve_id": "CVE-2026-2652",
       "title": "高危漏洞: CVE-2026-2652 (CVSS 8.6)",
       "cvss_score": 8.6,
@@ -1011,94 +1099,6 @@
       "refs": "https://httpd.apache.org/docs/current/programs/htpasswd.html\nhttps://metacpan.org/release/EVANK/Web-Passwd-0.03\nhttp://www.openwall.com/lists/oss-security/2026/05/13/8",
       "source": "NVD",
       "time": "2026-05-15 06:00:58"
-    },
-    {
-      "cve_id": "CVE-2026-44482",
-      "title": "高危漏洞: CVE-2026-44482 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-14 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "soundcloud-rpc is a SoundCloud Client with Discord Rich Presence, Dark Mode, Last.fm and AdBlock support. Prior to 0.1.8, a track title containing an HTML payload executed locally in the Electron app. This means attacker-controlled SoundCloud track metadata can lead to local command execution on the user's machine. The application exposes a preload API (window.soundcloudAPI.sendTrackUpdate) to the remote SoundCloud page. Track metadata from SoundCloud is trusted and forwarded through IPC into the Electron main process. The app later renders that metadata as raw HTML inside privileged Electron views that have Node.js integration enabled. This vulnerability is fixed in 0.1.8.",
-      "refs": "https://github.com/richardhbtz/soundcloud-rpc/security/advisories/GHSA-p37x-32p8-445f",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:41"
-    },
-    {
-      "cve_id": "CVE-2026-44375",
-      "title": "高危漏洞: CVE-2026-44375 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-14 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Nerdbank.MessagePack is a NativeAOT-compatible MessagePack serialization library. Prior to 1.1.62, Nerdbank.MessagePack contains an uncontrolled stack allocation vulnerability in DateTime decoding. A malicious MessagePack payload can declare an oversized timestamp extension length, causing the reader to allocate an attacker-controlled number of bytes on the stack. This can trigger a StackOverflowException, which is not catchable by user code and terminates the process. This vulnerability is fixed in 1.1.62.",
-      "refs": "https://github.com/AArnott/Nerdbank.MessagePack/commit/7d1eb319cfabe7280e70699946c9a48579fa2f30\nhttps://github.com/AArnott/Nerdbank.MessagePack/pull/941\nhttps://github.com/AArnott/Nerdbank.MessagePack/releases/tag/v1.1.62",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:37"
-    },
-    {
-      "cve_id": "CVE-2026-42559",
-      "title": "高危漏洞: CVE-2026-42559 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-14 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "RMCP is an official Rust SDK for the Model Context Protocol. Prior to version 1.4.0, the rmcp crate's Streamable HTTP server transport (crates/rmcp/src/transport/streamable_http_server/) did not validate the incoming Host header. This allowed a malicious public website, via a DNS rebinding attack, to send authenticated requests to an MCP server running on the victim's loopback or private-network interface. This vulnerability is fixed in 1.4.0.",
-      "refs": "https://github.com/modelcontextprotocol/rust-sdk/commit/8e22aa2de28df5a285eed87c11cd89bf15fa90d3\nhttps://github.com/modelcontextprotocol/rust-sdk/issues/815\nhttps://github.com/modelcontextprotocol/rust-sdk/issues/822",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:32"
-    },
-    {
-      "cve_id": "CVE-2026-42457",
-      "title": "高危漏洞: CVE-2026-42457 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-05-14 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "vCluster Platform provides a Kubernetes platform for managing virtual clusters, multi-tenancy, and cluster sharing. Prior to 4.4.3, 4.5.5, 4.6.2, 4.7.1, and 4.8.0, there is a Stored XSS attack vulnerability via the name field of a templateRef. This can lead to the execution of arbitrary external scripts within the platform's browser context. In the worst case, a malicious user could potentially create a new Global-Admin user, bypassing other security restrictions. The attacker needs the ability to create namespaces. This vulnerability is fixed in 4.4.3, 4.5.5, 4.6.2, 4.7.1, and 4.8.0.",
-      "refs": "https://github.com/loft-sh/loft/security/advisories/GHSA-x7cq-v3h6-426c",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:28"
-    },
-    {
-      "cve_id": "CVE-2026-41937",
-      "title": "高危漏洞: CVE-2026-41937 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-14 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vvveb before 1.0.8.3 contains an unrestricted file upload vulnerability in the plugin upload endpoint that allows super_admin users to execute arbitrary PHP code by uploading a malicious plugin ZIP file. Attackers can craft a ZIP containing a plugin.php with a valid Slug header and a public/index.php file with arbitrary PHP code, which executes as the web server user when accessed via unauthenticated HTTP requests to the plugin's public path.",
-      "refs": "https://github.com/givanz/Vvveb/commit/04f0294350ec429e307cd31c2e777a4797c868d6\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.3\nhttps://www.vulncheck.com/advisories/vvveb-unrestricted-file-upload-rce-via-plugin-upload",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:22"
-    },
-    {
-      "cve_id": "CVE-2026-41935",
-      "title": "高危漏洞: CVE-2026-41935 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-14 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "Vvveb before 1.0.8.3 contains an uncontrolled recursion vulnerability in the admin controller dispatch cycle where Base::init() repeatedly invokes permission() on error handlers, causing infinite recursion until PHP memory limits are exhausted. Attackers can send sustained requests to forbidden admin URLs from a low-privilege account to exhaust PHP memory on all workers and cause denial of service to legitimate traffic.",
-      "refs": "https://github.com/givanz/Vvveb/commit/c766e84b479dcf1bd1f25a44e4b9c9fa450769c8\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.3\nhttps://www.vulncheck.com/advisories/vvveb-uncontrolled-recursion-denial-of-service",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:16"
-    },
-    {
-      "cve_id": "CVE-2026-6637",
-      "title": "高危漏洞: CVE-2026-6637 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-14 22:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
-      "refs": "https://www.postgresql.org/support/security/CVE-2026-6637/",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:12"
-    },
-    {
-      "cve_id": "CVE-2026-6479",
-      "title": "高危漏洞: CVE-2026-6479 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-14 22:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
-      "refs": "https://www.postgresql.org/support/security/CVE-2026-6479/",
-      "source": "NVD",
-      "time": "2026-05-15 00:57:04"
     }
   ]
 }
