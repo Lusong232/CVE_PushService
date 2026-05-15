@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-2652",
+      "title": "高危漏洞: CVE-2026-2652 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-15 11:16:23",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "description": "A vulnerability in mlflow/mlflow versions 3.9.0 and earlier allows unauthenticated access to certain FastAPI routes when the server is started with authentication enabled (`--app-name basic-auth`) and served via uvicorn (ASGI). The FastAPI permission middleware only enforces authentication on `/gateway/` routes, leaving other routes such as the Job API (`/ajax-api/3.0/jobs/*`) and the OpenTelemetry trace ingestion API (`/v1/traces`) unprotected. This allows unauthenticated remote attackers to submit jobs, read job results, cancel running jobs, and inject arbitrary trace data into experiments. The issue arises from an architectural mismatch between Flask and FastAPI authentication mechanisms, where the `_find_fastapi_validator()` function fails to handle non-`/gateway/` paths, resulting in a complete authentication bypass. This vulnerability is fixed in version 3.10.0.",
+      "refs": "https://github.com/mlflow/mlflow/commit/bb62e773263c14e9ba4d1a82fe72d0de2442c6aa\nhttps://huntr.com/bounties/5aeff5f0-49c7-4180-b5cb-c9a046f16756",
+      "source": "NVD",
+      "time": "2026-05-15 14:23:39"
+    },
+    {
       "cve_id": "CVE-2026-44671",
       "title": "高危漏洞: CVE-2026-44671 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://www.postgresql.org/support/security/CVE-2026-6479/",
       "source": "NVD",
       "time": "2026-05-15 00:57:04"
-    },
-    {
-      "cve_id": "CVE-2026-6477",
-      "title": "高危漏洞: CVE-2026-6477 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-14 22:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or psql stack memory.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
-      "refs": "https://www.postgresql.org/support/security/CVE-2026-6477/",
-      "source": "NVD",
-      "time": "2026-05-15 00:56:59"
     }
   ]
 }
