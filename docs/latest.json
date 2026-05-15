@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8585",
+      "title": "高危漏洞: CVE-2026-8585 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-15 04:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Inappropriate implementation in Media in Google Chrome on iOS prior to 148.0.7778.168 allowed a remote attacker who had compromised the renderer process to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Medium)",
+      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html\nhttps://issues.chromium.org/issues/499052720",
+      "source": "NVD",
+      "time": "2026-05-16 00:46:33"
+    },
+    {
       "cve_id": "CVE-2026-41964",
       "title": "高危漏洞: CVE-2026-41964 (CVSS 8.4)",
       "cvss_score": 8.4,
@@ -1088,17 +1099,6 @@
       "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/584489\nhttps://hackerone.com/reports/3447146",
       "source": "NVD",
       "time": "2026-05-15 06:01:04"
-    },
-    {
-      "cve_id": "CVE-2026-8500",
-      "title": "高危漏洞: CVE-2026-8500 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-14 07:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Web::Passwd versions through 0.03 for Perl is vulnerable to RCE.\n\nWeb::Passwd is a small CGI application for managing htpasswd files using the htpasswd command.\n\nThe user parameter is not validated or escaped, and is used as the last argument on the command line, allowing for command injection.",
-      "refs": "https://httpd.apache.org/docs/current/programs/htpasswd.html\nhttps://metacpan.org/release/EVANK/Web-Passwd-0.03\nhttp://www.openwall.com/lists/oss-security/2026/05/13/8",
-      "source": "NVD",
-      "time": "2026-05-15 06:00:58"
     }
   ]
 }
