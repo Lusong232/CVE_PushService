@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8695",
+      "title": "高危漏洞: CVE-2026-8695 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 01:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "radare2 6.1.5 contains a use-after-free vulnerability in the gdbr_threads_list() function that allows remote attackers to trigger memory corruption by sending a valid qfThreadInfo response followed by a malformed qsThreadInfo response. Attackers can exploit this vulnerability through GDB remote debugging to cause a denial of service or potentially achieve code execution by manipulating thread list processing.",
+      "refs": "https://github.com/radareorg/radare2/commit/c213ad6894a1eb9086ac8bf5fae35757e9e1683c\nhttps://github.com/radareorg/radare2/issues/25835\nhttps://www.vulncheck.com/advisories/radare2-use-after-free-via-gdbr-threads-list",
+      "source": "NVD",
+      "time": "2026-05-16 03:17:20"
+    },
+    {
+      "cve_id": "CVE-2026-45539",
+      "title": "高危漏洞: CVE-2026-45539 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-16 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Microsoft APM is an open-source, community-driven dependency manager for AI agents. From 0.5.4 to 0.12.4, two primitive integrators in apm-cli enumerate package files with bare Path.glob() / Path.rglob() calls and read each match with Path.read_text(), transparently following symbolic links. A symlink committed inside a remote APM dependency under .apm/prompts/<x>.prompt.md or .apm/agents/<x>.agent.md is preserved verbatim into apm_modules/ on clone and then dereferenced during integration, with the resolved content written as a regular file into the project's deploy directories. The package content_hash, the pre-deploy SecurityGate scan, and apm audit do not flag this. The deploy roots are not added to the auto-generated .gitignore, so the resulting files are staged by git add by default. This vulnerability is fixed in 0.13.0.",
+      "refs": "https://github.com/microsoft/apm/security/advisories/GHSA-q5pp-gvjg-h7v4\nhttps://github.com/microsoft/apm/security/advisories/GHSA-q5pp-gvjg-h7v4",
+      "source": "NVD",
+      "time": "2026-05-16 03:17:16"
+    },
+    {
+      "cve_id": "CVE-2026-45037",
+      "title": "高危漏洞: CVE-2026-45037 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-16 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.232, Tabby's terminal linkifier passes any detected URI directly to the operating system's protocol handler without validating the protocol scheme. This allows a malicious SSH or Telnet server to send crafted terminal output containing dangerous protocol URIs which Tabby renders as clickable links, triggering arbitrary OS protocol handlers on the victim's machine. This vulnerability is fixed in 1.0.232.",
+      "refs": "https://github.com/Eugeny/tabby/security/advisories/GHSA-cmpc-v2x9-j9x9",
+      "source": "NVD",
+      "time": "2026-05-16 03:17:12"
+    },
+    {
+      "cve_id": "CVE-2026-45036",
+      "title": "高危漏洞: CVE-2026-45036 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-05-16 01:16:48",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.233, Tabby before 1.0.233 automatically confirms ZMODEM protocol detection on all terminal session output without user interaction, enabling shell command execution when a user displays attacker-controlled content. The ZModemMiddleware in tabby-terminal consumes all session output through a Zmodem.Sentry, and when a ZMODEM ZRQINIT header is detected, unconditionally calls detection.confirm() and writes a fixed ZRINIT response ( **\\x18B0100000023be50\\r\\n\\x11) back into the active PTY as input. When the process that triggered the detection (e.g., cat) exits, the injected bytes are consumed by the user's shell as a command line. Under fish (default configuration), the ** prefix triggers recursive glob expansion against the current directory, allowing an attacker-placed executable at a matching nested path (e.g., d/xB0100000023be50) to be executed by relative pathname without relying on PATH. Under bash and zsh, a secondary xterm.js terminal color-query feedback (OSC 10) can be combined in the same file to inject a slash-containing command word that similarly bypasses PATH resolution. An attacker can exploit this by providing a crafted file (e.g., in a cloned Git repository) that a user displays with cat, achieving code execution with no interaction beyond viewing the file. This vulnerability is fixed in 1.0.233.",
+      "refs": "https://github.com/Eugeny/tabby/security/advisories/GHSA-qr3x-j8g9-xhf6",
+      "source": "NVD",
+      "time": "2026-05-16 03:17:08"
+    },
+    {
+      "cve_id": "CVE-2026-44717",
+      "title": "高危漏洞: CVE-2026-44717 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-16 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "MCP Calculate Server is a mathematical calculation service based on MCP protocol and SymPy library. Prior to 0.1.1, the use of eval() to evaluate mathematical expressions without proper input sanitization leads to remote code execution. This vulnerability is fixed in 0.1.1.",
+      "refs": "https://github.com/611711Dark/mcp_calculate_server/security/advisories/GHSA-2mgq-7rfg-rwpj",
+      "source": "NVD",
+      "time": "2026-05-16 03:17:00"
+    },
+    {
+      "cve_id": "CVE-2026-44714",
+      "title": "高危漏洞: CVE-2026-44714 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-16 01:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The bitcoinj library is a Java implementation of the Bitcoin protocol. Prior to 0.17.1, ScriptExecution.correctlySpends() contains two fast-path verification bugs for standard P2PKH and native P2WPKH spends in core/src/main/java/org/bitcoinj/script/ScriptExecution.java. In both branches, bitcoinj verifies an attacker-controlled signature/public-key pair but fails to verify that the public key is the one committed to by the output being spent. As a result, any attacker keypair can satisfy bitcoinj's local verification for arbitrary P2PKH and P2WPKH outputs. This vulnerability is fixed in 0.17.1.",
+      "refs": "https://github.com/bitcoinj/bitcoinj/commit/2bc5653c41d260d840692bc554690d4d79208f9c\nhttps://github.com/bitcoinj/bitcoinj/commit/b575a682acf614b9ff95cacbdeb48f86c3ababe0\nhttps://github.com/bitcoinj/bitcoinj/security/advisories/GHSA-hfcf-v2f8-x9pc",
+      "source": "NVD",
+      "time": "2026-05-16 03:16:56"
+    },
+    {
+      "cve_id": "CVE-2026-44641",
+      "title": "高危漏洞: CVE-2026-44641 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-16 01:16:47",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Microsoft APM is an open-source, community-driven dependency manager for AI agents. Prior to 0.8.12, Microsoft APM normalizes marketplace plugins by copying plugin components referenced in plugin.json into .apm/. The manifest fields agents, skills, commands, and hooks are attacker-controlled, but the implementation does not enforce that those paths remain inside the plugin directory. A malicious plugin can therefore use absolute paths or ../ traversal paths to copy arbitrary readable host files or directories from the installer's machine during apm install. This vulnerability is fixed in 0.8.12.",
+      "refs": "https://github.com/microsoft/apm/security/advisories/GHSA-xhrw-5qxx-jpwr",
+      "source": "NVD",
+      "time": "2026-05-16 03:16:52"
+    },
+    {
+      "cve_id": "CVE-2026-41258",
+      "title": "高危漏洞: CVE-2026-41258 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-16 01:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "OpenMRS is an open source electronic medical record system platform. From 2.7.0 to before 2.7.9 and 2.8.6, the ConceptReferenceRangeUtility.evaluateCriteria() method in OpenMRS Core evaluates database-stored criteria strings as Apache Velocity templates without any sandbox configuration. The VelocityEngine is initialized with only logging properties and noSecureUberspector, leaving the default UberspectImpl in place, which allows unrestricted Java reflection through template expressions. A user with the Manage Concepts privilege can store a malicious Velocity template expression in a concept's reference range criteria field. This payload is then executed automatically whenever a user or API call validates an observation against the affected concept. The Velocity context exposes $patient (the Person / Patient object), $obs (the Obs object), and $fn (the ConceptReferenceRangeUtility instance with access to the full OpenMRS service layer). This vulnerability is fixed in 2.7.9 and 2.8.6.",
+      "refs": "https://github.com/openmrs/openmrs-core/security/advisories/GHSA-xj4f-8jjg-vx4q",
+      "source": "NVD",
+      "time": "2026-05-16 03:16:47"
+    },
+    {
+      "cve_id": "CVE-2026-39054",
+      "title": "高危漏洞: CVE-2026-39054 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-15 23:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Oinone Pamirs 7.0.0 contains a command injection vulnerability in CommandHelper.executeCommands. The method starts a shell process and writes attacker-controlled command strings directly to the process standard input without sanitization. In affected deployments, this can result in arbitrary operating system command execution.",
+      "refs": "https://gist.github.com/Misakim1/859c3eb9ced699089ee0747dae9bedc1\nhttps://github.com/oinone/oinone-pamirs\nhttps://www.oinone.top/changelog",
+      "source": "NVD",
+      "time": "2026-05-16 03:16:42"
+    },
+    {
+      "cve_id": "CVE-2026-38728",
+      "title": "高危漏洞: CVE-2026-38728 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-15 23:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An issue in Nodemailer smtp_server before v.3.18.3 allows a remote attacker to cause a denial of service via the SMTPStream._write, lib/smtp-stream.js components",
+      "refs": "https://bytecreator.dev/blog/CVE-2026-38728\nhttps://github.com/nodemailer/smtp-server\nhttps://github.com/nodemailer/smtp-server/releases/tag/v3.18.3",
+      "source": "NVD",
+      "time": "2026-05-16 03:16:35"
+    },
+    {
+      "cve_id": "CVE-2026-34253",
+      "title": "高危漏洞: CVE-2026-34253 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-15 23:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+      "description": "A buffer underflow vulnerability has been identified in the ogg123 utility from the vorbis-tools 1.4.3 package in function remotethread in remote.c. This vulnerability occurs in the remote control functionality when processing malformed input, leading to a stack buffer underflow that can cause application crashes and potentially allow code execution.",
+      "refs": "https://github.com/xiph/vorbis-tools/archive/refs/tags/v1.4.3.tar.gz\nhttps://github.com/xiph/vorbis-tools/blob/0b3fbf42eb3897d32f4a75baa2dc915a4ca45e8e/ogg123/remote.c#L153\nhttps://gitlab.xiph.org/xiph/vorbis-tools/-/work_items/2332",
+      "source": "NVD",
+      "time": "2026-05-16 03:16:28"
+    },
+    {
       "cve_id": "CVE-2026-8585",
       "title": "高危漏洞: CVE-2026-8585 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-r33j-c622-r6qp",
       "source": "NVD",
       "time": "2026-05-15 06:02:02"
-    },
-    {
-      "cve_id": "CVE-2026-42591",
-      "title": "高危漏洞: CVE-2026-42591 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-15 00:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.32.0, the LibreOffice conversion endpoint (/forms/libreoffice/convert) passes uploaded documents directly to LibreOffice without inspecting their content. LibreOffice then fetches any embedded external URLs on its own, completely bypassing the SSRF filters. This vulnerability is fixed in 8.32.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-rm4c-xj6x-49mw\nhttps://github.com/gotenberg/gotenberg/security/advisories/GHSA-rm4c-xj6x-49mw",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:55"
-    },
-    {
-      "cve_id": "CVE-2026-42590",
-      "title": "高危漏洞: CVE-2026-42590 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-15 00:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.30.0, The ExifTool metadata write blocklist in Gotenberg can be bypassed using ExifTool's group-prefix syntax, enabling arbitrary file rename, move, hardlink, and symlink creation on the server. ExifTool supports group-prefix syntax where File:FileName is processed identically to FileName -- the prefix is stripped by SetNewValue in Writer.pl before tag matching. The safeKeyPattern regex (^[a-zA-Z0-9\\-_.:]+$) allows colons, so prefixed tag names pass validation. Any prefix works: File:FileName, System:Directory, a:HardLink, etc. Additionally, FilePermissions, FileUserID, and FileGroupID pseudo-tags are not blocked at all and can modify file attributes without any prefix. This vulnerability is fixed in 8.30.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-7v3r-m9c8-r855",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:51"
-    },
-    {
-      "cve_id": "CVE-2026-42589",
-      "title": "高危漏洞: CVE-2026-42589 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-15 00:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.31.0, Gotenberg's /forms/pdfengines/metadata/write HTTP endpoint accepts a JSON metadata object and passes its keys directly to ExifTool via the go-exiftool library. No validation is performed on key characters. A \\n embedded in a JSON key splits the ExifTool stdin stream into a new argument line, allowing an attacker to inject arbitrary ExifTool flags — including -if, which evaluates Perl expressions. This achieves unauthenticated OS command execution in a single HTTP request. The response is HTTP 200 with a valid PDF, making the attack transparent to basic monitoring. This vulnerability is fixed in 8.31.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-rqgh-gxv4-6657",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:46"
-    },
-    {
-      "cve_id": "CVE-2026-42283",
-      "title": "高危漏洞: CVE-2026-42283 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-15 00:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "DevSpace is a client-only developer tool for cloud-native development with Kubernetes. Prior to 6.3.21, DevSpace's UI server WebSocket accepts connections from all origins by default, and therefore several endpoints are exposed via this WebSocket. When a developer runs the DevSpace UI and at the same time uses a browser to access the internet, a malicious website they visit can use their browser to establish a cross-origin WebSocket connection to ws://127.0.0.1:8090. This vulnerability is fixed in 6.3.21.",
-      "refs": "https://github.com/devspace-sh/devspace/security/advisories/GHSA-hqwm-7x7x-8379",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:42"
-    },
-    {
-      "cve_id": "CVE-2026-40893",
-      "title": "高危漏洞: CVE-2026-40893 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-15 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.31.0, Gotenberg only checks if the tag is exactly FileName, so System:FileName slips right through and ExifTool happily renames the file. This allows remote attackers to move, rename, and change permissions for arbitrary files. This vulnerability is fixed in 8.31.0.",
-      "refs": "https://github.com/gotenberg/gotenberg/security/advisories/GHSA-62p3-hvxx-fxg4\nhttps://github.com/gotenberg/gotenberg/security/advisories/GHSA-62p3-hvxx-fxg4",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:37"
-    },
-    {
-      "cve_id": "CVE-2026-7481",
-      "title": "高危漏洞: CVE-2026-7481 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-14 14:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 16.4 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that could have allowed an authenticated user with developer-role permissions to execute arbitrary JavaScript in other users' browsers due to improper input sanitization.",
-      "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/598646\nhttps://hackerone.com/reports/3697379",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:32"
-    },
-    {
-      "cve_id": "CVE-2026-7377",
-      "title": "高危漏洞: CVE-2026-7377 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-14 14:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.7 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that, in customizable analytics dashboards, could have allowed an authenticated user to execute arbitrary JavaScript in the context of other users' browsers due to improper input sanitization.",
-      "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/598497\nhttps://hackerone.com/reports/3659044",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:27"
-    },
-    {
-      "cve_id": "CVE-2026-6073",
-      "title": "高危漏洞: CVE-2026-6073 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-14 14:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.7 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that could have allowed an authenticated user to execute arbitrary JavaScript in other users' browsers due to improper input sanitization.",
-      "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/596340\nhttps://hackerone.com/reports/3655677",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:22"
-    },
-    {
-      "cve_id": "CVE-2026-1659",
-      "title": "高危漏洞: CVE-2026-1659 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-14 14:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 9.0 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that could have allowed an unauthenticated user to cause denial of service by sending specially crafted requests due to insufficient input validation.",
-      "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/588201\nhttps://hackerone.com/reports/3519824",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:17"
-    },
-    {
-      "cve_id": "CVE-2025-14870",
-      "title": "高危漏洞: CVE-2025-14870 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-14 14:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.5 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that could have allowed an unauthenticated user to cause denial of service by sending specially crafted JSON payloads due to insufficient input validation.",
-      "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/584490\nhttps://hackerone.com/reports/3446641",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:10"
-    },
-    {
-      "cve_id": "CVE-2025-14869",
-      "title": "高危漏洞: CVE-2025-14869 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-14 14:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.5 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that could have allowed an unauthenticated user to cause denial of service by sending specially crafted payloads on certain API endpoints.",
-      "refs": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/584489\nhttps://hackerone.com/reports/3447146",
-      "source": "NVD",
-      "time": "2026-05-15 06:01:04"
     }
   ]
 }
