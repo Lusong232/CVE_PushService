@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8657",
+      "title": "高危漏洞: CVE-2026-8657 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-16 14:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Versions of the package jsondiffpatch before 0.7.6 are vulnerable to Prototype Pollution via the jsondiffpatch.patch() and jsondiffpatch/formatters/jsonpatch.patch() APIs. An attacker can perform prototype pollution by supplying crafted delta or JSON Patch documents, as attacker-controlled property names and path segments are used to traverse and modify objects without restricting access to special properties like __proto__ or constructor.prototype, allowing modification of Object.prototype.",
+      "refs": "https://gist.github.com/yuki-matsuhashi/e570fb1579ae1f3190059b622b0473fb\nhttps://github.com/benjamine/jsondiffpatch/blob/96112c35a98f9201dd75d67fcee68a952c79e2fe/packages/jsondiffpatch/src/filters/nested.ts%23L107-L115\nhttps://github.com/benjamine/jsondiffpatch/blob/96112c35a98f9201dd75d67fcee68a952c79e2fe/packages/jsondiffpatch/src/filters/nested.ts%23L82-L87",
+      "source": "NVD",
+      "time": "2026-05-16 20:58:28"
+    },
+    {
       "cve_id": "CVE-2026-45665",
       "title": "高危漏洞: CVE-2026-45665 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1088,17 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html\nhttps://issues.chromium.org/issues/492350403",
       "source": "NVD",
       "time": "2026-05-15 10:10:57"
-    },
-    {
-      "cve_id": "CVE-2026-8530",
-      "title": "高危漏洞: CVE-2026-8530 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-15 04:17:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Network in Google Chrome on Windows prior to 148.0.7778.168 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html\nhttps://issues.chromium.org/issues/491930142",
-      "source": "NVD",
-      "time": "2026-05-15 10:10:52"
     }
   ]
 }
