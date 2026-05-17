@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8756",
+      "title": "高危漏洞: CVE-2026-8756 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 21:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in fishaudio Bert-VITS2 up to 8f7fbd8c4770965225d258db548da27dc8dd934c. The impacted element is the function generate_config of the file webui_preprocess.py of the component Gradio Interface. Such manipulation of the argument data_dir leads to path traversal. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/550cb92f3489c317ff049fc7d7ea6b99\nhttps://vuldb.com/submit/811175\nhttps://vuldb.com/vuln/364383",
+      "source": "NVD",
+      "time": "2026-05-17 23:52:30"
+    },
+    {
+      "cve_id": "CVE-2026-8755",
+      "title": "高危漏洞: CVE-2026-8755 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 21:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in fishaudio Bert-VITS2 up to 8f7fbd8c4770965225d258db548da27dc8dd934c. The affected element is the function _get_all_models of the file hiyoriUI.py of the component Model Handler. This manipulation causes path traversal. The attack can be initiated remotely. The exploit has been published and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/99859f4f836cca523a5982645e7fdd97\nhttps://vuldb.com/submit/811173\nhttps://vuldb.com/vuln/364382",
+      "source": "NVD",
+      "time": "2026-05-17 23:52:25"
+    },
+    {
+      "cve_id": "CVE-2018-25339",
+      "title": "高危漏洞: CVE-2018-25339 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-17 21:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Zechat 1.5 contains a SQL injection vulnerability in the v parameter that allows unauthenticated attackers to extract database information using time-based blind techniques. Attackers can exploit the v parameter with sleep-based blind injection to confirm vulnerability and extract data.",
+      "refs": "https://bylancer.com\nhttps://www.exploit-db.com/exploits/44685\nhttps://www.vulncheck.com/advisories/zechat-sql-injection-via-v-parameter-time-based-blind",
+      "source": "NVD",
+      "time": "2026-05-17 23:52:20"
+    },
+    {
+      "cve_id": "CVE-2018-25338",
+      "title": "高危漏洞: CVE-2018-25338 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-17 21:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Zechat 1.5 contains a SQL injection vulnerability in the hashtag parameter that allows unauthenticated attackers to extract database information using union-based techniques. Attackers can exploit the hashtag parameter with union-based payloads to retrieve table and column names.",
+      "refs": "https://bylancer.com\nhttps://www.exploit-db.com/exploits/44685\nhttps://www.vulncheck.com/advisories/zechat-sql-injection-via-hashtag-parameter",
+      "source": "NVD",
+      "time": "2026-05-17 23:52:11"
+    },
+    {
+      "cve_id": "CVE-2018-25335",
+      "title": "高危漏洞: CVE-2018-25335 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-17 21:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WordPress Plugin Peugeot Music 1.0 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to the upload.php endpoint. Attackers can upload files with arbitrary extensions by manipulating the 'name' parameter to execute code from the uploads directory.",
+      "refs": "https://www.exploit-db.com/exploits/44737\nhttps://www.vulncheck.com/advisories/wordpress-plugin-peugeot-music-arbitrary-file-upload",
+      "source": "NVD",
+      "time": "2026-05-17 23:52:06"
+    },
+    {
+      "cve_id": "CVE-2018-25333",
+      "title": "高危漏洞: CVE-2018-25333 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-17 21:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Nordex N149/4.0-4.5 Wind Turbine Web Server 4.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the login parameter in login.php. Attackers can submit crafted POST requests with SQL injection payloads in the login field to extract sensitive database information and bypass authentication mechanisms.",
+      "refs": "http://www.nordex-online.com\nhttps://www.exploit-db.com/exploits/44684\nhttps://www.vulncheck.com/advisories/nordex-n149-wind-turbine-web-server-sql-injection",
+      "source": "NVD",
+      "time": "2026-05-17 23:52:01"
+    },
+    {
+      "cve_id": "CVE-2018-25332",
+      "title": "高危漏洞: CVE-2018-25332 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-17 21:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands by exploiting weak secret token generation and insecure file upload functionality. Attackers can brute-force the Blowfish encryption key, upload a malicious JAR plugin via the git-lfs endpoint, and execute system commands through an exposed exploit endpoint.",
+      "refs": "https://github.com/gitbucket/gitbucket\nhttps://security.szurek.pl/\nhttps://www.exploit-db.com/exploits/44668",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:54"
+    },
+    {
+      "cve_id": "CVE-2018-25330",
+      "title": "高危漏洞: CVE-2018-25330 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-17 21:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Joomla! extension EkRishta 2.10 contains persistent cross-site scripting and SQL injection vulnerabilities that allow attackers to inject malicious code through profile fields and POST parameters. Attackers can inject script payloads in profile information fields like Address that execute when users visit the profile, or submit SQL injection payloads via the phone_no parameter to the user_setting endpoint to manipulate database queries.",
+      "refs": "https://extensions.joomla.org/extensions/extension/living/dating-a-relationships/ek-rishta/\nhttps://www.exploit-db.com/exploits/44660\nhttps://www.joomlaextensions.co.in/",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:46"
+    },
+    {
+      "cve_id": "CVE-2018-25329",
+      "title": "高危漏洞: CVE-2018-25329 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-17 21:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "WordPress Plugin WP with Spritz 1.0 contains a remote file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by injecting file paths into the url parameter. Attackers can send GET requests to wp.spritz.content.filter.php with malicious url values to access sensitive files like system configuration and credentials.",
+      "refs": "https://downloads.wordpress.org/plugin/wp-with-spritz.zip\nhttps://www.exploit-db.com/exploits/44544\nhttps://www.vulncheck.com/advisories/wordpress-plugin-wp-with-spritz-remote-file-inclusion",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:42"
+    },
+    {
+      "cve_id": "CVE-2018-25328",
+      "title": "高危漏洞: CVE-2018-25328 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-17 21:16:44",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "VX Search 10.6.18 contains a local buffer overflow vulnerability that allows attackers to overwrite the instruction pointer by supplying an oversized string in the directory field. Attackers can craft a malicious input file containing 271 bytes of junk data followed by a return address to execute arbitrary code with application privileges.",
+      "refs": "http://www.vxsearch.com\nhttps://www.7elements.co.uk\nhttps://www.exploit-db.com/exploits/44494",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:36"
+    },
+    {
+      "cve_id": "CVE-2018-25326",
+      "title": "高危漏洞: CVE-2018-25326 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-17 21:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Google Drive for WordPress 2.2 contains a path traversal vulnerability that allows unauthenticated attackers to read arbitrary files by injecting directory traversal sequences in the file_name parameter. Attackers can send POST requests to gdrive-ajaxs.php with the ajaxstype parameter set to del_fl_bkp and file_name containing traversal sequences ../../wp-config.php to access sensitive configuration files.",
+      "refs": "http://lenonleite.com.br/\nhttps://www.exploit-db.com/exploits/44435\nhttps://www.vulncheck.com/advisories/google-drive-for-wordpress-path-traversal-rce-via-gdrive-ajaxs-php",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:31"
+    },
+    {
+      "cve_id": "CVE-2018-25325",
+      "title": "高危漏洞: CVE-2018-25325 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-17 21:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allows any registered user to delete arbitrary files by submitting unescaped filenames through the delete_export_file AJAX action. Attackers can craft POST requests with directory traversal sequences in the filename parameter to delete sensitive files like wp-config.php outside the intended export directory.",
+      "refs": "http://lenonleite.com.br/\nhttps://www.exploit-db.com/exploits/44433\nhttps://www.vulncheck.com/advisories/woocommerce-csv-importer-path-traversal-file-deletion",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:24"
+    },
+    {
+      "cve_id": "CVE-2018-25323",
+      "title": "高危漏洞: CVE-2018-25323 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-17 21:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception handler buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious payload. Attackers can craft a text file with a specially crafted buffer containing shellcode and SEH chain overwrite values, then paste the contents into the License Name field to trigger code execution.",
+      "refs": "https://www.exploit-db.com/exploits/44363\nhttps://www.vulncheck.com/advisories/allok-avi-divx-mpeg-to-dvd-converter-buffer-overflow-seh",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:18"
+    },
+    {
+      "cve_id": "CVE-2018-25322",
+      "title": "高危漏洞: CVE-2018-25322 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-17 21:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious license name string. Attackers can craft a payload with 780 bytes of junk data followed by structured shellcode and place it in the License Name field to trigger the overflow and execute code with application privileges.",
+      "refs": "http://www.alloksoft.com\nhttp://www.alloksoft.com/allok_vconverter.exe\nhttps://www.exploit-db.com/exploits/44341",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:13"
+    },
+    {
+      "cve_id": "CVE-2018-25320",
+      "title": "高危漏洞: CVE-2018-25320 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-17 21:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitrary commands by leveraging the EXECUTE function. Attackers can use bitsadmin to download malicious PowerShell scripts and execute them with system privileges to establish reverse shells and gain complete system control.",
+      "refs": "https://www.acl.com\nhttps://www.acl.com/products/acl-analytics/\nhttps://www.exploit-db.com/exploits/44281",
+      "source": "NVD",
+      "time": "2026-05-17 23:51:01"
+    },
+    {
+      "cve_id": "CVE-2018-25319",
+      "title": "高危漏洞: CVE-2018-25319 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-17 21:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Redaxo CMS Addon MyEvents 2.2.1 contains an SQL injection vulnerability that allows authenticated attackers to manipulate database queries by injecting SQL code through the myevents_id parameter. Attackers can send GET requests to the event_add.php page with malicious myevents_id values to extract or modify sensitive database information.",
+      "refs": "http://www.github.com/wende60/myevents\nhttps://www.exploit-db.com/exploits/44261\nhttps://www.vulncheck.com/advisories/redaxo-cms-addon-myevents-sql-injection-via-event-add-php",
+      "source": "NVD",
+      "time": "2026-05-17 23:50:53"
+    },
+    {
+      "cve_id": "CVE-2026-8751",
+      "title": "高危漏洞: CVE-2026-8751 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 20:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in h2oai h2o-3 up to 7402. This affects the function importBinaryModel of the file h2o-core/src/main/java/hex/Model.java of the component JAR Handler. Performing a manipulation results in deserialization. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/submit/810107\nhttps://vuldb.com/vuln/364378\nhttps://vuldb.com/vuln/364378/cti",
+      "source": "NVD",
+      "time": "2026-05-17 23:50:43"
+    },
+    {
       "cve_id": "CVE-2026-8734",
       "title": "高危漏洞: CVE-2026-8734 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -912,193 +1099,6 @@
       "refs": "https://github.com/611711Dark/mcp_calculate_server/security/advisories/GHSA-2mgq-7rfg-rwpj",
       "source": "NVD",
       "time": "2026-05-16 03:17:00"
-    },
-    {
-      "cve_id": "CVE-2026-44714",
-      "title": "高危漏洞: CVE-2026-44714 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 01:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The bitcoinj library is a Java implementation of the Bitcoin protocol. Prior to 0.17.1, ScriptExecution.correctlySpends() contains two fast-path verification bugs for standard P2PKH and native P2WPKH spends in core/src/main/java/org/bitcoinj/script/ScriptExecution.java. In both branches, bitcoinj verifies an attacker-controlled signature/public-key pair but fails to verify that the public key is the one committed to by the output being spent. As a result, any attacker keypair can satisfy bitcoinj's local verification for arbitrary P2PKH and P2WPKH outputs. This vulnerability is fixed in 0.17.1.",
-      "refs": "https://github.com/bitcoinj/bitcoinj/commit/2bc5653c41d260d840692bc554690d4d79208f9c\nhttps://github.com/bitcoinj/bitcoinj/commit/b575a682acf614b9ff95cacbdeb48f86c3ababe0\nhttps://github.com/bitcoinj/bitcoinj/security/advisories/GHSA-hfcf-v2f8-x9pc",
-      "source": "NVD",
-      "time": "2026-05-16 03:16:56"
-    },
-    {
-      "cve_id": "CVE-2026-44641",
-      "title": "高危漏洞: CVE-2026-44641 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 01:16:47",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Microsoft APM is an open-source, community-driven dependency manager for AI agents. Prior to 0.8.12, Microsoft APM normalizes marketplace plugins by copying plugin components referenced in plugin.json into .apm/. The manifest fields agents, skills, commands, and hooks are attacker-controlled, but the implementation does not enforce that those paths remain inside the plugin directory. A malicious plugin can therefore use absolute paths or ../ traversal paths to copy arbitrary readable host files or directories from the installer's machine during apm install. This vulnerability is fixed in 0.8.12.",
-      "refs": "https://github.com/microsoft/apm/security/advisories/GHSA-xhrw-5qxx-jpwr",
-      "source": "NVD",
-      "time": "2026-05-16 03:16:52"
-    },
-    {
-      "cve_id": "CVE-2026-41258",
-      "title": "高危漏洞: CVE-2026-41258 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-16 01:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "OpenMRS is an open source electronic medical record system platform. From 2.7.0 to before 2.7.9 and 2.8.6, the ConceptReferenceRangeUtility.evaluateCriteria() method in OpenMRS Core evaluates database-stored criteria strings as Apache Velocity templates without any sandbox configuration. The VelocityEngine is initialized with only logging properties and noSecureUberspector, leaving the default UberspectImpl in place, which allows unrestricted Java reflection through template expressions. A user with the Manage Concepts privilege can store a malicious Velocity template expression in a concept's reference range criteria field. This payload is then executed automatically whenever a user or API call validates an observation against the affected concept. The Velocity context exposes $patient (the Person / Patient object), $obs (the Obs object), and $fn (the ConceptReferenceRangeUtility instance with access to the full OpenMRS service layer). This vulnerability is fixed in 2.7.9 and 2.8.6.",
-      "refs": "https://github.com/openmrs/openmrs-core/security/advisories/GHSA-xj4f-8jjg-vx4q",
-      "source": "NVD",
-      "time": "2026-05-16 03:16:47"
-    },
-    {
-      "cve_id": "CVE-2026-39054",
-      "title": "高危漏洞: CVE-2026-39054 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-15 23:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Oinone Pamirs 7.0.0 contains a command injection vulnerability in CommandHelper.executeCommands. The method starts a shell process and writes attacker-controlled command strings directly to the process standard input without sanitization. In affected deployments, this can result in arbitrary operating system command execution.",
-      "refs": "https://gist.github.com/Misakim1/859c3eb9ced699089ee0747dae9bedc1\nhttps://github.com/oinone/oinone-pamirs\nhttps://www.oinone.top/changelog",
-      "source": "NVD",
-      "time": "2026-05-16 03:16:42"
-    },
-    {
-      "cve_id": "CVE-2026-38728",
-      "title": "高危漏洞: CVE-2026-38728 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 23:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An issue in Nodemailer smtp_server before v.3.18.3 allows a remote attacker to cause a denial of service via the SMTPStream._write, lib/smtp-stream.js components",
-      "refs": "https://bytecreator.dev/blog/CVE-2026-38728\nhttps://github.com/nodemailer/smtp-server\nhttps://github.com/nodemailer/smtp-server/releases/tag/v3.18.3",
-      "source": "NVD",
-      "time": "2026-05-16 03:16:35"
-    },
-    {
-      "cve_id": "CVE-2026-34253",
-      "title": "高危漏洞: CVE-2026-34253 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-15 23:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
-      "description": "A buffer underflow vulnerability has been identified in the ogg123 utility from the vorbis-tools 1.4.3 package in function remotethread in remote.c. This vulnerability occurs in the remote control functionality when processing malformed input, leading to a stack buffer underflow that can cause application crashes and potentially allow code execution.",
-      "refs": "https://github.com/xiph/vorbis-tools/archive/refs/tags/v1.4.3.tar.gz\nhttps://github.com/xiph/vorbis-tools/blob/0b3fbf42eb3897d32f4a75baa2dc915a4ca45e8e/ogg123/remote.c#L153\nhttps://gitlab.xiph.org/xiph/vorbis-tools/-/work_items/2332",
-      "source": "NVD",
-      "time": "2026-05-16 03:16:28"
-    },
-    {
-      "cve_id": "CVE-2026-8585",
-      "title": "高危漏洞: CVE-2026-8585 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 04:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Media in Google Chrome on iOS prior to 148.0.7778.168 allowed a remote attacker who had compromised the renderer process to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html\nhttps://issues.chromium.org/issues/499052720",
-      "source": "NVD",
-      "time": "2026-05-16 00:46:33"
-    },
-    {
-      "cve_id": "CVE-2026-41964",
-      "title": "高危漏洞: CVE-2026-41964 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-15 18:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Permission control vulnerability in the web. Impact: Successful exploitation of this vulnerability may affect availability.",
-      "refs": "https://consumer.huawei.com/en/support/bulletin/2026/5/\nhttps://consumer.huawei.com/en/support/bulletinlaptops/2026/5/",
-      "source": "NVD",
-      "time": "2026-05-15 21:30:24"
-    },
-    {
-      "cve_id": "CVE-2026-8398",
-      "title": "高危漏洞: CVE-2026-8398 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-15 17:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A supply chain attack compromised the official installation packages of DAEMON Tools Lite (Windows versions 12.5.0.2421 through 12.5.0.2434), distributed from the legitimate website daemon-tools.cc between approximately April 8, 2026, and May 5, 2026. Attackers gained unauthorized access to the vendor's (AVB Disc Soft) build or distribution infrastructure and trojanized three binaries: DTHelper.exe, DiscSoftBusServiceLite.exe, and DTShellHlp.exe. These files were digitally signed with the legitimate AVB Disc Soft code-signing certificate, allowing the malicious installers to appear trustworthy and bypass signature-based detection.",
-      "refs": "https://blog.daemon-tools.cc/post/security-incident\nhttps://securelist.com/tr/daemon-tools-backdoor/119654/",
-      "source": "NVD",
-      "time": "2026-05-15 21:30:17"
-    },
-    {
-      "cve_id": "CVE-2026-6403",
-      "title": "高危漏洞: CVE-2026-6403 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 17:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Quick Playground plugin for WordPress is vulnerable to Path Traversal in versions up to and including 1.3.3. This is due to insufficient path validation in the qckply_zip_theme() function, which appends a user-controlled 'stylesheet' parameter directly to the theme root directory path without sanitizing directory traversal sequences. This makes it possible for unauthenticated attackers to trigger the creation of a ZIP archive containing arbitrary files from the server's filesystem — including wp-config.",
-      "refs": "https://plugins.trac.wordpress.org/browser/quick-playground/tags/1.3.1/api.php#L62\nhttps://plugins.trac.wordpress.org/browser/quick-playground/tags/1.3.1/api.php#L631\nhttps://plugins.trac.wordpress.org/browser/quick-playground/tags/1.3.1/utility.php#L162",
-      "source": "NVD",
-      "time": "2026-05-15 21:30:13"
-    },
-    {
-      "cve_id": "CVE-2026-6228",
-      "title": "高危漏洞: CVE-2026-6228 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-15 17:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to Privilege Escalation in versions up to and including 3.28.36. This is due to insufficient authorization checks in the role field update mechanism combined with overly permissive capabilities for the admin_form post type. The admin_form custom post type uses 'capability_type' => 'page', which grants editors the ability to create and edit forms. When an editor creates an edit_user form, they can manipulate the form configuration to include 'administrator' in the role_options array by directly submitting POST data to wp-admin/post.php, bypassing the UI restrictions in feadmin_get_user_roles(). When the form is subsequently submitted, the pre_update_value() function in class-role.php only validates that the submitted role exists in the form's role_options array (lines 107-110), but fails to verify that the current user has permission to assign that specific role. This makes it possible for unauthenticated attackers to first register as editors (via a public new_user form), then create an edit_user form with administrator in the allowed roles, and finally use that form to escalate their own privileges to administrator.",
-      "refs": "https://plugins.trac.wordpress.org/browser/acf-frontend-form-element/trunk/main/admin/admin-pages/forms/post-types.php#L53\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/trunk/main/frontend/fields/user/class-role.php#L113\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/trunk/main/frontend/forms/actions/user.php#L517",
-      "source": "NVD",
-      "time": "2026-05-15 21:30:08"
-    },
-    {
-      "cve_id": "CVE-2026-5229",
-      "title": "高危漏洞: CVE-2026-5229 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-15 17:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Form Notify plugin for WordPress is vulnerable to Authentication Bypass in versions up to and including 1.1.10. This is due to the plugin trusting user-controlled cookie data to determine which WordPress account to authenticate after a LINE OAuth login. When LINE doesn't provide an email address (which is common), the plugin falls back to reading the 'form_notify_line_email' cookie value without verifying that the LINE account is associated with that email address. This makes it possible for unauthenticated attackers to gain access to any user account on the site, including administrator accounts, by completing a LINE OAuth flow with their own LINE account while injecting a malicious cookie containing the target victim's email address.",
-      "refs": "https://github.com/oberonlai/form-notify/commit/5eab0ea\nhttps://github.com/oberonlai/form-notify/commit/9780764\nhttps://plugins.trac.wordpress.org/browser/form-notify/tags/1.1.08/src/APIs/Line/Login/Route.php#L116-L118",
-      "source": "NVD",
-      "time": "2026-05-15 21:30:01"
-    },
-    {
-      "cve_id": "CVE-2026-4094",
-      "title": "高危漏洞: CVE-2026-4094 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-15 15:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The FOX – Currency Switcher Professional for WooCommerce plugin for WordPress is vulnerable to unauthorized data loss due to a missing capability check on the 'admin_head' function in all versions up to, and including, 1.4.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to delete the entire multi-currency configuration by visiting any wp-admin page with the `woocs_reset` parameter appended. Additionally, because no nonce is verified, this is also exploitable via Cross-Site Request Forgery against any administrator. The vulnerability may also be exploited by Subscriber-level users if the site is configured to allow Subscriber access to 'wp-admin' pages.",
-      "refs": "https://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/woocs.php#L1167\nhttps://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/woocs.php#L1168\nhttps://plugins.trac.wordpress.org/changeset/3483839/",
-      "source": "NVD",
-      "time": "2026-05-15 21:29:56"
-    },
-    {
-      "cve_id": "CVE-2026-41702",
-      "title": "高危漏洞: CVE-2026-41702 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-15 15:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "VMware Fusion contains a TOCTOU (Time-of-check Time-of-use) vulnerability that occurs during an operation performed by a SETUID binary. A malicious actor with local non-administrative user privileges may exploit this vulnerability to escalate privileges to root on the system where Fusion is installed.",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37454",
-      "source": "NVD",
-      "time": "2026-05-15 21:29:51"
-    },
-    {
-      "cve_id": "CVE-2026-28761",
-      "title": "高危漏洞: CVE-2026-28761 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-15 14:16:20",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Cross-site request forgery vulnerability exists in Musetheque V4 Information Disclosure for IPKNOWLEDGE V4L1 rev2203.0 and earlier. If a user views a malicious page while logged-in to the affected product, unexpected operations may be done.",
-      "refs": "https://jvn.jp/en/jp/JVN69128376/",
-      "source": "NVD",
-      "time": "2026-05-15 21:29:46"
-    },
-    {
-      "cve_id": "CVE-2026-2652",
-      "title": "高危漏洞: CVE-2026-2652 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-15 11:16:23",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "A vulnerability in mlflow/mlflow versions 3.9.0 and earlier allows unauthenticated access to certain FastAPI routes when the server is started with authentication enabled (`--app-name basic-auth`) and served via uvicorn (ASGI). The FastAPI permission middleware only enforces authentication on `/gateway/` routes, leaving other routes such as the Job API (`/ajax-api/3.0/jobs/*`) and the OpenTelemetry trace ingestion API (`/v1/traces`) unprotected. This allows unauthenticated remote attackers to submit jobs, read job results, cancel running jobs, and inject arbitrary trace data into experiments. The issue arises from an architectural mismatch between Flask and FastAPI authentication mechanisms, where the `_find_fastapi_validator()` function fails to handle non-`/gateway/` paths, resulting in a complete authentication bypass. This vulnerability is fixed in version 3.10.0.",
-      "refs": "https://github.com/mlflow/mlflow/commit/bb62e773263c14e9ba4d1a82fe72d0de2442c6aa\nhttps://huntr.com/bounties/5aeff5f0-49c7-4180-b5cb-c9a046f16756",
-      "source": "NVD",
-      "time": "2026-05-15 14:23:39"
-    },
-    {
-      "cve_id": "CVE-2026-44671",
-      "title": "高危漏洞: CVE-2026-44671 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 06:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "ZITADEL is an open source identity management platform. From 2.71.11 to before 3.4.10 and 4.15.0, a vulnerability was discovered in Zitadel's LDAP identity provider implementation, which fails to properly escape user-provided usernames before incorporating them into LDAP search filters. This allows unauthenticated attackers to perform LDAP Filter Injection during the login process. While this vulnerability does not allow for a full authentication bypass, an attacker can use LDAP metacharacters (such as *, (, )) to perform blind LDAP injection. By observing the different failure (or success) responses, an attacker can systematically enumerate valid usernames and extract sensitive attribute data from the connected LDAP directory. This vulnerability is fixed in 3.4.10 and 4.15.0.",
-      "refs": "https://github.com/zitadel/zitadel/releases/tag/v3.4.10\nhttps://github.com/zitadel/zitadel/releases/tag/v4.15.0\nhttps://github.com/zitadel/zitadel/security/advisories/GHSA-rxvx-hhpj-q6px",
-      "source": "NVD",
-      "time": "2026-05-15 10:13:28"
     }
   ]
 }
