@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8759",
+      "title": "高危漏洞: CVE-2026-8759 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 23:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in xiandafu beetl up to 3.20.2. Affected is an unknown function of the file beetl-classic-integration/beetl-spring-classic/src/main/java/org/beetl/ext/spring/SpELFunction.java of the component SpELFunction. The manipulation leads to improper neutralization of special elements used in an expression language statement. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://gitee.com/xiandafu/beetl/\nhttps://gitee.com/xiandafu/beetl/issues/IIYAWC\nhttps://vuldb.com/submit/811316",
+      "source": "NVD",
+      "time": "2026-05-18 02:53:52"
+    },
+    {
+      "cve_id": "CVE-2026-8758",
+      "title": "高危漏洞: CVE-2026-8758 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 22:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Metasoft 美特软件 MetaCRM up to 6.4.0 Beta06. This impacts an unknown function of the file /common/jsp/upload3.jsp. Executing a manipulation of the argument File can lead to unrestricted upload. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/XmoNwpJjJiQrBtkLMitccF56ntb\nhttps://vuldb.com/submit/811283\nhttps://vuldb.com/vuln/364385",
+      "source": "NVD",
+      "time": "2026-05-18 02:53:48"
+    },
+    {
+      "cve_id": "CVE-2026-8757",
+      "title": "高危漏洞: CVE-2026-8757 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 22:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in adenhq hive up to 0.11.0. This affects the function _read_events_tail of the file core/framework/server/routes_sessions.py of the component Delete Request Handler. Performing a manipulation results in path traversal. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/ff3ff201b05d13d41f949f86e9187bd2\nhttps://vuldb.com/submit/811276\nhttps://vuldb.com/vuln/364384",
+      "source": "NVD",
+      "time": "2026-05-18 02:53:43"
+    },
+    {
       "cve_id": "CVE-2026-8756",
       "title": "高危漏洞: CVE-2026-8756 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/microsoft/apm/security/advisories/GHSA-q5pp-gvjg-h7v4\nhttps://github.com/microsoft/apm/security/advisories/GHSA-q5pp-gvjg-h7v4",
       "source": "NVD",
       "time": "2026-05-16 03:17:16"
-    },
-    {
-      "cve_id": "CVE-2026-45037",
-      "title": "高危漏洞: CVE-2026-45037 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 01:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.232, Tabby's terminal linkifier passes any detected URI directly to the operating system's protocol handler without validating the protocol scheme. This allows a malicious SSH or Telnet server to send crafted terminal output containing dangerous protocol URIs which Tabby renders as clickable links, triggering arbitrary OS protocol handlers on the victim's machine. This vulnerability is fixed in 1.0.232.",
-      "refs": "https://github.com/Eugeny/tabby/security/advisories/GHSA-cmpc-v2x9-j9x9",
-      "source": "NVD",
-      "time": "2026-05-16 03:17:12"
-    },
-    {
-      "cve_id": "CVE-2026-45036",
-      "title": "高危漏洞: CVE-2026-45036 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-05-16 01:16:48",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.233, Tabby before 1.0.233 automatically confirms ZMODEM protocol detection on all terminal session output without user interaction, enabling shell command execution when a user displays attacker-controlled content. The ZModemMiddleware in tabby-terminal consumes all session output through a Zmodem.Sentry, and when a ZMODEM ZRQINIT header is detected, unconditionally calls detection.confirm() and writes a fixed ZRINIT response ( **\\x18B0100000023be50\\r\\n\\x11) back into the active PTY as input. When the process that triggered the detection (e.g., cat) exits, the injected bytes are consumed by the user's shell as a command line. Under fish (default configuration), the ** prefix triggers recursive glob expansion against the current directory, allowing an attacker-placed executable at a matching nested path (e.g., d/xB0100000023be50) to be executed by relative pathname without relying on PATH. Under bash and zsh, a secondary xterm.js terminal color-query feedback (OSC 10) can be combined in the same file to inject a slash-containing command word that similarly bypasses PATH resolution. An attacker can exploit this by providing a crafted file (e.g., in a cloned Git repository) that a user displays with cat, achieving code execution with no interaction beyond viewing the file. This vulnerability is fixed in 1.0.233.",
-      "refs": "https://github.com/Eugeny/tabby/security/advisories/GHSA-qr3x-j8g9-xhf6",
-      "source": "NVD",
-      "time": "2026-05-16 03:17:08"
-    },
-    {
-      "cve_id": "CVE-2026-44717",
-      "title": "高危漏洞: CVE-2026-44717 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-16 01:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "MCP Calculate Server is a mathematical calculation service based on MCP protocol and SymPy library. Prior to 0.1.1, the use of eval() to evaluate mathematical expressions without proper input sanitization leads to remote code execution. This vulnerability is fixed in 0.1.1.",
-      "refs": "https://github.com/611711Dark/mcp_calculate_server/security/advisories/GHSA-2mgq-7rfg-rwpj",
-      "source": "NVD",
-      "time": "2026-05-16 03:17:00"
     }
   ]
 }
