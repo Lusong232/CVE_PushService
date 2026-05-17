@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8719",
+      "title": "高危漏洞: CVE-2026-8719 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-17 12:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The AI Engine – The Chatbot, AI Framework & MCP for WordPress plugin for WordPress is vulnerable to Privilege Escalation in version 3.4.9. This is due to missing WordPress capability enforcement in the MCP OAuth bearer-token authorization path, where any valid OAuth token causes MCP access to be granted without verifying administrator privileges. This makes it possible for authenticated (Subscriber+) attackers to invoke admin-level MCP tools and escalate privileges to Administrator.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3533527/ai-engine\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/0593c20d-3422-4817-9639-614254b609db?source=cve",
+      "source": "NVD",
+      "time": "2026-05-17 14:13:09"
+    },
+    {
+      "cve_id": "CVE-2026-8725",
+      "title": "高危漏洞: CVE-2026-8725 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-17 10:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in CoreWorxLab CAAL up to 1.6.0. The affected element is an unknown function of the file src/caal/webhooks.py of the component test-hass Endpoint. This manipulation causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/juruo123/public_exp/issues/5\nhttps://vuldb.com/submit/807753\nhttps://vuldb.com/vuln/364316",
+      "source": "NVD",
+      "time": "2026-05-17 14:13:01"
+    },
+    {
       "cve_id": "CVE-2026-46728",
       "title": "高危漏洞: CVE-2026-46728 (CVSS 8.2)",
       "cvss_score": 8.2,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/universal-tool-calling-protocol/python-utcp/security/advisories/GHSA-5v57-8rxj-3p2r",
       "source": "NVD",
       "time": "2026-05-15 10:13:24"
-    },
-    {
-      "cve_id": "CVE-2026-45369",
-      "title": "高危漏洞: CVE-2026-45369 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-15 05:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "python-utcp is the python implementation of UTCP. Prior to 1.1.3, the _substitute_utcp_args method in cli_communication_protocol.py inserts user-controlled tool_args values directly into shell command strings without any sanitization or escaping. These commands are then executed via /bin/bash -c (Unix) or powershell.exe -Command (Windows), allowing an attacker to inject arbitrary shell commands. This vulnerability is fixed in 1.1.3.",
-      "refs": "https://github.com/universal-tool-calling-protocol/python-utcp/security/advisories/GHSA-33p6-5jxp-p3x4",
-      "source": "NVD",
-      "time": "2026-05-15 10:13:20"
-    },
-    {
-      "cve_id": "CVE-2026-44673",
-      "title": "高危漏洞: CVE-2026-44673 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-15 05:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "libyang is a YANG data modeling language library. Prior to SO 5.2.15, lyb_read_string() in src/parser_lyb.c contains an integer overflow that results in a heap buffer overflow when parsing a maliciously crafted LYB binary blob. An attacker who can supply LYB data to any libyang consumer (NETCONF server, sysrepo, etc.) can trigger a crash or potential heap corruption. This vulnerability is fixed in SO 5.2.15.",
-      "refs": "https://github.com/CESNET/libyang/security/advisories/GHSA-vw2p-pq79-92xh",
-      "source": "NVD",
-      "time": "2026-05-15 10:13:15"
     }
   ]
 }
