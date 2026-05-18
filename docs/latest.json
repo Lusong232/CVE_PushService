@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-39079",
+      "title": "高危漏洞: CVE-2026-39079 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-18 23:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An issue in prestashop upsshipping all versions through at least 2.4.0 allows a remote attacker to obtain sensitive information via the /modules/upsshipping/logs/, and /modules/upsshipping/lib/UPSBaseApi.php components",
+      "refs": "https://labs.esokia.com/cve/cve-2026-39079/\nhttps://labs.esokia.com/cve/cve-2026-39079/",
+      "source": "NVD",
+      "time": "2026-05-19 03:24:06"
+    },
+    {
+      "cve_id": "CVE-2026-6495",
+      "title": "高危漏洞: CVE-2026-6495 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-18 15:16:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "The Ajax Load More  WordPress plugin before 7.8.4 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin",
+      "refs": "https://wpscan.com/vulnerability/c52f28c5-547d-48ae-89dd-edcdaeadcec5/",
+      "source": "NVD",
+      "time": "2026-05-19 03:24:00"
+    },
+    {
       "cve_id": "CVE-2026-41948",
       "title": "高危漏洞: CVE-2026-41948 (CVSS 7.7)",
       "cvss_score": 7.7,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-4v7r-f4w8-8972\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-4v7r-f4w8-8972",
       "source": "NVD",
       "time": "2026-05-16 10:01:32"
-    },
-    {
-      "cve_id": "CVE-2026-44556",
-      "title": "高危漏洞: CVE-2026-44556 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 04:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, the /responses endpoint in the OpenAI router accepts any authenticated user and forwards requests directly to upstream LLM providers without enforcing per-model access control. While the primary chat completion endpoint (generate_chat_completion) checks model ownership, group membership, and AccessGrants before allowing a request, the /responses proxy only validates that the user has a valid session via get_verified_user. This allows any authenticated user to interact with any model configured on the instance by sending a POST request to /api/openai/responses with an arbitrary model ID. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-hp5m-24vp-vq2q",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:25"
-    },
-    {
-      "cve_id": "CVE-2026-44555",
-      "title": "高危漏洞: CVE-2026-44555 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-16 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, Open WebUI supports model composition via base_model_id: a user-defined model (e.g., \"Cheap Assistant\") can reference an existing base model (e.g., \"gpt-4-turbo-restricted\") that provides the actual inference capability. When a user queries the composed model, the access control pipeline verifies the user has access to the composed model but never re-verifies access to the chained base model. Additionally, the model creation and import endpoints accept arbitrary base_model_id values without checking that the caller has access to that base model. Combined, this allows any user with the default model creation permission to create a model that chains to a restricted base model — and then invoke it, causing the server to dispatch the request to the restricted base model using the admin-configured API key. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-9vvh-qmjx-p4q8\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-9vvh-qmjx-p4q8",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:20"
     }
   ]
 }
