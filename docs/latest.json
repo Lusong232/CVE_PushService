@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7498",
+      "title": "高危漏洞: CVE-2026-7498 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-18 17:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Basamak Information Technology Consulting and Organization Trade Ltd. Co. DernekWeb allows Stored XSS.\n\nThis issue affects DernekWeb: through 30122025.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0258",
+      "source": "NVD",
+      "time": "2026-05-18 20:21:26"
+    },
+    {
+      "cve_id": "CVE-2026-6347",
+      "title": "高危漏洞: CVE-2026-6347 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-18 17:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Mattermost versions 11.5.x <= 11.5.1, 10.11.x <= 10.11.13, 11.4.x <= 11.4.3 fail to sanitize sensitive configuration fields in the Mattermost Calls plugin which allows an attacker with access to a support packet to obtain TURN server credentials via the plaintext values present in the exported plugin configuration.. Mattermost Advisory ID: MMSA-2026-00605",
+      "refs": "https://mattermost.com/security-updates",
+      "source": "NVD",
+      "time": "2026-05-18 20:21:20"
+    },
+    {
+      "cve_id": "CVE-2026-6346",
+      "title": "高危漏洞: CVE-2026-6346 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-05-18 17:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Mattermost versions 11.5.x <= 11.5.1, 10.11.x <= 10.11.13, 11.4.x <= 11.4.3 fail to sanitize sensitive configuration fields before including them in support packet generation, which allows a Mattermost System Admin or any party with access to a support packet to obtain sensitive credentials in plaintext via downloading a support packet from the System Console.. Mattermost Advisory ID: MMSA-2026-00607",
+      "refs": "https://mattermost.com/security-updates",
+      "source": "NVD",
+      "time": "2026-05-18 20:21:15"
+    },
+    {
       "cve_id": "CVE-2026-8785",
       "title": "高危漏洞: CVE-2026-8785 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9pq7-mfwh-xx2j\nhttps://www.vulncheck.com/advisories/phpmyfaq-unauthenticated-two-factor-authentication-brute-force-via-admin-check-endpoint",
       "source": "NVD",
       "time": "2026-05-16 05:50:05"
-    },
-    {
-      "cve_id": "CVE-2026-44826",
-      "title": "高危漏洞: CVE-2026-44826 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 03:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.2, Vvveb CMS does not validate the sign of the quantity parameter on the cart-add endpoint. Submitting a negative integer is accepted by the server and treated as a normal positive line-item, but with the sign carried through into every downstream computation: line total, sub-total, taxes, and grand total all become negative numbers. The customer-facing cart UI then displays a negative grand total to the user, the checkout flow accepts the negative cart, and the resulting order is persisted in the merchant's database with a negative total column. From the merchant's order management dashboard, this surfaces as a real order with a negative total — an \"the merchant owes the customer money\" record that no legitimate workflow ever creates. This vulnerability is fixed in 1.0.8.2.",
-      "refs": "https://github.com/givanz/Vvveb/security/advisories/GHSA-75x2-j47j-mg8j",
-      "source": "NVD",
-      "time": "2026-05-16 05:49:59"
-    },
-    {
-      "cve_id": "CVE-2021-47966",
-      "title": "高危漏洞: CVE-2021-47966 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-16 03:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "PHP Timeclock 1.04 contains time-based and boolean-based blind SQL injection vulnerabilities in the login_userid parameter of login.php that allows unauthenticated attackers to extract database contents. Attackers can submit crafted POST requests with SQL payloads using SLEEP functions or RLIKE conditional statements to dump sensitive database information including employee names and credentials.",
-      "refs": "http://timeclock.sourceforge.net\nhttps://sourceforge.net/projects/timeclock/files/PHP%20Timeclock/PHP%20Timeclock%201.04/\nhttps://www.exploit-db.com/exploits/49849",
-      "source": "NVD",
-      "time": "2026-05-16 05:49:54"
-    },
-    {
-      "cve_id": "CVE-2021-47965",
-      "title": "高危漏洞: CVE-2021-47965 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-16 03:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WordPress Plugin WP Super Edit 2.5.4 and earlier contains an unrestricted file upload vulnerability in the FCKeditor component that allows attackers to upload dangerous file types without validation. Attackers can upload arbitrary files through the filemanager upload endpoint to achieve remote code execution and complete system compromise.",
-      "refs": "https://wordpress.org\nhttps://wordpress.org/plugins/wp-super-edit/\nhttps://www.exploit-db.com/exploits/49839",
-      "source": "NVD",
-      "time": "2026-05-16 05:49:49"
     }
   ]
 }
