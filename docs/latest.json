@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8836",
+      "title": "高危漏洞: CVE-2026-8836 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-19 03:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in lwIP up to 2.2.1. Affected is the function snmp_parse_inbound_frame of the file src/apps/snmp/snmp_msg.c of the component snmpv3 USM Handler. Performing a manipulation of the argument msgAuthenticationParameters results in stack-based buffer overflow. The attack may be initiated remotely. The patch is named 0c957ec03054eb6c8205e9c9d1d05d90ada3898c. It is suggested to install a patch to address this issue.",
+      "refs": "https://cgit.git.savannah.gnu.org/cgit/lwip.git/commit/?id=0c957ec03054eb6c8205e9c9d1d05d90ada3898c\nhttps://github.com/lwip-tcpip/lwip/commit/0c957ec03054eb6c8205e9c9d1d05d90ada3898c\nhttps://savannah.nongnu.org/bugs/?68194",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:51"
+    },
+    {
+      "cve_id": "CVE-2026-45242",
+      "title": "高危漏洞: CVE-2026-45242 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-19 03:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Summarize prior to 0.15.1 contains a path traversal vulnerability in the /v1/summarize daemon endpoint that allows authenticated callers to write files to arbitrary directories by supplying an absolute path or directory traversal sequence in the slidesDir request parameter. Attackers can exploit this to write slide_*.png and slides.json files to any writable directory and subsequently delete matching files at the specified location through repeat extraction.",
+      "refs": "https://github.com/steipete/summarize/commit/ec8efd63295656fbfe8743620179c489bc5a242f\nhttps://github.com/steipete/summarize/pull/220\nhttps://github.com/steipete/summarize/releases/tag/v0.15.2",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:47"
+    },
+    {
+      "cve_id": "CVE-2026-45495",
+      "title": "高危漏洞: CVE-2026-45495 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-19 02:17:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45495",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:39"
+    },
+    {
+      "cve_id": "CVE-2026-45230",
+      "title": "高危漏洞: CVE-2026-45230 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-19 02:17:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "DumbAssets through 1.0.11 contains a path traversal vulnerability in the POST /api/delete-file endpoint and filesToDelete array parameters that allows unauthenticated attackers to delete arbitrary files by supplying ../ sequences that bypass directory boundary validation. Attackers can exploit the optional and disabled-by-default authentication control to traverse outside the intended application directory and delete critical files such as server.js or package.json, causing complete denial of service.",
+      "refs": "https://github.com/DumbWareio/DumbAssets/pull/136\nhttps://www.vulncheck.com/advisories/dumbassets-path-traversal-file-deletion-via-api-delete-file",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:35"
+    },
+    {
+      "cve_id": "CVE-2026-42822",
+      "title": "高危漏洞: CVE-2026-42822 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-19 02:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper authentication in Azure Local Disconnected Operations allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42822",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:31"
+    },
+    {
+      "cve_id": "CVE-2026-41085",
+      "title": "高危漏洞: CVE-2026-41085 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-19 01:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Thermo Fisher Scientific Torrent Suite Dx through 5.14.2 has a privilege escalation vulnerability that may allow an authenticated user with limited access privileges to gain unauthorized administrator-level privileges through exploitation of specific system interfaces.",
+      "refs": "https://documents.thermofisher.com/TFS-Assets/CORP/Product-Guides/TorrentSuiteDxSoftware_v5_14_2.pdf\nhttps://thermofisher.com",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:27"
+    },
+    {
+      "cve_id": "CVE-2025-57282",
+      "title": "高危漏洞: CVE-2025-57282 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-19 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ngrok v4.3.3 and 5.0.0-beta.2 is vulnerable to Command Injection.",
+      "refs": "https://gist.github.com/Dremig/90c2a0a2f85b0921f10e0bb3192a0c23\nhttps://www.npmjs.com",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:22"
+    },
+    {
+      "cve_id": "CVE-2025-56352",
+      "title": "高危漏洞: CVE-2025-56352 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-19 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In tinyMQTT commit 6226ade15bd4f97be2d196352e64dd10937c1962 (2024-02-18), the broker mishandles protocol violations during CONNECT packet parsing. When receiving a CONNECT packet with a zero-length Client ID while CleanSession is set to 0, the broker correctly replies with a CONNACK return code 0x02 (Identifier Rejected) but fails to explicitly close the TCP connection. Since the surrounding connection teardown logic is not guaranteed to execute, each such invalid CONNECT attempt leaves the underlying socket open. Repeated attempts cause server-side resource exhaustion due to accumulating file descriptors and memory usage, potentially resulting in denial of service.",
+      "refs": "https://github.com/JustDoIt0910/tinyMQTT/issues/19\nhttps://github.com/user-attachments/files/21207896/Resource_Exhaustion_Poc.txt",
+      "source": "NVD",
+      "time": "2026-05-19 05:58:18"
+    },
+    {
       "cve_id": "CVE-2026-39079",
       "title": "高危漏洞: CVE-2026-39079 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1011,94 +1099,6 @@
       "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-8w7q-q5jp-jvgx\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-8w7q-q5jp-jvgx",
       "source": "NVD",
       "time": "2026-05-16 10:02:11"
-    },
-    {
-      "cve_id": "CVE-2026-45398",
-      "title": "高危漏洞: CVE-2026-45398 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 05:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, _validate_collection_access() checks the user-memory-* and file-* collection name prefixes but does not check knowledge base collections, which use raw UUIDs as collection names. Any authenticated user who knows a private knowledge base UUID can read its content through the retrieval query endpoints, even though the knowledge API correctly denies that user access. The same gap affects the retrieval write endpoints (/process/text, /process/file, /process/files/batch, /process/web, /process/youtube), allowing an attacker to inject content into or overwrite another user's knowledge base. This vulnerability is fixed in 0.9.5.",
-      "refs": "https://github.com/open-webui/open-webui/pull/22109\nhttps://github.com/open-webui/open-webui/releases/tag/v0.9.5\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-4g37-7p2c-38r9",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:06"
-    },
-    {
-      "cve_id": "CVE-2026-45395",
-      "title": "高危漏洞: CVE-2026-45395 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-16 05:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, the tool update endpoint (POST /api/v1/tools/id/{id}/update) is missing the workspace.tools permission check that is present on the tool create endpoint. This allows a user who has been explicitly denied tool management capabilities ( and who the administrator considers untrusted for code execution ) to replace a tool's server-side Python content and trigger execution, bypassing the intended workspace.tools security boundary. This vulnerability is fixed in 0.9.5.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-p4fx-23fq-jfg6",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:01"
-    },
-    {
-      "cve_id": "CVE-2026-44721",
-      "title": "高危漏洞: CVE-2026-44721 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-16 05:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, a stored cross-site scripting (XSS) vulnerability that allows any authenticated user with model creation permission (workspace.models) to execute arbitrary JavaScript in the browser of any other user (including admins) who views the malicious model in the chat UI. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-gf5m-wcrh-7928",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:57"
-    },
-    {
-      "cve_id": "CVE-2026-45675",
-      "title": "高危漏洞: CVE-2026-45675 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 04:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, he LDAP and OAuth authentication flows use a TOCTOU (Time-of-Check-Time-of-Use) pattern for first-user admin role assignment. The regular signup handler (signup_handler in auths.py, line 663) was explicitly patched to prevent this race with the comment \"Insert with default role first to avoid TOCTOU race\", but the LDAP and OAuth code paths were never updated with the same fix. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/commit/96a0b3239b1aadb23fc359bf10849c9ba12fd6ec\nhttps://github.com/open-webui/open-webui/pull/23626\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-h3ww-q6xx-w7x3",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:50"
-    },
-    {
-      "cve_id": "CVE-2026-45671",
-      "title": "高危漏洞: CVE-2026-45671 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-05-16 04:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, any authenticated user can permanently delete files owned by other users via DELETE /api/v1/files/{id} when the target file is referenced in any shared chat. The has_access_to_file() authorization gate unconditionally grants access through its shared-chat branch. It checks neither the requesting user's identity nor the type of operation being performed. File UUIDs (which would otherwise be impractical to guess) are disclosed to any user with read access to a knowledge base via GET /api/v1/knowledge/{id}/files. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-26g9-27vm-x3q8\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-26g9-27vm-x3q8",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:45"
-    },
-    {
-      "cve_id": "CVE-2026-45399",
-      "title": "高危漏洞: CVE-2026-45399 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 04:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, any authenticated user with low privileges can enumerate active background tasks across the system and stop tasks belonging to other users via the GET /api/tasks and POST /api/tasks/stop/{task_id} methods. This allows a casual user to disrupt system-wide chat usage by continuously canceling other users' active tasks. This is a real authorization vulnerability affecting integrity and usability in multi-user deployments. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-8jjp-r2w2-4v22\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-8jjp-r2w2-4v22",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:41"
-    },
-    {
-      "cve_id": "CVE-2026-45349",
-      "title": "高危漏洞: CVE-2026-45349 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 04:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, a user just needs to use the API endpoint: /api/chat/completions with their own API key (generated in OWUI) and the Chat ID of another user to continue the conversation of the other user. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-gfm2-xm6c-37qc",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:36"
-    },
-    {
-      "cve_id": "CVE-2026-45331",
-      "title": "高危漏洞: CVE-2026-45331 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-05-16 04:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, validate_url() in backend/open_webui/retrieval/web/utils.py calls validators.ipv6(ip, private=True), but the validators library does NOT implement the private keyword for IPv6 — the call raises a ValidationError (which is falsy in a boolean context), so every IPv6 address passes the filter. In addition, IPv4-mapped IPv6 (::ffff:10.0.0.1) bypasses the IPv4 check entirely, and several reserved IPv4 ranges (0.0.0.0/8, 100.64.0.0/10, 192.0.0.0/24, etc.) are not blocked. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-4v7r-f4w8-8972\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-4v7r-f4w8-8972",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:32"
     }
   ]
 }
