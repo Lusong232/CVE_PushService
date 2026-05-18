@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41948",
+      "title": "高危漏洞: CVE-2026-41948 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-18 23:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Dify version 1.14.1 and prior contain a path traversal vulnerability that allows authenticated users to manipulate requests forwarded to the Plugin Daemon's internal REST API by exploiting insufficient URL path sanitization. Attackers can traverse out of their authorized tenant path using unencoded dot sequences in task identifiers or manipulated filename parameters to access internal endpoints such as debug interfaces, requiring only knowledge of the victim tenant's UUID. NOTE: Dify Cloud allows unauthenticated free self-registration, making account creation trivially accessible to any attacker.",
+      "refs": "https://github.com/langgenius/dify/pull/35796\nhttps://huntr.com/bounties/35b7ad59-e35d-443f-bf77-387bfb932ec0\nhttps://www.vulncheck.com/advisories/dify-path-traversal-via-plugin-daemon-internal-api-access",
+      "source": "NVD",
+      "time": "2026-05-19 01:26:08"
+    },
+    {
+      "cve_id": "CVE-2026-41947",
+      "title": "高危漏洞: CVE-2026-41947 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-18 23:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Dify version 1.14.1 and prior contains an authorization bypass vulnerability that allows authenticated editor users to set and enable trace configurations for any application regardless of tenant ownership. Attackers can exploit missing tenant ownership checks in the trace configuration endpoints to redirect all messages and responses from victim applications to attacker-controlled LLM trace providers. NOTE: Dify Cloud allows unauthenticated free self-registration, making account creation trivially accessible to any attacker.",
+      "refs": "https://github.com/langgenius/dify/pull/35793\nhttps://huntr.com/bounties/a43076b2-fbc8-4750-9647-89a036b52f52\nhttps://www.vulncheck.com/advisories/dify-authorization-bypass-via-trace-configuration-endpoints",
+      "source": "NVD",
+      "time": "2026-05-19 01:26:03"
+    },
+    {
+      "cve_id": "CVE-2026-42009",
+      "title": "高危漏洞: CVE-2026-42009 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-18 21:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in gnutls. A remote attacker could exploit an issue in the Datagram Transport Layer Security (DTLS) packet reordering logic. The comparator function, responsible for ordering DTLS packets by sequence numbers, did not correctly handle packets with duplicate sequence numbers. This could lead to unstable packet ordering or undefined behavior, resulting in a denial of service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-42009\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2467279",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:58"
+    },
+    {
+      "cve_id": "CVE-2026-7304",
+      "title": "高危漏洞: CVE-2026-7304 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-18 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SGLangs multimodal generation runtime is vulnerable to unauthenticated remote code execution when the --enable-custom-logit-processor option is enabled, as Python objects loaded via dill.loads() will be deserialized without validation.",
+      "refs": "https://antiproof.ai/blog/three-rces-in-sglang/\nhttps://github.com/sgl-project/sglang/tree/main/python/sglang",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:53"
+    },
+    {
+      "cve_id": "CVE-2026-7302",
+      "title": "高危漏洞: CVE-2026-7302 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-18 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "SGLangs multimodal generation runtime is vulnerable to an unauthenticated path traversal vulnerability, allowing an attacker to write arbitrary files anywhere the server process has write access, by including ../ sequences in the upload filename when sent to specific endpoints.",
+      "refs": "https://antiproof.ai/blog/three-rces-in-sglang/\nhttps://github.com/sgl-project/sglang/tree/main/python/sglang",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:48"
+    },
+    {
+      "cve_id": "CVE-2026-7301",
+      "title": "高危漏洞: CVE-2026-7301 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-18 20:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SGLangs multimodal generation runtime scheduler's ROUTER socket binds to 0.0.0.0 by default and contains a sink that calls pickle.loads() on incoming messages, enabling RCE when exposed to the internet.",
+      "refs": "https://antiproof.ai/blog/three-rces-in-sglang/\nhttps://github.com/sgl-project/sglang/tree/main/python/sglang",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:43"
+    },
+    {
+      "cve_id": "CVE-2026-6381",
+      "title": "高危漏洞: CVE-2026-6381 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-18 15:16:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Maps  WordPress plugin before 4.9.3 does not properly sanitize a parameter before using it in a file path, allowing authenticated users to perform Local File Inclusion attacks.",
+      "refs": "https://wpscan.com/vulnerability/18b36672-58d7-44fa-b653-b728e9ef257a/",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:38"
+    },
+    {
+      "cve_id": "CVE-2026-6379",
+      "title": "高危漏洞: CVE-2026-6379 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-18 15:16:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The WP Photo Album Plus WordPress plugin before 9.1.11.001 does not properly sanitize and escape a parameter before using it in a SQL query, allowing unauthenticated users to perform SQL injection attacks.",
+      "refs": "https://wpscan.com/vulnerability/60b88fd2-4048-4773-b319-63caaf5bd8eb/",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:32"
+    },
+    {
+      "cve_id": "CVE-2026-3220",
+      "title": "高危漏洞: CVE-2026-3220 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-18 15:16:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Autoptimize WordPress plugin before 3.1.15, Clearfy Cache  WordPress plugin before 2.4.2, Speed Optimizer  WordPress plugin before 7.7.9 are vulnerable to unauthenticated Stored Cross-Site Scripting (XSS) due to a predictable replacement hash used during the HTML minification process and abusing a regular expression. This allows an attacker to inject arbitrary HTML attributes in the final HTML output by anticipating the placeholder format.",
+      "refs": "https://wpscan.com/vulnerability/3ceabf11-23cd-4c38-ba14-014348b0ff2d/",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:27"
+    },
+    {
+      "cve_id": "CVE-2026-8721",
+      "title": "高危漏洞: CVE-2026-8721 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-18 03:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.\n\nPassword parameters in PKCS12.xs are declared char *, which routes through Perl's default typemap to SvPV_nolen.  The Perl length is discarded.\n\nThe C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings.",
+      "refs": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-PKCS12-1.95/view/Changes.md\nhttp://www.openwall.com/lists/oss-security/2026/05/17/6",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:22"
+    },
+    {
+      "cve_id": "CVE-2026-8507",
+      "title": "高危漏洞: CVE-2026-8507 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-18 03:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws.\n\nWhen parsing a PKCS12 file, with a >= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap out-of-bounds write would be triggered with remote-code-execution potential (RCE) due to a signed integer overflow in the size calculation passed to Renew().",
+      "refs": "https://github.com/dsully/perl-crypt-openssl-pkcs12/commit/b9d0469c6d8f5b5c6c2a45a3d0647a532b749397.patch\nhttps://github.com/dsully/perl-crypt-openssl-pkcs12/issues/55\nhttps://github.com/dsully/perl-crypt-openssl-pkcs12/issues/56",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:15"
+    },
+    {
+      "cve_id": "CVE-2026-46720",
+      "title": "高危漏洞: CVE-2026-46720 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-18 02:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections.\n\nThe metric names and set values were not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.",
+      "refs": "https://github.com/robrwo/Net-Statsd-Tiny/commit/06f814f52fbcc0b2afddf7a2d6f8137fd3cede13.patch\nhttps://metacpan.org/release/RRWO/Net-Statsd-Tiny-v0.3.8/changes\nhttps://www.cve.org/CVERecord?id=CVE-2026-46719",
+      "source": "NVD",
+      "time": "2026-05-19 01:25:10"
+    },
+    {
       "cve_id": "CVE-2026-7498",
       "title": "高危漏洞: CVE-2026-7498 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-9vvh-qmjx-p4q8\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-9vvh-qmjx-p4q8",
       "source": "NVD",
       "time": "2026-05-16 10:01:20"
-    },
-    {
-      "cve_id": "CVE-2026-44554",
-      "title": "高危漏洞: CVE-2026-44554 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, the POST /api/v1/retrieval/process/web endpoint accepts a user-supplied collection_name and an overwrite query parameter (default: True). It performs no authorization check on whether the calling user owns or has write access to the target collection. When overwrite=True, save_docs_to_vector_db calls VECTOR_DB_CLIENT.delete_collection() on the target collection before writing new content. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-7r82-qhg4-6wvj",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:12"
-    },
-    {
-      "cve_id": "CVE-2026-44553",
-      "title": "高危漏洞: CVE-2026-44553 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, administrative role changes and user deletions do not iterate SESSION_POOL to disconnect affected sessions. As a result, a user whose admin role has been revoked retains admin privileges within their existing Socket.IO session for as long as they keep the connection alive (via automatic heartbeats). The gap is exclusive to the Socket.IO session cache. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-45m8-cpm2-3v65\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-45m8-cpm2-3v65",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:07"
-    },
-    {
-      "cve_id": "CVE-2026-44552",
-      "title": "高危漏洞: CVE-2026-44552 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-16 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, the tool_servers and terminal_servers keys in utils/tools.py do use a prefix. When two or more Open WebUI instances share a Redis database (a supported and documented deployment pattern, e.g., for multi-region deployments, blue-green setups, or cluster topologies), the unprefixed keys collide. An admin on Instance A writing to tool_servers overwrites the value read by Instance B — causing Instance B's users to receive Instance A's tool server configuration. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-3x8w-4f7p-xxc2",
-      "source": "NVD",
-      "time": "2026-05-16 10:01:01"
-    },
-    {
-      "cve_id": "CVE-2026-44551",
-      "title": "高危漏洞: CVE-2026-44551 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-16 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, the LDAP authentication endpoint does not validate that the submitted password is non-empty before performing a Simple Bind against the LDAP server. The LdapForm Pydantic model accepts password: str with no minimum length constraint, so an empty string passes validation. The subsequent Connection.bind() call succeeds on vulnerable LDAP servers, and the application issues a full session token for the target user. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-2r4p-jpmg-48f4",
-      "source": "NVD",
-      "time": "2026-05-16 10:00:54"
-    },
-    {
-      "cve_id": "CVE-2026-8686",
-      "title": "高危漏洞: CVE-2026-8686 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 03:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Missing bounds validation in the MQTT v5.0 property parser in coreMQTT before 5.0.1 allows an MQTT broker to cause a denial of service by sending a crafted packet.\n\n\n\nTo remediate this issue, users should upgrade to v5.0.1.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-032-aws/\nhttps://github.com/FreeRTOS/coreMQTT/releases/tag/v5.0.1\nhttps://github.com/FreeRTOS/coreMQTT/security/advisories/GHSA-6qh9-r6jp-2wxc",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:41"
-    },
-    {
-      "cve_id": "CVE-2026-46408",
-      "title": "高危漏洞: CVE-2026-46408 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-16 03:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
-      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, the checkout endpoint accepts a user-controlled cart_id and uses it to enter the payment flow without verifying cart ownership. A logged-in attacker can therefore reuse another user's cart data in their own checkout session. This vulnerability is fixed in 1.0.8.3.",
-      "refs": "https://github.com/givanz/Vvveb/security/advisories/GHSA-rmh2-wv73-xpqh",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:36"
-    },
-    {
-      "cve_id": "CVE-2026-46407",
-      "title": "高危漏洞: CVE-2026-46407 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 03:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, the backend admin/auth-token endpoint allows an authenticated administrator to load another administrator's REST API token list by supplying that user's admin_id. This can disclose sensitive API tokens belonging to other administrators. This vulnerability is fixed in 1.0.8.3.",
-      "refs": "https://github.com/givanz/Vvveb/security/advisories/GHSA-5g3g-x6mf-pwr6",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:32"
-    },
-    {
-      "cve_id": "CVE-2026-46367",
-      "title": "高危漏洞: CVE-2026-46367 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-16 03:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
-      "description": "phpMyFAQ before 4.1.2 contains a stored cross-site scripting vulnerability in Utils::parseUrl() that allows authenticated users to inject JavaScript via malformed URLs in comments. Attackers can craft URLs with unescaped quotes to inject event handlers, stealing admin session cookies and achieving full application takeover when visitors view affected FAQ pages.",
-      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9525-27vj-c8r8\nhttps://www.vulncheck.com/advisories/phpmyfaq-stored-xss-via-utils-parseurl-in-comment-rendering",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:24"
-    },
-    {
-      "cve_id": "CVE-2026-46366",
-      "title": "高危漏洞: CVE-2026-46366 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 03:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "phpMyFAQ before 4.1.2 contains an information disclosure vulnerability in the getIdFromSolutionId() method that lacks permission filtering, allowing unauthenticated attackers to enumerate restricted FAQ entries and read their titles via the /solution_id_{id}.html endpoint. Attackers can sequentially iterate solution IDs to discover all FAQs including those restricted to specific users or groups, leaking sensitive metadata through redirect Location headers and page canonical links.",
-      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-99qv-g4x9-mgc3\nhttps://www.vulncheck.com/advisories/phpmyfaq-unauthenticated-information-disclosure-via-getidfromsolutionid-permission-bypass",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:18"
-    },
-    {
-      "cve_id": "CVE-2026-46364",
-      "title": "高危漏洞: CVE-2026-46364 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-16 03:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "phpMyFAQ before 4.1.2 contains an unauthenticated SQL injection vulnerability in BuiltinCaptcha::garbageCollector() and BuiltinCaptcha::saveCaptcha() methods that interpolate unsanitized User-Agent headers into DELETE and INSERT queries. Unauthenticated attackers can exploit the public GET /api/captcha endpoint by crafting malicious User-Agent headers to perform time-based blind SQL injection, extracting sensitive data including user credentials, admin tokens, and SMTP credentials from the database.",
-      "refs": "https://github.com/thorsten/phpMyFAQ/commit/b9f25109fddb38eee19987183798638d07943f92\nhttps://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-289f-fq7w-6q2w\nhttps://www.vulncheck.com/advisories/phpmyfaq-sql-injection-via-user-agent-header-in-builtincaptcha",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:14"
-    },
-    {
-      "cve_id": "CVE-2026-46359",
-      "title": "高危漏洞: CVE-2026-46359 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 03:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "phpMyFAQ before 4.1.2 contains a sql injection vulnerability in CurrentUser::setTokenData that allows authenticated attackers to execute arbitrary SQL by injecting malicious OAuth token claims. Attackers with Azure AD accounts containing SQL metacharacters in display names or JWT claims can break out of string literals and execute arbitrary database queries.",
-      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pm8c-3qq3-72w7\nhttps://www.vulncheck.com/advisories/phpmyfaq-sql-injection-in-currentuser-settokendata-via-unescaped-oauth-token-fields",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:09"
-    },
-    {
-      "cve_id": "CVE-2026-45010",
-      "title": "高危漏洞: CVE-2026-45010 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-16 03:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "phpMyFAQ before 4.1.2 contains an improper restriction of excessive authentication attempts vulnerability in the /admin/check endpoint, which accepts arbitrary user-id parameters without session binding or rate limiting. Unauthenticated attackers can brute-force any user's six-digit TOTP code by submitting POST requests with sequential token values, bypassing two-factor authentication to gain full administrative access.",
-      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9pq7-mfwh-xx2j\nhttps://www.vulncheck.com/advisories/phpmyfaq-unauthenticated-two-factor-authentication-brute-force-via-admin-check-endpoint",
-      "source": "NVD",
-      "time": "2026-05-16 05:50:05"
     }
   ]
 }
