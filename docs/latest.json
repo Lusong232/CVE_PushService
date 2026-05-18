@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8768",
+      "title": "高危漏洞: CVE-2026-8768 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-18 07:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in vercel ai up to 3.0.97. The affected element is the function validateDownloadUrl of the file packages/provider-utils/src/download-blob.ts of the component provider-utils. The manipulation results in server-side request forgery. The attack can be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/07d149bd68adbee58165b4207a2abc71\nhttps://gist.github.com/YLChen-007/cf7e47e4dda392f474ca77a66d1d847f\nhttps://vuldb.com/submit/811404",
+      "source": "NVD",
+      "time": "2026-05-18 10:15:43"
+    },
+    {
+      "cve_id": "CVE-2026-8764",
+      "title": "高危漏洞: CVE-2026-8764 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-18 06:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in H3C Magic B3 up to 100R002. This affects the function UpdateWanParams of the file /goform/aspForm. Such manipulation of the argument param leads to buffer overflow. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/yyyy0031/CVE/issues/1\nhttps://vuldb.com/submit/811373\nhttps://vuldb.com/vuln/364389",
+      "source": "NVD",
+      "time": "2026-05-18 10:15:38"
+    },
+    {
       "cve_id": "CVE-2026-8759",
       "title": "高危漏洞: CVE-2026-8759 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://lists.apache.org/thread/qh52bw4hhvy7n2owd8b3bt51mz0lvj9x",
       "source": "NVD",
       "time": "2026-05-16 05:49:26"
-    },
-    {
-      "cve_id": "CVE-2026-8695",
-      "title": "高危漏洞: CVE-2026-8695 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 01:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "radare2 6.1.5 contains a use-after-free vulnerability in the gdbr_threads_list() function that allows remote attackers to trigger memory corruption by sending a valid qfThreadInfo response followed by a malformed qsThreadInfo response. Attackers can exploit this vulnerability through GDB remote debugging to cause a denial of service or potentially achieve code execution by manipulating thread list processing.",
-      "refs": "https://github.com/radareorg/radare2/commit/c213ad6894a1eb9086ac8bf5fae35757e9e1683c\nhttps://github.com/radareorg/radare2/issues/25835\nhttps://www.vulncheck.com/advisories/radare2-use-after-free-via-gdbr-threads-list",
-      "source": "NVD",
-      "time": "2026-05-16 03:17:20"
-    },
-    {
-      "cve_id": "CVE-2026-45539",
-      "title": "高危漏洞: CVE-2026-45539 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-16 01:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "Microsoft APM is an open-source, community-driven dependency manager for AI agents. From 0.5.4 to 0.12.4, two primitive integrators in apm-cli enumerate package files with bare Path.glob() / Path.rglob() calls and read each match with Path.read_text(), transparently following symbolic links. A symlink committed inside a remote APM dependency under .apm/prompts/<x>.prompt.md or .apm/agents/<x>.agent.md is preserved verbatim into apm_modules/ on clone and then dereferenced during integration, with the resolved content written as a regular file into the project's deploy directories. The package content_hash, the pre-deploy SecurityGate scan, and apm audit do not flag this. The deploy roots are not added to the auto-generated .gitignore, so the resulting files are staged by git add by default. This vulnerability is fixed in 0.13.0.",
-      "refs": "https://github.com/microsoft/apm/security/advisories/GHSA-q5pp-gvjg-h7v4\nhttps://github.com/microsoft/apm/security/advisories/GHSA-q5pp-gvjg-h7v4",
-      "source": "NVD",
-      "time": "2026-05-16 03:17:16"
     }
   ]
 }
