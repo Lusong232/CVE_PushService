@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8073",
+      "title": "高危漏洞: CVE-2026-8073 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 03:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation and missing capability check in the 'downloadZIP' function in all versions up to, and including, 6.0.6. This makes it possible for unauthenticated attackers to read and delete arbitrary files limited in the WordPress uploads base directory.",
+      "refs": "https://plugins.trac.wordpress.org/browser/kirki/tags/6.0.1/includes/API.php#L60\nhttps://plugins.trac.wordpress.org/changeset/3535640/kirki/trunk/includes/API.php\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b073edd0-3f40-423e-976e-996b29caf66e?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:58"
+    },
+    {
+      "cve_id": "CVE-2026-33642",
+      "title": "高危漏洞: CVE-2026-33642 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-05-20 03:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:H",
+      "description": "Kitty is a cross-platform GPU based terminal. In versions 0.46.2 and below, the handle_compose_command() function in kitty/graphics.c performs bounds validation on composition offsets using unsigned 32-bit arithmetic that is subject to integer wrapping, potentially leading to Heap Buffer Over-Read/Write. An attacker who can write escape sequences to a kitty terminal (e.g., via a malicious file, SSH login banner, or piped content) can supply crafted x_offset/y_offset values that pass the bounds check after wrapping but cause massive out-of-bounds heap memory access in compose_rectangles(). No user interaction is required. No non-default configuration is required. The attacker only needs the ability to produce output in a kitty terminal window. This issue has been fixed in version 0.47.0.",
+      "refs": "https://github.com/kovidgoyal/kitty/commit/e9661f0f3afb4e4dbffa509adfb3df3c9780ad34\nhttps://github.com/kovidgoyal/kitty/security/advisories/GHSA-qfgm-2c64-6x3x",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:52"
+    },
+    {
+      "cve_id": "CVE-2026-47107",
+      "title": "高危漏洞: CVE-2026-47107 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-20 02:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Windmill prior to 1.703.2 contains an incorrect default permissions vulnerability in nsjail sandbox configuration files where /etc is bind-mounted without read-write restrictions, allowing authenticated users to write arbitrary entries to /etc/hosts, /etc/resolv.conf, and /etc/ssl/certs/ca-certificates.crt from within script execution sandboxes. Attackers can exploit persistent poisoned entries across all subsequent script executions on the same worker pod to redirect hostnames, intercept DNS queries, perform transparent HTTPS man-in-the-middle attacks, and intercept WM_TOKEN JWTs to gain workspace-admin access to victim workspaces across tenants.",
+      "refs": "https://github.com/windmill-labs/windmill/commit/f8467f38c8a053117ce62f96684cfb15ef792f08\nhttps://github.com/windmill-labs/windmill/pull/9194\nhttps://github.com/windmill-labs/windmill/releases/tag/v1.703.2",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:47"
+    },
+    {
+      "cve_id": "CVE-2026-33633",
+      "title": "高危漏洞: CVE-2026-33633 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 02:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain a heap buffer overflow in load_image_data() that allows any process which can write to the terminal's stdin to crash kitty immediately. The vulnerability is triggered by a single APC graphics protocol command with a PNG format declaration (f=100) whose payload exceeds twice the initial buffer capacity. The overflow is attacker-controlled in both length and content, causing DoS and potentially escalation to RCE itself. This issue has been fixed in version 0.47.0.",
+      "refs": "https://github.com/kovidgoyal/kitty/commit/e9661f0f3afb4e4dbffa509adfb3df3c9780ad34\nhttps://github.com/kovidgoyal/kitty/security/advisories/GHSA-j68c-v8x4-269g\nhttps://github.com/kovidgoyal/kitty/security/advisories/GHSA-j68c-v8x4-269g",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:42"
+    },
+    {
+      "cve_id": "CVE-2025-61081",
+      "title": "高危漏洞: CVE-2025-61081 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 02:16:19",
+      "vector_string": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:H",
+      "description": "In BYD Atto3, an attacker can obtain an authentication key through Brute Force attack, which is permanently available. The authentication key enables flash to the Electronic Parking Break (EPB) and Supplemental Restoration System (SRS) related ECUs.",
+      "refs": "https://www.notion.so/BYD-Atto3-26215fb6156c8000b338db3c2011f637?source=copy_link\nhttps://www.notion.so/CVE-2025-61081-26215fb6156c8000b338db3c2011f637\nhttps://www.notion.so/BYD-Atto3-26215fb6156c8000b338db3c2011f637?source=copy_link",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:36"
+    },
+    {
+      "cve_id": "CVE-2026-36829",
+      "title": "高危漏洞: CVE-2026-36829 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-20 01:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An authentication bypass vulnerability exists in the embedded HTTP server of Panabit PAP-XM320 up to and including v7.7. The server validates session cookies using a filesystem existence check based on a user-controlled cookie value without proper sanitization, allowing directory traversal and bypass of authentication.",
+      "refs": "https://secreu.notion.site/CVE-2026-36829-3652c0ab461580e19704e87b18865714\nhttps://www.panabit.com/\nhttps://secreu.notion.site/CVE-2026-36829-3652c0ab461580e19704e87b18865714",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:30"
+    },
+    {
+      "cve_id": "CVE-2026-36828",
+      "title": "高危漏洞: CVE-2026-36828 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 01:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A command injection vulnerability exists in the /cgi-bin/tools/ajax_cmd endpoint of Panabit PAP-XM320 up to and including v7.7. The CGI component allows authenticated users to execute arbitrary shell commands with root privileges via the action=runcmd parameter.",
+      "refs": "https://secreu.notion.site/CVE-2026-36828-3652c0ab461580f28f50ddc37ce4e1d6\nhttps://www.panabit.com/\nhttps://secreu.notion.site/CVE-2026-36828-3652c0ab461580f28f50ddc37ce4e1d6",
+      "source": "NVD",
+      "time": "2026-05-20 06:06:25"
+    },
+    {
       "cve_id": "CVE-2026-47358",
       "title": "高危漏洞: CVE-2026-47358 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/3ceabf11-23cd-4c38-ba14-014348b0ff2d/",
       "source": "NVD",
       "time": "2026-05-19 01:25:27"
-    },
-    {
-      "cve_id": "CVE-2026-8721",
-      "title": "高危漏洞: CVE-2026-8721 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-18 03:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.\n\nPassword parameters in PKCS12.xs are declared char *, which routes through Perl's default typemap to SvPV_nolen.  The Perl length is discarded.\n\nThe C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings.",
-      "refs": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-PKCS12-1.95/view/Changes.md\nhttp://www.openwall.com/lists/oss-security/2026/05/17/6",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:22"
-    },
-    {
-      "cve_id": "CVE-2026-8507",
-      "title": "高危漏洞: CVE-2026-8507 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-18 03:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws.\n\nWhen parsing a PKCS12 file, with a >= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap out-of-bounds write would be triggered with remote-code-execution potential (RCE) due to a signed integer overflow in the size calculation passed to Renew().",
-      "refs": "https://github.com/dsully/perl-crypt-openssl-pkcs12/commit/b9d0469c6d8f5b5c6c2a45a3d0647a532b749397.patch\nhttps://github.com/dsully/perl-crypt-openssl-pkcs12/issues/55\nhttps://github.com/dsully/perl-crypt-openssl-pkcs12/issues/56",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:15"
-    },
-    {
-      "cve_id": "CVE-2026-46720",
-      "title": "高危漏洞: CVE-2026-46720 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-18 02:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "description": "Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections.\n\nThe metric names and set values were not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.",
-      "refs": "https://github.com/robrwo/Net-Statsd-Tiny/commit/06f814f52fbcc0b2afddf7a2d6f8137fd3cede13.patch\nhttps://metacpan.org/release/RRWO/Net-Statsd-Tiny-v0.3.8/changes\nhttps://www.cve.org/CVERecord?id=CVE-2026-46719",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:10"
-    },
-    {
-      "cve_id": "CVE-2026-7498",
-      "title": "高危漏洞: CVE-2026-7498 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-18 17:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Basamak Information Technology Consulting and Organization Trade Ltd. Co. DernekWeb allows Stored XSS.\n\nThis issue affects DernekWeb: through 30122025.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0258",
-      "source": "NVD",
-      "time": "2026-05-18 20:21:26"
-    },
-    {
-      "cve_id": "CVE-2026-6347",
-      "title": "高危漏洞: CVE-2026-6347 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-18 17:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Mattermost versions 11.5.x <= 11.5.1, 10.11.x <= 10.11.13, 11.4.x <= 11.4.3 fail to sanitize sensitive configuration fields in the Mattermost Calls plugin which allows an attacker with access to a support packet to obtain TURN server credentials via the plaintext values present in the exported plugin configuration.. Mattermost Advisory ID: MMSA-2026-00605",
-      "refs": "https://mattermost.com/security-updates",
-      "source": "NVD",
-      "time": "2026-05-18 20:21:20"
-    },
-    {
-      "cve_id": "CVE-2026-6346",
-      "title": "高危漏洞: CVE-2026-6346 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-18 17:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Mattermost versions 11.5.x <= 11.5.1, 10.11.x <= 10.11.13, 11.4.x <= 11.4.3 fail to sanitize sensitive configuration fields before including them in support packet generation, which allows a Mattermost System Admin or any party with access to a support packet to obtain sensitive credentials in plaintext via downloading a support packet from the System Console.. Mattermost Advisory ID: MMSA-2026-00607",
-      "refs": "https://mattermost.com/security-updates",
-      "source": "NVD",
-      "time": "2026-05-18 20:21:15"
-    },
-    {
-      "cve_id": "CVE-2026-8785",
-      "title": "高危漏洞: CVE-2026-8785 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-18 12:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in projectworlds hospital-management-system-in-php 1.0. Affected by this vulnerability is the function getAllPatientDetail of the file update_info.php of the component GET Parameter Handler. Executing a manipulation of the argument appointment_no can lead to sql injection. The attack may be performed from remote. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/lutherping/CVE\nhttps://github.com/projectworldsofficial/Hospital-management-system-in-php/issues/8\nhttps://vuldb.com/submit/812010",
-      "source": "NVD",
-      "time": "2026-05-18 14:45:06"
     }
   ]
 }
