@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8912",
+      "title": "高危漏洞: CVE-2026-8912 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-19 21:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Contest Gallery plugin for WordPress is vulnerable to SQL Injection via the 'form_input' parameter in versions up to, and including, 28.1.6. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query inside the unauthenticated 'post_cg_gallery_form_upload' AJAX action (specifically the 'cb' branch of the included users-upload-check.php, where $f_input_id is concatenated unquoted into 'SELECT Field_Content FROM ... WHERE id = $f_input_id'). The endpoint is gated only by a public frontend nonce ('cg1l_action' / 'cg_nonce') that is exposed in the page source of any public gallery page. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/contest-gallery/tags/28.1.5/ajax/ajax-functions-frontend.php#L837\nhttps://plugins.trac.wordpress.org/browser/contest-gallery/tags/28.1.5/functions/frontend/cg-general-frontend.php#L12\nhttps://plugins.trac.wordpress.org/browser/contest-gallery/tags/28.1.5/v10/v10-frontend/user_upload/users-upload-check.php#L1036",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:42"
+    },
+    {
+      "cve_id": "CVE-2026-4883",
+      "title": "高危漏洞: CVE-2026-4883 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-19 21:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Piotnet Forms plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the 'piotnetforms_ajax_form_builder' function in all versions up to, and including, 2.1.40. The plugin uses an incomplete extension blacklist that only blocks php, phpt, php5, php7, and exe extensions, while allowing dangerous extensions such as .phar or .phtml to be uploaded. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The exploit can only be exploited if a file field is added to the form.",
+      "refs": "https://piotnetforms.com\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/9bd9c9db-d279-4de2-b5e4-ac7d8c919f2a?source=cve",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:36"
+    },
+    {
+      "cve_id": "CVE-2026-7571",
+      "title": "高危漏洞: CVE-2026-7571 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-19 20:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "A flaw was found in Keycloak. A low-privilege user, with knowledge of user credentials and client ID, can bypass a security control intended to disable the implicit flow in OpenID Connect (OIDC) clients. By manipulating client data during a session restart, an attacker can obtain an access token that should not be available. This vulnerability can also lead to the exposure of these access tokens in server logs, proxy logs, and HTTP Referrer headers, resulting in sensitive information disclosure.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-7571\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464263",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:31"
+    },
+    {
+      "cve_id": "CVE-2026-7507",
+      "title": "高危漏洞: CVE-2026-7507 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-19 20:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A session fixation vulnerability was found in Keycloak's login-actions endpoints. An unauthenticated attacker could exploit this flaw by pre-creating an authentication session and tricking a victim into visiting a maliciously crafted link. By leveraging the /login-actions/restart endpoint—which processes session handles without adequate CSRF protection or cookie ownership validation—an attacker can reset the authentication flow state. This causes Single Sign-On (SSO) to authenticate the victim transparently upon clicking the link, allowing the attacker to hijack the required-action form without needing the victim's credentials. A successful exploit could lead to complete account takeover, including highly privileged administrative accounts.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-7507\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464145",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:26"
+    },
+    {
+      "cve_id": "CVE-2026-7504",
+      "title": "高危漏洞: CVE-2026-7504 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-19 20:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "A flaw was found in Keycloak's URL validation logic during redirect operations. By crafting a malicious request, an attacker could bypass validation to redirect users to unauthorized URLs, potentially leading to the exposure of sensitive information within the domain or facilitating further attacks. This vulnerability specifically affects Keycloak clients configured with a wildcard (*) in the \"Valid Redirect URIs\" field and requires user interaction to be successfully exploited.\n\nThe issue stems from a discrepancy in how Keycloak and the underlying Java URI implementation handle the user-info component of a URL. If a malicious redirect URL is constructed using multiple @ characters in the user-info section, Java's URI parser fails to extract the user-info, leaving only the raw authority field. Consequently, Keycloak's validation check fails to detect the malformed user-info, falls back to a wildcard comparison, and incorrectly permits the malicious redirect.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-7504\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464128",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:15"
+    },
+    {
+      "cve_id": "CVE-2026-7307",
+      "title": "高危漏洞: CVE-2026-7307 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-19 20:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in Keycloak. A remote, unauthenticated attacker can send a specially crafted XML input to the Security Assertion Markup Language (SAML) endpoint. This malicious input can cause high CPU usage and worker thread starvation, leading to a Denial of Service (DoS) where the server becomes unavailable.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-7307\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2476526",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:10"
+    },
+    {
+      "cve_id": "CVE-2026-2611",
+      "title": "高危漏洞: CVE-2026-2611 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-19 18:16:22",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "In MLflow version 3.9.0, the MLflow Assistant feature introduced improper origin validation in its /ajax-api endpoints. This vulnerability allows a remote attacker to exploit cross-origin requests from a malicious webpage to interact with the MLflow Assistant running on a victim's local machine. By bypassing the loopback-only restriction, the attacker can modify the Assistant's configuration to enable full access, which in turn allows the execution of arbitrary commands via the Claude Code sub-agent. This issue is resolved in version 3.10.0.",
+      "refs": "https://github.com/mlflow/mlflow/commit/8f9c8a53af90842944101eb8b7d60706822c81bc\nhttps://huntr.com/bounties/8462addd-b464-4a84-b6a2-5529604e6e5a",
+      "source": "NVD",
+      "time": "2026-05-19 22:36:04"
+    },
+    {
       "cve_id": "CVE-2026-4885",
       "title": "高危漏洞: CVE-2026-4885 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://www.exploit-db.com/exploits/50975\nhttps://www.kite.com/\nhttps://www.vulncheck.com/advisories/kite-u1-unquoted-service-path-privilege-escalation",
       "source": "NVD",
       "time": "2026-05-17 02:50:25"
-    },
-    {
-      "cve_id": "CVE-2020-37245",
-      "title": "高危漏洞: CVE-2020-37245 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-17 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Supsystic Digital Publications 1.6.9 contains a path traversal vulnerability in the Folder input field that allows attackers to access files outside the web root by injecting directory traversal sequences. Additionally, the plugin fails to sanitize input fields in publication settings, allowing stored cross-site scripting attacks through script injection in parameters like Area Width and Publication Width that execute when publications are viewed or edited.",
-      "refs": "https://downloads.wordpress.org/plugin/digital-publications-by-supsystic.1.6.9.zip\nhttps://supsystic.com/\nhttps://www.exploit-db.com/exploits/49542",
-      "source": "NVD",
-      "time": "2026-05-17 02:50:20"
-    },
-    {
-      "cve_id": "CVE-2020-37244",
-      "title": "高危漏洞: CVE-2020-37244 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-17 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Supsystic Membership 1.4.7 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'search' and 'sidx' parameters. Attackers can send GET requests to the badges module with crafted payloads to extract sensitive database information using time-based blind or UNION-based SQL injection techniques.",
-      "refs": "https://downloads.wordpress.org/plugin/membership-by-supsystic.1.4.7.zip\nhttps://supsystic.com/\nhttps://www.exploit-db.com/exploits/49540",
-      "source": "NVD",
-      "time": "2026-05-17 02:50:15"
-    },
-    {
-      "cve_id": "CVE-2020-37243",
-      "title": "高危漏洞: CVE-2020-37243 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-17 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Supsystic Pricing Table 1.8.7 contains an SQL injection vulnerability in the 'sidx' GET parameter that allows unauthenticated attackers to execute arbitrary SQL queries through the getListForTbl action. The plugin also contains stored cross-site scripting vulnerabilities in the 'Edit name' and 'Edit HTML' fields that execute malicious scripts when viewing pricing tables.",
-      "refs": "https://downloads.wordpress.org/plugin/pricing-table-by-supsystic.1.8.7.zip\nhttps://supsystic.com/\nhttps://www.exploit-db.com/exploits/49533",
-      "source": "NVD",
-      "time": "2026-05-17 02:50:11"
-    },
-    {
-      "cve_id": "CVE-2020-37242",
-      "title": "高危漏洞: CVE-2020-37242 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-17 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Supsystic Ultimate Maps 1.1.12 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'sidx' GET parameter. Attackers can send crafted requests to the getListForTbl action with boolean-based blind or time-based blind SQL injection payloads to extract sensitive database information.",
-      "refs": "https://downloads.wordpress.org/plugin/ultimate-maps-by-supsystic.1.1.12.zip\nhttps://supsystic.com/\nhttps://www.exploit-db.com/exploits/49532",
-      "source": "NVD",
-      "time": "2026-05-17 02:50:05"
-    },
-    {
-      "cve_id": "CVE-2020-37239",
-      "title": "高危漏洞: CVE-2020-37239 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-17 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "libbabl 0.1.62 contains a broken double free detection vulnerability that allows attackers to bypass memory safety checks by exploiting signature overwriting in freed chunks. Attackers can call babl_free() twice on the same pointer without triggering detection, as libc's malloc metadata overwrites babl's signature field upon freeing, enabling potential memory corruption and code execution.",
-      "refs": "https://www.exploit-db.com/exploits/49259\nhttps://www.gegl.org\nhttps://www.gegl.org/babl/",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:58"
-    },
-    {
-      "cve_id": "CVE-2020-37232",
-      "title": "高危漏洞: CVE-2020-37232 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-17 00:16:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Advanced System Care Service 13.0.0.157 contains an unquoted service path vulnerability in the AdvancedSystemCareService13 service binary path that allows local attackers to escalate privileges. Attackers can place malicious executables in the system root path that will be executed with LocalSystem privileges during service startup or system reboot.",
-      "refs": "https://www.exploit-db.com/exploits/49049\nhttps://www.iobit.com\nhttps://www.iobit.com/es/advancedsystemcarepro.php",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:51"
-    },
-    {
-      "cve_id": "CVE-2020-37231",
-      "title": "高危漏洞: CVE-2020-37231 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-17 00:16:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsvc.exe service binary that allows local attackers to escalate privileges by exploiting the service startup process. Attackers can place malicious executables in the unquoted path directories to execute arbitrary code with LocalSystem privileges during service startup or system reboot.",
-      "refs": "https://www.cybertronsoft.com/\nhttps://www.cybertronsoft.com/download/privacy-drive-setup.exe\nhttps://www.exploit-db.com/exploits/49023",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:46"
     }
   ]
 }
