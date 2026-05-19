@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-27648",
+      "title": "高危漏洞: CVE-2026-27648 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-19 12:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "in OpenHarmony v6.0 and prior versions allow a remote attacker arbitrary code execution in pre-installed apps.",
+      "refs": "https://gitcode.com/openharmony/security/tree/master/zh/security-disclosure/2026/2026-04.md",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:41"
+    },
+    {
+      "cve_id": "CVE-2026-25781",
+      "title": "高危漏洞: CVE-2026-25781 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-19 12:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "in OpenHarmony v6.0 and prior versions allow a local attacker cause DOS and it cannot be recovered.",
+      "refs": "https://gitcode.com/openharmony/security/tree/master/zh/security-disclosure/2026/2026-05.md",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:34"
+    },
+    {
+      "cve_id": "CVE-2026-24792",
+      "title": "高危漏洞: CVE-2026-24792 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-19 12:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "description": "in OpenHarmony v6.0 and prior versions allow a remote attacker arbitrary code execution in pre-installed apps.",
+      "refs": "https://gitcode.com/openharmony/security/tree/master/zh/security-disclosure/2026/2026-04.md",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:30"
+    },
+    {
+      "cve_id": "CVE-2026-22069",
+      "title": "高危漏洞: CVE-2026-22069 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-19 12:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:H",
+      "description": "A local privilege escalation vulnerability exists in O+ Connect because it fails to validate the identity of the caller on the pipe interface.",
+      "refs": "https://security.oppo.com/en/noticeDetail?notice_only_key=NOTICE-2056566978633801728",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:26"
+    },
+    {
+      "cve_id": "CVE-2026-33233",
+      "title": "高危漏洞: CVE-2026-33233 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-19 10:16:15",
+      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.34 through 0.6.51, the backend deserializes Redis cache bytes using pickle.loads without integrity/authenticity checks. The write path serializes values with pickle.dumps(...) into Redis and the read path blindly invokes pickle.loads(...) on bytes with no HMAC/signature or strict schema validation gating deserialization. If an attacker can poison a shared-cache key in Redis, arbitrary command execution is possible in the backend container context, affecting confidentiality, integrity, and availability. This issue has been fixed in version 0.6.52.",
+      "refs": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.6.52\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-rfg2-37xq-w4m9",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:21"
+    },
+    {
+      "cve_id": "CVE-2026-33232",
+      "title": "高危漏洞: CVE-2026-33232 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-19 10:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions 0.4.2 through 0.6.51 are vulnerable to an unauthenticated Denial of Service (DoS) through the server due to uncontrolled disk space consumption. The download_agent_file endpoint creates persistent temporary files for every request but fails to delete them after they are served. An unauthenticated attacker can repeatedly call this endpoint to exhaust the server's disk space, causing\n the database or other system services to fail due to \"No space left on device\" errors, rendering the entire AutoGPT Platform backend unavailable to all users. This issue has been patched in version 0.6.52.",
+      "refs": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.6.52\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-374w-2pxq-c9jp",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:17"
+    },
+    {
+      "cve_id": "CVE-2026-32323",
+      "title": "高危漏洞: CVE-2026-32323 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-19 10:16:14",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Mullvad VPN is a VPN client app for desktop and mobile. When using macOS with versions 2026.1 and below, Mullvad VPN may allow local privilege escalation during installation or upgrade. The installer package executes binaries from /Applications/Mullvad VPN.app without verifying if the bundle is attacker-controlled or that the path is the legitimate Mullvad application. A user in the admin group can pre-place a crafted application bundle at that location and may be able to achieve code execution as root. Since the issue only affected the installer, there is no immediate need for users to update if they are already running an older version. This issue has been fixed in version 2026.2-beta1.",
+      "refs": "https://github.com/mullvad/mullvadvpn-app/commit/032fdcb927c0b6d3e5e1aba4140d33adf22a6bfb\nhttps://github.com/mullvad/mullvadvpn-app/security/advisories/GHSA-c2g6-w5fq-vw3m",
+      "source": "NVD",
+      "time": "2026-05-19 14:40:12"
+    },
+    {
       "cve_id": "CVE-2026-30950",
       "title": "高危漏洞: CVE-2026-30950 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1022,83 +1099,6 @@
       "refs": "https://gist.github.com/yuki-matsuhashi/e570fb1579ae1f3190059b622b0473fb\nhttps://github.com/benjamine/jsondiffpatch/blob/96112c35a98f9201dd75d67fcee68a952c79e2fe/packages/jsondiffpatch/src/filters/nested.ts%23L107-L115\nhttps://github.com/benjamine/jsondiffpatch/blob/96112c35a98f9201dd75d67fcee68a952c79e2fe/packages/jsondiffpatch/src/filters/nested.ts%23L82-L87",
       "source": "NVD",
       "time": "2026-05-16 20:58:28"
-    },
-    {
-      "cve_id": "CVE-2026-45665",
-      "title": "高危漏洞: CVE-2026-45665 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 06:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.8.0, a Stored Cross-Site Scripting (XSS) vulnerability exists in the Banner component due to an improper sanitization order (specifically, DOMPurify is executed before the marked library). This vulnerability allows a compromised or malicious administrator to plant a malicious payload in the global banner. Crucially, this vector enables Privilege Escalation, as the malicious banner is rendered for all users, including the Super Admin (Primary Admin). Consequently, the payload successfully bypasses the existing security mechanism. An attacker can leverage this to steal the Super Admin's session token This vulnerability is fixed in 0.8.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-cqp4-qqvg-3787",
-      "source": "NVD",
-      "time": "2026-05-16 10:03:28"
-    },
-    {
-      "cve_id": "CVE-2026-45350",
-      "title": "高危漏洞: CVE-2026-45350 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 06:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.8.6, there is a vulnerability in chat completion API, which allows attackers to bypass tool restrictions, potentially enabling unauthorized actions or access. In the chat_completion API, the parameters tool_ids and tool_servers are supplied by the user. These parameters are used to create a tools_dict by the middleware. This is then used by get_tool_by_id to retrieve the appropriate tool. However, there is no checks in that ensures the user that uses the API has permission to use the tool, meaning that a user can invoke any server tool by supplying the correct tool_id or tool_servers parameters via the chat completion API. Moreover, the authentication token stored in the server would be used when invoking the tool, so the tool will be invoked with the server privilege. This vulnerability is fixed in 0.8.6.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-4pcg-253r-rf9w\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-4pcg-253r-rf9w",
-      "source": "NVD",
-      "time": "2026-05-16 10:03:24"
-    },
-    {
-      "cve_id": "CVE-2026-45338",
-      "title": "高危漏洞: CVE-2026-45338 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-16 06:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, a Server-Side Request Forgery (SSRF) vulnerability exists in _process_picture_url() in backend/open_webui/utils/oauth.py (line ~1338). The function fetches arbitrary URLs from OAuth picture claims without applying validate_url(), allowing an attacker to force the server to make HTTP requests to internal resources and exfiltrate the full response. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-24c9-2m8q-qhmh\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-24c9-2m8q-qhmh",
-      "source": "NVD",
-      "time": "2026-05-16 10:03:19"
-    },
-    {
-      "cve_id": "CVE-2026-45315",
-      "title": "高危漏洞: CVE-2026-45315 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-16 06:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.3, the audio transcription upload endpoint takes the file extension from the user-supplied filename and saves the file under CACHE_DIR/audio/transcriptions/.. The /cache/{path} route serves these files via FileResponse, which sets Content-Type from the on-disk extension and emits no Content-Disposition. A verified user with the default-on chat.stt permission can upload a polyglot WAV+HTML file named pwn.html and trick any other user into opening the resulting URL — the response comes back as text/html and any embedded <script> runs in the Open WebUI origin. This vulnerability is fixed in 0.9.3.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-m8f9-9whg-f4xr",
-      "source": "NVD",
-      "time": "2026-05-16 10:03:15"
-    },
-    {
-      "cve_id": "CVE-2026-45303",
-      "title": "高危漏洞: CVE-2026-45303 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-16 06:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.5, through the HTML rendering view, scripts can be injected and executed. The frontend provides a function to visualize the HTML content of a current chat. The content is embedded in an iFrame with the allow-scripts allow-forms allow-same-origin sandbox directive. This means that the content is placed in a sandbox but with permission to execute scripts and access the parent’s data (e.g., local storage). As a result, only a few functions are restricted (e.g., displaying an alert box), but in effect, the sandbox attribute is largely nullified. This vulnerability is fixed in 0.6.5.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-4vrc-m9ch-6m3r",
-      "source": "NVD",
-      "time": "2026-05-16 10:03:10"
-    },
-    {
-      "cve_id": "CVE-2026-45301",
-      "title": "高危漏洞: CVE-2026-45301 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 06:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.3.16, a missing permission check in all files related API endpoints allows any authenticated user to list, access and delete every file uploaded by every user to the platform. This vulnerability is fixed in 0.3.16.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-r8wh-8m7r-fh33",
-      "source": "NVD",
-      "time": "2026-05-16 10:03:06"
-    },
-    {
-      "cve_id": "CVE-2026-44570",
-      "title": "高危漏洞: CVE-2026-44570 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-16 06:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.19, authorization controls surrounding the memories API were inconsistent, resulting in the ability of a standard user to delete, restore, and view the contents of other users' memories. Using a newly created non-admin user with no existing memories, it is possible to view existing memories via POST /api/v1/memories/query. Similarly, even if a non-admin user cannot modify another user's memory data via POST /api/v1/memories/{memory_id}/update, the endpoint's response improperly leaks the content of that memory if a valid memory_id is known. The DELETE /api/v1/memories/{memory_id} can also be used by any user to delete an existing memory. Deleted memories can then be restored by calling the POST /api/v1/memories/{memory_id}/update endpoint again. This vulnerability is fixed in 0.6.19.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-hmjq-crxp-7rjw",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:59"
     }
   ]
 }
