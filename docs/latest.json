@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-30950",
+      "title": "高危漏洞: CVE-2026-30950 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-19 07:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions 0.6.36 through 0.6.50 are vulnerable to Authenticated Session Hijacking via IDOR. If an authenticated attacker can determine the session_id of another user's session, they can take it over, reading any messages in it and locking the legitimate user out. The PATCH /sessions/{session_id}/assign-user endpoint authenticates the caller but never verifies session ownership: the service layer invokes the session lookup with user_id=None, which the data access layer interprets as a privileged/system call that bypasses the ownership filter, allowing any authenticated user to reassign an arbitrary session to themselves. This issue has been patched in version 0.6.51.",
+      "refs": "https://github.com/Significant-Gravitas/AutoGPT/commit/eca7b5e79370c34ed75e80badb824023d7d8629d\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-q58p-v9r9-7gqj",
+      "source": "NVD",
+      "time": "2026-05-19 10:15:26"
+    },
+    {
+      "cve_id": "CVE-2026-27891",
+      "title": "高危漏洞: CVE-2026-27891 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-19 06:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "FacturaScripts is an open source accounting and invoicing software. Versions 2026 and below contain a critical vulnerability in the Plugins::add() function. The system fails to properly validate the file paths within uploaded ZIP archives. This allows an attacker to perform a Zip Slip attack, leading to Arbitrary File Write and Remote Code Execution (RCE) by overwriting sensitive .php files outside the designated plugins directory. The vulnerability is located in Plugins.php. While the testZipFile function attempts to validate that the ZIP contains only one root folder, it does not sanitize or validate the individual file paths within that folder. An attacker can bypass this check by naming a file ValidPluginName/../../shell.php. The explode function will see ValidPluginName as the root folder, satisfying the count($folders) != 1 check. However, during extraction, the ../../ sequence triggers a path traversal, allowing the file to be written anywhere the web server has permissions the root directory. This issue is fixed in version 2026.1.",
+      "refs": "https://github.com/NeoRazorX/facturascripts/commit/2dda7c6f3b241fa84a0629166783720b882725fd\nhttps://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-3pgc-xqg9-cfr6",
+      "source": "NVD",
+      "time": "2026-05-19 10:15:21"
+    },
+    {
+      "cve_id": "CVE-2026-8851",
+      "title": "高危漏洞: CVE-2026-8851 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-19 05:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "SOGo 5.12.7 contains a SQL injection vulnerability in the Access Control List management functionality that allows authenticated users to extract arbitrary data from the database by injecting SQL subqueries through the uid parameter of the addUserInAcls endpoint. Attackers can inject malicious SQL code to write extracted data into the sogo_acl table and retrieve it through the /acls API, establishing an out-of-band data exfiltration channel.",
+      "refs": "https://github.com/Alinto/sogo/releases/tag/SOGo-5.12.8\nhttps://www.sogo.nu/news/2026/sogo-v5128-released.html\nhttps://www.vulncheck.com/advisories/sogo-sql-injection-via-adduserinacls-endpoint",
+      "source": "NVD",
+      "time": "2026-05-19 10:15:13"
+    },
+    {
+      "cve_id": "CVE-2026-8838",
+      "title": "高危漏洞: CVE-2026-8838 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-19 05:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Unsafe use of Python's eval() on server-received data in the vector_in() function in amazon-redshift-python-driver before 2.1.14 allows a rogue server or man-in-the-middle actor to execute arbitrary code on the client. \n\n\n\nTo remediate this issue, users should upgrade to version 2.1.14.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-033-aws/\nhttps://github.com/aws/amazon-redshift-python-driver/releases/tag/v2.1.14\nhttps://github.com/aws/amazon-redshift-python-driver/security/advisories/GHSA-29h4-r29x-hchv",
+      "source": "NVD",
+      "time": "2026-05-19 10:15:09"
+    },
+    {
+      "cve_id": "CVE-2026-4137",
+      "title": "高危漏洞: CVE-2026-4137 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-05-19 05:16:40",
+      "vector_string": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In mlflow/mlflow versions prior to 3.11.0, the `get_or_create_nfs_tmp_dir()` function in `mlflow/utils/file_utils.py` creates temporary directories with world-writable permissions (0o777), and the `_create_model_downloading_tmp_dir()` function in `mlflow/pyfunc/__init__.py` creates directories with group-writable permissions (0o770). These insecure permissions allow local attackers to tamper with model artifacts, such as cloudpickle-serialized Python objects, and achieve arbitrary code execution when the tampered artifacts are deserialized via `cloudpickle.load()`. This vulnerability is particularly critical in environments with shared NFS mounts, such as Databricks, where NFS is enabled by default. The issue is a continuation of the vulnerability class addressed in CVE-2025-10279, which was only partially fixed.",
+      "refs": "https://github.com/mlflow/mlflow/commit/1dcbb0c2fbd1f446c328830e601ca13a28219b8a\nhttps://huntr.com/bounties/648dc30b-76c7-4433-86b8-f43d926fd8d6",
+      "source": "NVD",
+      "time": "2026-05-19 10:15:04"
+    },
+    {
+      "cve_id": "CVE-2026-27130",
+      "title": "高危漏洞: CVE-2026-27130 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-05-19 05:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Versions 0.26.6 and below have OS command injection through the appName parameter. 3 chained issues cause this problem: inadequate input sanitization, lack of schema validation and direct shell interpolation. User-controlled application names are passed through inadequate sanitization (cleanAppName function only replaces spaces and converts to lowercase) before being interpolated directly into shell commands executed via execAsync() and execAsyncRemote(). An authenticated attacker can inject shell metacharacters (e.g., ;, $(), backticks, |, &) in the appName field during application creation, which are then executed with server-level privileges when service operations (start, stop, remove, scale) are triggered. This issue has been resolved in version 0.26.7.",
+      "refs": "https://github.com/Dokploy/dokploy/commit/960892fd8dcf12b7a73a00edaa1b7090fca860c7\nhttps://github.com/Dokploy/dokploy/security/advisories/GHSA-fcgq-jjfg-hrhj",
+      "source": "NVD",
+      "time": "2026-05-19 10:14:59"
+    },
+    {
+      "cve_id": "CVE-2026-25244",
+      "title": "高危漏洞: CVE-2026-25244 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-19 05:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WebdriverIO is a test automation framework for unit, e2e and component testing using WebDriver, WebDriver BiDi and Appium. Versions below 9.24.0 contain a command injection vulnerability leading to remote code execution (RCE) in test orchestration. Git permits branch names containing shell metacharacters, and getGitMetadataForAISelection() interpolates these names directly into execSync() calls without sanitization. An attacker can exploit this by supplying a malicious repository (via testOrchestrationOptions.runSmartSelection.source, or the current directory if unset) whose branch name carries a payload, causing the shell to execute arbitrary code. This enables remote code execution on CI/CD servers and developer machines, leading to credential and secret disclosure, source code and SSH key exfiltration, system compromise, and supply chain attacks via tampered build artifacts. The issue has been fixed in version 9.24.0.",
+      "refs": "https://github.com/webdriverio/webdriverio/blob/ea0e3e00288abced4c739ff9e46c46977b7cdbd2/packages/wdio-browserstack-service/src/testorchestration/helpers.ts#L204\nhttps://github.com/webdriverio/webdriverio/releases/tag/v9.24.0\nhttps://github.com/webdriverio/webdriverio/security/advisories/GHSA-5c46-x3qw-q7j7",
+      "source": "NVD",
+      "time": "2026-05-19 10:14:53"
+    },
+    {
+      "cve_id": "CVE-2026-22810",
+      "title": "高危漏洞: CVE-2026-22810 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-19 05:16:39",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Versions prior to 3.5.7 contain a path traversal vulnerability in the importer which allows overwriting arbitrary files on disk. The OneNote converter does not sanitize the names of embedded files before writing them to disk. As a result, it's possible for an attacker to create a malicious .one file that includes file names containing ../../, that are then interpreted as part of the target path when extracting attachments from the .one file. This issue has been patched in version 3.5.7.",
+      "refs": "https://github.com/laurent22/joplin/blob/af5108d70233b1db9410346958c1587cf7c1b16d/packages/onenote-converter/renderer/src/page/embedded_file.rs#L13-L16\nhttps://github.com/laurent22/joplin/commit/791668455e1aae50501ff57ea4783b3fba9d377c\nhttps://github.com/laurent22/joplin/pull/13736",
+      "source": "NVD",
+      "time": "2026-05-19 10:14:47"
+    },
+    {
+      "cve_id": "CVE-2026-47092",
+      "title": "高危漏洞: CVE-2026-47092 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-19 04:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Claude HUD through 0.0.12, patched in commit 234d9aa, contains a command injection vulnerability that allows local attackers to execute arbitrary commands by manipulating the COMSPEC environment variable. Attackers can set COMSPEC to an arbitrary binary path before claude-hud performs its version check, causing execFile() to execute the attacker-supplied executable with cmd.exe arguments, resulting in arbitrary code execution on Windows systems.",
+      "refs": "https://github.com/jarrodwatts/claude-hud/commit/234d9aad919b51326a43bcf90b45ae35c23afc30\nhttps://github.com/jarrodwatts/claude-hud/issues/485\nhttps://github.com/jarrodwatts/claude-hud/pull/487",
+      "source": "NVD",
+      "time": "2026-05-19 10:14:39"
+    },
+    {
+      "cve_id": "CVE-2026-45245",
+      "title": "高危漏洞: CVE-2026-45245 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-19 04:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Summarize prior to 0.15.1 contains a vulnerability in the hover summary feature that allows malicious pages to dispatch synthetic mouseover events over attacker-controlled links, causing the extension to make authenticated daemon requests using stored tokens without verifying event trustworthiness. Attackers can place local or private-network URLs behind hoverable links to route authenticated requests through the daemon, potentially accessing sensitive internal endpoints when users interact with attacker-controlled content.",
+      "refs": "https://github.com/steipete/summarize/commit/ecbb2c414255aa480a15d0d8b205224c14cfdbcb\nhttps://github.com/steipete/summarize/pull/218\nhttps://github.com/steipete/summarize/releases/tag/v0.15.2",
+      "source": "NVD",
+      "time": "2026-05-19 10:14:33"
+    },
+    {
       "cve_id": "CVE-2026-8836",
       "title": "高危漏洞: CVE-2026-8836 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-hmjq-crxp-7rjw",
       "source": "NVD",
       "time": "2026-05-16 10:02:59"
-    },
-    {
-      "cve_id": "CVE-2026-44569",
-      "title": "高危漏洞: CVE-2026-44569 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-16 06:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.19, there's an IDOR in the channels message management system that allows authenticated users to modify or delete any message within channels they have read access to. The vulnerability exists in the message update and delete endpoints, which implement channel-level authorization but completely lack message ownership validation. While the frontend correctly implements ownership checks (showing edit/delete buttons only for message owners or admins), the backend APIs bypass these protections by only validating channel access permissions without verifying that the requesting user owns the target message. This creates a client-side security control bypass where attackers can directly call the APIs to modify other users' messages. This vulnerability is fixed in 0.6.19.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-jxwr-g6r6-j3fx",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:54"
-    },
-    {
-      "cve_id": "CVE-2026-44567",
-      "title": "高危漏洞: CVE-2026-44567 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-16 06:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.1.124, the API does not properly validate that the user has an authorized user role of user. By default, when Open WebUI is configured with new sign-ups enabled, the default user role is set to pending. In this configuration, an administrator is required to go into the Admin management panel following a new user registration and reconfigure the user to have a role of either user or admin before that user is able to access the web application. This vulnerability is fixed in 0.1.124.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-4vg5-rp28-gvjf",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:50"
-    },
-    {
-      "cve_id": "CVE-2026-44566",
-      "title": "高危漏洞: CVE-2026-44566 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-16 06:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.1.124, when attaching files to a promp, the name of the file is derived from the original HTTP upload request and is not validated or sanitized. This allows for users to upload files with names containing dot-segments in the file path and traverse out of the intended uploads directory. Effectively, users can upload files anywhere on the filesystem the user running the web server has permission. This vulnerability is fixed in 0.1.124.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-9pgh-j74g-qj6m",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:45"
-    },
-    {
-      "cve_id": "CVE-2026-44565",
-      "title": "高危漏洞: CVE-2026-44565 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 06:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.10, when uploading an audio file, the name of the file is derived from the original HTTP upload request and is not validated or sanitized. This allows for users to upload files with names containing dot-segments in the file path and traverse out of the intended uploads directory. Effectively, users can upload files anywhere on the filesystem the user running the web server has permission. This vulnerability is fixed in 0.6.10.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-j3fw-wc48-29g3",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:41"
-    },
-    {
-      "cve_id": "CVE-2026-44549",
-      "title": "高危漏洞: CVE-2026-44549 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-16 06:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.8.0, Excel file attachments are previewed in an unsafe way. A crafted XLSX file payload can be used to cause the sheetjs function sheet_to_html to embed an XSS payload into the generated HTML. This is subsequently added to the DOM unsanitized via @html causing the payload to trigger. This vulnerability is fixed in 0.8.0.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-jwf8-pv5p-vhmc",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:36"
-    },
-    {
-      "cve_id": "CVE-2026-8696",
-      "title": "高危漏洞: CVE-2026-8696 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-16 05:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "radare2 6.1.5 contains a use-after-free vulnerability in the gdbr_pids_list() function within the GDB client core that allows remote attackers to cause a denial of service or potentially execute arbitrary code by sending malformed thread information responses. Attackers can trigger the vulnerability by causing qsThreadInfo to fail after qfThreadInfo successfully allocates RDebugPid structures, resulting in double-free memory corruption when the error path attempts to clean up the list.",
-      "refs": "https://github.com/radareorg/radare2/commit/c213ad6894a1eb9086ac8bf5fae35757e9e1683c\nhttps://github.com/radareorg/radare2/issues/25836\nhttps://www.vulncheck.com/advisories/radare2-use-after-free-via-gdbr-pids-list",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:31"
-    },
-    {
-      "cve_id": "CVE-2026-45672",
-      "title": "高危漏洞: CVE-2026-45672 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-16 05:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.8.12, the /api/v1/utils/code/execute endpoint executes arbitrary Python code via Jupyter for any verified user, even when the admin has set ENABLE_CODE_EXECUTION=false. The feature gate is not enforced on the API endpoint — the configuration says \"disabled\" but code still executes. This vulnerability is fixed in 0.8.12.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-482j-2pq6-q5w4",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:24"
-    },
-    {
-      "cve_id": "CVE-2026-45402",
-      "title": "高危漏洞: CVE-2026-45402 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-16 05:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, multiple endpoints accept a user-supplied file_id and attach the referenced file to a resource the caller controls (folder knowledge, knowledge-base contents) without verifying that the caller owns or has been granted access to the file. The file's content then becomes reachable through the downstream RAG / file-content paths, allowing any authenticated user to exfiltrate any other user's private file — and on the knowledge-base path, also to overwrite it — given knowledge of the file's UUID. This affects backend/open_webui/routers/folders.py (POST /api/v1/folders/{id}/update), backend/open_webui/routers/knowledge.py (add_file_to_knowledge_by_id), and backend/open_webui/routers/knowledge.py (add_files_to_knowledge_by_id_batch). This vulnerability is fixed in 0.9.5.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-r472-mw7m-967f\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-r472-mw7m-967f",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:19"
-    },
-    {
-      "cve_id": "CVE-2026-45401",
-      "title": "高危漏洞: CVE-2026-45401 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-05-16 05:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, the validate_url() function in backend/open_webui/retrieval/web/utils.py only validates the initial URL submitted by the caller. The HTTP clients used downstream (sync requests, async aiohttp, langchain's WebBaseLoader) follow HTTP 3xx redirects by default and do not re-validate the redirect target against the private-IP / metadata-IP block list. Any authenticated user can therefore submit a public URL that 302-redirects to an internal address (e.g. 127.0.0.1, 169.254.169.254, RFC1918) and read the internal response body via the /api/v1/retrieval/process/web endpoint, the /api/v1/images/... endpoints, the /api/chat/completions endpoint with an image_url content part, and any other route that calls these helpers. This vulnerability is fixed in 0.9.5.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-rh5x-h6pp-cjj6",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:15"
-    },
-    {
-      "cve_id": "CVE-2026-45400",
-      "title": "高危漏洞: CVE-2026-45400 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-05-16 05:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, a parsing difference between the urlparse and requests libraries led to an SSRF bypass vulnerability. This vulnerability is fixed in 0.9.5.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-8w7q-q5jp-jvgx\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-8w7q-q5jp-jvgx",
-      "source": "NVD",
-      "time": "2026-05-16 10:02:11"
     }
   ]
 }
