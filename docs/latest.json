@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4885",
+      "title": "高危漏洞: CVE-2026-4885 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-19 16:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Piotnet Addons for Elementor Pro plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the 'pafe_ajax_form_builder' function in all versions up to, and including, 7.1.70. The plugin uses an incomplete extension blacklist that only blocks php, phpt, php5, php7, and exe extensions, while allowing dangerous extensions such as .phar or .phtml to be uploaded. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The exploit can only be exploited if a file field is added to the form.",
+      "refs": "https://pafe.piotnet.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ffff2ff3-769d-4eb2-acbe-d8ce6f042581?source=cve",
+      "source": "NVD",
+      "time": "2026-05-19 19:54:39"
+    },
+    {
+      "cve_id": "CVE-2026-47314",
+      "title": "高危漏洞: CVE-2026-47314 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-19 16:16:15",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Out-of-bounds write vulnerability in Samsung Open Source Escargot allows Overflow Buffers.\n\nThis issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3.",
+      "refs": "https://github.com/Samsung/escargot/pull/1565",
+      "source": "NVD",
+      "time": "2026-05-19 19:54:32"
+    },
+    {
+      "cve_id": "CVE-2026-8813",
+      "title": "高危漏洞: CVE-2026-8813 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-19 15:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "This affects versions of the package exifreader before 4.39.0. A crafted image containing an ICC mluc tag can set an attacker-controlled record count together with a zero record size. During parsing, ExifReader repeatedly processes the same record and appends entries to an array without sufficient bounds validation, causing excessive memory growth. In applications that parse attacker-supplied images, this may lead to denial of service through memory exhaustion.",
+      "refs": "https://gist.github.com/yuki-matsuhashi/3243ea38e5fbf8cfe19b624f04c9f4b4\nhttps://github.com/mattiasw/ExifReader/commit/c9d88b67e127b2dcc7b46e328df468257fb2dc30\nhttps://security.snyk.io/vuln/SNYK-JS-EXIFREADER-16689335",
+      "source": "NVD",
+      "time": "2026-05-19 19:54:24"
+    },
+    {
+      "cve_id": "CVE-2026-47311",
+      "title": "高危漏洞: CVE-2026-47311 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-19 15:16:30",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Heap-based buffer overflow vulnerability in Samsung Open Source Escargot allows Overflow Buffers.\n\nThis issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3.",
+      "refs": "https://github.com/Samsung/escargot/pull/1565",
+      "source": "NVD",
+      "time": "2026-05-19 19:54:17"
+    },
+    {
+      "cve_id": "CVE-2026-47310",
+      "title": "高危漏洞: CVE-2026-47310 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-19 15:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Use after free vulnerability in Samsung Open Source Escargot allows Pointer Manipulation.\n\nThis issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3.",
+      "refs": "https://github.com/Samsung/escargot/pull/1565",
+      "source": "NVD",
+      "time": "2026-05-19 19:54:12"
+    },
+    {
       "cve_id": "CVE-2026-27648",
       "title": "高危漏洞: CVE-2026-27648 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://www.cybertronsoft.com/\nhttps://www.cybertronsoft.com/download/privacy-drive-setup.exe\nhttps://www.exploit-db.com/exploits/49023",
       "source": "NVD",
       "time": "2026-05-17 02:49:46"
-    },
-    {
-      "cve_id": "CVE-2020-37230",
-      "title": "高危漏洞: CVE-2020-37230 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-17 00:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Syncplify.me Server! 5.0.37 contains an unquoted service path vulnerability in the SMWebRestServicev5 service that allows local attackers to escalate privileges by exploiting the unquoted binary path. Attackers can insert a malicious executable into the service path and execute it with LocalSystem privileges when the service restarts or the system reboots.",
-      "refs": "https://download.syncplify.me/SMServer_Setup.exe\nhttps://www.exploit-db.com/exploits/49009\nhttps://www.syncplify.me/",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:42"
-    },
-    {
-      "cve_id": "CVE-2020-37229",
-      "title": "高危漏洞: CVE-2020-37229 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-17 00:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OKI sPSV Port Manager 1.0.41 contains an unquoted service path vulnerability in the sPSVOpLclSrv service that allows local attackers to escalate privileges by inserting executable files into the unquoted path. Attackers can place a malicious executable in a directory within the service path that will execute with LocalSystem privileges when the service restarts or the system reboots.",
-      "refs": "https://www.exploit-db.com/exploits/49005\nhttps://www.oki.com/\nhttps://www.oki.com/mx/printing/download/sPSV_010041_2_270910.exe",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:38"
-    },
-    {
-      "cve_id": "CVE-2020-37228",
-      "title": "高危漏洞: CVE-2020-37228 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-17 00:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "iDS6 DSSPro Digital Signage System 6.2 contains a CAPTCHA security bypass vulnerability that allows attackers to bypass authentication by requesting the autoLoginVerifyCode object. Attackers can retrieve valid CAPTCHA codes via the login endpoint and use them to perform brute-force attacks against user accounts.",
-      "refs": "http://www.yerootech.com\nhttps://www.exploit-db.com/exploits/48991\nhttps://www.vulncheck.com/advisories/ids6-dsspro-digital-signage-system-captcha-security-bypass",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:32"
-    },
-    {
-      "cve_id": "CVE-2020-37227",
-      "title": "高危漏洞: CVE-2020-37227 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-17 00:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "HS Brand Logo Slider 2.1 contains an unrestricted file upload vulnerability that allows authenticated users to bypass client-side file extension validation by uploading arbitrary files. Attackers can intercept upload requests to the logoupload parameter in the admin interface and rename files to executable extensions .php to achieve remote code execution.",
-      "refs": "https://ms.wordpress.org/plugins/hs-brand-logo-slider/\nhttps://www.exploit-db.com/exploits/48913\nhttps://www.heliossolutions.co/",
-      "source": "NVD",
-      "time": "2026-05-17 02:49:25"
-    },
-    {
-      "cve_id": "CVE-2026-8657",
-      "title": "高危漏洞: CVE-2026-8657 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-16 14:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Versions of the package jsondiffpatch before 0.7.6 are vulnerable to Prototype Pollution via the jsondiffpatch.patch() and jsondiffpatch/formatters/jsonpatch.patch() APIs. An attacker can perform prototype pollution by supplying crafted delta or JSON Patch documents, as attacker-controlled property names and path segments are used to traverse and modify objects without restricting access to special properties like __proto__ or constructor.prototype, allowing modification of Object.prototype.",
-      "refs": "https://gist.github.com/yuki-matsuhashi/e570fb1579ae1f3190059b622b0473fb\nhttps://github.com/benjamine/jsondiffpatch/blob/96112c35a98f9201dd75d67fcee68a952c79e2fe/packages/jsondiffpatch/src/filters/nested.ts%23L107-L115\nhttps://github.com/benjamine/jsondiffpatch/blob/96112c35a98f9201dd75d67fcee68a952c79e2fe/packages/jsondiffpatch/src/filters/nested.ts%23L82-L87",
-      "source": "NVD",
-      "time": "2026-05-16 20:58:28"
     }
   ]
 }
