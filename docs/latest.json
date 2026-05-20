@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-24425",
+      "title": "高危漏洞: CVE-2026-24425 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 22:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Twig versions 2.16.x and 3.9.0 through 3.25.x contain a sandbox bypass vulnerability when using a SourcePolicyInterface that allows attackers with template rendering capabilities to pass arbitrary PHP callables to sort, filter, map, and reduce filters. Attackers can exploit the runtime check that fails to use the current template source to bypass sandbox restrictions and execute arbitrary code when the sandbox is enabled through a source policy rather than globally.",
+      "refs": "https://github.com/twigphp/Twig/releases/tag/v3.26.0\nhttps://github.com/twigphp/Twig/security/advisories/GHSA-2q52-x2ff-qgfr\nhttps://www.vulncheck.com/advisories/twig-x-x-sandbox-bypass-via-sourcepolicyinterface",
+      "source": "NVD",
+      "time": "2026-05-21 01:49:22"
+    },
+    {
+      "cve_id": "CVE-2026-22554",
+      "title": "高危漏洞: CVE-2026-22554 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-20 22:16:38",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "MediaArea MediaInfoLib Channel Splitting heap-based buffer overflow vulnerability",
+      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2374",
+      "source": "NVD",
+      "time": "2026-05-21 01:49:17"
+    },
+    {
+      "cve_id": "CVE-2026-39250",
+      "title": "高危漏洞: CVE-2026-39250 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-20 05:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "An authorization vulnerability exists in Innoshop 0.6.0. After logging into the frontend, an attacker can directly access backend application interfaces, leading to further dangerous operations.",
+      "refs": "https://gist.github.com/hkdmh/4af513ea7589212cb1d49bc5d972972e\nhttps://www.innoshop.com/",
+      "source": "NVD",
+      "time": "2026-05-21 01:49:13"
+    },
+    {
       "cve_id": "CVE-2026-5947",
       "title": "高危漏洞: CVE-2026-5947 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1066,39 +1099,6 @@
       "refs": "http://airgate.com\nhttp://novus.com\nhttps://github.com/sql3t0/cve-disclosures/blob/main/00_-_CVE-2023-24215.md",
       "source": "NVD",
       "time": "2026-05-20 01:33:40"
-    },
-    {
-      "cve_id": "CVE-2026-8912",
-      "title": "高危漏洞: CVE-2026-8912 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 21:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Contest Gallery plugin for WordPress is vulnerable to SQL Injection via the 'form_input' parameter in versions up to, and including, 28.1.6. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query inside the unauthenticated 'post_cg_gallery_form_upload' AJAX action (specifically the 'cb' branch of the included users-upload-check.php, where $f_input_id is concatenated unquoted into 'SELECT Field_Content FROM ... WHERE id = $f_input_id'). The endpoint is gated only by a public frontend nonce ('cg1l_action' / 'cg_nonce') that is exposed in the page source of any public gallery page. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://plugins.trac.wordpress.org/browser/contest-gallery/tags/28.1.5/ajax/ajax-functions-frontend.php#L837\nhttps://plugins.trac.wordpress.org/browser/contest-gallery/tags/28.1.5/functions/frontend/cg-general-frontend.php#L12\nhttps://plugins.trac.wordpress.org/browser/contest-gallery/tags/28.1.5/v10/v10-frontend/user_upload/users-upload-check.php#L1036",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:42"
-    },
-    {
-      "cve_id": "CVE-2026-4883",
-      "title": "高危漏洞: CVE-2026-4883 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 21:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Piotnet Forms plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the 'piotnetforms_ajax_form_builder' function in all versions up to, and including, 2.1.40. The plugin uses an incomplete extension blacklist that only blocks php, phpt, php5, php7, and exe extensions, while allowing dangerous extensions such as .phar or .phtml to be uploaded. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The exploit can only be exploited if a file field is added to the form.",
-      "refs": "https://piotnetforms.com\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/9bd9c9db-d279-4de2-b5e4-ac7d8c919f2a?source=cve",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:36"
-    },
-    {
-      "cve_id": "CVE-2026-7571",
-      "title": "高危漏洞: CVE-2026-7571 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-19 20:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "A flaw was found in Keycloak. A low-privilege user, with knowledge of user credentials and client ID, can bypass a security control intended to disable the implicit flow in OpenID Connect (OIDC) clients. By manipulating client data during a session restart, an attacker can obtain an access token that should not be available. This vulnerability can also lead to the exposure of these access tokens in server logs, proxy logs, and HTTP Referrer headers, resulting in sensitive information disclosure.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-7571\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464263",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:31"
     }
   ]
 }
