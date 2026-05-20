@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5200",
+      "title": "高危漏洞: CVE-2026-5200 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 16:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The AcyMailing – An Ultimate Newsletter Plugin and Marketing Automation Solution for WordPress plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 10.8.2. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to modify privileged AcyMailing configuration, export subscriber secret keys, and chain these actions into administrator account takeover when a target administrator email address is known.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3516422/acymailing\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f8470662-2247-4159-9dac-f13677c94bdf?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 19:43:24"
+    },
+    {
+      "cve_id": "CVE-2026-47784",
+      "title": "高危漏洞: CVE-2026-47784 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-20 15:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In memcached before 1.6.42, password data for SASL password database authentication has a timing side channel because memcmp is used by sasl_server_userdb_checkpass.",
+      "refs": "https://github.com/memcached/memcached/commit/d13f282b4bce33a9c33b8a1bbf07f12114160fed\nhttps://github.com/memcached/memcached/compare/1.6.41...1.6.42\nhttps://github.com/memcached/memcached/wiki/ReleaseNotes1642",
+      "source": "NVD",
+      "time": "2026-05-20 19:43:20"
+    },
+    {
+      "cve_id": "CVE-2026-47783",
+      "title": "高危漏洞: CVE-2026-47783 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-20 15:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In memcached before 1.6.42, username data for SASL password database authentication has a timing side channel because a loop exits as soon as a valid username is found by sasl_server_userdb_checkpass.",
+      "refs": "https://github.com/memcached/memcached/commit/d13f282b4bce33a9c33b8a1bbf07f12114160fed\nhttps://github.com/memcached/memcached/compare/1.6.41...1.6.42\nhttps://github.com/memcached/memcached/wiki/ReleaseNotes1642",
+      "source": "NVD",
+      "time": "2026-05-20 19:43:16"
+    },
+    {
+      "cve_id": "CVE-2026-9057",
+      "title": "高危漏洞: CVE-2026-9057 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-20 13:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "A broken access control issue has been identified in the Talend Administration Center, that allows a user with “View” permission to modify the Talend Studio update URL. This issue was resolved in a patch, which is already available.",
+      "refs": "https://community.qlik.com/t5/Official-Support-Articles/Security-fix-for-Qlik-Talend-Administration-Center-URL-access/ta-p/2548524",
+      "source": "NVD",
+      "time": "2026-05-20 19:43:09"
+    },
+    {
+      "cve_id": "CVE-2026-7522",
+      "title": "高危漏洞: CVE-2026-7522 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 13:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Advanced Database Cleaner – Premium plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 4.1.0 via the 'template' parameter. This makes it possible for authenticated attackers, with Subscriber-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included.",
+      "refs": "https://docs.sigmaplugin.com/article/97-advanced-database-cleaner-chaneglog\nhttps://sigmaplugin.com/downloads/wordpress-advanced-database-cleaner/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/77e4e516-8a12-48ee-9124-27f941b68b13?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 19:43:03"
+    },
+    {
       "cve_id": "CVE-2026-9010",
       "title": "高危漏洞: CVE-2026-9010 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/mullvad/mullvadvpn-app/commit/032fdcb927c0b6d3e5e1aba4140d33adf22a6bfb\nhttps://github.com/mullvad/mullvadvpn-app/security/advisories/GHSA-c2g6-w5fq-vw3m",
       "source": "NVD",
       "time": "2026-05-19 14:40:12"
-    },
-    {
-      "cve_id": "CVE-2026-30950",
-      "title": "高危漏洞: CVE-2026-30950 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-19 07:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
-      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions 0.6.36 through 0.6.50 are vulnerable to Authenticated Session Hijacking via IDOR. If an authenticated attacker can determine the session_id of another user's session, they can take it over, reading any messages in it and locking the legitimate user out. The PATCH /sessions/{session_id}/assign-user endpoint authenticates the caller but never verifies session ownership: the service layer invokes the session lookup with user_id=None, which the data access layer interprets as a privileged/system call that bypasses the ownership filter, allowing any authenticated user to reassign an arbitrary session to themselves. This issue has been patched in version 0.6.51.",
-      "refs": "https://github.com/Significant-Gravitas/AutoGPT/commit/eca7b5e79370c34ed75e80badb824023d7d8629d\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-q58p-v9r9-7gqj",
-      "source": "NVD",
-      "time": "2026-05-19 10:15:26"
-    },
-    {
-      "cve_id": "CVE-2026-27891",
-      "title": "高危漏洞: CVE-2026-27891 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-19 06:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "FacturaScripts is an open source accounting and invoicing software. Versions 2026 and below contain a critical vulnerability in the Plugins::add() function. The system fails to properly validate the file paths within uploaded ZIP archives. This allows an attacker to perform a Zip Slip attack, leading to Arbitrary File Write and Remote Code Execution (RCE) by overwriting sensitive .php files outside the designated plugins directory. The vulnerability is located in Plugins.php. While the testZipFile function attempts to validate that the ZIP contains only one root folder, it does not sanitize or validate the individual file paths within that folder. An attacker can bypass this check by naming a file ValidPluginName/../../shell.php. The explode function will see ValidPluginName as the root folder, satisfying the count($folders) != 1 check. However, during extraction, the ../../ sequence triggers a path traversal, allowing the file to be written anywhere the web server has permissions the root directory. This issue is fixed in version 2026.1.",
-      "refs": "https://github.com/NeoRazorX/facturascripts/commit/2dda7c6f3b241fa84a0629166783720b882725fd\nhttps://github.com/NeoRazorX/facturascripts/security/advisories/GHSA-3pgc-xqg9-cfr6",
-      "source": "NVD",
-      "time": "2026-05-19 10:15:21"
-    },
-    {
-      "cve_id": "CVE-2026-8851",
-      "title": "高危漏洞: CVE-2026-8851 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-19 05:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "SOGo 5.12.7 contains a SQL injection vulnerability in the Access Control List management functionality that allows authenticated users to extract arbitrary data from the database by injecting SQL subqueries through the uid parameter of the addUserInAcls endpoint. Attackers can inject malicious SQL code to write extracted data into the sogo_acl table and retrieve it through the /acls API, establishing an out-of-band data exfiltration channel.",
-      "refs": "https://github.com/Alinto/sogo/releases/tag/SOGo-5.12.8\nhttps://www.sogo.nu/news/2026/sogo-v5128-released.html\nhttps://www.vulncheck.com/advisories/sogo-sql-injection-via-adduserinacls-endpoint",
-      "source": "NVD",
-      "time": "2026-05-19 10:15:13"
-    },
-    {
-      "cve_id": "CVE-2026-8838",
-      "title": "高危漏洞: CVE-2026-8838 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 05:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unsafe use of Python's eval() on server-received data in the vector_in() function in amazon-redshift-python-driver before 2.1.14 allows a rogue server or man-in-the-middle actor to execute arbitrary code on the client. \n\n\n\nTo remediate this issue, users should upgrade to version 2.1.14.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-033-aws/\nhttps://github.com/aws/amazon-redshift-python-driver/releases/tag/v2.1.14\nhttps://github.com/aws/amazon-redshift-python-driver/security/advisories/GHSA-29h4-r29x-hchv",
-      "source": "NVD",
-      "time": "2026-05-19 10:15:09"
-    },
-    {
-      "cve_id": "CVE-2026-4137",
-      "title": "高危漏洞: CVE-2026-4137 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-05-19 05:16:40",
-      "vector_string": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In mlflow/mlflow versions prior to 3.11.0, the `get_or_create_nfs_tmp_dir()` function in `mlflow/utils/file_utils.py` creates temporary directories with world-writable permissions (0o777), and the `_create_model_downloading_tmp_dir()` function in `mlflow/pyfunc/__init__.py` creates directories with group-writable permissions (0o770). These insecure permissions allow local attackers to tamper with model artifacts, such as cloudpickle-serialized Python objects, and achieve arbitrary code execution when the tampered artifacts are deserialized via `cloudpickle.load()`. This vulnerability is particularly critical in environments with shared NFS mounts, such as Databricks, where NFS is enabled by default. The issue is a continuation of the vulnerability class addressed in CVE-2025-10279, which was only partially fixed.",
-      "refs": "https://github.com/mlflow/mlflow/commit/1dcbb0c2fbd1f446c328830e601ca13a28219b8a\nhttps://huntr.com/bounties/648dc30b-76c7-4433-86b8-f43d926fd8d6",
-      "source": "NVD",
-      "time": "2026-05-19 10:15:04"
     }
   ]
 }
