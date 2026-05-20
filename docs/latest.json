@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5947",
+      "title": "高危漏洞: CVE-2026-5947 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 21:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Undefined behavior may result due to a race condition leading to a use-after-free violation.  If BIND receives an incoming DNS message signed with SIG(0), it begins work to validate that signature.  If, during that validation, the \"recursive-clients\" limit is reached (as would occur during a query flood), and that same DNS message is discarded per the limit, there is a brief window of time while the SIG(0) validation may attempt to read the now-discarded DNS message.\nThis issue affects BIND 9 versions 9.20.0 through 9.20.22, 9.21.0 through 9.21.21, and 9.20.9-S1 through 9.20.22-S1.\nBIND 9 versions 9.18.28 through 9.18.49 and 9.18.28-S1 through 9.18.49-S1 are NOT affected.",
+      "refs": "https://downloads.isc.org/isc/bind9/9.20.23\nhttps://downloads.isc.org/isc/bind9/9.21.22\nhttps://kb.isc.org/docs/cve-2026-5947",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:55"
+    },
+    {
+      "cve_id": "CVE-2026-5946",
+      "title": "高危漏洞: CVE-2026-5946 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 21:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Multiple flaws have been identified in `named` related to the handling of DNS messages whose CLASS is not Internet (`IN`) — for example, `CHAOS` or `HESIOD`, or DNS messages that specify meta-classes (`ANY` or `NONE`) in the question section. Specially crafted requests reaching the affected code paths — recursion, dynamic updates (`UPDATE`), zone change notifications (`NOTIFY`), or processing of `IN`-specific record types in non-`IN` data — can cause assertion failures in `named`.\nThis issue affects BIND 9 versions 9.11.0 through 9.16.50, 9.18.0 through 9.18.48, 9.20.0 through 9.20.22, 9.21.0 through 9.21.21, 9.11.3-S1 through 9.16.50-S1, 9.18.11-S1 through 9.18.48-S1, and 9.20.9-S1 through 9.20.22-S1.",
+      "refs": "https://downloads.isc.org/isc/bind9/9.18.49\nhttps://downloads.isc.org/isc/bind9/9.20.23\nhttps://downloads.isc.org/isc/bind9/9.21.22",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:49"
+    },
+    {
+      "cve_id": "CVE-2026-45584",
+      "title": "高危漏洞: CVE-2026-45584 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-20 21:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Heap-based buffer overflow in Microsoft Defender allows an unauthorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45584",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:44"
+    },
+    {
+      "cve_id": "CVE-2026-42834",
+      "title": "高危漏洞: CVE-2026-42834 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-20 21:16:34",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper link resolution before file access ('link following') in Azure Portal Windows Admin Center allows an authorized attacker to elevate privileges locally.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42834",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:36"
+    },
+    {
+      "cve_id": "CVE-2026-42383",
+      "title": "高危漏洞: CVE-2026-42383 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-20 21:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in YITH YITH WooCommerce Product Add-Ons allows Blind SQL Injection.\n\nThis issue affects YITH WooCommerce Product Add-Ons: from n/a through 4.29.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/yith-woocommerce-product-add-ons/vulnerability/wordpress-yith-woocommerce-product-add-ons-plugin-4-29-0-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:30"
+    },
+    {
+      "cve_id": "CVE-2026-41091",
+      "title": "高危漏洞: CVE-2026-41091 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-20 21:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper link resolution before file access ('link following') in Microsoft Defender allows an authorized attacker to elevate privileges locally.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:23"
+    },
+    {
+      "cve_id": "CVE-2026-3593",
+      "title": "高危漏洞: CVE-2026-3593 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-20 21:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "description": "A use-after-free vulnerability exists within the DNS-over-HTTPS implementation.\nThis issue affects BIND 9 versions 9.20.0 through 9.20.22, 9.21.0 through 9.21.21, and 9.20.9-S1 through 9.20.22-S1.\nBIND 9 versions 9.18.0 through 9.18.48 and 9.18.11-S1 through 9.18.48-S1 are NOT affected.",
+      "refs": "https://downloads.isc.org/isc/bind9/9.20.23\nhttps://downloads.isc.org/isc/bind9/9.21.22\nhttps://kb.isc.org/docs/cve-2026-3593",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:18"
+    },
+    {
+      "cve_id": "CVE-2026-3039",
+      "title": "高危漏洞: CVE-2026-3039 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 21:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "BIND servers that are configured to use TKEY-based authentication via GSS-API tokens are vulnerable to excessive memory consumption when receiving and processing maliciously-constructed packets.  Typically these servers will be found in Active Directory integrated DNS deployments and/or Kerberos-secured DNS environments.\nThis issue affects BIND 9 versions 9.0.0 through 9.16.50, 9.18.0 through 9.18.48, 9.20.0 through 9.20.22, 9.21.0 through 9.21.21, 9.9.3-S1 through 9.16.50-S1, 9.18.11-S1 through 9.18.48-S1, and 9.20.9-S1 through 9.20.22-S1.",
+      "refs": "https://downloads.isc.org/isc/bind9/9.18.49\nhttps://downloads.isc.org/isc/bind9/9.20.23\nhttps://downloads.isc.org/isc/bind9/9.21.22",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:11"
+    },
+    {
+      "cve_id": "CVE-2026-29518",
+      "title": "高危漏洞: CVE-2026-29518 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-05-20 21:16:17",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Rsync versions before 3.4.3 contain a time-of-check to time-of-use (TOCTOU) race condition in daemon file handling that allows attackers to redirect file writes outside intended directories by replacing parent directory components with symbolic links. Attackers with write access to a module path can exploit this race condition to create or overwrite arbitrary files, potentially modifying sensitive system files and achieving privilege escalation when the daemon runs with elevated privileges. This vulnerability can only be triggered if the chroot setting is false.",
+      "refs": "https://github.com/RsyncProject/rsync/pull/895/changes/8471fdd1561049ef5f58df44a1811a50bd9a531d\nhttps://github.com/RsyncProject/rsync/releases/tag/v3.4.3\nhttps://www.vulncheck.com/advisories/rsync-toctou-race-condition-allows-symlink-based-arbitrary-file-write",
+      "source": "NVD",
+      "time": "2026-05-20 22:36:04"
+    },
+    {
+      "cve_id": "CVE-2025-11954",
+      "title": "高危漏洞: CVE-2025-11954 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-05-20 21:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Cross-Site request forgery (CSRF) vulnerability in Sitemio Information Technologies Trade Ltd. Co. WISECP allows Cross Site Request Forgery.\n\nThis issue affects WISECP: through 20022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0262",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:58"
+    },
+    {
+      "cve_id": "CVE-2026-22315",
+      "title": "高危漏洞: CVE-2026-22315 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-20 19:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in Mesalvo Meona Client Launcher Component, Mesalvo Meona Server Component enables the export  of user data, including cleartext passwords, via the SQL editor. This issue affects Meona Client Launcher Component: through 19.06.2020 15:11:49; Meona Server Component: through 2025.04 5+323020.",
+      "refs": "https://seccore.at/blog/cves-meona/",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:52"
+    },
+    {
+      "cve_id": "CVE-2026-22314",
+      "title": "高危漏洞: CVE-2026-22314 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-05-20 19:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Mesalvo Meona Client Launcher Component, Mesalvo Meona Server Component enables code execution on other users' systems. This issue affects Meona Client Launcher Component: through 19.06.2020 15:11:49; Meona Server Component: through 2025.04 5+323020.",
+      "refs": "https://seccore.at/blog/cves-meona/",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:47"
+    },
+    {
+      "cve_id": "CVE-2026-0856",
+      "title": "高危漏洞: CVE-2026-0856 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-20 19:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Access Control vulnerability in Mesalvo Meona Client Launcher Component, Mesalvo Meona Server Component enables a normal user gaining access to the admin panel. This issue affects Meona Client Launcher Component: through 19.06.2020 15:11:49; Meona Server Component: through 2025.04 5+323020.",
+      "refs": "https://seccore.at/blog/cves-meona/",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:39"
+    },
+    {
+      "cve_id": "CVE-2026-9064",
+      "title": "高危漏洞: CVE-2026-9064 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 18:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in 389-ds-base. The get_ldapmessage_controls_ext() function in the LDAP server does not enforce an upper bound on the number of controls per LDAP message. A remote, unauthenticated attacker can send a specially crafted LDAP request containing hundreds of thousands of minimal controls within the default maximum BER message size (2 MB), causing excessive CPU consumption and heap allocation on the server. Under concurrent exploitation, this leads to significant latency degradation, worker thread starvation, or out-of-memory termination, resulting in a denial of service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-9064\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2480093",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:33"
+    },
+    {
+      "cve_id": "CVE-2026-44933",
+      "title": "高危漏洞: CVE-2026-44933 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-20 18:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "`PluginScript` attempts to `chroot` the plugin to the `repoManagerRoot`, this root is frequently `/` (the system root) in standard configurations or when using `--root`. If the chroot target is `/`, it is a no-op, allowing the traversed path to execute host binaries (like `/bin/bash`) with root privileges.",
+      "refs": "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2026-44933",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:25"
+    },
+    {
+      "cve_id": "CVE-2026-41054",
+      "title": "高危漏洞: CVE-2026-41054 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-20 18:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In `src/havegecmd.c`, the `socket_handler` function performs a credential check on the abstract UNIX socket (`\\0/sys/entropy/haveged`). However, while it detects if the connecting user is not root (`cred.uid != 0`) and prepares a negative acknowledgement (`ASCII_NAK`), it **fails to stop execution**. The code proceeds to the `switch` statement, allowing any local unprivileged user to execute privileged commands such as `MAGIC_CHROOT`.",
+      "refs": "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2026-41054\nhttp://www.openwall.com/lists/oss-security/2026/05/19/3\nhttp://www.openwall.com/lists/oss-security/2026/05/19/4",
+      "source": "NVD",
+      "time": "2026-05-20 22:35:20"
+    },
+    {
       "cve_id": "CVE-2026-5200",
       "title": "高危漏洞: CVE-2026-5200 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -923,182 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-7571\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464263",
       "source": "NVD",
       "time": "2026-05-19 22:36:31"
-    },
-    {
-      "cve_id": "CVE-2026-7507",
-      "title": "高危漏洞: CVE-2026-7507 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 20:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A session fixation vulnerability was found in Keycloak's login-actions endpoints. An unauthenticated attacker could exploit this flaw by pre-creating an authentication session and tricking a victim into visiting a maliciously crafted link. By leveraging the /login-actions/restart endpoint—which processes session handles without adequate CSRF protection or cookie ownership validation—an attacker can reset the authentication flow state. This causes Single Sign-On (SSO) to authenticate the victim transparently upon clicking the link, allowing the attacker to hijack the required-action form without needing the victim's credentials. A successful exploit could lead to complete account takeover, including highly privileged administrative accounts.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-7507\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464145",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:26"
-    },
-    {
-      "cve_id": "CVE-2026-7504",
-      "title": "高危漏洞: CVE-2026-7504 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-19 20:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "A flaw was found in Keycloak's URL validation logic during redirect operations. By crafting a malicious request, an attacker could bypass validation to redirect users to unauthorized URLs, potentially leading to the exposure of sensitive information within the domain or facilitating further attacks. This vulnerability specifically affects Keycloak clients configured with a wildcard (*) in the \"Valid Redirect URIs\" field and requires user interaction to be successfully exploited.\n\nThe issue stems from a discrepancy in how Keycloak and the underlying Java URI implementation handle the user-info component of a URL. If a malicious redirect URL is constructed using multiple @ characters in the user-info section, Java's URI parser fails to extract the user-info, leaving only the raw authority field. Consequently, Keycloak's validation check fails to detect the malformed user-info, falls back to a wildcard comparison, and incorrectly permits the malicious redirect.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-7504\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2464128",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:15"
-    },
-    {
-      "cve_id": "CVE-2026-7307",
-      "title": "高危漏洞: CVE-2026-7307 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 20:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A flaw was found in Keycloak. A remote, unauthenticated attacker can send a specially crafted XML input to the Security Assertion Markup Language (SAML) endpoint. This malicious input can cause high CPU usage and worker thread starvation, leading to a Denial of Service (DoS) where the server becomes unavailable.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-7307\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2476526",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:10"
-    },
-    {
-      "cve_id": "CVE-2026-2611",
-      "title": "高危漏洞: CVE-2026-2611 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-19 18:16:22",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "In MLflow version 3.9.0, the MLflow Assistant feature introduced improper origin validation in its /ajax-api endpoints. This vulnerability allows a remote attacker to exploit cross-origin requests from a malicious webpage to interact with the MLflow Assistant running on a victim's local machine. By bypassing the loopback-only restriction, the attacker can modify the Assistant's configuration to enable full access, which in turn allows the execution of arbitrary commands via the Claude Code sub-agent. This issue is resolved in version 3.10.0.",
-      "refs": "https://github.com/mlflow/mlflow/commit/8f9c8a53af90842944101eb8b7d60706822c81bc\nhttps://huntr.com/bounties/8462addd-b464-4a84-b6a2-5529604e6e5a",
-      "source": "NVD",
-      "time": "2026-05-19 22:36:04"
-    },
-    {
-      "cve_id": "CVE-2026-4885",
-      "title": "高危漏洞: CVE-2026-4885 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 16:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Piotnet Addons for Elementor Pro plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the 'pafe_ajax_form_builder' function in all versions up to, and including, 7.1.70. The plugin uses an incomplete extension blacklist that only blocks php, phpt, php5, php7, and exe extensions, while allowing dangerous extensions such as .phar or .phtml to be uploaded. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The exploit can only be exploited if a file field is added to the form.",
-      "refs": "https://pafe.piotnet.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ffff2ff3-769d-4eb2-acbe-d8ce6f042581?source=cve",
-      "source": "NVD",
-      "time": "2026-05-19 19:54:39"
-    },
-    {
-      "cve_id": "CVE-2026-47314",
-      "title": "高危漏洞: CVE-2026-47314 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-19 16:16:15",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out-of-bounds write vulnerability in Samsung Open Source Escargot allows Overflow Buffers.\n\nThis issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3.",
-      "refs": "https://github.com/Samsung/escargot/pull/1565",
-      "source": "NVD",
-      "time": "2026-05-19 19:54:32"
-    },
-    {
-      "cve_id": "CVE-2026-8813",
-      "title": "高危漏洞: CVE-2026-8813 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 15:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "This affects versions of the package exifreader before 4.39.0. A crafted image containing an ICC mluc tag can set an attacker-controlled record count together with a zero record size. During parsing, ExifReader repeatedly processes the same record and appends entries to an array without sufficient bounds validation, causing excessive memory growth. In applications that parse attacker-supplied images, this may lead to denial of service through memory exhaustion.",
-      "refs": "https://gist.github.com/yuki-matsuhashi/3243ea38e5fbf8cfe19b624f04c9f4b4\nhttps://github.com/mattiasw/ExifReader/commit/c9d88b67e127b2dcc7b46e328df468257fb2dc30\nhttps://security.snyk.io/vuln/SNYK-JS-EXIFREADER-16689335",
-      "source": "NVD",
-      "time": "2026-05-19 19:54:24"
-    },
-    {
-      "cve_id": "CVE-2026-47311",
-      "title": "高危漏洞: CVE-2026-47311 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-19 15:16:30",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Heap-based buffer overflow vulnerability in Samsung Open Source Escargot allows Overflow Buffers.\n\nThis issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3.",
-      "refs": "https://github.com/Samsung/escargot/pull/1565",
-      "source": "NVD",
-      "time": "2026-05-19 19:54:17"
-    },
-    {
-      "cve_id": "CVE-2026-47310",
-      "title": "高危漏洞: CVE-2026-47310 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-19 15:16:29",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free vulnerability in Samsung Open Source Escargot allows Pointer Manipulation.\n\nThis issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3.",
-      "refs": "https://github.com/Samsung/escargot/pull/1565",
-      "source": "NVD",
-      "time": "2026-05-19 19:54:12"
-    },
-    {
-      "cve_id": "CVE-2026-27648",
-      "title": "高危漏洞: CVE-2026-27648 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-19 12:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "in OpenHarmony v6.0 and prior versions allow a remote attacker arbitrary code execution in pre-installed apps.",
-      "refs": "https://gitcode.com/openharmony/security/tree/master/zh/security-disclosure/2026/2026-04.md",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:41"
-    },
-    {
-      "cve_id": "CVE-2026-25781",
-      "title": "高危漏洞: CVE-2026-25781 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-19 12:16:28",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "in OpenHarmony v6.0 and prior versions allow a local attacker cause DOS and it cannot be recovered.",
-      "refs": "https://gitcode.com/openharmony/security/tree/master/zh/security-disclosure/2026/2026-05.md",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:34"
-    },
-    {
-      "cve_id": "CVE-2026-24792",
-      "title": "高危漏洞: CVE-2026-24792 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-19 12:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
-      "description": "in OpenHarmony v6.0 and prior versions allow a remote attacker arbitrary code execution in pre-installed apps.",
-      "refs": "https://gitcode.com/openharmony/security/tree/master/zh/security-disclosure/2026/2026-04.md",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:30"
-    },
-    {
-      "cve_id": "CVE-2026-22069",
-      "title": "高危漏洞: CVE-2026-22069 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-19 12:16:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:H",
-      "description": "A local privilege escalation vulnerability exists in O+ Connect because it fails to validate the identity of the caller on the pipe interface.",
-      "refs": "https://security.oppo.com/en/noticeDetail?notice_only_key=NOTICE-2056566978633801728",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:26"
-    },
-    {
-      "cve_id": "CVE-2026-33233",
-      "title": "高危漏洞: CVE-2026-33233 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-19 10:16:15",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.34 through 0.6.51, the backend deserializes Redis cache bytes using pickle.loads without integrity/authenticity checks. The write path serializes values with pickle.dumps(...) into Redis and the read path blindly invokes pickle.loads(...) on bytes with no HMAC/signature or strict schema validation gating deserialization. If an attacker can poison a shared-cache key in Redis, arbitrary command execution is possible in the backend container context, affecting confidentiality, integrity, and availability. This issue has been fixed in version 0.6.52.",
-      "refs": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.6.52\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-rfg2-37xq-w4m9",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:21"
-    },
-    {
-      "cve_id": "CVE-2026-33232",
-      "title": "高危漏洞: CVE-2026-33232 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 10:16:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions 0.4.2 through 0.6.51 are vulnerable to an unauthenticated Denial of Service (DoS) through the server due to uncontrolled disk space consumption. The download_agent_file endpoint creates persistent temporary files for every request but fails to delete them after they are served. An unauthenticated attacker can repeatedly call this endpoint to exhaust the server's disk space, causing\n the database or other system services to fail due to \"No space left on device\" errors, rendering the entire AutoGPT Platform backend unavailable to all users. This issue has been patched in version 0.6.52.",
-      "refs": "https://github.com/Significant-Gravitas/AutoGPT/releases/tag/autogpt-platform-beta-v0.6.52\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-374w-2pxq-c9jp",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:17"
-    },
-    {
-      "cve_id": "CVE-2026-32323",
-      "title": "高危漏洞: CVE-2026-32323 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-19 10:16:14",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Mullvad VPN is a VPN client app for desktop and mobile. When using macOS with versions 2026.1 and below, Mullvad VPN may allow local privilege escalation during installation or upgrade. The installer package executes binaries from /Applications/Mullvad VPN.app without verifying if the bundle is attacker-controlled or that the path is the legitimate Mullvad application. A user in the admin group can pre-place a crafted application bundle at that location and may be able to achieve code execution as root. Since the issue only affected the installer, there is no immediate need for users to update if they are already running an older version. This issue has been fixed in version 2026.2-beta1.",
-      "refs": "https://github.com/mullvad/mullvadvpn-app/commit/032fdcb927c0b6d3e5e1aba4140d33adf22a6bfb\nhttps://github.com/mullvad/mullvadvpn-app/security/advisories/GHSA-c2g6-w5fq-vw3m",
-      "source": "NVD",
-      "time": "2026-05-19 14:40:12"
     }
   ]
 }
