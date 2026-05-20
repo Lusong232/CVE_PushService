@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7613",
+      "title": "高危漏洞: CVE-2026-7613 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-21 01:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Cost of Goods by PixelYourSite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'csvdata[0][cost_of_goods_value]' parameter in versions up to, and including, 1.2.12 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://www.pixelyoursite.com/plugins/woocommerce-cost-of-goods\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6e8646f0-8bd1-4cfd-85bb-86a054ab297f?source=cve",
+      "source": "NVD",
+      "time": "2026-05-21 04:02:00"
+    },
+    {
+      "cve_id": "CVE-2026-20223",
+      "title": "高危漏洞: CVE-2026-20223 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-21 01:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability in the&nbsp;access validation of internal REST APIs of Cisco Secure Workload could allow an unauthenticated, remote attacker to access site resources with the privileges of the&nbsp;Site Admin role.\r\n\r\nThis vulnerability is due to insufficient validation and authentication when accessing REST API endpoints. An attacker could exploit this vulnerability if they are able to send a crafted API request to an affected endpoint. A successful exploit could allow the attacker to read sensitive information and make configuration changes across tenant boundaries with the privileges of the&nbsp;Site Admin user.&nbsp;",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-csw-pnbsa-g8WEnuy",
+      "source": "NVD",
+      "time": "2026-05-21 04:01:56"
+    },
+    {
+      "cve_id": "CVE-2026-8598",
+      "title": "高危漏洞: CVE-2026-8598 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-05-21 00:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "An undocumented configuration export port is accessible on some models \nof ZKTeco CCTV cameras. This port does not require authentication and \nexposes critical information about the camera such as open services and \ncamera account credentials.",
+      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-139-04.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-139-04\nhttps://www.zkteco.com/en/announcement/23",
+      "source": "NVD",
+      "time": "2026-05-21 04:01:50"
+    },
+    {
+      "cve_id": "CVE-2026-5783",
+      "title": "高危漏洞: CVE-2026-5783 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-21 00:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Beyaz Computer Software Design Industry and Trade Ltd. Co. CityPLus allows Reflected XSS.\n\nThis issue affects CityPLus: before V24.29750.1.0.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0263",
+      "source": "NVD",
+      "time": "2026-05-21 04:01:45"
+    },
+    {
+      "cve_id": "CVE-2026-39047",
+      "title": "高危漏洞: CVE-2026-39047 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-21 00:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Buffer Overflow vulnerability in EPSON L14150 FL27PB allows a remote attacker to execute arbitrary code via the RAW Printing Service (JetDirect) on TCP port 9100",
+      "refs": "https://gist.github.com/AzhariRamadhan/1defc815542fb72e6025da2ce53a1046\nhttps://github.com/AzhariRamadhan/CVE-PORT-9100",
+      "source": "NVD",
+      "time": "2026-05-21 04:01:40"
+    },
+    {
+      "cve_id": "CVE-2025-32750",
+      "title": "高危漏洞: CVE-2025-32750 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-21 00:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Dell PowerFlex Manager, version(s) <=4.6.2, contain(s) an Exposure of Information Through Directory Listing vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Information exposure.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000391392/dsa-2025-434-security-update-for-dell-powerflex-appliance-multiple-third-party-component-vulnerabilities\nhttps://www.dell.com/support/kbdoc/en-us/000391568/dsa-2025-435-security-update-for-dell-powerflex-rack-multiple-third-party-component-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-05-21 04:01:34"
+    },
+    {
       "cve_id": "CVE-2026-24425",
       "title": "高危漏洞: CVE-2026-24425 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1033,72 +1099,6 @@
       "refs": "https://lists.apache.org/thread/2smc4c4o056ovd2hoq1l29593y5y29vh",
       "source": "NVD",
       "time": "2026-05-20 01:34:12"
-    },
-    {
-      "cve_id": "CVE-2026-31909",
-      "title": "高危漏洞: CVE-2026-31909 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 18:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache OFBiz.\n\nThis issue affects Apache OFBiz: before 24.09.06.\n\nUsers are recommended to upgrade to version 24.09.06, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/0hpopzz1qrhkzsbt3ncofs6qo0545r2h",
-      "source": "NVD",
-      "time": "2026-05-20 01:34:05"
-    },
-    {
-      "cve_id": "CVE-2026-29226",
-      "title": "高危漏洞: CVE-2026-29226 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-19 18:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Server-Side Request Forgery (SSRF) vulnerability in Apache OFBiz via Content component operations.\n\nThis issue affects Apache OFBiz: before 24.09.06.\n\nUsers are recommended to upgrade to version 24.09.06, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/6707wys8jxzmowxggn4cmtwwk9ygl2tr",
-      "source": "NVD",
-      "time": "2026-05-20 01:34:01"
-    },
-    {
-      "cve_id": "CVE-2025-15609",
-      "title": "高危漏洞: CVE-2025-15609 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 15:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Fortis for WooCommerce WordPress plugin before 1.3.1 may leak sensitive API keys to unauthenticated attackers, allowing them to query Fortis' API and retrieve sensitive customer information, like past orders, PII, etc.",
-      "refs": "https://wpscan.com/vulnerability/220f72ea-e3b4-44c9-8c9b-15662aebb6cb/",
-      "source": "NVD",
-      "time": "2026-05-20 01:33:56"
-    },
-    {
-      "cve_id": "CVE-2026-29963",
-      "title": "高危漏洞: CVE-2026-29963 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 02:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "HSC MailInspector 5.3.3-7 has a Path Traversal vulnerability due to improper validation of user-supplied input in the /tap/dw.php endpoint. The text parameter is used to construct file paths without adequate normalization or restriction to a safe base directory. A remote attacker can exploit this flaw to access arbitrary files on the underlying operating system, resulting in unauthorized disclosure of sensitive information.",
-      "refs": "https://github.com/sql3t0/cve-disclosures\nhttps://github.com/sql3t0/cve-disclosures/blob/main/02_-_CVE-2026-29963_LFI%2BPath_Traversal.md\nhttps://hsclabs.com/pt-br/mailinspector/",
-      "source": "NVD",
-      "time": "2026-05-20 01:33:51"
-    },
-    {
-      "cve_id": "CVE-2026-29962",
-      "title": "高危漏洞: CVE-2026-29962 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 02:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "HSC MailInspector v5.3.3-7 contains a Local File Inclusion (LFI) vulnerability caused by improper control of user-supplied file paths. The endpoint /vendor/phpunit/phpunit.php processes user-controlled parameters that directly affect file access operations without adequate validation, sanitization, or path restriction. This allows a remote attacker to exploit Path Traversal techniques to read arbitrary files from the underlying operating system and application directories, leading to sensitive information disclosure.",
-      "refs": "https://github.com/sql3t0/cve-disclosures\nhttps://github.com/sql3t0/cve-disclosures/blob/main/01_-_CVE-2026-29962_LFI%2BPath_Traversal.md\nhttps://hsclabs.com/pt-br/mailinspector",
-      "source": "NVD",
-      "time": "2026-05-20 01:33:46"
-    },
-    {
-      "cve_id": "CVE-2023-24215",
-      "title": "高危漏洞: CVE-2023-24215 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-19 02:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Incorrect access control in the /uci/get/ endpoint of NOVUS AirGate 4G firmware v1.1.16 allows unauthenticated attackers to obtain administrator credentials via a crafted POST request.",
-      "refs": "http://airgate.com\nhttp://novus.com\nhttps://github.com/sql3t0/cve-disclosures/blob/main/00_-_CVE-2023-24215.md",
-      "source": "NVD",
-      "time": "2026-05-20 01:33:40"
     }
   ]
 }
