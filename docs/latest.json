@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-34358",
+      "title": "高危漏洞: CVE-2026-34358 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-20 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "CtrlPanel is open-source billing software for hosting providers. Versions 1.1.1 and prior contains a broken access control vulnerability where multiple admin controllers enforce permission checks on form display methods but omit equivalent checks on the corresponding write methods, allowing any authenticated user to bypass RBAC via direct POST/PATCH requests. Controllers missing checks on write methods store() and update() include ApplicationApiController (admin.api.write), CouponController (admin.coupons.write), PartnerController (admin.partners.write), ShopProductController (admin.store.write), UsefulLinkController (admin.useful_links.write), and VoucherController (admin.voucher.write); ProductController (admin.products.edit), ServerController (write/change_owner/change_identifier), and UserController (write/change_email/change_credits/change_username/change_password/change_role/change_referral/change_ptero/change_serverlimit) are missing checks on update() only, and ActivityLogController exposed empty stub store()/update() methods that silently accepted any request. An authenticated attacker without admin write privileges can issue API credentials, generate unlimited coupons and vouchers, assign arbitrary partner commission and discount rates, alter shop product pricing and limits, reassign server ownership or identifiers, and modify user accounts including roles, credits, passwords, and linked Pterodactyl IDs to achieve full privilege escalation, as well as abuse logBackIn() without the login_as permission to interfere with admin impersonation sessions. This issue has been fixed in version 1.2.0.",
+      "refs": "https://github.com/Ctrlpanel-gg/panel/releases/tag/1.2.0\nhttps://github.com/Ctrlpanel-gg/panel/security/advisories/GHSA-pxmw-gj52-9p68",
+      "source": "NVD",
+      "time": "2026-05-20 10:14:06"
+    },
+    {
+      "cve_id": "CVE-2026-34241",
+      "title": "高危漏洞: CVE-2026-34241 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-05-20 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "CtrlPanel is open-source billing software for hosting providers. Versions 1.1.1 and prior contain a Stored Cross-Site Scripting (XSS) vulnerability in the ticket reply notification system. Unsanitized reply content ($newmessage) is stored directly in database notification payloads and later rendered unescaped via Blade's {!! !!} syntax in the recipient's browser. The flaw exists in both App\\Notifications\\Ticket\\Admin\\AdminReplyNotification (triggered when a user replies, targeting admins) and App\\Notifications\\Ticket\\User\\ReplyNotification (triggered when an admin replies, targeting users), allowing arbitrary JavaScript execution in the victim's session context. A low-privileged attacker can exploit this to hijack admin sessions, harvest credentials via fake login prompts or keyloggers, and escalate privileges by performing administrative actions on the victim's behalf. The reverse path also enables a malicious or compromised admin to target regular users in the same manner. This issue has been fixed in version 1.2.0.",
+      "refs": "https://github.com/Ctrlpanel-gg/panel/releases/tag/1.2.0\nhttps://github.com/Ctrlpanel-gg/panel/security/advisories/GHSA-cmrr-q3hw-3vqh",
+      "source": "NVD",
+      "time": "2026-05-20 10:13:58"
+    },
+    {
+      "cve_id": "CVE-2026-34234",
+      "title": "高危漏洞: CVE-2026-34234 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-20 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "CtrlPanel is open-source billing software for hosting providers. In versions 1.1.1 and prior, the web-based installer (public/installer/index.php) is vulnerable to unauthenticated Remote Code Execution (RCE) because it performs the install.lock check only after including and executing form handler files, leaving installer endpoints reachable on already-installed instances. The handlers also pass unsanitized user input directly into shell commands, allowing an attacker to submit crafted requests that execute arbitrary commands on the server. The vulnerability stems from two combined weaknesses: (1) premature form handler execution before the lock file gate, and (2) unsafe use of user input in shell command construction. This issue is reported to be actively exploited in the wild. The issue has been fixed in version 1.2.0.",
+      "refs": "https://github.com/Ctrlpanel-gg/panel/releases/tag/1.2.0\nhttps://github.com/Ctrlpanel-gg/panel/security/advisories/GHSA-jmhr-q9q5-fqwh",
+      "source": "NVD",
+      "time": "2026-05-20 10:13:51"
+    },
+    {
+      "cve_id": "CVE-2026-32882",
+      "title": "高危漏洞: CVE-2026-32882 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-20 05:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+      "description": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and prior contain a heap buffer over-read in HeifPixelImage::overlay() in libheif/pixelimage.cc. When compositing an overlay image (iovl) whose child image has a different bit depth for the alpha channel than for the color channels, the function indexes into the alpha plane using the color channel stride (in_stride) instead of the previously retrieved alpha_stride, causing reads past the end of the alpha buffer (up to 3,123 bytes for a 100×50 image with 10-bit color and 8-bit alpha). A crafted HEIF file can exploit this to cause a denial of service (crash) or potentially disclose adjacent heap memory through leaked bytes embedded in the decoded output pixels. This issue has been fixed in versionThis issue has been fixed in version 1.22.0.",
+      "refs": "https://github.com/strukturag/libheif/releases/tag/v1.22.0\nhttps://github.com/strukturag/libheif/security/advisories/GHSA-hg7q-rjr2-8x46",
+      "source": "NVD",
+      "time": "2026-05-20 10:13:46"
+    },
+    {
+      "cve_id": "CVE-2026-32741",
+      "title": "高危漏洞: CVE-2026-32741 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-20 05:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
+      "description": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and below contain a heap buffer overflow in MaskImageCodec::decode_mask_image(). When decoding a HEIF file containing a mask image (mski), the function copies the full iloc extent data into a pixel buffer using memcpy(dst, data.data(), data.size()). The copy length data.size() is determined by the iloc extent in the file (attacker-controlled), while the destination buffer is sized based on the declared image dimensions. Because no upper-bound check exists on the data length, a crafted file whose iloc extent exceeds the pixel buffer allocation overflows the heap. The vulnerable single-memcpy branch is reached when the mskC property specifies bits_per_pixel = 8 and the ispe property declares an even width ≥ 64 (so that stride == width), with no changes to default security limits or external codec plugins required. This issue has been fixed in version 1.22.0.",
+      "refs": "https://github.com/strukturag/libheif/releases/tag/v1.22.0\nhttps://github.com/strukturag/libheif/security/advisories/GHSA-j3w5-7whq-p37q",
+      "source": "NVD",
+      "time": "2026-05-20 10:13:42"
+    },
+    {
+      "cve_id": "CVE-2026-32740",
+      "title": "高危漏洞: CVE-2026-32740 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 04:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and prior contain a heap-buffer-overflow (write) vulnerability in the grid tile compositing, allowing an attacker to write 64 bytes of fully attacker-controlled data past the end of a chroma plane heap allocation by crafting a HEIF/AVIF file with a 1×4 grid of odd-height tiles. The overflow is triggered during normal image decoding with default build configuration. The written bytes are chroma (Cb/Cr) pixel values from the attacking tile, giving the attacker full control over the overflow content. This issue has been fixed in version 1.22.0.",
+      "refs": "https://github.com/strukturag/libheif/releases/tag/v1.22.0\nhttps://github.com/strukturag/libheif/security/advisories/GHSA-frfr-f3vg-2g6j",
+      "source": "NVD",
+      "time": "2026-05-20 10:13:37"
+    },
+    {
+      "cve_id": "CVE-2026-27173",
+      "title": "高危漏洞: CVE-2026-27173 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-05-20 04:16:17",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "description": "JWT tokens that were used by workers in Kubernetes Executors have been exposed to users who had read only access to Kuberentes Pods. This could allow users with just read-only access to perform actions that were only available to running tasks via Task SDK and potentially allow to modify state of Airflow Database for tasks.",
+      "refs": "https://github.com/apache/airflow/pull/60108\nhttps://lists.apache.org/thread/pk3m2z4s2rkmc0v6gh9hnch9spc6stqw\nhttp://www.openwall.com/lists/oss-security/2026/05/19/35",
+      "source": "NVD",
+      "time": "2026-05-20 10:13:32"
+    },
+    {
       "cve_id": "CVE-2026-8073",
       "title": "高危漏洞: CVE-2026-8073 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/langgenius/dify/pull/35793\nhttps://huntr.com/bounties/a43076b2-fbc8-4750-9647-89a036b52f52\nhttps://www.vulncheck.com/advisories/dify-authorization-bypass-via-trace-configuration-endpoints",
       "source": "NVD",
       "time": "2026-05-19 01:26:03"
-    },
-    {
-      "cve_id": "CVE-2026-42009",
-      "title": "高危漏洞: CVE-2026-42009 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-18 21:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A flaw was found in gnutls. A remote attacker could exploit an issue in the Datagram Transport Layer Security (DTLS) packet reordering logic. The comparator function, responsible for ordering DTLS packets by sequence numbers, did not correctly handle packets with duplicate sequence numbers. This could lead to unstable packet ordering or undefined behavior, resulting in a denial of service.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-42009\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2467279",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:58"
-    },
-    {
-      "cve_id": "CVE-2026-7304",
-      "title": "高危漏洞: CVE-2026-7304 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-18 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SGLangs multimodal generation runtime is vulnerable to unauthenticated remote code execution when the --enable-custom-logit-processor option is enabled, as Python objects loaded via dill.loads() will be deserialized without validation.",
-      "refs": "https://antiproof.ai/blog/three-rces-in-sglang/\nhttps://github.com/sgl-project/sglang/tree/main/python/sglang",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:53"
-    },
-    {
-      "cve_id": "CVE-2026-7302",
-      "title": "高危漏洞: CVE-2026-7302 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-18 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "SGLangs multimodal generation runtime is vulnerable to an unauthenticated path traversal vulnerability, allowing an attacker to write arbitrary files anywhere the server process has write access, by including ../ sequences in the upload filename when sent to specific endpoints.",
-      "refs": "https://antiproof.ai/blog/three-rces-in-sglang/\nhttps://github.com/sgl-project/sglang/tree/main/python/sglang",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:48"
-    },
-    {
-      "cve_id": "CVE-2026-7301",
-      "title": "高危漏洞: CVE-2026-7301 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-18 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SGLangs multimodal generation runtime scheduler's ROUTER socket binds to 0.0.0.0 by default and contains a sink that calls pickle.loads() on incoming messages, enabling RCE when exposed to the internet.",
-      "refs": "https://antiproof.ai/blog/three-rces-in-sglang/\nhttps://github.com/sgl-project/sglang/tree/main/python/sglang",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:43"
-    },
-    {
-      "cve_id": "CVE-2026-6381",
-      "title": "高危漏洞: CVE-2026-6381 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-18 15:16:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The WP Maps  WordPress plugin before 4.9.3 does not properly sanitize a parameter before using it in a file path, allowing authenticated users to perform Local File Inclusion attacks.",
-      "refs": "https://wpscan.com/vulnerability/18b36672-58d7-44fa-b653-b728e9ef257a/",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:38"
-    },
-    {
-      "cve_id": "CVE-2026-6379",
-      "title": "高危漏洞: CVE-2026-6379 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-18 15:16:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The WP Photo Album Plus WordPress plugin before 9.1.11.001 does not properly sanitize and escape a parameter before using it in a SQL query, allowing unauthenticated users to perform SQL injection attacks.",
-      "refs": "https://wpscan.com/vulnerability/60b88fd2-4048-4773-b319-63caaf5bd8eb/",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:32"
-    },
-    {
-      "cve_id": "CVE-2026-3220",
-      "title": "高危漏洞: CVE-2026-3220 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-18 15:16:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Autoptimize WordPress plugin before 3.1.15, Clearfy Cache  WordPress plugin before 2.4.2, Speed Optimizer  WordPress plugin before 7.7.9 are vulnerable to unauthenticated Stored Cross-Site Scripting (XSS) due to a predictable replacement hash used during the HTML minification process and abusing a regular expression. This allows an attacker to inject arbitrary HTML attributes in the final HTML output by anticipating the placeholder format.",
-      "refs": "https://wpscan.com/vulnerability/3ceabf11-23cd-4c38-ba14-014348b0ff2d/",
-      "source": "NVD",
-      "time": "2026-05-19 01:25:27"
     }
   ]
 }
