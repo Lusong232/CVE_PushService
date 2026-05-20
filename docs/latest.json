@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9010",
+      "title": "高危漏洞: CVE-2026-9010 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 12:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Boost plugin for WordPress is vulnerable to time-based SQL Injection via the 'current_url' and 'user_name' parameters in versions up to, and including, 2.0.3 due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL queries. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://www.pixelyoursite.com/boost-plugin\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/1cac2397-bb38-40d6-b90d-68e3ea136267?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 14:41:08"
+    },
+    {
+      "cve_id": "CVE-2026-9003",
+      "title": "高危漏洞: CVE-2026-9003 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 12:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "E-LAN Hybrid Recording System developed by TONNET has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read database contents.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-10912-21886-2.html\nhttps://www.twcert.org.tw/tw/cp-132-10911-e6abb-1.html",
+      "source": "NVD",
+      "time": "2026-05-20 14:41:04"
+    },
+    {
+      "cve_id": "CVE-2026-7637",
+      "title": "高危漏洞: CVE-2026-7637 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-20 12:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Boost plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 2.0.3 via deserialization of untrusted input in the STYXKEY-BOOST_USER_LOCATION cookie. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+      "refs": "https://www.pixelyoursite.com/boost-plugin\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e391f560-2037-4180-a77e-1731524a318c?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 14:41:00"
+    },
+    {
+      "cve_id": "CVE-2026-24214",
+      "title": "高危漏洞: CVE-2026-24214 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-05-20 12:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "NVIDIA Triton Inference Server contains a vulnerability in the DALI backend where an attacker could cause an integer overflow. A successful exploit of this vulnerability might lead to code execution, data tampering, or denial of service.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24214\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5828\nhttps://www.cve.org/CVERecord?id=CVE-2026-24214",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:56"
+    },
+    {
+      "cve_id": "CVE-2026-24213",
+      "title": "高危漏洞: CVE-2026-24213 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-05-20 12:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "NVIDIA Triton Inference Server contains a vulnerability in the DALI backend where an attacker could cause an out-of-bounds read. A successful exploit of this vulnerability might lead to code execution, data tampering, denial of service, or information disclosure.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24213\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5828\nhttps://www.cve.org/CVERecord?id=CVE-2026-24213",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:49"
+    },
+    {
+      "cve_id": "CVE-2026-24210",
+      "title": "高危漏洞: CVE-2026-24210 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 12:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NVIDIA Triton Inference Server contains a vulnerability where an attacker could cause an integer overflow. A successful exploit of this vulnerability might lead to denial of service.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24210\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5828\nhttps://www.cve.org/CVERecord?id=CVE-2026-24210",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:45"
+    },
+    {
+      "cve_id": "CVE-2026-24209",
+      "title": "高危漏洞: CVE-2026-24209 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 12:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NVIDIA Triton Inference Server contains a vulnerability where an attacker could cause a path traversal issue. A successful exploit of this vulnerability might lead to denial of service.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24209\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5828\nhttps://www.cve.org/CVERecord?id=CVE-2026-24209",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:41"
+    },
+    {
+      "cve_id": "CVE-2026-24207",
+      "title": "高危漏洞: CVE-2026-24207 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-20 12:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NVIDIA Triton Inference Server contains a vulnerability where an attacker could cause an authentication bypass. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, data tampering, denial of service, or information disclosure.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24207\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5828\nhttps://www.cve.org/CVERecord?id=CVE-2026-24207",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:37"
+    },
+    {
+      "cve_id": "CVE-2026-24206",
+      "title": "高危漏洞: CVE-2026-24206 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-20 12:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "NVIDIA Triton Inference Server contains a vulnerability where an attacker could cause an authentication bypass. A successful exploit of this vulnerability might lead to escalation of privileges, denial of service, or information disclosure.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24206\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5828\nhttps://www.cve.org/CVERecord?id=CVE-2026-24206",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:33"
+    },
+    {
+      "cve_id": "CVE-2026-24163",
+      "title": "高危漏洞: CVE-2026-24163 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 12:16:45",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "NVIDIA TRT-LLM for any platform contains a vulnerability in RPC testing, where an attacker could  cause an unsafe deserialization. A successful exploit of this vulnerability might lead to code execution, denial of service, data tampering, and information disclosure.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2026-24163\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5805\nhttps://www.cve.org/CVERecord?id=CVE-2026-24163",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:28"
+    },
+    {
+      "cve_id": "CVE-2025-33255",
+      "title": "高危漏洞: CVE-2025-33255 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 12:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "NVIDIA TRT-LLM for any platform contains a vulnerability in MPI server, where an attacker could cause an unsafe deserialization. A successful exploit of this vulnerability might lead to code execution, denial of service, data tampering, and information disclosure.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2025-33255\nhttps://nvidia.custhelp.com/app/answers/detail/a_id/5805\nhttps://www.cve.org/CVERecord?id=CVE-2025-33255",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:23"
+    },
+    {
+      "cve_id": "CVE-2026-7467",
+      "title": "高危漏洞: CVE-2026-7467 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 10:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Read More & Accordion plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 3.5.7. This is due to the 'RadMoreAjax::importData' function not restricting which database tables can be written to during import and not properly validating the imported data. This makes it possible for authenticated attackers, with permission granted by the site owner through the plugin's role settings, to insert arbitrary rows into the 'wp_users' and 'wp_usermeta' tables, including the 'wp_capabilities' field, allowing them to create a new administrator account and gain administrator access to the site.",
+      "refs": "https://plugins.trac.wordpress.org/browser/expand-maker/tags/3.5.5/files/RadMoreAjax.php#L62\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/adf51c03-b0bb-4864-b64d-6b0cba4b0130?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:16"
+    },
+    {
+      "cve_id": "CVE-2026-7284",
+      "title": "高危漏洞: CVE-2026-7284 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-20 10:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Easy Elements for Elementor – Addons & Website Templates plugin for WordPress is vulnerable to privilege escalation via user registration in all versions up to, and including, 1.4.4. This is due to the 'easyel_handle_register' function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the 'administrator' role during registration and gain administrator access to the site.",
+      "refs": "https://plugins.trac.wordpress.org/browser/easy-elements/tags/1.4.0/widgets/login-register/class.login-register.php#L62\nhttps://plugins.trac.wordpress.org/changeset/3534530/easy-elements#file728\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/32b6ccfe-a659-41e4-9cec-146f4f910071?source=cve",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:11"
+    },
+    {
+      "cve_id": "CVE-2026-6555",
+      "title": "高危漏洞: CVE-2026-6555 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-20 10:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ProSolution WP Client plugin for WordPress is vulnerable to Arbitrary File Upload in versions up to, and including, 2.0.0. This is due to an array validation mismatch where only the first file in the upload array undergoes extension and MIME type validation, while all files are processed and uploaded to a web-accessible directory. This makes it possible for unauthenticated attackers to upload malicious PHP files and achieve remote code execution by sending a valid first file followed by a malicious file.",
+      "refs": "https://plugins.trac.wordpress.org/browser/prosolution-wp-client/tags/2.0.0/includes/UploadHandler.php#L1345\nhttps://plugins.trac.wordpress.org/browser/prosolution-wp-client/tags/2.0.0/includes/UploadHandler.php#L384\nhttps://plugins.trac.wordpress.org/browser/prosolution-wp-client/tags/2.0.0/public/class-prosolwpclient-public.php#L1072",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:06"
+    },
+    {
+      "cve_id": "CVE-2026-6456",
+      "title": "高危漏洞: CVE-2026-6456 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-20 10:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Account Switcher plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.0.2. This is due to the `rememberLogin` REST API endpoint using a loose comparison (`!=` instead of `!==`) for secret validation at `app/RestAPI.php:111`, combined with no validation that the secret is non-empty. When a target user has never used the \"Remember me\" feature, their `asSecret` user meta does not exist, causing `get_user_meta()` to return an empty string. An attacker can send an empty `secret` parameter, which passes the comparison (`'' != ''` is `false`), and the endpoint then calls `wp_set_auth_cookie()` for the target user. Additionally, all REST routes use `permission_callback => '__return_true'` with no capability checks. This makes it possible for authenticated attackers, with Subscriber-level access and above, to switch to any user account including Administrator, ultimately granting themselves full administrative privileges.",
+      "refs": "https://plugins.trac.wordpress.org/browser/account-switcher/tags/1.0.2/app/PluginHero/BaseAPI.php#L54\nhttps://plugins.trac.wordpress.org/browser/account-switcher/tags/1.0.2/app/RestAPI.php#L111\nhttps://wordpress.org/plugins/account-switcher/",
+      "source": "NVD",
+      "time": "2026-05-20 14:40:02"
+    },
+    {
+      "cve_id": "CVE-2026-43618",
+      "title": "高危漏洞: CVE-2026-43618 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-20 10:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "description": "Rsync version 3.4.2 and prior contain an integer overflow vulnerability in the compressed-token decoder where a 32-bit signed counter is not checked for overflow, allowing a malicious sender to trigger an overflow that causes the receiver process to read and return data from outside the intended buffer bounds. Attackers can exploit this vulnerability to disclose process memory contents including environment variables, passwords, heap and stack data, and library memory pointers, significantly reducing ASLR effectiveness and facilitating further exploitation.",
+      "refs": "https://github.com/RsyncProject/rsync/releases/tag/v3.4.3\nhttps://github.com/RsyncProject/rsync/security/advisories/GHSA-g37v-g3gj-pmwq\nhttps://www.vulncheck.com/advisories/rsync-integer-overflow-information-disclosure",
+      "source": "NVD",
+      "time": "2026-05-20 14:39:58"
+    },
+    {
+      "cve_id": "CVE-2026-3985",
+      "title": "高危漏洞: CVE-2026-3985 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 10:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Creative Mail – Easier WordPress & WooCommerce Email Marketing plugin for WordPress is vulnerable to SQL Injection via the 'checkout_uuid' parameter in all versions up to, and including, 1.6.9. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query in the `has_checkout_consent()` method. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/creative-mail-by-constant-contact/tags/1.6.9/src/Managers/CheckoutManager.php#L100\nhttps://plugins.trac.wordpress.org/browser/creative-mail-by-constant-contact/tags/1.6.9/src/Managers/DatabaseManager.php#L298\nhttps://plugins.trac.wordpress.org/browser/creative-mail-by-constant-contact/trunk/src/Managers/DatabaseManager.php#L298",
+      "source": "NVD",
+      "time": "2026-05-20 14:39:52"
+    },
+    {
       "cve_id": "CVE-2026-34358",
       "title": "高危漏洞: CVE-2026-34358 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -912,193 +1099,6 @@
       "refs": "https://github.com/mlflow/mlflow/commit/1dcbb0c2fbd1f446c328830e601ca13a28219b8a\nhttps://huntr.com/bounties/648dc30b-76c7-4433-86b8-f43d926fd8d6",
       "source": "NVD",
       "time": "2026-05-19 10:15:04"
-    },
-    {
-      "cve_id": "CVE-2026-27130",
-      "title": "高危漏洞: CVE-2026-27130 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-19 05:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Versions 0.26.6 and below have OS command injection through the appName parameter. 3 chained issues cause this problem: inadequate input sanitization, lack of schema validation and direct shell interpolation. User-controlled application names are passed through inadequate sanitization (cleanAppName function only replaces spaces and converts to lowercase) before being interpolated directly into shell commands executed via execAsync() and execAsyncRemote(). An authenticated attacker can inject shell metacharacters (e.g., ;, $(), backticks, |, &) in the appName field during application creation, which are then executed with server-level privileges when service operations (start, stop, remove, scale) are triggered. This issue has been resolved in version 0.26.7.",
-      "refs": "https://github.com/Dokploy/dokploy/commit/960892fd8dcf12b7a73a00edaa1b7090fca860c7\nhttps://github.com/Dokploy/dokploy/security/advisories/GHSA-fcgq-jjfg-hrhj",
-      "source": "NVD",
-      "time": "2026-05-19 10:14:59"
-    },
-    {
-      "cve_id": "CVE-2026-25244",
-      "title": "高危漏洞: CVE-2026-25244 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 05:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WebdriverIO is a test automation framework for unit, e2e and component testing using WebDriver, WebDriver BiDi and Appium. Versions below 9.24.0 contain a command injection vulnerability leading to remote code execution (RCE) in test orchestration. Git permits branch names containing shell metacharacters, and getGitMetadataForAISelection() interpolates these names directly into execSync() calls without sanitization. An attacker can exploit this by supplying a malicious repository (via testOrchestrationOptions.runSmartSelection.source, or the current directory if unset) whose branch name carries a payload, causing the shell to execute arbitrary code. This enables remote code execution on CI/CD servers and developer machines, leading to credential and secret disclosure, source code and SSH key exfiltration, system compromise, and supply chain attacks via tampered build artifacts. The issue has been fixed in version 9.24.0.",
-      "refs": "https://github.com/webdriverio/webdriverio/blob/ea0e3e00288abced4c739ff9e46c46977b7cdbd2/packages/wdio-browserstack-service/src/testorchestration/helpers.ts#L204\nhttps://github.com/webdriverio/webdriverio/releases/tag/v9.24.0\nhttps://github.com/webdriverio/webdriverio/security/advisories/GHSA-5c46-x3qw-q7j7",
-      "source": "NVD",
-      "time": "2026-05-19 10:14:53"
-    },
-    {
-      "cve_id": "CVE-2026-22810",
-      "title": "高危漏洞: CVE-2026-22810 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-19 05:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Versions prior to 3.5.7 contain a path traversal vulnerability in the importer which allows overwriting arbitrary files on disk. The OneNote converter does not sanitize the names of embedded files before writing them to disk. As a result, it's possible for an attacker to create a malicious .one file that includes file names containing ../../, that are then interpreted as part of the target path when extracting attachments from the .one file. This issue has been patched in version 3.5.7.",
-      "refs": "https://github.com/laurent22/joplin/blob/af5108d70233b1db9410346958c1587cf7c1b16d/packages/onenote-converter/renderer/src/page/embedded_file.rs#L13-L16\nhttps://github.com/laurent22/joplin/commit/791668455e1aae50501ff57ea4783b3fba9d377c\nhttps://github.com/laurent22/joplin/pull/13736",
-      "source": "NVD",
-      "time": "2026-05-19 10:14:47"
-    },
-    {
-      "cve_id": "CVE-2026-47092",
-      "title": "高危漏洞: CVE-2026-47092 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-19 04:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Claude HUD through 0.0.12, patched in commit 234d9aa, contains a command injection vulnerability that allows local attackers to execute arbitrary commands by manipulating the COMSPEC environment variable. Attackers can set COMSPEC to an arbitrary binary path before claude-hud performs its version check, causing execFile() to execute the attacker-supplied executable with cmd.exe arguments, resulting in arbitrary code execution on Windows systems.",
-      "refs": "https://github.com/jarrodwatts/claude-hud/commit/234d9aad919b51326a43bcf90b45ae35c23afc30\nhttps://github.com/jarrodwatts/claude-hud/issues/485\nhttps://github.com/jarrodwatts/claude-hud/pull/487",
-      "source": "NVD",
-      "time": "2026-05-19 10:14:39"
-    },
-    {
-      "cve_id": "CVE-2026-45245",
-      "title": "高危漏洞: CVE-2026-45245 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-19 04:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "Summarize prior to 0.15.1 contains a vulnerability in the hover summary feature that allows malicious pages to dispatch synthetic mouseover events over attacker-controlled links, causing the extension to make authenticated daemon requests using stored tokens without verifying event trustworthiness. Attackers can place local or private-network URLs behind hoverable links to route authenticated requests through the daemon, potentially accessing sensitive internal endpoints when users interact with attacker-controlled content.",
-      "refs": "https://github.com/steipete/summarize/commit/ecbb2c414255aa480a15d0d8b205224c14cfdbcb\nhttps://github.com/steipete/summarize/pull/218\nhttps://github.com/steipete/summarize/releases/tag/v0.15.2",
-      "source": "NVD",
-      "time": "2026-05-19 10:14:33"
-    },
-    {
-      "cve_id": "CVE-2026-8836",
-      "title": "高危漏洞: CVE-2026-8836 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 03:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in lwIP up to 2.2.1. Affected is the function snmp_parse_inbound_frame of the file src/apps/snmp/snmp_msg.c of the component snmpv3 USM Handler. Performing a manipulation of the argument msgAuthenticationParameters results in stack-based buffer overflow. The attack may be initiated remotely. The patch is named 0c957ec03054eb6c8205e9c9d1d05d90ada3898c. It is suggested to install a patch to address this issue.",
-      "refs": "https://cgit.git.savannah.gnu.org/cgit/lwip.git/commit/?id=0c957ec03054eb6c8205e9c9d1d05d90ada3898c\nhttps://github.com/lwip-tcpip/lwip/commit/0c957ec03054eb6c8205e9c9d1d05d90ada3898c\nhttps://savannah.nongnu.org/bugs/?68194",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:51"
-    },
-    {
-      "cve_id": "CVE-2026-45242",
-      "title": "高危漏洞: CVE-2026-45242 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-19 03:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Summarize prior to 0.15.1 contains a path traversal vulnerability in the /v1/summarize daemon endpoint that allows authenticated callers to write files to arbitrary directories by supplying an absolute path or directory traversal sequence in the slidesDir request parameter. Attackers can exploit this to write slide_*.png and slides.json files to any writable directory and subsequently delete matching files at the specified location through repeat extraction.",
-      "refs": "https://github.com/steipete/summarize/commit/ec8efd63295656fbfe8743620179c489bc5a242f\nhttps://github.com/steipete/summarize/pull/220\nhttps://github.com/steipete/summarize/releases/tag/v0.15.2",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:47"
-    },
-    {
-      "cve_id": "CVE-2026-45495",
-      "title": "高危漏洞: CVE-2026-45495 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-19 02:17:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45495",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:39"
-    },
-    {
-      "cve_id": "CVE-2026-45230",
-      "title": "高危漏洞: CVE-2026-45230 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-19 02:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "DumbAssets through 1.0.11 contains a path traversal vulnerability in the POST /api/delete-file endpoint and filesToDelete array parameters that allows unauthenticated attackers to delete arbitrary files by supplying ../ sequences that bypass directory boundary validation. Attackers can exploit the optional and disabled-by-default authentication control to traverse outside the intended application directory and delete critical files such as server.js or package.json, causing complete denial of service.",
-      "refs": "https://github.com/DumbWareio/DumbAssets/pull/136\nhttps://www.vulncheck.com/advisories/dumbassets-path-traversal-file-deletion-via-api-delete-file",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:35"
-    },
-    {
-      "cve_id": "CVE-2026-42822",
-      "title": "高危漏洞: CVE-2026-42822 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-19 02:17:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Improper authentication in Azure Local Disconnected Operations allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42822",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:31"
-    },
-    {
-      "cve_id": "CVE-2026-41085",
-      "title": "高危漏洞: CVE-2026-41085 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-19 01:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Thermo Fisher Scientific Torrent Suite Dx through 5.14.2 has a privilege escalation vulnerability that may allow an authenticated user with limited access privileges to gain unauthorized administrator-level privileges through exploitation of specific system interfaces.",
-      "refs": "https://documents.thermofisher.com/TFS-Assets/CORP/Product-Guides/TorrentSuiteDxSoftware_v5_14_2.pdf\nhttps://thermofisher.com",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:27"
-    },
-    {
-      "cve_id": "CVE-2025-57282",
-      "title": "高危漏洞: CVE-2025-57282 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-19 00:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "ngrok v4.3.3 and 5.0.0-beta.2 is vulnerable to Command Injection.",
-      "refs": "https://gist.github.com/Dremig/90c2a0a2f85b0921f10e0bb3192a0c23\nhttps://www.npmjs.com",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:22"
-    },
-    {
-      "cve_id": "CVE-2025-56352",
-      "title": "高危漏洞: CVE-2025-56352 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 00:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In tinyMQTT commit 6226ade15bd4f97be2d196352e64dd10937c1962 (2024-02-18), the broker mishandles protocol violations during CONNECT packet parsing. When receiving a CONNECT packet with a zero-length Client ID while CleanSession is set to 0, the broker correctly replies with a CONNACK return code 0x02 (Identifier Rejected) but fails to explicitly close the TCP connection. Since the surrounding connection teardown logic is not guaranteed to execute, each such invalid CONNECT attempt leaves the underlying socket open. Repeated attempts cause server-side resource exhaustion due to accumulating file descriptors and memory usage, potentially resulting in denial of service.",
-      "refs": "https://github.com/JustDoIt0910/tinyMQTT/issues/19\nhttps://github.com/user-attachments/files/21207896/Resource_Exhaustion_Poc.txt",
-      "source": "NVD",
-      "time": "2026-05-19 05:58:18"
-    },
-    {
-      "cve_id": "CVE-2026-39079",
-      "title": "高危漏洞: CVE-2026-39079 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-18 23:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "An issue in prestashop upsshipping all versions through at least 2.4.0 allows a remote attacker to obtain sensitive information via the /modules/upsshipping/logs/, and /modules/upsshipping/lib/UPSBaseApi.php components",
-      "refs": "https://labs.esokia.com/cve/cve-2026-39079/\nhttps://labs.esokia.com/cve/cve-2026-39079/",
-      "source": "NVD",
-      "time": "2026-05-19 03:24:06"
-    },
-    {
-      "cve_id": "CVE-2026-6495",
-      "title": "高危漏洞: CVE-2026-6495 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-18 15:16:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "The Ajax Load More  WordPress plugin before 7.8.4 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin",
-      "refs": "https://wpscan.com/vulnerability/c52f28c5-547d-48ae-89dd-edcdaeadcec5/",
-      "source": "NVD",
-      "time": "2026-05-19 03:24:00"
-    },
-    {
-      "cve_id": "CVE-2026-41948",
-      "title": "高危漏洞: CVE-2026-41948 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-18 23:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Dify version 1.14.1 and prior contain a path traversal vulnerability that allows authenticated users to manipulate requests forwarded to the Plugin Daemon's internal REST API by exploiting insufficient URL path sanitization. Attackers can traverse out of their authorized tenant path using unencoded dot sequences in task identifiers or manipulated filename parameters to access internal endpoints such as debug interfaces, requiring only knowledge of the victim tenant's UUID. NOTE: Dify Cloud allows unauthenticated free self-registration, making account creation trivially accessible to any attacker.",
-      "refs": "https://github.com/langgenius/dify/pull/35796\nhttps://huntr.com/bounties/35b7ad59-e35d-443f-bf77-387bfb932ec0\nhttps://www.vulncheck.com/advisories/dify-path-traversal-via-plugin-daemon-internal-api-access",
-      "source": "NVD",
-      "time": "2026-05-19 01:26:08"
-    },
-    {
-      "cve_id": "CVE-2026-41947",
-      "title": "高危漏洞: CVE-2026-41947 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-18 23:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Dify version 1.14.1 and prior contains an authorization bypass vulnerability that allows authenticated editor users to set and enable trace configurations for any application regardless of tenant ownership. Attackers can exploit missing tenant ownership checks in the trace configuration endpoints to redirect all messages and responses from victim applications to attacker-controlled LLM trace providers. NOTE: Dify Cloud allows unauthenticated free self-registration, making account creation trivially accessible to any attacker.",
-      "refs": "https://github.com/langgenius/dify/pull/35793\nhttps://huntr.com/bounties/a43076b2-fbc8-4750-9647-89a036b52f52\nhttps://www.vulncheck.com/advisories/dify-authorization-bypass-via-trace-configuration-endpoints",
-      "source": "NVD",
-      "time": "2026-05-19 01:26:03"
     }
   ]
 }
