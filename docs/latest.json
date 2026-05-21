@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-40165",
+      "title": "高危漏洞: CVE-2026-40165 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-05-21 08:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "authentik is an open-source identity provider. Versions 2025.12.4 and prior, and versions 2026.2.0-rc1 through 2026.2.2 were vulnerable to Authentication Bypass through SAML NameID XML Comment Injection. Due to how authentik extracted the NameID value from a SAML assertion, it was possible for an attacker to trick authentik into only seeing a part of the NameID value, potentially allowing an attacker to gain access to other accounts. This issue could be exploited on an authentik instance with a SAML Source, where the attacker had an account on the SAML Source and the ability to modify their NameID value (commonly username or E-mail), and XML Signing was enabled. The attacker could modify the SAML assertion given to authentik by injecting a comment within the NameID value, which effectively truncated the NameID value to the snippet before the comment, and gave the attacker access to any user account. This issue has been fixed in versions 2025.12.5 and 2026.2.3.",
+      "refs": "https://github.com/goauthentik/authentik/commit/47dec5c6b7fb4a62bfad2ae8bddf002bde7ba774\nhttps://github.com/goauthentik/authentik/releases/tag/version%2F2025.12.5\nhttps://github.com/goauthentik/authentik/security/advisories/GHSA-9wj8-xv4r-qwrp",
+      "source": "NVD",
+      "time": "2026-05-21 14:42:34"
+    },
+    {
       "cve_id": "CVE-2026-40092",
       "title": "高危漏洞: CVE-2026-40092 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=1860195%2C2029325%2C2029429%2C2029910%2C2035915%2C2038678%2C2038669\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/\nhttps://www.mozilla.org/security/advisories/mfsa2026-47/",
       "source": "NVD",
       "time": "2026-05-20 03:44:15"
-    },
-    {
-      "cve_id": "CVE-2026-8974",
-      "title": "高危漏洞: CVE-2026-8974 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 22:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory safety bugs present in Firefox ESR 140.10 and Firefox 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151 and Firefox ESR 140.11.",
-      "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=1784128%2C1883230%2C1983677%2C2022390%2C2023116%2C2023657%2C2024255%2C2024418%2C2024441%2C2024447%2C2024966%2C2025412%2C2025467%2C2025940%2C2025950%2C2025956%2C2026284%2C2027247%2C2027255%2C2027288%2C2027306%2C2027322%2C2027332%2C2027333%2C2028266%2C2028292%2C2028319%2C2028526%2C2028870%2C2028876%2C2028882%2C2029062%2C2029309%2C2029414%2C2029422%2C2029428%2C2029447%2C2029732%2C2029785%2C2029793%2C2029813%2C2029899%2C2031028%2C2031457%2C2032039%2C2033610%2C2033854%2C2034498%2C2034628%2C2034978%2C2035966%2C2036668%2C2036905%2C2036930\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/\nhttps://www.mozilla.org/security/advisories/mfsa2026-48/",
-      "source": "NVD",
-      "time": "2026-05-20 03:44:10"
     }
   ]
 }
