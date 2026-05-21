@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-40092",
+      "title": "高危漏洞: CVE-2026-40092 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-21 06:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "nimiq-blockchain provides persistent block storage for Nimiq's Rust implementation. In versions 1.3.0 and below, a malicious network peer can crash any Nimiq full node by publishing a crafted Kademlia DHT record. The maliciously crafted record would contain a TaggedSigned<ValidatorRecord, KeyPair> with a signature field whose byte length is not exactly 64 in order to cause a crash. When the victim node's DHT verifier calls TaggedSigned::verify, execution reaches Ed25519Signature::from_bytes(sig).unwrap() in the TaggedPublicKey implementation for Ed25519PublicKey. The from_bytes call fails because ed25519_zebra::Signature::try_from rejects slices not 64 bytes, and the unwrap() panics. The BLS TaggedPublicKey implementation correctly returns false on error; only the Ed25519 implementation panics. This issue has been fixed in version 1.4.0.",
+      "refs": "https://github.com/nimiq/core-rs-albatross/commit/807ee8e99a7ccdc604d49971f292854bfa36754d\nhttps://github.com/nimiq/core-rs-albatross/pull/3708\nhttps://github.com/nimiq/core-rs-albatross/releases/tag/v1.4.0",
+      "source": "NVD",
+      "time": "2026-05-21 10:13:20"
+    },
+    {
+      "cve_id": "CVE-2026-42960",
+      "title": "高危漏洞: CVE-2026-42960 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-20 18:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "description": "NLnet Labs Unbound up to and including version 1.25.0 is vulnerable to poisoning via promiscuous records for the authority section. Promiscuous RRSets that complement DNS replies in the authority section can be used to trick Unbound to cache such records. If an adversary is able to attach such records in a reply (i.e., spoofed packet, fragmentation attack) he would be able to poison Unbound's cache. A malicious actor can exploit the possible poisonous effect by injecting RRSets other than NS that are also accompanied by address records in a reply, for example MX. This could be achieved by trying to spoof a reply packet or fragmentation attacks. Unbound would then accept the relative address records in the additional section and cache them if the authority RRSet has enough trust at this point, i.e., in-zone data for the delegation point. Unbound 1.25.1 contains a patch with a fix that disregards address records from the additional section if they are not explicitly relevant only to authority NS records, mitigating the possible poison effect. This is a complement fix to CVE-2025-11411.",
+      "refs": "https://www.nlnetlabs.nl/downloads/unbound/CVE-2026-42960.txt",
+      "source": "NVD",
+      "time": "2026-05-21 10:13:16"
+    },
+    {
+      "cve_id": "CVE-2026-42959",
+      "title": "高危漏洞: CVE-2026-42959 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 18:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NLnet Labs Unbound up to and including version 1.25.0 has a denial of service vulnerability in the DNSSEC validator that can lead to a crash given malicious upstream replies. When Unbound constructs chase-reply messages for validation, the code uses the wrong counter to calculate write offsets for ADDITIONAL section rrsets. DNAME duplication could increase the ANSWER section count and authority filtering could decrease the AUTHORITY section count and create an uninitialized array slot. Combining these two, the validator later dereferences this uninitialized pointer, causing an immediate process crash. An adversary controlling a DNSSEC-signed domain can trigger this bug with a single query by configuring a DNAME chain with unsigned CNAMEs and a response containing unsigned AUTHORITY records alongside signed ADDITIONAL glue records. Unbound 1.25.1 contains a patch with a fix to use the proper counters to calculate the write offsets.",
+      "refs": "https://www.nlnetlabs.nl/downloads/unbound/CVE-2026-42959.txt",
+      "source": "NVD",
+      "time": "2026-05-21 10:13:08"
+    },
+    {
+      "cve_id": "CVE-2026-42944",
+      "title": "高危漏洞: CVE-2026-42944 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 18:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NLnet Labs Unbound 1.14.0 up to and including version 1.25.0 has a vulnerability that results in heap overflow when encoding multiple NSID and/or DNS Cookie EDNS and/or EDNS Padding options in the reply packet. The relevant options ('nsid', 'answer-cookie', 'pad-responses' (default)) need to be enabled for the vulnerability to be exploited. An adversary who can query Unbound can exploit the vulnerability by attaching multiple NSID and/or DNS Cookie EDNS and/or EDNS Padding options to the query. A flaw in the size calculation of the EDNS field truncates the correct value which allows the encoder to overflow the available space when writing. Those two combined lead to a heap overflow write of Unbound controlled data and eventually a crash. Unbound 1.25.1 contains a patch with a fix to de-duplicate the EDNS options and a fix to prevent truncation of the EDNS field size calculation.",
+      "refs": "https://www.nlnetlabs.nl/downloads/unbound/CVE-2026-42944.txt",
+      "source": "NVD",
+      "time": "2026-05-21 10:13:03"
+    },
+    {
+      "cve_id": "CVE-2026-41292",
+      "title": "高危漏洞: CVE-2026-41292 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-20 18:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NLnet Labs Unbound up to and including version 1.25.0 is vulnerable to a degradation of service attack related to parsing long lists of incoming EDNS options. An adversary sending queries with too many EDNS options can hold Unbound threads hostage while they are parsing and creating internal data structures for the options. Coordinated attacks can result in degradation and/or denial of service. Unbound 1.25.1 contains a patch with a fix to limit acceptable incoming EDNS options (100).",
+      "refs": "https://www.nlnetlabs.nl/downloads/unbound/CVE-2026-41292.txt",
+      "source": "NVD",
+      "time": "2026-05-21 10:12:57"
+    },
+    {
+      "cve_id": "CVE-2026-33278",
+      "title": "高危漏洞: CVE-2026-33278 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-20 18:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NLnet Labs Unbound 1.19.1 up to and including version 1.25.0 has a vulnerability in the DNSSEC validator that enables denial of service and possible remote code execution as a result of deep copying a data structure and erroneously overwriting a destination pointer. An adversary can exploit the vulnerability by controlling a malicious signed zone and querying a vulnerable Unbound. When DS sub-queries need to suspend validation due to NSEC3 computational budget exhaustion (introduced in Unbound 1.19.1), Unbound deep-copies response messages to preserve them across memory region teardown. A struct-assignment bug overwrites the destination's pointer with the source's pointer. After the sub-query region is freed, the resumed validator dereferences this dangling pointer, triggering a crash or potentially enabling arbitrary code execution. Unbound 1.25.1 contains a patch with a fix to preserve the correct pointer when deep copying the data structure.",
+      "refs": "https://www.nlnetlabs.nl/downloads/unbound/CVE-2026-33278.txt",
+      "source": "NVD",
+      "time": "2026-05-21 10:12:51"
+    },
+    {
       "cve_id": "CVE-2026-9144",
       "title": "高危漏洞: CVE-2026-9144 (CVSS 7.6)",
       "cvss_score": 7.6,
@@ -1033,72 +1099,6 @@
       "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=1784128%2C1883230%2C1983677%2C2022390%2C2023116%2C2023657%2C2024255%2C2024418%2C2024441%2C2024447%2C2024966%2C2025412%2C2025467%2C2025940%2C2025950%2C2025956%2C2026284%2C2027247%2C2027255%2C2027288%2C2027306%2C2027322%2C2027332%2C2027333%2C2028266%2C2028292%2C2028319%2C2028526%2C2028870%2C2028876%2C2028882%2C2029062%2C2029309%2C2029414%2C2029422%2C2029428%2C2029447%2C2029732%2C2029785%2C2029793%2C2029813%2C2029899%2C2031028%2C2031457%2C2032039%2C2033610%2C2033854%2C2034498%2C2034628%2C2034978%2C2035966%2C2036668%2C2036905%2C2036930\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/\nhttps://www.mozilla.org/security/advisories/mfsa2026-48/",
       "source": "NVD",
       "time": "2026-05-20 03:44:10"
-    },
-    {
-      "cve_id": "CVE-2026-8973",
-      "title": "高危漏洞: CVE-2026-8973 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-19 22:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory safety bugs present in Firefox 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151.",
-      "refs": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=1362365%2C1860538%2C1929005%2C1983353%2C1998526%2C2023271%2C2023943%2C2024244%2C2024260%2C2024443%2C2024665%2C2024774%2C2024916%2C2025346%2C2025357%2C2025406%2C2025434%2C2025488%2C2025496%2C2025942%2C2025947%2C2025968%2C2026279%2C2027159%2C2027239%2C2027276%2C2027308%2C2027310%2C2027324%2C2027329%2C2027363%2C2027381%2C2027382%2C2027383%2C2028274%2C2028884%2C2029060%2C2029065%2C2029068%2C2029281%2C2029293%2C2029297%2C2029303%2C2029439%2C2029448%2C2029703%2C2029720%2C2029721%2C2029723%2C2029770%2C2029771%2C2029782%2C2029818%2C2029885%2C2030100%2C2030379%2C2030385%2C2030979%2C2031119%2C2031122%2C2034119%2C2034791%2C2035209%2C2036666%2C2037986\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/",
-      "source": "NVD",
-      "time": "2026-05-20 03:44:06"
-    },
-    {
-      "cve_id": "CVE-2026-8969",
-      "title": "高危漏洞: CVE-2026-8969 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-19 22:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Mitigation bypass in the DOM: Security component. This vulnerability was fixed in Firefox 151.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2031123\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/",
-      "source": "NVD",
-      "time": "2026-05-20 03:43:59"
-    },
-    {
-      "cve_id": "CVE-2026-8964",
-      "title": "高危漏洞: CVE-2026-8964 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Spoofing issue in the Popup Blocker component. This vulnerability was fixed in Firefox 151.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2025170\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/",
-      "source": "NVD",
-      "time": "2026-05-20 03:43:54"
-    },
-    {
-      "cve_id": "CVE-2026-8963",
-      "title": "高危漏洞: CVE-2026-8963 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Spoofing issue in the Web Speech component. This vulnerability was fixed in Firefox 151.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2021222\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/",
-      "source": "NVD",
-      "time": "2026-05-20 03:43:50"
-    },
-    {
-      "cve_id": "CVE-2026-8960",
-      "title": "高危漏洞: CVE-2026-8960 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-19 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Spoofing issue in WebExtensions. This vulnerability was fixed in Firefox 151.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=1940116\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/",
-      "source": "NVD",
-      "time": "2026-05-20 03:43:45"
-    },
-    {
-      "cve_id": "CVE-2026-8959",
-      "title": "高危漏洞: CVE-2026-8959 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-19 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Sandbox escape due to incorrect boundary conditions in the Widget: Win32 component. This vulnerability was fixed in Firefox 151 and Firefox ESR 140.11.",
-      "refs": "https://bugzilla.mozilla.org/show_bug.cgi?id=2034754\nhttps://www.mozilla.org/security/advisories/mfsa2026-46/\nhttps://www.mozilla.org/security/advisories/mfsa2026-48/",
-      "source": "NVD",
-      "time": "2026-05-20 03:43:40"
     }
   ]
 }
