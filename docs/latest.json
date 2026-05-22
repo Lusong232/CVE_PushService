@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9256",
+      "title": "高危漏洞: CVE-2026-9256 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-22 23:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a replacement string that references multiple such captures (for example, $1$2) in a redirect or arguments context. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR. \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+      "refs": "https://my.f5.com/manage/s/article/K000161377",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:58"
+    },
+    {
+      "cve_id": "CVE-2026-8992",
+      "title": "高危漏洞: CVE-2026-8992 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-22 23:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An improper certificate validation vulnerability in Ivanti Secure Access Client before 22.8R6 allows a remote unauthenticated attacker to execute arbitrary code.",
+      "refs": "https://hub.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Secure-Access-Client-CVE-2026-7431-CVE-2026-7432?language=en_US",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:54"
+    },
+    {
+      "cve_id": "CVE-2026-9277",
+      "title": "高危漏洞: CVE-2026-9277 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-22 22:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "shell-quote's `quote()` function did not validate object-token inputs against the operator model used by `parse()`. The `.op` field was backslash-escaped character by character using `/(.)/g`, which in JavaScript does not match line terminators (\\n, \\r, U+2028, U+2029). A line terminator in `.op` therefore passed through unescaped into the output; POSIX shells treat a literal newline as a command separator, so any content after it would execute as a second command. The vulnerable code path is reachable in two ways: (1) direct construction of `{ op: '...\\n...' }` from external input, and (2) via `parse(cmd, envFn)` when `envFn` returns object tokens whose `.op` is attacker-influenced. Both are documented API surface. Fixed by replacing the per-character escape with strict shape validation: `.op` must match the parser's control-operator allowlist; `{ op: 'glob', pattern }` validates `pattern` and forbids line terminators; `{ comment }` validates `comment` and forbids line terminators; any other object shape throws `TypeError`.",
+      "refs": "https://github.com/ljharb/shell-quote\nhttps://github.com/ljharb/shell-quote/commit/1518179\nhttps://github.com/ljharb/shell-quote/security/advisories/GHSA-w7jw-789q-3m8p",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:49"
+    },
+    {
+      "cve_id": "CVE-2026-8671",
+      "title": "高危漏洞: CVE-2026-8671 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-22 22:16:29",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:L/I:H/A:L",
+      "description": "Insertion of sensitive information into log file vulnerability in syslink software AG Avantra on Linux, Windows allows Resource Leak Exposure.\n\nThis issue affects Avantra: before 25.3.0.",
+      "refs": "https://support.avantra.com/hc/en-us/articles/5535487249183",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:41"
+    },
+    {
+      "cve_id": "CVE-2026-8670",
+      "title": "高危漏洞: CVE-2026-8670 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-05-22 22:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient session expiration vulnerability in syslink software AG Avantra on Linux, Windows allows Reusing Session IDs (aka Session Replay).\n\nThis issue affects Avantra: before 25.3.1.",
+      "refs": "https://support.avantra.com/hc/en-us/articles/5533929912351",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:36"
+    },
+    {
+      "cve_id": "CVE-2026-44417",
+      "title": "高危漏洞: CVE-2026-44417 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-22 21:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The fix for CVE-2025-48913: Apache CXF: Untrusted JMS configuration can lead to RCE was not complete, meaning that another path in the code might lead to code execution capabilities, if untrusted users are allowed to configure JMS for Apache CXF. \nUsers are recommended to upgrade to versions 4.2.1, 4.1.6 or 3.6.11, which fix this issue.",
+      "refs": "https://lists.apache.org/thread/bqg6gjy2cx7rfyqjxcpv3jwjvmclvz4o",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:28"
+    },
+    {
+      "cve_id": "CVE-2026-46597",
+      "title": "高危漏洞: CVE-2026-46597 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-22 12:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An incorrectly placed cast from bytes to int allowed for server-side panic in the AES-GCM packet decoder for well-crafted inputs.",
+      "refs": "https://go.dev/cl/781620\nhttps://go.dev/issue/79561\nhttps://groups.google.com/g/golang-announce/c/a082jnz-LvI",
+      "source": "NVD",
+      "time": "2026-05-23 01:02:23"
+    },
+    {
       "cve_id": "CVE-2026-5740",
       "title": "高危漏洞: CVE-2026-5740 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/498702233",
       "source": "NVD",
       "time": "2026-05-21 06:20:46"
-    },
-    {
-      "cve_id": "CVE-2026-9117",
-      "title": "高危漏洞: CVE-2026-9117 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-21 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type Confusion in GFX in Google Chrome on Linux, ChromeOS prior to 148.0.7778.179 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted video file. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/497542537",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:42"
-    },
-    {
-      "cve_id": "CVE-2026-9114",
-      "title": "高危漏洞: CVE-2026-9114 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in QUIC in Google Chrome on prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code inside a sandbox via malicious network traffic. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/495798630",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:38"
-    },
-    {
-      "cve_id": "CVE-2026-9112",
-      "title": "高危漏洞: CVE-2026-9112 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in GPU in Google Chrome on Windows prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/489791425",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:31"
-    },
-    {
-      "cve_id": "CVE-2026-9111",
-      "title": "高危漏洞: CVE-2026-9111 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebRTC in Google Chrome on Linux prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: Critical)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/504551032",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:26"
-    },
-    {
-      "cve_id": "CVE-2026-45444",
-      "title": "高危漏洞: CVE-2026-45444 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-21 04:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Unrestricted Upload of File with Dangerous Type vulnerability in WP Swings Gift Cards For WooCommerce Pro allows Using Malicious Files.\n\nThis issue affects Gift Cards For WooCommerce Pro: from n/a through 4.2.6.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/giftware/vulnerability/wordpress-gift-cards-for-woocommerce-pro-plugin-4-2-6-arbitrary-file-upload-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:22"
-    },
-    {
-      "cve_id": "CVE-2026-39850",
-      "title": "高危漏洞: CVE-2026-39850 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-21 04:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Yii 2 is a PHP application framework. Versions 2.0.54 and prior contain flawed logic in the core view rendering method View::renderPhpFile() that leads to Local File Inclusion. The function calls extract($_params_, EXTR_OVERWRITE) before the require statement that loads the view file. As a result, a caller-controlled _file_ key in the $params array overwrites the internal local variable specifying which file to include, potentially enabling RCE if an attacker can write PHP files through a separate primitive, as well as information disclosure. This issue has been fixed in version 2.0.55.",
-      "refs": "https://github.com/yiisoft/yii2/commit/109878b491dbffa541032bc99fb5e26d12cd0375\nhttps://github.com/yiisoft/yii2/security/advisories/GHSA-5vpg-rj7q-qpw2",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:18"
-    },
-    {
-      "cve_id": "CVE-2026-39310",
-      "title": "高危漏洞: CVE-2026-39310 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-21 04:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "Trilium Notes is a cross-platform, hierarchical note taking application focused on building large personal knowledge bases. In versions 0.102.1 and prior, the Clipper API in Trilium Desktop (v0.101.3) allows full authentication bypass when running in an Electron environment. When Trilium detects an Electron environment, it explicitly disables authentication middleware for the Clipper API, exposing endpoints such as /api/clipper/notes to the network with no password, API token, or CSRF protection. An attacker on a shared network (for example, a corporate LAN or public Wi-Fi) can scan for open high-range ports using a tool like nmap, since Trilium often binds to ports such as 37840. Once a candidate port is found, an unauthenticated request to the Clipper handshake endpoint, which also bypasses authentication, confirms a Trilium instance by returning the application name and protocol version. This facilitates unauthorized data access, phishing, and local system compromise. The issue has been fixed in version 0.102.2.",
-      "refs": "https://github.com/TriliumNext/Trilium/releases/tag/v0.102.2\nhttps://github.com/TriliumNext/Trilium/security/advisories/GHSA-jcvx-vc83-cppw",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:14"
     }
   ]
 }
