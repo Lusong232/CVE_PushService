@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9255",
+      "title": "高危漏洞: CVE-2026-9255 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-23 01:16:49",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Missing input source validation in the tool authorization prompt in Kiro CLI before 1.28.0 allows a local attacker to execute arbitrary tools, including shell commands, without user approval by crafting content that is piped to kiro-cli via stdin.\n\n\n\nWe recommend you to upgrade to kiro-cli version 1.28.0 or later.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-035-aws/\nhttps://kiro.dev/changelog/cli/1-28/",
+      "source": "NVD",
+      "time": "2026-05-23 03:23:28"
+    },
+    {
+      "cve_id": "CVE-2026-34207",
+      "title": "高危漏洞: CVE-2026-34207 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-23 01:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+      "description": "TypeBot is a chatbot builder tool.  SSRF protection for Webhook / HTTP Request blocks validates only the URL string, blocked hostname literals, and literal IP formats. It does not resolve DNS before allowing the request. As a result, a hostname such as ssrf-repro.example that resolves to 127.0.0.1, 169.254.169.254, or RFC1918/private space passes validation and is later fetched by the backend HTTP client. This enables server-side request forgery to loopback, cloud metadata, and private network targets. This issue has been resolved in version 3.16.0.",
+      "refs": "https://github.com/baptisteArno/typebot.io/commit/23818bb0e54db23c456ee3fa6b12d82b2af848b8\nhttps://github.com/baptisteArno/typebot.io/releases/tag/v3.16.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-grcc-6x37-wwgp",
+      "source": "NVD",
+      "time": "2026-05-23 03:23:21"
+    },
+    {
+      "cve_id": "CVE-2026-33712",
+      "title": "高危漏洞: CVE-2026-33712 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-05-23 01:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Typebot is a chatbot builder tool. In versions 3.15.2 and prior, the preview chat endpoint (POST /api/v1/typebots/{typebotId}/preview/startChat) allows unauthenticated users to achieve Server-Side Request Forgery (SSRF) by supplying a custom typebot definition with server-side code blocks. The fetch function exposed inside the isolated-vm sandbox calls Node.js native fetch without the SSRF validation (validateHttpReqUrl) that protects the HTTP Request block. This bypasses all SSRF mitigations added after GHSA-8gq9-rw7v-3jpr. Exploitation of this unauthenticated SSRF vulnerability can lead to cloud credential theft, internal network access and data exfiltration for any self-hosted Typebot deployments and hosted services. This issue has been fixed in version 3.16.0.",
+      "refs": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.16.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-vc2q-r6rq-ggj9",
+      "source": "NVD",
+      "time": "2026-05-23 03:23:15"
+    },
+    {
+      "cve_id": "CVE-2026-32253",
+      "title": "高危漏洞: CVE-2026-32253 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-23 01:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Sunshine is a self-hosted game stream host for Moonlight. In versions prior to 2026.516.143833, the client-certificate authentication can be bypassed because of how OpenSSL verification results are handled. In src/crypto.cpp, the custom verify callback treats X509_V_ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY, X509_V_ERR_CERT_NOT_YET_VALID, and X509_V_ERR_CERT_HAS_EXPIRED as success. This can allow an untrusted certificate to pass authentication and access protected HTTPS endpoints. This issue has been fixed in version 2026.516.143833.",
+      "refs": "https://github.com/LizardByte/Sunshine/releases/tag/v2026.516.143833\nhttps://github.com/LizardByte/Sunshine/security/advisories/GHSA-ph75-mgxh-mv57",
+      "source": "NVD",
+      "time": "2026-05-23 03:23:11"
+    },
+    {
+      "cve_id": "CVE-2026-28445",
+      "title": "高危漏洞: CVE-2026-28445 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-05-23 01:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Typebot is a chatbot builder tool. In versions 3.15.2 and prior, the RatingButton component in the embed package renders the user-controlled customIcon.svg field directly via Solid's innerHTML directive without any sanitization, even though DOMPurify is already a dependency and is used elsewhere in the codebase (e.g., StreamingBubble.tsx). Because rating blocks are not flagged as isUnsafe by the import sanitizer and the builder preview renders bots inline on the builder's own origin (builder.typebot.io) under a CSP permitting 'unsafe-inline', a malicious imported or collaborator-crafted typebot can execute arbitrary HTML/JS in the builder's authenticated context, bypassing the Web Worker sandbox that protects Script blocks during preview. This allows session hijacking and privilege escalation within the builder application. This issue has been fixed in version 3.16.0.",
+      "refs": "https://github.com/baptisteArno/typebot.io/commit/474ecbf46bc47a75265bada2599f12b2179de375\nhttps://github.com/baptisteArno/typebot.io/releases/tag/v3.16.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-6m7c-xfhp-p9fh",
+      "source": "NVD",
+      "time": "2026-05-23 03:23:05"
+    },
+    {
+      "cve_id": "CVE-2026-9047",
+      "title": "高危漏洞: CVE-2026-9047 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-05-23 00:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
+      "description": "Improper handling of factor key state in the multi-factor authentication management feature in Devolutions Server allows an attacker with knowledge of a user's password to bypass the user's multi-factor authentication after the user reconfigures their factors.\n\nThis issue affects :\n\n  *  Devolutions Server 2026.1.6.0 through 2026.1.16.0",
+      "refs": "https://devolutions.net/security/advisories/DEVO-2026-0013/",
+      "source": "NVD",
+      "time": "2026-05-23 03:23:00"
+    },
+    {
+      "cve_id": "CVE-2026-7325",
+      "title": "高危漏洞: CVE-2026-7325 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-23 00:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Improper authorization in the Active Directory browsing feature in Devolutions Server allows a low-privileged authenticated user to obtain authentication material associated with a stored PAM provider service account via authentication relay to an attacker-controlled server.\n\nThis issue affects :\n\n  *  Devolutions Server 2026.1.6.0 through 2026.1.16.0\n  *  Devolutions Server 2025.3.20.0 and earlier",
+      "refs": "https://devolutions.net/security/advisories/DEVO-2026-0013/",
+      "source": "NVD",
+      "time": "2026-05-23 03:22:55"
+    },
+    {
+      "cve_id": "CVE-2025-45145",
+      "title": "高危漏洞: CVE-2025-45145 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-22 23:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Directory traversal in Follett Software's Destiny Library Manager 22_0_2_rc1 and fixed in v.22.5 AU1 allows remote attackers to read arbitrary system and application files via the image parameter",
+      "refs": "http://follett.com\nhttps://medium.com/@jaredutahusa/cve-2025-45145-unauthenticated-local-file-inclusion-in-fsc-destiny-40a3f11b3a4d\nhttps://medium.com/@jaredutahusa/cve-2025-45145-unauthenticated-local-file-inclusion-in-fsc-destiny-40a3f11b3a4d",
+      "source": "NVD",
+      "time": "2026-05-23 03:22:49"
+    },
+    {
+      "cve_id": "CVE-2026-9264",
+      "title": "高危漏洞: CVE-2026-9264 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-05-22 10:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A cross-site scripting (XSS) vulnerability in SketchUp 2026's Dynamic Components feature allows remote code execution and local file exfiltration through maliciously crafted SKP files. The vulnerability stems from improper input sanitization in the component options window, enabling attackers to execute arbitrary system commands and read local files without user interaction by exploiting an embedded Internet Explorer 11 browser.",
+      "refs": "https://trust.trimble.com/?tcuUid=52252bc0-c196-4b1f-9f13-4e4c9ba247d9",
+      "source": "NVD",
+      "time": "2026-05-23 03:22:43"
+    },
+    {
       "cve_id": "CVE-2026-9256",
       "title": "高危漏洞: CVE-2026-9256 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1000,105 +1099,6 @@
       "refs": "https://medium.com/@forgetmen0t/multiple-vulnerabilities-in-taiko-ag1000-01a-sms-alert-gateway-82095b1d633e\nhttps://www.vulncheck.com/advisories/taiko-ag1000-01a-rev-8-stored-xss-via-web-configuration-interface",
       "source": "NVD",
       "time": "2026-05-21 06:21:27"
-    },
-    {
-      "cve_id": "CVE-2026-9141",
-      "title": "高危漏洞: CVE-2026-9141 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-21 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Taiko AG1000-01A SMS Alert Gateway Rev 7.3 and Rev 8 contains an authentication bypass vulnerability in the embedded web configuration interface that allows unauthenticated attackers to access internal application pages without any session management or server-side authentication checks. Attackers with network access can directly request internal resources such as index.zhtml, point.zhtml, and log.shtml to gain full administrative read and write access, enabling unauthorized modification of alarm routing, device configuration, and disruption of monitoring and control functions.",
-      "refs": "https://medium.com/@forgetmen0t/multiple-vulnerabilities-in-taiko-ag1000-01a-sms-alert-gateway-82095b1d633e\nhttps://www.vulncheck.com/advisories/taiko-ag1000-01a-rev-8-authentication-bypass-via-web-interface",
-      "source": "NVD",
-      "time": "2026-05-21 06:21:22"
-    },
-    {
-      "cve_id": "CVE-2026-9139",
-      "title": "高危漏洞: CVE-2026-9139 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-21 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Taiko AG1000-01A SMS Alert Gateway Rev 7.3 and Rev 8 contains a hard-coded credential vulnerability in the embedded web configuration interface where authentication is implemented entirely in client-side JavaScript in login.zhtml, exposing static plaintext credentials in the page source. Unauthenticated attackers with network access can recover administrative credentials directly from the client-side validate() function to obtain full administrative access to the device.",
-      "refs": "https://medium.com/@forgetmen0t/multiple-vulnerabilities-in-taiko-ag1000-01a-sms-alert-gateway-82095b1d633e\nhttps://www.vulncheck.com/advisories/taiko-ag1000-01a-rev-8-hard-coded-credentials-via-login-zhtml",
-      "source": "NVD",
-      "time": "2026-05-21 06:21:18"
-    },
-    {
-      "cve_id": "CVE-2026-9133",
-      "title": "高危漏洞: CVE-2026-9133 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-05-21 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Active debug code exists in the ARN resolver of amazon-mq rabbitmq-aws before version 0.2.1. A debug ARN scheme (arn:aws-debug:file) accepted by the PUT /api/aws/arn/validate validation endpoint might allow remote authenticated users to perform arbitrary file reads on any file accessible to the RabbitMQ process. \n\n\n\nTo remediate this issue, customers should upgrade to version 0.2.1 of rabbitmq-aws. If RabbitMQ is configured to use TLS for connections, we also recommend rotating any associated private certificate keys.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-034-aws/\nhttps://github.com/amazon-mq/rabbitmq-aws/releases/tag/0.2.1\nhttps://github.com/amazon-mq/rabbitmq-aws/security/advisories/GHSA-8554-wg4r-7hxm",
-      "source": "NVD",
-      "time": "2026-05-21 06:21:14"
-    },
-    {
-      "cve_id": "CVE-2026-9126",
-      "title": "高危漏洞: CVE-2026-9126 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in DOM in Google Chrome on prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/496280532",
-      "source": "NVD",
-      "time": "2026-05-21 06:21:10"
-    },
-    {
-      "cve_id": "CVE-2026-9123",
-      "title": "高危漏洞: CVE-2026-9123 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-21 04:16:45",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in Chromecast in Google Chrome on Android, Linux, ChromeOS prior to 148.0.7778.179 allowed a local attacker to execute arbitrary code inside a sandbox via malicious network traffic. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/495988507",
-      "source": "NVD",
-      "time": "2026-05-21 06:21:03"
-    },
-    {
-      "cve_id": "CVE-2026-9121",
-      "title": "高危漏洞: CVE-2026-9121 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out of bounds read in GPU in Google Chrome on prior to 148.0.7778.179 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/488064108",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:59"
-    },
-    {
-      "cve_id": "CVE-2026-9120",
-      "title": "高危漏洞: CVE-2026-9120 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebRTC in Google Chrome prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/504620824",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:55"
-    },
-    {
-      "cve_id": "CVE-2026-9119",
-      "title": "高危漏洞: CVE-2026-9119 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in WebRTC in Google Chrome on prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/502661101",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:50"
-    },
-    {
-      "cve_id": "CVE-2026-9118",
-      "title": "高危漏洞: CVE-2026-9118 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-21 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in XR in Google Chrome on Windows prior to 148.0.7778.179 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0841193308.html\nhttps://issues.chromium.org/issues/498702233",
-      "source": "NVD",
-      "time": "2026-05-21 06:20:46"
     }
   ]
 }
