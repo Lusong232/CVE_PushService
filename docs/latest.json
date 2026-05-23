@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9295",
+      "title": "高危漏洞: CVE-2026-9295 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-23 16:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Edimax BR-6428NS 1.10. This affects the function formWirelessTbl of the file /goform/formWirelessTbl of the component POST Request Handler. Performing a manipulation of the argument vapurl results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6428NS-formWirelessTbl-34b53a41781f80a89cadcc9b5293086e?source=copy_link\nhttps://vuldb.com/submit/811534\nhttps://vuldb.com/vuln/365242",
+      "source": "NVD",
+      "time": "2026-05-23 18:22:08"
+    },
+    {
+      "cve_id": "CVE-2026-9294",
+      "title": "高危漏洞: CVE-2026-9294 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-23 16:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Edimax BR-6428NS 1.10. The impacted element is the function formWanTcpipSetup of the file /goform/formWanTcpipSetup of the component POST Request Handler. Such manipulation of the argument pppUserName leads to buffer overflow. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6428NS-formWanTcpipSetup-34b53a41781f80049b27db22e62fd8fd?source=copy_link\nhttps://vuldb.com/submit/811533\nhttps://vuldb.com/vuln/365241",
+      "source": "NVD",
+      "time": "2026-05-23 18:21:58"
+    },
+    {
+      "cve_id": "CVE-2026-9284",
+      "title": "高危漏洞: CVE-2026-9284 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-23 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "The WooCommerce PayPal Payments plugin for WordPress is vulnerable to unauthorized order manipulation and information disclosure due to missing authorization checks on the `ppc-create-order` and `ppc-get-order` WC-AJAX endpoints in all versions up to, and including, 4.0.1. The `ppc-create-order` endpoint accepts an arbitrary WooCommerce order ID in the `pay-now` context without validating order ownership, allowing attackers to create PayPal orders for any WC order and write PayPal metadata to it. The `ppc-get-order` endpoint returns full PayPal order details for any PayPal order ID without binding to the requester's session. This makes it possible for unauthenticated attackers to chain these endpoints to manipulate other customers' order payment flows and exfiltrate sensitive order details (payer information, shipping data) by creating a PayPal order for a victim's WC order and then retrieving the PayPal order data.",
+      "refs": "https://plugins.trac.wordpress.org/browser/woocommerce-paypal-payments/tags/3.3.2/modules/ppcp-button/src/Endpoint/CreateOrderEndpoint.php#L249\nhttps://plugins.trac.wordpress.org/browser/woocommerce-paypal-payments/tags/3.3.2/modules/ppcp-button/src/Endpoint/GetOrderEndpoint.php#L44\nhttps://plugins.trac.wordpress.org/browser/woocommerce-paypal-payments/trunk/modules/ppcp-button/src/Endpoint/CreateOrderEndpoint.php#L249",
+      "source": "NVD",
+      "time": "2026-05-23 18:21:54"
+    },
+    {
+      "cve_id": "CVE-2026-6898",
+      "title": "高危漏洞: CVE-2026-6898 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-23 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Wishlist Member plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'WishListMember3_Hooks::generate_api_key' function in all versions up to, and including, 3.30.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to update the REST API Secret Key, which can be used to create a new membership level assigned the administrator WordPress role, and register an arbitrary administrator-level user account, resulting in complete site takeover.",
+      "refs": "https://wishlistmember.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/05ce62ce-a02f-431e-95b1-ade38988e3ad?source=cve",
+      "source": "NVD",
+      "time": "2026-05-23 18:21:50"
+    },
+    {
+      "cve_id": "CVE-2026-6897",
+      "title": "高危漏洞: CVE-2026-6897 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-23 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Wishlist Member plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'WishListMember\\Features\\Team_Accounts::save_settings' function in all versions up to, and including, 3.30.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to update arbitrary plugin options, includes the REST API Secret Key, which can be used to create a new membership level assigned the administrator WordPress role, and register an arbitrary administrator-level user account, resulting in complete site takeover.",
+      "refs": "https://wishlistmember.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/db251792-cbad-41e1-aaca-4cd39a25b444?source=cve",
+      "source": "NVD",
+      "time": "2026-05-23 18:21:45"
+    },
+    {
+      "cve_id": "CVE-2026-6895",
+      "title": "高危漏洞: CVE-2026-6895 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-23 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WishList Member plugin for WordPress is vulnerable to Missing Authorization leading to Sensitive Information Disclosure and Privilege Escalation in versions up to and including 3.30.1. This is due to the missing capability checks in the 'export_settings' function. This function returns the REST API Secret Key to the attacker in the AJAX JSON response. An attacker who obtains this key can authenticate to the WishList Member API, create a new membership level assigned the administrator WordPress role, and register an arbitrary administrator-level user account, resulting in complete site takeover.",
+      "refs": "https://wishlistmember.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5b313e3d-61e0-496e-af3b-155666fae059?source=cve",
+      "source": "NVD",
+      "time": "2026-05-23 18:21:39"
+    },
+    {
+      "cve_id": "CVE-2026-6419",
+      "title": "高危漏洞: CVE-2026-6419 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-23 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WishList Member plugin for WordPress is vulnerable to Privilege Escalation via Missing Authorization in versions up to and including 3.30.1. This is due to the missing capability and nonce check in the ajax_get_screen() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to supply an arbitrary admin screen identifier via the data[url] parameter, causing the plugin to load and execute the administrative API configuration template without authorization. The rendered HTML, which contains the plugin's plaintext REST API Secret Key, is returned directly to the attacker in the AJAX JSON response. An attacker who obtains this key can authenticate to the WishList Member API, create a new membership level assigned the administrator WordPress role, and register an arbitrary administrator-level user account, resulting in complete site takeover.",
+      "refs": "https://wishlistmember.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f5ff0ff4-0878-4e9e-8082-e0f6effef92c?source=cve",
+      "source": "NVD",
+      "time": "2026-05-23 18:21:35"
+    },
+    {
       "cve_id": "CVE-2026-47280",
       "title": "高危漏洞: CVE-2026-47280 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1022,83 +1099,6 @@
       "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-141/",
       "source": "NVD",
       "time": "2026-05-22 01:27:47"
-    },
-    {
-      "cve_id": "CVE-2025-71214",
-      "title": "高危漏洞: CVE-2025-71214 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:44",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation error vulnerability in the Trend Micro Apex One (mac) agent iCore service could allow a local attacker to escalate privileges on affected installations.\r\n\r\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.\r\n\r\nThe following information is provided as informational only for CVE references, as these were addressed already via ActiveUpdate/SaaS updates in mid to late 2025 (SaaS 2507 & 2005 Yearly Release).",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-139/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:43"
-    },
-    {
-      "cve_id": "CVE-2025-71213",
-      "title": "高危漏洞: CVE-2025-71213 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation error vulnerability in Trend Micro Apex One could allow a local attacker to escalate privileges on affected installations.\r\n\r\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-140/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:35"
-    },
-    {
-      "cve_id": "CVE-2025-71212",
-      "title": "高危漏洞: CVE-2025-71212 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A link following vulnerability in the Trend Micro Apex One scan engine could allow a local attacker to escalate privileges on affected installations.\r\n\r\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-138/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:29"
-    },
-    {
-      "cve_id": "CVE-2025-71211",
-      "title": "高危漏洞: CVE-2025-71211 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-21 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations. This vulnerability is similar in scope to CVE-2025-71210 but affects a different executable. \r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-137/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:25"
-    },
-    {
-      "cve_id": "CVE-2025-71210",
-      "title": "高危漏洞: CVE-2025-71210 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-21 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations.\r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-136/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:19"
-    },
-    {
-      "cve_id": "CVE-2025-13479",
-      "title": "高危漏洞: CVE-2025-13479 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-21 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Authorization bypass through User-Controlled key vulnerability in PosCube Hardware Software and Consulting Ltd. QR Menu allows Exploitation of Trusted Identifiers.\n\nThis issue affects QR Menu: through 21052026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0285",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:12"
-    },
-    {
-      "cve_id": "CVE-2025-13477",
-      "title": "高危漏洞: CVE-2025-13477 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-21 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Exposure of private personal information to an unauthorized actor, Insufficiently Protected Credentials vulnerability in Digital Operations Services Inc. WifiBurada allows Authentication Bypass.\n\nThis issue affects WifiBurada: through 21052026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0284",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:07"
     }
   ]
 }
