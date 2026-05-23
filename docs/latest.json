@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2018-25358",
+      "title": "高危漏洞: CVE-2018-25358 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-24 03:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "D-Link DIR601 2.02NA contains a credential disclosure vulnerability that allows unauthenticated attackers to retrieve sensitive configuration data by manipulating the table_name parameter in POST requests. Attackers can send requests to /my_cgi.cgi with table_name values like admin_user, wireless_settings, and wireless_security to extract administrative credentials and wireless network keys in clear text.",
+      "refs": "http://ca.dlink.com/\nhttp://support.dlink.ca/ProductInfo.aspx?m=DIR-601\nhttps://www.exploit-db.com/exploits/45002",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:52"
+    },
+    {
+      "cve_id": "CVE-2018-25357",
+      "title": "高危漏洞: CVE-2018-25357 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-24 03:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dolibarr ERP CRM 7.0.3 contains a remote code evaluation vulnerability that allows unauthenticated attackers to execute arbitrary code by injecting PHP code through the db_name parameter. Attackers can send a POST request to install/step1.php with malicious PHP code in the db_name parameter, then execute commands via the check.php endpoint using the cmd GET parameter.",
+      "refs": "https://dolibarr.org\nhttps://github.com/Dolibarr/dolibarr\nhttps://www.exploit-db.com/exploits/44964",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:48"
+    },
+    {
+      "cve_id": "CVE-2018-25356",
+      "title": "高危漏洞: CVE-2018-25356 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-24 03:16:55",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SIPp 3.6 and earlier contains a local buffer overflow vulnerability in command-line argument handling that allows local attackers to crash the application or execute arbitrary code. Attackers can trigger the vulnerability by supplying oversized input to the -3pcc, -i, or -log_file parameters, causing strcpy to write beyond buffer boundaries in sipp.cpp.",
+      "refs": "http://sipp.sourceforge.net/\nhttps://github.com/SIPp/sipp/releases\nhttps://www.exploit-db.com/exploits/44962",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:44"
+    },
+    {
+      "cve_id": "CVE-2018-25355",
+      "title": "高危漏洞: CVE-2018-25355 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-24 03:16:55",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Audiograbber 1.83 contains a local buffer overflow vulnerability that allows attackers to execute arbitrary code by exploiting structured exception handling mechanisms. Attackers can craft malicious input in the Interpret or Album fields that triggers a buffer overflow, overwriting SEH pointers and executing injected shellcode with application privileges.",
+      "refs": "https://www.audiograbber.org/\nhttps://www.exploit-db.com/exploits/44903\nhttps://www.vulncheck.com/advisories/audiograbber-local-buffer-overflow-via-seh",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:37"
+    },
+    {
+      "cve_id": "CVE-2018-25353",
+      "title": "高危漏洞: CVE-2018-25353 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Redaxo CMS Mediapool Addon 5.5.1 and older contains an arbitrary file upload vulnerability that allows authenticated users to bypass file extension blacklist restrictions. Attackers with editor accounts can upload executable files by using obfuscated extensions like php71 or php53 to evade the blacklist filter and execute arbitrary code.",
+      "refs": "https://redaxo.org\nhttps://redaxo.org/download/redaxo/5.5.1.zip\nhttps://www.exploit-db.com/exploits/44891",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:33"
+    },
+    {
+      "cve_id": "CVE-2018-25352",
+      "title": "高危漏洞: CVE-2018-25352 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-24 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "WordPress Ultimate Form Builder Lite plugin version 1.3.7 and below contains an SQL injection vulnerability that allows authenticated attackers to manipulate database queries by injecting SQL code through the entry_id POST parameter. Attackers can send POST requests to the admin-ajax.php endpoint with the ufbl_get_entry_detail_action action to extract, modify, or escalate privileges within the WordPress database.",
+      "refs": "http://vulnerablesite.com/wp-admin/admin-ajax.php\nhttps://www.exploit-db.com/exploits/44884\nhttps://www.vulncheck.com/advisories/wordpress-ultimate-form-builder-lite-sql-injection-via-entry-id",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:28"
+    },
+    {
+      "cve_id": "CVE-2018-25351",
+      "title": "高危漏洞: CVE-2018-25351 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-24 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Joomla! Component EkRishta 2.10 contains an error-based SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code into the username parameter. Attackers can submit POST requests to the login endpoint with SQL injection payloads in the username field to extract database information including user credentials and system details.",
+      "refs": "https://extensions.joomla.org/extension/ek-rishta/\nhttps://www.exploit-db.com/exploits/44877\nhttps://www.joomlaextensions.co.in/",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:24"
+    },
+    {
+      "cve_id": "CVE-2018-25350",
+      "title": "高危漏洞: CVE-2018-25350 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-24 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "userSpice 4.3.24 contains a username enumeration vulnerability that allows unauthenticated attackers to discover valid usernames by sending POST requests to the existingUsernameCheck.php endpoint. Attackers can submit usernames and analyze response text for the 'taken' string to identify existing accounts in the system.",
+      "refs": "https://www.exploit-db.com/exploits/44872\nhttps://www.vulncheck.com/advisories/userspice-username-enumeration-via-existingusernamecheck-php",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:20"
+    },
+    {
+      "cve_id": "CVE-2018-25348",
+      "title": "高危漏洞: CVE-2018-25348 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-24 03:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Joomla! Component Ek Rishta 2.10 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the cid parameter. Attackers can send GET requests to the user_detail view with malicious cid values containing SQL commands to extract sensitive database information.",
+      "refs": "https://extensions.joomla.org/extension/ek-rishta/\nhttps://www.exploit-db.com/exploits/44869\nhttps://www.joomlaextensions.co.in/",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:16"
+    },
+    {
+      "cve_id": "CVE-2018-25347",
+      "title": "高危漏洞: CVE-2018-25347 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-24 03:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "WordPress Contact Form Maker Plugin 1.12.20 contains SQL injection vulnerabilities that allow authenticated attackers to manipulate database queries through the FormMakerSQLMapping and generete_csv_fmc AJAX actions. Attackers can inject malicious SQL code via the 'name' and 'search_labels' parameters to extract sensitive database information or escalate privileges.",
+      "refs": "https://wordpress.org/plugins/contact-form-maker/\nhttps://www.exploit-db.com/exploits/44854\nhttps://www.vulncheck.com/advisories/wordpress-contact-form-maker-plugin-sql-injection",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:12"
+    },
+    {
+      "cve_id": "CVE-2018-25346",
+      "title": "高危漏洞: CVE-2018-25346 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-24 03:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "WordPress Form Maker Plugin 1.12.24 and below contains SQL injection vulnerabilities that allow authenticated attackers to manipulate database queries by injecting SQL code through the FormMakerSQLMapping and generete_csv actions. Attackers can submit POST requests with malicious SQL payloads in the name and search_labels parameters to extract, modify, or escalate privileges within the WordPress database.",
+      "refs": "https://www.exploit-db.com/exploits/44853\nhttps://www.vulncheck.com/advisories/wordpress-form-maker-plugin-sql-injection-via-admin-ajax-php",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:05"
+    },
+    {
+      "cve_id": "CVE-2018-25345",
+      "title": "高危漏洞: CVE-2018-25345 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-24 03:16:54",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "10-Strike Network Scanner 3.0 contains a local buffer overflow vulnerability in the host name field that allows attackers to bypass SafeSEH protections and execute arbitrary code. Attackers can craft a malicious payload in the host name or address field and trigger the vulnerability through the Trace route or System information functions to achieve code execution.",
+      "refs": "https://www.10-strike.com/\nhttps://www.exploit-db.com/exploits/44841\nhttps://www.vulncheck.com/advisories/10-strike-network-scanner-local-buffer-overflow-seh",
+      "source": "NVD",
+      "time": "2026-05-24 05:44:00"
+    },
+    {
+      "cve_id": "CVE-2018-25344",
+      "title": "高危漏洞: CVE-2018-25344 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-24 03:16:54",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "10-Strike Network Inventory Explorer 8.54 contains a stack-based buffer overflow vulnerability in the registration key input field that allows local attackers to execute arbitrary code by triggering a structured exception handler overwrite. Attackers can craft a malicious registration key string with 4188 bytes of padding followed by SEH chain values and shellcode, then paste it into the registration dialog to achieve code execution with application privileges.",
+      "refs": "https://www.10-strike.com/\nhttps://www.exploit-db.com/exploits/44840\nhttps://www.vulncheck.com/advisories/10-strike-network-inventory-explorer-buffer-overflow-seh",
+      "source": "NVD",
+      "time": "2026-05-24 05:43:56"
+    },
+    {
+      "cve_id": "CVE-2018-25342",
+      "title": "高危漏洞: CVE-2018-25342 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-24 03:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Smartshop 1 contains a time-based blind SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the 'searched' parameter in search.php. Attackers can send GET requests with malicious SQL payloads like SLEEP commands to extract sensitive database information including product details and system data.",
+      "refs": "https://github.com/smakosh/Smartshop/archive/master.zip\nhttps://www.behance.net/gallery/49080415/Smartshop-Free-e-commerce-website\nhttps://www.exploit-db.com/exploits/44823",
+      "source": "NVD",
+      "time": "2026-05-24 05:43:52"
+    },
+    {
+      "cve_id": "CVE-2018-25341",
+      "title": "高危漏洞: CVE-2018-25341 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-24 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Smartshop 1 contains a SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the id parameter. Attackers can send GET requests to product.php with union-based SQL injection payloads in the id parameter to extract sensitive database information including usernames and database names.",
+      "refs": "https://github.com/smakosh/Smartshop/archive/master.zip\nhttps://www.behance.net/gallery/49080415/Smartshop-Free-e-commerce-website\nhttps://www.exploit-db.com/exploits/44823",
+      "source": "NVD",
+      "time": "2026-05-24 05:43:48"
+    },
+    {
+      "cve_id": "CVE-2018-25340",
+      "title": "高危漏洞: CVE-2018-25340 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-24 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Smartshop 1 contains a SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the id parameter. Attackers can send GET requests to category.php with UNION-based SQL injection payloads in the id parameter to extract sensitive database information including usernames and other data.",
+      "refs": "https://github.com/smakosh/Smartshop/archive/master.zip\nhttps://www.behance.net/gallery/49080415/Smartshop-Free-e-commerce-website\nhttps://www.exploit-db.com/exploits/44823",
+      "source": "NVD",
+      "time": "2026-05-24 05:43:44"
+    },
+    {
       "cve_id": "CVE-2026-9295",
       "title": "高危漏洞: CVE-2026-9295 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -923,182 +1099,6 @@
       "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-sit-incidents-php-offset-parameter",
       "source": "NVD",
       "time": "2026-05-22 06:11:47"
-    },
-    {
-      "cve_id": "CVE-2026-48232",
-      "title": "高危漏洞: CVE-2026-48232 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in ajax/fullsit_incidents.php where the offset GET parameter is concatenated into the LIMIT clause of a SELECT statement without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-fullsit-incidents-php-offset-parameter",
-      "source": "NVD",
-      "time": "2026-05-22 06:11:41"
-    },
-    {
-      "cve_id": "CVE-2026-48231",
-      "title": "高危漏洞: CVE-2026-48231 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in tables.php where the multiple POST parameters (tablename, indexname, sortby) are concatenated into table/column identifiers in dynamically constructed SELECT/UPDATE/DELETE statements without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-tables-php-multiple-parameters",
-      "source": "NVD",
-      "time": "2026-05-22 06:11:35"
-    },
-    {
-      "cve_id": "CVE-2026-48207",
-      "title": "高危漏洞: CVE-2026-48207 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-22 01:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of untrusted data in Apache Fory PyFory. PyFory's ReduceSerializer could bypass documented DeserializationPolicy validation hooks during reduce-state restoration and global-name resolution. An application is vulnerable if it deserializes attacker-controlled data using PyFory Python-native mode with strict mode disabled and relies on DeserializationPolicy to restrict unsafe classes, functions, or module attributes.\n\nThis issue affects Apache Fory: from before 1.0.0.\n\nMitigation: Users of Apache Fory are recommended to upgrade to version 1.0.0 or later, which enforces DeserializationPolicy validation for the affected ReduceSerializer paths and thus fixes this issue.",
-      "refs": "https://fory.apache.org/security/#cve-2026-48207-pyfory-reduceserializer-deserializationpolicy-bypass\nhttp://www.openwall.com/lists/oss-security/2026/05/21/10",
-      "source": "NVD",
-      "time": "2026-05-22 06:11:28"
-    },
-    {
-      "cve_id": "CVE-2026-9089",
-      "title": "高危漏洞: CVE-2026-9089 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-22 00:16:23",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The ConnectWise Automate™ Agent does not fully verify the authenticity of components obtained during plugin loading and self-update operations. This issue is addressed in Automate 2026.5.",
-      "refs": "https://www.connectwise.com/company/trust/security-bulletins/2026-05-21-connectwise-automate-bulletin",
-      "source": "NVD",
-      "time": "2026-05-22 03:42:40"
-    },
-    {
-      "cve_id": "CVE-2026-39531",
-      "title": "高危漏洞: CVE-2026-39531 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-05-22 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Wp Directory Kit WP Directory Kit allows Blind SQL Injection.\n\nThis issue affects WP Directory Kit: from n/a through 1.5.0.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpdirectorykit/vulnerability/wordpress-wp-directory-kit-plugin-1-5-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-22 03:42:35"
-    },
-    {
-      "cve_id": "CVE-2026-45208",
-      "title": "高危漏洞: CVE-2026-45208 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:48",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A time-of-check time-of-use vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:38"
-    },
-    {
-      "cve_id": "CVE-2026-45207",
-      "title": "高危漏洞: CVE-2026-45207 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:48",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. This is similar to CVE-2026-45206 but exists in a different process protection communication mechanism.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:32"
-    },
-    {
-      "cve_id": "CVE-2026-45206",
-      "title": "高危漏洞: CVE-2026-45206 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:47",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. This is similar to CVE-2026-45207 but exists in a different process protection communication mechanism.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:28"
-    },
-    {
-      "cve_id": "CVE-2026-34930",
-      "title": "高危漏洞: CVE-2026-34930 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:45",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. This is similar to CVE-2026-34927 but exists in a different process protection mechanism.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:21"
-    },
-    {
-      "cve_id": "CVE-2026-34929",
-      "title": "高危漏洞: CVE-2026-34929 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:45",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. This is similar to CVE-2026-34927 but exists in a different inter-process communication mechanism.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:15"
-    },
-    {
-      "cve_id": "CVE-2026-34928",
-      "title": "高危漏洞: CVE-2026-34928 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:45",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. This is similar to CVE-2026-34927 but exists in a different named pipe communication mechanism.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:11"
-    },
-    {
-      "cve_id": "CVE-2026-34927",
-      "title": "高危漏洞: CVE-2026-34927 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:45",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations.\n\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0023430",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:06"
-    },
-    {
-      "cve_id": "CVE-2026-2740",
-      "title": "高危漏洞: CVE-2026-2740 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-21 22:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:L",
-      "description": "Zohocorp ManageEngine ADSelfService Plus version before 6525, DataSecurity Plus before 6264 and RecoveryManager Plus before 6313 are vulnerable to Authenticated Remote code execution in the agent machines due to the bug in the 3rd party dependency.",
-      "refs": "https://www.manageengine.com/products/self-service-password/advisory/CVE-2026-2740.html",
-      "source": "NVD",
-      "time": "2026-05-22 01:28:02"
-    },
-    {
-      "cve_id": "CVE-2025-71217",
-      "title": "高危漏洞: CVE-2025-71217 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:44",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An origin validation error vulnerability in the Trend Micro Apex One (mac) agent self-protection mechanism could allow a local attacker to escalate privileges on affected installations.\r\n\r\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.\r\n\r\nThe following information is provided as informational only for CVE references, as these were addressed already via ActiveUpdate/SaaS updates in mid to late 2025 (SaaS 2507 & 2005 Yearly Release).",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-143/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:57"
-    },
-    {
-      "cve_id": "CVE-2025-71216",
-      "title": "高危漏洞: CVE-2025-71216 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-21 22:16:44",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A time-of-check time-of-use vulnerability in the Trend Micro Apex One (mac) agent cache mechanism could allow a local attacker to escalate privileges on affected installations.\r\n\r\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.\r\n\r\nThe following information is provided as informational only for CVE references, as these were addressed already via ActiveUpdate/SaaS updates in mid to late 2025 (SaaS 2507 & 2005 Yearly Release).",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-142/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:53"
-    },
-    {
-      "cve_id": "CVE-2025-71215",
-      "title": "高危漏洞: CVE-2025-71215 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-05-21 22:16:44",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A time-of-check time-of-use vulnerability in the Trend Micro Apex One (mac) agent iCore service signature verification could allow a local attacker to escalate privileges on affected installations.\r\n\r\nPlease note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.\r\n\r\nThe following information is provided as informational only for CVE references, as these were addressed already via ActiveUpdate/SaaS updates in mid to late 2025 (SaaS 2507 & 2005 Yearly Release).",
-      "refs": "https://success.trendmicro.com/en-US/solution/KA-0022458\nhttps://www.zerodayinitiative.com/advisories/ZDI-26-141/",
-      "source": "NVD",
-      "time": "2026-05-22 01:27:47"
     }
   ]
 }
