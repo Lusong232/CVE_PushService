@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9368",
+      "title": "高危漏洞: CVE-2026-9368 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 17:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in NousResearch hermes-agent up to 2026.4.16. This impacts the function execute_code of the file tools/code_execution_tool.py of the component Environment Variable Handler. Such manipulation leads to sandbox issue. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/43c72d19668421abe8ce10f299323a0a\nhttps://vuldb.com/submit/812229\nhttps://vuldb.com/vuln/365331",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:40"
+    },
+    {
+      "cve_id": "CVE-2026-9367",
+      "title": "高危漏洞: CVE-2026-9367 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 17:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in NousResearch hermes-agent up to 5157f5427f19488b31c6fdebbacd15d798ce7f63. This affects the function detect_dangerous_command of the file tools/approval.py of the component terminal_tool. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/75fb10319693e86106ced2ef3a472c80\nhttps://vuldb.com/submit/812228\nhttps://vuldb.com/vuln/365330",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:34"
+    },
+    {
+      "cve_id": "CVE-2026-9366",
+      "title": "高危漏洞: CVE-2026-9366 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 17:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in NousResearch hermes-agent 2026.4.23. The impacted element is the function _scan_context_content of the file agent/prompt_builder.py. The manipulation results in injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/581fd92de5548fbaacb2092e848a75cc\nhttps://vuldb.com/submit/812227\nhttps://vuldb.com/vuln/365329",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:30"
+    },
+    {
+      "cve_id": "CVE-2026-9364",
+      "title": "高危漏洞: CVE-2026-9364 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 17:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in projectworlds Online Art Gallery Shop 1.0. Impacted is an unknown function of the file /admin/adminHome.php. Executing a manipulation of the argument social_linked can lead to sql injection. The attack can be executed remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Quafather/cve/issues/1\nhttps://vuldb.com/submit/813133\nhttps://vuldb.com/vuln/365327",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:24"
+    },
+    {
+      "cve_id": "CVE-2026-9360",
+      "title": "高危漏洞: CVE-2026-9360 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 16:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Edimax EW-7438RPn 1.28a. Affected by this issue is the function formwlencrypt24g of the file /goform/formwlencrypt24g of the component POST Request Handler. The manipulation of the argument key1 results in buffer overflow. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7438RPn-Mini-formwlencrypt24g-34b53a41781f808c99bcd687b351750b?source=copy_link\nhttps://vuldb.com/submit/811544\nhttps://vuldb.com/vuln/365323",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:18"
+    },
+    {
+      "cve_id": "CVE-2026-9356",
+      "title": "高危漏洞: CVE-2026-9356 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 14:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in SourceCodester Hospitals Patient Records Management System 1.0. This affects an unknown function of the file /admin/patients/manage_history.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/yan-124/yan/issues/1\nhttps://vuldb.com/submit/813022\nhttps://vuldb.com/vuln/365319",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:13"
+    },
+    {
+      "cve_id": "CVE-2026-9355",
+      "title": "高危漏洞: CVE-2026-9355 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 13:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in SourceCodester Hospitals Patient Records Management System 1.0. The impacted element is an unknown function of the file /classes/Master.php?f=save_patient_history. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/yan-124/yan/issues/3\nhttps://vuldb.com/submit/813020\nhttps://vuldb.com/vuln/365318",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:08"
+    },
+    {
+      "cve_id": "CVE-2026-9353",
+      "title": "高危漏洞: CVE-2026-9353 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 13:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in NousResearch hermes-agent up to 2026.4.23. Impacted is an unknown function of the file agent/skills_guard.py of the component Skills Guard Multi-Word Prompt Handler. The manipulation of the argument THREAT_PATTERNS leads to injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/82a3539d6358842e69dfaef0a9fcf14a\nhttps://vuldb.com/submit/812216\nhttps://vuldb.com/vuln/365316",
+      "source": "NVD",
+      "time": "2026-05-24 18:26:01"
+    },
+    {
+      "cve_id": "CVE-2026-3515",
+      "title": "高危漏洞: CVE-2026-3515 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-05-24 13:16:39",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "A vulnerability in the `GitHubRepository` block of the `prefect-github` integration in Prefect version 3.6.18 allows an attacker to inject arbitrary git command-line options via the `reference` field. The `reference` field is concatenated directly into a `git clone` command string without proper sanitization, and then parsed by `shlex.split()`. This enables injection of options such as `-c`, leading to potential Server-Side Request Forgery (SSRF), credential theft, or remote code execution (RCE). The vulnerability affects both the `aget_directory()` and `get_directory()` methods in `src/integrations/prefect-github/prefect_github/repository.py`. This issue does not affect the GitLab and BitBucket integrations, which use a safer list-based command construction approach.",
+      "refs": "https://huntr.com/bounties/f3b048b8-7f4e-45ef-a5a7-cb841c39acde",
+      "source": "NVD",
+      "time": "2026-05-24 18:25:54"
+    },
+    {
       "cve_id": "CVE-2026-9350",
       "title": "高危漏洞: CVE-2026-9350 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1000,105 +1099,6 @@
       "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
       "source": "NVD",
       "time": "2026-05-22 22:15:19"
-    },
-    {
-      "cve_id": "CVE-2026-6960",
-      "title": "高危漏洞: CVE-2026-6960 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-22 06:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The BookingPress Pro plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'bookingpress_validate_submitted_booking_form_func' function in all versions up to, and including, 5.6. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability can only be exploited if a signature custom field is added to the booking form.",
-      "refs": "https://www.bookingpressplugin.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ed738dc5-7848-4b04-a3fd-317cc366acfa?source=cve",
-      "source": "NVD",
-      "time": "2026-05-22 22:15:12"
-    },
-    {
-      "cve_id": "CVE-2026-47102",
-      "title": "高危漏洞: CVE-2026-47102 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-22 05:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LiteLLM prior to 1.83.10 allows a user to modify their own user_role via the /user/update endpoint. While the endpoint correctly restricts users to updating only their own account, it does not restrict which fields may be changed. A user who can reach this endpoint can set their role to proxy_admin, gaining full administrative access to LiteLLM including all users, teams, keys, models, and prompt history. Users with the org_admin role have legitimate access to this endpoint and can exploit this vulnerability without chaining any additional flaw.",
-      "refs": "https://gist.github.com/13ph03nix/9ec616e1fdc77b3673509c60206e827f\nhttps://github.com/BerriAI/litellm/commit/128d32d2494b759c5d15da3452452af4c6a34c01\nhttps://github.com/BerriAI/litellm/commit/e6f18ce75b111c9b93dc15c72894cbdeb53177ce",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:51"
-    },
-    {
-      "cve_id": "CVE-2026-47101",
-      "title": "高危漏洞: CVE-2026-47101 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-22 05:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LiteLLM prior to 1.83.14 allows an authenticated internal_user to create API keys with access to routes that their role does not permit. When generating a key, the allowed_routes field is stored without verifying that the specified routes fall within the user's own permissions. A key created with access to admin-only routes can then be used to reach those routes successfully, bypassing the role-based access controls that would otherwise block the request, enabling full privilege escalation from internal_user to proxy_admin.",
-      "refs": "https://gist.github.com/13ph03nix/9ec616e1fdc77b3673509c60206e827f\nhttps://github.com/BerriAI/litellm/commit/2220f3076ac89bd2a2e3439acf57dcfbec2434c9\nhttps://github.com/BerriAI/litellm/commit/5190bd07eb23a037745d86328096f54378f1614a",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:46"
-    },
-    {
-      "cve_id": "CVE-2026-47114",
-      "title": "高危漏洞: CVE-2026-47114 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-22 04:16:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "IINA before 1.4.3 contains a user-assisted command execution vulnerability that allows remote attackers to execute arbitrary commands by supplying malicious mpv_-prefixed query parameters through the iina://open custom URL scheme handler. Attackers can deliver a crafted URL via a browser that passes unvalidated mpv_options/input-commands parameters into the mpv runtime, causing arbitrary command execution as the current macOS user upon approval of the browser protocol prompt without requiring a valid media file.",
-      "refs": "https://binary.stackpointer.re/iina-142-url-scheme-command-execution\nhttps://github.com/iina/iina/commit/1e6f43248dab9d6ae303781c790e5315cbc9fcef\nhttps://github.com/iina/iina/releases/tag/v1.4.3",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:42"
-    },
-    {
-      "cve_id": "CVE-2026-46473",
-      "title": "高危漏洞: CVE-2026-46473 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-22 03:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Authen::TOTP versions before 0.1.1 for Perl generate secrets using rand.\n\nSecrets were generated using Perl's built-in rand function, which is predictable and unsuitable for security usage.",
-      "refs": "https://github.com/tchatzi/Authen-TOTP/commit/d04f30cc6538d77fc6b6d550da450cf3017b8561.patch\nhttps://metacpan.org/release/TCHATZI/Authen-TOTP-0.1.1/changes",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:37"
-    },
-    {
-      "cve_id": "CVE-2026-48242",
-      "title": "高危漏洞: CVE-2026-48242 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-22 02:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database connection credentials (host, username, password, database name) in import_mdb.php. The credentials are embedded in source code committed to the public repository, allowing any reader of the source to obtain valid configuration values that may match deployed installations.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-hardcoded-mysql-credentials-in-import-mdb-php",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:33"
-    },
-    {
-      "cve_id": "CVE-2026-48241",
-      "title": "高危漏洞: CVE-2026-48241 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-22 02:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database credentials in loader.php (a public-facing database utility) that are committed to the source repository. Any actor with access to the public source tree (or an unauthenticated attacker with read access to the file on a deployed installation) can read the username, password, and database name and use them to connect to the database if it is reachable from their network.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-hardcoded-mysql-credentials-in-loader-php",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:26"
-    },
-    {
-      "cve_id": "CVE-2026-48240",
-      "title": "高危漏洞: CVE-2026-48240 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in ajax/statistics.php where the tick_id and f_tick_id POST parameters are concatenated into WHERE clauses of SELECT statements in the statistics rollup queries without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-statistics-php-tick-id-and-f-tick-id-parameters",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:21"
-    },
-    {
-      "cve_id": "CVE-2026-48239",
-      "title": "高危漏洞: CVE-2026-48239 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in ajax/reports.php where the tick_id POST parameter is concatenated into the WHERE clause of SELECT statements in the incidents summary report without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-reports-php-tick-id-parameter",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:17"
     }
   ]
 }
