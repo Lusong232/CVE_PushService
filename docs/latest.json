@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9372",
+      "title": "高危漏洞: CVE-2026-9372 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 19:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in ItzCrazyKns Vane up to 1.12.1. This vulnerability affects unknown code of the file src/app/api/providers/route.ts of the component Model Provider API. This manipulation of the argument baseURL causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/ItzCrazyKns/Vane/\nhttps://github.com/ItzCrazyKns/Vane/issues/1124\nhttps://vuldb.com/submit/813211",
+      "source": "NVD",
+      "time": "2026-05-24 20:59:38"
+    },
+    {
       "cve_id": "CVE-2026-9368",
       "title": "高危漏洞: CVE-2026-9368 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
       "source": "NVD",
       "time": "2026-05-22 22:15:24"
-    },
-    {
-      "cve_id": "CVE-2026-33000",
-      "title": "高危漏洞: CVE-2026-33000 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-05-22 10:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A malicious actor with access to the network and high privileges could exploit an Improper Input Validation vulnerability found in UniFi OS devices to execute a Command Injection.",
-      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
-      "source": "NVD",
-      "time": "2026-05-22 22:15:19"
     }
   ]
 }
