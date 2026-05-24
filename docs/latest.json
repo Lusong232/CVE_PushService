@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9382",
+      "title": "高危漏洞: CVE-2026-9382 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 21:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Edimax BR-6675nD 1.12. Affected by this issue is the function formPPTPSetup of the file /goform/formPPTPSetup of the component POST Request Handler. Executing a manipulation of the argument pptpUserName can lead to buffer overflow. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formPPTPSetup-34b53a41781f80e6ab7df78a28ffe568?source=copy_link\nhttps://vuldb.com/submit/811560\nhttps://vuldb.com/vuln/365345",
+      "source": "NVD",
+      "time": "2026-05-24 23:55:05"
+    },
+    {
+      "cve_id": "CVE-2026-9381",
+      "title": "高危漏洞: CVE-2026-9381 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 21:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Edimax BR-6675nD 1.12. Affected by this vulnerability is the function formPPPoESetup of the file /goform/formPPPoESetup of the component POST Request Handler. Performing a manipulation of the argument pppUserName results in buffer overflow. The attack may be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formPPPoESetup-34b53a41781f803faf50d4caf940d2dc?source=copy_link\nhttps://vuldb.com/submit/811559\nhttps://vuldb.com/vuln/365344",
+      "source": "NVD",
+      "time": "2026-05-24 23:54:57"
+    },
+    {
+      "cve_id": "CVE-2026-9380",
+      "title": "高危漏洞: CVE-2026-9380 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 21:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Edimax BR-6675nD 1.12. Affected is the function formL2TPSetup of the file /goform/formL2TPSetup of the component POST Request Handler. Such manipulation of the argument L2TPUserName leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formL2TPSetup-34b53a41781f805abdfbdcbe930ad70a?source=copy_link\nhttps://vuldb.com/submit/811558\nhttps://vuldb.com/vuln/365343",
+      "source": "NVD",
+      "time": "2026-05-24 23:54:51"
+    },
+    {
       "cve_id": "CVE-2026-9372",
       "title": "高危漏洞: CVE-2026-9372 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
       "source": "NVD",
       "time": "2026-05-22 22:15:40"
-    },
-    {
-      "cve_id": "CVE-2026-34910",
-      "title": "高危漏洞: CVE-2026-34910 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-22 10:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A malicious actor with access to the network could exploit an Improper Input Validation vulnerability found in UniFi OS devices to execute a Command Injection.",
-      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
-      "source": "NVD",
-      "time": "2026-05-22 22:15:34"
-    },
-    {
-      "cve_id": "CVE-2026-34909",
-      "title": "高危漏洞: CVE-2026-34909 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-22 10:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A malicious actor with access to the network could exploit a Path Traversal vulnerability found in UniFi OS devices to access files on the underlying system that could be manipulated to access an underlying account.",
-      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
-      "source": "NVD",
-      "time": "2026-05-22 22:15:30"
-    },
-    {
-      "cve_id": "CVE-2026-34908",
-      "title": "高危漏洞: CVE-2026-34908 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-22 10:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A malicious actor with access to the network could exploit an Improper Access Control vulnerability found in UniFi OS devices to make unauthorized changes to the system.",
-      "refs": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
-      "source": "NVD",
-      "time": "2026-05-22 22:15:24"
     }
   ]
 }
