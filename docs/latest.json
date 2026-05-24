@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9393",
+      "title": "高危漏洞: CVE-2026-9393 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-25 03:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in H3C Magic B0 up to 100R002. This affects the function Edit_BasicSSID_5G of the file /goform/aspForm. Performing a manipulation of the argument param results in buffer overflow. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/alc9700jmo/CVE/issues/25\nhttps://vuldb.com/submit/813477\nhttps://vuldb.com/vuln/365374",
+      "source": "NVD",
+      "time": "2026-05-25 05:45:10"
+    },
+    {
       "cve_id": "CVE-2026-9389",
       "title": "高危漏洞: CVE-2026-9389 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://support.avantra.com/hc/en-us/articles/5535487249183",
       "source": "NVD",
       "time": "2026-05-23 01:02:41"
-    },
-    {
-      "cve_id": "CVE-2026-8670",
-      "title": "高危漏洞: CVE-2026-8670 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-22 22:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient session expiration vulnerability in syslink software AG Avantra on Linux, Windows allows Reusing Session IDs (aka Session Replay).\n\nThis issue affects Avantra: before 25.3.1.",
-      "refs": "https://support.avantra.com/hc/en-us/articles/5533929912351",
-      "source": "NVD",
-      "time": "2026-05-23 01:02:36"
     }
   ]
 }
