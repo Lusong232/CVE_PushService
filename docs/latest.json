@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9350",
+      "title": "高危漏洞: CVE-2026-9350 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-24 12:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in NousResearch hermes-agent up to 2026.4.16. This affects the function check_all_command_guards of the file tools/approval.py of the component Batch Runner. Such manipulation leads to missing authorization. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/22cada4c9060f5123dde6185135ae3ab\nhttps://vuldb.com/submit/812213\nhttps://vuldb.com/vuln/365313",
+      "source": "NVD",
+      "time": "2026-05-24 14:28:31"
+    },
+    {
+      "cve_id": "CVE-2026-9348",
+      "title": "高危漏洞: CVE-2026-9348 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 12:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Edimax EW-7438RPn up to 1.31. Affected by this vulnerability is an unknown functionality of the file /goform/mp of the component webs. The manipulation of the argument webs results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_6/6.md\nhttps://vuldb.com/submit/813890\nhttps://vuldb.com/vuln/365311",
+      "source": "NVD",
+      "time": "2026-05-24 14:28:27"
+    },
+    {
+      "cve_id": "CVE-2026-48829",
+      "title": "高危漏洞: CVE-2026-48829 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-24 12:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In GNU SASL before 2.2.3, DIGEST-MD5 has a NULL pointer dereference affecting both clients and servers, via a known token with no accompanying = character. This occurs in lib/digest-md5/getsubopt.c.",
+      "refs": "https://codeberg.org/gsasl/gsasl/commit/da9b5ae2962b014879e4a406c3b38f25aa70e97a\nhttps://lists.debian.org/debian-security-announce/2026/msg00182.html\nhttps://lists.gnu.org/archive/html/help-gsasl/2026-05/msg00000.html",
+      "source": "NVD",
+      "time": "2026-05-24 14:28:22"
+    },
+    {
+      "cve_id": "CVE-2026-9346",
+      "title": "高危漏洞: CVE-2026-9346 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 10:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Edimax EW-7438RPn up to 1.31. This impacts the function formWirelessTbl of the file /goform/formWirelessTbl of the component webs. Executing a manipulation of the argument submit-url can lead to buffer overflow. The attack may be performed from remote. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_4/4.md\nhttps://vuldb.com/submit/811541\nhttps://vuldb.com/submit/813888",
+      "source": "NVD",
+      "time": "2026-05-24 14:28:15"
+    },
+    {
+      "cve_id": "CVE-2026-9345",
+      "title": "高危漏洞: CVE-2026-9345 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 10:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Edimax EW-7438RPn up to 1.31. This affects the function formWizSurvey of the file /goform/formWizSurvey of the component webs. Performing a manipulation of the argument ssid/manualssid/ip/mask/gateway results in buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_3/3.md\nhttps://vuldb.com/submit/811542\nhttps://vuldb.com/submit/813886",
+      "source": "NVD",
+      "time": "2026-05-24 14:28:11"
+    },
+    {
+      "cve_id": "CVE-2026-9344",
+      "title": "高危漏洞: CVE-2026-9344 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-24 09:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Edimax EW-7438RPn up to 1.31. The impacted element is an unknown function of the file /goform/formWpsStart of the component webs. Such manipulation of the argument pinCode/wlan-url leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_2/2.md\nhttps://vuldb.com/submit/813885\nhttps://vuldb.com/vuln/365307",
+      "source": "NVD",
+      "time": "2026-05-24 14:28:02"
+    },
+    {
       "cve_id": "CVE-2018-25358",
       "title": "高危漏洞: CVE-2018-25358 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-reports-php-tick-id-parameter",
       "source": "NVD",
       "time": "2026-05-22 06:12:17"
-    },
-    {
-      "cve_id": "CVE-2026-48238",
-      "title": "高危漏洞: CVE-2026-48238 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in ajax/mobile_main.php where the id GET parameter is concatenated into the WHERE clause of a SELECT statement used as a ticket-existence sanity check without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-mobile-main-php-id-parameter",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:12"
-    },
-    {
-      "cve_id": "CVE-2026-48237",
-      "title": "高危漏洞: CVE-2026-48237 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in message.php where the frm_ticket_id and frm_resp_id POST parameters are concatenated into WHERE clauses of SELECT/UPDATE statements without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-message-php-frm-ticket-id-and-frm-resp-id-parameters",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:08"
-    },
-    {
-      "cve_id": "CVE-2026-48236",
-      "title": "高危漏洞: CVE-2026-48236 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in db_loader.php where the multiple POST parameters (ticketsdb, ticketshost, ticketsuser, ticketspassword) are concatenated into mysqli connection arguments and dynamic SQL operating against an attacker-controlled database without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-db-loader-php-multiple-parameters",
-      "source": "NVD",
-      "time": "2026-05-22 06:12:03"
-    },
-    {
-      "cve_id": "CVE-2026-48235",
-      "title": "高危漏洞: CVE-2026-48235 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in incs/remotes.inc.php where latitude, longitude, callsign, mph, altitude, and timestamp values parsed from external GPS tracking service XML/JSON responses (InstaMapper and Google Latitude integration) are concatenated into UPDATE and INSERT statements without sanitization. An attacker able to compromise or impersonate the remote GPS tracker endpoint can inject SQL to manipulate the responder location, tracks, and assignment tables.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-incs-remotes-inc-php-multiple-parameters",
-      "source": "NVD",
-      "time": "2026-05-22 06:11:57"
-    },
-    {
-      "cve_id": "CVE-2026-48234",
-      "title": "高危漏洞: CVE-2026-48234 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in portal/ajax/list_requests.php where the sort and dir GET parameters are concatenated into the ORDER BY clause of a SELECT statement without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-portal-ajax-list-requests-php-sort-and-dir-parameters",
-      "source": "NVD",
-      "time": "2026-05-22 06:11:52"
-    },
-    {
-      "cve_id": "CVE-2026-48233",
-      "title": "高危漏洞: CVE-2026-48233 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-22 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in ajax/sit_incidents.php where the offset GET parameter is concatenated into the LIMIT clause of a SELECT statement without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-      "refs": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff\nhttps://github.com/openises/tickets/releases/tag/v3.44.2\nhttps://www.vulncheck.com/advisories/open-ises-tickets-sql-injection-via-ajax-sit-incidents-php-offset-parameter",
-      "source": "NVD",
-      "time": "2026-05-22 06:11:47"
     }
   ]
 }
