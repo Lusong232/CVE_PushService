@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9421",
+      "title": "高危漏洞: CVE-2026-9421 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-25 12:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in KLiK SocialMediaWebsite 1.0. This vulnerability affects the function uniqid of the file upload.inc.php of the component File Handler. This manipulation causes unrestricted upload. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://vuldb.com/submit/813725\nhttps://vuldb.com/vuln/365402\nhttps://vuldb.com/vuln/365402/cti",
+      "source": "NVD",
+      "time": "2026-05-25 15:02:47"
+    },
+    {
+      "cve_id": "CVE-2026-9408",
+      "title": "高危漏洞: CVE-2026-9408 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-25 08:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Totolink A8000RU 7.1cu.643_b20200521. Affected by this issue is the function setStaticDhcpRules of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. The manipulation of the argument enable results in os command injection. The attack may be performed from remote. The exploit is now public and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_340/README.md\nhttps://vuldb.com/submit/813443\nhttps://vuldb.com/vuln/365389",
+      "source": "NVD",
+      "time": "2026-05-25 15:02:40"
+    },
+    {
+      "cve_id": "CVE-2026-9407",
+      "title": "高危漏洞: CVE-2026-9407 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-25 08:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Totolink A8000RU 7.1cu.643_b20200521. Affected by this vulnerability is the function setFirewallType of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. The manipulation of the argument firewallType leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_339/README.md\nhttps://vuldb.com/submit/813442\nhttps://vuldb.com/vuln/365388",
+      "source": "NVD",
+      "time": "2026-05-25 15:02:35"
+    },
+    {
+      "cve_id": "CVE-2026-9406",
+      "title": "高危漏洞: CVE-2026-9406 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-25 08:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Totolink A8000RU 7.1cu.643_b20200521. Affected is the function setRemoteCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Executing a manipulation of the argument enable can lead to os command injection. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_338/README.md\nhttps://vuldb.com/submit/813441\nhttps://vuldb.com/vuln/365387",
+      "source": "NVD",
+      "time": "2026-05-25 15:02:30"
+    },
+    {
+      "cve_id": "CVE-2026-9405",
+      "title": "高危漏洞: CVE-2026-9405 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-25 08:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Totolink A8000RU 7.1cu.643_b20200521. This impacts the function setGameSpeedCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Performing a manipulation of the argument enable results in os command injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_337/README.md\nhttps://vuldb.com/submit/813440\nhttps://vuldb.com/vuln/365386",
+      "source": "NVD",
+      "time": "2026-05-25 15:02:25"
+    },
+    {
       "cve_id": "CVE-2026-9404",
       "title": "高危漏洞: CVE-2026-9404 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.16.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-vc2q-r6rq-ggj9",
       "source": "NVD",
       "time": "2026-05-23 03:23:15"
-    },
-    {
-      "cve_id": "CVE-2026-32253",
-      "title": "高危漏洞: CVE-2026-32253 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-23 01:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Sunshine is a self-hosted game stream host for Moonlight. In versions prior to 2026.516.143833, the client-certificate authentication can be bypassed because of how OpenSSL verification results are handled. In src/crypto.cpp, the custom verify callback treats X509_V_ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY, X509_V_ERR_CERT_NOT_YET_VALID, and X509_V_ERR_CERT_HAS_EXPIRED as success. This can allow an untrusted certificate to pass authentication and access protected HTTPS endpoints. This issue has been fixed in version 2026.516.143833.",
-      "refs": "https://github.com/LizardByte/Sunshine/releases/tag/v2026.516.143833\nhttps://github.com/LizardByte/Sunshine/security/advisories/GHSA-ph75-mgxh-mv57",
-      "source": "NVD",
-      "time": "2026-05-23 03:23:11"
-    },
-    {
-      "cve_id": "CVE-2026-28445",
-      "title": "高危漏洞: CVE-2026-28445 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-05-23 01:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Typebot is a chatbot builder tool. In versions 3.15.2 and prior, the RatingButton component in the embed package renders the user-controlled customIcon.svg field directly via Solid's innerHTML directive without any sanitization, even though DOMPurify is already a dependency and is used elsewhere in the codebase (e.g., StreamingBubble.tsx). Because rating blocks are not flagged as isUnsafe by the import sanitizer and the builder preview renders bots inline on the builder's own origin (builder.typebot.io) under a CSP permitting 'unsafe-inline', a malicious imported or collaborator-crafted typebot can execute arbitrary HTML/JS in the builder's authenticated context, bypassing the Web Worker sandbox that protects Script blocks during preview. This allows session hijacking and privilege escalation within the builder application. This issue has been fixed in version 3.16.0.",
-      "refs": "https://github.com/baptisteArno/typebot.io/commit/474ecbf46bc47a75265bada2599f12b2179de375\nhttps://github.com/baptisteArno/typebot.io/releases/tag/v3.16.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-6m7c-xfhp-p9fh",
-      "source": "NVD",
-      "time": "2026-05-23 03:23:05"
-    },
-    {
-      "cve_id": "CVE-2026-9047",
-      "title": "高危漏洞: CVE-2026-9047 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-05-23 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
-      "description": "Improper handling of factor key state in the multi-factor authentication management feature in Devolutions Server allows an attacker with knowledge of a user's password to bypass the user's multi-factor authentication after the user reconfigures their factors.\n\nThis issue affects :\n\n  *  Devolutions Server 2026.1.6.0 through 2026.1.16.0",
-      "refs": "https://devolutions.net/security/advisories/DEVO-2026-0013/",
-      "source": "NVD",
-      "time": "2026-05-23 03:23:00"
-    },
-    {
-      "cve_id": "CVE-2026-7325",
-      "title": "高危漏洞: CVE-2026-7325 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-23 00:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Improper authorization in the Active Directory browsing feature in Devolutions Server allows a low-privileged authenticated user to obtain authentication material associated with a stored PAM provider service account via authentication relay to an attacker-controlled server.\n\nThis issue affects :\n\n  *  Devolutions Server 2026.1.6.0 through 2026.1.16.0\n  *  Devolutions Server 2025.3.20.0 and earlier",
-      "refs": "https://devolutions.net/security/advisories/DEVO-2026-0013/",
-      "source": "NVD",
-      "time": "2026-05-23 03:22:55"
-    },
-    {
-      "cve_id": "CVE-2025-45145",
-      "title": "高危漏洞: CVE-2025-45145 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-22 23:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Directory traversal in Follett Software's Destiny Library Manager 22_0_2_rc1 and fixed in v.22.5 AU1 allows remote attackers to read arbitrary system and application files via the image parameter",
-      "refs": "http://follett.com\nhttps://medium.com/@jaredutahusa/cve-2025-45145-unauthenticated-local-file-inclusion-in-fsc-destiny-40a3f11b3a4d\nhttps://medium.com/@jaredutahusa/cve-2025-45145-unauthenticated-local-file-inclusion-in-fsc-destiny-40a3f11b3a4d",
-      "source": "NVD",
-      "time": "2026-05-23 03:22:49"
     }
   ]
 }
