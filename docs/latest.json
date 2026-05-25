@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9404",
+      "title": "高危漏洞: CVE-2026-9404 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-25 07:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Totolink A8000RU 7.1cu.643_b20200521. This affects the function setDdnsCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Such manipulation of the argument provider leads to os command injection. The attack may be launched remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_336/README.md\nhttps://vuldb.com/submit/813439\nhttps://vuldb.com/vuln/365385",
+      "source": "NVD",
+      "time": "2026-05-25 10:30:55"
+    },
+    {
+      "cve_id": "CVE-2026-9403",
+      "title": "高危漏洞: CVE-2026-9403 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-25 07:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Edimax BR-6675nD 1.12. The impacted element is the function formWlSiteSurvey of the file /goform/formWlSiteSurvey of the component POST Request Handler. This manipulation of the argument selSSID causes buffer overflow. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formWlSiteSurvey-34b53a41781f80608091f104f17e1e9b?source=copy_link\nhttps://vuldb.com/submit/811566\nhttps://vuldb.com/vuln/365384",
+      "source": "NVD",
+      "time": "2026-05-25 10:30:50"
+    },
+    {
+      "cve_id": "CVE-2026-9401",
+      "title": "高危漏洞: CVE-2026-9401 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-25 07:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Edimax BR-6675nD 1.12. Impacted is the function formWanTcpipSetup of the file /goform/formWanTcpipSetup of the component POST Request Handler. The manipulation of the argument pppUserName leads to buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formWanTcpipSetup-34b53a41781f8020ab30c8ca204ab15d?source=copy_link\nhttps://vuldb.com/submit/811563\nhttps://vuldb.com/vuln/365382",
+      "source": "NVD",
+      "time": "2026-05-25 10:30:45"
+    },
+    {
+      "cve_id": "CVE-2026-9399",
+      "title": "高危漏洞: CVE-2026-9399 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-25 06:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Edimax BR-6675nD 1.12. This vulnerability affects the function formsetPPPoE of the file /goform/formsetPPPoE of the component POST Request Handler. Performing a manipulation of the argument pppUserName results in buffer overflow. It is possible to initiate the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formsetPPPoE-34b53a41781f8025abcded9e7d0734ef?source=copy_link\nhttps://vuldb.com/submit/811561\nhttps://vuldb.com/vuln/365380",
+      "source": "NVD",
+      "time": "2026-05-25 10:30:39"
+    },
+    {
+      "cve_id": "CVE-2026-9397",
+      "title": "高危漏洞: CVE-2026-9397 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-25 05:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Besen BS20 EV Charging Station up to 20260426. Affected by this issue is some unknown functionality of the component OTA Update Installation Handler. This manipulation causes improper authorization. The attack is possible to be carried out remotely. A high degree of complexity is needed for the attack. The exploitation is known to be difficult. The original disclosure mentions, that \"[t]hese vulnerabilities have been reported to Besen and we have received their acknowlegement that they are reviewing this as of April 2026.\"",
+      "refs": "https://github.com/carfeii/besen#finding-4-unauthorized-firmware-installation-via-spoofed-ota-updates\nhttps://vuldb.com/submit/813576\nhttps://vuldb.com/vuln/365378",
+      "source": "NVD",
+      "time": "2026-05-25 10:30:32"
+    },
+    {
       "cve_id": "CVE-2026-9393",
       "title": "高危漏洞: CVE-2026-9393 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "http://follett.com\nhttps://medium.com/@jaredutahusa/cve-2025-45145-unauthenticated-local-file-inclusion-in-fsc-destiny-40a3f11b3a4d\nhttps://medium.com/@jaredutahusa/cve-2025-45145-unauthenticated-local-file-inclusion-in-fsc-destiny-40a3f11b3a4d",
       "source": "NVD",
       "time": "2026-05-23 03:22:49"
-    },
-    {
-      "cve_id": "CVE-2026-9264",
-      "title": "高危漏洞: CVE-2026-9264 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-05-22 10:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A cross-site scripting (XSS) vulnerability in SketchUp 2026's Dynamic Components feature allows remote code execution and local file exfiltration through maliciously crafted SKP files. The vulnerability stems from improper input sanitization in the component options window, enabling attackers to execute arbitrary system commands and read local files without user interaction by exploiting an embedded Internet Explorer 11 browser.",
-      "refs": "https://trust.trimble.com/?tcuUid=52252bc0-c196-4b1f-9f13-4e4c9ba247d9",
-      "source": "NVD",
-      "time": "2026-05-23 03:22:43"
-    },
-    {
-      "cve_id": "CVE-2026-9256",
-      "title": "高危漏洞: CVE-2026-9256 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-22 23:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a replacement string that references multiple such captures (for example, $1$2) in a redirect or arguments context. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR. \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000161377",
-      "source": "NVD",
-      "time": "2026-05-23 01:02:58"
-    },
-    {
-      "cve_id": "CVE-2026-8992",
-      "title": "高危漏洞: CVE-2026-8992 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-22 23:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "An improper certificate validation vulnerability in Ivanti Secure Access Client before 22.8R6 allows a remote unauthenticated attacker to execute arbitrary code.",
-      "refs": "https://hub.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Secure-Access-Client-CVE-2026-7431-CVE-2026-7432?language=en_US",
-      "source": "NVD",
-      "time": "2026-05-23 01:02:54"
-    },
-    {
-      "cve_id": "CVE-2026-9277",
-      "title": "高危漏洞: CVE-2026-9277 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-22 22:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "shell-quote's `quote()` function did not validate object-token inputs against the operator model used by `parse()`. The `.op` field was backslash-escaped character by character using `/(.)/g`, which in JavaScript does not match line terminators (\\n, \\r, U+2028, U+2029). A line terminator in `.op` therefore passed through unescaped into the output; POSIX shells treat a literal newline as a command separator, so any content after it would execute as a second command. The vulnerable code path is reachable in two ways: (1) direct construction of `{ op: '...\\n...' }` from external input, and (2) via `parse(cmd, envFn)` when `envFn` returns object tokens whose `.op` is attacker-influenced. Both are documented API surface. Fixed by replacing the per-character escape with strict shape validation: `.op` must match the parser's control-operator allowlist; `{ op: 'glob', pattern }` validates `pattern` and forbids line terminators; `{ comment }` validates `comment` and forbids line terminators; any other object shape throws `TypeError`.",
-      "refs": "https://github.com/ljharb/shell-quote\nhttps://github.com/ljharb/shell-quote/commit/1518179\nhttps://github.com/ljharb/shell-quote/security/advisories/GHSA-w7jw-789q-3m8p",
-      "source": "NVD",
-      "time": "2026-05-23 01:02:49"
-    },
-    {
-      "cve_id": "CVE-2026-8671",
-      "title": "高危漏洞: CVE-2026-8671 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-22 22:16:29",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:L/I:H/A:L",
-      "description": "Insertion of sensitive information into log file vulnerability in syslink software AG Avantra on Linux, Windows allows Resource Leak Exposure.\n\nThis issue affects Avantra: before 25.3.0.",
-      "refs": "https://support.avantra.com/hc/en-us/articles/5535487249183",
-      "source": "NVD",
-      "time": "2026-05-23 01:02:41"
     }
   ]
 }
