@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9482",
+      "title": "高危漏洞: CVE-2026-9482 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-26 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Edimax EW-7438RPn 1.31. This impacts the function formSDHCP of the file /goform/formSDHCP. Such manipulation of the argument submit-url leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_20/20.md\nhttps://vuldb.com/submit/813904\nhttps://vuldb.com/vuln/365463",
+      "source": "NVD",
+      "time": "2026-05-26 06:01:38"
+    },
+    {
+      "cve_id": "CVE-2026-9481",
+      "title": "高危漏洞: CVE-2026-9481 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-26 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Edimax EW-7438RPn 1.31. This affects the function formStats of the file /goform/formStats. This manipulation of the argument submit-url causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_19/19.md\nhttps://vuldb.com/submit/813903\nhttps://vuldb.com/vuln/365462",
+      "source": "NVD",
+      "time": "2026-05-26 06:01:33"
+    },
+    {
+      "cve_id": "CVE-2026-9480",
+      "title": "高危漏洞: CVE-2026-9480 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-26 03:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Edimax EW-7438RPn 1.31. The impacted element is the function formrefresh of the file /goform/formrefresh. The manipulation of the argument submit-url results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_18/18.md\nhttps://vuldb.com/submit/813902\nhttps://vuldb.com/vuln/365461",
+      "source": "NVD",
+      "time": "2026-05-26 06:01:27"
+    },
+    {
+      "cve_id": "CVE-2026-9479",
+      "title": "高危漏洞: CVE-2026-9479 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-26 02:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Edimax EW-7438RPn 1.31. The affected element is the function formLogout of the file /goform/formLogout. The manipulation of the argument submit-url leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_17/17.md\nhttps://vuldb.com/submit/813901\nhttps://vuldb.com/vuln/365460",
+      "source": "NVD",
+      "time": "2026-05-26 06:01:21"
+    },
+    {
+      "cve_id": "CVE-2026-9478",
+      "title": "高危漏洞: CVE-2026-9478 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-26 02:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Totolink A8000RU 7.1cu.643_b20200521. Impacted is the function setParentalRules of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Executing a manipulation of the argument enable can lead to os command injection. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_352/README.md\nhttps://vuldb.com/submit/813463\nhttps://vuldb.com/vuln/365459",
+      "source": "NVD",
+      "time": "2026-05-26 06:01:16"
+    },
+    {
+      "cve_id": "CVE-2026-9477",
+      "title": "高危漏洞: CVE-2026-9477 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-26 02:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Totolink A8000RU 7.1cu.643_b20200521. This issue affects the function setAccessDeviceCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Performing a manipulation of the argument mac results in os command injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_349/README.md\nhttps://vuldb.com/submit/813460\nhttps://vuldb.com/vuln/365458",
+      "source": "NVD",
+      "time": "2026-05-26 06:01:10"
+    },
+    {
       "cve_id": "CVE-2026-9476",
       "title": "高危漏洞: CVE-2026-9476 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1033,72 +1099,6 @@
       "refs": "http://sipp.sourceforge.net/\nhttps://github.com/SIPp/sipp/releases\nhttps://www.exploit-db.com/exploits/44962",
       "source": "NVD",
       "time": "2026-05-24 05:44:44"
-    },
-    {
-      "cve_id": "CVE-2018-25355",
-      "title": "高危漏洞: CVE-2018-25355 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-24 03:16:55",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Audiograbber 1.83 contains a local buffer overflow vulnerability that allows attackers to execute arbitrary code by exploiting structured exception handling mechanisms. Attackers can craft malicious input in the Interpret or Album fields that triggers a buffer overflow, overwriting SEH pointers and executing injected shellcode with application privileges.",
-      "refs": "https://www.audiograbber.org/\nhttps://www.exploit-db.com/exploits/44903\nhttps://www.vulncheck.com/advisories/audiograbber-local-buffer-overflow-via-seh",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:37"
-    },
-    {
-      "cve_id": "CVE-2018-25353",
-      "title": "高危漏洞: CVE-2018-25353 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 03:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Redaxo CMS Mediapool Addon 5.5.1 and older contains an arbitrary file upload vulnerability that allows authenticated users to bypass file extension blacklist restrictions. Attackers with editor accounts can upload executable files by using obfuscated extensions like php71 or php53 to evade the blacklist filter and execute arbitrary code.",
-      "refs": "https://redaxo.org\nhttps://redaxo.org/download/redaxo/5.5.1.zip\nhttps://www.exploit-db.com/exploits/44891",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:33"
-    },
-    {
-      "cve_id": "CVE-2018-25352",
-      "title": "高危漏洞: CVE-2018-25352 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-24 03:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "WordPress Ultimate Form Builder Lite plugin version 1.3.7 and below contains an SQL injection vulnerability that allows authenticated attackers to manipulate database queries by injecting SQL code through the entry_id POST parameter. Attackers can send POST requests to the admin-ajax.php endpoint with the ufbl_get_entry_detail_action action to extract, modify, or escalate privileges within the WordPress database.",
-      "refs": "http://vulnerablesite.com/wp-admin/admin-ajax.php\nhttps://www.exploit-db.com/exploits/44884\nhttps://www.vulncheck.com/advisories/wordpress-ultimate-form-builder-lite-sql-injection-via-entry-id",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:28"
-    },
-    {
-      "cve_id": "CVE-2018-25351",
-      "title": "高危漏洞: CVE-2018-25351 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-24 03:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Joomla! Component EkRishta 2.10 contains an error-based SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code into the username parameter. Attackers can submit POST requests to the login endpoint with SQL injection payloads in the username field to extract database information including user credentials and system details.",
-      "refs": "https://extensions.joomla.org/extension/ek-rishta/\nhttps://www.exploit-db.com/exploits/44877\nhttps://www.joomlaextensions.co.in/",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:24"
-    },
-    {
-      "cve_id": "CVE-2018-25350",
-      "title": "高危漏洞: CVE-2018-25350 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-24 03:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "userSpice 4.3.24 contains a username enumeration vulnerability that allows unauthenticated attackers to discover valid usernames by sending POST requests to the existingUsernameCheck.php endpoint. Attackers can submit usernames and analyze response text for the 'taken' string to identify existing accounts in the system.",
-      "refs": "https://www.exploit-db.com/exploits/44872\nhttps://www.vulncheck.com/advisories/userspice-username-enumeration-via-existingusernamecheck-php",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:20"
-    },
-    {
-      "cve_id": "CVE-2018-25348",
-      "title": "高危漏洞: CVE-2018-25348 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-24 03:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Joomla! Component Ek Rishta 2.10 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the cid parameter. Attackers can send GET requests to the user_detail view with malicious cid values containing SQL commands to extract sensitive database information.",
-      "refs": "https://extensions.joomla.org/extension/ek-rishta/\nhttps://www.exploit-db.com/exploits/44869\nhttps://www.joomlaextensions.co.in/",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:16"
     }
   ]
 }
