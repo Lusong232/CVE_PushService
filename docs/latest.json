@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-48837",
+      "title": "高危漏洞: CVE-2026-48837 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-05-26 07:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Unlimited Elements For Elementor allows Blind SQL Injection.\n\nThis issue affects Unlimited Elements For Elementor: from n/a through 2.0.8.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-8-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:53"
+    },
+    {
+      "cve_id": "CVE-2026-45438",
+      "title": "高危漏洞: CVE-2026-45438 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-26 07:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Missing Authorization vulnerability in WebToffee Smart Coupons for WooCommerce allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Smart Coupons for WooCommerce: from n/a before 2.3.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/wt-smart-coupons-for-woocommerce/vulnerability/wordpress-smart-coupons-for-woocommerce-plugin-2-3-0-broken-access-control-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:49"
+    },
+    {
+      "cve_id": "CVE-2026-45216",
+      "title": "高危漏洞: CVE-2026-45216 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-26 07:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in StoreApps Smart Manager allows Privilege Escalation.\n\nThis issue affects Smart Manager: from n/a through 8.85.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/smart-manager-for-wp-e-commerce/vulnerability/wordpress-smart-manager-plugin-8-85-0-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:44"
+    },
+    {
+      "cve_id": "CVE-2026-45209",
+      "title": "高危漏洞: CVE-2026-45209 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-26 07:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Missing Authorization vulnerability in edward_plainview MyCryptoCheckout allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects MyCryptoCheckout: from n/a through 2.161.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/mycryptocheckout/vulnerability/wordpress-mycryptocheckout-plugin-2-161-broken-access-control-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:38"
+    },
+    {
+      "cve_id": "CVE-2026-42774",
+      "title": "高危漏洞: CVE-2026-42774 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-05-26 07:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Crocoblock JetEngine allows SQL Injection.\n\nThis issue affects JetEngine: from n/a through 3.8.8.1.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/jet-engine/vulnerability/wordpress-jetengine-plugin-3-8-8-1-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:33"
+    },
+    {
+      "cve_id": "CVE-2026-42773",
+      "title": "高危漏洞: CVE-2026-42773 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-05-26 07:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in eMagicOne eMagicOne Store Manager allows Blind SQL Injection.\n\nThis issue affects eMagicOne Store Manager: from n/a through 1.3.2.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/store-manager-connector/vulnerability/wordpress-emagicone-store-manager-plugin-1-3-2-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:28"
+    },
+    {
+      "cve_id": "CVE-2026-39436",
+      "title": "高危漏洞: CVE-2026-39436 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-26 07:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
+      "description": "Cross-Site Request Forgery (CSRF) vulnerability in bgermann CformsII allows Cross Site Request Forgery.\n\nThis issue affects CformsII: from n/a through 15.1.3.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/cforms2/vulnerability/wordpress-cformsii-plugin-15-1-3-cross-site-request-forgery-csrf-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:24"
+    },
+    {
+      "cve_id": "CVE-2026-24937",
+      "title": "高危漏洞: CVE-2026-24937 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-26 07:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in VideoWhisper.Com Broadcast Live Video allows Code Injection.\n\nThis issue affects Broadcast Live Video: from n/a before 7.1.3.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/videowhisper-live-streaming-integration/vulnerability/wordpress-broadcast-live-video-plugin-7-1-3-remote-code-execution-rce-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:19"
+    },
+    {
+      "cve_id": "CVE-2026-48848",
+      "title": "高危漏洞: CVE-2026-48848 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-26 04:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Roundcube Webmail 1.6.x before 1.6.16 and 1.7.x before 1.7 has insufficient HTML sanitization that could lead to Cascading Style Sheets (CSS) injection via an SVG document that has an animate element with the attributeName attribute.",
+      "refs": "https://github.com/roundcube/roundcubemail/commit/58e5263f341e6a418774fb6d2643669a3c4d8a27\nhttps://github.com/roundcube/roundcubemail/commit/c960d102472dc579e15907d5bcdc3103a090ccf9\nhttps://github.com/roundcube/roundcubemail/releases/tag/1.6.16",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:13"
+    },
+    {
+      "cve_id": "CVE-2026-48844",
+      "title": "高危漏洞: CVE-2026-48844 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-26 04:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Roundcube Webmail 1.6.x before 1.6.16 and 1.7.x before 1.7.1 has insecure code evaluation logic in LDAP the autovalues option that could lead to code injection. (Support for code evaluation has been removed in 1.6.16 and 1.7.1.)",
+      "refs": "https://github.com/roundcube/roundcubemail/commit/6a777d7394b763ce9acfce86c1a521e14a02d862\nhttps://github.com/roundcube/roundcubemail/commit/ea1798a6fbf060abcc0ba73b2435036bf8016a5a\nhttps://github.com/roundcube/roundcubemail/releases/tag/1.6.16",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:06"
+    },
+    {
+      "cve_id": "CVE-2026-48843",
+      "title": "高危漏洞: CVE-2026-48843 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-26 04:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Roundcube Webmail 1.6.x between 1.6.14 and 1.6.16,and 1.7.x before 1.7.1 has Insufficient Cascading Style Sheets (CSS) sanitization in HTML e-mail messages may lead to SSRF or Information Disclosure, e.g., if stylesheet links point to local network hosts. The issue stems from an insufficient fix for CVE-2026-35540.",
+      "refs": "https://github.com/roundcube/roundcubemail/commit/ab96c88bfd888866ec5e02190b19618db283923a\nhttps://github.com/roundcube/roundcubemail/commit/cb3fc9041e91640ba9ba49ee7b2147c176ebf5a1\nhttps://github.com/roundcube/roundcubemail/releases/tag/1.6.16",
+      "source": "NVD",
+      "time": "2026-05-26 10:11:01"
+    },
+    {
+      "cve_id": "CVE-2026-48842",
+      "title": "高危漏洞: CVE-2026-48842 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-26 04:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Roundcube Webmail 1.6.x before 1.6.16 and 1.7.x before 1.7.1 has Pre-authentication SQL injection in the virtuser_query plugin via a preg_replace() backslash escape bypass.",
+      "refs": "https://github.com/roundcube/roundcubemail/commit/3406183a9976e36f992d3468f37d0e2346526ee9\nhttps://github.com/roundcube/roundcubemail/commit/87124cc7136a48b5fa9d2b40dfead6e9dcaeaf4b\nhttps://github.com/roundcube/roundcubemail/releases/tag/1.6.16",
+      "source": "NVD",
+      "time": "2026-05-26 10:10:54"
+    },
+    {
       "cve_id": "CVE-2026-9482",
       "title": "高危漏洞: CVE-2026-9482 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/yan-124/yan/issues/1\nhttps://vuldb.com/submit/813022\nhttps://vuldb.com/vuln/365319",
       "source": "NVD",
       "time": "2026-05-24 18:26:13"
-    },
-    {
-      "cve_id": "CVE-2026-9355",
-      "title": "高危漏洞: CVE-2026-9355 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 13:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in SourceCodester Hospitals Patient Records Management System 1.0. The impacted element is an unknown function of the file /classes/Master.php?f=save_patient_history. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/yan-124/yan/issues/3\nhttps://vuldb.com/submit/813020\nhttps://vuldb.com/vuln/365318",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:08"
-    },
-    {
-      "cve_id": "CVE-2026-9353",
-      "title": "高危漏洞: CVE-2026-9353 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 13:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in NousResearch hermes-agent up to 2026.4.23. Impacted is an unknown function of the file agent/skills_guard.py of the component Skills Guard Multi-Word Prompt Handler. The manipulation of the argument THREAT_PATTERNS leads to injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/82a3539d6358842e69dfaef0a9fcf14a\nhttps://vuldb.com/submit/812216\nhttps://vuldb.com/vuln/365316",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:01"
-    },
-    {
-      "cve_id": "CVE-2026-3515",
-      "title": "高危漏洞: CVE-2026-3515 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-05-24 13:16:39",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "A vulnerability in the `GitHubRepository` block of the `prefect-github` integration in Prefect version 3.6.18 allows an attacker to inject arbitrary git command-line options via the `reference` field. The `reference` field is concatenated directly into a `git clone` command string without proper sanitization, and then parsed by `shlex.split()`. This enables injection of options such as `-c`, leading to potential Server-Side Request Forgery (SSRF), credential theft, or remote code execution (RCE). The vulnerability affects both the `aget_directory()` and `get_directory()` methods in `src/integrations/prefect-github/prefect_github/repository.py`. This issue does not affect the GitLab and BitBucket integrations, which use a safer list-based command construction approach.",
-      "refs": "https://huntr.com/bounties/f3b048b8-7f4e-45ef-a5a7-cb841c39acde",
-      "source": "NVD",
-      "time": "2026-05-24 18:25:54"
-    },
-    {
-      "cve_id": "CVE-2026-9350",
-      "title": "高危漏洞: CVE-2026-9350 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 12:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in NousResearch hermes-agent up to 2026.4.16. This affects the function check_all_command_guards of the file tools/approval.py of the component Batch Runner. Such manipulation leads to missing authorization. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/22cada4c9060f5123dde6185135ae3ab\nhttps://vuldb.com/submit/812213\nhttps://vuldb.com/vuln/365313",
-      "source": "NVD",
-      "time": "2026-05-24 14:28:31"
-    },
-    {
-      "cve_id": "CVE-2026-9348",
-      "title": "高危漏洞: CVE-2026-9348 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 12:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Edimax EW-7438RPn up to 1.31. Affected by this vulnerability is an unknown functionality of the file /goform/mp of the component webs. The manipulation of the argument webs results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_6/6.md\nhttps://vuldb.com/submit/813890\nhttps://vuldb.com/vuln/365311",
-      "source": "NVD",
-      "time": "2026-05-24 14:28:27"
-    },
-    {
-      "cve_id": "CVE-2026-48829",
-      "title": "高危漏洞: CVE-2026-48829 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-24 12:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In GNU SASL before 2.2.3, DIGEST-MD5 has a NULL pointer dereference affecting both clients and servers, via a known token with no accompanying = character. This occurs in lib/digest-md5/getsubopt.c.",
-      "refs": "https://codeberg.org/gsasl/gsasl/commit/da9b5ae2962b014879e4a406c3b38f25aa70e97a\nhttps://lists.debian.org/debian-security-announce/2026/msg00182.html\nhttps://lists.gnu.org/archive/html/help-gsasl/2026-05/msg00000.html",
-      "source": "NVD",
-      "time": "2026-05-24 14:28:22"
-    },
-    {
-      "cve_id": "CVE-2026-9346",
-      "title": "高危漏洞: CVE-2026-9346 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 10:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Edimax EW-7438RPn up to 1.31. This impacts the function formWirelessTbl of the file /goform/formWirelessTbl of the component webs. Executing a manipulation of the argument submit-url can lead to buffer overflow. The attack may be performed from remote. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_4/4.md\nhttps://vuldb.com/submit/811541\nhttps://vuldb.com/submit/813888",
-      "source": "NVD",
-      "time": "2026-05-24 14:28:15"
-    },
-    {
-      "cve_id": "CVE-2026-9345",
-      "title": "高危漏洞: CVE-2026-9345 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 10:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Edimax EW-7438RPn up to 1.31. This affects the function formWizSurvey of the file /goform/formWizSurvey of the component webs. Performing a manipulation of the argument ssid/manualssid/ip/mask/gateway results in buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_3/3.md\nhttps://vuldb.com/submit/811542\nhttps://vuldb.com/submit/813886",
-      "source": "NVD",
-      "time": "2026-05-24 14:28:11"
-    },
-    {
-      "cve_id": "CVE-2026-9344",
-      "title": "高危漏洞: CVE-2026-9344 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 09:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Edimax EW-7438RPn up to 1.31. The impacted element is an unknown function of the file /goform/formWpsStart of the component webs. Such manipulation of the argument pinCode/wlan-url leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/wudipjq/my_vuln/blob/main/Edimax/vuln_2/2.md\nhttps://vuldb.com/submit/813885\nhttps://vuldb.com/vuln/365307",
-      "source": "NVD",
-      "time": "2026-05-24 14:28:02"
-    },
-    {
-      "cve_id": "CVE-2018-25358",
-      "title": "高危漏洞: CVE-2018-25358 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-24 03:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "D-Link DIR601 2.02NA contains a credential disclosure vulnerability that allows unauthenticated attackers to retrieve sensitive configuration data by manipulating the table_name parameter in POST requests. Attackers can send requests to /my_cgi.cgi with table_name values like admin_user, wireless_settings, and wireless_security to extract administrative credentials and wireless network keys in clear text.",
-      "refs": "http://ca.dlink.com/\nhttp://support.dlink.ca/ProductInfo.aspx?m=DIR-601\nhttps://www.exploit-db.com/exploits/45002",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:52"
-    },
-    {
-      "cve_id": "CVE-2018-25357",
-      "title": "高危漏洞: CVE-2018-25357 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-24 03:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dolibarr ERP CRM 7.0.3 contains a remote code evaluation vulnerability that allows unauthenticated attackers to execute arbitrary code by injecting PHP code through the db_name parameter. Attackers can send a POST request to install/step1.php with malicious PHP code in the db_name parameter, then execute commands via the check.php endpoint using the cmd GET parameter.",
-      "refs": "https://dolibarr.org\nhttps://github.com/Dolibarr/dolibarr\nhttps://www.exploit-db.com/exploits/44964",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:48"
-    },
-    {
-      "cve_id": "CVE-2018-25356",
-      "title": "高危漏洞: CVE-2018-25356 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-24 03:16:55",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SIPp 3.6 and earlier contains a local buffer overflow vulnerability in command-line argument handling that allows local attackers to crash the application or execute arbitrary code. Attackers can trigger the vulnerability by supplying oversized input to the -3pcc, -i, or -log_file parameters, causing strcpy to write beyond buffer boundaries in sipp.cpp.",
-      "refs": "http://sipp.sourceforge.net/\nhttps://github.com/SIPp/sipp/releases\nhttps://www.exploit-db.com/exploits/44962",
-      "source": "NVD",
-      "time": "2026-05-24 05:44:44"
     }
   ]
 }
