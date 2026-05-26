@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-39661",
+      "title": "高危漏洞: CVE-2026-39661 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-26 17:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Magentech SW Core allows PHP Local File Inclusion.\n\nThis issue affects SW Core: from n/a through 1.7.18.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/sw_core/vulnerability/wordpress-sw-core-plugin-1-7-18-local-file-inclusion-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-05-26 22:43:21"
+    },
+    {
+      "cve_id": "CVE-2026-25713",
+      "title": "高危漏洞: CVE-2026-25713 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-26 17:16:19",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "MediaArea MediaInfoLib ID3v2 parsing heap buffer overflow vulnerability",
+      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2368\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2368",
+      "source": "NVD",
+      "time": "2026-05-26 22:43:15"
+    },
+    {
+      "cve_id": "CVE-2026-25104",
+      "title": "高危漏洞: CVE-2026-25104 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-26 17:16:19",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "MediaArea MediaInfoLib LXF parsing heap-based buffer overflow vulnerability",
+      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2367\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2367",
+      "source": "NVD",
+      "time": "2026-05-26 22:43:08"
+    },
+    {
+      "cve_id": "CVE-2026-8047",
+      "title": "高危漏洞: CVE-2026-8047 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-26 16:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The affected products perform improper length checking when parsing incoming HTTP requests, resulting in a size-limited out-of-bounds write. An unauthenticated remote attacker can exploit this flaw to cause a denial of service via a system crash on the affected device.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-057/",
+      "source": "NVD",
+      "time": "2026-05-26 22:43:03"
+    },
+    {
+      "cve_id": "CVE-2026-8046",
+      "title": "高危漏洞: CVE-2026-8046 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-26 16:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The affected products insufficiently verify authorization when deleting user accounts. An authenticated, low-privileged remote user can exploit this vulnerability to delete other users, including those with higher privileges.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-056/",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:57"
+    },
+    {
+      "cve_id": "CVE-2026-44469",
+      "title": "高危漏洞: CVE-2026-44469 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-26 16:16:22",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The affected product extracts installation files to a temporary directory with incorrect default permissions during administrative installation. A low-privileged local attacker can exploit a TOCTOU race condition with a practical time window to replace verified files with malicious ones before installation, resulting in local privilege escalation.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-055/",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:52"
+    },
+    {
+      "cve_id": "CVE-2026-44468",
+      "title": "高危漏洞: CVE-2026-44468 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-26 16:16:21",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The affected product creates a directory with insecure default permissions during administrative installation. This allows a low-privileged local attacker to modify a temporary file defining the components to be installed, enabling local privilege escalation by forcing the deployment of arbitrary components.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-055/",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:46"
+    },
+    {
+      "cve_id": "CVE-2026-9496",
+      "title": "高危漏洞: CVE-2026-9496 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-26 15:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Versions of the package pacote from 11.2.7 are vulnerable to Denial of Service (DoS) via the addGitSha function. An attacker can exploit this vulnerability by supplying a specially crafted spec.rawSpec value that triggers the function’s regex replacement and string-manipulation logic,  causing excessive CPU consumption and potentially stalling or crashing the process.",
+      "refs": "https://github.com/npm/pacote/blob/9d7459440826ab4cf962ef98d8f3fd0c4d464b5c/lib/util/add-git-sha.js%23L2C1-L13C2\nhttps://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-16874025\nhttps://security.snyk.io/vuln/SNYK-JS-PACOTE-8225084",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:41"
+    },
+    {
+      "cve_id": "CVE-2026-9495",
+      "title": "高危漏洞: CVE-2026-9495 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 15:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Versions of the package @koa/router from 14.0.0 and before 15.0.0 are vulnerable to Access Control Bypass due to the middleware being silently dropped from the execution chain when the router prefix contains path parameters. Depending on what the skipped middleware was supposed to protect, an attacker could bypass authentication and authorization, evade rate limiting or bypass input sanitization.",
+      "refs": "https://github.com/koajs/router/commit/d53e17f284557b1f417946f9807ee52290c3c759\nhttps://github.com/koajs/router/issues/202\nhttps://github.com/koajs/router/pull/206",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:33"
+    },
+    {
+      "cve_id": "CVE-2026-9528",
+      "title": "高危漏洞: CVE-2026-9528 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 13:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in itsourcecode Electronic Judging System 1.0. Impacted is an unknown function of the file /admin/delete_judge.php. Such manipulation of the argument judge_id leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/zulu225588/zulu-loudong/issues/4\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/814738",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:24"
+    },
+    {
+      "cve_id": "CVE-2026-9526",
+      "title": "高危漏洞: CVE-2026-9526 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 13:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in itsourcecode Electronic Judging System 1.0. This vulnerability affects unknown code of the file /admin/edit_team.php. The manipulation of the argument num_id results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/i-QvQ-i/first-OvO/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/814714",
+      "source": "NVD",
+      "time": "2026-05-26 22:42:15"
+    },
+    {
       "cve_id": "CVE-2026-9525",
       "title": "高危漏洞: CVE-2026-9525 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_334/README.md\nhttps://vuldb.com/submit/813433\nhttps://vuldb.com/vuln/365350",
       "source": "NVD",
       "time": "2026-05-25 03:01:10"
-    },
-    {
-      "cve_id": "CVE-2026-9386",
-      "title": "高危漏洞: CVE-2026-9386 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-24 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Totolink A8000RU 7.1cu.643_b20200521. Impacted is the function setLanguageCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Such manipulation of the argument lang leads to os command injection. The attack may be performed from remote. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_333/README.md\nhttps://vuldb.com/submit/813432\nhttps://vuldb.com/vuln/365349",
-      "source": "NVD",
-      "time": "2026-05-25 03:01:05"
-    },
-    {
-      "cve_id": "CVE-2026-9385",
-      "title": "高危漏洞: CVE-2026-9385 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-24 22:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Totolink A8000RU 7.1cu.643_b20200521. This issue affects the function setTracerouteCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. This manipulation of the argument command causes os command injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_332/README.md\nhttps://vuldb.com/submit/813431\nhttps://vuldb.com/vuln/365348",
-      "source": "NVD",
-      "time": "2026-05-25 03:01:01"
-    },
-    {
-      "cve_id": "CVE-2026-9384",
-      "title": "高危漏洞: CVE-2026-9384 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-24 22:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Totolink A8000RU 7.1cu.643_b20200521. This vulnerability affects the function setDiagnosisCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. The manipulation of the argument ip results in os command injection. The attack can be executed remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/Litengzheng/vuldb_new2/blob/main/A8000RU/vul_331/README.md\nhttps://vuldb.com/submit/813429\nhttps://vuldb.com/vuln/365347",
-      "source": "NVD",
-      "time": "2026-05-25 03:00:55"
-    },
-    {
-      "cve_id": "CVE-2026-9383",
-      "title": "高危漏洞: CVE-2026-9383 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 22:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in itsourcecode Electronic Judging System 1.0. This affects an unknown part of the file /intrams/admin/login.php. The manipulation of the argument Username leads to sql injection. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/nidieaaa/test/issues/11\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/813427",
-      "source": "NVD",
-      "time": "2026-05-25 03:00:50"
-    },
-    {
-      "cve_id": "CVE-2026-4372",
-      "title": "高危漏洞: CVE-2026-4372 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-24 22:16:16",
-      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A critical remote code execution vulnerability exists in all versions of the HuggingFace transformers library prior to version 5.3.0. The vulnerability allows an attacker to craft a malicious `config.json` file containing the `_attn_implementation_internal` field set to an attacker-controlled HuggingFace Hub repository ID. When a victim loads this model using the standard `AutoModelForCausalLM.from_pretrained()` API, the library downloads and executes arbitrary Python code from the attacker's repository with the victim's full OS privileges. This issue arises due to unfiltered deserialization of configuration attributes, insufficient sanitization of internal fields, and unsandboxed execution of downloaded kernels. The vulnerability bypasses the `trust_remote_code` security mechanism, is invisible to the victim, and exploits the standard documented usage pattern, making it particularly severe. Users are advised to upgrade to version 5.3.0 or later to mitigate this issue.",
-      "refs": "https://github.com/huggingface/transformers/commit/a7f8e7ff37d87d1a1a0c8cf607971c607741452f\nhttps://huntr.com/bounties/1f693a6e-6836-4b8b-a0bd-ca036fba8884",
-      "source": "NVD",
-      "time": "2026-05-25 03:00:44"
-    },
-    {
-      "cve_id": "CVE-2026-9382",
-      "title": "高危漏洞: CVE-2026-9382 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 21:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Edimax BR-6675nD 1.12. Affected by this issue is the function formPPTPSetup of the file /goform/formPPTPSetup of the component POST Request Handler. Executing a manipulation of the argument pptpUserName can lead to buffer overflow. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formPPTPSetup-34b53a41781f80e6ab7df78a28ffe568?source=copy_link\nhttps://vuldb.com/submit/811560\nhttps://vuldb.com/vuln/365345",
-      "source": "NVD",
-      "time": "2026-05-24 23:55:05"
-    },
-    {
-      "cve_id": "CVE-2026-9381",
-      "title": "高危漏洞: CVE-2026-9381 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 21:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Edimax BR-6675nD 1.12. Affected by this vulnerability is the function formPPPoESetup of the file /goform/formPPPoESetup of the component POST Request Handler. Performing a manipulation of the argument pppUserName results in buffer overflow. The attack may be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formPPPoESetup-34b53a41781f803faf50d4caf940d2dc?source=copy_link\nhttps://vuldb.com/submit/811559\nhttps://vuldb.com/vuln/365344",
-      "source": "NVD",
-      "time": "2026-05-24 23:54:57"
-    },
-    {
-      "cve_id": "CVE-2026-9380",
-      "title": "高危漏洞: CVE-2026-9380 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 21:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Edimax BR-6675nD 1.12. Affected is the function formL2TPSetup of the file /goform/formL2TPSetup of the component POST Request Handler. Such manipulation of the argument L2TPUserName leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR-6675nD-formL2TPSetup-34b53a41781f805abdfbdcbe930ad70a?source=copy_link\nhttps://vuldb.com/submit/811558\nhttps://vuldb.com/vuln/365343",
-      "source": "NVD",
-      "time": "2026-05-24 23:54:51"
-    },
-    {
-      "cve_id": "CVE-2026-9372",
-      "title": "高危漏洞: CVE-2026-9372 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 19:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in ItzCrazyKns Vane up to 1.12.1. This vulnerability affects unknown code of the file src/app/api/providers/route.ts of the component Model Provider API. This manipulation of the argument baseURL causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/ItzCrazyKns/Vane/\nhttps://github.com/ItzCrazyKns/Vane/issues/1124\nhttps://vuldb.com/submit/813211",
-      "source": "NVD",
-      "time": "2026-05-24 20:59:38"
-    },
-    {
-      "cve_id": "CVE-2026-9368",
-      "title": "高危漏洞: CVE-2026-9368 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 17:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in NousResearch hermes-agent up to 2026.4.16. This impacts the function execute_code of the file tools/code_execution_tool.py of the component Environment Variable Handler. Such manipulation leads to sandbox issue. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/43c72d19668421abe8ce10f299323a0a\nhttps://vuldb.com/submit/812229\nhttps://vuldb.com/vuln/365331",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:40"
-    },
-    {
-      "cve_id": "CVE-2026-9367",
-      "title": "高危漏洞: CVE-2026-9367 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 17:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in NousResearch hermes-agent up to 5157f5427f19488b31c6fdebbacd15d798ce7f63. This affects the function detect_dangerous_command of the file tools/approval.py of the component terminal_tool. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/75fb10319693e86106ced2ef3a472c80\nhttps://vuldb.com/submit/812228\nhttps://vuldb.com/vuln/365330",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:34"
     }
   ]
 }
