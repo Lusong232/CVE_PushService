@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9525",
+      "title": "高危漏洞: CVE-2026-9525 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 12:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in itsourcecode Electronic Judging System 1.0. This affects an unknown part of the file /admin/edit_judge.php. The manipulation of the argument judge_id leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/i-QvQ-i/first-OvO/issues/3\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/814713",
+      "source": "NVD",
+      "time": "2026-05-26 14:37:57"
+    },
+    {
+      "cve_id": "CVE-2026-9523",
+      "title": "高危漏洞: CVE-2026-9523 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 12:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Acrel Electrical EEMS Enterprise Power Operation and Maintenance Cloud Platform 3000WEBV2. Affected by this vulnerability is an unknown functionality of the file /SubstationWEBV2/app/..;/calc/getCalcmeterDetailDayListTree. Performing a manipulation of the argument sort results in sql injection. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/NpZHw0lypi6ztJkWLNxcGKR5nlb?from=from_copylink\nhttps://vuldb.com/submit/814539\nhttps://vuldb.com/vuln/365542",
+      "source": "NVD",
+      "time": "2026-05-26 14:37:53"
+    },
+    {
+      "cve_id": "CVE-2026-9521",
+      "title": "高危漏洞: CVE-2026-9521 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 10:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in fraillt bitsery up to 5.2.4. Affected is the function loadFromSharedState in the library include/bitsery/ext/std_smart_ptr.h. Such manipulation leads to improper validation of specified type of input. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 5.2.5 is able to address this issue. The name of the patch is 66d16516e24893bebc1c8af52bf2fe9ad0735061. Upgrading the affected component is advised.",
+      "refs": "https://gist.github.com/TrebledJ/750abc64a826f19dd2d6774724629b71\nhttps://github.com/fraillt/bitsery/\nhttps://github.com/fraillt/bitsery/blob/master/CHANGELOG.md#525-2025-10-09",
+      "source": "NVD",
+      "time": "2026-05-26 14:37:48"
+    },
+    {
+      "cve_id": "CVE-2026-9517",
+      "title": "高危漏洞: CVE-2026-9517 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-26 08:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in hemant6488 CodeIgniter-StudentManagementSystem. The affected element is an unknown function of the file /index.php/students/addStudentView of the component Student Management Handler. Executing a manipulation can lead to improper access controls. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/hemant6488/CodeIgniter-StudentManagementSystem/\nhttps://github.com/hemant6488/CodeIgniter-StudentManagementSystem/issues/5\nhttps://vuldb.com/submit/814277",
+      "source": "NVD",
+      "time": "2026-05-26 14:37:43"
+    },
+    {
       "cve_id": "CVE-2026-48837",
       "title": "高危漏洞: CVE-2026-48837 (CVSS 8.5)",
       "cvss_score": 8.5,
@@ -1055,50 +1099,6 @@
       "refs": "https://gist.github.com/YLChen-007/75fb10319693e86106ced2ef3a472c80\nhttps://vuldb.com/submit/812228\nhttps://vuldb.com/vuln/365330",
       "source": "NVD",
       "time": "2026-05-24 18:26:34"
-    },
-    {
-      "cve_id": "CVE-2026-9366",
-      "title": "高危漏洞: CVE-2026-9366 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 17:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in NousResearch hermes-agent 2026.4.23. The impacted element is the function _scan_context_content of the file agent/prompt_builder.py. The manipulation results in injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/YLChen-007/581fd92de5548fbaacb2092e848a75cc\nhttps://vuldb.com/submit/812227\nhttps://vuldb.com/vuln/365329",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:30"
-    },
-    {
-      "cve_id": "CVE-2026-9364",
-      "title": "高危漏洞: CVE-2026-9364 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 17:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in projectworlds Online Art Gallery Shop 1.0. Impacted is an unknown function of the file /admin/adminHome.php. Executing a manipulation of the argument social_linked can lead to sql injection. The attack can be executed remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/Quafather/cve/issues/1\nhttps://vuldb.com/submit/813133\nhttps://vuldb.com/vuln/365327",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:24"
-    },
-    {
-      "cve_id": "CVE-2026-9360",
-      "title": "高危漏洞: CVE-2026-9360 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-24 16:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in Edimax EW-7438RPn 1.28a. Affected by this issue is the function formwlencrypt24g of the file /goform/formwlencrypt24g of the component POST Request Handler. The manipulation of the argument key1 results in buffer overflow. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7438RPn-Mini-formwlencrypt24g-34b53a41781f808c99bcd687b351750b?source=copy_link\nhttps://vuldb.com/submit/811544\nhttps://vuldb.com/vuln/365323",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:18"
-    },
-    {
-      "cve_id": "CVE-2026-9356",
-      "title": "高危漏洞: CVE-2026-9356 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-24 14:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in SourceCodester Hospitals Patient Records Management System 1.0. This affects an unknown function of the file /admin/patients/manage_history.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/yan-124/yan/issues/1\nhttps://vuldb.com/submit/813022\nhttps://vuldb.com/vuln/365319",
-      "source": "NVD",
-      "time": "2026-05-24 18:26:13"
     }
   ]
 }
