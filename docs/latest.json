@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9584",
+      "title": "高危漏洞: CVE-2026-9584 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-27 06:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Project Management System 1.0. Affected is an unknown function of the file chk.php of the component Login. The manipulation leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/MyMySSS/CVE123/blob/main/cve3/CVE_Submission.md\nhttps://vuldb.com/submit/817933",
+      "source": "NVD",
+      "time": "2026-05-27 10:31:27"
+    },
+    {
+      "cve_id": "CVE-2026-5260",
+      "title": "高危漏洞: CVE-2026-5260 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-27 06:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+      "description": "A flaw was found in libgnutls. A remote attacker, by sending an extremely short premaster secret during an RSA key exchange to a server using an RSA key backed by a PKCS#11 token, could trigger a short heap overread. This memory corruption vulnerability could lead to information disclosure.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-5260\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2467450",
+      "source": "NVD",
+      "time": "2026-05-27 10:31:23"
+    },
+    {
+      "cve_id": "CVE-2026-45574",
+      "title": "高危漏洞: CVE-2026-45574 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-27 06:16:43",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "epa4all-client is the Java Client for epa4all / ePA 3.0 in the Telematik Infrastruktur. Prior to 1.2.2, an attacker on the network path between the ePA service and the Konnektor can present any TLS certificate (self-signed, expired, wrong CN) and intercept all SOAP traffic. This includes patient identifiers (KVNR), SMC-B card operations (authentication, signing), document content, and credential exchanges. This vulnerability is fixed in 1.2.2.",
+      "refs": "https://github.com/oviva-ag/epa4all-client/pull/36\nhttps://github.com/oviva-ag/epa4all-client/security/advisories/GHSA-5hhf-xmfx-4vvr",
+      "source": "NVD",
+      "time": "2026-05-27 10:31:19"
+    },
+    {
+      "cve_id": "CVE-2026-45298",
+      "title": "高危漏洞: CVE-2026-45298 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-27 06:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Dozzle is a realtime log viewer for docker containers. Prior to 10.5.2, in a default dozzle deploy (the documented quickstart, no DOZZLE_AUTH_PROVIDER set), POST /api/notifications/test-webhook is reachable without authentication and forwards an attacker-controlled URL into a WebhookDispatcher that sends an HTTP POST to the supplied URL with attacker-controlled request headers, and returns the response status code AND up to 1MB of the response body to the caller, when the target replies non-2xx. This vulnerability is fixed in 10.5.2.",
+      "refs": "https://github.com/amir20/dozzle/releases/tag/v10.5.2\nhttps://github.com/amir20/dozzle/security/advisories/GHSA-3v9w-6365-9w54",
+      "source": "NVD",
+      "time": "2026-05-27 10:31:15"
+    },
+    {
+      "cve_id": "CVE-2026-44983",
+      "title": "高危漏洞: CVE-2026-44983 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-27 06:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "smallbitvec is a growable bit-vector for Rust, optimized for size. From 1.0.1 to 2.6.0, an integer overflow in the internal capacity calculation of smallbitvec can lead to an undersized heap allocation, resulting in a heap buffer overflow through safe APIs only. This allows memory corruption without requiring unsafe code from the caller. This vulnerability is fixed in 2.6.1.",
+      "refs": "https://github.com/servo/smallbitvec/security/advisories/GHSA-97wc-2hqc-cjgr",
+      "source": "NVD",
+      "time": "2026-05-27 10:31:10"
+    },
+    {
+      "cve_id": "CVE-2026-44966",
+      "title": "高危漏洞: CVE-2026-44966 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-05-27 06:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "Velocity.js is a JavaScript implementation of the Apache Velocity template engine. In 2.1.5 and earlier, a prototype pollution vulnerability was discovered in velocityjs. This issue occurs during the processing of #set directives in Velocity templates. If an application renders a template controlled by an attacker, it is possible to modify Object.prototype, potentially leading to Denial of Service (DoS) or Remote Code Execution (RCE) depending on the server environment.",
+      "refs": "https://github.com/shepherdwind/velocity.js/security/advisories/GHSA-j658-c2gf-x6pq",
+      "source": "NVD",
+      "time": "2026-05-27 10:31:03"
+    },
+    {
+      "cve_id": "CVE-2026-44905",
+      "title": "高危漏洞: CVE-2026-44905 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-27 06:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Vanetza is an open-source implementation of the ETSI C-ITS protocol suite. In 26.02 and earlier, a denial-of-service vulnerability was identified in the cryptographic verification pipeline of Vanetza. When processing incoming V2X messages, the ASN.1 decoder accepts the structure as syntactically valid. However, this reveals a logic-based protocol failure where semantic constraints on specific fields are only strictly enforced during OER re-encoding. Specifically, if a crafted packet contains a certificate where the Psid (Provider Service Identifier) sub-type violates subtype constraints (e.g., out-of-range or invalid CHOICE variant), it is accepted during initial parsing, where subtype constraints are not enforced. Later, when StraightVerifyService attempts to calculate a message hash for cryptographic verification, it must re-encode the signing certificate. The underlying ASN.1 wrapper (asn1c_wrapper.cpp) detects the semantic violation during encoding and raises a std::runtime_error. This exception is not caught within the encoding path and propagates to std::terminate, resulting in immediate process termination. This vulnerability is fixed with commit e1a2e2709210d309458c3d77f98d50dec26c0df0.",
+      "refs": "https://github.com/riebl/vanetza/commit/e1a2e2709210d309458c3d77f98d50dec26c0df0\nhttps://github.com/riebl/vanetza/security/advisories/GHSA-q9fq-3rx9-7xcv",
+      "source": "NVD",
+      "time": "2026-05-27 10:30:58"
+    },
+    {
+      "cve_id": "CVE-2026-44900",
+      "title": "高危漏洞: CVE-2026-44900 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-27 06:16:42",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "epa4all-client is the Java Client for epa4all / ePA 3.0 in the Telematik Infrastruktur. Prior to 1.2.1, in  SignedPublicKeysTrustValidatorImpl.isTrusted(), the ECDSA signature verification at line 45 discards the boolean return value of Signature.verify(). The method performs certificate chain validation, OCSP check, and signature algorithm setup, but never checks whether the signature actually matches. For any structurally valid signature, it returns true.  This vulnerability is fixed in 1.2.1.",
+      "refs": "https://github.com/oviva-ag/epa4all-client/pull/34\nhttps://github.com/oviva-ag/epa4all-client/security/advisories/GHSA-g8r3-5hwf-qp96",
+      "source": "NVD",
+      "time": "2026-05-27 10:30:51"
+    },
+    {
+      "cve_id": "CVE-2026-43988",
+      "title": "高危漏洞: CVE-2026-43988 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-27 06:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Vanetza is an open-source implementation of the ETSI C-ITS protocol suite. In 26.02 and earlier, a denial-of-service vulnerability was identified in the ASN.1/OER parsing pipeline of Vanetza. When processing malformed network packets containing corrupted ASN.1/OER structures (e.g., invalid length fields or malformed certificate encoding), the ASN.1 wrapper (asn1c_wrapper.cpp) raises a std::runtime_error. This exception is not caught at the parsing boundary and propagates to std::terminate, resulting in process termination. This vulnerability is fixed with commit 62dfe58a8342512b6e1947d75821402ada524f1a.",
+      "refs": "https://github.com/riebl/vanetza/commit/62dfe58a8342512b6e1947d75821402ada524f1a\nhttps://github.com/riebl/vanetza/security/advisories/GHSA-j6cj-rp87-mfrx",
+      "source": "NVD",
+      "time": "2026-05-27 10:30:47"
+    },
+    {
+      "cve_id": "CVE-2026-42013",
+      "title": "高危漏洞: CVE-2026-42013 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-05-27 06:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "A flaw was found in gnutls. When validating certificates, an oversized Subject Alternative Name (SAN) could cause the validation process to incorrectly fall back to checking the Common Name (CN) field. This could allow a remote attacker to bypass proper certificate validation, potentially leading to spoofing or man-in-the-middle attacks.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-42013\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2467448",
+      "source": "NVD",
+      "time": "2026-05-27 10:30:42"
+    },
+    {
+      "cve_id": "CVE-2026-42012",
+      "title": "高危漏洞: CVE-2026-42012 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-27 06:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N",
+      "description": "A flaw was found in gnutls. A remote attacker could exploit this vulnerability by presenting a specially crafted certificate that contains Uniform Resource Identifier (URI) or Service (SRV) Subject Alternative Names (SANs). This could cause the certificate validation process to incorrectly fall back to checking DNS hostnames against the Common Name (CN), potentially allowing the attacker to spoof legitimate services or intercept sensitive information.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-42012\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2467441",
+      "source": "NVD",
+      "time": "2026-05-27 10:30:38"
+    },
+    {
       "cve_id": "CVE-2026-9642",
       "title": "高危漏洞: CVE-2026-9642 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -978,127 +1099,6 @@
       "refs": "https://br-cws-assets.de-fra-1.linodeobjects.com/SA25P006-0eec719c.pdf",
       "source": "NVD",
       "time": "2026-05-27 01:51:15"
-    },
-    {
-      "cve_id": "CVE-2026-39661",
-      "title": "高危漏洞: CVE-2026-39661 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-26 17:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Magentech SW Core allows PHP Local File Inclusion.\n\nThis issue affects SW Core: from n/a through 1.7.18.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/sw_core/vulnerability/wordpress-sw-core-plugin-1-7-18-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-26 22:43:21"
-    },
-    {
-      "cve_id": "CVE-2026-25713",
-      "title": "高危漏洞: CVE-2026-25713 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-26 17:16:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "MediaArea MediaInfoLib ID3v2 parsing heap buffer overflow vulnerability",
-      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2368\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2368",
-      "source": "NVD",
-      "time": "2026-05-26 22:43:15"
-    },
-    {
-      "cve_id": "CVE-2026-25104",
-      "title": "高危漏洞: CVE-2026-25104 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-26 17:16:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "MediaArea MediaInfoLib LXF parsing heap-based buffer overflow vulnerability",
-      "refs": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2367\nhttps://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2367",
-      "source": "NVD",
-      "time": "2026-05-26 22:43:08"
-    },
-    {
-      "cve_id": "CVE-2026-8047",
-      "title": "高危漏洞: CVE-2026-8047 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-26 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The affected products perform improper length checking when parsing incoming HTTP requests, resulting in a size-limited out-of-bounds write. An unauthenticated remote attacker can exploit this flaw to cause a denial of service via a system crash on the affected device.",
-      "refs": "https://www.certvde.com/en/advisories/VDE-2026-057/",
-      "source": "NVD",
-      "time": "2026-05-26 22:43:03"
-    },
-    {
-      "cve_id": "CVE-2026-8046",
-      "title": "高危漏洞: CVE-2026-8046 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-26 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The affected products insufficiently verify authorization when deleting user accounts. An authenticated, low-privileged remote user can exploit this vulnerability to delete other users, including those with higher privileges.",
-      "refs": "https://www.certvde.com/en/advisories/VDE-2026-056/",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:57"
-    },
-    {
-      "cve_id": "CVE-2026-44469",
-      "title": "高危漏洞: CVE-2026-44469 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-26 16:16:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The affected product extracts installation files to a temporary directory with incorrect default permissions during administrative installation. A low-privileged local attacker can exploit a TOCTOU race condition with a practical time window to replace verified files with malicious ones before installation, resulting in local privilege escalation.",
-      "refs": "https://www.certvde.com/en/advisories/VDE-2026-055/",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:52"
-    },
-    {
-      "cve_id": "CVE-2026-44468",
-      "title": "高危漏洞: CVE-2026-44468 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-26 16:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The affected product creates a directory with insecure default permissions during administrative installation. This allows a low-privileged local attacker to modify a temporary file defining the components to be installed, enabling local privilege escalation by forcing the deployment of arbitrary components.",
-      "refs": "https://www.certvde.com/en/advisories/VDE-2026-055/",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:46"
-    },
-    {
-      "cve_id": "CVE-2026-9496",
-      "title": "高危漏洞: CVE-2026-9496 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-26 15:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Versions of the package pacote from 11.2.7 are vulnerable to Denial of Service (DoS) via the addGitSha function. An attacker can exploit this vulnerability by supplying a specially crafted spec.rawSpec value that triggers the function’s regex replacement and string-manipulation logic,  causing excessive CPU consumption and potentially stalling or crashing the process.",
-      "refs": "https://github.com/npm/pacote/blob/9d7459440826ab4cf962ef98d8f3fd0c4d464b5c/lib/util/add-git-sha.js%23L2C1-L13C2\nhttps://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-16874025\nhttps://security.snyk.io/vuln/SNYK-JS-PACOTE-8225084",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:41"
-    },
-    {
-      "cve_id": "CVE-2026-9495",
-      "title": "高危漏洞: CVE-2026-9495 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-26 15:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Versions of the package @koa/router from 14.0.0 and before 15.0.0 are vulnerable to Access Control Bypass due to the middleware being silently dropped from the execution chain when the router prefix contains path parameters. Depending on what the skipped middleware was supposed to protect, an attacker could bypass authentication and authorization, evade rate limiting or bypass input sanitization.",
-      "refs": "https://github.com/koajs/router/commit/d53e17f284557b1f417946f9807ee52290c3c759\nhttps://github.com/koajs/router/issues/202\nhttps://github.com/koajs/router/pull/206",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:33"
-    },
-    {
-      "cve_id": "CVE-2026-9528",
-      "title": "高危漏洞: CVE-2026-9528 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-26 13:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in itsourcecode Electronic Judging System 1.0. Impacted is an unknown function of the file /admin/delete_judge.php. Such manipulation of the argument judge_id leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/zulu225588/zulu-loudong/issues/4\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/814738",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:24"
-    },
-    {
-      "cve_id": "CVE-2026-9526",
-      "title": "高危漏洞: CVE-2026-9526 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-26 13:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in itsourcecode Electronic Judging System 1.0. This vulnerability affects unknown code of the file /admin/edit_team.php. The manipulation of the argument num_id results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/i-QvQ-i/first-OvO/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/submit/814714",
-      "source": "NVD",
-      "time": "2026-05-26 22:42:15"
     }
   ]
 }
