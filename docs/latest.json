@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-2253",
+      "title": "高危漏洞: CVE-2026-2253 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-27 12:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Hitachi Vantara Pentaho Data Integration & Analytics versions before 10.2.0.7 and 11.0.0.0, including 9.3.x and 8.3.x, does not prevent certain XML parsers from resolving external entities.",
+      "refs": "https://support.pentaho.com/hc/en-us/articles/45677548193933--Resolved-Hitachi-Vantara-Pentaho-Data-Integration-Analytics-Improper-Restriction-of-XML-External-Entity-Reference-Versions-before-10-2-0-7-and-11-0-0-0-Impacted-CVE-2026-2253",
+      "source": "NVD",
+      "time": "2026-05-27 14:55:06"
+    },
+    {
+      "cve_id": "CVE-2026-9632",
+      "title": "高危漏洞: CVE-2026-9632 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-27 10:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in UTT HiPER 1250GW up to 3.2.7-210907-180535. Affected by this issue is the function strcpy of the file /goform/formGroupConfig of the component Web Management Interface. Executing a manipulation of the argument Profile can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/luozhibo-sec/cve/blob/main/12.md\nhttps://vuldb.com/submit/818383\nhttps://vuldb.com/vuln/365741",
+      "source": "NVD",
+      "time": "2026-05-27 14:55:01"
+    },
+    {
+      "cve_id": "CVE-2026-9631",
+      "title": "高危漏洞: CVE-2026-9631 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-27 10:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in UTT HiPER 1250GW up to 3.2.7-210907-180535. Affected by this vulnerability is the function strcpy of the file /goform/formConfigFastDirectionW of the component Web Management Interface. Performing a manipulation of the argument Profile results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/zhouguobing-maker/cve/blob/main/11.md\nhttps://vuldb.com/submit/818375\nhttps://vuldb.com/vuln/365740",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:56"
+    },
+    {
+      "cve_id": "CVE-2026-9628",
+      "title": "高危漏洞: CVE-2026-9628 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-27 10:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in UTT HiPER 1200GW up to 2.5.3-170306. Affected is an unknown function of the file /goform/formPptpClientConfig of the component Web Management Interface. This manipulation of the argument PPTP server address/username/password/tunnel name causes stack-based buffer overflow. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/luozhibo-sec/cve/blob/main/10.md\nhttps://vuldb.com/submit/818380\nhttps://vuldb.com/vuln/365684",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:51"
+    },
+    {
+      "cve_id": "CVE-2026-9627",
+      "title": "高危漏洞: CVE-2026-9627 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-27 10:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in UTT HiPER 1200GW up to 2.5.3-170306. This impacts the function strcpy of the file /goform/setSysAdm of the component Web Management Interface. The manipulation of the argument sysAdmUser/sysAdmPass results in buffer overflow. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/zhouguobing-maker/cve/blob/main/9.md\nhttps://vuldb.com/submit/818374\nhttps://vuldb.com/vuln/365683",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:47"
+    },
+    {
+      "cve_id": "CVE-2026-9207",
+      "title": "高危漏洞: CVE-2026-9207 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-27 10:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Tanium addressed an unauthorized code execution vulnerability in Connect.",
+      "refs": "https://security.tanium.com/TAN-2026-014",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:42"
+    },
+    {
+      "cve_id": "CVE-2026-49014",
+      "title": "高危漏洞: CVE-2026-49014 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-27 10:16:34",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver allows code execution via a stack-based buffer overflow. It reads a geometry attribute into a fixed-size stack buffer without validating the attribute length. The attacker embeds the exploit as an oversized geometry attribute in a crafted NetCDF file. This achieves arbitrary code execution on the server running GDAL. This is in frmts/netcdf/netcdfsg.cpp.",
+      "refs": "https://github.com/OSGeo/gdal/issues/14594",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:37"
+    },
+    {
+      "cve_id": "CVE-2026-9606",
+      "title": "高危漏洞: CVE-2026-9606 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-27 08:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in itsourcecode Courier Management System 1.0. Impacted is an unknown function of the file /manage_user.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://itsourcecode.com/\nhttps://lhzzz08.github.io/posts/cveapplication3/\nhttps://vuldb.com/submit/818198",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:30"
+    },
+    {
+      "cve_id": "CVE-2026-9605",
+      "title": "高危漏洞: CVE-2026-9605 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-27 08:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in GNU libredwg up to 0.13.4.8160. This issue affects the function bit_read_RC of the file bits.c of the component Dwgbmp Utility. This manipulation causes heap-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been published and may be used. Patch name: 8f03865f37f5d4ffd616fef802acc980be54d300. Applying a patch is the recommended action to fix this issue.",
+      "refs": "https://github.com/HackC0der/CVE-Repos/blob/main/libredwg/libredwg_6d6a339_heap_oob_write_read_2004_compressed_section.dwg\nhttps://github.com/LibreDWG/libredwg/commit/8f03865f37f5d4ffd616fef802acc980be54d300\nhttps://github.com/LibreDWG/libredwg/issues/1248",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:24"
+    },
+    {
+      "cve_id": "CVE-2025-46284",
+      "title": "高危漏洞: CVE-2025-46284 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-05-27 06:16:41",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A race condition was addressed with additional validation. This issue is fixed in macOS Sequoia 15.7, macOS Tahoe 26. An app may be able to gain root privileges.",
+      "refs": "https://support.apple.com/en-us/125110\nhttps://support.apple.com/en-us/125111",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:19"
+    },
+    {
+      "cve_id": "CVE-2025-43306",
+      "title": "高危漏洞: CVE-2025-43306 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-27 06:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A logic issue was addressed with improved checks. This issue is fixed in macOS Sequoia 15.7, macOS Sonoma 14.8, macOS Tahoe 26. A malicious app may be able to gain root privileges.",
+      "refs": "https://support.apple.com/en-us/125110\nhttps://support.apple.com/en-us/125111\nhttps://support.apple.com/en-us/125112",
+      "source": "NVD",
+      "time": "2026-05-27 14:54:14"
+    },
+    {
       "cve_id": "CVE-2026-9584",
       "title": "高危漏洞: CVE-2026-9584 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/karakeep-app/karakeep/security/advisories/GHSA-g647-327m-79g9",
       "source": "NVD",
       "time": "2026-05-27 01:52:09"
-    },
-    {
-      "cve_id": "CVE-2026-42785",
-      "title": "高危漏洞: CVE-2026-42785 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-26 23:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenKM 6.3.12 contains a remote code execution vulnerability that allows authenticated administrators to execute arbitrary Java/BeanShell code through the /admin/Scripting endpoint. Attackers can submit malicious script content with an action=Evaluate parameter to execute operating system commands in the context of the OpenKM application server.",
-      "refs": "https://github.com/terrasystemlabs/Exploits/tree/main/OpenKM-Exploits\nhttps://github.com/terrasystemlabs/Exploits/tree/main/OpenKM-Exploits/nuclei-templates/openkm-remote-code-execution\nhttps://hub.docker.com/r/openkm/openkm-ce",
-      "source": "NVD",
-      "time": "2026-05-27 01:52:05"
-    },
-    {
-      "cve_id": "CVE-2026-42425",
-      "title": "高危漏洞: CVE-2026-42425 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-26 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenKM 6.3.12 contains an unrestricted SQL execution vulnerability that allows authenticated administrative users to execute arbitrary SQL statements against the application database via the DatabaseQuery interface. Attackers can submit malicious SQL queries through the qs parameter to the /admin/DatabaseQuery endpoint to extract sensitive data including usernames and password hashes from the OKM_USER table, modify permissions, or delete database records.",
-      "refs": "https://github.com/terrasystemlabs/Exploits/tree/main/OpenKM-Exploits\nhttps://github.com/terrasystemlabs/Exploits/tree/main/OpenKM-Exploits/nuclei-templates/openkm-sql-database-query\nhttps://hub.docker.com/r/openkm/openkm-ce",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:59"
-    },
-    {
-      "cve_id": "CVE-2026-40034",
-      "title": "高危漏洞: CVE-2026-40034 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-26 23:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "gix-submodule before 0.82.0 incorrectly validates the update field in .gitmodules, allowing attackers to bypass the CommandForbiddenInModulesConfiguration guard when a submodule has been initialized with only partial configuration in .git/config. An attacker can inject arbitrary shell commands via the update field in .gitmodules that will be executed when Submodule::update() is called on a previously-initialized submodule, enabling remote code execution.",
-      "refs": "https://github.com/GitoxideLabs/gitoxide/commit/6a2e6a436f76c8bbf2487f9967413a51356667a0\nhttps://github.com/GitoxideLabs/gitoxide/commit/dd5c18d9e526e8de462fa40aa047acd097cfa7dc\nhttps://github.com/GitoxideLabs/gitoxide/security/advisories/GHSA-f26g-jm89-4g65",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:54"
-    },
-    {
-      "cve_id": "CVE-2026-40033",
-      "title": "高危漏洞: CVE-2026-40033 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-26 23:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "FreeRDP before 3.26.0 contains a heap-buffer-overflow vulnerability in gdi_CacheToSurface that allows remote attackers to write out-of-bounds heap memory. The vulnerability occurs because rectangle validation clamps coordinates to UINT16_MAX but performs copy operations using unclamped cache entry dimensions, enabling malicious RDP servers to trigger large out-of-bounds writes and potentially achieve remote code execution or client crash.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/23b36cd00ebf0ccd97750fcdbc9aa2f362352da7\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-p6r2-4hgm-m6ff\nhttps://www.vulncheck.com/advisories/freerdp-heap-buffer-overflow-in-gdi-cachetosurface-via-rectangle-validation-bypass",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:50"
-    },
-    {
-      "cve_id": "CVE-2026-9544",
-      "title": "高危漏洞: CVE-2026-9544 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in Shenzhen Sixun Software Sixun Shanghui Group Business Management System 10. Affected by this vulnerability is an unknown functionality of the file /api/Dinner/PayConfig. Performing a manipulation of the argument tableno results in sql injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://ucn9h68n9289.feishu.cn/wiki/A9WcwRkFsijnyIkf6vlcx13znoh\nhttps://vuldb.com/submit/815425\nhttps://vuldb.com/vuln/365608",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:46"
-    },
-    {
-      "cve_id": "CVE-2026-9543",
-      "title": "高危漏洞: CVE-2026-9543 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in Totolink N300RH 6.1c.1353_B20190305. Affected is the function setPasswordCfg of the file /cgi-bin/cstecgi.cgi of the component Web Management Interface. Such manipulation of the argument admpass leads to os command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://github.com/A1ester/TOTOLINK-N300RH-Command-Injection\nhttps://vuldb.com/submit/815068\nhttps://vuldb.com/vuln/365607",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:39"
-    },
-    {
-      "cve_id": "CVE-2026-7374",
-      "title": "高危漏洞: CVE-2026-7374 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-26 22:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A flaw was found in KubeVirt's virt-handler component. This vulnerability allows an authenticated OpenShift user with edit permissions in a single namespace to exploit improper symlink validation when connecting to virtual machine console sockets. By replacing the console socket with a symlink to the host's container runtime (CRI-O) socket, an attacker can hijack virt-handler's privileged connection. This enables the attacker to access any Unix socket on the host, potentially leading to full control of the node and the entire cluster.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-7374\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2463728",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:34"
-    },
-    {
-      "cve_id": "CVE-2026-48133",
-      "title": "高危漏洞: CVE-2026-48133 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-26 22:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "When the Identity Awareness blade is enabled with Browser-Based Authentication, an unauthenticated user may be able to read certain internal files on the Security Gateway.",
-      "refs": "https://support.checkpoint.com/results/sk/sk184993",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:30"
-    },
-    {
-      "cve_id": "CVE-2026-48132",
-      "title": "高危漏洞: CVE-2026-48132 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-26 22:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Security Gateway does not correctly validate a length value in certain IKE packets when NAT-T is used (4500/UDP). As a result, a specially crafted or malformed packet can cause the VPN processing service to terminate unexpectedly, leading to denial of service (temporary interruption of VPN negotiations/traffic).",
-      "refs": "https://support.checkpoint.com/results/sk/sk184982",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:25"
-    },
-    {
-      "cve_id": "CVE-2026-48131",
-      "title": "高危漏洞: CVE-2026-48131 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-26 22:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The VPN service may mishandle an unexpected IKE fragment value received on the IKE port 500/UDP during the early stage of a connection attempt. This can cause the service to terminate unexpectedly, resulting in denial of service (temporary disruption of VPN-related functionality).",
-      "refs": "https://support.checkpoint.com/results/sk/sk184981",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:21"
-    },
-    {
-      "cve_id": "CVE-2025-11482",
-      "title": "高危漏洞: CVE-2025-11482 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-26 22:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An Allocation of Resources Without Limits or Throttling vulnerability in the OPC-UA Server used in PPT30 \nOperating System versions before 1.8.0 may be used by an unauthenticated network-based attacker to \npermanently prevent legitimate users from interacting with the service.",
-      "refs": "https://br-cws-assets.de-fra-1.linodeobjects.com/SA25P006-0eec719c.pdf",
-      "source": "NVD",
-      "time": "2026-05-27 01:51:15"
     }
   ]
 }
