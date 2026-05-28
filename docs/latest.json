@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9804",
+      "title": "高危漏洞: CVE-2026-9804 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-28 17:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "A flaw was found in KubeVirt's virt-exportserver component. An attacker with specific namespace-level access can exploit a path traversal vulnerability in the VMExport directory endpoint. By placing a symbolic link (symlink) within an exported filesystem Persistent Volume Claim (PVC) that points outside its designated mount root, the attacker can read arbitrary files from the exporter pod's filesystem. This leads to information disclosure, potentially exposing sensitive data.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-9804\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2482487",
+      "source": "NVD",
+      "time": "2026-05-28 20:20:10"
+    },
+    {
+      "cve_id": "CVE-2026-6226",
+      "title": "高危漏洞: CVE-2026-6226 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-28 17:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to unauthenticated privilege escalation in versions up to and including 3.29.2. This is due to insecure form submission handling that accepts arbitrary form definitions from user input instead of securely loading them from the backend. When $_POST['_acf_form'] is an array (rather than a form ID), the validate_form() function bypasses database lookup and directly processes the attacker-controlled structure. The create_record() function preserves attacker-supplied record data if present, and the user action's run() function falls back to attacker-controlled field definitions from $form['fields'] when legitimate fields cannot be found. The role field's pre_update_value() validation reads $field['role_options'] from this attacker-controlled definition, allowing an attacker to specify ['administrator'] as an allowed role and bypass the security check. This makes it possible for unauthenticated attackers to create administrator accounts by injecting a custom form configuration with a spoofed role field.",
+      "refs": "https://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.28.33/main/frontend/fields/user/class-role.php#L107\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.28.33/main/frontend/forms/actions/user.php#L458\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.28.33/main/frontend/forms/classes/display.php#L245",
+      "source": "NVD",
+      "time": "2026-05-28 20:20:06"
+    },
+    {
+      "cve_id": "CVE-2026-4408",
+      "title": "高危漏洞: CVE-2026-4408 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-05-28 17:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw was found in Samba. A remote attacker can exploit a misconfiguration in Samba file servers and classic domain controllers that use the \"check password script\" feature. If this script is configured with the %u substitution character, the client-controlled username is passed without proper escaping of shell meta-characters. This vulnerability allows an attacker to achieve remote command execution on the affected system. This issue primarily affects non-standard configurations where the \"check password script\" is used with %u and the samba-dcerpcd service is started as a system service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-4408\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2479762\nhttps://bugzilla.samba.org/show_bug.cgi?id=16034",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:58"
+    },
+    {
+      "cve_id": "CVE-2026-9227",
+      "title": "高危漏洞: CVE-2026-9227 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-28 16:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The GutenBee – Gutenberg Blocks plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.20.1 via the gutenbee_file_and_ext_json function. This is due to a flawed strpos() substring check that only verifies whether the filename contains the string '.json' rather than confirming the filename ends with a .json extension, allowing double-extension filenames like shell.json.php to bypass validation. This makes it possible for authenticated attackers, with author-level access and above, to upload files that may be executable, which makes remote code execution possible.",
+      "refs": "https://github.com/cssigniter/gutenbee/commit/bde934cdecf67a4de1d6548cc1fc6c59bc6690e5\nhttps://plugins.trac.wordpress.org/browser/gutenbee/tags/2.20.0/gutenbee.php#L570\nhttps://plugins.trac.wordpress.org/browser/gutenbee/tags/2.20.0/gutenbee.php#L571",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:54"
+    },
+    {
+      "cve_id": "CVE-2026-7797",
+      "title": "高危漏洞: CVE-2026-7797 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-28 16:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Appointment Booking Calendar — Simply Schedule Appointments Booking Plugin plugin for WordPress is vulnerable to time-based blind SQL Injection via the 'append_where_sql' parameter in all versions up to, and including, 1.6.11.8 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The /appointments/bulk REST endpoint is reachable by unauthenticated attackers because its permission check accepts a public nonce that is embedded in the booking widget's frontend JavaScript (ssa.api.public_nonce) and visible to all site visitors; exploitation requires issuing the request as a PUT with an application/x-www-form-urlencoded body so that PHP's superglobals are not populated and the blocklist check silently passes.",
+      "refs": "https://plugins.trac.wordpress.org/browser/simply-schedule-appointments/tags/1.6.10.2/includes/lib/td-util/class-td-api-model.php#L304\nhttps://plugins.trac.wordpress.org/browser/simply-schedule-appointments/tags/1.6.10.2/includes/lib/td-util/class-td-api-model.php#L361\nhttps://plugins.trac.wordpress.org/browser/simply-schedule-appointments/tags/1.6.10.2/includes/lib/td-util/class-td-db-model.php#L1049",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:49"
+    },
+    {
+      "cve_id": "CVE-2026-7634",
+      "title": "高危漏洞: CVE-2026-7634 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-28 16:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The SlimStat Analytics plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'User-Agent' header in all versions up to, and including, 5.4.11 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The show_complete_user_agent_tooltip setting must be explicitly enabled by an administrator (disabled by default) for the stored payload to be rendered and executed.",
+      "refs": "https://github.com/wp-slimstat/wp-slimstat/pull/297\nhttps://plugins.trac.wordpress.org/browser/wp-slimstat/tags/5.4.11/admin/view/wp-slimstat-reports.php#L2099\nhttps://plugins.trac.wordpress.org/browser/wp-slimstat/tags/5.4.11/src/Services/Browscap.php#L270",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:43"
+    },
+    {
+      "cve_id": "CVE-2026-7052",
+      "title": "高危漏洞: CVE-2026-7052 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-28 16:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The HT Contact Form – Drag & Drop Form Builder for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'file_upload' parameter in all versions up to, and including, 2.8.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the 'Store Submissions' setting to be enabled, as this controls whether unsanitized field values are persisted to the database and subsequently rendered via dangerouslySetInnerHTML in the admin entry viewer.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ht-contactform/tags/2.8.2/admin/Includes/Api/Endpoints/Submission.php#L108\nhttps://plugins.trac.wordpress.org/browser/ht-contactform/tags/2.8.2/admin/Includes/Api/Endpoints/Submission.php#L126\nhttps://plugins.trac.wordpress.org/browser/ht-contactform/tags/2.8.2/admin/Includes/Api/Endpoints/Submission.php#L403",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:38"
+    },
+    {
+      "cve_id": "CVE-2026-6455",
+      "title": "高危漏洞: CVE-2026-6455 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-28 16:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+      "description": "The WP Contact Form 7 DB Handler plugin for WordPress is vulnerable to Cross-Site Request Forgery leading to Arbitrary File Deletion via SQL Injection and PHP Object Injection in versions up to and including 3.0. This is due to a missing nonce verification in the process_bulk_action() function, the nonce check is only executed when _wpnonce is present in the POST body, allowing it to be trivially bypassed by omitting the field, combined with the use of an unsanitized, unparameterized user-supplied value in a numeric SQL context (WHERE ID = $ID) and the unsafe deserialization of the query result's post_content field. An attacker can craft a CSRF page that tricks a logged-in administrator into triggering a UNION-based SQL injection payload (using CHAR() to avoid esc_sql quote-escaping) that returns a malicious serialized PHP array as post_content; upon deserialization, array values associated with keys containing 'ys_cfdbh_file' are used as file paths appended to the uploads directory path without any path traversal validation, and then passed to wp_delete_file(), allowing the attacker to delete arbitrary files on the server (e.g., wp-config.php, system files).",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-contact-form-7-db-handler/tags/3.0/include/form-inner-page-class.php#L589\nhttps://plugins.trac.wordpress.org/browser/wp-contact-form-7-db-handler/tags/3.0/include/form-inner-page-class.php#L605\nhttps://plugins.trac.wordpress.org/browser/wp-contact-form-7-db-handler/tags/3.0/include/form-inner-page-class.php#L607",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:33"
+    },
+    {
+      "cve_id": "CVE-2026-44604",
+      "title": "高危漏洞: CVE-2026-44604 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-05-28 16:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A command injection vulnerability was discovered in the `rpmuncompress` utility of RPM. When extracting certain archive formats (ZIP, 7z, GEM) to a specified destination directory, the tool inserts the archive's top-level folder name into a shell command without properly sanitizing it. A specially crafted archive containing shell metacharacters in its folder name can execute arbitrary commands as the user running the extraction.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-44604\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2460967",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:25"
+    },
+    {
+      "cve_id": "CVE-2026-9009",
+      "title": "高危漏洞: CVE-2026-9009 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-28 14:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Crawlomatic Multipage Scraper Post Generator plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 2.7.2 via the filter_content function. This is due to passing the attacker-supplied 'callback_raw' shortcode attribute directly into call_user_func() with no sanitization or allowlist validation, relying solely on an is_callable() check that permits dangerous PHP built-ins such as system, shell_exec, exec, passthru, and assert. This makes it possible for authenticated attackers, with author-level access and above, to execute code on the server. An identical sink exists for the 'callback' attribute, providing a second independent vector through the same shortcode.",
+      "refs": "https://plugins.trac.wordpress.org/browser/crawlomatic-multipage-scraper-post-generator/trunk/class.crawlomatic.shortcode.php#L273\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/7ff39b8f-ef87-4b1c-888e-00c9599c7b07?source=cve",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:20"
+    },
+    {
+      "cve_id": "CVE-2026-9795",
+      "title": "高危漏洞: CVE-2026-9795 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-28 13:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:N",
+      "description": "A flaw was found in Keycloak's Fine-Grained Admin Permissions (FGAPv2) feature. An administrator with limited client management permissions can exploit this vulnerability to assign any realm role, including highly privileged roles, to a client's scope mapping. This bypasses intended security controls, allowing the injected role to be projected into a user's authentication token when they access the modified client. This could lead to unauthorized privilege escalation within the Keycloak realm.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-9795\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2482462",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:14"
+    },
+    {
+      "cve_id": "CVE-2026-7802",
+      "title": "高危漏洞: CVE-2026-7802 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-28 13:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.29.2. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to overwrite an administrator's user_pass, user_email, first_name, last_name, and other profile fields by supplying an arbitrary ?user_id= value, enabling full administrator account takeover via direct password replacement or email-redirect password reset. Exploitation requires the targeted Edit-User form to have its 'Roles' configuration setting left empty; when a non-empty roles list is configured, load_data() sets the user ID to 'none' for users whose roles fall outside the allowed list, preventing administrators from being targeted through that form.",
+      "refs": "https://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.28.36/main/frontend/forms/actions/user.php#L565\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.28.36/main/frontend/forms/actions/user.php#L636\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.28.36/main/frontend/forms/classes/submit.php#L110",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:08"
+    },
+    {
+      "cve_id": "CVE-2026-32999",
+      "title": "高危漏洞: CVE-2026-32999 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-05-28 13:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Insufficient character filtering in backup agent signing module on Comet Backup server allows authenticated tenant administrator to execute an arbitrary code on behalf of a privileged user on the affected server and connected devices.",
+      "refs": "https://support.cometbackup.com/hc/en-us/articles/40655100268439--CVE-2026-32999-RCE-on-Comet-Server-via-branding-configuration",
+      "source": "NVD",
+      "time": "2026-05-28 20:19:04"
+    },
+    {
+      "cve_id": "CVE-2026-32995",
+      "title": "高危漏洞: CVE-2026-32995 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-28 13:16:35",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Rocket.Chat DDP method autoTranslate.translateMessage in versions <8.5.0, <8.4.2, <8.3.4, <8.2.4, <8.1.5, <8.0.5, <7.13.8, and <7.10.12 accepts a client-supplied IMessage object and passes it directly to translateMessage() without checking Meteor.userId() or verifying room membership. Any authenticated DDP user can read the content of any message by ID from any room (private channels, DMs, E2EE rooms) by calling this method.",
+      "refs": "https://github.com/RocketChat/Rocket.Chat/pull/40528\nhttps://hackerone.com/reports/3734326",
+      "source": "NVD",
+      "time": "2026-05-28 20:18:59"
+    },
+    {
+      "cve_id": "CVE-2026-2374",
+      "title": "高危漏洞: CVE-2026-2374 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-28 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Login No Captcha reCAPTCHA plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `$_SERVER['PHP_SELF']` superglobal in all versions up to, and including, 1.8.0. This is due to the `authenticate()` function storing the unsanitized output of `basename($_SERVER['PHP_SELF'])` in the `login_nocaptcha_error` WordPress option when a login attempt is made from a non-standard login page (e.g., xmlrpc.php). The `admin_notices()` function then echoes this stored value directly into the admin dashboard HTML without escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute when an administrator with a whitelisted IP address visits the WordPress dashboard within 30 seconds of the attack.",
+      "refs": "https://plugins.trac.wordpress.org/browser/login-recaptcha/tags/1.7.3/login-nocaptcha.php#L281\nhttps://plugins.trac.wordpress.org/browser/login-recaptcha/tags/1.7.3/login-nocaptcha.php#L377\nhttps://plugins.trac.wordpress.org/browser/login-recaptcha/trunk/login-nocaptcha.php#L281",
+      "source": "NVD",
+      "time": "2026-05-28 20:18:54"
+    },
+    {
       "cve_id": "CVE-2026-8915",
       "title": "高危漏洞: CVE-2026-8915 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -934,171 +1099,6 @@
       "refs": "https://github.com/Avaiga/taipy/commit/129fd407ffca49ee4ab853772c88d0c873e038dd\nhttps://github.com/Avaiga/taipy/issues/2868\nhttps://github.com/Avaiga/taipy/pull/2871",
       "source": "NVD",
       "time": "2026-05-28 01:58:25"
-    },
-    {
-      "cve_id": "CVE-2026-44988",
-      "title": "高危漏洞: CVE-2026-44988 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-27 23:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "LibVNCClient is a library for easy implementation of a VNC client. In 0.9.15 and earlier, LibVNCClient's Tight encoding decoder uses fixed-size 2048-pixel scratch buffers for the Gradient filter, but it does not reject Tight rectangles whose width is larger than 2048 pixels. A malicious VNC server can send a crafted FramebufferUpdate rectangle using Tight encoding with NoZlib | ExplicitFilter and the Gradient filter. When a LibVNCClient-based client connects, the client processes the server-controlled rectangle width and writes beyond fixed-size Gradient buffers. This vulnerability is fixed with commit 5b270544b85233668b98161323297d418a8f5fd1.",
-      "refs": "https://github.com/LibVNC/libvncserver/commit/5b270544b85233668b98161323297d418a8f5fd1\nhttps://github.com/LibVNC/libvncserver/security/advisories/GHSA-jcc5-8wj4-7c58",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:21"
-    },
-    {
-      "cve_id": "CVE-2026-44971",
-      "title": "高危漏洞: CVE-2026-44971 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-27 23:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "GuardDog is a CLI tool to identify malicious PyPI packages. From 1.0.0 to 2.9.0, the programmatic remote project scanning path rewrites attacker-controlled repository URLs using a blind string replacement and then sends the caller's GitHub credentials with the resulting request. This allows an attacker who can influence the scanned repository URL to trigger SSRF and capture the GH_TOKEN used by GuardDog. This vulnerability is fixed in .",
-      "refs": "https://github.com/DataDog/guarddog/security/advisories/GHSA-587r-mc96-6f2p",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:15"
-    },
-    {
-      "cve_id": "CVE-2026-44902",
-      "title": "高危漏洞: CVE-2026-44902 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-27 23:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "opentelemetry-js is the OpenTelemetry JavaScript Client. Prior to 0.217.0, a single malformed HTTP request crashes any Node.js process running the OpenTelemetry JS Prometheus exporter. The metrics endpoint (default 0.0.0.0:9464) has no error handling around URL parsing, so a request with an invalid URI causes an uncaught TypeError that terminates the process. This vulnerability is fixed in 0.217.0.",
-      "refs": "https://github.com/open-telemetry/opentelemetry-js/security/advisories/GHSA-q7rr-3cgh-j5r3",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:11"
-    },
-    {
-      "cve_id": "CVE-2026-42280",
-      "title": "高危漏洞: CVE-2026-42280 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-27 23:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Auth0.js is a client-side JavaScript library for Auth0. From 8.11.0 to 9.32.0, under specific preconditions, the Auth0.js SDK may improperly return user profile information using a valid access token when a specifically crafted invalid ID token is provided. This vulnerability is fixed in 10.0.0.",
-      "refs": "https://github.com/auth0/auth0.js/security/advisories/GHSA-8qjv-jj2q-x832",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:04"
-    },
-    {
-      "cve_id": "CVE-2026-8180",
-      "title": "高危漏洞: CVE-2026-8180 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-27 22:17:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "IBM Aspera High-Speed Transfer Endpoint 3.7.4 through 4.4.7 Fix Pack 1 and IBM Aspera High-Speed Transfer Server 3.7.4 through 4.4.7 Fix Pack 1 and IBM Aspera High-Speed Transfer Endpoint are affected by a potential denial of service in the asperahttpd component. An unauthenticated user can cause the asperahttpd service to crash.",
-      "refs": "https://www.ibm.com/support/pages/node/7273615",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:59"
-    },
-    {
-      "cve_id": "CVE-2026-8179",
-      "title": "高危漏洞: CVE-2026-8179 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-27 22:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Aspera High-Speed Transfer Endpoint 3.7.4 through 4.4.7 Fix Pack 1 and IBM Aspera High-Speed Transfer Server 3.7.4 through 4.4.7 Fix Pack 1 and IBM Aspera High-Speed Transfer Endpoint are affected by a buffer overflow in the asperahttpd component. This vulnerability could allow an authenticated user to execute arbitrary code on the system.",
-      "refs": "https://www.ibm.com/support/pages/node/7273615",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:54"
-    },
-    {
-      "cve_id": "CVE-2026-8175",
-      "title": "高危漏洞: CVE-2026-8175 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-27 22:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Aspera High-Speed Transfer Endpoint 3.7.4 through 4.4.7 Fix Pack 1 and IBM Aspera High-Speed Transfer Server 3.7.4 through 4.4.7 Fix Pack 1 and IBM Aspera High-Speed Transfer Endpoint are affected by a buffer overflow in the asperahttpd component. This vulnerability could be exploited to cause a denial of service and potentially lead to authentication bypass or remote code execution.",
-      "refs": "https://www.ibm.com/support/pages/node/7273615",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:50"
-    },
-    {
-      "cve_id": "CVE-2026-7528",
-      "title": "高危漏洞: CVE-2026-7528 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-27 22:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.9.0 could allow a denial of service due to uncontrolled resource consumption.",
-      "refs": "https://www.ibm.com/support/pages/node/7273427",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:45"
-    },
-    {
-      "cve_id": "CVE-2026-7524",
-      "title": "高危漏洞: CVE-2026-7524 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-27 22:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.9.1 could allow remote code execution due to improper validation of symbolic links during archive extraction.",
-      "refs": "https://www.ibm.com/support/pages/node/7273426",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:41"
-    },
-    {
-      "cve_id": "CVE-2026-7365",
-      "title": "高危漏洞: CVE-2026-7365 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-05-27 22:17:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Operations Analytics - Log Analysis  and IBM SmartCloud Analytics - Log Analysis uses default passwords default passwords from the manufacturing process for use during the installation process, which could allow an attacker to bypass authentication.",
-      "refs": "https://www.ibm.com/support/pages/node/7272268",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:36"
-    },
-    {
-      "cve_id": "CVE-2026-5065",
-      "title": "高危漏洞: CVE-2026-5065 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-27 22:17:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Controller 11.0.1, 11.1.0, 11.1.1, and 11.1.2 contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data.",
-      "refs": "https://www.ibm.com/support/pages/node/7273004",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:29"
-    },
-    {
-      "cve_id": "CVE-2026-48972",
-      "title": "高危漏洞: CVE-2026-48972 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-27 22:17:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in SeedProd LLC SeedProd Pro allows PHP Local File Inclusion.\n\nThis issue affects SeedProd Pro: from n/a before 6.19.5.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/seedprod-coming-soon-pro-5/vulnerability/wordpress-seedprod-pro-plugin-6-19-5-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:24"
-    },
-    {
-      "cve_id": "CVE-2026-3623",
-      "title": "高危漏洞: CVE-2026-3623 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-27 22:16:47",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Netezza Performance Server Replication Services 3.0.2.0 through 3.0.5.0 allows an attacker with low‑privileged access to escalate their privileges to root. By exploiting this flaw, the attacker can execute root‑level commands, obtain a root shell, and change the root user’s password. Successful exploitation also enables modification or removal of system‑wide files and the installation of persistent backdoors. This results in full system compromise with complete loss of confidentiality, integrity, and availability.",
-      "refs": "https://www.ibm.com/support/pages/node/7272148",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:19"
-    },
-    {
-      "cve_id": "CVE-2026-3366",
-      "title": "高危漏洞: CVE-2026-3366 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-27 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "IBM InfoSphere Optim Test Data Fabrication 1.0.0, 1.0.0.1, 1.0.0.2, 1.0.2, 1.0.2.2, 1.0.2.3, 1.0.2.4, 1.0.2.5, 1.0.2.6, 1.0.2.7 could allow a remote attacker to traverse directories on the system. An attacker could send a specially crafted URL request containing \"dot dot\" sequences (/../) to view arbitrary files on the system",
-      "refs": "https://www.ibm.com/support/pages/node/7272653",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:15"
-    },
-    {
-      "cve_id": "CVE-2026-36044",
-      "title": "高危漏洞: CVE-2026-36044 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-27 22:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "@pensar/apex <= 0.0.58 is vulnerable to OS command injection via the smart_enumerate tool. The createSmartEnumerateTool() function in src/core/agent/tools.ts constructs a shell command by concatenating unsanitized values from the extensions array and url parameter into a string passed to Node.js child_process.exec(). Because exec() spawns a shell, shell metacharacters in those values are interpreted by the host shell, resulting in arbitrary OS command execution with the privileges of the running process.",
-      "refs": "https://gist.github.com/NucleiAv/47e87da08b90ef464fd9b35affe578fb\nhttps://www.npmjs.com/package/@pensar/apex",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:10"
     }
   ]
 }
