@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-46414",
+      "title": "高危漏洞: CVE-2026-46414 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-28 07:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO's WebSocket control plane trusts client-supplied identity and role fields in task messages. A client connection can register as a normal device, but later send a TASK message claiming client_type=\"constellation\" and target_id=<victim-device-id>. The server trusts the role and target values from the wire message rather than enforcing the role registered for that WebSocket connection. As a result, any authenticated WebSocket client with the shared server token can spoof the higher-privilege constellation role and dispatch attacker-controlled tasks to another connected device. The same client registry also allows duplicate client_id registration, overwriting an existing live client's stored websocket, role, and task protocol. This is an authenticated WebSocket role/identity spoofing issue leading to peer task hijacking.",
+      "refs": "https://github.com/microsoft/UFO/security/advisories/GHSA-qgx6-cvhg-jw7p",
+      "source": "NVD",
+      "time": "2026-05-28 10:05:27"
+    },
+    {
+      "cve_id": "CVE-2026-46402",
+      "title": "高危漏洞: CVE-2026-46402 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-28 07:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in task_name and cause UFO to create log directories and log files outside the intended logs/ directory.",
+      "refs": "https://github.com/microsoft/UFO/security/advisories/GHSA-whcg-fgpx-76f2",
+      "source": "NVD",
+      "time": "2026-05-28 10:05:21"
+    },
+    {
+      "cve_id": "CVE-2026-45322",
+      "title": "高危漏洞: CVE-2026-45322 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-28 07:16:47",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Microsoft UFO tagged releases up to and including v3.0.0 contain an OS command injection vulnerability in the shell action replay path. In affected releases, ShellReceiver.run_shell() passes a command string from action parameters directly to subprocess.Popen() with shell=True and executable=powershell.exe. The same shell-execution behavior is also reachable through ShellReceiver.execute_command(). The shell receiver is invoked by action classes such as RunShellCommand.execute() and ExecuteCommand.execute(), which forward stored action parameters to the shell receiver. Because UFO stores planned and executed actions in per-session JSON records, an attacker who can write or modify a session/action JSON file can plant a shell action. When the session is resumed or replayed, UFO executes the attacker's command as the UFO process user.",
+      "refs": "https://github.com/microsoft/UFO/security/advisories/GHSA-wj72-7w8h-695f",
+      "source": "NVD",
+      "time": "2026-05-28 10:05:16"
+    },
+    {
+      "cve_id": "CVE-2026-9208",
+      "title": "高危漏洞: CVE-2026-9208 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-28 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Tanium addressed an unauthorized code execution vulnerability in Connect.",
+      "refs": "https://security.tanium.com/TAN-2026-015",
+      "source": "NVD",
+      "time": "2026-05-28 10:05:12"
+    },
+    {
+      "cve_id": "CVE-2026-45152",
+      "title": "高危漏洞: CVE-2026-45152 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-28 06:16:36",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "uniget is a universal installer and updater for (container) tools. Prior to 0.27.1, a command injection vulnerability exists in uniget due to unsafe execution of the check field from metadata files using /bin/bash -c. Because the check field is loaded directly from untrusted JSON metadata without validation or sanitization, an attacker can craft malicious metadata that executes arbitrary shell commands on the victim’s system when common uniget operations such as describe, install, update, or inspect are performed. This vulnerability can lead to arbitrary code execution with the privileges of the user running uniget. This vulnerability is fixed in 0.27.1.",
+      "refs": "https://github.com/uniget-org/cli/security/advisories/GHSA-qqq4-5773-pmw5",
+      "source": "NVD",
+      "time": "2026-05-28 10:05:05"
+    },
+    {
+      "cve_id": "CVE-2026-45083",
+      "title": "高危漏洞: CVE-2026-45083 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-28 06:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From 4.8.0 to before 26.04.1, the Goobi viewer REST endpoint POST /api/v1/index/stream accepted an arbitrary Solr streaming expression from unauthenticated network clients and forwarded it to the backend Solr server without restriction. An attacker could read the complete Solr index and, in default Solr deployments, also modify or delete indexed records. This vulnerability is fixed in 26.04.1.",
+      "refs": "https://github.com/intranda/goobi-viewer-core/commit/326980f24ce1e7cfabf658dd5f615934ca68ebbd\nhttps://github.com/intranda/goobi-viewer-core/commit/6bfb1cbd4250b0b347e84a80f38e8bf46acac705\nhttps://github.com/intranda/goobi-viewer-core/security/advisories/GHSA-2rgp-f66f-4499",
+      "source": "NVD",
+      "time": "2026-05-28 10:04:59"
+    },
+    {
       "cve_id": "CVE-2026-47269",
       "title": "高危漏洞: CVE-2026-47269 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1033,72 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-1933\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2447317\nhttps://bugzilla.samba.org/show_bug.cgi?id=15992",
       "source": "NVD",
       "time": "2026-05-28 01:57:05"
-    },
-    {
-      "cve_id": "CVE-2026-1718",
-      "title": "高危漏洞: CVE-2026-1718 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-27 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to a denial of service with a specially crafted query when autonomous transactions are enabled.",
-      "refs": "https://www.ibm.com/support/pages/node/7273555",
-      "source": "NVD",
-      "time": "2026-05-28 01:57:01"
-    },
-    {
-      "cve_id": "CVE-2024-56462",
-      "title": "高危漏洞: CVE-2024-56462 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-27 22:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM QRadar 7.5.0 through 7.5.0 UP15 Interim Fix 002 could allow a privileged user to upload a malicious backup archive that could be restored and used to gain access to the underlying operating system.",
-      "refs": "https://www.ibm.com/support/pages/node/7273957",
-      "source": "NVD",
-      "time": "2026-05-28 01:56:53"
-    },
-    {
-      "cve_id": "CVE-2026-42762",
-      "title": "高危漏洞: CVE-2026-42762 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-27 19:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in e4jvikwp VikBooking Hotel Booking Engine & PMS vikbooking allows DOM-Based XSS.This issue affects VikBooking Hotel Booking Engine & PMS: from n/a through <= 1.8.9.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/vikbooking/vulnerability/wordpress-vikbooking-hotel-booking-engine-pms-plugin-1-8-9-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-28 01:56:48"
-    },
-    {
-      "cve_id": "CVE-2026-42761",
-      "title": "高危漏洞: CVE-2026-42761 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-05-27 19:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in RealMag777 Active Products Tables for WooCommerce profit-products-tables-for-woocommerce allows Blind SQL Injection.This issue affects Active Products Tables for WooCommerce: from n/a through <= 1.0.9.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/profit-products-tables-for-woocommerce/vulnerability/wordpress-active-products-tables-for-woocommerce-plugin-1-0-9-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-28 01:56:44"
-    },
-    {
-      "cve_id": "CVE-2026-42760",
-      "title": "高危漏洞: CVE-2026-42760 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-27 19:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in revmakx Backup and Staging by WP Time Capsule wp-time-capsule allows Password Recovery Exploitation.This issue affects Backup and Staging by WP Time Capsule: from n/a through <= 1.22.25.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/wp-time-capsule/vulnerability/wordpress-backup-and-staging-by-wp-time-capsule-plugin-1-22-25-broken-authentication-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-28 01:56:40"
-    },
-    {
-      "cve_id": "CVE-2026-42759",
-      "title": "高危漏洞: CVE-2026-42759 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-05-27 19:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Timo Affiliate Super Assistent amazonsimpleadmin allows Stored XSS.This issue affects Affiliate Super Assistent: from n/a through <= 1.10.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/amazonsimpleadmin/vulnerability/wordpress-affiliate-super-assistent-plugin-1-10-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-28 01:56:35"
     }
   ]
 }
