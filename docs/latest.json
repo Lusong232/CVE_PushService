@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-49238",
+      "title": "高危漏洞: CVE-2026-49238 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-05-28 22:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "An issue was discovered in Canonical Multipass before version 1.16.3. The host-side SFTP server component (sshfs_server), which executes with root privileges on the host, contains a path containment bypass vulnerability within its validate_path function in src/sshfs_mount/sftp_server.cpp. The function performs a plain string prefix comparison on requested paths without path separator validation or dot-dot (..) normalization. A local attacker with root privileges inside a guest virtual machine can bypass the FUSE layer by injecting raw SFTP frames (such as an SSH_FXP_OPEN request) directly into the sshfs_server process stdin/stdout pipes via procfs. By supplying a path containing directory traversal sequences that match the allowed mount prefix, the attacker can force the host-side root process to resolve the traversal and open files outside the designated mount boundary. This allows a guest-side user to read arbitrary files on the host filesystem, resulting in a virtual machine escape.",
+      "refs": "https://github.com/canonical/multipass/security/advisories/GHSA-rhp2-23c4-r34w",
+      "source": "NVD",
+      "time": "2026-05-29 01:56:12"
+    },
+    {
+      "cve_id": "CVE-2026-49237",
+      "title": "高危漏洞: CVE-2026-49237 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-05-28 22:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An issue was discovered in Canonical Multipass for macOS before version 1.16.3 due to an incomplete fix for CVE-2025-5199. While the patch in version 1.16.0 updated the ownership of the multipassd daemon binary to root:wheel, five co-located binaries (multipass, qemu-img, qemu-system-aarch64, qemu-system-x86_64, and sshfs_server) in /Library/Application Support/com.canonical.multipass/bin/ retain ownership by the installing user and remain writable. Because the root LaunchDaemon (com.canonical.multipassd.plist) configures a PATH environment variable that prioritizes this user-writable directory and invokes these auxiliary binaries by their bare names, a local attacker can replace an auxiliary binary (such as qemu-img) with a malicious wrapper. When the root daemon subsequently triggers the binary during routine execution (e.g., via multipass launch), the malicious code executes with root privileges, leading to local privilege escalation.",
+      "refs": "https://github.com/canonical/multipass/security/advisories/GHSA-r2xg-x32f-23c5",
+      "source": "NVD",
+      "time": "2026-05-29 01:56:06"
+    },
+    {
+      "cve_id": "CVE-2026-7862",
+      "title": "高危漏洞: CVE-2026-7862 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-05-28 16:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "description": "The Eupago Gateway For Woocommerce WordPress plugin before 4.7.2 does not properly restrict access to its refund request handler, allowing unauthenticated attackers to initiate refunds against any WooCommerce order using the merchant's payment gateway credentials, and for applicable payment methods, to redirect refunded funds to an attacker-controlled bank account.",
+      "refs": "https://wpscan.com/vulnerability/b4ce2a06-b435-4b77-851f-4406f2a91ca6/",
+      "source": "NVD",
+      "time": "2026-05-29 01:56:01"
+    },
+    {
       "cve_id": "CVE-2026-9804",
       "title": "高危漏洞: CVE-2026-9804 (CVSS 7.7)",
       "cvss_score": 7.7,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/pmqs/IO-Compress/commit/f2db247bf90d4cc7ee2710be384946081f3b4610.patch\nhttps://metacpan.org/release/PMQS/IO-Compress-2.220/changes\nhttp://www.openwall.com/lists/oss-security/2026/05/27/4",
       "source": "NVD",
       "time": "2026-05-28 03:59:18"
-    },
-    {
-      "cve_id": "CVE-2026-6957",
-      "title": "高危漏洞: CVE-2026-6957 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-05-27 23:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Mattermost Plugins versions <=1.1.5 fail to sanitize filenames received from federated peers before using them to construct export destination paths, which allows an administrator of a remote federated Mattermost server to write files to arbitrary locations within the target server's filestore via a malicious filename delivered through the shared-channel attachment sync protocol. Mattermost Advisory ID: MMSA-2026-00659",
-      "refs": "https://mattermost.com/security-updates",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:34"
-    },
-    {
-      "cve_id": "CVE-2026-49046",
-      "title": "高危漏洞: CVE-2026-49046 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-05-27 23:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Arjun Thakur Duplicate Page and Post allows Blind SQL Injection.\n\nThis issue affects Duplicate Page and Post: from n/a through 2.9.5.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/duplicate-wp-page-post/vulnerability/wordpress-duplicate-page-and-post-plugin-2-9-5-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:30"
-    },
-    {
-      "cve_id": "CVE-2026-48544",
-      "title": "高危漏洞: CVE-2026-48544 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-27 23:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Taipy 4.1.1, fixed in commit 129fd40, contains a path traversal vulnerability in the ElementLibrary.get_resource() method in taipy/gui/extension/library.py that allows unauthenticated attackers to escape the intended module directory by exploiting an incomplete path containment check using str.startswith() without a trailing path separator. Attackers can send crafted GET requests with path traversal segments targeting a prefix-matching sibling directory on disk, bypassing the directory containment check because Flask's path converter and Werkzeug's WSGI layer preserve the traversal segments while the resolved path still satisfies the flawed startswith comparison, enabling unauthorized file access outside the intended library directory.",
-      "refs": "https://github.com/Avaiga/taipy/commit/129fd407ffca49ee4ab853772c88d0c873e038dd\nhttps://github.com/Avaiga/taipy/issues/2868\nhttps://github.com/Avaiga/taipy/pull/2871",
-      "source": "NVD",
-      "time": "2026-05-28 01:58:25"
     }
   ]
 }
