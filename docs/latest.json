@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-48557",
+      "title": "高危漏洞: CVE-2026-48557 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-30 04:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Spatie Laravel Media Library before version 11.23.0 contains a file upload restriction bypass in FileAdder::defaultSanitizer(). The sanitizer checks only the final filename suffix, allowing double-extension filenames such as shell.php.jpg to bypass the blocklist, with pathinfo() preserving inner .php stems in saved filenames. The blocklist also omits executable extensions including .php6, .shtml, and .htaccess. The double-extension bypass requires a legacy Apache AddHandler configuration to achieve PHP execution; the incomplete blocklist bypass does not.",
+      "refs": "https://github.com/spatie/laravel-medialibrary/commit/608ea03703d3887c46434f5dda6af56de6346aba\nhttps://github.com/spatie/laravel-medialibrary/pull/3939\nhttps://github.com/spatie/laravel-medialibrary/releases/tag/11.23.0",
+      "source": "NVD",
+      "time": "2026-05-30 06:25:00"
+    },
+    {
+      "cve_id": "CVE-2026-48555",
+      "title": "高危漏洞: CVE-2026-48555 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-30 04:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "Spatie Laravel Media Library before version 11.23.0 contains a server-side request forgery vulnerability that allows remote attackers to cause the server to issue arbitrary outbound HTTP requests by passing user-controlled URLs to the addMediaFromUrl() method in InteractsWithMedia.php.",
+      "refs": "https://github.com/spatie/laravel-medialibrary/commit/608ea03703d3887c46434f5dda6af56de6346aba\nhttps://github.com/spatie/laravel-medialibrary/pull/3939\nhttps://github.com/spatie/laravel-medialibrary/releases/tag/11.23.0",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:55"
+    },
+    {
+      "cve_id": "CVE-2026-47123",
+      "title": "高危漏洞: CVE-2026-47123 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-30 04:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to 1.8.220, the email processing pipeline in FreeScout's FetchEmails command has two code paths for identifying agent (user) replies based on In-Reply-To / References headers. The notification reply path (notify-{thread_id}-{user_id}-...) extracts thread_id and user_id directly from the Message-ID without HMAC verification. An external attacker who can spoof the From address of a helpdesk agent can inject messages that FreeScout processes as legitimate agent replies — which are then automatically forwarded to customers via the legitimate SMTP server. This vulnerability is fixed in 1.8.220.",
+      "refs": "https://github.com/freescout-help-desk/freescout/commit/d902f19038213c6a376947d269b00440908e88a0\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-6r38-6mcf-2ww3",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:51"
+    },
+    {
+      "cve_id": "CVE-2026-45697",
+      "title": "高危漏洞: CVE-2026-45697 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-30 04:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Formie is a Craft CMS plugin for creating forms. Prior to 2.2.20 and 3.1.24, unauthenticated users could submit crafted values into Hidden fields (with Default value → Custom) that were evaluated as Twig during submission handling, which could lead to serious compromise of the Craft site (depending on template/sandbox behavior). This vulnerability is fixed in 2.2.20 and 3.1.24.",
+      "refs": "https://github.com/verbb/formie/commit/f690d5623163ce2a95da305238d6367575486ee3\nhttps://github.com/verbb/formie/releases/tag/2.2.20\nhttps://github.com/verbb/formie/releases/tag/3.1.24",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:46"
+    },
+    {
+      "cve_id": "CVE-2026-45372",
+      "title": "高危漏洞: CVE-2026-45372 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-05-30 04:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:L",
+      "description": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to 0.44.0, when cpp-httplib's server parses an incoming request, it applies percent-decoding to every header value except Location and Referer. The validity check (is_field_value) is run before decoding, so encoded %0D%0A passes the check and is then expanded to a literal \\r\\n byte pair inside the stored header value. This vulnerability is fixed in 0.44.0.",
+      "refs": "https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-xjxg-64p4-vj4m",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:41"
+    },
+    {
+      "cve_id": "CVE-2026-44422",
+      "title": "高危漏洞: CVE-2026-44422 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-30 04:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.26.0, FreeRDP's RDPEAR NDR parser accepts one non-null NDR pointer ref-id for multiple logical pointer fields without tracking the pointed object's expected NDR type or ownership. When the same ref-id is reused across two pointer fields, the parser assigns the same heap object to both output fields. The generic destructor later walks each field independently and destroys/frees both pointers. This causes a malicious-server-triggerable heap use-after-free / double-free in the FreeRDP client's RDPEAR authentication-redirection path. This vulnerability is fixed in 3.26.0.",
+      "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-j9q5-7g8m-jc9v",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:37"
+    },
+    {
+      "cve_id": "CVE-2026-44421",
+      "title": "高危漏洞: CVE-2026-44421 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-30 04:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.26.0, a malicious RDP server can trigger a heap-buffer-overflow write in the FreeRDP client by sending crafted RDPGFX PDUs. The bug is in gdi_CacheToSurface: it validates a destination rectangle that is clamped to UINT16_MAX, but then performs the copy using the original cacheEntry->width/height. This can cause a large out-of-bounds heap write and may lead to client crashes or code execution. This bug is reachable from a malicious RDP server, but only when the client has RDPGFX enabled. This vulnerability is fixed in 3.26.0.",
+      "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-p6r2-4hgm-m6ff",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:32"
+    },
+    {
+      "cve_id": "CVE-2026-44420",
+      "title": "高危漏洞: CVE-2026-44420 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-30 04:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.26.0, a malicious RDP client can trigger a heap-buffer-overflow write in FreeRDP's server-side clipboard (cliprdr) channel by sending a CB_CLIP_CAPS PDU with a too-small capabilitySetLength. This can crash the server process (remote DoS) and may be exploitable for code execution because it corrupts heap memory. This vulnerability is fixed in 3.26.0.",
+      "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mvpx-xj7r-3p3r",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:26"
+    },
+    {
+      "cve_id": "CVE-2026-44285",
+      "title": "高危漏洞: CVE-2026-44285 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-05-30 04:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "FastGPT is an AI Agent building platform. Prior to 4.15.0-beta1, a Server-Side Request Forgery (SSRF) vulnerability allows an authenticated attacker to bypass the global isInternalAddress network protection and make arbitrary HTTP GET requests to internal network services. This is achieved by exploiting an incomplete fix in the dataset preview endpoint /api/core/dataset/file/getPreviewChunks when utilizing the externalFile data import type. This vulnerability is fixed in 4.15.0-beta1.",
+      "refs": "https://github.com/labring/FastGPT/security/advisories/GHSA-c65v-7vx6-f8m3",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:21"
+    },
+    {
+      "cve_id": "CVE-2026-39276",
+      "title": "高危漏洞: CVE-2026-39276 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-30 00:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The template upload feature in Emlog Pro v2.6.9 has a path traversal vulnerability, allowing authenticated administrators to execute arbitrary PHP code. By uploading a malicious ZIP archive containing directory traversal sequences in filenames, an attacker can overwrite default template files or directly include malicious code files in the current template.",
+      "refs": "https://github.com/LING12138-sg/Emlog-v2.6.9-Vulnerability-Report\nhttps://www.emlog.net/\nhttps://github.com/LING12138-sg/Emlog-v2.6.9-Vulnerability-Report",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:15"
+    },
+    {
+      "cve_id": "CVE-2026-5343",
+      "title": "高危漏洞: CVE-2026-5343 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-05-29 07:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal SAML SSO - Service Provider allows Privilege Escalation.\n\nThis issue affects SAML SSO - Service Provider: from 0.0.0 before 3.1.4.",
+      "refs": "https://www.drupal.org/sa-contrib-2026-031",
+      "source": "NVD",
+      "time": "2026-05-30 06:24:10"
+    },
+    {
       "cve_id": "CVE-2026-9051",
       "title": "高危漏洞: CVE-2026-9051 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -978,127 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500536458",
       "source": "NVD",
       "time": "2026-05-30 04:31:55"
-    },
-    {
-      "cve_id": "CVE-2026-9924",
-      "title": "高危漏洞: CVE-2026-9924 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in ANGLE in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500398345",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:51"
-    },
-    {
-      "cve_id": "CVE-2026-9923",
-      "title": "高危漏洞: CVE-2026-9923 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-29 07:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Skia in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500393328",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:46"
-    },
-    {
-      "cve_id": "CVE-2026-9918",
-      "title": "高危漏洞: CVE-2026-9918 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-29 07:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Tint in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500099471",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:41"
-    },
-    {
-      "cve_id": "CVE-2026-9916",
-      "title": "高危漏洞: CVE-2026-9916 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500080303",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:37"
-    },
-    {
-      "cve_id": "CVE-2026-9915",
-      "title": "高危漏洞: CVE-2026-9915 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500063836",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:32"
-    },
-    {
-      "cve_id": "CVE-2026-9914",
-      "title": "高危漏洞: CVE-2026-9914 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500047428",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:28"
-    },
-    {
-      "cve_id": "CVE-2026-9906",
-      "title": "高危漏洞: CVE-2026-9906 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in GPU in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/499005260",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:21"
-    },
-    {
-      "cve_id": "CVE-2026-9905",
-      "title": "高危漏洞: CVE-2026-9905 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Accessibility in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/498883610",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:15"
-    },
-    {
-      "cve_id": "CVE-2026-9904",
-      "title": "高危漏洞: CVE-2026-9904 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/498804020",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:11"
-    },
-    {
-      "cve_id": "CVE-2026-9902",
-      "title": "高危漏洞: CVE-2026-9902 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Accessibility in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/498205735",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:03"
-    },
-    {
-      "cve_id": "CVE-2026-9900",
-      "title": "高危漏洞: CVE-2026-9900 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/497637277",
-      "source": "NVD",
-      "time": "2026-05-30 04:30:59"
     }
   ]
 }
