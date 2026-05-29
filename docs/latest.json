@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6075",
+      "title": "高危漏洞: CVE-2026-6075 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-29 17:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+      "description": "The Media Library Assistant plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 3.35 This is due to missing nonce verification on the bulk action handlers in the settings tab handlers. This makes it possible for unauthenticated attackers to trick an administrator into performing bulk delete, edit, or purge operations on plugin settings and attachment metadata via a forged request.",
+      "refs": "https://plugins.trac.wordpress.org/browser/media-library-assistant/tags/3.33/includes/class-mla-settings-custom-fields-tab.php#L664\nhttps://plugins.trac.wordpress.org/browser/media-library-assistant/tags/3.33/includes/class-mla-settings-iptc-exif-tab.php#L804\nhttps://plugins.trac.wordpress.org/browser/media-library-assistant/tags/3.33/includes/class-mla-settings-view-tab.php#L224",
+      "source": "NVD",
+      "time": "2026-05-29 20:09:00"
+    },
+    {
+      "cve_id": "CVE-2026-10056",
+      "title": "高危漏洞: CVE-2026-10056 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-29 17:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "CORS misconfiguration in the REST API of Network Optix Nx Witness VMS before version 6.1.2, when running in the default Standard security mode, on Linux and Windows allows an unauthenticated remote attacker to steal the session token of an authenticated user and perform Administrator Account Takeover via a malicious cross-origin web page visited by the victim. The High security mode is not affected.Workaround:\n\nFor existing installations running in Standard security mode, set Access-Control-Allow-Credentials to false via the REST API: PATCH /rest/v2/system/settings with body {\"supportedOrigins\": \"null\"}. Alternatively, select High security level during initial setup.\n\nSolution:\n\nUpdate to Nx Witness VMS version 6.1.2 or later, in which Access-Control-Allow-Credentials is set to false in the default Standard security configuration.",
+      "refs": "https://support.networkoptix.com/hc/en-us/articles/39254208939159-How-to-Enable-CORS-Validation",
+      "source": "NVD",
+      "time": "2026-05-29 20:08:55"
+    },
+    {
+      "cve_id": "CVE-2026-4776",
+      "title": "高危漏洞: CVE-2026-4776 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-05-29 16:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+      "description": "An SQL injection vulnerability exists in Mautic's API contact filtering mechanism. Due to insufficient recursive sanitization of nested query parameters, an authenticated API user can bypass input filtering and inject arbitrary SQL commands.",
+      "refs": "https://github.com/mautic/mautic/security/advisories/GHSA-fcmw-wx57-9p75",
+      "source": "NVD",
+      "time": "2026-05-29 20:08:49"
+    },
+    {
+      "cve_id": "CVE-2026-3655",
+      "title": "高危漏洞: CVE-2026-3655 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-29 16:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The OTP Login With Phone Number, OTP Verification plugin for WordPress is vulnerable to authentication bypass in versions 1.8.50 through 1.8.60. This is due to the Firebase verification flow in the `lwp_ajax_register` AJAX handler not binding the Firebase session to the phone number supplied in the request. The `idehweb_lwp_activate_through_firebase()` function validates that a Firebase OTP session is legitimate, but the `phoneNumber` returned by Firebase is never compared against the victim's stored phone number. This makes it possible for unauthenticated attackers to authenticate as any user who has a phone number stored in user meta, including administrators, by verifying their own Firebase session and supplying the victim's phone number in the same request.",
+      "refs": "https://plugins.trac.wordpress.org/browser/login-with-phone-number/tags/1.8.60/inc/ajax-handlers.php#L1167\nhttps://plugins.trac.wordpress.org/browser/login-with-phone-number/tags/1.8.60/inc/ajax-handlers.php#L649\nhttps://plugins.trac.wordpress.org/browser/login-with-phone-number/tags/1.8.60/inc/ajax-handlers.php#L659",
+      "source": "NVD",
+      "time": "2026-05-29 20:08:44"
+    },
+    {
+      "cve_id": "CVE-2025-11262",
+      "title": "高危漏洞: CVE-2025-11262 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-05-29 16:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Link Whisper Free plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the user_id parameter in all versions up to, and including, 0.9.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/link-whisper/trunk/core/Wpil/Settings.php#L883\nhttps://wordpress.org/plugins/link-whisper/#developers\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ad159b18-0ad1-4cab-932e-6850cf7a867f?source=cve",
+      "source": "NVD",
+      "time": "2026-05-29 20:08:39"
+    },
+    {
+      "cve_id": "CVE-2026-8732",
+      "title": "高危漏洞: CVE-2026-8732 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-29 15:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Maps Pro plugin for WordPress is vulnerable to Privilege Escalation via Administrator Account Creation in all versions up to, and including, 6.1.0. This is due to the wpgmp_temp_access_ajax AJAX action being registered with wp_ajax_nopriv_ and protected only by a nonce check using the fc-call-nonce nonce, which is publicly embedded into every frontend page via wp_localize_script as the nonce field of the wpgmp_local JavaScript object, rendering the check ineffective as an access control mechanism. This makes it possible for unauthenticated attackers to invoke the wpgmp_temp_access_support handler with check_temp=false, which unconditionally creates a new WordPress user with the hardcoded role of administrator via wp_insert_user() and returns a magic login URL that, when visited, calls wp_set_auth_cookie() to fully authenticate the attacker as the newly created administrator, resulting in complete site takeover.",
+      "refs": "https://codecanyon.net/item/advanced-google-maps-plugin-for-wordpress/5211638\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/65988550-d39d-40be-8d25-647e7237062d?source=cve",
+      "source": "NVD",
+      "time": "2026-05-29 20:08:33"
+    },
+    {
+      "cve_id": "CVE-2025-11993",
+      "title": "高危漏洞: CVE-2025-11993 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-29 15:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WooCommerce Infinite Scroll and Ajax Pagination plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.8 via the 'settings' parameter in the 'import_settings' function. This is due to deserialization of untrusted data supplied via the import configuration feature without capability checks. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. No POP chain is present within the vulnerable plugin itself, but if a POP chain is present via an additional plugin or theme installed on the target system, it could allow an attacker to delete arbitrary files, retrieve sensitive data, or execute code.",
+      "refs": "https://codecanyon.net/item/woocommerce-infinite-scroll-and-ajax-pagination/10192075\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/a8eb3ec8-0784-4702-86bf-a621b288e7a0?source=cve",
+      "source": "NVD",
+      "time": "2026-05-29 20:08:28"
+    },
+    {
       "cve_id": "CVE-2026-8809",
       "title": "高危漏洞: CVE-2026-8809 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/RocketChat/Rocket.Chat/pull/40528\nhttps://hackerone.com/reports/3734326",
       "source": "NVD",
       "time": "2026-05-28 20:18:59"
-    },
-    {
-      "cve_id": "CVE-2026-2374",
-      "title": "高危漏洞: CVE-2026-2374 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-05-28 13:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Login No Captcha reCAPTCHA plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `$_SERVER['PHP_SELF']` superglobal in all versions up to, and including, 1.8.0. This is due to the `authenticate()` function storing the unsanitized output of `basename($_SERVER['PHP_SELF'])` in the `login_nocaptcha_error` WordPress option when a login attempt is made from a non-standard login page (e.g., xmlrpc.php). The `admin_notices()` function then echoes this stored value directly into the admin dashboard HTML without escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute when an administrator with a whitelisted IP address visits the WordPress dashboard within 30 seconds of the attack.",
-      "refs": "https://plugins.trac.wordpress.org/browser/login-recaptcha/tags/1.7.3/login-nocaptcha.php#L281\nhttps://plugins.trac.wordpress.org/browser/login-recaptcha/tags/1.7.3/login-nocaptcha.php#L377\nhttps://plugins.trac.wordpress.org/browser/login-recaptcha/trunk/login-nocaptcha.php#L281",
-      "source": "NVD",
-      "time": "2026-05-28 20:18:54"
-    },
-    {
-      "cve_id": "CVE-2026-8915",
-      "title": "高危漏洞: CVE-2026-8915 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-28 08:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out-of-bounds write vulnerability in Samsung Open Source Escargot allows Overflow Buffers.\n\nThis issue affects Escargot: 36f5fb58366a67b713c02f6fd985e924fcc09e31.",
-      "refs": "https://github.com/Samsung/escargot/pull/1579",
-      "source": "NVD",
-      "time": "2026-05-28 14:43:14"
-    },
-    {
-      "cve_id": "CVE-2026-46414",
-      "title": "高危漏洞: CVE-2026-46414 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-28 07:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO's WebSocket control plane trusts client-supplied identity and role fields in task messages. A client connection can register as a normal device, but later send a TASK message claiming client_type=\"constellation\" and target_id=<victim-device-id>. The server trusts the role and target values from the wire message rather than enforcing the role registered for that WebSocket connection. As a result, any authenticated WebSocket client with the shared server token can spoof the higher-privilege constellation role and dispatch attacker-controlled tasks to another connected device. The same client registry also allows duplicate client_id registration, overwriting an existing live client's stored websocket, role, and task protocol. This is an authenticated WebSocket role/identity spoofing issue leading to peer task hijacking.",
-      "refs": "https://github.com/microsoft/UFO/security/advisories/GHSA-qgx6-cvhg-jw7p",
-      "source": "NVD",
-      "time": "2026-05-28 10:05:27"
-    },
-    {
-      "cve_id": "CVE-2026-46402",
-      "title": "高危漏洞: CVE-2026-46402 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-05-28 07:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in task_name and cause UFO to create log directories and log files outside the intended logs/ directory.",
-      "refs": "https://github.com/microsoft/UFO/security/advisories/GHSA-whcg-fgpx-76f2",
-      "source": "NVD",
-      "time": "2026-05-28 10:05:21"
-    },
-    {
-      "cve_id": "CVE-2026-45322",
-      "title": "高危漏洞: CVE-2026-45322 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-28 07:16:47",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Microsoft UFO tagged releases up to and including v3.0.0 contain an OS command injection vulnerability in the shell action replay path. In affected releases, ShellReceiver.run_shell() passes a command string from action parameters directly to subprocess.Popen() with shell=True and executable=powershell.exe. The same shell-execution behavior is also reachable through ShellReceiver.execute_command(). The shell receiver is invoked by action classes such as RunShellCommand.execute() and ExecuteCommand.execute(), which forward stored action parameters to the shell receiver. Because UFO stores planned and executed actions in per-session JSON records, an attacker who can write or modify a session/action JSON file can plant a shell action. When the session is resumed or replayed, UFO executes the attacker's command as the UFO process user.",
-      "refs": "https://github.com/microsoft/UFO/security/advisories/GHSA-wj72-7w8h-695f",
-      "source": "NVD",
-      "time": "2026-05-28 10:05:16"
-    },
-    {
-      "cve_id": "CVE-2026-9208",
-      "title": "高危漏洞: CVE-2026-9208 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-28 06:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Tanium addressed an unauthorized code execution vulnerability in Connect.",
-      "refs": "https://security.tanium.com/TAN-2026-015",
-      "source": "NVD",
-      "time": "2026-05-28 10:05:12"
-    },
-    {
-      "cve_id": "CVE-2026-45152",
-      "title": "高危漏洞: CVE-2026-45152 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-28 06:16:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "uniget is a universal installer and updater for (container) tools. Prior to 0.27.1, a command injection vulnerability exists in uniget due to unsafe execution of the check field from metadata files using /bin/bash -c. Because the check field is loaded directly from untrusted JSON metadata without validation or sanitization, an attacker can craft malicious metadata that executes arbitrary shell commands on the victim’s system when common uniget operations such as describe, install, update, or inspect are performed. This vulnerability can lead to arbitrary code execution with the privileges of the user running uniget. This vulnerability is fixed in 0.27.1.",
-      "refs": "https://github.com/uniget-org/cli/security/advisories/GHSA-qqq4-5773-pmw5",
-      "source": "NVD",
-      "time": "2026-05-28 10:05:05"
     }
   ]
 }
