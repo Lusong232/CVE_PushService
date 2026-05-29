@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8809",
+      "title": "高危漏洞: CVE-2026-8809 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-05-29 07:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Privilege Escalation via Validation Bypass in all versions up to and including 0.9.2.5. The vulnerability exists due to the after_validate_save_post() function unconditionally trusting the attacker-controlled _acf_post_id POST parameter — with no authentication or integrity verification — to select a cleanup branch that silently discards all validation errors not prefixed with acfe:. This makes it possible for unauthenticated attackers to suppress both the role allow-list validation error added by acfe_field_user_roles::validate_front_value() and the administrator-role capability guard error added by acfe_module_form_action_user::validate_action(), causing wp_insert_user() to execute with an attacker-supplied administrator role argument and resulting in the creation of a new administrator-level user account. Exploitation requires the target site to expose a public ACFE frontend form configured with a Create User action that maps a role field.",
+      "refs": "https://plugins.trac.wordpress.org/browser/acf-extended/tags/0.9.2.4/includes/hooks.php#L636\nhttps://plugins.trac.wordpress.org/browser/acf-extended/tags/0.9.2.4/includes/module-acf.php#L141\nhttps://plugins.trac.wordpress.org/browser/acf-extended/tags/0.9.2.4/includes/modules/form/module-form-action-user.php#L715",
+      "source": "NVD",
+      "time": "2026-05-29 10:10:27"
+    },
+    {
+      "cve_id": "CVE-2026-48116",
+      "title": "高危漏洞: CVE-2026-48116 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-29 06:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. Prior to 1.13.0, the filesystem-search-files agent skill passes its LLM-controlled pattern parameter to ripgrep as a positional argument without a -- end-of-options separator. ripgrep parses any argument that starts with - as an option, so a pattern of --pre=/bin/sh turns ripgrep into a script executor: it runs /bin/sh <file> for every file it walks. An attacker who can chat with an agent on a deployment with the filesystem plugin enabled (the default in the official Docker image) can use this, together with the sibling filesystem-write-text-file skill, to run arbitrary commands inside the AnythingLLM server container. This vulnerability is fixed in 1.13.0.",
+      "refs": "https://github.com/Mintplex-Labs/anything-llm/commit/94ed62d320df1a06c229e4bc3ee09c2cb5111b33\nhttps://github.com/Mintplex-Labs/anything-llm/security/advisories/GHSA-6hrp-7mw6-8v59",
+      "source": "NVD",
+      "time": "2026-05-29 10:10:20"
+    },
+    {
+      "cve_id": "CVE-2026-45364",
+      "title": "高危漏洞: CVE-2026-45364 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-29 06:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Better Auth is an authentication and authorization library for TypeScript. Prior to 1.4.17 and 1.5.0-beta.9, Better Auth's HTTP rate limiter keyed each request by the exact textual IP address it received in x-forwarded-for (or the configured IP-bearing header). IPv6 clients controlling a typical /64 allocation could rotate through 2^64 distinct source addresses without exhausting the per-address counter, defeating rate limiting on /sign-in/email, /sign-up/email, /forget-password, and every other path the limiter protects. The same bug allowed a single client to vary the textual encoding of one IPv6 address (uppercase, compression, IPv4-mapped, hex-encoded IPv4-in-IPv6) and produce multiple distinct keys. This vulnerability is fixed in 1.4.17 and 1.5.0-beta.9.",
+      "refs": "https://github.com/better-auth/better-auth/commit/43e719bcc0c223c7079fa0c611a9cf7ea1188254\nhttps://github.com/better-auth/better-auth/commit/57af0f7b910dcf7b1a5c0615d10b9bd56bb69bef\nhttps://github.com/better-auth/better-auth/pull/7470",
+      "source": "NVD",
+      "time": "2026-05-29 10:10:15"
+    },
+    {
+      "cve_id": "CVE-2026-45344",
+      "title": "高危漏洞: CVE-2026-45344 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-29 06:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "LinkAce is a self-hosted archive to collect website links. Prior to 2.5.6, the setup database configuration flow on uninitialized LinkAce instances accepts attacker-controlled database credential fields and writes them back into .env without escaping. A remote attacker who can reach the setup endpoints and supply a database they control can inject mail configuration variables and achieve command execution when the application later sends mail. This vulnerability is fixed in 2.5.6.",
+      "refs": "https://github.com/Kovah/LinkAce/security/advisories/GHSA-37m5-936h-w455",
+      "source": "NVD",
+      "time": "2026-05-29 10:10:11"
+    },
+    {
+      "cve_id": "CVE-2026-44973",
+      "title": "高危漏洞: CVE-2026-44973 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-29 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Billy is an interface filesystem abstraction for Go. Prior to 5.9.0, multiple path traversal issues exist across different components of go-billy. Insufficient path sanitization and boundary enforcement may allow crafted paths (e.g., using ..) to escape intended base directories. While go-billy was not originally designed to provide a strong security boundary, some of these issues were inconsistent across some of the built-in implementations. This results in scenarios where applications relying on go-billy for some level of isolation may inadvertently expose access to unintended filesystem locations. This vulnerability is fixed in 5.9.0.",
+      "refs": "https://github.com/go-git/go-billy/security/advisories/GHSA-qw64-3x98-g7q2",
+      "source": "NVD",
+      "time": "2026-05-29 10:10:05"
+    },
+    {
+      "cve_id": "CVE-2026-44882",
+      "title": "高危漏洞: CVE-2026-44882 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-29 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Portainer Community Edition is a lightweight service delivery platform for containerized applications that can be used to manage Docker, Swarm, Kubernetes and ACI environments. From 2.33.0 to before 2.33., Portainer proxies requests to Kubernetes clusters through a middleware layer (kubeClientMiddleware) that validates the requesting user's token before forwarding traffic to the cluster. When security.RetrieveTokenData returned an error, the middleware wrote an HTTP 403 response but was missing a return statement — execution continued into the handler with a nil tokenData value. The Kubernetes endpoints sit behind Portainer's outer AuthenticatedAccess bouncer, so an attacker requires a valid Portainer session. However, a user whose secondary token validation fails in kubeClientMiddleware — for example a user without permission to access a given Kubernetes endpoint — would have their request forwarded to the cluster anyway, bypassing the authorization check. The same defect was present in both the CE and EE codebases. This vulnerability is fixed in 2.33.8.",
+      "refs": "https://github.com/portainer/portainer/security/advisories/GHSA-mgq6-4x29-88r3",
+      "source": "NVD",
+      "time": "2026-05-29 10:10:00"
+    },
+    {
+      "cve_id": "CVE-2026-44850",
+      "title": "高危漏洞: CVE-2026-44850 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-05-29 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Portainer Community Edition is a lightweight service delivery platform for containerized applications that can be used to manage Docker, Swarm, Kubernetes and ACI environments. From 2.33.0 to before 2.33.8, 2.39.2, and 2.41.0, Portainer offers an environment-level Disable bind mounts for non-administrators security setting that blocks regular users from binding host paths into containers they create through the Portainer-mediated Docker API. The check that enforces this setting only inspected the legacy HostConfig.Binds array on the container-create proxy and never looked at the equivalent HostConfig.Mounts array. Any authenticated user with rights to create containers on a Docker environment where the restriction is enabled could submit a bind-typed entry under HostConfig.Mounts and mount any host path into their container. This vulnerability is fixed in 2.33.8, 2.39.2, and 2.41.0.",
+      "refs": "https://github.com/portainer/portainer/security/advisories/GHSA-7fw3-x4r2-g7wc",
+      "source": "NVD",
+      "time": "2026-05-29 10:09:52"
+    },
+    {
+      "cve_id": "CVE-2026-39929",
+      "title": "高危漏洞: CVE-2026-39929 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-29 06:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Lakeside SysTrack Agent versions prior to 11.2.1.28, 11.3.0.38, 11.4.0.24, 11.5.0.15 contain an out-of-bounds read vulnerability in the Command ID 30 UDP packet handler that allows remote attackers to crash the application by sending a specially crafted UDP packet. Attackers can send a malformed packet with an invalid memory address at offset 0x4 in the payload to trigger an access violation and cause a denial of service.",
+      "refs": "https://documentation.lakesidesoftware.com/docs/112128-hotfix-agent-release-notes\nhttps://documentation.lakesidesoftware.com/docs/1130xxx-hotfix-agent-release-notes\nhttps://documentation.lakesidesoftware.com/docs/1140xxx-hotfix-agent-release-notes",
+      "source": "NVD",
+      "time": "2026-05-29 10:09:47"
+    },
+    {
+      "cve_id": "CVE-2026-10044",
+      "title": "高危漏洞: CVE-2026-10044 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-05-29 06:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Usagi-org ai-goofish-monitor contains an unauthenticated arbitrary file read vulnerability in the GET /api/prompts/{filename} endpoint on Windows deployments that allows unauthenticated remote attackers to read arbitrary files by supplying absolute Windows paths or backslash-based traversal sequences. Attackers can bypass the incomplete path traversal guard, which only blocks forward slashes and '..', by providing absolute paths such as Windows system file locations, causing os.path.join to discard the intended prompts directory prefix and expose files accessible to the application process.",
+      "refs": "https://github.com/Usagi-org/ai-goofish-monitor/issues/488\nhttps://github.com/Usagi-org/ai-goofish-monitor/pull/489\nhttps://www.vulncheck.com/advisories/ai-goofish-monitor-unauthenticated-arbitrary-file-read-via-get-api-prompts",
+      "source": "NVD",
+      "time": "2026-05-29 10:09:41"
+    },
+    {
       "cve_id": "CVE-2026-9645",
       "title": "高危漏洞: CVE-2026-9645 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/uniget-org/cli/security/advisories/GHSA-qqq4-5773-pmw5",
       "source": "NVD",
       "time": "2026-05-28 10:05:05"
-    },
-    {
-      "cve_id": "CVE-2026-45083",
-      "title": "高危漏洞: CVE-2026-45083 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-28 06:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From 4.8.0 to before 26.04.1, the Goobi viewer REST endpoint POST /api/v1/index/stream accepted an arbitrary Solr streaming expression from unauthenticated network clients and forwarded it to the backend Solr server without restriction. An attacker could read the complete Solr index and, in default Solr deployments, also modify or delete indexed records. This vulnerability is fixed in 26.04.1.",
-      "refs": "https://github.com/intranda/goobi-viewer-core/commit/326980f24ce1e7cfabf658dd5f615934ca68ebbd\nhttps://github.com/intranda/goobi-viewer-core/commit/6bfb1cbd4250b0b347e84a80f38e8bf46acac705\nhttps://github.com/intranda/goobi-viewer-core/security/advisories/GHSA-2rgp-f66f-4499",
-      "source": "NVD",
-      "time": "2026-05-28 10:04:59"
-    },
-    {
-      "cve_id": "CVE-2026-47269",
-      "title": "高危漏洞: CVE-2026-47269 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-05-28 05:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0,  pam_usb's deny_remote feature checks utmpx ut_addr_v6 to detect whether an authentication request originates from a remote session. The outer guard was if (utent->ut_addr_v6[0] != 0), which only tests the first 32-bit word of the 128-bit address field. IPv4-mapped IPv6 addresses (::ffff:x.x.x.x) store the IPv4 address in ut_addr_v6[3] with ut_addr_v6[0] == 0. On systems where the SSH daemon listens on :: (IPv6 wildcard) with AddressFamily any -- common on Ubuntu and Debian -- incoming IPv4 connections are recorded in utmpx as IPv4-mapped IPv6 addresses. The outer check evaluates to false, the remote-detection block is skipped entirely, and the session is treated as local. deny_remote=true does not block the authentication. An attacker with physical access to a registered USB device can authenticate over SSH on an affected system as if they were sitting at a local terminal, bypassing the deny_remote restriction. This vulnerability is fixed in 0.9.0.",
-      "refs": "https://github.com/mcdope/pam_usb/commit/804fe24eae3d742d8be05fd015e36abc3c7d94e5\nhttps://github.com/mcdope/pam_usb/security/advisories/GHSA-jmmj-qhrq-w45g",
-      "source": "NVD",
-      "time": "2026-05-28 06:30:01"
-    },
-    {
-      "cve_id": "CVE-2026-45137",
-      "title": "高危漏洞: CVE-2026-45137 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-28 05:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "description": "Anchor is a framework providing several convenient developer tools for writing Solana programs. From 1.0.0 to before 1.0.2, an logic error causes anchor programs to accept any program id when requiring the system program id, causing false assumptions resulting in potential arbitrary cpi in programs that invoke system program instructions. In the TryFrom<&'a AccountInfo<'a>> implementation for Program<'a, T>, the id of T is compared with Pubkey::default() to check whether anchor should allow any executable account, or a specific account, because when no T is supplied, T defaults to (), which implements Id::id() by returning Pubkey::default(). This results in T = () and T = System (which has Pubkey::default() as the id) having the same behavior, both allow any executable account. Programs built with anchor assume that the anchor runtime verifies passed in programs of type Program<'a, System> are in fact the system program. This false assumption can lead to arbitrary CPI or payment bypassing when programs try making CPI calls to the system program using the passed in system program due to the fact that the attacker can pass in any program instead of the system program.  This vulnerability is fixed in 1.0.2.",
-      "refs": "https://github.com/otter-sec/anchor/security/advisories/GHSA-c6rc-8jpp-2fgc",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:53"
-    },
-    {
-      "cve_id": "CVE-2026-44713",
-      "title": "高危漏洞: CVE-2026-44713 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-28 05:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, src/tmux.c reads the user's $TMUX environment variable, splits it on commas, and interpolates the socket-path component directly into a shell command passed to popen(). Because the value is placed inside double-quotes without sanitisation, any value containing \" terminates the quoted string and injects arbitrary shell syntax. popen() runs as root inside the PAM stack. This vulnerability is fixed in 0.8.7.",
-      "refs": "https://github.com/mcdope/pam_usb/security/advisories/GHSA-822m-whrh-vrj8",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:46"
-    },
-    {
-      "cve_id": "CVE-2026-44712",
-      "title": "高危漏洞: CVE-2026-44712 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-28 05:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, a crafted UUID such as $(id>/tmp/rce) in the config causes root RCE when pamusb-conf --reset-pads is run. A USB device with a crafted filesystem UUID (some controllers allow this) can inject the payload at --add-device time. Also, userName from the XML config is passed to os.system() in pamusb-agent, which invokes a shell. This vulnerability is fixed in 0.8.7.",
-      "refs": "https://github.com/mcdope/pam_usb/security/advisories/GHSA-jgv5-w6rm-7wxg",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:41"
-    },
-    {
-      "cve_id": "CVE-2026-44711",
-      "title": "高危漏洞: CVE-2026-44711 (CVSS 7.9)",
-      "cvss_score": 7.9,
-      "published_date": "2026-05-28 05:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:H",
-      "description": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, symlink attacks on pad directory and pad files enable authentication bypass and root file corruption. This vulnerability is fixed in 0.8.7.",
-      "refs": "https://github.com/mcdope/pam_usb/security/advisories/GHSA-fjpm-p9pj-mp34",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:36"
-    },
-    {
-      "cve_id": "CVE-2026-44709",
-      "title": "高危漏洞: CVE-2026-44709 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-05-28 05:16:17",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, pamusb-pinentry reads the PINENTRY_FALLBACK_APP environment variable and executes it directly without any validation. Any process that can set environment variables before pamusb-pinentry is invoked can point PINENTRY_FALLBACK_APP at an arbitrary binary or script and have it executed with the privileges of the pam_usb tool chain. This vulnerability is fixed in 0.8.7.",
-      "refs": "https://github.com/mcdope/pam_usb/security/advisories/GHSA-jxrj-q67x-wr4c",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:31"
-    },
-    {
-      "cve_id": "CVE-2026-8364",
-      "title": "高危漏洞: CVE-2026-8364 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-28 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Gladinet Triofox Cloud Server Agent Access Service (GladServerAgentService.exe) listens on TCP port 7878 and processes remote HTTP messages with URL paths starting with /resources, /status, /sysinfo, /woshome, /Settings, /schedule, or /DavCache.",
-      "refs": "https://www.tenable.com/security/research/TRA-2026-45\nhttps://www.tenable.com/security/research/TRA-2026-45",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:27"
-    },
-    {
-      "cve_id": "CVE-2026-8363",
-      "title": "高危漏洞: CVE-2026-8363 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-05-28 04:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A stack-based buffer overflow condition exists in WOSDeviceDropFolder.dll when processing a long URL path starting with /resources:",
-      "refs": "https://www.tenable.com/security/research/TRA-2026-45\nhttps://www.tenable.com/security/research/TRA-2026-45",
-      "source": "NVD",
-      "time": "2026-05-28 06:29:22"
     }
   ]
 }
