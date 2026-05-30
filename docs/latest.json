@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10111",
+      "title": "高危漏洞: CVE-2026-10111 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-30 16:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in sambitraj STUDENT-MANAGEMENT-SYSTEM 1.0. This impacts an unknown function of the component Login Page. Executing a manipulation of the argument email can lead to sql injection. The attack may be performed from remote. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/sambitraj/STUDENT-MANAGEMENT-SYSTEM/\nhttps://github.com/sambitraj/STUDENT-MANAGEMENT-SYSTEM/issues/2\nhttps://vuldb.com/submit/818539",
+      "source": "NVD",
+      "time": "2026-05-30 18:43:29"
+    },
+    {
+      "cve_id": "CVE-2026-10110",
+      "title": "高危漏洞: CVE-2026-10110 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-30 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Student Details Management System 1.0. This affects an unknown function of the file /index.php. Performing a manipulation of the argument roll results in sql injection. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Xmyronn/Student-Details-Management-System-1.0---SQL-Injection-Unauthenticated-.git\nhttps://vuldb.com/submit/818504",
+      "source": "NVD",
+      "time": "2026-05-30 18:43:22"
+    },
+    {
       "cve_id": "CVE-2026-48557",
       "title": "高危漏洞: CVE-2026-48557 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/501524262",
       "source": "NVD",
       "time": "2026-05-30 04:32:04"
-    },
-    {
-      "cve_id": "CVE-2026-9926",
-      "title": "高危漏洞: CVE-2026-9926 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500540748",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:59"
-    },
-    {
-      "cve_id": "CVE-2026-9925",
-      "title": "高危漏洞: CVE-2026-9925 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-29 07:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html\nhttps://issues.chromium.org/issues/500536458",
-      "source": "NVD",
-      "time": "2026-05-30 04:31:55"
     }
   ]
 }
