@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-49490",
+      "title": "高危漏洞: CVE-2026-49490 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-05-31 21:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "OpenCATS from version 0.9.1a contains an SQL injection vulnerability in DataGrid filter handling that allows authenticated attackers to inject SQL through crafted filters targeting the non-filterable Tags column in the Candidates DataGrid. Attackers can bypass column filterable restrictions by manipulating filter requests to execute arbitrary SQL queries against the database.",
+      "refs": "https://github.com/opencats/OpenCATS/security/advisories/GHSA-gmpc-j6h7-vw74\nhttps://www.vulncheck.com/advisories/opencats-sql-injection-in-datagrid-filter-handling-for-tags-column",
+      "source": "NVD",
+      "time": "2026-05-31 23:59:54"
+    },
+    {
+      "cve_id": "CVE-2026-49489",
+      "title": "高危漏洞: CVE-2026-49489 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-05-31 21:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
+      "description": "OpenCATS through 0.9.7.4 contains a sql injection vulnerability in the sortDirection parameter of the DataGrid component that allows authenticated users to extract database contents. Attackers can inject malicious SQL via the sortDirection parameter in ajax/getDataGridPager.php to perform time-based blind injection attacks and read sensitive data.",
+      "refs": "https://github.com/opencats/OpenCATS/security/advisories/GHSA-8mc8-5gw6-c7w4\nhttps://packetstorm.news/files/id/222200/\nhttps://www.exploit-db.com/exploits/52579",
+      "source": "NVD",
+      "time": "2026-05-31 23:59:48"
+    },
+    {
+      "cve_id": "CVE-2026-10181",
+      "title": "高危漏洞: CVE-2026-10181 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 21:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in TRENDnet TEW-432BRP 3.10B20. The affected element is the function formSysCmd of the file /goform/formSysCmd. Performing a manipulation of the argument submit-url results in stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made public and could be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_18/18.md\nhttps://vuldb.com/cve/CVE-2026-10181\nhttps://vuldb.com/submit/814775",
+      "source": "NVD",
+      "time": "2026-05-31 23:59:41"
+    },
+    {
       "cve_id": "CVE-2026-10179",
       "title": "高危漏洞: CVE-2026-10179 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mgq6-vr84-7m2j\nhttps://www.vulncheck.com/advisories/openclaw-qqbot-missing-approver-identity-enforcement-in-native-approval-buttons",
       "source": "NVD",
       "time": "2026-05-30 04:36:00"
-    },
-    {
-      "cve_id": "CVE-2026-32905",
-      "title": "高危漏洞: CVE-2026-32905 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-05-30 00:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "OpenClaw before 2026.5.4 contains an authorization bypass vulnerability in the bundled device-pair plugin that allows non-owner authorized chat senders to issue device-pairing bootstrap codes without proper scope validation. Attackers with chat command access can create setup codes to enroll devices with operator/node capabilities, granting persistent credentials until manual removal.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xr4f-mjxj-w6w5\nhttps://www.vulncheck.com/advisories/openclaw-unauthorized-device-pairing-bootstrap-code-issuance-via-chat-command",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:56"
-    },
-    {
-      "cve_id": "CVE-2026-10069",
-      "title": "高危漏洞: CVE-2026-10069 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-30 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A vulnerability has been found in Shibby Tomato 1.28. The impacted element is an unknown function of the file usr/sbin/miniupnpd. Such manipulation leads to resource consumption. The attack may be launched remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJD8SP\nhttps://vuldb.com/submit/818238\nhttps://vuldb.com/vuln/367155",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:51"
-    },
-    {
-      "cve_id": "CVE-2026-10068",
-      "title": "高危漏洞: CVE-2026-10068 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-05-30 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in Shibby Tomato 1.28. The affected element is the function send of the file usr/sbin/miniupnpd of the component SUBSCRIBE Call Handler. This manipulation causes server-side request forgery. The attack may be initiated remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJD8SS\nhttps://vuldb.com/submit/818237\nhttps://vuldb.com/vuln/367154",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:44"
     }
   ]
 }
