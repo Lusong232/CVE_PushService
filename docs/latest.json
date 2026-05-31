@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10167",
+      "title": "高危漏洞: CVE-2026-10167 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-31 13:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in OUSL-GROUP-BrinaryBrains School Student Management System up to 1e70e5ad1125b86dca4ee086eb6bb121f17708b6. This impacts the function sign_auth_cookie of the file application/controllers/Login.php of the component MY_Controller. Executing a manipulation of the argument role can lead to improper authentication. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks. This product takes the approach of rolling releases to provide continious delivery. Therefore, version details for affected and updated releases are not available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/OUSL-GROUP-BrinaryBrains/School-Student-Management-System/issues/24\nhttps://vuldb.com/submit/819157\nhttps://vuldb.com/vuln/367421",
+      "source": "NVD",
+      "time": "2026-05-31 18:51:47"
+    },
+    {
       "cve_id": "CVE-2026-10165",
       "title": "高危漏洞: CVE-2026-10165 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJK7BD\nhttps://vuldb.com/submit/818145\nhttps://vuldb.com/vuln/367152",
       "source": "NVD",
       "time": "2026-05-30 04:35:34"
-    },
-    {
-      "cve_id": "CVE-2026-10065",
-      "title": "高危漏洞: CVE-2026-10065 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-30 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in Shibby Tomato 1.28. This vulnerability affects the function get_ups_field of the file tomatodata.cgi. Executing a manipulation of the argument Date can lead to stack-based buffer overflow. It is possible to launch the attack remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJK7BC\nhttps://vuldb.com/submit/818144\nhttps://vuldb.com/vuln/367151",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:29"
     }
   ]
 }
