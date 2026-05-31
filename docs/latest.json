@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10179",
+      "title": "高危漏洞: CVE-2026-10179 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 19:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in TRENDnet TEW-432BRP 3.10B20. This issue affects the function formSetWlanEncrypt of the file /goform/formSetWlanEncrypt. This manipulation of the argument webpage causes stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been published and may be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_16/16.md\nhttps://vuldb.com/cve/CVE-2026-10179\nhttps://vuldb.com/submit/814773",
+      "source": "NVD",
+      "time": "2026-05-31 21:14:18"
+    },
+    {
+      "cve_id": "CVE-2026-10178",
+      "title": "高危漏洞: CVE-2026-10178 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-31 19:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Online Music Site 1.0. This vulnerability affects unknown code of the file /Administrator/PHP/AdminEditAlbum.php. The manipulation of the argument ID results in sql injection. The attack may be performed from remote. The exploit is now public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/gtxy114514/CVE/issues/7\nhttps://vuldb.com/cve/CVE-2026-10178",
+      "source": "NVD",
+      "time": "2026-05-31 21:14:12"
+    },
+    {
       "cve_id": "CVE-2026-10167",
       "title": "高危漏洞: CVE-2026-10167 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJD8SS\nhttps://vuldb.com/submit/818237\nhttps://vuldb.com/vuln/367154",
       "source": "NVD",
       "time": "2026-05-30 04:35:44"
-    },
-    {
-      "cve_id": "CVE-2026-10067",
-      "title": "高危漏洞: CVE-2026-10067 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-30 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Shibby Tomato 1.28. Impacted is the function sub_90F0 of the file multimon.cgi. The manipulation results in stack-based buffer overflow. The attack can be launched remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJK7BE\nhttps://vuldb.com/submit/818146\nhttps://vuldb.com/vuln/367153",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:39"
-    },
-    {
-      "cve_id": "CVE-2026-10066",
-      "title": "高危漏洞: CVE-2026-10066 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-05-30 00:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Shibby Tomato up to 1.28. This issue affects the function sub_9068 of the file tomatoups.cgi of the component UPS Service. The manipulation leads to stack-based buffer overflow. The attack can be initiated remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
-      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJK7BD\nhttps://vuldb.com/submit/818145\nhttps://vuldb.com/vuln/367152",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:34"
     }
   ]
 }
