@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10165",
+      "title": "高危漏洞: CVE-2026-10165 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 12:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Edimax BR-6478AC 1.23. The impacted element is the function formWanTcpipSetup of the file /goform/formWanTcpipSetup of the component POST Request Handler. Such manipulation of the argument pppUserName leads to stack-based buffer overflow. The attack may be performed from remote. The exploit is publicly available and might be used.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR6478ACV2-formWanTcpipSetup-34b53a41781f8013a811da2b3c8b7aa3?source=copy_link\nhttps://vuldb.com/submit/818601\nhttps://vuldb.com/vuln/367419",
+      "source": "NVD",
+      "time": "2026-05-31 14:50:09"
+    },
+    {
+      "cve_id": "CVE-2026-10164",
+      "title": "高危漏洞: CVE-2026-10164 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 12:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Edimax BR-6478AC 1.23. Impacted is the function formUSBFolder of the file /goform/formUSBFolder of the component POST Request Handler. The manipulation of the argument ShareName/SelectName results in buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR6478ACV2-formUSBFolder-34b53a41781f80559b15f262ba914d57?source=copy_link\nhttps://vuldb.com/submit/818600\nhttps://vuldb.com/vuln/367417",
+      "source": "NVD",
+      "time": "2026-05-31 14:50:05"
+    },
+    {
+      "cve_id": "CVE-2026-10163",
+      "title": "高危漏洞: CVE-2026-10163 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 12:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Edimax BR-6478AC 1.23. This issue affects the function formUSBAccount of the file /goform/formUSBAccount of the component POST Request Handler. The manipulation of the argument UserName/Password leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR6478ACV2-formUSBAccount-34b53a41781f803eb9b0dae1fea4dc3e?source=copy_link\nhttps://vuldb.com/submit/818599\nhttps://vuldb.com/vuln/367416",
+      "source": "NVD",
+      "time": "2026-05-31 14:50:00"
+    },
+    {
+      "cve_id": "CVE-2026-10162",
+      "title": "高危漏洞: CVE-2026-10162 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 11:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in TRENDnet TEW-432BRP 3.10B20. This vulnerability affects the function formSetPassword of the file /goform/formSetPassword. Executing a manipulation of the argument webpage can lead to stack-based buffer overflow. The attack may be launched remotely. The exploit has been published and may be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_15/15.md\nhttps://vuldb.com/submit/814772\nhttps://vuldb.com/vuln/367415",
+      "source": "NVD",
+      "time": "2026-05-31 14:49:56"
+    },
+    {
+      "cve_id": "CVE-2026-10161",
+      "title": "高危漏洞: CVE-2026-10161 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 11:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in TRENDnet TEW-432BRP 3.10B20. This affects the function formResetStatistic of the file /goform/formResetStatistic. Performing a manipulation of the argument status_statistic results in stack-based buffer overflow. The attack may be initiated remotely. The exploit is now public and may be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_14/14.md\nhttps://vuldb.com/submit/814771\nhttps://vuldb.com/vuln/367414",
+      "source": "NVD",
+      "time": "2026-05-31 14:49:50"
+    },
+    {
+      "cve_id": "CVE-2026-10160",
+      "title": "高危漏洞: CVE-2026-10160 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 11:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in TRENDnet TEW-432BRP 3.10B20. Affected by this issue is the function formSetEnableWizard of the file /goform/formSetEnableWizard. Such manipulation of the argument start_wizard leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_13/13.md\nhttps://vuldb.com/submit/814770\nhttps://vuldb.com/vuln/367413",
+      "source": "NVD",
+      "time": "2026-05-31 14:49:44"
+    },
+    {
+      "cve_id": "CVE-2026-10159",
+      "title": "高危漏洞: CVE-2026-10159 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 10:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in TRENDnet TEW-432BRP 3.10B20. Affected by this vulnerability is the function formSysLog of the file /goform/formSysLog. This manipulation of the argument current_page causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_12/12.md\nhttps://vuldb.com/submit/814769\nhttps://vuldb.com/vuln/367412",
+      "source": "NVD",
+      "time": "2026-05-31 14:49:37"
+    },
+    {
+      "cve_id": "CVE-2026-10158",
+      "title": "高危漏洞: CVE-2026-10158 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-05-31 10:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in TRENDnet TEW-432BRP 3.10B20. Affected is the function formPortFw of the file /goform/formPortFw. The manipulation of the argument server_name results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/wudipjq/my_vuln/blob/main/TRENDnet/vuln_11/11.md\nhttps://vuldb.com/submit/814768\nhttps://vuldb.com/vuln/367411",
+      "source": "NVD",
+      "time": "2026-05-31 14:49:30"
+    },
+    {
+      "cve_id": "CVE-2026-10157",
+      "title": "高危漏洞: CVE-2026-10157 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-05-31 10:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Open5GS up to 2.7.6. This impacts an unknown function of the file src/amf/ngap-handler.c of the component NGAP PathSwitchRequest Message Handler. The manipulation leads to improper authentication. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The identifier of the patch is a188e36b1741ffc2252133f59b1bda4f14d3cb5c. It is suggested to install a patch to address this issue.",
+      "refs": "https://github.com/open5gs/open5gs/\nhttps://github.com/open5gs/open5gs/commit/a188e36b1741ffc2252133f59b1bda4f14d3cb5c\nhttps://github.com/open5gs/open5gs/issues/4393",
+      "source": "NVD",
+      "time": "2026-05-31 14:49:24"
+    },
+    {
       "cve_id": "CVE-2026-10126",
       "title": "高危漏洞: CVE-2026-10126 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1000,105 +1099,6 @@
       "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJK7BC\nhttps://vuldb.com/submit/818144\nhttps://vuldb.com/vuln/367151",
       "source": "NVD",
       "time": "2026-05-30 04:35:29"
-    },
-    {
-      "cve_id": "CVE-2018-25404",
-      "title": "高危漏洞: CVE-2018-25404 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the ticket_id parameter. Attackers can send GET requests to add_facnote.php with crafted SQL payloads to extract sensitive database information including version details and other data.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:25"
-    },
-    {
-      "cve_id": "CVE-2018-25403",
-      "title": "高危漏洞: CVE-2018-25403 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the p1 parameter. Attackers can send GET requests to city_graph.php with crafted SQL payloads to extract sensitive database information including schema names and other data.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:21"
-    },
-    {
-      "cve_id": "CVE-2018-25402",
-      "title": "高危漏洞: CVE-2018-25402 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the p1 parameter. Attackers can send GET requests to inc_types_graph.php with crafted SQL payloads to extract sensitive database information including schema names and other data.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:16"
-    },
-    {
-      "cve_id": "CVE-2018-25401",
-      "title": "高危漏洞: CVE-2018-25401 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the p1 parameter. Attackers can send GET requests to sever_graph.php with crafted SQL payloads to extract sensitive database information including schema names and other data.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:09"
-    },
-    {
-      "cve_id": "CVE-2018-25400",
-      "title": "高危漏洞: CVE-2018-25400 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'id' parameter. Attackers can send GET requests to the ajax/form_post.php endpoint with crafted SQL payloads to extract sensitive database information including schema names and other data.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:35:04"
-    },
-    {
-      "cve_id": "CVE-2018-25399",
-      "title": "高危漏洞: CVE-2018-25399 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the tick_lat and tick_lng parameters. Attackers can send GET requests to nearby.php with crafted SQL payloads to extract sensitive database information including usernames, database names, and version details.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:34:59"
-    },
-    {
-      "cve_id": "CVE-2018-25398",
-      "title": "高危漏洞: CVE-2018-25398 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the frm_passwd parameter. Attackers can send POST requests to main.php with crafted SQL payloads to extract sensitive database information including usernames, database names, and version details.",
-      "refs": "http://openises.sourceforge.net/\nhttps://sourceforge.net/projects/openises/files/latest/download\nhttps://www.exploit-db.com/exploits/45645",
-      "source": "NVD",
-      "time": "2026-05-30 04:34:54"
-    },
-    {
-      "cve_id": "CVE-2018-25396",
-      "title": "高危漏洞: CVE-2018-25396 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-05-30 00:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Heatmiser Wifi Thermostat 1.7 contains a credential disclosure vulnerability that allows unauthenticated attackers to retrieve administrative credentials by accessing the networkSetup.htm page. Attackers can request the networkSetup.htm endpoint and extract plaintext username and password values from HTML form fields to gain administrative access to the thermostat.",
-      "refs": "https://www.exploit-db.com/exploits/45623\nhttps://www.vulncheck.com/advisories/heatmiser-wifi-thermostat-credential-disclosure-via-networksetup-htm",
-      "source": "NVD",
-      "time": "2026-05-30 04:34:50"
-    },
-    {
-      "cve_id": "CVE-2018-25395",
-      "title": "高危漏洞: CVE-2018-25395 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 00:16:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the feature_id parameter of boards_buttons/update_feature.php. The feature_id value is concatenated directly into SQL statements without sanitization, allowing attackers to send a crafted GET request with a UNION-based payload to extract sensitive database information including the current user, database name, and DBMS version.",
-      "refs": "https://sourceforge.net/projects/kados/\nhttps://www.exploit-db.com/exploits/45617\nhttps://www.kados.info/",
-      "source": "NVD",
-      "time": "2026-05-30 04:34:45"
     }
   ]
 }
