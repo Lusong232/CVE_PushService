@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-48209",
+      "title": "高危漏洞: CVE-2026-48209 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-01 12:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N",
+      "description": "An improper neutralization of user-controllable input in OTRS or ((OTRS)) Community Edition ticket handling allows authenticated attackers to perform reflected cross-site scripting (XSS) attacks via crafted request parameters associated with ticket actions. By injecting malicious JavaScript into manipulated request URLs, attackers can execute arbitrary script code in the context of an authenticated agent session when the crafted link is opened.\n\nThis issue affects OTRS:\n\n  *  7.0.x\n\nPlease note that ((OTRS)) Community Edition 6.x and before are vulnerable. Products based on the ((OTRS)) Community Edition also very likely to be affected",
+      "refs": "https://otrs.com/release-notes/otrs-security-advisory-2026-08/",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:52"
+    },
+    {
+      "cve_id": "CVE-2026-48188",
+      "title": "高危漏洞: CVE-2026-48188 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-01 12:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "An improper Input Validation vulnerability in OTRS or ((OTRS)) Community Edition database layer module allows an unauthenticated SQL injection which can lead to an authentication bypass. This issue only affects the system if the MySQL/MariaDB server is configured with the NO_BACKSLASH_ESCAPES SQL mode.\n\nThis issue affects OTRS: \n\n  *  7.0.X\n  *  8.0.X\n  *  2023.X\n  *  2024.X\n  *  2025.X\n  *  2026.X before 2026.4.X\n  *  (OTRS)) Community Edition: 6.0.x\n\nProducts based on the ((OTRS)) Community Edition also very likely to be affected",
+      "refs": "https://otrs.com/release-notes/otrs-security-advisory-2026-02/",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:47"
+    },
+    {
+      "cve_id": "CVE-2026-10221",
+      "title": "高危漏洞: CVE-2026-10221 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-01 12:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in NousResearch hermes-agent up to 0.12.0. Affected by this vulnerability is the function _compress_context of the file run_agent.py. The manipulation leads to injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/d343fcfe2c009cd45f56dc475fd5ac03\nhttps://vuldb.com/cve/CVE-2026-10221\nhttps://vuldb.com/submit/822019",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:39"
+    },
+    {
+      "cve_id": "CVE-2026-10220",
+      "title": "高危漏洞: CVE-2026-10220 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-01 12:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in NousResearch hermes-agent up to 2026.4.30. Affected is the function _serve_plugin_skill/skill_view of the file tools/skills_tool.py. Executing a manipulation can lead to injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/9dd399c6f75b31fa741a613dfd41de08\nhttps://vuldb.com/cve/CVE-2026-10220\nhttps://vuldb.com/submit/822018",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:35"
+    },
+    {
+      "cve_id": "CVE-2026-10219",
+      "title": "高危漏洞: CVE-2026-10219 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-01 12:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in nextlevelbuilder GoClaw up to 3.11.3. This impacts the function FsBridge.WriteFile of the file internal/sandbox/fsbridge.go of the component write_file Tool. Performing a manipulation results in os command injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The pull request to fix this issue awaits acceptance.",
+      "refs": "https://github.com/nextlevelbuilder/goclaw/\nhttps://github.com/nextlevelbuilder/goclaw/issues/1121\nhttps://github.com/nextlevelbuilder/goclaw/pull/1155",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:30"
+    },
+    {
+      "cve_id": "CVE-2026-10214",
+      "title": "高危漏洞: CVE-2026-10214 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-01 11:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in zhayujie chatgpt-on-wechat up to 2.0.8. This issue affects the function _get_safety_warning of the file agent/tools/bash/bash.py of the component Bash Tool. Executing a manipulation can lead to os command injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 2.0.9 is capable of addressing this issue. This patch is called 16d9b449c9aa53ccee44144a762a2737d7ba4fc4. It is recommended to upgrade the affected component.",
+      "refs": "https://github.com/zhayujie/CowAgent/commit/16d9b449c9aa53ccee44144a762a2737d7ba4fc4\nhttps://github.com/zhayujie/CowAgent/issues/2803\nhttps://github.com/zhayujie/CowAgent/releases/tag/2.0.9",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:26"
+    },
+    {
+      "cve_id": "CVE-2026-10208",
+      "title": "高危漏洞: CVE-2026-10208 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-01 10:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in code-projects Online Hospital Management System 1.php. This impacts the function login_user of the file login_1.php. Executing a manipulation of the argument Username can lead to sql injection. The attack can be executed remotely. The exploit has been published and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/Mi0uno/Online-Hospital-Management-System-has-SQL-Injection\nhttps://vuldb.com/cve/CVE-2026-10208",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:20"
+    },
+    {
+      "cve_id": "CVE-2026-10206",
+      "title": "高危漏洞: CVE-2026-10206 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-01 09:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in D-Link DI-8400 up to 16.07.26A1. This affects an unknown function of the file /dbsrv.asp. Performing a manipulation of the argument str results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit is now public and may be used. The initial researcher advisory mentions contradicting parameter names to be affected.",
+      "refs": "https://github.com/666324/dlink-di8400-vuln/tree/main/dlink-di8400-vuln\nhttps://vuldb.com/cve/CVE-2026-10206\nhttps://vuldb.com/submit/821716",
+      "source": "NVD",
+      "time": "2026-06-01 16:25:15"
+    },
+    {
       "cve_id": "CVE-2026-10192",
       "title": "高危漏洞: CVE-2026-10192 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1011,94 +1099,6 @@
       "refs": "https://github.com/Dokploy/dokploy/security/advisories/GHSA-wmqj-wr9q-327p",
       "source": "NVD",
       "time": "2026-05-30 04:37:24"
-    },
-    {
-      "cve_id": "CVE-2026-45632",
-      "title": "高危漏洞: CVE-2026-45632 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-30 02:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.26.7 and earlier, the schedule router does not enforce organization/role checks. As a result, any authenticated user can create, update, run, or delete schedules belonging to other organizations if they know the scheduleId/serverId. Schedule types server and dokploy-server write and execute scripts on the host or remote servers, enabling RCE on the Dokploy host or a target server.",
-      "refs": "https://github.com/Dokploy/dokploy/security/advisories/GHSA-7wmr-57mg-h5q6",
-      "source": "NVD",
-      "time": "2026-05-30 04:37:20"
-    },
-    {
-      "cve_id": "CVE-2026-45631",
-      "title": "高危漏洞: CVE-2026-45631 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-05-30 02:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.27.0 to before 0.29.3, a hardcoded BETTER_AUTH_SECRET fallback (\"better-auth-secret-123456789\") lets an unauthenticated attacker forge email verification JWTs, trigger auto-sign-in as admin, and execute commands on the host via the built-in SSH terminal. This vulnerability is fixed in 0.29.3.",
-      "refs": "https://github.com/Dokploy/dokploy/pull/4374\nhttps://github.com/Dokploy/dokploy/security/advisories/GHSA-w3gm-rc4p-9rhj",
-      "source": "NVD",
-      "time": "2026-05-30 04:37:15"
-    },
-    {
-      "cve_id": "CVE-2026-45630",
-      "title": "高危漏洞: CVE-2026-45630 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-05-30 02:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:L",
-      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.28.8 and earlier, authenticated OS command injection in the application.updateTraefikConfig tRPC endpoint allows admin/owner users to execute arbitrary system commands on remote servers via unsanitized echo shell interpolation.",
-      "refs": "https://github.com/Dokploy/dokploy/security/advisories/GHSA-p787-6gqg-cvp5",
-      "source": "NVD",
-      "time": "2026-05-30 04:37:10"
-    },
-    {
-      "cve_id": "CVE-2026-45629",
-      "title": "高危漏洞: CVE-2026-45629 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-30 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
-      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.28.8 and earlier, authenticated OS command injection in the /listen-deployment WebSocket endpoint allows any organization member to execute arbitrary system commands on remote servers managed by Dokploy, leading to full server compromise.",
-      "refs": "https://github.com/Dokploy/dokploy/security/advisories/GHSA-r73h-qr3p-hf7f",
-      "source": "NVD",
-      "time": "2026-05-30 04:37:06"
-    },
-    {
-      "cve_id": "CVE-2026-45628",
-      "title": "高危漏洞: CVE-2026-45628 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-05-30 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.29.2 and earlier, Dokploy constructs shell commands using JavaScript template literals and executes them via child_process.exec() (which runs through /bin/sh -c). User-supplied branch names, repository URLs, and Docker credentials are interpolated directly into these commands without escaping. This requires an authenticated user with application create/edit privileges.",
-      "refs": "https://github.com/Dokploy/dokploy/security/advisories/GHSA-3frc-cfh9-ch2c",
-      "source": "NVD",
-      "time": "2026-05-30 04:37:01"
-    },
-    {
-      "cve_id": "CVE-2026-45627",
-      "title": "高危漏洞: CVE-2026-45627 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-05-30 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 1.19.0, the unauthenticated GET /api/app-images/logo endpoint reflects a user-supplied color query parameter into the body of an SVG document via strings.ReplaceAll with no escaping. The substitution lands inside a <style> element of the embedded logo.svg, allowing an attacker to close the style block and inject executable <script> content. Because the response is served as image/svg+xml and Arcane sets no Content-Security-Policy or X-Content-Type-Options headers, navigating a logged-in admin victim to a crafted URL executes attacker-controlled JavaScript in Arcane's origin and rides the victim's HttpOnly JWT cookie to fully compromise the admin account. This vulnerability is fixed in 1.19.0.",
-      "refs": "https://github.com/getarcaneapp/arcane/security/advisories/GHSA-q2pj-8v84-9mh5",
-      "source": "NVD",
-      "time": "2026-05-30 04:36:56"
-    },
-    {
-      "cve_id": "CVE-2026-45625",
-      "title": "高危漏洞: CVE-2026-45625 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-05-30 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 1.19.0, Arcane's huma-based REST API exposes nine endpoints under /api/customize/git-repositories and /api/git-repositories/sync for managing GitOps source repositories and their stored credentials. Eight of those endpoints (list, create, get, update, delete, test, listBranches, browseFiles) never call the checkAdmin(ctx) helper that every other admin-managed resource (container registries, environments, users, API keys, swarm, settings, system, notifications, events) uses, and the huma authentication middleware deliberately enforces only authentication, not the admin role. As a result, any logged-in user with the default user role can list, create, modify, delete, and test git repository configurations. By repointing an existing repository's URL to an attacker-controlled host while omitting the token/sshKey fields (which UpdateRepository only rewrites when explicitly supplied), the attacker causes Arcane to decrypt the legitimate PAT/SSH key on its next /test, /branches, or /files call and present it as HTTP Basic auth (or SSH key auth) to the attacker's host — producing a one-step exfiltration of plaintext Git credentials. This vulnerability is fixed in 1.19.0.",
-      "refs": "https://github.com/getarcaneapp/arcane/security/advisories/GHSA-7h26-hg47-p9hx",
-      "source": "NVD",
-      "time": "2026-05-30 04:36:51"
-    },
-    {
-      "cve_id": "CVE-2026-44697",
-      "title": "高危漏洞: CVE-2026-44697 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-05-30 02:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-      "description": "Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.17, a remote, unauthenticated denial-of-service vulnerability in Batch.Decompress (data/batch/batch.go) allows any peer that participates in a topic served by MultiDataInterceptor to allocate multi-gigabyte heaps on the receiving node from a sub-50 KiB gossip payload. A single packet is sufficient to OOM-kill a validator with conventional memory provisioning. Fleet-wide application affects chain liveness. This vulnerability is fixed in 1.7.17.",
-      "refs": "https://github.com/klever-io/klever-go/security/advisories/GHSA-87m7-qffr-542v",
-      "source": "NVD",
-      "time": "2026-05-30 04:36:44"
     }
   ]
 }
