@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8206",
+      "title": "高危漏洞: CVE-2026-8206 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-02 12:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions 6.0.0 to 6.0.6. This is due to the plugin accepting an arbitrary email address when a username is used in the password reset request. This makes it possible for unauthenticated attackers to send a password reset link for any user registered on the site to their own email address.",
+      "refs": "https://plugins.trac.wordpress.org/browser/kirki/tags/6.0.4/ComponentLibrary/controller/CompLibFormHandler.php#L330\nhttps://plugins.trac.wordpress.org/browser/kirki/tags/6.0.4/ComponentLibrary/controller/CompLibFormHandler.php#L48\nhttps://plugins.trac.wordpress.org/browser/kirki/tags/6.0.4/ComponentLibrary/controller/ElementGenerator.php#L227",
+      "source": "NVD",
+      "time": "2026-06-02 15:17:01"
+    },
+    {
+      "cve_id": "CVE-2026-0089",
+      "title": "高危漏洞: CVE-2026-0089 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-02 06:16:22",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In multiple functions of PackageInstallerService.java, there is a possible way to install unverified apps due to a missing permission check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
+      "source": "NVD",
+      "time": "2026-06-02 15:16:54"
+    },
+    {
+      "cve_id": "CVE-2026-0059",
+      "title": "高危漏洞: CVE-2026-0059 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-02 06:16:20",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In multiple functions of sdp_discovery.cc, there is a possible way to achieve code execution due to a heap buffer overflow. This could lead to remote (proximal/adjacent) code execution with no additional execution privileges needed. User interaction is not needed for exploitation.",
+      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
+      "source": "NVD",
+      "time": "2026-06-02 15:16:48"
+    },
+    {
       "cve_id": "CVE-2026-25879",
       "title": "高危漏洞: CVE-2026-25879 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1066,39 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/e2pdf/vulnerability/wordpress-e2pdf-plugin-1-32-14-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-02 03:52:54"
-    },
-    {
-      "cve_id": "CVE-2026-42680",
-      "title": "高危漏洞: CVE-2026-42680 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-01 23:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect Privilege Assignment vulnerability in Wasiliy Strecker / ContestGallery developer Contest Gallery Pro allows Privilege Escalation.\n\nThis issue affects Contest Gallery Pro: from n/a through 29.0.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/contest-gallery-pro/vulnerability/wordpress-contest-gallery-pro-plugin-29-0-1-privilege-escalation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 03:52:50"
-    },
-    {
-      "cve_id": "CVE-2026-37221",
-      "title": "高危漏洞: CVE-2026-37221 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-01 23:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 crashes when receiving a RIC_SUBSCRIPTION_RESPONSE with an unknown ric_id that has no corresponding pending event. The near-RT RIC uses assert() to enforce the existence of a pending event during response processing. A remote unauthenticated attacker can send a forged RIC_SUBSCRIPTION_RESPONSE to the near-RT RIC (port 36421) to cause SIGABRT in Debug builds or NULL pointer dereference (SIGSEGV) in Release builds.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37221.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-02 03:52:43"
-    },
-    {
-      "cve_id": "CVE-2026-37220",
-      "title": "高危漏洞: CVE-2026-37220 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-01 23:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 crashes when an SCTP association is closed before an E2_SETUP_REQUEST is sent. The near-RT RIC assumes a mapping between SCTP association and E2 node always exists in the cleanup path and enforces this via assert(). A remote unauthenticated attacker can crash the near-RT RIC (port 36421) by simply completing an SCTP handshake and immediately disconnecting, without sending any E2AP message.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37220.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-02 03:52:39"
     }
   ]
 }
