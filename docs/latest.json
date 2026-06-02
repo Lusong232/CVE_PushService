@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2025-53209",
+      "title": "高危漏洞: CVE-2025-53209 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-02 18:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in Themeisle Masteriyo LMS PRO allows Privilege Escalation.\n\nThis issue affects Masteriyo LMS PRO: from n/a through 2.20.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/learning-management-system-pro/vulnerability/wordpress-masteriyo-lms-pro-2-20-0-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-02 20:34:21"
+    },
+    {
+      "cve_id": "CVE-2025-52759",
+      "title": "高危漏洞: CVE-2025-52759 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-02 18:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in UnboundStudio Accordion FAQ allows Reflected XSS.\n\nThis issue affects Accordion FAQ: from n/a through 2.2.1.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/pressapps-accordion-faq/vulnerability/wordpress-accordion-faq-plugin-2-2-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-02 20:34:16"
+    },
+    {
+      "cve_id": "CVE-2026-3514",
+      "title": "高危漏洞: CVE-2026-3514 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-02 17:16:16",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "In version 3.6.19 of prefecthq/prefect, an authentication bypass vulnerability exists due to the improper handling of URL path exemptions for health check probes. Specifically, the authentication middleware exempts any URL path ending with 'health' or 'ready' from authentication checks. This allows an attacker to create resources with names ending in 'health' or 'ready' and access them without authentication. Affected endpoints include those for variables, flows, work pools, work queues, and deployments. This vulnerability can lead to unauthorized access to sensitive information, such as API keys and database credentials, stored in Prefect Variables.",
+      "refs": "https://github.com/prefecthq/prefect/commit/e21617125335025b4b27e7d6f0ca028e8e8f3b79\nhttps://huntr.com/bounties/c540e5e1-f74f-44f4-bfa0-9764ff6daa75",
+      "source": "NVD",
+      "time": "2026-06-02 20:34:12"
+    },
+    {
+      "cve_id": "CVE-2026-1784",
+      "title": "高危漏洞: CVE-2026-1784 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-02 17:16:15",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The Route OpenShift resource allows to define routes to make pods reachable at a subdomain through HAProxy. It was found that the checks performed on the spec.path YAML stanza in a Route document was insufficient and could allow a controlled injection of the HAProxy configuration.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-1784\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2436075",
+      "source": "NVD",
+      "time": "2026-06-02 20:34:06"
+    },
+    {
       "cve_id": "CVE-2026-8206",
       "title": "高危漏洞: CVE-2026-8206 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/learnpress/vulnerability/wordpress-learnpress-plugin-4-3-6-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-02 03:53:10"
-    },
-    {
-      "cve_id": "CVE-2026-48839",
-      "title": "高危漏洞: CVE-2026-48839 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-01 23:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VeronaLabs WP Statistics allows DOM-Based XSS.\n\nThis issue affects WP Statistics: from n/a through 14.16.6.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-statistics/vulnerability/wordpress-wp-statistics-plugin-14-16-6-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 03:53:06"
-    },
-    {
-      "cve_id": "CVE-2026-42683",
-      "title": "高危漏洞: CVE-2026-42683 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-01 23:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in e4jvikwp VikBooking Hotel Booking Engine & PMS allows DOM-Based XSS.\n\nThis issue affects VikBooking Hotel Booking Engine & PMS: from n/a through 1.8.8.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/vikbooking/vulnerability/wordpress-vikbooking-hotel-booking-engine-pms-plugin-1-8-8-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 03:53:02"
-    },
-    {
-      "cve_id": "CVE-2026-42682",
-      "title": "高危漏洞: CVE-2026-42682 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-01 23:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Missing Authorization vulnerability in Tomdever wpForo Forum allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects wpForo Forum: from n/a through 3.0.6.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpforo/vulnerability/wordpress-wpforo-forum-plugin-3-0-6-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 03:52:58"
-    },
-    {
-      "cve_id": "CVE-2026-42681",
-      "title": "高危漏洞: CVE-2026-42681 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-01 23:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in E2Pdf.Com e2pdf allows Reflected XSS.\n\nThis issue affects e2pdf: from n/a through 1.32.14.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/e2pdf/vulnerability/wordpress-e2pdf-plugin-1-32-14-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 03:52:54"
     }
   ]
 }
