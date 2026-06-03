@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-35482",
+      "title": "高危漏洞: CVE-2026-35482 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-03 07:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "alf.io is an open source ticket reservation system for conferences, trade shows, workshops, and meetups. Prior to version 2.0-M5-2606, a sandbox escape vulnerability in the alf.io extension script engine allows an authenticated administrator to execute arbitrary operating system commands on the server. The extension system is intended to execute restricted JavaScript in a sandboxed Rhino environment; however, a combination of an unguarded injected Java object (`returnClass`) and an incomplete AST blocklist allows the sandbox to be fully escaped using Java reflection without triggering any validation errors. Version 2.0-M5-2606 patches the issue.",
+      "refs": "https://github.com/alfio-event/alf.io/security/advisories/GHSA-3w8f-mcf6-cm7h",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:41"
+    },
+    {
+      "cve_id": "CVE-2026-32625",
+      "title": "高危漏洞: CVE-2026-32625 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-03 07:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. In versions up to and including 0.8.3, the Model Context Protocol (MCP) server integration resolves ${VAR} placeholders against the server's process.env during Zod schema validation of user-supplied MCP server URLs. Any authenticated user can create a malicious MCP server configuration with a URL pointing to an attacker-controlled domain containing environment variable references, causing the LibreChat server to connect to the attacker's server and transmit critical secrets such as CREDS_KEY, CREDS_IV, JWT_SECRET, and MONGO_URI in the request URL. This enables full compromise of the installation's cryptographic materials and database credentials without requiring administrative privileges. This is patched in version 0.8.4-rc1.",
+      "refs": "https://github.com/danny-avila/LibreChat/security/advisories/GHSA-4pcc-j6m6-wcwx",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:33"
+    },
+    {
+      "cve_id": "CVE-2026-31942",
+      "title": "高危漏洞: CVE-2026-31942 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-03 07:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. In versions up to and including 0.7.6, an Insecure Direct Object Reference (IDOR) vulnerability exists in the API keys management endpoint (PUT /api/keys). Due to the use of the JavaScript object spread operator after setting the authenticated user's ID, any authenticated user can inject a userId parameter in the request body to overwrite any other user's API keys (e.g., OpenAI, Anthropic, Azure). This allows an attacker to replace a victim's API key configuration, potentially routing the victim's conversations through attacker-controlled keys or denying service by providing invalid keys. This is patched in version 0.8.3-rc1.",
+      "refs": "https://github.com/danny-avila/LibreChat/security/advisories/GHSA-5jcj-rh68-cgj7",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:29"
+    },
+    {
+      "cve_id": "CVE-2024-14036",
+      "title": "高危漏洞: CVE-2024-14036 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-03 06:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Dräger Core 1.0.5 and Dräger M540 Converter Service 1.0.9 contain a denial of service vulnerability that allows network-adjacent attackers to trigger high CPU load by sending specially crafted, unencrypted SDC messages during the discovery process. Attackers with access to the hospital network can send malformed SDC packets to exhaust CPU resources in the affected process, causing further SDC messages to no longer be processed.",
+      "refs": "https://static.draeger.com/security\nhttps://www.vulncheck.com/advisories/dr-ger-core-denial-of-service-via-malformed-sdc-message",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:25"
+    },
+    {
+      "cve_id": "CVE-2022-4992",
+      "title": "高危漏洞: CVE-2022-4992 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-03 06:16:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "Dräger Infinity Acute Care System and Standalone Infinity M540 patient monitors versions VG4.1.1, VG4.0.3, and lower (with VG4.2 partially affected) contain a network message handling vulnerability that allows remote attackers to inject spoofed or tampered data and cause denial-of-service conditions. Attackers can compromise network communications to modify device settings such as alarm states or alarm limits, or overwhelm the system with excessive network traffic causing the Cockpit or M540 to reboot and lose network functionality.",
+      "refs": "https://static.draeger.com/security\nhttps://www.vulncheck.com/advisories/dr-ger-infinity-m540-vg4-spoofed-network-message-handling-dos-tampering",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:20"
+    },
+    {
+      "cve_id": "CVE-2021-4481",
+      "title": "高危漏洞: CVE-2021-4481 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-03 06:16:15",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:H",
+      "description": "Dräger Protector Software prior to version 6.4.2 contains a local privilege escalation vulnerability due to insecure file system permissions that allows local attackers to execute arbitrary code with elevated privileges. Attackers can replace binaries or loaded modules on the host system to execute code with NT SYSTEM privileges.",
+      "refs": "https://static.draeger.com/security\nhttps://www.vulncheck.com/advisories/dr-ger-protector-software-local-privilege-escalation-via-insecure-file-permissions",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:16"
+    },
+    {
+      "cve_id": "CVE-2021-4480",
+      "title": "高危漏洞: CVE-2021-4480 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-03 06:16:14",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:H",
+      "description": "Dräger Protector Software prior to version 6.4.2 contains a local privilege escalation vulnerability due to insecure file system permissions that allows local attackers to execute arbitrary code with elevated privileges. Attackers can replace binaries or loaded modules on the host system to execute code with NT SYSTEM privileges.",
+      "refs": "https://static.draeger.com/security\nhttps://www.vulncheck.com/advisories/dr-ger-protector-software-local-privilege-escalation-via-insecure-file-permissions",
+      "source": "NVD",
+      "time": "2026-06-03 10:47:12"
+    },
+    {
       "cve_id": "CVE-2026-49448",
       "title": "高危漏洞: CVE-2026-49448 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2026-bulletin.html",
       "source": "NVD",
       "time": "2026-06-02 10:42:30"
-    },
-    {
-      "cve_id": "CVE-2026-25276",
-      "title": "高危漏洞: CVE-2026-25276 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-02 07:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Memory corruption while using Strongbox due to missing bounds check.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-06-02 10:42:26"
-    },
-    {
-      "cve_id": "CVE-2026-25260",
-      "title": "高危漏洞: CVE-2026-25260 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 07:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory Corruption when accessing shared buffers without validation of concurrent user-mode input modifications.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-06-02 10:42:20"
-    },
-    {
-      "cve_id": "CVE-2026-25259",
-      "title": "高危漏洞: CVE-2026-25259 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 07:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory corruption while processing multiple IOCTL command for escape operations.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-06-02 10:42:16"
-    },
-    {
-      "cve_id": "CVE-2026-25258",
-      "title": "高危漏洞: CVE-2026-25258 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 07:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Memory corruption while processing IOCTL calls for escape operations.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-06-02 10:42:12"
-    },
-    {
-      "cve_id": "CVE-2026-24782",
-      "title": "高危漏洞: CVE-2026-24782 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-06-02 07:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
-      "description": "Kiteworks is a private data network (PDN). Prior to version 9.3.0,ultiple SQL Injection vulnerabilities in Kiteworks Secure Data Forms could be exploited by an authenticated attacker with the FormBuilder role to retrieve information on or modify other users' form definitions and some global configuration parameters. Upgrade Kiteworks to version 9.3.0 or later to receive a patch.",
-      "refs": "https://github.com/kiteworks/security-advisories/security/advisories/GHSA-849r-gm3r-4v5c",
-      "source": "NVD",
-      "time": "2026-06-02 10:42:08"
-    },
-    {
-      "cve_id": "CVE-2026-24752",
-      "title": "高危漏洞: CVE-2026-24752 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-06-02 07:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "Kiteworks is a private data network (PDN). Prior to version 9.3.0, a reflected XSS vulnerability in Kiteworks Secure Data Forms could allow an external attacker to trick a user into executing arbitrary JavaScript code. Upgrade Kiteworks to version 9.3.0 or later to receive a patch.",
-      "refs": "https://github.com/kiteworks/security-advisories/security/advisories/GHSA-6798-vf3h-wcwr",
-      "source": "NVD",
-      "time": "2026-06-02 10:42:03"
-    },
-    {
-      "cve_id": "CVE-2026-24092",
-      "title": "高危漏洞: CVE-2026-24092 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-02 07:16:20",
-      "vector_string": "CVSS:3.1/AV:P/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Memory Corruption when processing fastboot commands to set display mode.",
-      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/june-2026-bulletin.html",
-      "source": "NVD",
-      "time": "2026-06-02 10:41:56"
     }
   ]
 }
