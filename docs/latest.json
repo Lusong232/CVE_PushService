@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5241",
+      "title": "高危漏洞: CVE-2026-5241 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-03 22:16:46",
+      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "A vulnerability in the LightGlue model loading path of huggingface/transformers version 5.2.0 allows an attacker-controlled model repository to execute arbitrary code during model initialization. The issue arises because the `trust_remote_code` parameter, intended to prevent remote code execution, is overridden by untrusted serialized configuration data in a nested code path. Specifically, when loading a LightGlue model using `AutoModel.from_pretrained()` with `trust_remote_code=False`, the `LightGlueConfig` reads the `trust_remote_code` value from the untrusted `config.json` file and propagates it into nested `AutoConfig.from_pretrained()` calls. This results in the execution of attacker-provided Python modules, even when the victim explicitly disables remote code execution. The vulnerability poses a high risk for environments such as API inference servers, research notebooks, CI/CD pipelines, and model evaluation workers, potentially leading to credential theft, lateral movement, or persistence/backdoor deployment.",
+      "refs": "https://github.com/huggingface/transformers/commit/676559d5022b74aaa0cee1cee0842b7f27c5320e\nhttps://huntr.com/bounties/ceb3ce1a-4c45-497a-b25e-cb9a7685e619\nhttps://huntr.com/bounties/ceb3ce1a-4c45-497a-b25e-cb9a7685e619",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:58"
+    },
+    {
+      "cve_id": "CVE-2022-49042",
+      "title": "高危漏洞: CVE-2022-49042 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-03 22:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An inclusion of functionality from untrusted control sphere vulnerability in MinGW DLL component in Synology Hyper Backup Explorer before 3.0.1-0156 allows local users to execute arbitrary code via unspecified vectors.",
+      "refs": "https://www.synology.com/en-global/releaseNote/HyperBackupExplorer",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:49"
+    },
+    {
+      "cve_id": "CVE-2022-49036",
+      "title": "高危漏洞: CVE-2022-49036 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-03 22:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An inclusion of functionality from untrusted control sphere vulnerability in OpenSSL configuration in Synology Active Backup for Business Recovery Media Creator before 2.5.0-2081 allows local users to execute arbitrary code via unspecified vectors.",
+      "refs": "https://www.synology.com/en-global/releaseNote/ActiveBackupRecoveryMediaCreator",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:45"
+    },
+    {
+      "cve_id": "CVE-2026-35085",
+      "title": "高危漏洞: CVE-2026-35085 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-03 21:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A remote attacker with user privileges can exploit a stack buffer overflow in gdv-serverconfig to gain full system access as root.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:37"
+    },
+    {
+      "cve_id": "CVE-2026-35084",
+      "title": "高危漏洞: CVE-2026-35084 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-03 21:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A remote attacker with user privileges can exploit a stack buffer overflow in dali-devconfig to gain full system access as root.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:31"
+    },
+    {
+      "cve_id": "CVE-2026-35083",
+      "title": "高危漏洞: CVE-2026-35083 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-03 21:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A remote attacker with user privileges can exploit a stack buffer overflow to gain full system access as root.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:27"
+    },
+    {
+      "cve_id": "CVE-2026-35082",
+      "title": "高危漏洞: CVE-2026-35082 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-03 21:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ugw-logread method allows a remote attacker with user privileges to access arbitrary local files due to insufficient validation of user-supplied input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:23"
+    },
+    {
+      "cve_id": "CVE-2026-35081",
+      "title": "高危漏洞: CVE-2026-35081 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-03 21:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The ugw-logstop method allows a remote attacker with user privileges to terminate arbitrary processes due to insufficient validation of user-supplied input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:18"
+    },
+    {
+      "cve_id": "CVE-2026-35080",
+      "title": "高危漏洞: CVE-2026-35080 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-03 21:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The ugw-restoreinfo method allows a remote attacker with user privileges to delete arbitrary local files due to insufficient validation of user-controlled input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:14"
+    },
+    {
+      "cve_id": "CVE-2026-35079",
+      "title": "高危漏洞: CVE-2026-35079 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-03 21:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The ugw-restore method allows a remote attacker with user privileges to delete arbitrary local files due to insufficient validation of user-controlled input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:10"
+    },
+    {
+      "cve_id": "CVE-2026-35078",
+      "title": "高危漏洞: CVE-2026-35078 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-03 21:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The ugw-logstop method allows a remote attacker with user privileges  to delete arbitrary local files due to insufficient validation of user-controlled input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:05"
+    },
+    {
+      "cve_id": "CVE-2026-35077",
+      "title": "高危漏洞: CVE-2026-35077 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-03 21:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The ugw-delete-file method allows a remote attacker with user privileges  to delete arbitrary local files due to insufficient validation of user-controlled input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:40:00"
+    },
+    {
+      "cve_id": "CVE-2026-35076",
+      "title": "高危漏洞: CVE-2026-35076 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-03 21:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The bac-scanresult method allows a remote attacker with user privileges to delete arbitrary local files due to insufficient validation of user-controlled input.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:39:55"
+    },
+    {
+      "cve_id": "CVE-2026-35075",
+      "title": "高危漏洞: CVE-2026-35075 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-03 21:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated remote attacker can recover a default, hard coded password from a firmware image and thus gain full access to all affected devices.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-039/",
+      "source": "NVD",
+      "time": "2026-06-04 02:39:48"
+    },
+    {
+      "cve_id": "CVE-2026-42504",
+      "title": "高危漏洞: CVE-2026-42504 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-03 07:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.",
+      "refs": "https://go.dev/cl/774481\nhttps://go.dev/issue/79217\nhttps://groups.google.com/g/golang-announce/c/tKs3rmcBcKw",
+      "source": "NVD",
+      "time": "2026-06-04 02:39:42"
+    },
+    {
       "cve_id": "CVE-2026-47065",
       "title": "高危漏洞: CVE-2026-47065 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -934,171 +1099,6 @@
       "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
       "source": "NVD",
       "time": "2026-06-03 02:33:13"
-    },
-    {
-      "cve_id": "CVE-2026-0087",
-      "title": "高危漏洞: CVE-2026-0087 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In approvalLevelForDomainInternal of DomainVerificationService.java, there is a possible way to hijack an arbitrary app link due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:08"
-    },
-    {
-      "cve_id": "CVE-2026-0078",
-      "title": "高危漏洞: CVE-2026-0078 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In setGlobalProxy of DevicePolicyManagerService.java, there is a possible desync in persistence due to improper input validation. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:01"
-    },
-    {
-      "cve_id": "CVE-2026-0076",
-      "title": "高危漏洞: CVE-2026-0076 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In validateNode of ResourceTypes.cpp, there is a possible out of bounds read due to an incorrect bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:55"
-    },
-    {
-      "cve_id": "CVE-2026-0045",
-      "title": "高危漏洞: CVE-2026-0045 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:20",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In bta_jv_rfcomm_connect of bta_jv_act.cc, there is a possible bypass of bonding for a secure connection due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:51"
-    },
-    {
-      "cve_id": "CVE-2026-0036",
-      "title": "高危漏洞: CVE-2026-0036 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In startAnimation of StageCoordinator.java, there is a possible tapjacking issue due to a tapjacking/overlay attack. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:46"
-    },
-    {
-      "cve_id": "CVE-2025-48652",
-      "title": "高危漏洞: CVE-2025-48652 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In performPreInstallChecks of InstallRepository.kt, there is a possible way to bypass MDM policy due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:41"
-    },
-    {
-      "cve_id": "CVE-2025-48649",
-      "title": "高危漏洞: CVE-2025-48649 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In multiple locations, there is a possible way to reset user-selected permissions selections due to a permissions bypass. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:37"
-    },
-    {
-      "cve_id": "CVE-2025-48570",
-      "title": "高危漏洞: CVE-2025-48570 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:17",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In multiple functions of PipTaskOrganizer.java, there is a possible way to launch an activity from the background due to a confused deputy. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:30"
-    },
-    {
-      "cve_id": "CVE-2025-32348",
-      "title": "高危漏洞: CVE-2025-32348 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:17",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In multiple locations, there is a possible background activity launch due to a missing permission check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:25"
-    },
-    {
-      "cve_id": "CVE-2026-37234",
-      "title": "高危漏洞: CVE-2026-37234 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-06-02 05:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
-      "description": "FlexRIC v2.0.0 allows a single SCTP connection to bind multiple xapp_ids by sending multiple E42_SETUP_REQUESTs. On disconnect, only the first registered xapp_id's resources are cleaned up; subsequent xapp_ids and their subscriptions remain as stale entries. A remote attacker can exploit this to leak subscription state in the iApp, potentially causing resource exhaustion or state corruption over time.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37234.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:20"
-    },
-    {
-      "cve_id": "CVE-2025-70099",
-      "title": "高危漏洞: CVE-2025-70099 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 05:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A NULL pointer dereference in the ext4_dir_en_get_name_len function in include/ext4_dir.h of lwext4 1.0.0 allows attackers to cause a denial of service by supplying a specially crafted EXT4 filesystem image with malformed directory entries. During directory iteration, the code may fail to validate the directory entry pointer before accessing the name_len field, resulting in a segmentation fault. This affects versions based on (or equivalent to) the 2016-era codebase (1.0.0).",
-      "refs": "https://github.com/gkostka/lwext4/issues/89\nhttps://github.com/sigdevel/pocs/blob/main/res/lwext4/1/sig11_2_1_lwext4_ext4_dir_h_126\nhttps://infosec.exchange/@sigdevel/116668939725424227",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:15"
-    },
-    {
-      "cve_id": "CVE-2026-37235",
-      "title": "高危漏洞: CVE-2026-37235 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 trusts the xapp_id field from E42 message payloads without binding it to the sender's SCTP association. The validation function valid_xapp_id() only checks that the value is within the assigned range. A remote unauthenticated attacker can impersonate any xApp by specifying their xapp_id in requests sent to the iApp (port 36422), causing responses to be misrouted to the victim xApp. This can crash the victim xApp, the RIC, or the iApp itself through state inconsistencies in the red-black tree data structure.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37235.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:11"
-    },
-    {
-      "cve_id": "CVE-2026-37233",
-      "title": "高危漏洞: CVE-2026-37233 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 contains an authorization bypass in the iApp's xApp isolation mechanism. The equality function eq_xapp_ric_gen_id() in src/ric/iApp/xapp_ric_id.c compares m0->xapp_id against itself (m0->xapp_id) instead of the other argument (m1->xapp_id), effectively ignoring the xApp identity dimension. A malicious xApp connected to the iApp (port 36422) can delete any other xApp's subscriptions by sending an E42_RIC_SUBSCRIPTION_DELETE_REQUEST with a matching ric_gen_id. This breaks multi-tenant isolation in any deployment with multiple xApps sharing the same RIC.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37233.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:07"
-    },
-    {
-      "cve_id": "CVE-2026-37232",
-      "title": "高危漏洞: CVE-2026-37232 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-      "description": "An issue was discovered in OpenAirInterface5G 2.4.0 (nr-softmodem) in the E2SM-KPM RAN Function's PRB utilization metric calculation. The functions fill_RRU_PrbTotDl() and fill_RRU_PrbTotUl() in openair2/E2AP/RAN_FUNCTION/O-RAN/ran_func_kpm_subs.c (lines 182 and 197) compute PRB usage percentages by dividing by the difference of two consecutive total_prb_aggregate samples without checking for zero. When a malicious xApp sends a high volume of E42_RIC_SUBSCRIPTION_REQUESTs via the FlexRIC iApp (port 36422/SCTP), the E2 Agent generates KPM Indication reports at high frequency. If two consecutive sampling intervals yield identical PRB aggregate values, the divisor becomes zero, triggering SIGFPE and crashing the entire 5G base station process (nr-softmodem). This results in complete 5G cell service interruption for all connected UEs. No authentication is required.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37232.md\nhttps://gitlab.eurecom.fr/oai/openairinterface5g",
-      "source": "NVD",
-      "time": "2026-06-03 02:32:01"
-    },
-    {
-      "cve_id": "CVE-2026-37231",
-      "title": "高危漏洞: CVE-2026-37231 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 uses a uint16_t counter for xapp_id assignment but stores the value in uint32_t message fields. After 65,530+ E42_SETUP_REQUESTs, the 16-bit counter wraps around and produces duplicate xapp_ids. The iApp (port 36422) crashes when attempting to register a duplicate ID in its internal data structure. A remote attacker can trigger this by repeatedly connecting and requesting new xApp registrations.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37231.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:31:56"
     }
   ]
 }
