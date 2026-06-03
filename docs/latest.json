@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-47065",
+      "title": "高危漏洞: CVE-2026-47065 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-03 19:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ZDRES-232: resolveProxyClass Not Overridden - acceptMatchers Filter Bypass via java.lang.reflect.Proxy\n\n\nAssessment: Fully addressed.\n\n\nWhen the serialised stream contains a TC_PROXYCLASSDESC (the marker \nfor a java.lang.reflect.Proxy ), JDK’s ObjectInputStream.readProxyDesc()\n is\ndispatched. JDK then calls the default \nObjectInputStream.resolveProxyClass(interfaces) implementation, which \nperforms Class.forName(intf, false, latestUserDefinedLoader()) for EACH \ninterface name and constructs the proxy class â€” bypassing the accepted\n classes list .\n\n\nZDRES-233: Class.forName(name, initialize=true, classLoader) in \nreadClassDescriptor Triggers Static Initialiser of Allow-Listed Classes\n\n\nAssessment: Fully addressed.\n\n\nFor ANY class on the allow-list, deserialising a stream that names it triggers the class’s \n (static initialiser) BEFORE any instance is constructed. This means an \nattacker who supplies a class name on the allow-list (e.g., the \ndeveloper wrote accept(“com.myapp.*\") , attacker supplies \ncom.myapp.SomeClass ) causes <clinit> of SomeClass â€” and many \nreal-world classes have side-effecting static initialisers\n\n\nBoth issues have been fixed.",
+      "refs": "https://lists.apache.org/thread/y7xj1bl8qo47p9bktb11hg5v6k1d4dyj",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:54"
+    },
+    {
+      "cve_id": "CVE-2026-41032",
+      "title": "高危漏洞: CVE-2026-41032 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-03 19:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "It is possible for an unauthenticated adjacent attacker to download log files of the controller, which may disclose some restricted information.",
+      "refs": "https://certvde.com/de/advisories/VDE-2026-060/\nhttps://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-060.json",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:47"
+    },
+    {
+      "cve_id": "CVE-2025-15656",
+      "title": "高危漏洞: CVE-2025-15656 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-03 19:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in Mojoomla School Management allows Privilege Escalation.\n\nThis issue affects School Management: from n/a through 93.2.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/school-management/vulnerability/wordpress-school-management-plugin-93-2-0-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:42"
+    },
+    {
+      "cve_id": "CVE-2025-15655",
+      "title": "高危漏洞: CVE-2025-15655 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-06-03 19:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Mojoomla School Management allows SQL Injection.\n\nThis issue affects School Management: from n/a through 93.2.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/school-management/vulnerability/wordpress-school-management-plugin-plugin-93-2-0-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:37"
+    },
+    {
+      "cve_id": "CVE-2025-14774",
+      "title": "高危漏洞: CVE-2025-14774 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-06-03 19:16:19",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+      "description": "Incorrect Authorization vulnerability in ABB T-MAC Plus.\n\nThis issue affects T-MAC Plus: 4.0-24.",
+      "refs": "https://search.abb.com/library/Download.aspx?DocumentID=9AKK108472A7840&LanguageCode=en&DocumentPartId=&Action=Launch",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:32"
+    },
+    {
+      "cve_id": "CVE-2025-14773",
+      "title": "高危漏洞: CVE-2025-14773 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-03 19:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in ABB T-MAC Plus.\n\nThis issue affects T-MAC Plus: 4.0-24.",
+      "refs": "https://search.abb.com/library/Download.aspx?DocumentID=9AKK108472A7840&LanguageCode=en&DocumentPartId=&Action=Launch",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:28"
+    },
+    {
+      "cve_id": "CVE-2025-14772",
+      "title": "高危漏洞: CVE-2025-14772 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-03 19:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Authorization bypass through User-Controlled key vulnerability in ABB T-MAC Plus.\n\nThis issue affects T-MAC Plus: 4.0-24.",
+      "refs": "https://search.abb.com/library/Download.aspx?DocumentID=9AKK108472A7840&LanguageCode=en&DocumentPartId=&Action=Launch",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:21"
+    },
+    {
+      "cve_id": "CVE-2025-14771",
+      "title": "高危漏洞: CVE-2025-14771 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-06-03 19:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Files or directories accessible to external parties vulnerability in ABB T-MAC Plus.\n\nThis issue affects T-MAC Plus: 4.0-24.",
+      "refs": "https://search.abb.com/library/Download.aspx?DocumentID=9AKK108472A7840&LanguageCode=en&DocumentPartId=&Action=Launch",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:15"
+    },
+    {
+      "cve_id": "CVE-2026-4035",
+      "title": "高危漏洞: CVE-2026-4035 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-03 17:16:13",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+      "description": "A vulnerability in mlflow/mlflow versions prior to 3.11.0 allows for the resolution of environment variables in AI Gateway secrets, which can be exploited to exfiltrate sensitive server-side environment credentials to an attacker-controlled endpoint. This issue arises because the `api_key` field in gateway secrets can accept `$ENV_VAR` references, which are resolved against the MLflow server's environment during runtime. The resolved secrets are then sent in provider authentication headers to the configured upstream `api_base`. This vulnerability can be exploited by low-privileged authenticated users in basic-auth deployments or by unauthenticated users in default deployments without `basic-auth`. The impact includes potential leakage of sensitive credentials such as cloud artifact credentials (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`), which could lead to artifact poisoning and cross-boundary code execution in downstream environments. The issue is fixed in version 3.11.0.",
+      "refs": "https://github.com/mlflow/mlflow/commit/4a3f2f720cb4f058c9e0c5b883e0acc9ab64a7f3\nhttps://huntr.com/bounties/f8e591a0-0f19-4910-b82e-16c9956f2233",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:08"
+    },
+    {
+      "cve_id": "CVE-2025-15654",
+      "title": "高危漏洞: CVE-2025-15654 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-03 17:16:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Fox-themes Prague allows Reflected XSS.\n\nThis issue affects Prague: from n/a through 2.2.8.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/prague-plugins/vulnerability/wordpress-prague-plugin-2-2-8-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-03 21:06:03"
+    },
+    {
       "cve_id": "CVE-2026-50031",
       "title": "高危漏洞: CVE-2026-50031 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37231.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
       "source": "NVD",
       "time": "2026-06-03 02:31:56"
-    },
-    {
-      "cve_id": "CVE-2026-37230",
-      "title": "高危漏洞: CVE-2026-37230 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 crashes when the near-RT RIC receives a RIC_INDICATION message with a ran_func_id that does not exist in its registry. The lookup returns NULL, triggering assert() in Debug builds (SIGABRT) or NULL pointer dereference in Release builds (SIGSEGV). A remote unauthenticated attacker can crash the near-RT RIC (port 36421) by sending a crafted RIC_INDICATION with an arbitrary ran_func_id value.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37230.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:31:50"
-    },
-    {
-      "cve_id": "CVE-2026-37229",
-      "title": "高危漏洞: CVE-2026-37229 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 contains a reachable assertion in e2ap_create_pdu() triggered when ASN.1 PER decoding fails. A remote unauthenticated attacker can send any non-PER byte sequence (e.g., a single 0x00 byte) over SCTP to the near-RT RIC (port 36421) or iApp (port 36422) to crash the process via SIGABRT. The assertion is reached before any protocol-level validation occurs. All three E2AP protocol versions (v1.01, v2.03, v3.01) are affected.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37229.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:31:45"
-    },
-    {
-      "cve_id": "CVE-2026-37228",
-      "title": "高危漏洞: CVE-2026-37228 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 contains a reachable assertion in e2ap_recv_sctp_msg() (src/lib/ep/e2ap_ep.c). The function allocates a fixed 32KB receive buffer and enforces assert(rc < len) on the sctp_recvmsg() return value. A remote unauthenticated attacker can send a single SCTP message with payload >= 32,768 bytes to crash the near-RT RIC, iApp, E2 Agent, or xApp process via SIGABRT. No valid E2AP PDU is required. All four SCTP endpoint types (ports 36421 and 36422) share this vulnerable code path. In Release builds (NDEBUG), the stripped assertion leads to a signed-to-unsigned integer overflow and potential out-of-bounds read.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37228.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:31:38"
-    },
-    {
-      "cve_id": "CVE-2026-37226",
-      "title": "高危漏洞: CVE-2026-37226 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 03:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FlexRIC v2.0.0 crashes when the iApp receives an E42_RIC_SUBSCRIPTION_REQUEST referencing a non-existent E2 Node. The lookup function returns NULL, which is enforced by assert() in Debug builds (SIGABRT) and dereferenced in Release builds (SIGSEGV). A remote unauthenticated attacker can crash the iApp process (port 36422) by sending a subscription request with an arbitrary global_e2_node_id.",
-      "refs": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37226.md\nhttps://gitlab.eurecom.fr/mosaic5g/flexric",
-      "source": "NVD",
-      "time": "2026-06-03 02:31:33"
-    },
-    {
-      "cve_id": "CVE-2025-53209",
-      "title": "高危漏洞: CVE-2025-53209 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-02 18:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect Privilege Assignment vulnerability in Themeisle Masteriyo LMS PRO allows Privilege Escalation.\n\nThis issue affects Masteriyo LMS PRO: from n/a through 2.20.0.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/learning-management-system-pro/vulnerability/wordpress-masteriyo-lms-pro-2-20-0-privilege-escalation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 20:34:21"
-    },
-    {
-      "cve_id": "CVE-2025-52759",
-      "title": "高危漏洞: CVE-2025-52759 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-02 18:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in UnboundStudio Accordion FAQ allows Reflected XSS.\n\nThis issue affects Accordion FAQ: from n/a through 2.2.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/pressapps-accordion-faq/vulnerability/wordpress-accordion-faq-plugin-2-2-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-02 20:34:16"
-    },
-    {
-      "cve_id": "CVE-2026-3514",
-      "title": "高危漏洞: CVE-2026-3514 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 17:16:16",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "In version 3.6.19 of prefecthq/prefect, an authentication bypass vulnerability exists due to the improper handling of URL path exemptions for health check probes. Specifically, the authentication middleware exempts any URL path ending with 'health' or 'ready' from authentication checks. This allows an attacker to create resources with names ending in 'health' or 'ready' and access them without authentication. Affected endpoints include those for variables, flows, work pools, work queues, and deployments. This vulnerability can lead to unauthorized access to sensitive information, such as API keys and database credentials, stored in Prefect Variables.",
-      "refs": "https://github.com/prefecthq/prefect/commit/e21617125335025b4b27e7d6f0ca028e8e8f3b79\nhttps://huntr.com/bounties/c540e5e1-f74f-44f4-bfa0-9764ff6daa75",
-      "source": "NVD",
-      "time": "2026-06-02 20:34:12"
-    },
-    {
-      "cve_id": "CVE-2026-1784",
-      "title": "高危漏洞: CVE-2026-1784 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-02 17:16:15",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "The Route OpenShift resource allows to define routes to make pods reachable at a subdomain through HAProxy. It was found that the checks performed on the spec.path YAML stanza in a Route document was insufficient and could allow a controlled injection of the HAProxy configuration.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-1784\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2436075",
-      "source": "NVD",
-      "time": "2026-06-02 20:34:06"
-    },
-    {
-      "cve_id": "CVE-2026-8206",
-      "title": "高危漏洞: CVE-2026-8206 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-02 12:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions 6.0.0 to 6.0.6. This is due to the plugin accepting an arbitrary email address when a username is used in the password reset request. This makes it possible for unauthenticated attackers to send a password reset link for any user registered on the site to their own email address.",
-      "refs": "https://plugins.trac.wordpress.org/browser/kirki/tags/6.0.4/ComponentLibrary/controller/CompLibFormHandler.php#L330\nhttps://plugins.trac.wordpress.org/browser/kirki/tags/6.0.4/ComponentLibrary/controller/CompLibFormHandler.php#L48\nhttps://plugins.trac.wordpress.org/browser/kirki/tags/6.0.4/ComponentLibrary/controller/ElementGenerator.php#L227",
-      "source": "NVD",
-      "time": "2026-06-02 15:17:01"
-    },
-    {
-      "cve_id": "CVE-2026-0089",
-      "title": "高危漏洞: CVE-2026-0089 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In multiple functions of PackageInstallerService.java, there is a possible way to install unverified apps due to a missing permission check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-02 15:16:54"
     }
   ]
 }
