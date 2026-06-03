@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-50033",
+      "title": "高危漏洞: CVE-2026-50033 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 04:16:21",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.15051.93227.",
+      "refs": "https://security-advisory.acronis.com/advisories/SEC-3085",
+      "source": "NVD",
+      "time": "2026-06-04 06:59:24"
+    },
+    {
+      "cve_id": "CVE-2026-44682",
+      "title": "高危漏洞: CVE-2026-44682 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 04:16:21",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.15051.93227.",
+      "refs": "https://security-advisory.acronis.com/advisories/SEC-11249",
+      "source": "NVD",
+      "time": "2026-06-04 06:59:20"
+    },
+    {
+      "cve_id": "CVE-2026-44609",
+      "title": "高危漏洞: CVE-2026-44609 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 04:16:21",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Local privilege escalation due to EXE hijacking vulnerability. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.15051.93227.",
+      "refs": "https://security-advisory.acronis.com/advisories/SEC-3084",
+      "source": "NVD",
+      "time": "2026-06-04 06:59:16"
+    },
+    {
+      "cve_id": "CVE-2026-42061",
+      "title": "高危漏洞: CVE-2026-42061 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 04:16:20",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Local privilege escalation due to excessive permissions assigned to child processes. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.15051.93227.",
+      "refs": "https://security-advisory.acronis.com/advisories/SEC-3083",
+      "source": "NVD",
+      "time": "2026-06-04 06:59:09"
+    },
+    {
+      "cve_id": "CVE-2026-40290",
+      "title": "高危漏洞: CVE-2026-40290 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-04 02:16:23",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.16.0 and prior to 4.11.0, a user-after-free (UAF) race condition exists in the shared memory teardown logic of FF-A  within OP-TEE SPMC/SP flows. This only applies when OP-TEE is configured as an SPMC for S-EL0 SPs, that is, with `CFG_SECURE_PARTITION=y`. The function `sp_mem_remove()`, responsible for freeing entries in `smem->receivers` and `smem->regions`, fails to acquire the global `sp_mem_lock` before performing the `free()` operations. Concurrently, other code paths, such as `sp_mem_get_receiver()`, iterate over these same lists without holding a lock, or, like `sp_mem_is_shared()`, iterate while holding the lock but are not serialized against the unprotected `free()` in `sp_mem_remove()`. This creates a cross-thread race where a thread iterating the list can acquire a pointer to an entry (e.g., `struct sp_mem_map_region` or `struct sp_mem_receiver`), and then another thread calls `sp_mem_remove()`, freeing the object. When the first thread resumes and dereferences the pointer, it results in a Use-After-Free vulnerability. Version 4.11.0 fixes the issue.",
+      "refs": "https://github.com/OP-TEE/optee_os/security/advisories/GHSA-332c-xr93-849m",
+      "source": "NVD",
+      "time": "2026-06-04 06:59:05"
+    },
+    {
+      "cve_id": "CVE-2026-36611",
+      "title": "高危漏洞: CVE-2026-36611 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 02:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Mercusys AC12G (EU) V1 with firmware AC12G(EU)_V1_200909 returns 128 bytes of uninitialized buffer when receiving POST requests without SOAPAction header on UPnP port 1900, exposing internal memory to unauthenticated adjacent network attackers.",
+      "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36611.md",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:59"
+    },
+    {
+      "cve_id": "CVE-2026-36609",
+      "title": "高危漏洞: CVE-2026-36609 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 02:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Mercusys AC12G (EU) V1 router with firmware AC12G(EU)_V1_200909 uses a static authentication nonce that does not change between requests from the same source IP. Combined with the predictable XOR-based password encoding (securityEncode function), this allows an attacker to reverse captured authentication tokens to recover the plaintext password.",
+      "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36609.md",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:54"
+    },
+    {
+      "cve_id": "CVE-2026-36608",
+      "title": "高危漏洞: CVE-2026-36608 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-04 02:16:21",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Mercusys AC12G (EU) V1 router with firmware AC12G(EU)_V1_200909 allows UPnP AddPortMapping to forward external ports to the router's own admin interface by accepting its own IP (192.168.1.1) or localhost (127.0.0.1) as InternalClient. An unauthenticated LAN attacker can expose the admin panel to the internet with a single SOAP request.",
+      "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36608.md",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:50"
+    },
+    {
+      "cve_id": "CVE-2026-36607",
+      "title": "高危漏洞: CVE-2026-36607 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-04 02:16:21",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Mercusys AC12G (EU) V1 router with firmware AC12G(EU)_V1_200909 allows unauthenticated brute-force attacks via the TDDP password change endpoint (code=10), which lacks the rate limiting applied to the login endpoint (code=7). An attacker on the adjacent network can attempt unlimited passwords without triggering account lockout.",
+      "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36607.md",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:46"
+    },
+    {
+      "cve_id": "CVE-2026-36606",
+      "title": "高危漏洞: CVE-2026-36606 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-04 02:16:21",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Mercusys AC12G (EU) V1 router with firmware AC12G(EU)_V1_200909 encrypts configuration backups with a hardcoded DES key using single DES in ECB mode. An attacker who obtains a backup file can decrypt it to recover all stored credentials including admin password, WiFi PSK, and DDNS credentials.",
+      "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36606.md",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:42"
+    },
+    {
+      "cve_id": "CVE-2026-20230",
+      "title": "高危漏洞: CVE-2026-20230 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-04 02:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+      "description": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r This vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\n\r Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\n\r Note: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssrf-cXPnHcW",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:35"
+    },
+    {
+      "cve_id": "CVE-2026-37462",
+      "title": "高危漏洞: CVE-2026-37462 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "An integer underflow in the BGPUpdate.DecodeFromBytes function (/bgp/bgp.go) of gobgp v4.3.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted BGP UPDATE message.",
+      "refs": "https://github.com/osrg/gobgp/blob/v4.3.0/pkg/packet/bgp/bgp.go\nhttps://github.com/osrg/gobgp/commit/9ce8936672ebc07df524da77fa4c6ae26d92be6d",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:30"
+    },
+    {
+      "cve_id": "CVE-2026-36748",
+      "title": "高危漏洞: CVE-2026-36748 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-06-04 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "RockRMS v16.13 and before v.17.7.0 is vulnerable to Cross Site Scripting (XSS) via Social Media links in user profile.",
+      "refs": "http://sparkdevnetwork.com\nhttps://raxis.com/blog/cve-2026-36748-xss-in-rock-rms-leads-to-privilege-escalation/\nhttps://raxis.com/blog/cve-2026-36748-xss-in-rock-rms-leads-to-privilege-escalation/",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:26"
+    },
+    {
+      "cve_id": "CVE-2026-36576",
+      "title": "高危漏洞: CVE-2026-36576 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-04 00:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An OS command injection vulnerability in the app.py component of openlabs docker-wkhtmltopdf-aas up to commit 9f50579 allows attackers to execute arbitrary commands via a crafted POST request.",
+      "refs": "https://github.com/openlabs/docker-wkhtmltopdf-aas\nhttps://github.com/openlabs/docker-wkhtmltopdf-aas/blob/9f505797671c3339520dec5fc01dff3a6f324f2e/app.py#L40\nhttps://github.com/openlabs/docker-wkhtmltopdf-aas/issues/36",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:22"
+    },
+    {
+      "cve_id": "CVE-2026-9516",
+      "title": "高危漏洞: CVE-2026-9516 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-03 09:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Cpanel::JSON::XS versions before 4.41 for Perl allow denial of service via UTF-8 BOM prefixed input when a decode filter callback throws.\n\nTo skip a leading 3-byte UTF-8 BOM, decode_json() advances the input scalar's string pointer past the mark with SvPV_set() and restores it only on the normal return path. When decoding aborts through a Perl exception, for example a filter_json_object callback that croaks, the restore is skipped and the scalar is left with its string pointer offset into its own buffer and a shortened length.\n\nWhen that scalar is later freed, the allocator receives an invalid pointer and the interpreter aborts. A single BOM prefixed document decoded with a throwing filter callback crashes any caller.",
+      "refs": "https://github.com/rurban/Cpanel-JSON-XS/commit/dfe1b41a36caba51dc12a2917fe50285d1ffaa7b.patch\nhttps://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.41/changes\nhttp://www.openwall.com/lists/oss-security/2026/06/03/5",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:16"
+    },
+    {
+      "cve_id": "CVE-2026-9334",
+      "title": "高危漏洞: CVE-2026-9334 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-03 09:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Cpanel::JSON::XS versions before 4.41 for Perl allow type confusion via duplicate object keys when dupkeys_as_arrayref is enabled.\n\ndecode_hv() collapses duplicate object keys into an array reference under dupkeys_as_arrayref. The branch reached for a duplicate key tests `SvTYPE (old_value) != SVt_RV && SvTYPE (SvRV (old_value)) != SVt_PVAV`, which evaluates SvRV(old_value) before establishing that old_value is a reference. When the existing value is a plain scalar rather than an array reference, a non-reference scalar is dereferenced as a reference.\n\nA caller decoding untrusted JSON with dupkeys_as_arrayref enabled is crashed, and the incompatible access follows a pointer taken from attacker controlled scalar contents.",
+      "refs": "https://github.com/rurban/Cpanel-JSON-XS/commit/11a7c550a0d8fac2f84414f24d5df9b2bfe346e2.patch\nhttps://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.41/changes\nhttp://www.openwall.com/lists/oss-security/2026/06/03/4",
+      "source": "NVD",
+      "time": "2026-06-04 06:58:11"
+    },
+    {
       "cve_id": "CVE-2026-5241",
       "title": "高危漏洞: CVE-2026-5241 (CVSS 8.0)",
       "cvss_score": 8.0,
@@ -923,182 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/racquet/vulnerability/wordpress-racquet-theme-1-12-0-local-file-inclusion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-03 02:34:31"
-    },
-    {
-      "cve_id": "CVE-2025-68886",
-      "title": "高危漏洞: CVE-2025-68886 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in androThemes Cookiteer allows PHP Local File Inclusion.\n\nThis issue affects Cookiteer: from n/a through 1.4.8.",
-      "refs": "https://patchstack.com/database/wordpress/theme/cookiteer/vulnerability/wordpress-cookiteer-theme-1-4-8-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:27"
-    },
-    {
-      "cve_id": "CVE-2025-58897",
-      "title": "高危漏洞: CVE-2025-58897 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Axiomthemes Fermentio allows PHP Local File Inclusion.\n\nThis issue affects Fermentio: from n/a through 1.5.0.",
-      "refs": "https://patchstack.com/database/wordpress/theme/fermentio/vulnerability/wordpress-fermentio-theme-1-5-0-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:22"
-    },
-    {
-      "cve_id": "CVE-2025-58707",
-      "title": "高危漏洞: CVE-2025-58707 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Axiomthemes Spin allows PHP Local File Inclusion.\n\nThis issue affects Spin: from n/a through 1.8.",
-      "refs": "https://patchstack.com/database/wordpress/theme/spin/vulnerability/wordpress-spin-theme-1-8-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:18"
-    },
-    {
-      "cve_id": "CVE-2019-25719",
-      "title": "高危漏洞: CVE-2019-25719 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-02 22:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
-      "description": "Dräger Infinity Acute Care System and Standalone Infinity M540 patient monitors running software versions VG4.1.1, VG4.0.3, and lower contain network message handling vulnerabilities that allow network-adjacent attackers to spoof or tamper with data and cause denial-of-service conditions. Attackers with access to an enabled Infinity network port or physical proximity to a wireless access point can modify device settings such as alarm states or alarm limits, and overwhelm the system with incoming data causing the device to reboot and lose network functionality.",
-      "refs": "https://static.draeger.com/security\nhttps://www.vulncheck.com/advisories/dr-ger-infinity-m540-vg4-spoofing-and-dos-via-network-message-handling",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:13"
-    },
-    {
-      "cve_id": "CVE-2026-42685",
-      "title": "高危漏洞: CVE-2026-42685 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-02 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Ahmad WP Job Portal allows Reflected XSS.\n\nThis issue affects WP Job Portal: from n/a through 2.5.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-job-portal/vulnerability/wordpress-wp-job-portal-plugin-2-5-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:08"
-    },
-    {
-      "cve_id": "CVE-2026-42684",
-      "title": "高危漏洞: CVE-2026-42684 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-02 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Ahmad WP Job Portal allows Blind SQL Injection.\n\nThis issue affects WP Job Portal: from n/a through 2.5.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-job-portal/vulnerability/wordpress-wp-job-portal-plugin-2-5-1-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:03"
-    },
-    {
-      "cve_id": "CVE-2026-42670",
-      "title": "高危漏洞: CVE-2026-42670 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Missing Authorization vulnerability in Etoile Web Design Incorporated Five Star Restaurant Reservations allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Five Star Restaurant Reservations: from n/a through 2.7.14.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/restaurant-reservations/vulnerability/wordpress-five-star-restaurant-reservations-plugin-2-7-14-payment-bypass-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:59"
-    },
-    {
-      "cve_id": "CVE-2026-42669",
-      "title": "高危漏洞: CVE-2026-42669 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Missing Authorization vulnerability in EventPrime allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects EventPrime: from n/a through 4.3.2.0.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/eventprime-event-calendar-management/vulnerability/wordpress-eventprime-plugin-4-3-2-0-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:54"
-    },
-    {
-      "cve_id": "CVE-2026-39551",
-      "title": "高危漏洞: CVE-2026-39551 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in Elated-Themes Töbel allows Object Injection.\n\nThis issue affects Töbel: from n/a through 1.8.1.",
-      "refs": "https://patchstack.com/database/wordpress/theme/tobel/vulnerability/wordpress-toebel-theme-1-8-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:47"
-    },
-    {
-      "cve_id": "CVE-2026-39550",
-      "title": "高危漏洞: CVE-2026-39550 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 20:16:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in Elated-Themes Aperitif allows Object Injection.\n\nThis issue affects Aperitif: from n/a through 1.6.",
-      "refs": "https://patchstack.com/database/wordpress/theme/aperitif/vulnerability/wordpress-aperitif-theme-1-6-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:43"
-    },
-    {
-      "cve_id": "CVE-2025-58705",
-      "title": "高危漏洞: CVE-2025-58705 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Axiomthemes Crafti allows PHP Local File Inclusion.\n\nThis issue affects Crafti: from n/a through 1.12.",
-      "refs": "https://patchstack.com/database/wordpress/theme/crafti/vulnerability/wordpress-crafti-theme-1-12-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:35"
-    },
-    {
-      "cve_id": "CVE-2025-58024",
-      "title": "高危漏洞: CVE-2025-58024 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in UnboundStudio Accordion FAQ allows PHP Local File Inclusion.\n\nThis issue affects Accordion FAQ: from n/a through 2.2.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/pressapps-accordion-faq/vulnerability/wordpress-accordion-faq-plugin-2-2-1-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:31"
-    },
-    {
-      "cve_id": "CVE-2025-53440",
-      "title": "高危漏洞: CVE-2025-53440 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 20:16:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Axiomthemes Confidant allows PHP Local File Inclusion.\n\nThis issue affects Confidant: from n/a through 1.4.",
-      "refs": "https://patchstack.com/database/wordpress/theme/confidant/vulnerability/wordpress-confidant-theme-1-4-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:26"
-    },
-    {
-      "cve_id": "CVE-2025-53345",
-      "title": "高危漏洞: CVE-2025-53345 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-02 18:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Missing Authorization vulnerability leading to code execution after installing malicious vulnerable plugin in ThimPress Thim Core.\n\nThis issue affects Thim Core: from n/a through 2.3.3.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/thim-core/vulnerability/wordpress-thim-core-plugin-2-3-3-arbitrary-code-execution-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:22"
-    },
-    {
-      "cve_id": "CVE-2026-8293",
-      "title": "高危漏洞: CVE-2026-8293 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-02 15:16:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Really Simple Security  WordPress plugin before 9.5.10.1 does not enforce the second-factor challenge in two of its two-factor authentication REST endpoints, allowing an attacker who knows a user's password to obtain a WordPress authentication session for that user without completing the email OTP challenge.",
-      "refs": "https://wpscan.com/vulnerability/1de69ef9-6226-4292-8e36-b331a37f043e/",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:17"
-    },
-    {
-      "cve_id": "CVE-2026-0088",
-      "title": "高危漏洞: CVE-2026-0088 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-02 06:16:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In getCallingAppLabel of CertInstaller.java, there is a possible way to hide a sensitive security dialogue due to misleading or insufficient UI. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
-      "refs": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
-      "source": "NVD",
-      "time": "2026-06-03 02:33:13"
     }
   ]
 }
