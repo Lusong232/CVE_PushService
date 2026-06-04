@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3820",
+      "title": "高危漏洞: CVE-2026-3820 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-04 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "There is a vulnerability in the Supermicro BMC  SMTP service at Supermicro AS-2115HS-TNR. \nAn attacker may obtain administrator privileges and inject specially crafted characters into the SMTP service configuration. This may cause the underlying system to execute unintended commands during process invocation.\n\nPotential impact includes denial-of-service attacks, arbitrary code execution, or permanent compromise of the controller.",
+      "refs": "https://www.supermicro.com/en/support/security_BMC_IPMI_Jun_2026",
+      "source": "NVD",
+      "time": "2026-06-04 19:43:58"
+    },
+    {
       "cve_id": "CVE-2026-41283",
       "title": "高危漏洞: CVE-2026-41283 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1088,17 +1099,6 @@
       "refs": "https://resources.genetec.com/security-advisories/vulnerability-affecting-security-center-systems-main-server-installations",
       "source": "NVD",
       "time": "2026-06-03 02:35:22"
-    },
-    {
-      "cve_id": "CVE-2026-10591",
-      "title": "高危漏洞: CVE-2026-10591 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-03 00:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Insufficient access control restrictions in the file write tool in Amazon Kiro IDE before version 0.11 might allow remote unauthenticated actors to execute arbitrary commands via crafted instructions that cause writes to execution-sensitive paths  (such as .vscode/tasks.json), enabling auto-execution on folder open.\n\n\n\nTo remediate this issue, users should upgrade to Kiro IDE version 0.11 or later.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-037-aws/\nhttps://kiro.dev/changelog/ide/0-11/",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:15"
     }
   ]
 }
