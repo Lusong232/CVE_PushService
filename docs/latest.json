@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41283",
+      "title": "高危漏洞: CVE-2026-41283 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-06-04 12:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "OpenStack Mistral through 22.0.0 allows Arbitrary Remote Code Execution when the API is exposed. There are endpoints that allow code execution, which can lead to exfiltration of service credentials.",
+      "refs": "https://github.com/openstack/mistral/tags\nhttps://www.openwall.com/lists/oss-security/2026/06/03/14",
+      "source": "NVD",
+      "time": "2026-06-04 15:15:21"
+    },
+    {
+      "cve_id": "CVE-2026-41010",
+      "title": "高危漏洞: CVE-2026-41010 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-04 12:17:10",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "ReleaseJob#unpack builds job_dir = File.join(@release_dir, 'jobs', name) and job_tgz = File.join(@release_dir, 'jobs', \"#{name}.tgz\") where name returns @job_meta['name'], a value taken verbatim from the jobs: array of the attacker-supplied release.MF inside the uploaded tarball. These paths are then interpolated into a shell string: Bosh::Common::Exec.sh(\"tar -C #{job_dir} -xf #{job_tgz} 2>&1\", :on_error => :return). Bosh::Common::Exec.sh executes via %x{#{command}} (bosh-common/lib/bosh/common/exec.rb:53), i.e. /bin/sh -c, so any shell metacharacters in name are interpreted. FileUtils.mkdir_p(job_dir) on line 49 creates the literal directory (no shell) and succeeds even when the name contains $()/;, so execution reaches the sh call.\n\nAffected versions:\n- BOSH Director: all versions prior to v282.1.12 (inclusive); fixed in v282.1.12 or later",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41010-release-job-name-command-injection-on-bosh-director/",
+      "source": "NVD",
+      "time": "2026-06-04 15:15:14"
+    },
+    {
+      "cve_id": "CVE-2026-41860",
+      "title": "高危漏洞: CVE-2026-41860 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-04 11:16:20",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "CWE-326 in BOSH allows a local attacker to steal Basic-auth credentials or redirect UAA token requests via MITM. HttpRequestHelper#create_async_endpoint and #send_http_get_request_synchronous hard-code OpenSSL::SSL::VERIFY_NONE, enabling an attacker to intercept traffic between bosh-monitor and the BOSH director or UAA and steal credentials.\n\nAffected versions:\n- BOSH: all versions prior to v282.1.9 (inclusive); fixed in v282.1.9 or later",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41860-missing-tls-verify-on-bosh-monitor/",
+      "source": "NVD",
+      "time": "2026-06-04 15:15:09"
+    },
+    {
+      "cve_id": "CVE-2026-41859",
+      "title": "高危漏洞: CVE-2026-41859 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-04 11:16:19",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A network man-in-the-middle between nats-sync and the BOSH director can steal the director credentials (Basic auth header or UAA client secret) and can tamper with the VM list that is written into the NATS authorization file. Stolen credentials grant administrative director access. UsersSync#bosh_api_response_body builds a Net::HTTP client with verify_mode = OpenSSL::SSL::VERIFY_NONE for every director call (/info, /deployments, /deployments/<name>/vms).\n\nAffected versions:\n- BOSH: all versions prior to v282.1.9 (inclusive); fixed in v282.1.9 or later",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41859-missing-tls-in-nats-sync/",
+      "source": "NVD",
+      "time": "2026-06-04 15:15:05"
+    },
+    {
+      "cve_id": "CVE-2026-41858",
+      "title": "高危漏洞: CVE-2026-41858 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-04 11:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Weak Randomness / Insecure Cryptographic Primitive (CWE-338) in Get-RandomPassword in BOSH-Ecosystem / windows-utilities-release allows a network attacker to estimate VM boot time and reconstruct a small candidate list to recover the Administrator password. The randomize_password job exists solely to lock the local Administrator account behind an unguessable password as a hardening control. Because the password is derived from a predictable, clock-seeded PRNG, a network attacker who can estimate VM boot time can reconstruct a small candidate list and recover the Administrator password, defeating the hardening control.\n\nAffected versions:\n- windows-utilities-release: all versions prior to v0.23.0 (inclusive); fixed in v0.23.0 or later",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41858-brute-forceable-windows-admin-creds/",
+      "source": "NVD",
+      "time": "2026-06-04 15:14:59"
+    },
+    {
+      "cve_id": "CVE-2026-41011",
+      "title": "高危漏洞: CVE-2026-41011 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-04 11:16:19",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "PackagePersister.validate_tgz builds \"tar -tf #{tgz} 2>&1\" where tgz = File.join(release_dir, 'packages', \"#{name}.tgz\") and name = package_meta['name'] comes directly from release.MF inside the uploaded tarball. The string is passed to Bosh::Common::Exec.sh, which executes via %x{} — i.e., /bin/sh -c. No Shellwords.escape is applied. The Models::Package Sequel validation (VALID_ID = /^[-0-9A-Za-z_+.]+$/i) would reject the name, but in create_package (lines 74–79) the shell-out in save_package_source_blob runs before package.save, so validation fires too late.\n\nAffected versions:\n- BOSH: all versions prior to v282.1.12 (inclusive); fixed in v282.1.12 or later",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41011-package-name-command-injection/",
+      "source": "NVD",
+      "time": "2026-06-04 15:14:55"
+    },
+    {
+      "cve_id": "CVE-2026-10737",
+      "title": "高危漏洞: CVE-2026-10737 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-04 10:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The SP Project & Document Manager plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the view_file function in all versions up to, and including, 4.71. This makes it possible for unauthenticated attackers to read file metadata and obtain download links for arbitrary files stored inside project folders on the server, which can contain sensitive information. The authorization gate uses a negated nonce check OR-chained with permission checks, meaning a missing or invalid nonce causes the entire condition to evaluate to true and bypass all preceding capability and ownership checks. The secondary fallback check only denies access for root-level files (pid == 0), leaving all files stored inside project folders fully exposed to unauthenticated users who supply only a valid file ID in a POST request to admin-ajax.php.",
+      "refs": "https://plugins.trac.wordpress.org/browser/sp-client-document-manager/trunk/ajax.php#L155\nhttps://plugins.trac.wordpress.org/browser/sp-client-document-manager/trunk/ajax.php#L39\nhttps://plugins.trac.wordpress.org/browser/sp-client-document-manager/trunk/classes/ajax.php#L250",
+      "source": "NVD",
+      "time": "2026-06-04 15:14:49"
+    },
+    {
       "cve_id": "CVE-2026-10777",
       "title": "高危漏洞: CVE-2026-10777 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1022,83 +1099,6 @@
       "refs": "https://aws.amazon.com/security/security-bulletins/2026-037-aws/\nhttps://kiro.dev/changelog/ide/0-11/",
       "source": "NVD",
       "time": "2026-06-03 02:35:15"
-    },
-    {
-      "cve_id": "CVE-2026-7313",
-      "title": "高危漏洞: CVE-2026-7313 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-06-02 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "CWE‑522: Insufficiently Protected Credentials in web services in Progress Sitefinity version from 8.0.5700 to 13.3.7652 allows a remote authenticated attacker to obtain plain-text credentials used connect to Sitefinity Insight service. Successful exploitation requires active integration with Sitefinity Insight, non-default site configuration and valid back-end authorization.",
-      "refs": "https://community.progress.com/s/article/Sitefinity-Security-Advisory-for-Addressing-Security-Vulnerabilities-CVE-2026-7312-CVE-2026-7198-CVE-2026-7195-CVE-2026-7201-CVE-2026-7313-May-2026",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:10"
-    },
-    {
-      "cve_id": "CVE-2026-7312",
-      "title": "高危漏洞: CVE-2026-7312 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-02 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "CWE‑522: Insufficiently Protected Credentials in web services in Progress Sitefinity version from 14.0.7700 to 14.4.8152, and 15.0.8200 to 15.0.8234, and 15.1.8300 to 15.1.8335, 15.2.8400 to 15.2.8441, 15.3.8500 to 15.3.8531, and 15.4.8600 to 15.4.8630 allows a remote unauthenticated attacker to obtain plain-text credentials used connect to Sitefinity Insight service. Successful exploitation requires active integration with Sitefinity Insight and non-default site configuration.",
-      "refs": "https://community.progress.com/s/article/Sitefinity-Security-Advisory-for-Addressing-Security-Vulnerabilities-CVE-2026-7312-CVE-2026-7198-CVE-2026-7195-CVE-2026-7201-CVE-2026-7313-May-2026",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:06"
-    },
-    {
-      "cve_id": "CVE-2026-7201",
-      "title": "高危漏洞: CVE-2026-7201 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-02 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "CWE-639: Authorization Bypass Through User-Controlled Key in web services in Progress Sitefinity 15.2.x before 15.2.8441, 15.3.x before 15.3.8531, and 15.4.x before 15.4.8630 allows a remote authenticated attacker to modify account properties of other users, potentially leading to account compromise. Successful exploitation requires knowledge of values that are not generally exposed to low-privileged users.",
-      "refs": "https://community.progress.com/s/article/Sitefinity-Security-Advisory-for-Addressing-Security-Vulnerabilities-CVE-2026-7312-CVE-2026-7198-CVE-2026-7195-CVE-2026-7201-CVE-2026-7313-May-2026",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:01"
-    },
-    {
-      "cve_id": "CVE-2026-7198",
-      "title": "高危漏洞: CVE-2026-7198 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-02 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "CWE-284: Improper Access Control in web services in Progress Sitefinity 15.4.8623 before 15.4.8630 allows a remote unauthenticated attacker to access content that should be restricted, resulting in full compromise of confidentiality, integrity, and availability of affected installations.",
-      "refs": "https://community.progress.com/s/article/Sitefinity-Security-Advisory-for-Addressing-Security-Vulnerabilities-CVE-2026-7312-CVE-2026-7198-CVE-2026-7195-CVE-2026-7201-CVE-2026-7313-May-2026",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:57"
-    },
-    {
-      "cve_id": "CVE-2026-7195",
-      "title": "高危漏洞: CVE-2026-7195 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-02 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "CWE-20: Improper Input Validation in web services in Progress Sitefinity 14.1.x through 14.3.x, 14.4.x before 14.4.8152, 15.0.x before 15.0.8234, 15.1.x before 15.1.8335, 15.2.x before 15.2.8441, 15.3.x before 15.3.8531, and 15.4.x before 15.4.8630 allows a remote unauthenticated attacker to compromise the integrity and confidentiality of user accounts. Successful exploitation requires user interaction and a non-default site configuration.",
-      "refs": "https://community.progress.com/s/article/Sitefinity-Security-Advisory-for-Addressing-Security-Vulnerabilities-CVE-2026-7312-CVE-2026-7198-CVE-2026-7195-CVE-2026-7201-CVE-2026-7313-May-2026",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:52"
-    },
-    {
-      "cve_id": "CVE-2026-39555",
-      "title": "高危漏洞: CVE-2026-39555 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in Elated-Themes Askka allows Object Injection.\n\nThis issue affects Askka: from n/a through 1.3.1.",
-      "refs": "https://patchstack.com/database/wordpress/theme/askka/vulnerability/wordpress-askka-theme-1-3-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:48"
-    },
-    {
-      "cve_id": "CVE-2026-39553",
-      "title": "高危漏洞: CVE-2026-39553 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Select-Themes WaveRide allows PHP Local File Inclusion.\n\nThis issue affects WaveRide: from n/a through 1.4.",
-      "refs": "https://patchstack.com/database/wordpress/theme/waveride/vulnerability/wordpress-waveride-theme-1-4-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:40"
     }
   ]
 }
