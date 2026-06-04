@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4104",
+      "title": "高危漏洞: CVE-2026-4104 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-04 20:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Authorization bypass through User-Controlled SQL primary key vulnerability in Akmer Informatics Automation Industry and Trade Ltd. Co. TeknoPass allows SQL Injection.\n\nThis issue affects TeknoPass: from 20210501 through 20260429.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0309",
+      "source": "NVD",
+      "time": "2026-06-04 22:35:05"
+    },
+    {
+      "cve_id": "CVE-2026-10843",
+      "title": "高危漏洞: CVE-2026-10843 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-04 20:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in the OpenShift Cloud Credential Operator Mint-mode IAM policies for AWS. Operator credentials are provisioned with account-wide scope for destructive actions rather than being restricted to cluster-owned resources, enabling cross-scope impact after credential compromise.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-10843\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2484738",
+      "source": "NVD",
+      "time": "2026-06-04 22:35:00"
+    },
+    {
+      "cve_id": "CVE-2026-10840",
+      "title": "高危漏洞: CVE-2026-10840 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-04 20:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "description": "A flaw was found in the OpenShift Pipelines operator. The tekton-scheduler-rolebinding ClusterRoleBinding grants the system:authenticated group write access to Kueue and cert-manager custom resources via the tekton-scheduler-role ClusterRole. When Kueue or cert-manager CRDs are present on the cluster, any authenticated user can disrupt workload scheduling, tamper with scheduling priorities, delete other tenants' Workload objects, or induce cert-manager to overwrite TLS Secrets including the default ingress controller certificate.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-10840\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2484720",
+      "source": "NVD",
+      "time": "2026-06-04 22:34:52"
+    },
+    {
+      "cve_id": "CVE-2025-52612",
+      "title": "高危漏洞: CVE-2025-52612 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-04 20:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "HCL iControl was affected by Export CSV - CSV Injection vulnerability. It is vulnerable to a reflected cross-site scripting vulnerability. This was caused by an insufficient sanitation of input parameters. .",
+      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0131041",
+      "source": "NVD",
+      "time": "2026-06-04 22:34:44"
+    },
+    {
+      "cve_id": "CVE-2026-49771",
+      "title": "高危漏洞: CVE-2026-49771 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-06-04 18:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in 10Web Photo Gallery by 10Web allows Blind SQL Injection.\n\nThis issue affects Photo Gallery by 10Web: from n/a through 1.8.41.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/photo-gallery/vulnerability/wordpress-photo-gallery-by-10web-plugin-1-8-41-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-04 22:34:35"
+    },
+    {
       "cve_id": "CVE-2026-3820",
       "title": "高危漏洞: CVE-2026-3820 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/releases/tag/v0.9.0\nhttps://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/security/advisories/GHSA-j8p6-96vp-f3r9\nhttps://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/security/advisories/GHSA-j8p6-96vp-f3r9",
       "source": "NVD",
       "time": "2026-06-03 02:35:45"
-    },
-    {
-      "cve_id": "CVE-2026-45678",
-      "title": "高危漏洞: CVE-2026-45678 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-03 00:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpenTelemetry eBPF Instrumentation provides eBPF instrumentation based on the OpenTelemetry standard. Prior to version 0.9.0, the Postgres protocol parser assumes BIND message payloads contain a valid NUL-terminated portal name. A crafted empty or unterminated payload can make OBI slice beyond the end of the captured buffer and panic. This issue has been patched in version 0.9.0.",
-      "refs": "https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/releases/tag/v0.9.0\nhttps://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/security/advisories/GHSA-pgvv-q3wf-mm9m\nhttps://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/security/advisories/GHSA-pgvv-q3wf-mm9m",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:40"
-    },
-    {
-      "cve_id": "CVE-2026-45553",
-      "title": "高危漏洞: CVE-2026-45553 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-03 00:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "NiceGUI is a Python-based UI framework. Prior to version 3.12.0, ui.restructured_text() renders reStructuredText server-side with Docutils without disabling file insertion directives. When a NiceGUI application passes attacker-controlled content to ui.restructured_text(), an attacker can use standard Docutils directives (include, csv-table with :file:, raw with :file:) to read local files readable by the NiceGUI server process. Applications that only pass trusted static strings to ui.restructured_text() are not affected. This issue has been patched in version 3.12.0.",
-      "refs": "https://github.com/zauberzeug/nicegui/releases/tag/v3.12.0\nhttps://github.com/zauberzeug/nicegui/security/advisories/GHSA-jfrm-rx66-g536",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:36"
-    },
-    {
-      "cve_id": "CVE-2026-42654",
-      "title": "高危漏洞: CVE-2026-42654 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-03 00:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
-      "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in WP Swings Wallet System for WooCommerce allows Password Recovery Exploitation.\n\nThis issue affects Wallet System for WooCommerce: from n/a through 2.7.5.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wallet-system-for-woocommerce/vulnerability/wordpress-wallet-system-for-woocommerce-plugin-2-7-5-broken-authentication-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:31"
-    },
-    {
-      "cve_id": "CVE-2026-40780",
-      "title": "高危漏洞: CVE-2026-40780 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-03 00:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Liquid Web / StellarWP BookIt allows Password Recovery Exploitation.\n\nThis issue affects BookIt: from n/a before 2.5.4.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/bookit/vulnerability/wordpress-bookit-plugin-2-5-1-broken-authentication-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:27"
-    },
-    {
-      "cve_id": "CVE-2026-40619",
-      "title": "高危漏洞: CVE-2026-40619 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-03 00:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A high security vulnerability affecting Security Center main server installations has been identified. It could allow an attacker with local OS privileges to the main server to access the Server Admin credentials. A third party hired by Genetec found the issue. There is currently no evidence of active exploitation.\n\nThis vulnerability is associated with specific installation package builds rather than the product version identifier alone. Certain versions (including 5.10.4.0, 5.11.3.0, 5.12.2.0 and 5.13.3.0) were released with both vulnerable and remediated installation packages under the same version number.\n\nConsequently, version-based comparison alone is insufficient to determine exposure. Only installations performed using vulnerable builds are affected. Remediated builds can be distinguished using verified installation package hashes. For the complete list of fixed build hashes, refer to the security advisory section.",
-      "refs": "https://resources.genetec.com/security-advisories/vulnerability-affecting-security-center-systems-main-server-installations",
-      "source": "NVD",
-      "time": "2026-06-03 02:35:22"
     }
   ]
 }
