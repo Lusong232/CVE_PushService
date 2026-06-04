@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2025-67446",
+      "title": "高危漏洞: CVE-2025-67446 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-05 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Authentication (Authentication Bypass) exists in Neterbit NW-431F Router 20241014-IR03 and before. The router uses a weak/predictable cookie value for authentication. By modifying the cookie value (e.g., setting it to \"admin\"), an attacker can bypass the authentication schema and gain unauthorized access to admin functionalities.",
+      "refs": "https://github.com/fun-beep/CVEs/tree/main/CVE-2025-67446\nhttps://neterbit.com/",
+      "source": "NVD",
+      "time": "2026-06-05 03:54:25"
+    },
+    {
+      "cve_id": "CVE-2026-5228",
+      "title": "高危漏洞: CVE-2026-5228 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 00:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Access Control, Missing Authorization vulnerability in Kurt Software Studio WriteUp Mobile App allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects WriteUp Mobile App: from 1.3.0 through 04062026.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0310",
+      "source": "NVD",
+      "time": "2026-06-05 03:54:21"
+    },
+    {
+      "cve_id": "CVE-2026-43986",
+      "title": "高危漏洞: CVE-2026-43986 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-06-05 00:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "description": "Tautulli is a Python based monitoring and tracking tool for Plex Media Server. Versions prior to 2.17.1 expose a public `/image/<hash>` route that resolves attacker-controlled entries from `image_hash_lookup` and replays them through the same server-side image fetch logic used by authenticated image proxying. A low-privilege guest user can seed a malicious external image URL into this lookup table and then trigger server-side fetches through a fully unauthenticated endpoint. This turns an authenticated SSRF primitive into a persistent unauthenticated SSRF gadget. Once the malicious hash entry exists, any external user can request `/image/<hash>.png` and cause the PMS or Tautulli host to fetch an arbitrary attacker-chosen URL. Version 2.17.1 patches the issue.",
+      "refs": "https://github.com/Tautulli/Tautulli/releases/tag/v2.17.1\nhttps://github.com/Tautulli/Tautulli/security/advisories/GHSA-m6j6-rc2c-8vpm",
+      "source": "NVD",
+      "time": "2026-06-05 03:54:16"
+    },
+    {
+      "cve_id": "CVE-2026-43985",
+      "title": "高危漏洞: CVE-2026-43985 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 00:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Tautulli is a Python based monitoring and tracking tool for Plex Media Server. Versions prior to 2.17.1 expose `configUpdate` as a state-changing administrator endpoint, but the route does not enforce `POST` and does not use any anti-CSRF token. In the default form and JWT-based authentication mode, the administrator session cookie is issued with `SameSite=Lax`, which still permits top-level cross-site navigation requests. An attacker can exploit this by luring a logged-in administrator to a malicious page that submits a cross-site request to `/configUpdate` and overwrites the local administrator username and password. The attacker can then sign in directly with the chosen credentials and take over the Tautulli administrative interface. Version 2.17.1 patches the issue.",
+      "refs": "https://github.com/Tautulli/Tautulli/releases/tag/v2.17.1\nhttps://github.com/Tautulli/Tautulli/security/advisories/GHSA-v622-pmjj-gpx3",
+      "source": "NVD",
+      "time": "2026-06-05 03:54:09"
+    },
+    {
+      "cve_id": "CVE-2026-43984",
+      "title": "高危漏洞: CVE-2026-43984 (CVSS 8.9)",
+      "cvss_score": 8.9,
+      "published_date": "2026-06-05 00:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L",
+      "description": "Tautulli is a Python based monitoring and tracking tool for Plex Media Server. Versions prior to 2.17.1 expose `log_js_errors` to any authenticated user, including guest users when guest access is enabled. The endpoint writes attacker-controlled strings directly into the main application log. The administrator-only `logFile` view then reads that log file and embeds it into an HTML response without escaping. This creates a stored cross-site scripting condition where a low-privilege guest can inject HTML or JavaScript into the log file and have it execute in an administrator's browser when the log viewer is opened. Version 2.17.1 patches the issue.",
+      "refs": "https://github.com/Tautulli/Tautulli/releases/tag/v2.17.1\nhttps://github.com/Tautulli/Tautulli/security/advisories/GHSA-f4j7-pjwc-4jrr",
+      "source": "NVD",
+      "time": "2026-06-05 03:54:04"
+    },
+    {
+      "cve_id": "CVE-2026-36176",
+      "title": "高危漏洞: CVE-2026-36176 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-04 23:16:51",
+      "vector_string": "CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "GNCC GP5 v7.1.76 was discovered to store pre-signed Backblaze B2 upload URLs (PUT requests) in plaintext to the serial console. This allows physically-proximate attackers to extract these active tokens to perform unauthorized operations via monitoring the serial UART interface.",
+      "refs": "http://gncc.com\nhttp://gp5.com\nhttps://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/GNCC-GP5-T23/README.md",
+      "source": "NVD",
+      "time": "2026-06-05 03:53:58"
+    },
+    {
+      "cve_id": "CVE-2026-35906",
+      "title": "高危漏洞: CVE-2026-35906 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-04 23:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "An undocumented debug CGI endpoint in T3 Technology CPE models T625Pro v1.0.07, T6825G v1.0.03 allows unauthenticated attackers to execute arbitrary system commands as root via supplying a crafted HTTP query string.",
+      "refs": "https://github.com/PwnOnu/T3-Technology-CPE-Advisories/blob/main/CVE-2026-35906.md\nhttps://t3techgroup.com\nhttps://www.ncsa.or.th",
+      "source": "NVD",
+      "time": "2026-06-05 03:53:53"
+    },
+    {
       "cve_id": "CVE-2026-28318",
       "title": "高危漏洞: CVE-2026-28318 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/goauthentik/authentik/security/advisories/GHSA-pgff-5mx8-fqj3",
       "source": "NVD",
       "time": "2026-06-03 06:56:06"
-    },
-    {
-      "cve_id": "CVE-2026-10620",
-      "title": "高危漏洞: CVE-2026-10620 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-03 05:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in code-projects Student Admission System 1.0. Affected is an unknown function of the file /index.php. This manipulation of the argument eid/did causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/Xu-Zhihan/CVE/issues/12\nhttps://github.com/Xu-Zhihan/CVE/issues/13",
-      "source": "NVD",
-      "time": "2026-06-03 06:56:02"
-    },
-    {
-      "cve_id": "CVE-2026-10619",
-      "title": "高危漏洞: CVE-2026-10619 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-03 05:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in sayan365 student-management-system up to 7f3c9ce7d410332335c2affac93a385485051800. This impacts an unknown function. The manipulation results in improper authentication. The attack can be executed remotely. The exploit is now public and may be used. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. Multiple endpoints are affected. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/sayan365/student-management-system/\nhttps://github.com/sayan365/student-management-system/issues/3\nhttps://github.com/sayan365/student-management-system/issues/4",
-      "source": "NVD",
-      "time": "2026-06-03 06:55:58"
-    },
-    {
-      "cve_id": "CVE-2026-8036",
-      "title": "高危漏洞: CVE-2026-8036 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-03 04:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Improper input validation in NI-PAL may allow a local authenticated user to access arbitrary system memory, potentially leading to privilege escalation. This vulnerability affects NI-PAL 26.3.0 and prior versions on Windows and Linux.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/invalid-input-validation-vulnerabilities-in-ni-pal.html",
-      "source": "NVD",
-      "time": "2026-06-03 06:55:50"
-    },
-    {
-      "cve_id": "CVE-2026-8035",
-      "title": "高危漏洞: CVE-2026-8035 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-03 04:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Improper input validation in the NI-PAL kernel driver may allow a local authenticated user to cause a denial of service by triggering a crash due to a NULL pointer dereference. This vulnerability affects NI-PAL 26.3.0 and prior versions on Windows and Linux.",
-      "refs": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/invalid-input-validation-vulnerabilities-in-ni-pal.html",
-      "source": "NVD",
-      "time": "2026-06-03 06:55:46"
-    },
-    {
-      "cve_id": "CVE-2026-5076",
-      "title": "高危漏洞: CVE-2026-5076 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-03 04:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The ARMember Premium plugin for WordPress is vulnerable to an insecure password reset mechanism in all versions up to, and including, 7.3.1. The plugin stores a plaintext copy of the password reset key in the `arm_reset_password_key` user meta field when a user requests a password reset. This is in addition to the hashed key that WordPress core stores securely in `wp_users.user_activation_key`. The plaintext key stored in `wp_usermeta` can be used with the plugin's custom `armrp` reset action to set a new password for any user. Combined with another vulnerability such as SQL Injection (CVE-2026-5073, CVE-2026-5074), this makes it possible for unauthenticated attackers to extract the plaintext reset key and take over any user account, including administrators.",
-      "refs": "https://codecanyon.net/item/armember-complete-wordpress-membership-system/17785056\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6b15eca5-fd47-4f8f-8ade-3a90e0bfc110?source=cve",
-      "source": "NVD",
-      "time": "2026-06-03 06:55:42"
-    },
-    {
-      "cve_id": "CVE-2026-5073",
-      "title": "高危漏洞: CVE-2026-5073 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-03 04:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The ARMember Premium plugin for WordPress is vulnerable to SQL Injection via the 'order' parameter of the 'arm_directory_paging_action' AJAX action in all versions up to, and including, 7.3.1. This is due to insufficient escaping on the user-supplied 'order' and 'orderby' parameters and the lack of sufficient preparation on the existing SQL query in the `arm_get_directory_members()` function. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://codecanyon.net/item/armember-complete-wordpress-membership-system/17785056\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b5f6d2a2-ad3e-4afc-b6fd-745881d85b6b?source=cve",
-      "source": "NVD",
-      "time": "2026-06-03 06:55:37"
-    },
-    {
-      "cve_id": "CVE-2026-49120",
-      "title": "高危漏洞: CVE-2026-49120 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-03 04:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Medplum before 5.1.14 contains a server-side request forgery vulnerability in the subscription worker that allows authenticated users to perform unauthorized internal network requests by creating FHIR Subscription resources with arbitrary endpoint URLs. Attackers can point subscription endpoints at internal addresses such as cloud instance metadata services, internal databases, or container orchestration endpoints to exfiltrate IAM credentials and patient health records via the POST body containing full FHIR resource payloads.",
-      "refs": "https://github.com/medplum/medplum/commit/87595e98d756d840d70d9dc87beb9d4f9e158b59\nhttps://github.com/medplum/medplum/pull/9334\nhttps://github.com/medplum/medplum/releases/tag/v5.1.14",
-      "source": "NVD",
-      "time": "2026-06-03 06:55:33"
     }
   ]
 }
