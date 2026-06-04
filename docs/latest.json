@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10777",
+      "title": "高危漏洞: CVE-2026-10777 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 07:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in ealpha072 Student-Management-System up to 01451bd7a2f58cdda07bd0b86e3967582e3ecd08. Affected by this issue is some unknown functionality of the file admin/config.php of the component Administrative Backend. Such manipulation leads to improper authentication. The attack may be performed from remote. The exploit is publicly available and might be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/ealpha072/Student-Management-System/\nhttps://github.com/ealpha072/Student-Management-System/issues/2\nhttps://vuldb.com/cve/CVE-2026-10777",
+      "source": "NVD",
+      "time": "2026-06-04 10:42:08"
+    },
+    {
+      "cve_id": "CVE-2026-10771",
+      "title": "高危漏洞: CVE-2026-10771 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-04 06:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in crmeb crmeb_java 1.4. Affected is the function RestTemplate.getForEntity of the file crmeb-common/src/main/java/com/zbkj/common/utils/RestTemplateUtil.java of the component base64 Qrcode Endpoint. The manipulation of the argument url results in server-side request forgery. The attack can be executed remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/crmeb/crmeb_java/\nhttps://github.com/crmeb/crmeb_java/issues/35\nhttps://vuldb.com/cve/CVE-2026-10771",
+      "source": "NVD",
+      "time": "2026-06-04 10:42:03"
+    },
+    {
       "cve_id": "CVE-2026-50033",
       "title": "高危漏洞: CVE-2026-50033 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/waveride/vulnerability/wordpress-waveride-theme-1-4-local-file-inclusion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-03 02:34:40"
-    },
-    {
-      "cve_id": "CVE-2026-39552",
-      "title": "高危漏洞: CVE-2026-39552 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Code Supply Co. Blueprint allows PHP Local File Inclusion.\n\nThis issue affects Blueprint: from n/a before 1.1.5.",
-      "refs": "https://patchstack.com/database/wordpress/theme/blueprint/vulnerability/wordpress-blueprint-theme-1-1-5-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:36"
-    },
-    {
-      "cve_id": "CVE-2025-69369",
-      "title": "高危漏洞: CVE-2025-69369 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-02 22:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Axiomthemes Racquet allows PHP Local File Inclusion.\n\nThis issue affects Racquet: from n/a through 1.12.0.",
-      "refs": "https://patchstack.com/database/wordpress/theme/racquet/vulnerability/wordpress-racquet-theme-1-12-0-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-03 02:34:31"
     }
   ]
 }
