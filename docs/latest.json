@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6274",
+      "title": "高危漏洞: CVE-2026-6274 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-05 17:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Authentication, Missing authentication for critical function, Weak Authentication vulnerability in DTS Electronics Industry and Trade Ltd. Co. Redline WR3200 allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Redline WR3200: from 7.1.3 before 7.1.8.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0321",
+      "source": "NVD",
+      "time": "2026-06-05 19:55:50"
+    },
+    {
+      "cve_id": "CVE-2026-49777",
+      "title": "高危漏洞: CVE-2026-49777 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-06-05 17:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper Validation of Specified Quantity in Input vulnerability in ShapedPlugin, LLC Product Slider Pro for WooCommerce allows Malicious Software Implanted.\n\nThis issue affects Product Slider Pro for WooCommerce: from n/a before 3.5.3.\n\nNo patched version is available - the vendor has applied a fix to an existing release without publishing a new version. While the patch provided by the vendor is valid, releasing it under the existing version number leaves users unable to reliably determine whether they are running a patched or vulnerable installation. As a result, we treat this as an unpatched version.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/woo-product-slider-pro/vulnerability/wordpress-product-slider-pro-for-woocommerce-plugin-3-5-2-backdoor-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-05 19:55:45"
+    },
+    {
+      "cve_id": "CVE-2026-11332",
+      "title": "高危漏洞: CVE-2026-11332 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 17:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in ansible-core. The ansible-galaxy role install command processes dependency specifications from a role's meta/requirements.yml file. Due to improper neutralization of argument delimiters, a malicious role author can inject arbitrary git configuration flags through the src field. This allows arbitrary code execution on the machine of a user who installs the role via ansible-galaxy role install.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-11332\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485379\nhttps://github.com/ansible/ansible",
+      "source": "NVD",
+      "time": "2026-06-05 19:55:40"
+    },
+    {
       "cve_id": "CVE-2026-50593",
       "title": "高危漏洞: CVE-2026-50593 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/489071023",
       "source": "NVD",
       "time": "2026-06-05 14:59:53"
-    },
-    {
-      "cve_id": "CVE-2026-10906",
-      "title": "高危漏洞: CVE-2026-10906 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebAuthentication in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/503420438",
-      "source": "NVD",
-      "time": "2026-06-05 14:59:49"
-    },
-    {
-      "cve_id": "CVE-2026-10905",
-      "title": "高危漏洞: CVE-2026-10905 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Network in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/487357841",
-      "source": "NVD",
-      "time": "2026-06-05 14:59:42"
-    },
-    {
-      "cve_id": "CVE-2026-10903",
-      "title": "高危漏洞: CVE-2026-10903 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/503422316",
-      "source": "NVD",
-      "time": "2026-06-05 14:59:36"
     }
   ]
 }
