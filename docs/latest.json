@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6209",
+      "title": "高危漏洞: CVE-2026-6209 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-05 23:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper Access Control, Missing Authorization vulnerability in HAVELSAN Inc. Geographic Tracking System allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Geographic Tracking System: before v0.0.2.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:42"
+    },
+    {
+      "cve_id": "CVE-2026-6208",
+      "title": "高危漏洞: CVE-2026-6208 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-05 23:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Authorization bypass through User-Controlled key vulnerability in HAVELSAN Inc. Geographic Tracking System allows Exploitation of Trusted Identifiers.\n\nThis issue affects Geographic Tracking System: before v0.0.2.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:38"
+    },
+    {
+      "cve_id": "CVE-2026-6207",
+      "title": "高危漏洞: CVE-2026-6207 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-05 23:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Observable response discrepancy vulnerability in HAVELSAN Inc. Geographic Tracking System allows System Footprinting.\n\nThis issue affects Geographic Tracking System: before v0.0.2.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:34"
+    },
+    {
+      "cve_id": "CVE-2026-48095",
+      "title": "高危漏洞: CVE-2026-48095 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 23:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "7-Zip is a file archiver with a high compression ratio. Versions 26.00 and prior contain a heap buffer overflow vulnerability caused by an under-allocation in the NTFS compressed stream buffer (GetCuSize shift UB), potentially allowing attackers to cause arbitrary code execution or application crashes. CInStream::GetCuSize() in the NTFS handler computes the compression-unit buffer size as (UInt32)1 << (BlockSizeLog + CompressionUnit), and a crafted image with ClusterSizeLog >= 28 and CompressionUnit == 4 drives the exponent to 32, which is undefined behavior and collapses on x86/x64 so _inBuf is allocated as 1 byte. ReadStream_FALSE then writes up to 256 MB of attacker-controlled data into that 1-byte buffer in 64 KB iterations, and because the CInStream object sits only 304 bytes after _inBuf, its vtable pointer is overwritten and the next dispatched call achieves a vtable hijack. On 32-bit builds the overflow is unconditionally reached; on 64-bit it requires the parallel 8 GB _outBuf allocation to succeed, otherwise failing closed to denial of service. The NTFS handler is enabled by default in stock 7z.dll and, via signature-based fallback matching \"NTFS    \" at offset 3, will open a crafted image regardless of file extension during extraction or testing. Version 26.01 fixes the issue.",
+      "refs": "https://securitylab.github.com/advisories/GHSL-2026-140_7-Zip/\nhttps://sourceforge.net/p/sevenzip/discussion/45797/thread/555e132ba4",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:29"
+    },
+    {
+      "cve_id": "CVE-2026-11334",
+      "title": "高危漏洞: CVE-2026-11334 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-05 23:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in tittuvarghese CollegeManagementSystem 3e476335cfbfb9a049e09f474c7ec885f69a9df3/a38852979f7e27ae67b610dce5979500ef8ebe01. This affects an unknown function of the file dashboard_page/forms/fetch.php. Performing a manipulation of the argument department_code results in sql injection. The attack can be initiated remotely. The exploit is now public and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/tittuvarghese/CollegeManagementSystem/\nhttps://github.com/tittuvarghese/CollegeManagementSystem/issues/3\nhttps://vuldb.com/cve/CVE-2026-11334",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:21"
+    },
+    {
+      "cve_id": "CVE-2026-50234",
+      "title": "高危漏洞: CVE-2026-50234 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-05 22:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Lyrion Music Server 9.2.0 contains a path traversal vulnerability that allows unauthenticated attackers to read arbitrary files by exploiting directory traversal in the web server context. Attackers can manipulate file path parameters to access sensitive files outside the intended directory structure.",
+      "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-path-traversal-file-read\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5992.php",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:16"
+    },
+    {
+      "cve_id": "CVE-2026-50232",
+      "title": "高危漏洞: CVE-2026-50232 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-05 22:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Lyrion Music Server 9.2.0 contains a stored cross-site scripting vulnerability that allows attackers to inject malicious scripts through media file metadata tags like GENRE, ARTIST, and ALBUM. Attackers can craft files with XSS payloads in metadata tags that execute in the web interface when users view track information or play files, enabling access to management functions and settings disclosure.",
+      "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-stored-xss-via-metadata-tags\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5990.php",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:12"
+    },
+    {
+      "cve_id": "CVE-2026-50231",
+      "title": "高危漏洞: CVE-2026-50231 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-05 22:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "Lyrion Music Server 9.2.0 contains an unauthenticated stored cross-site scripting vulnerability in the log viewer that allows attackers to inject malicious scripts by exploiting unescaped template variables. Attackers can inject XSS payloads through search, lines, and path query parameters or by crafting values that get logged such as URLs, User-Agent headers, stream titles, or player names to execute arbitrary scripts in users' browsers.",
+      "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-unauthenticated-stored-xss-via-server-log\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5989.php",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:06"
+    },
+    {
+      "cve_id": "CVE-2026-11236",
+      "title": "高危漏洞: CVE-2026-11236 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-05 07:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient policy enforcement in Web Bluetooth in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496427030",
+      "source": "NVD",
+      "time": "2026-06-06 01:08:01"
+    },
+    {
+      "cve_id": "CVE-2026-11231",
+      "title": "高危漏洞: CVE-2026-11231 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-05 07:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Inappropriate implementation in Safe Browsing in Google Chrome on Mac prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via a malicious file. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/495840862",
+      "source": "NVD",
+      "time": "2026-06-06 01:07:55"
+    },
+    {
+      "cve_id": "CVE-2026-11224",
+      "title": "高危漏洞: CVE-2026-11224 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 07:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Use after free in Chromoting in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502461760",
+      "source": "NVD",
+      "time": "2026-06-06 01:07:48"
+    },
+    {
+      "cve_id": "CVE-2026-11218",
+      "title": "高危漏洞: CVE-2026-11218 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-05 07:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Inappropriate implementation in PlatformIntegration in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a malicious file. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/476862276",
+      "source": "NVD",
+      "time": "2026-06-06 01:07:42"
+    },
+    {
+      "cve_id": "CVE-2026-11213",
+      "title": "高危漏洞: CVE-2026-11213 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-05 07:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient validation of untrusted input in Reading Mode in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/507382702",
+      "source": "NVD",
+      "time": "2026-06-06 01:07:36"
+    },
+    {
+      "cve_id": "CVE-2026-11207",
+      "title": "高危漏洞: CVE-2026-11207 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-05 07:17:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient validation of untrusted input in Autofill in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via malicious network traffic. (Chromium security severity: Medium)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/506127858",
+      "source": "NVD",
+      "time": "2026-06-06 01:07:30"
+    },
+    {
       "cve_id": "CVE-2026-50264",
       "title": "高危漏洞: CVE-2026-50264 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -945,160 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504597736",
       "source": "NVD",
       "time": "2026-06-05 15:02:40"
-    },
-    {
-      "cve_id": "CVE-2026-10946",
-      "title": "高危漏洞: CVE-2026-10946 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-05 07:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504587797",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:35"
-    },
-    {
-      "cve_id": "CVE-2026-10945",
-      "title": "高危漏洞: CVE-2026-10945 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in PDF in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted PDF file. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504417768",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:30"
-    },
-    {
-      "cve_id": "CVE-2026-10943",
-      "title": "高危漏洞: CVE-2026-10943 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504194151",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:24"
-    },
-    {
-      "cve_id": "CVE-2026-10942",
-      "title": "高危漏洞: CVE-2026-10942 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in UI in Google Chrome on Windows prior to 149.0.7827.53 allowed a local attacker to perform privilege escalation via a malicious file. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504104263",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:18"
-    },
-    {
-      "cve_id": "CVE-2026-10941",
-      "title": "高危漏洞: CVE-2026-10941 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out of bounds memory access in Skia in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/503958940",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:12"
-    },
-    {
-      "cve_id": "CVE-2026-10940",
-      "title": "高危漏洞: CVE-2026-10940 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Race in Codecs in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/503879873",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:07"
-    },
-    {
-      "cve_id": "CVE-2026-10939",
-      "title": "高危漏洞: CVE-2026-10939 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/503502607",
-      "source": "NVD",
-      "time": "2026-06-05 15:02:02"
-    },
-    {
-      "cve_id": "CVE-2026-10936",
-      "title": "高危漏洞: CVE-2026-10936 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type Confusion in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502439789",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:58"
-    },
-    {
-      "cve_id": "CVE-2026-10935",
-      "title": "高危漏洞: CVE-2026-10935 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type Confusion in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/501898683",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:53"
-    },
-    {
-      "cve_id": "CVE-2026-10934",
-      "title": "高危漏洞: CVE-2026-10934 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Autofill in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/501594107",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:47"
-    },
-    {
-      "cve_id": "CVE-2026-10933",
-      "title": "高危漏洞: CVE-2026-10933 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Audio in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/501557633",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:41"
-    },
-    {
-      "cve_id": "CVE-2026-10932",
-      "title": "高危漏洞: CVE-2026-10932 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in UI in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/501335606",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:35"
-    },
-    {
-      "cve_id": "CVE-2026-10929",
-      "title": "高危漏洞: CVE-2026-10929 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in ANGLE in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500429259",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:28"
-    },
-    {
-      "cve_id": "CVE-2026-10928",
-      "title": "高危漏洞: CVE-2026-10928 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Script injection in Headless in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500124367",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:24"
     }
   ]
 }
