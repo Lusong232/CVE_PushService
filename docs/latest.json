@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-50264",
+      "title": "高危漏洞: CVE-2026-50264 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An out-of-bounds write flaw was found in the X.Org X server and Xwayland in DRIGetBuffers/DRIGetBuffersWithFormat. A client that requests multiple DRI2BufferBackLeft attachments and one DRI2BufferFrontLeft can trigger an out-of-bounds heap write. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50264\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485389\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/339c279514326134b0878fc23ce6e9520440ce7f",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:54"
+    },
+    {
+      "cve_id": "CVE-2026-50261",
+      "title": "高危漏洞: CVE-2026-50261 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:39",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50261\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485386\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/bdd7bf57af208b1ddf57d4683d67104443b44812",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:43"
+    },
+    {
+      "cve_id": "CVE-2026-50260",
+      "title": "高危漏洞: CVE-2026-50260 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:39",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50260\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485385\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/f5abfb61994471023d8c6470428c8e30c411cc0b",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:38"
+    },
+    {
+      "cve_id": "CVE-2026-50259",
+      "title": "高危漏洞: CVE-2026-50259 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:39",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a stack buffer overflow. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50259\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485384\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/867b59b33bee669cb412f1314e47c52eacf6e00b",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:33"
+    },
+    {
+      "cve_id": "CVE-2026-50258",
+      "title": "高危漏洞: CVE-2026-50258 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:39",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key types to excessive shift levels and trigger stack overflows. This is caused by an incomplete fix of CVE-2025-26597. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50258\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485383\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/543e108516428fc8c3bea91d6563ad266f9a801e",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:28"
+    },
+    {
+      "cve_id": "CVE-2026-50257",
+      "title": "高危漏洞: CVE-2026-50257 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:38",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a second X connection destroys the fence, causing the use-after-free. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50257\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485382\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/f5abfb61994471023d8c6470428c8e30c411cc0b",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:23"
+    },
+    {
+      "cve_id": "CVE-2026-50256",
+      "title": "高危漏洞: CVE-2026-50256 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 20:16:38",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but libXfont2's alias target name length is 1024 bytes. A font alias name between 257 and 1023 bytes causes the X server to copy that name into the undersized stack buffer without further checks. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50256\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485380\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/bb5158f962dc935e58ef8b4b5fcb31be201a6e07",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:18"
+    },
+    {
+      "cve_id": "CVE-2026-50265",
+      "title": "高危漏洞: CVE-2026-50265 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-06-05 19:16:36",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in libinput. A local attacker with access to /dev/uinput can inject arbitrary udev properties through the libinput-device-group helper. This injection can lead to root code execution, for example, by exploiting REMOVE_CMD properties that are executed when a device is removed. This vulnerability allows an attacker to gain elevated privileges on the system.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-50265\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485390\nhttps://gitlab.freedesktop.org/libinput/libinput/-/work_items/1296",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:12"
+    },
+    {
+      "cve_id": "CVE-2026-11256",
+      "title": "高危漏洞: CVE-2026-11256 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-05 08:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Integer overflow in GPU in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498856565",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:07"
+    },
+    {
+      "cve_id": "CVE-2026-11255",
+      "title": "高危漏洞: CVE-2026-11255 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-05 08:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Insufficient validation of untrusted input in Storage Access API in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498417152",
+      "source": "NVD",
+      "time": "2026-06-05 22:27:03"
+    },
+    {
+      "cve_id": "CVE-2026-11250",
+      "title": "高危漏洞: CVE-2026-11250 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-05 08:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Inappropriate implementation in DevTools in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498281224",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:59"
+    },
+    {
+      "cve_id": "CVE-2026-11248",
+      "title": "高危漏洞: CVE-2026-11248 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 08:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Inappropriate implementation in Google Lens in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497946941",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:52"
+    },
+    {
+      "cve_id": "CVE-2026-11242",
+      "title": "高危漏洞: CVE-2026-11242 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-05 08:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Insufficient validation of untrusted input in Plugins in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497385823",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:47"
+    },
+    {
+      "cve_id": "CVE-2026-11237",
+      "title": "高危漏洞: CVE-2026-11237 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-05 07:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient validation of untrusted input in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496617698",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:43"
+    },
+    {
+      "cve_id": "CVE-2026-11188",
+      "title": "高危漏洞: CVE-2026-11188 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 07:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Use after free in USB in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502959826",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:34"
+    },
+    {
+      "cve_id": "CVE-2026-11185",
+      "title": "高危漏洞: CVE-2026-11185 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-05 07:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code inside a sandbox via a crafted Chrome Extension. (Chromium security severity: Medium)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502784366",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:28"
+    },
+    {
+      "cve_id": "CVE-2026-10904",
+      "title": "高危漏洞: CVE-2026-10904 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-05 07:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Inappropriate implementation in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/506855825",
+      "source": "NVD",
+      "time": "2026-06-05 22:26:21"
+    },
+    {
       "cve_id": "CVE-2026-6274",
       "title": "高危漏洞: CVE-2026-6274 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -912,193 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500124367",
       "source": "NVD",
       "time": "2026-06-05 15:01:24"
-    },
-    {
-      "cve_id": "CVE-2026-10927",
-      "title": "高危漏洞: CVE-2026-10927 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds read in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500090141",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:19"
-    },
-    {
-      "cve_id": "CVE-2026-10926",
-      "title": "高危漏洞: CVE-2026-10926 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:54",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Cast in Google Chrome prior to 149.0.7827.53 allowed an attacker on the local network segment to execute arbitrary code via malicious network traffic. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500075522",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:15"
-    },
-    {
-      "cve_id": "CVE-2026-10925",
-      "title": "高危漏洞: CVE-2026-10925 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in Skia in Google Chrome on Mac prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500071763",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:09"
-    },
-    {
-      "cve_id": "CVE-2026-10924",
-      "title": "高危漏洞: CVE-2026-10924 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Integer overflow in Chromecast in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/500055357",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:05"
-    },
-    {
-      "cve_id": "CVE-2026-10921",
-      "title": "高危漏洞: CVE-2026-10921 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Integer overflow in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499159695",
-      "source": "NVD",
-      "time": "2026-06-05 15:01:01"
-    },
-    {
-      "cve_id": "CVE-2026-10920",
-      "title": "高危漏洞: CVE-2026-10920 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in WebShare in Google Chrome on Mac prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498977444",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:56"
-    },
-    {
-      "cve_id": "CVE-2026-10919",
-      "title": "高危漏洞: CVE-2026-10919 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498872764",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:51"
-    },
-    {
-      "cve_id": "CVE-2026-10918",
-      "title": "高危漏洞: CVE-2026-10918 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Viz in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498259721",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:45"
-    },
-    {
-      "cve_id": "CVE-2026-10917",
-      "title": "高危漏洞: CVE-2026-10917 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497929481",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:41"
-    },
-    {
-      "cve_id": "CVE-2026-10915",
-      "title": "高危漏洞: CVE-2026-10915 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Core in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497612174",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:34"
-    },
-    {
-      "cve_id": "CVE-2026-10914",
-      "title": "高危漏洞: CVE-2026-10914 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497574371",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:28"
-    },
-    {
-      "cve_id": "CVE-2026-10913",
-      "title": "高危漏洞: CVE-2026-10913 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497450927",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:23"
-    },
-    {
-      "cve_id": "CVE-2026-10911",
-      "title": "高危漏洞: CVE-2026-10911 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/495819067",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:17"
-    },
-    {
-      "cve_id": "CVE-2026-10910",
-      "title": "高危漏洞: CVE-2026-10910 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type Confusion in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/508811477",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:10"
-    },
-    {
-      "cve_id": "CVE-2026-10909",
-      "title": "高危漏洞: CVE-2026-10909 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/508092644",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:06"
-    },
-    {
-      "cve_id": "CVE-2026-10908",
-      "title": "高危漏洞: CVE-2026-10908 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in FullScreen in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/505045913",
-      "source": "NVD",
-      "time": "2026-06-05 15:00:02"
-    },
-    {
-      "cve_id": "CVE-2026-10907",
-      "title": "高危漏洞: CVE-2026-10907 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out of bounds write in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/489071023",
-      "source": "NVD",
-      "time": "2026-06-05 14:59:53"
     }
   ]
 }
