@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-48579",
+      "title": "高危漏洞: CVE-2026-48579 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-05 07:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper authorization in Microsoft Exchange Online allows an unauthorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48579",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:51"
+    },
+    {
+      "cve_id": "CVE-2026-48567",
+      "title": "高危漏洞: CVE-2026-48567 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-06-05 07:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "description": "Authentication bypass by spoofing in Azure HorizonDB allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48567",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:47"
+    },
+    {
+      "cve_id": "CVE-2026-45497",
+      "title": "高危漏洞: CVE-2026-45497 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-06-05 07:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L",
+      "description": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an authorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45497",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:42"
+    },
+    {
+      "cve_id": "CVE-2026-20245",
+      "title": "高危漏洞: CVE-2026-20245 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 07:17:31",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by uploading a crafted file to the affected system. A successful exploit could allow the attacker to perform command injection attacks on an affected system and elevate their privileges as the root user.\r\nTo exploit this vulnerability, the attacker must have netadmin privileges on the affected system. This would require valid credentials or exploitation of  or . Cisco is not aware of successful exploitation by other methods. Cisco has observed limited cases where the exploitation of this bug resulted in a configuration change pushed to edge devices.\r\nCisco recommends that customers upgrade to the fixed software that is documented in the  that was published on May 14, 2026, and verify the configuration of the edge devices.",
+      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:38"
+    },
+    {
+      "cve_id": "CVE-2026-10873",
+      "title": "高危漏洞: CVE-2026-10873 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-05 07:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Shibby Tomato 1.28.0000. Impacted is the function rstats_path of the file /bin/rstats of the component Web UI. Executing a manipulation can lead to os command injection. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. This project is superseded by FreshTomato.",
+      "refs": "https://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/en/05-rstats.md\nhttps://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/zh/05-rstats.md\nhttps://vuldb.com/cve/CVE-2026-10873",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:30"
+    },
+    {
+      "cve_id": "CVE-2026-10872",
+      "title": "高危漏洞: CVE-2026-10872 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-05 07:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Shibby Tomato 1.28.0000. This issue affects the function start_vpnserver of the file /sbin/rc of the component Web UI. Performing a manipulation results in os command injection. The attack can be initiated remotely. The exploit has been made public and could be used. This project is superseded by FreshTomato.",
+      "refs": "https://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/en/03-start_vpnserver.md\nhttps://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/zh/03-start_vpnserver.md\nhttps://vuldb.com/cve/CVE-2026-10872",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:24"
+    },
+    {
+      "cve_id": "CVE-2025-8873",
+      "title": "高危漏洞: CVE-2025-8873 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-05 07:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "On affected platforms running Arista EOS with IPsec configured, a specially crafted packet can cause the dataplane to stop processing all IPsec traffic. The control plane may detect this condition, and attempt to reset the IPsec processing pipeline. After reset traffic may not resume being processed. There is no impact to non-IPsec traffic or to IPsec traffic not originating or terminating on the system. This issue was reported by an Arista customer.",
+      "refs": "https://www.arista.com/en/support/advisories-notices/security-advisory/22869-security-advisory-0127",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:19"
+    },
+    {
+      "cve_id": "CVE-2024-27892",
+      "title": "高危漏洞: CVE-2024-27892 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-05 07:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "description": "Affected platforms running Arista EOS with OpenConfig configured, a gNMI Set request can be run when it should have been rejected. This can result in unexpected configuration being applied to the switch.",
+      "refs": "https://www.arista.com/en/support/advisories-notices/security-advisory/19862-security-advisory-0099",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:14"
+    },
+    {
+      "cve_id": "CVE-2024-27890",
+      "title": "高危漏洞: CVE-2024-27890 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-05 07:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "description": "Affected platforms running Arista EOS with OpenConfig configured, a gNMI Set request can be run when it should have been rejected. This can result in unexpected configuration being applied to the switch.",
+      "refs": "https://www.arista.com/en/support/advisories-notices/security-advisory/19862-security-advisory-0099",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:07"
+    },
+    {
+      "cve_id": "CVE-2026-10871",
+      "title": "高危漏洞: CVE-2026-10871 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-05 06:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Shibby Tomato 1.28.0000. This vulnerability affects the function start_6rd_tunnel of the file /sbin/rc of the component Web UI. Such manipulation of the argument ipv6_6rd_borderrelay leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. This project is superseded by FreshTomato.",
+      "refs": "https://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/en/02-start_6rd_tunnel.md\nhttps://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/zh/02-start_6rd_tunnel.md\nhttps://vuldb.com/cve/CVE-2026-10871",
+      "source": "NVD",
+      "time": "2026-06-05 10:29:01"
+    },
+    {
       "cve_id": "CVE-2026-10870",
       "title": "高危漏洞: CVE-2026-10870 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36607.md",
       "source": "NVD",
       "time": "2026-06-04 06:58:46"
-    },
-    {
-      "cve_id": "CVE-2026-36606",
-      "title": "高危漏洞: CVE-2026-36606 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-04 02:16:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Mercusys AC12G (EU) V1 router with firmware AC12G(EU)_V1_200909 encrypts configuration backups with a hardcoded DES key using single DES in ECB mode. An attacker who obtains a backup file can decrypt it to recover all stored credentials including admin password, WiFi PSK, and DDNS credentials.",
-      "refs": "https://github.com/Tymbark7372/MERCUSYS-AC12G/blob/master/advisories/CVE-2026-36606.md",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:42"
-    },
-    {
-      "cve_id": "CVE-2026-20230",
-      "title": "高危漏洞: CVE-2026-20230 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-04 02:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-      "description": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r This vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\n\r Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\n\r Note: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssrf-cXPnHcW",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:35"
-    },
-    {
-      "cve_id": "CVE-2026-37462",
-      "title": "高危漏洞: CVE-2026-37462 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-04 00:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "An integer underflow in the BGPUpdate.DecodeFromBytes function (/bgp/bgp.go) of gobgp v4.3.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted BGP UPDATE message.",
-      "refs": "https://github.com/osrg/gobgp/blob/v4.3.0/pkg/packet/bgp/bgp.go\nhttps://github.com/osrg/gobgp/commit/9ce8936672ebc07df524da77fa4c6ae26d92be6d",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:30"
-    },
-    {
-      "cve_id": "CVE-2026-36748",
-      "title": "高危漏洞: CVE-2026-36748 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-06-04 00:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "RockRMS v16.13 and before v.17.7.0 is vulnerable to Cross Site Scripting (XSS) via Social Media links in user profile.",
-      "refs": "http://sparkdevnetwork.com\nhttps://raxis.com/blog/cve-2026-36748-xss-in-rock-rms-leads-to-privilege-escalation/\nhttps://raxis.com/blog/cve-2026-36748-xss-in-rock-rms-leads-to-privilege-escalation/",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:26"
-    },
-    {
-      "cve_id": "CVE-2026-36576",
-      "title": "高危漏洞: CVE-2026-36576 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-04 00:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An OS command injection vulnerability in the app.py component of openlabs docker-wkhtmltopdf-aas up to commit 9f50579 allows attackers to execute arbitrary commands via a crafted POST request.",
-      "refs": "https://github.com/openlabs/docker-wkhtmltopdf-aas\nhttps://github.com/openlabs/docker-wkhtmltopdf-aas/blob/9f505797671c3339520dec5fc01dff3a6f324f2e/app.py#L40\nhttps://github.com/openlabs/docker-wkhtmltopdf-aas/issues/36",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:22"
-    },
-    {
-      "cve_id": "CVE-2026-9516",
-      "title": "高危漏洞: CVE-2026-9516 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-03 09:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Cpanel::JSON::XS versions before 4.41 for Perl allow denial of service via UTF-8 BOM prefixed input when a decode filter callback throws.\n\nTo skip a leading 3-byte UTF-8 BOM, decode_json() advances the input scalar's string pointer past the mark with SvPV_set() and restores it only on the normal return path. When decoding aborts through a Perl exception, for example a filter_json_object callback that croaks, the restore is skipped and the scalar is left with its string pointer offset into its own buffer and a shortened length.\n\nWhen that scalar is later freed, the allocator receives an invalid pointer and the interpreter aborts. A single BOM prefixed document decoded with a throwing filter callback crashes any caller.",
-      "refs": "https://github.com/rurban/Cpanel-JSON-XS/commit/dfe1b41a36caba51dc12a2917fe50285d1ffaa7b.patch\nhttps://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.41/changes\nhttp://www.openwall.com/lists/oss-security/2026/06/03/5",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:16"
-    },
-    {
-      "cve_id": "CVE-2026-9334",
-      "title": "高危漏洞: CVE-2026-9334 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-03 09:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Cpanel::JSON::XS versions before 4.41 for Perl allow type confusion via duplicate object keys when dupkeys_as_arrayref is enabled.\n\ndecode_hv() collapses duplicate object keys into an array reference under dupkeys_as_arrayref. The branch reached for a duplicate key tests `SvTYPE (old_value) != SVt_RV && SvTYPE (SvRV (old_value)) != SVt_PVAV`, which evaluates SvRV(old_value) before establishing that old_value is a reference. When the existing value is a plain scalar rather than an array reference, a non-reference scalar is dereferenced as a reference.\n\nA caller decoding untrusted JSON with dupkeys_as_arrayref enabled is crashed, and the incompatible access follows a pointer taken from attacker controlled scalar contents.",
-      "refs": "https://github.com/rurban/Cpanel-JSON-XS/commit/11a7c550a0d8fac2f84414f24d5df9b2bfe346e2.patch\nhttps://metacpan.org/release/RURBAN/Cpanel-JSON-XS-4.41/changes\nhttp://www.openwall.com/lists/oss-security/2026/06/03/4",
-      "source": "NVD",
-      "time": "2026-06-04 06:58:11"
-    },
-    {
-      "cve_id": "CVE-2026-5241",
-      "title": "高危漏洞: CVE-2026-5241 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-06-03 22:16:46",
-      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "A vulnerability in the LightGlue model loading path of huggingface/transformers version 5.2.0 allows an attacker-controlled model repository to execute arbitrary code during model initialization. The issue arises because the `trust_remote_code` parameter, intended to prevent remote code execution, is overridden by untrusted serialized configuration data in a nested code path. Specifically, when loading a LightGlue model using `AutoModel.from_pretrained()` with `trust_remote_code=False`, the `LightGlueConfig` reads the `trust_remote_code` value from the untrusted `config.json` file and propagates it into nested `AutoConfig.from_pretrained()` calls. This results in the execution of attacker-provided Python modules, even when the victim explicitly disables remote code execution. The vulnerability poses a high risk for environments such as API inference servers, research notebooks, CI/CD pipelines, and model evaluation workers, potentially leading to credential theft, lateral movement, or persistence/backdoor deployment.",
-      "refs": "https://github.com/huggingface/transformers/commit/676559d5022b74aaa0cee1cee0842b7f27c5320e\nhttps://huntr.com/bounties/ceb3ce1a-4c45-497a-b25e-cb9a7685e619\nhttps://huntr.com/bounties/ceb3ce1a-4c45-497a-b25e-cb9a7685e619",
-      "source": "NVD",
-      "time": "2026-06-04 02:40:58"
-    },
-    {
-      "cve_id": "CVE-2022-49042",
-      "title": "高危漏洞: CVE-2022-49042 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-03 22:16:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An inclusion of functionality from untrusted control sphere vulnerability in MinGW DLL component in Synology Hyper Backup Explorer before 3.0.1-0156 allows local users to execute arbitrary code via unspecified vectors.",
-      "refs": "https://www.synology.com/en-global/releaseNote/HyperBackupExplorer",
-      "source": "NVD",
-      "time": "2026-06-04 02:40:49"
-    },
-    {
-      "cve_id": "CVE-2022-49036",
-      "title": "高危漏洞: CVE-2022-49036 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-03 22:16:24",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An inclusion of functionality from untrusted control sphere vulnerability in OpenSSL configuration in Synology Active Backup for Business Recovery Media Creator before 2.5.0-2081 allows local users to execute arbitrary code via unspecified vectors.",
-      "refs": "https://www.synology.com/en-global/releaseNote/ActiveBackupRecoveryMediaCreator",
-      "source": "NVD",
-      "time": "2026-06-04 02:40:45"
     }
   ]
 }
