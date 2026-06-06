@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7537",
+      "title": "高危漏洞: CVE-2026-7537 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-06 12:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MDJM Event Management plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.7.8.3 via the mdjm_send_comm_email function. This is due to no file type, extension, or MIME type validation being performed on uploaded files. This makes it possible for authenticated attackers, with administrator-level access and above, to upload files that may be executable, which makes remote code execution possible.",
+      "refs": "https://github.com/d0n601/CVE-2026-7537\nhttps://plugins.trac.wordpress.org/browser/mobile-dj-manager/tags/1.7.8.2/includes/admin/communications/comms-functions.php#L241\nhttps://plugins.trac.wordpress.org/browser/mobile-dj-manager/tags/1.7.8.2/includes/admin/communications/comms-functions.php#L248",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:49"
+    },
+    {
+      "cve_id": "CVE-2026-8901",
+      "title": "高危漏洞: CVE-2026-8901 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-06 10:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Integration for Freshsales – Contact Form 7, WPForms, Elementor, Gravity Forms and More plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Form Submission Data in all versions up to, and including, 1.0.15 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload only executes when a CRM API call fails for the submitted form and an administrator subsequently views the error log details modal in the WordPress admin panel.",
+      "refs": "https://plugins.trac.wordpress.org/browser/crm-integration-freshworks-any-form/tags/1.0.14/assets/js/error-log.js#L84\nhttps://plugins.trac.wordpress.org/browser/crm-integration-freshworks-any-form/tags/1.0.14/src/db/fw-error-log.php#L75\nhttps://plugins.trac.wordpress.org/browser/crm-integration-freshworks-any-form/tags/1.0.14/src/forms/submit-action.php#L555",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:42"
+    },
+    {
+      "cve_id": "CVE-2026-8438",
+      "title": "高危漏洞: CVE-2026-8438 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-06 10:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The All-In-One Security (AIOS) – Security and Firewall plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to and including 5.4.7. This is due to insufficient input sanitization in the get_rest_route() function and missing output escaping in the column_default() method of the debug log list table. When the 'Disable REST API for non-logged in users' feature (aiowps_disallow_unauthorized_rest_requests) is enabled alongside debug logging (aiowps_enable_debug), an unauthenticated attacker can embed arbitrary HTML or JavaScript in the REST request path. The path is retrieved via urldecode($_SERVER['REQUEST_URI']), which decodes URL-encoded payloads into literal HTML characters. This decoded, unsanitized value is concatenated directly into a debug log message and stored in the database. When an administrator navigates to the AIOS Dashboard Debug Logs page, the column_default() method returns the raw database value without escaping, and the parent list table echoes it directly, causing JavaScript execution in the administrator's browser session. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute when an administrator views the debug log page, enabling nonce theft, privileged AJAX/REST actions, and potential full site compromise.",
+      "refs": "https://plugins.trac.wordpress.org/browser/all-in-one-wp-security-and-firewall/tags/5.4.6/admin/wp-security-list-debug.php#L43\nhttps://plugins.trac.wordpress.org/browser/all-in-one-wp-security-and-firewall/tags/5.4.6/classes/wp-security-debug-logger.php#L81\nhttps://plugins.trac.wordpress.org/browser/all-in-one-wp-security-and-firewall/tags/5.4.6/classes/wp-security-general-init-tasks.php#L887",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:37"
+    },
+    {
+      "cve_id": "CVE-2026-9290",
+      "title": "高危漏洞: CVE-2026-9290 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-06 08:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The WP User Manager – User Profile Builder & Membership plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 2.9.17 via the (profile template scope) function. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included.",
+      "refs": "https://github.com/WPUserManager/wp-user-manager/pull/445\nhttps://plugins.trac.wordpress.org/browser/wp-user-manager/tags/2.9.15/includes/functions.php#L955\nhttps://plugins.trac.wordpress.org/browser/wp-user-manager/tags/2.9.15/includes/permalinks.php#L133",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:30"
+    },
+    {
+      "cve_id": "CVE-2026-21031",
+      "title": "高危漏洞: CVE-2026-21031 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 19:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Improper authorization in AppBlock prior to SMR Jun-2026 Release 1 allows local attacker to launch arbitrary activity. User interaction is required for triggering this vulnerability.",
+      "refs": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=06",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:25"
+    },
+    {
+      "cve_id": "CVE-2026-21030",
+      "title": "高危漏洞: CVE-2026-21030 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 19:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper access control in MediaTek Audio HAL prior to SMR Jun-2026 Release 1 allows local attackers to trigger privileged functions.",
+      "refs": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=06",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:21"
+    },
+    {
+      "cve_id": "CVE-2026-21029",
+      "title": "高危漏洞: CVE-2026-21029 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-05 19:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper export of android application components in Galaxy Editing Service prior to SMR Jun-2026 Release 1 allows local attacker to execute privileged operations.",
+      "refs": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=06",
+      "source": "NVD",
+      "time": "2026-06-06 14:21:17"
+    },
+    {
       "cve_id": "CVE-2026-7654",
       "title": "高危漏洞: CVE-2026-7654 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496427030",
       "source": "NVD",
       "time": "2026-06-06 01:08:01"
-    },
-    {
-      "cve_id": "CVE-2026-11231",
-      "title": "高危漏洞: CVE-2026-11231 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-05 07:17:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Inappropriate implementation in Safe Browsing in Google Chrome on Mac prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via a malicious file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/495840862",
-      "source": "NVD",
-      "time": "2026-06-06 01:07:55"
-    },
-    {
-      "cve_id": "CVE-2026-11224",
-      "title": "高危漏洞: CVE-2026-11224 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Chromoting in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502461760",
-      "source": "NVD",
-      "time": "2026-06-06 01:07:48"
-    },
-    {
-      "cve_id": "CVE-2026-11218",
-      "title": "高危漏洞: CVE-2026-11218 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-05 07:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Inappropriate implementation in PlatformIntegration in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a malicious file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/476862276",
-      "source": "NVD",
-      "time": "2026-06-06 01:07:42"
-    },
-    {
-      "cve_id": "CVE-2026-11213",
-      "title": "高危漏洞: CVE-2026-11213 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Reading Mode in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/507382702",
-      "source": "NVD",
-      "time": "2026-06-06 01:07:36"
-    },
-    {
-      "cve_id": "CVE-2026-11207",
-      "title": "高危漏洞: CVE-2026-11207 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Autofill in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via malicious network traffic. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/506127858",
-      "source": "NVD",
-      "time": "2026-06-06 01:07:30"
-    },
-    {
-      "cve_id": "CVE-2026-50264",
-      "title": "高危漏洞: CVE-2026-50264 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An out-of-bounds write flaw was found in the X.Org X server and Xwayland in DRIGetBuffers/DRIGetBuffersWithFormat. A client that requests multiple DRI2BufferBackLeft attachments and one DRI2BufferFrontLeft can trigger an out-of-bounds heap write. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50264\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485389\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/339c279514326134b0878fc23ce6e9520440ce7f",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:54"
-    },
-    {
-      "cve_id": "CVE-2026-50261",
-      "title": "高危漏洞: CVE-2026-50261 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50261\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485386\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/bdd7bf57af208b1ddf57d4683d67104443b44812",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:43"
     }
   ]
 }
