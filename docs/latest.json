@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-11437",
+      "title": "高危漏洞: CVE-2026-11437 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 01:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in perfree go-fastdfs-web up to 1.3.7. Affected is the function checkServer of the file /install/checkServer of the component Installation Endpoint. Executing a manipulation can lead to server-side request forgery. The attack can be executed remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-11437\nhttps://vuldb.com/submit/822726\nhttps://vuldb.com/vuln/369017",
+      "source": "NVD",
+      "time": "2026-06-07 03:04:47"
+    },
+    {
+      "cve_id": "CVE-2026-11435",
+      "title": "高危漏洞: CVE-2026-11435 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 00:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in Jinher OA 1.0. This affects an unknown function of the file nextselectplan.aspx. Such manipulation of the argument httpOID leads to sql injection. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Mr-Elymas/cve_submit/issues/1\nhttps://vuldb.com/cve/CVE-2026-11435\nhttps://vuldb.com/submit/822114",
+      "source": "NVD",
+      "time": "2026-06-07 03:04:42"
+    },
+    {
+      "cve_id": "CVE-2026-11413",
+      "title": "高危漏洞: CVE-2026-11413 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-06 22:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in JingDong JD Cloud Box AX6600 4.5.3.r4546. The impacted element is the function set_macfilter of the file /sbin/jdcweb_rpc. The manipulation leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "http://cdn2.v50to.cc/JDcloud-AX6600_overflow.zip\nhttps://vuldb.com/cve/CVE-2026-11413\nhttps://vuldb.com/submit/820025",
+      "source": "NVD",
+      "time": "2026-06-07 03:04:36"
+    },
+    {
       "cve_id": "CVE-2026-9851",
       "title": "高危漏洞: CVE-2026-9851 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/tittuvarghese/CollegeManagementSystem/\nhttps://github.com/tittuvarghese/CollegeManagementSystem/issues/3\nhttps://vuldb.com/cve/CVE-2026-11334",
       "source": "NVD",
       "time": "2026-06-06 01:08:21"
-    },
-    {
-      "cve_id": "CVE-2026-50234",
-      "title": "高危漏洞: CVE-2026-50234 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-05 22:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Lyrion Music Server 9.2.0 contains a path traversal vulnerability that allows unauthenticated attackers to read arbitrary files by exploiting directory traversal in the web server context. Attackers can manipulate file path parameters to access sensitive files outside the intended directory structure.",
-      "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-path-traversal-file-read\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5992.php",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:16"
-    },
-    {
-      "cve_id": "CVE-2026-50232",
-      "title": "高危漏洞: CVE-2026-50232 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-05 22:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Lyrion Music Server 9.2.0 contains a stored cross-site scripting vulnerability that allows attackers to inject malicious scripts through media file metadata tags like GENRE, ARTIST, and ALBUM. Attackers can craft files with XSS payloads in metadata tags that execute in the web interface when users view track information or play files, enabling access to management functions and settings disclosure.",
-      "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-stored-xss-via-metadata-tags\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5990.php",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:12"
-    },
-    {
-      "cve_id": "CVE-2026-50231",
-      "title": "高危漏洞: CVE-2026-50231 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-05 22:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Lyrion Music Server 9.2.0 contains an unauthenticated stored cross-site scripting vulnerability in the log viewer that allows attackers to inject malicious scripts by exploiting unescaped template variables. Attackers can inject XSS payloads through search, lines, and path query parameters or by crafting values that get logged such as URLs, User-Agent headers, stream titles, or player names to execute arbitrary scripts in users' browsers.",
-      "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-unauthenticated-stored-xss-via-server-log\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5989.php",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:06"
     }
   ]
 }
