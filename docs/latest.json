@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9851",
+      "title": "高危漏洞: CVE-2026-9851 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-06 13:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Booking Package plugin for WordPress is vulnerable to Privilege Escalation via Account Takeover in versions up to, and including, 1.7.16. This is due to a missing capability check on the 'updateUser' branch of the package_app_action AJAX endpoint, where the handler only validates a nonce and the dispatcher invokes Schedule::updateUser() with the $administrator argument hard-coded to 1, bypassing the only owner-restriction check inside that function and allowing the target user to be determined solely by attacker-supplied input passed directly to wp_update_user(). This makes it possible for authenticated attackers, with Editor-level access and above, to change the email address and password of any account, including Administrator accounts, resulting in a full site takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/booking-package/tags/1.7.13/index.php#L4416\nhttps://plugins.trac.wordpress.org/browser/booking-package/tags/1.7.13/index.php#L4477\nhttps://plugins.trac.wordpress.org/browser/booking-package/tags/1.7.13/lib/Schedule.php#L868",
+      "source": "NVD",
+      "time": "2026-06-06 18:49:02"
+    },
+    {
       "cve_id": "CVE-2026-7537",
       "title": "高危漏洞: CVE-2026-7537 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1088,17 +1099,6 @@
       "refs": "https://www.vulncheck.com/advisories/lyrion-music-server-unauthenticated-stored-xss-via-server-log\nhttps://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5989.php",
       "source": "NVD",
       "time": "2026-06-06 01:08:06"
-    },
-    {
-      "cve_id": "CVE-2026-11236",
-      "title": "高危漏洞: CVE-2026-11236 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 07:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient policy enforcement in Web Bluetooth in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/496427030",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:01"
     }
   ]
 }
