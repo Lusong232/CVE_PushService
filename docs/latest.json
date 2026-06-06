@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7654",
+      "title": "高危漏洞: CVE-2026-7654 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-06 07:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Admin Columns plugin for WordPress is vulnerable to PHP Object Injection leading to Remote Code Execution in versions up to and including 7.0.18. This is due to the use of `unserialize()` without an `allowed_classes` restriction in the `IdsToCollection::get_ids_from_string()` function, which processes attacker-controlled post meta values without proper validation. This makes it possible for authenticated attackers with Contributor-level access and above to inject a serialized PHP object into a post's custom meta field and trigger arbitrary code execution by exploiting a bundled POP gadget chain, resulting in remote code execution as the web server user.",
+      "refs": "https://plugins.trac.wordpress.org/browser/codepress-admin-columns/tags/7.0.16/classes/Formatter/IdsToCollection.php#L42\nhttps://plugins.trac.wordpress.org/browser/codepress-admin-columns/tags/7.0.16/classes/Formatter/Meta.php#L34\nhttps://plugins.trac.wordpress.org/browser/codepress-admin-columns/tags/7.0.16/vendor/laravel/serializable-closure/src/Serializers/Native.php#L148",
+      "source": "NVD",
+      "time": "2026-06-06 10:09:10"
+    },
+    {
+      "cve_id": "CVE-2026-11416",
+      "title": "高危漏洞: CVE-2026-11416 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-06 06:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "MoviePilot contains a path traversal vulnerability in the AliPan, U115, and Rclone cloud storage download handlers where the local destination path is constructed by concatenating the configured download directory with a filename taken directly from remote cloud API metadata without basename normalization or path validation. An attacker who controls a filename returned by a remote cloud storage API can include traversal sequences ../ in the filename to cause downloaded content to be written outside the configured download directory, potentially overwriting arbitrary files including configuration or plugin files reachable by the application process.",
+      "refs": "https://github.com/jxxghp/MoviePilot\nhttps://github.com/jxxghp/MoviePilot/commit/a0b3800f6bf4857bf4f889a63d44350eb8380f28\nhttps://github.com/jxxghp/MoviePilot/issues/5894",
+      "source": "NVD",
+      "time": "2026-06-06 10:09:05"
+    },
+    {
+      "cve_id": "CVE-2026-11422",
+      "title": "高危漏洞: CVE-2026-11422 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-06 05:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Markdown Preview Enhanced 0.8.x with crossnote engine 0.9.28 contains a code injection vulnerability in the WaveDrom rendering pipeline that allows attackers to execute arbitrary JavaScript by embedding malicious content in a wavedrom fenced code block within a crafted Markdown document. Attackers can exploit the unsanitized passing of wavedrom block content to window.eval() in the VS Code webview context to abuse the extension's message passing and invoke arbitrary file writes on the local filesystem.",
+      "refs": "https://github.com/shd101wyy/crossnote/commit/5588ca2121c3da43fe331575dc5cf4ef347b91ee\nhttps://github.com/shd101wyy/vscode-markdown-preview-enhanced/commit/dcd80281c986293b93d9f1af34ced64dcb230c77\nhttps://github.com/shd101wyy/vscode-markdown-preview-enhanced/issues/2315",
+      "source": "NVD",
+      "time": "2026-06-06 10:09:00"
+    },
+    {
+      "cve_id": "CVE-2026-46493",
+      "title": "高危漏洞: CVE-2026-46493 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-06 04:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "HAX CMS helps manage microsite universe with PHP or NodeJs backends. Versions prior to 26.0.1 use `uniqid` for generating salts, which is unsuitable. Version 26.0.1 fixes the issue.",
+      "refs": "https://github.com/haxtheweb/haxcms-php/blob/8b8845b16e521a326929471e16903f60c6638e8f/install.php#L188-L191\nhttps://github.com/haxtheweb/haxcms-php/commit/4b83cbdf8782c75bdcdd4f57ba72fba1c6dac147\nhttps://github.com/haxtheweb/issues/security/advisories/GHSA-xg43-xm47-74cp",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:54"
+    },
+    {
+      "cve_id": "CVE-2026-45758",
+      "title": "高危漏洞: CVE-2026-45758 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-06 04:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Guardrails AI is a Python framework that helps build AI applications. On May 11, 2026 at approximately 6:00 PM Pacific, an attacker published a malicious version of `guardrails-ai` (0.10.1) to PyPI. Aany user who installed `guardrails-ai==0.10.1` from PyPI on May 11, 2026 may be affected. Security researchers identified the malicious package within approximately 2 hours of publication, and PyPI quarantined the repository. Based on our telemetry, Guardrails AI maintainers have observed no requests to Guardrails AI infrastructure originating from the malicious 0.10.1 version, and a review of system and access logs has produced no evidence of user data exfiltration through their systems. Users should upgrade to version 0.10.2 or downgrade to version 0.10.0, both of which are unaffected. Those who installed version 0.10.1 should rotate any credentials accessible from their machine (GitHub PATs, cloud provider keys, package registry tokens, API keys) and audit their GitHub account for unauthorized workflows or repositories.",
+      "refs": "https://github.com/guardrails-ai/guardrails/blob/main/SECURITY_ADVISORY.md\nhttps://github.com/guardrails-ai/guardrails/issues/1473\nhttps://github.com/guardrails-ai/guardrails/security/advisories/GHSA-xmpw-2vmm-p4p6",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:50"
+    },
+    {
+      "cve_id": "CVE-2026-45300",
+      "title": "高危漏洞: CVE-2026-45300 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-06-06 04:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Versions on the 2.x branch prior to 2.15.0 and the 3.x branch prior to 3.0.10 leak `Cookie` headers to cross-origin redirect targets. When following a redirect to a different origin, the `propagatedHeaders()` method in `Redirect30xInterceptor.java` strips `Authorization` and `Proxy-Authorization` headers but does not strip the `Cookie` header, causing session cookies and other sensitive cookie values to be sent to attacker-controlled servers. Versions 2.15.0 and 3.0.10 patch the issue.",
+      "refs": "https://github.com/AsyncHttpClient/async-http-client/commit/3b0e3e9e\nhttps://github.com/AsyncHttpClient/async-http-client/releases/tag/async-http-client-project-3.0.10\nhttps://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-fmxf-pm6p-7xgm",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:42"
+    },
+    {
+      "cve_id": "CVE-2026-11401",
+      "title": "高危漏洞: CVE-2026-11401 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-06 04:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An untrusted search path issue in the GlobalDatabasePlugin in the AWS Advanced Go Wrapper for Amazon Aurora PostgreSQL will allow a remote authenticated low-privilege actor to escalate privileges to those of another Amazon RDS user, including rds_superuser, via a crafted function created by the actor that runs when that user connects to the cluster through the affected wrapper.\n\n\n\nTo remediate this issue, users should upgrade to the AWS Advanced Go Wrapper release 2026-05-26",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-039-aws/\nhttps://github.com/aws/aws-advanced-go-wrapper/releases/tag/release-2026-05-26\nhttps://github.com/aws/aws-advanced-go-wrapper/security/advisories/GHSA-r236-5pc3-3qcp",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:37"
+    },
+    {
+      "cve_id": "CVE-2026-11400",
+      "title": "高危漏洞: CVE-2026-11400 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-06 04:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An untrusted search path issue in the GlobalDatabasePlugin in the AWS Advanced JDBC Wrapper for Amazon Aurora PostgreSQL will allow a remote authenticated low-privilege actor to escalate privileges to those of another Amazon RDS user, including rds_superuser, via a crafted function created by the actor that runs when that user connects to the cluster through an affected wrapper.\n\n\n\nTo remediate this issue, users should upgrade to AWS Advanced JDBC Wrapper version 4.0.1.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-039-aws/\nhttps://github.com/aws/aws-advanced-jdbc-wrapper/releases/tag/4.0.1\nhttps://www.cve.org/cverecord?id=CVE-2026-11400",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:31"
+    },
+    {
+      "cve_id": "CVE-2026-7763",
+      "title": "高危漏洞: CVE-2026-7763 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-05 10:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A heap-based buffer overflow vulnerability in the morse.ko HaLow Wi-Fi kernel driver in Morse Micro HaLowLink 2 software versions prior to 2.11.13 allows an unauthenticated attacker within radio range to cause a Denial of Service (kernel panic) or potentially achieve Remote Code Execution via a crafted 802.11ah beacon frame containing a malformed Traffic Indication Map (TIM) Information Element. The function morse_page_slicing_process_tim_element() in page_slicing.c derives the TIM bitmap length directly from a received IE field without validating it against the fixed-size destination buffer before passing it to memset and memcpy operations, allowing up to 252 bytes of attacker-controlled data to be written beyond the buffer boundary. Because beacons are broadcast frames processed during passive scanning, no authentication, association, or user interaction is required.",
+      "refs": "https://www.morsemicro.com/security-advisories/MM-SA-2026-001",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:24"
+    },
+    {
+      "cve_id": "CVE-2026-7762",
+      "title": "高危漏洞: CVE-2026-7762 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-05 10:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A heap-based buffer overflow vulnerability in the dot11ah.ko HaLow Wi-Fi kernel driver in Morse Micro HaLowLink 2 software versions prior to 2.11.13 allows an unauthenticated attacker within radio range to cause a Denial of Service (kernel panic) or potentially achieve Remote Code Execution via a crafted 802.11ah beacon or probe response frame containing a malformed S1G Capabilities Information Element (IE element ID 0xD9). The function morse_dot11ah_find_s1g_caps_for_bssid() uses the IE length field directly as the size argument to memcpy without validating it against the 15-byte destination buffer. An attacker can supply up to 255 bytes, causing an overflow of up to 240 bytes of attacker-controlled data into adjacent kernel heap memory. The vulnerability is triggerable during normal scanning without authentication, association, or user interaction.",
+      "refs": "https://www.morsemicro.com/security-advisories/MM-SA-2026-002",
+      "source": "NVD",
+      "time": "2026-06-06 10:08:19"
+    },
+    {
       "cve_id": "CVE-2026-5415",
       "title": "高危漏洞: CVE-2026-5415 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -989,116 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-50261\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485386\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/bdd7bf57af208b1ddf57d4683d67104443b44812",
       "source": "NVD",
       "time": "2026-06-05 22:27:43"
-    },
-    {
-      "cve_id": "CVE-2026-50260",
-      "title": "高危漏洞: CVE-2026-50260 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50260\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485385\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/f5abfb61994471023d8c6470428c8e30c411cc0b",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:38"
-    },
-    {
-      "cve_id": "CVE-2026-50259",
-      "title": "高危漏洞: CVE-2026-50259 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a stack buffer overflow. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50259\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485384\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/867b59b33bee669cb412f1314e47c52eacf6e00b",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:33"
-    },
-    {
-      "cve_id": "CVE-2026-50258",
-      "title": "高危漏洞: CVE-2026-50258 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key types to excessive shift levels and trigger stack overflows. This is caused by an incomplete fix of CVE-2025-26597. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50258\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485383\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/543e108516428fc8c3bea91d6563ad266f9a801e",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:28"
-    },
-    {
-      "cve_id": "CVE-2026-50257",
-      "title": "高危漏洞: CVE-2026-50257 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:38",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a second X connection destroys the fence, causing the use-after-free. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50257\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485382\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/f5abfb61994471023d8c6470428c8e30c411cc0b",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:23"
-    },
-    {
-      "cve_id": "CVE-2026-50256",
-      "title": "高危漏洞: CVE-2026-50256 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-05 20:16:38",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but libXfont2's alias target name length is 1024 bytes. A font alias name between 257 and 1023 bytes causes the X server to copy that name into the undersized stack buffer without further checks. This may be used to crash the server, or for privilege escalation if the X server runs as root.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50256\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485380\nhttps://gitlab.freedesktop.org/xorg/xserver/-/commit/bb5158f962dc935e58ef8b4b5fcb31be201a6e07",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:18"
-    },
-    {
-      "cve_id": "CVE-2026-50265",
-      "title": "高危漏洞: CVE-2026-50265 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-06-05 19:16:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in libinput. A local attacker with access to /dev/uinput can inject arbitrary udev properties through the libinput-device-group helper. This injection can lead to root code execution, for example, by exploiting REMOVE_CMD properties that are executed when a device is removed. This vulnerability allows an attacker to gain elevated privileges on the system.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-50265\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2485390\nhttps://gitlab.freedesktop.org/libinput/libinput/-/work_items/1296",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:12"
-    },
-    {
-      "cve_id": "CVE-2026-11256",
-      "title": "高危漏洞: CVE-2026-11256 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-05 08:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Integer overflow in GPU in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498856565",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:07"
-    },
-    {
-      "cve_id": "CVE-2026-11255",
-      "title": "高危漏洞: CVE-2026-11255 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-05 08:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Insufficient validation of untrusted input in Storage Access API in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498417152",
-      "source": "NVD",
-      "time": "2026-06-05 22:27:03"
-    },
-    {
-      "cve_id": "CVE-2026-11250",
-      "title": "高危漏洞: CVE-2026-11250 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 08:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in DevTools in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498281224",
-      "source": "NVD",
-      "time": "2026-06-05 22:26:59"
-    },
-    {
-      "cve_id": "CVE-2026-11248",
-      "title": "高危漏洞: CVE-2026-11248 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 08:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Google Lens in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/497946941",
-      "source": "NVD",
-      "time": "2026-06-05 22:26:52"
     }
   ]
 }
