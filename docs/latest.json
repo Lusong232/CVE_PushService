@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-11452",
+      "title": "高危漏洞: CVE-2026-11452 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 12:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function FUN_0042e200 of the file /cgi-bin/glc of the component SET_USER_PWD Handler. The manipulation of the argument Password leads to command injection. The attack can be initiated remotely. Upgrading to version 4.8.1 is able to address this issue. The affected component should be upgraded. The vendor explains: \" The current code escapes single quotes in the password parameter and handles it inside a shell single‑quote context. The payloads in the report, which rely on $() or backticks to trigger command substitution, are not executed under the current code path. We tested on a GL‑MT3000 device running firmware 4.8.1 using similar payloads, and no command‑execution marker file was created.\"",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/nas_set_user_pwd_glc_rce/Readme.md\nhttps://vuldb.com/cve/CVE-2026-11452\nhttps://vuldb.com/submit/826378",
+      "source": "NVD",
+      "time": "2026-06-07 14:58:55"
+    },
+    {
+      "cve_id": "CVE-2026-11451",
+      "title": "高危漏洞: CVE-2026-11451 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 12:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in GL.iNet GL-MT3000 4.4.5. This impacts the function snprintf of the file /cgi-bin/glc of the component FTP Protocol Handler. Executing a manipulation of the argument media_dir can lead to command injection. It is possible to launch the attack remotely. Upgrading to version 4.8.1 will fix this issue. You should upgrade the affected component. The vendor explains: \"In version 4.8.1, before writing media_dir to the FTP configuration command, the code escapes single quotes using escape_single_quote(). The payloads in the report—which rely on closing a single quote, appending commands with a semicolon, and commenting out the tail with #—cannot escape execution under the current code path. We also verified this on a GL‑MT3000 device running firmware version 4.8.1 using similar payloads calling the /NAS_API_SET_PROTO_CONFIG interface. Although the interface returned success, the marker file intended to prove command execution was not created; the payload was written into /etc/vsftpd.conf only as ordinary configuration content and did not trigger any shell command execution. Therefore, with the current firmware version and default runtime environment, we could not reproduce the claimed “unauthorized command injection in set_proto_config”.\"",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/nas_proto_media_dir_glc_rce/Readme.md\nhttps://vuldb.com/cve/CVE-2026-11451\nhttps://vuldb.com/submit/825563",
+      "source": "NVD",
+      "time": "2026-06-07 14:58:47"
+    },
+    {
+      "cve_id": "CVE-2026-11450",
+      "title": "高危漏洞: CVE-2026-11450 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 11:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in GL.iNet GL-MT3000 4.4.5. This affects the function dlopen in the library /usr/lib/oui-httpd/rpc/ of the component Path Normalization Handler. Performing a manipulation of the argument dev_name results in command injection. It is possible to initiate the attack remotely. Upgrading to version 4.7 mitigates this issue. It is advisable to upgrade the affected component. The vendor confirms: \" From version 4.7 onward, we have enabled method‑level validation at the HTTP /rpc layer. nas‑web.eject_disk is no longer in the whitelist of allowed methods. Consequently, directly calling eject_disk through the default /rpc endpoint returns Invalid params, preventing entry into subsequent dangerous functions and blocking the remote exploit chain described in the report.\"",
+      "refs": "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/nas_eject_disk_do1_glc_rce\nhttps://vuldb.com/cve/CVE-2026-11450\nhttps://vuldb.com/submit/825536",
+      "source": "NVD",
+      "time": "2026-06-07 14:58:36"
+    },
+    {
       "cve_id": "CVE-2026-26422",
       "title": "高危漏洞: CVE-2026-26422 (CVSS 8.4)",
       "cvss_score": 8.4,
@@ -1066,39 +1099,6 @@
       "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
       "source": "NVD",
       "time": "2026-06-06 01:08:42"
-    },
-    {
-      "cve_id": "CVE-2026-6208",
-      "title": "高危漏洞: CVE-2026-6208 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-05 23:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Authorization bypass through User-Controlled key vulnerability in HAVELSAN Inc. Geographic Tracking System allows Exploitation of Trusted Identifiers.\n\nThis issue affects Geographic Tracking System: before v0.0.2.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:38"
-    },
-    {
-      "cve_id": "CVE-2026-6207",
-      "title": "高危漏洞: CVE-2026-6207 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-05 23:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Observable response discrepancy vulnerability in HAVELSAN Inc. Geographic Tracking System allows System Footprinting.\n\nThis issue affects Geographic Tracking System: before v0.0.2.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:34"
-    },
-    {
-      "cve_id": "CVE-2026-48095",
-      "title": "高危漏洞: CVE-2026-48095 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 23:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "7-Zip is a file archiver with a high compression ratio. Versions 26.00 and prior contain a heap buffer overflow vulnerability caused by an under-allocation in the NTFS compressed stream buffer (GetCuSize shift UB), potentially allowing attackers to cause arbitrary code execution or application crashes. CInStream::GetCuSize() in the NTFS handler computes the compression-unit buffer size as (UInt32)1 << (BlockSizeLog + CompressionUnit), and a crafted image with ClusterSizeLog >= 28 and CompressionUnit == 4 drives the exponent to 32, which is undefined behavior and collapses on x86/x64 so _inBuf is allocated as 1 byte. ReadStream_FALSE then writes up to 256 MB of attacker-controlled data into that 1-byte buffer in 64 KB iterations, and because the CInStream object sits only 304 bytes after _inBuf, its vtable pointer is overwritten and the next dispatched call achieves a vtable hijack. On 32-bit builds the overflow is unconditionally reached; on 64-bit it requires the parallel 8 GB _outBuf allocation to succeed, otherwise failing closed to denial of service. The NTFS handler is enabled by default in stock 7z.dll and, via signature-based fallback matching \"NTFS    \" at offset 3, will open a crafted image regardless of file extension during extraction or testing. Version 26.01 fixes the issue.",
-      "refs": "https://securitylab.github.com/advisories/GHSL-2026-140_7-Zip/\nhttps://sourceforge.net/p/sevenzip/discussion/45797/thread/555e132ba4",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:29"
     }
   ]
 }
