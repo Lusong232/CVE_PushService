@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-11457",
+      "title": "高危漏洞: CVE-2026-11457 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 17:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in erzhongxmu JeeWMS up to 141740afb2ba14d441c82a833d0a418d07ca2d69. This vulnerability affects unknown code of the file /base-boot/jmreport/testConnection of the component JimuReport test-connection Endpoint. Performing a manipulation of the argument dbType/dbDriver/dbUrl/dbUsername/dbPassword results in injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/0d000721999/evc1/issues/1\nhttps://vuldb.com/cve/CVE-2026-11457\nhttps://vuldb.com/submit/828509",
+      "source": "NVD",
+      "time": "2026-06-07 19:00:05"
+    },
+    {
+      "cve_id": "CVE-2026-11456",
+      "title": "高危漏洞: CVE-2026-11456 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-07 17:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Chanjet CRM 1.0. This affects an unknown part of the file /tools/jxf_dump_systable.php of the component HTTP GET Request Handler. Such manipulation of the argument gblOrgID leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/jikdarren/67ba9fdd2a8b619fc9a370102c317971\nhttps://vuldb.com/cve/CVE-2026-11456\nhttps://vuldb.com/submit/828375",
+      "source": "NVD",
+      "time": "2026-06-07 18:59:58"
+    },
+    {
       "cve_id": "CVE-2026-11452",
       "title": "高危漏洞: CVE-2026-11452 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/513231432",
       "source": "NVD",
       "time": "2026-06-06 03:41:33"
-    },
-    {
-      "cve_id": "CVE-2026-10892",
-      "title": "高危漏洞: CVE-2026-10892 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in GPU in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/513165325",
-      "source": "NVD",
-      "time": "2026-06-06 03:41:29"
-    },
-    {
-      "cve_id": "CVE-2026-6209",
-      "title": "高危漏洞: CVE-2026-6209 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-05 23:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Improper Access Control, Missing Authorization vulnerability in HAVELSAN Inc. Geographic Tracking System allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Geographic Tracking System: before v0.0.2.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0325",
-      "source": "NVD",
-      "time": "2026-06-06 01:08:42"
     }
   ]
 }
