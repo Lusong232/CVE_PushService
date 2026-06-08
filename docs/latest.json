@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-11517",
+      "title": "高危漏洞: CVE-2026-11517 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-08 23:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in UTT HiPER 2610G up to 3.0.0-171107. This impacts the function strcpy of the file /goform/formConfigDnsFilterGlobal. Executing a manipulation of the argument GroupName can lead to buffer overflow. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/HungryGoogle/log_attack/tree/main/index3\nhttps://vuldb.com/cve/CVE-2026-11517\nhttps://vuldb.com/submit/836278",
+      "source": "NVD",
+      "time": "2026-06-09 01:43:34"
+    },
+    {
+      "cve_id": "CVE-2026-11577",
+      "title": "高危漏洞: CVE-2026-11577 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-08 21:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in Keycloak. A limited administrator can exploit an improper access control vulnerability in the POST /admin/realms/{realm}/partialImport endpoint. This allows them to bypass Fine-Grained Admin Permissions (FGAP) and escalate their privileges to a full realm administrator by importing users with realm-admin role mappings.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-11577\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2459993\nhttps://github.com/keycloak/keycloak/issues/9387",
+      "source": "NVD",
+      "time": "2026-06-09 01:43:27"
+    },
+    {
+      "cve_id": "CVE-2026-50752",
+      "title": "高危漏洞: CVE-2026-50752 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-06-08 20:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "A weakness in the certificate validation logic of the deprecated IKEv1 key exchange may allow an unauthenticated attacker positioned as a man-in-the-middle to bypass certificate validation in VPN site-to-site connections that use certificate-based authentication. Successful exploitation could allow interception or modification of traffic traversing the VPN tunnel.",
+      "refs": "https://support.checkpoint.com/results/sk/sk185035",
+      "source": "NVD",
+      "time": "2026-06-09 01:43:20"
+    },
+    {
+      "cve_id": "CVE-2026-11504",
+      "title": "高危漏洞: CVE-2026-11504 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-08 20:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tenda CX12L 16.03.53.12. The impacted element is the function setSchedWifi of the file /goform/openSchedWifi of the component Wi-Fi Schedule Configuration Endpoint. Performing a manipulation of the argument schedStartTime/schedEndTime results in stack-based buffer overflow. The attack may be initiated remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/cve-a/moist/issues/2\nhttps://vuldb.com/cve/CVE-2026-11504\nhttps://vuldb.com/submit/835649",
+      "source": "NVD",
+      "time": "2026-06-09 01:43:10"
+    },
+    {
       "cve_id": "CVE-2026-11503",
       "title": "高危漏洞: CVE-2026-11503 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499238195",
       "source": "NVD",
       "time": "2026-06-06 06:09:29"
-    },
-    {
-      "cve_id": "CVE-2026-11071",
-      "title": "高危漏洞: CVE-2026-11071 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Base in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499227659",
-      "source": "NVD",
-      "time": "2026-06-06 06:09:25"
-    },
-    {
-      "cve_id": "CVE-2026-11070",
-      "title": "高危漏洞: CVE-2026-11070 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the network process to potentially perform a sandbox escape via malicious network traffic. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499225384",
-      "source": "NVD",
-      "time": "2026-06-06 06:09:20"
-    },
-    {
-      "cve_id": "CVE-2026-11066",
-      "title": "高危漏洞: CVE-2026-11066 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499124128",
-      "source": "NVD",
-      "time": "2026-06-06 06:09:16"
-    },
-    {
-      "cve_id": "CVE-2026-11065",
-      "title": "高危漏洞: CVE-2026-11065 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499093536",
-      "source": "NVD",
-      "time": "2026-06-06 06:09:12"
     }
   ]
 }
