@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-11503",
+      "title": "高危漏洞: CVE-2026-11503 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-08 18:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Tenda CX12L 16.03.53.12. The affected element is the function form_fast_setting_wifi_set of the file /goform/fast_setting_wifi_set of the component Wi-Fi Configuration Endpoint. Such manipulation of the argument ssid leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/cve-a/moist/issues/1\nhttps://vuldb.com/cve/CVE-2026-11503\nhttps://vuldb.com/submit/835648",
+      "source": "NVD",
+      "time": "2026-06-08 20:59:13"
+    },
+    {
+      "cve_id": "CVE-2026-11501",
+      "title": "高危漏洞: CVE-2026-11501 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 18:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in SourceCodester Hospitals Patient Records Management System 1.0. This issue affects some unknown processing of the file /classes/Master.php?f=save_patient. The manipulation of the argument ID results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/showmesvg/horized/issues/1\nhttps://vuldb.com/cve/CVE-2026-11501\nhttps://vuldb.com/submit/835506",
+      "source": "NVD",
+      "time": "2026-06-08 20:59:09"
+    },
+    {
+      "cve_id": "CVE-2026-41724",
+      "title": "高危漏洞: CVE-2026-41724 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-08 17:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "VMware Cloud Foundation Operations contains multiple stored cross-site scripting vulnerabilities.A malicious actor with privileges to create policies, views or text-widgets may be able to inject scripts to perform administrative actions in VMware Cloud Foundation Operations.",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37513",
+      "source": "NVD",
+      "time": "2026-06-08 20:59:00"
+    },
+    {
+      "cve_id": "CVE-2026-41723",
+      "title": "高危漏洞: CVE-2026-41723 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-08 17:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "VMware Cloud Foundation Operations contains multiple stored cross-site scripting vulnerabilities.A malicious actor with privileges to create policies, views or text-widgets may be able to inject scripts to perform administrative actions in VMware Cloud Foundation Operations.",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37513",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:55"
+    },
+    {
+      "cve_id": "CVE-2026-41722",
+      "title": "高危漏洞: CVE-2026-41722 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-08 17:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "VMware Cloud Foundation Operations contains multiple stored cross-site scripting vulnerabilities.A malicious actor with privileges to create policies, views or text-widgets may be able to inject scripts to perform administrative actions in VMware Cloud Foundation Operations.",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37513",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:50"
+    },
+    {
+      "cve_id": "CVE-2026-3238",
+      "title": "高危漏洞: CVE-2026-3238 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-08 17:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in Samba’s WINS server component when running as an Active Directory Domain Controller. The WINS protocol handlers for certain request types did not properly validate incoming packets, allowing an unauthenticated remote attacker to trigger a NULL pointer dereference and crash the WINS service using specially crafted UDP packets.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-3238\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2486176\nhttps://www.samba.org/samba/security/CVE-2026-3238.html",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:42"
+    },
+    {
+      "cve_id": "CVE-2026-11499",
+      "title": "高危漏洞: CVE-2026-11499 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-08 17:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Tenda HG7HG9 and HG10 300001138_en_xpon. This affects the function formDOMAINBLK of the file /boaform/formDOMAINBLK. Executing a manipulation of the argument blkDomain can lead to stack-based buffer overflow. The attack may be performed from remote.",
+      "refs": "https://github.com/ssaaaa1234/Tenda-HG10-formDOMAINBLK-stack-overflow-2\nhttps://vuldb.com/cve/CVE-2026-11499\nhttps://vuldb.com/submit/834888",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:36"
+    },
+    {
+      "cve_id": "CVE-2026-11498",
+      "title": "高危漏洞: CVE-2026-11498 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-08 17:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Tenda HG7HG9 and HG10 300001138_en_xpon. Affected by this issue is the function asp_voip_OtherSet of the file /boaform/voip_other_set of the component Web Management Interface. Performing a manipulation of the argument funckey_transfer results in stack-based buffer overflow. The attack is possible to be carried out remotely.",
+      "refs": "https://github.com/ssaaaa1234/tenda-hg10-voip-other-set-stack-overflow\nhttps://vuldb.com/cve/CVE-2026-11498\nhttps://vuldb.com/submit/834887",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:29"
+    },
+    {
+      "cve_id": "CVE-2026-11490",
+      "title": "高危漏洞: CVE-2026-11490 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in code-projects Online Music Site 1.0. This issue affects some unknown processing of the file /Frontend/Search.php. This manipulation of the argument Category causes sql injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://code-projects.org/\nhttps://github.com/xiaobbai/CVE1/issues/1\nhttps://vuldb.com/cve/CVE-2026-11490",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:24"
+    },
+    {
+      "cve_id": "CVE-2026-11489",
+      "title": "高危漏洞: CVE-2026-11489 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 13:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in code-projects Online Music Site 1.0. This vulnerability affects unknown code of the file /Administrator/PHP/AdminDeleteAlbum.php. The manipulation of the argument ID results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/11snk/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-11489",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:19"
+    },
+    {
+      "cve_id": "CVE-2026-11488",
+      "title": "高危漏洞: CVE-2026-11488 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 13:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in code-projects Simple Flight Ticket Booking System 1.0. This affects an unknown part of the file checkUser.php of the component POST Parameter Handler. The manipulation of the argument Username leads to sql injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/K1venn/cves/issues/1\nhttps://vuldb.com/cve/CVE-2026-11488",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:14"
+    },
+    {
+      "cve_id": "CVE-2026-11486",
+      "title": "高危漏洞: CVE-2026-11486 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 13:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. Affected by this vulnerability is an unknown functionality of the file /archive1.php. Performing a manipulation of the argument sy results in sql injection. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
+      "refs": "https://github.com/ssaaaa1234/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-11486\nhttps://vuldb.com/submit/834111",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:09"
+    },
+    {
+      "cve_id": "CVE-2026-11485",
+      "title": "高危漏洞: CVE-2026-11485 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 13:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /archive2.php. Such manipulation of the argument sy leads to sql injection. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/ssaaaa1234/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-11485\nhttps://vuldb.com/submit/834110",
+      "source": "NVD",
+      "time": "2026-06-08 20:58:03"
+    },
+    {
+      "cve_id": "CVE-2026-11484",
+      "title": "高危漏洞: CVE-2026-11484 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 13:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in SourceCodester Class and Exam Timetabling System 1.0. This impacts an unknown function of the file /archive3.php. This manipulation of the argument sy causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/ssaaaa1234/cve/issues/3\nhttps://vuldb.com/cve/CVE-2026-11484\nhttps://vuldb.com/submit/834109",
+      "source": "NVD",
+      "time": "2026-06-08 20:57:55"
+    },
+    {
+      "cve_id": "CVE-2026-11483",
+      "title": "高危漏洞: CVE-2026-11483 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-08 13:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in SourceCodester Class and Exam Timetabling System 1.0. This affects an unknown function of the file /archive4.php. The manipulation of the argument sy results in sql injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/ssaaaa1234/cve/issues/4\nhttps://vuldb.com/cve/CVE-2026-11483\nhttps://vuldb.com/submit/834108",
+      "source": "NVD",
+      "time": "2026-06-08 20:57:47"
+    },
+    {
       "cve_id": "CVE-2026-11482",
       "title": "高危漏洞: CVE-2026-11482 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -934,171 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499093536",
       "source": "NVD",
       "time": "2026-06-06 06:09:12"
-    },
-    {
-      "cve_id": "CVE-2026-11063",
-      "title": "高危漏洞: CVE-2026-11063 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in WebNN in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499051067",
-      "source": "NVD",
-      "time": "2026-06-06 06:09:05"
-    },
-    {
-      "cve_id": "CVE-2026-11061",
-      "title": "高危漏洞: CVE-2026-11061 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Type Confusion in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/499031961",
-      "source": "NVD",
-      "time": "2026-06-06 06:09:01"
-    },
-    {
-      "cve_id": "CVE-2026-11056",
-      "title": "高危漏洞: CVE-2026-11056 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in SiteIsolation in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498887785",
-      "source": "NVD",
-      "time": "2026-06-06 06:08:57"
-    },
-    {
-      "cve_id": "CVE-2026-11052",
-      "title": "高危漏洞: CVE-2026-11052 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Type Confusion in GPU in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498834967",
-      "source": "NVD",
-      "time": "2026-06-06 06:08:53"
-    },
-    {
-      "cve_id": "CVE-2026-11041",
-      "title": "高危漏洞: CVE-2026-11041 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Media in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/498700369",
-      "source": "NVD",
-      "time": "2026-06-06 06:08:48"
-    },
-    {
-      "cve_id": "CVE-2026-10983",
-      "title": "高危漏洞: CVE-2026-10983 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/513947609",
-      "source": "NVD",
-      "time": "2026-06-06 06:08:43"
-    },
-    {
-      "cve_id": "CVE-2025-5088",
-      "title": "高危漏洞: CVE-2025-5088 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-06 01:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "An authenticated Redis session could be used to obtain full root access to all servers in the CVX cluster. Note that this would require an attacker to have both network access to the Redis service on a CVX server and the Redis password. Please note that all Redis communication, including authentication, occurs over plaintext in the present day. TLS support is tracked under RFE1294850.",
-      "refs": "https://www.arista.com/en/support/advisories-notices/security-advisory/22868-security-advisory-0126",
-      "source": "NVD",
-      "time": "2026-06-06 03:43:10"
-    },
-    {
-      "cve_id": "CVE-2026-11304",
-      "title": "高危漏洞: CVE-2026-11304 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 08:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in PDFium in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially exploit heap corruption via a crafted PDF file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504418475",
-      "source": "NVD",
-      "time": "2026-06-06 03:43:06"
-    },
-    {
-      "cve_id": "CVE-2026-11301",
-      "title": "高危漏洞: CVE-2026-11301 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 08:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in LiveCaption in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform out of bounds memory access via malicious network traffic. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504180386",
-      "source": "NVD",
-      "time": "2026-06-06 03:43:01"
-    },
-    {
-      "cve_id": "CVE-2026-11297",
-      "title": "高危漏洞: CVE-2026-11297 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-05 08:17:07",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Reader Mode in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to bypass navigation restrictions via a malicious file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502502017",
-      "source": "NVD",
-      "time": "2026-06-06 03:42:54"
-    },
-    {
-      "cve_id": "CVE-2026-11202",
-      "title": "高危漏洞: CVE-2026-11202 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/505144022",
-      "source": "NVD",
-      "time": "2026-06-06 03:42:50"
-    },
-    {
-      "cve_id": "CVE-2026-11201",
-      "title": "高危漏洞: CVE-2026-11201 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code via a crafted Chrome Extension. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/505068950",
-      "source": "NVD",
-      "time": "2026-06-06 03:42:46"
-    },
-    {
-      "cve_id": "CVE-2026-11198",
-      "title": "高危漏洞: CVE-2026-11198 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-05 07:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Codecs in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted video file. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/504395300",
-      "source": "NVD",
-      "time": "2026-06-06 03:42:42"
-    },
-    {
-      "cve_id": "CVE-2026-11191",
-      "title": "高危漏洞: CVE-2026-11191 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out of bounds memory access in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/503392431",
-      "source": "NVD",
-      "time": "2026-06-06 03:42:38"
-    },
-    {
-      "cve_id": "CVE-2026-11179",
-      "title": "高危漏洞: CVE-2026-11179 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-05 07:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in ORB in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass site isolation via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html\nhttps://issues.chromium.org/issues/502615170",
-      "source": "NVD",
-      "time": "2026-06-06 03:42:34"
     }
   ]
 }
