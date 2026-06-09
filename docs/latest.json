@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7486",
+      "title": "高危漏洞: CVE-2026-7486 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-09 22:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Netcad Software Inc. E-İmar allows SQL Injection.\n\nThis issue affects E-İmar: from 2.10.1.0 before 3.0.2.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0343",
+      "source": "NVD",
+      "time": "2026-06-10 01:17:58"
+    },
+    {
+      "cve_id": "CVE-2026-11693",
+      "title": "高危漏洞: CVE-2026-11693 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-09 08:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Inappropriate implementation in Plugins in Google Chrome prior to 149.0.7827.103 allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html\nhttps://issues.chromium.org/issues/517644287",
+      "source": "NVD",
+      "time": "2026-06-10 01:17:54"
+    },
+    {
+      "cve_id": "CVE-2026-11689",
+      "title": "高危漏洞: CVE-2026-11689 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-09 08:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Insufficient policy enforcement in Passwords in Google Chrome prior to 149.0.7827.103 allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html\nhttps://issues.chromium.org/issues/517486004",
+      "source": "NVD",
+      "time": "2026-06-10 01:17:47"
+    },
+    {
+      "cve_id": "CVE-2026-11640",
+      "title": "高危漏洞: CVE-2026-11640 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-09 08:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Integer overflow in libyuv in Google Chrome prior to 149.0.7827.103 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html\nhttps://issues.chromium.org/issues/517339758",
+      "source": "NVD",
+      "time": "2026-06-10 01:17:40"
+    },
+    {
       "cve_id": "CVE-2017-20251",
       "title": "高危漏洞: CVE-2017-20251 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html\nhttps://issues.chromium.org/issues/516963272",
       "source": "NVD",
       "time": "2026-06-09 14:39:57"
-    },
-    {
-      "cve_id": "CVE-2026-11632",
-      "title": "高危漏洞: CVE-2026-11632 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-09 08:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in TabStrip in Google Chrome prior to 149.0.7827.103 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a crafted HTML page. (Chromium security severity: Critical)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html\nhttps://issues.chromium.org/issues/516707881",
-      "source": "NVD",
-      "time": "2026-06-09 14:39:50"
-    },
-    {
-      "cve_id": "CVE-2026-49141",
-      "title": "高危漏洞: CVE-2026-49141 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-09 04:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:N",
-      "description": "WACRM prior to commit 73041bf contain an authorization bypass vulnerability in the automation engine that allows authenticated attackers to access and modify contacts belonging to other tenants by supplying an arbitrary caller-controlled contact_id in the POST request body without tenant ownership verification. Attackers can exploit the service-role client that bypasses row-level security to modify victim contact fields including name, email, and company across tenant boundaries using only a known contact UUID.",
-      "refs": "https://github.com/ArnasDon/wacrm/commit/73041bfa6420f5e1ecbfa1dd4fa847d8529320f5\nhttps://github.com/ArnasDon/wacrm/pull/194\nhttps://www.vulncheck.com/advisories/wacrm-authorization-bypass-via-automation-engine-endpoint",
-      "source": "NVD",
-      "time": "2026-06-09 06:19:36"
-    },
-    {
-      "cve_id": "CVE-2026-46484",
-      "title": "高危漏洞: CVE-2026-46484 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-09 04:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Headplane is a feature-complete Web UI for Headscale. Prior to versions 0.6.3 and 0.7.0-beta.3, Headplane was vulnerable to a path traversal / authorization bypass in the Headscale API client used by node and user rename operations. This issue has been patched in versions 0.6.3 and 0.7.0-beta.3.",
-      "refs": "https://github.com/tale/headplane/releases/tag/v0.6.3\nhttps://github.com/tale/headplane/releases/tag/v0.7.0-beta.3\nhttps://github.com/tale/headplane/security/advisories/GHSA-vgj6-hcf2-fqf6",
-      "source": "NVD",
-      "time": "2026-06-09 06:19:32"
-    },
-    {
-      "cve_id": "CVE-2026-40519",
-      "title": "高危漏洞: CVE-2026-40519 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-09 04:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Nginx Proxy Manager versions 2.9.14 through 2.15.1, fixed in commit a5db5ed, contain an authenticated remote code execution vulnerability via OS command injection in the setupCertbotPlugins() function in backend/setup.js, allowing attackers with certificates:manage permission to execute arbitrary commands by storing a malicious payload in the dns_provider_credentials field. The user-controlled dns_provider_credentials value is interpolated directly into a shell command executed via child_process.exec() without sanitization or escaping, causing the injected command to execute upon backend restart.",
-      "refs": "https://github.com/NginxProxyManager/nginx-proxy-manager/commit/a5db5ed156355e3088e7d1ceb0533d4bae922def\nhttps://github.com/NginxProxyManager/nginx-proxy-manager/pull/5498\nhttps://www.vulncheck.com/advisories/nginx-proxy-manager-authenticated-rce-via-setupcertbotplugins",
-      "source": "NVD",
-      "time": "2026-06-09 06:19:28"
     }
   ]
 }
