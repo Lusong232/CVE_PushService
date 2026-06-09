@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8365",
+      "title": "高危漏洞: CVE-2026-8365 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-09 17:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Blocksy theme for WordPress is vulnerable to PHP Object Injection leading to Remote Code Execution via the 'blocksy_meta' REST API field and the V200 database migration in versions up to and including 2.1.35. This is due to insufficient input sanitization in the blocksy_sanitize_post_meta_options() function, which only blocks values containing '<' or '>' and does not prevent serialized PHP object strings from being stored in post meta, combined with the SearchReplacer::run_recursively() function unconditionally deserializing all string values via @unserialize() during migration without restricting allowed classes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject a serialized Blocksy\\RaiiPattern object into post meta that, when the V200 migration runs on an upgraded site, is deserialized and triggers RaiiPattern::__destruct(), which executes arbitrary PHP callables via call_user_func().",
+      "refs": "https://themes.trac.wordpress.org/browser/blocksy/2.1.35/admin/helpers/meta-boxes.php#L104\nhttps://themes.trac.wordpress.org/browser/blocksy/2.1.35/admin/helpers/validator.php#L75\nhttps://themes.trac.wordpress.org/browser/blocksy/2.1.35/inc/classes/db-versioning/utils/db-search-replacer.php#L98",
+      "source": "NVD",
+      "time": "2026-06-09 19:54:13"
+    },
+    {
+      "cve_id": "CVE-2026-11616",
+      "title": "高危漏洞: CVE-2026-11616 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-09 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Events Calendar for GeoDirectory plugin for WordPress is vulnerable to Privilege Escalation in versions up to and including 2.3.28. This is due to the ajax_ayi_action() handler  only applying strip_tags(esc_sql()) — with no allow-list — to the attacker-controlled $_POST['type'] and $_POST['postid'] values before forwarding them to update_ayi_data(), which calls update_user_meta($current_user->ID, $rsvp_args['type'], $posts). By passing type=wp_capabilities and postid=administrator, an attacker writes ['subscriber'=>true,'administrator'=>'administrator'] into their own wp_capabilities user meta; WP_User::get_role_caps() then treats the 'administrator' array key as an active role on the next request. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/events-for-geodirectory/tags/2.3.28/includes/class-geodir-event-ayi.php#L154\nhttps://plugins.trac.wordpress.org/browser/events-for-geodirectory/tags/2.3.28/includes/class-geodir-event-ayi.php#L357\nhttps://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3533585%40events-for-geodirectory&new=3533585%40events-for-geodirectory&sfp_email=&sfph_mail=",
+      "source": "NVD",
+      "time": "2026-06-09 19:54:08"
+    },
+    {
+      "cve_id": "CVE-2026-5068",
+      "title": "高危漏洞: CVE-2026-5068 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-06-09 16:16:29",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "A remote, unauthenticated BLE peer can trigger a 2-byte out-of-bounds write in the Bluetooth host during L2CAP LE CoC SDU reassembly. When the application enables segmentation (via chan_ops.alloc_buf) and the chosen RX pool has a user_data_size smaller than 2 bytes, the segmentation counter stored in the net_buf user_data area is written out of bounds in l2cap_chan_le_recv_seg (subsys/bluetooth/host/l2cap.c). The observed effects are an AddressSanitizer abort and, without ASan, heap corruption / fatal error.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-qrcq-hxwj-mqxm",
+      "source": "NVD",
+      "time": "2026-06-09 19:54:03"
+    },
+    {
+      "cve_id": "CVE-2026-5067",
+      "title": "高危漏洞: CVE-2026-5067 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-09 14:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A remote, unauthenticated attacker can trigger memory corruption in Zephyr's HTTP server WebSocket upgrade path by sending a crafted Sec-WebSocket-Key header. The HTTP/1 header parser copies the header into a fixed-size buffer using a bounded copy that does not guarantee NUL termination when the input length reaches the buffer size. During upgrade handling the buffer is copied to a local stack buffer and passed to strlen(); if no NUL exists in-bounds, strlen() reads beyond the stack buffer and subsequent concatenation with the WebSocket magic string can write out of bounds. This leads to out-of-bounds read and write on stack memory, resulting in crash (denial of service) and potentially code execution. The path is reachable when CONFIG_HTTP_SERVER_WEBSOCKET is enabled.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-wgr4-9pwq-94vj",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:58"
+    },
+    {
+      "cve_id": "CVE-2026-11572",
+      "title": "高危漏洞: CVE-2026-11572 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-09 14:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Versions of the package degit before 2.8.6, from 3.0.0 and before 3.3.1 are vulnerable to Command Injection due to improper sanitisation of user input for git shell commands directly invoked with exec() method by _cloneWithGit() and fetchRefs() functions. An attacker can execute arbitrary operating system commands as the process user by supplying a specially crafted git repository name.",
+      "refs": "https://gist.github.com/badp3te/cf22a939eedbd3d8ade9123827d61639\nhttps://github.com/Rich-Harris/degit/commit/4ac99e4a4c3f53ca3b5c997bcd7542742ad0c443\nhttps://github.com/Rich-Harris/degit/commit/d55bfd7cea79c0b387f69ec8477b6c34abf9f226",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:51"
+    },
+    {
+      "cve_id": "CVE-2026-9662",
+      "title": "高危漏洞: CVE-2026-9662 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-09 13:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Recover Exit For WooCommerce plugin for WordPress is vulnerable to Local File Inclusion in all versions up to and including 1.0.3. This is due to insufficient validation and sanitization of the user-controlled `tpf` POST parameter before it is used in an `include()` path in the `recover_exit()` function. This makes it possible for unauthenticated attackers to perform path traversal and include unintended local PHP files, which can lead to sensitive information exposure and, in certain deployment chains, code execution.",
+      "refs": "https://plugins.trac.wordpress.org/browser/recoverexit-for-woocommerce/tags/1.0.3/recover_exit_main.php#L41\nhttps://plugins.trac.wordpress.org/browser/recoverexit-for-woocommerce/tags/1.0.3/recover_exit_main.php#L42\nhttps://plugins.trac.wordpress.org/browser/recoverexit-for-woocommerce/tags/1.0.3/recoverexit_woocommerce.php#L52",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:46"
+    },
+    {
+      "cve_id": "CVE-2026-9185",
+      "title": "高危漏洞: CVE-2026-9185 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The 6Storage Rentals plugin for WordPress is vulnerable to Authorization Bypass Through User-Controlled Key in all versions up to and including 2.22.0 via the `userId` parameter of the `six_storage_get_user_info` and `six_storage_update_profile` AJAX actions. This is due to the `six_storage_getUserInfo()` and `six_storage_updateProfile()` functions being registered on `wp_ajax_nopriv_*` hooks and accepting a tenant identifier directly from `$_POST['userId']` without performing any ownership verification, session binding, or nonce validation to confirm the requester has a legitimate relationship to the supplied ID. This makes it possible for unauthenticated attackers to read and modify arbitrary tenants' profile data — including name, email address, phone number, physical address, and SSN — by supplying an enumerated `userId` value in a crafted request to either handler.",
+      "refs": "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.20.2/inc/Base/Six_Storage_DashboardController.php#L11\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.20.2/inc/Base/Six_Storage_DashboardController.php#L1931\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.20.2/inc/Base/Six_Storage_DashboardController.php#L1955",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:39"
+    },
+    {
+      "cve_id": "CVE-2026-41855",
+      "title": "高危漏洞: CVE-2026-41855 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-09 13:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In an untrusted JMS environment, org.springframework.jms.support.converter.MappingJackson2MessageConverter and org.springframework.jms.support.converter.JacksonJsonMessageConverter allow arbitrary class instantiation, which can lead to unauthorized actions via gadget class deserialization.\n\nAffected versions:\nSpring Framework 7.0.0 through 7.0.7; 6.2.0 through 6.2.18; 6.1.0 through 6.1.27; 5.3.0 through 5.3.48.",
+      "refs": "https://spring.io/security/cve-2026-41855",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:34"
+    },
+    {
+      "cve_id": "CVE-2026-41850",
+      "title": "高危漏洞: CVE-2026-41850 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Applications that evaluate user-supplied Spring Expression Language (SpEL) expressions are vulnerable to an Algorithmic Denial of Service (DoS). By providing a specially crafted expression, an attacker can trigger excessive resource consumption during evaluation, leading to application degradation or unavailability.\n\nAffected versions:\nSpring Framework 7.0.0 through 7.0.7; 6.2.0 through 6.2.18; 6.1.0 through 6.1.27; 5.3.0 through 5.3.48.",
+      "refs": "https://spring.io/security/cve-2026-41850",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:30"
+    },
+    {
+      "cve_id": "CVE-2026-41849",
+      "title": "高危漏洞: CVE-2026-41849 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An integer overflow vulnerability exists in the evaluation logic of the Spring Expression Language (SpEL). An attacker can exploit this by supplying a specially crafted SpEL expression that triggers excessive resource consumption, resulting in a Denial of Service (DoS).\n\nAffected versions:\nSpring Framework 5.3.0 through 5.3.48.",
+      "refs": "https://spring.io/security/cve-2026-41849",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:25"
+    },
+    {
+      "cve_id": "CVE-2026-41845",
+      "title": "高危漏洞: CVE-2026-41845 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-09 13:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+      "description": "Due to incorrect escaping, the use of JavaScriptUtils.javaScriptEscape() may lead to JavaScript code injection in the browser, potentially resulting in a cross-site scripting (XSS) vulnerability.\n\nAffected versions:\nSpring Framework 7.0.0 through 7.0.7; 6.2.0 through 6.2.18; 6.1.0 through 6.1.27; 5.3.0 through 5.3.48.",
+      "refs": "https://spring.io/security/cve-2026-41845",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:19"
+    },
+    {
+      "cve_id": "CVE-2026-41842",
+      "title": "高危漏洞: CVE-2026-41842 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Spring MVC and WebFlux applications are vulnerable to Denial of Service (DoS) attacks when resolving static resources.\n\nAffected versions:\nSpring Framework 7.0.0 through 7.0.7; 6.2.0 through 6.2.18; 6.1.0 through 6.1.27; 5.3.0 through 5.3.48.",
+      "refs": "https://spring.io/security/cve-2026-41842",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:15"
+    },
+    {
+      "cve_id": "CVE-2026-41720",
+      "title": "高危漏洞: CVE-2026-41720 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-06-09 13:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Spring LDAP's DirContextAuthenticationStrategy implementations do not reject a bind request where a non-empty username is paired with an empty or null password.\n\nAffected versions:\nSpring LDAP 2.4.0 through 2.4.4; 3.2.0 through 3.2.17; 3.3.0 through 3.3.7; 4.0.0 through 4.0.3.",
+      "refs": "https://spring.io/security/cve-2026-41720",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:10"
+    },
+    {
+      "cve_id": "CVE-2026-41007",
+      "title": "高危漏洞: CVE-2026-41007 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Spring HATEOAS maintains an unbounded static cache of StringLinkRelation instances keyed on attacker-supplied strings.\n\nAffected versions:\nSpring HATEOAS 1.5.0 through 1.5.6; 2.3.0 through 2.3.4; 2.4.0 through 2.4.1; 2.5.0 through 2.5.2; 3.0.0 through 3.0.3.",
+      "refs": "https://spring.io/security/cve-2026-41007",
+      "source": "NVD",
+      "time": "2026-06-09 19:53:04"
+    },
+    {
+      "cve_id": "CVE-2026-41006",
+      "title": "高危漏洞: CVE-2026-41006 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Spring HATEOAS's internal PropertyUtils.createObjectFromProperties method, used by the Collection+JSON and UBER media type deserializers, performs bean property binding via reflection without consulting Jackson access-control annotations.\n\nAffected versions:\nSpring HATEOAS 1.5.0 through 1.5.6; 2.3.0 through 2.3.4; 2.4.0 through 2.4.1; 2.5.0 through 2.5.2; 3.0.0 through 3.0.3.",
+      "refs": "https://spring.io/security/cve-2026-41006",
+      "source": "NVD",
+      "time": "2026-06-09 19:52:56"
+    },
+    {
+      "cve_id": "CVE-2026-40984",
+      "title": "高危漏洞: CVE-2026-40984 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In Micrometer, it is possible for a user to provide specially crafted HTTP requests that may cause a denial-of-service (DoS) condition.\n\nAffected versions:\nmicrometer-core 1.16.0 through 1.16.5; 1.15.0 through 1.15.11; 1.14.0 through 1.14.15; 1.13.0 through 1.13.18; 1.9.0 through 1.9.17.\nmicrometer-jetty11 1.16.0 through 1.16.5; 1.15.0 through 1.15.11; 1.14.0 through 1.14.15; 1.13.0 through 1.13.18.\nmicrometer-jetty12 1.16.0 through 1.16.5; 1.15.0 through 1.15.11; 1.14.0 through 1.14.15; 1.13.0 through 1.13.18.",
+      "refs": "https://spring.io/security/cve-2026-40984",
+      "source": "NVD",
+      "time": "2026-06-09 19:52:50"
+    },
+    {
+      "cve_id": "CVE-2026-40983",
+      "title": "高危漏洞: CVE-2026-40983 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-09 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In Micrometer, it is possible for a user to provide specially crafted gRPC requests that may cause a denial-of-service (DoS) condition.\n\nAffected versions:\nMicrometer 1.16.0 through 1.16.5; 1.15.0 through 1.15.11.",
+      "refs": "https://spring.io/security/cve-2026-40983",
+      "source": "NVD",
+      "time": "2026-06-09 19:52:44"
+    },
+    {
       "cve_id": "CVE-2026-7556",
       "title": "高危漏洞: CVE-2026-7556 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -912,193 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-11577\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2459993\nhttps://github.com/keycloak/keycloak/issues/9387",
       "source": "NVD",
       "time": "2026-06-09 01:43:27"
-    },
-    {
-      "cve_id": "CVE-2026-50752",
-      "title": "高危漏洞: CVE-2026-50752 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-06-08 20:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A weakness in the certificate validation logic of the deprecated IKEv1 key exchange may allow an unauthenticated attacker positioned as a man-in-the-middle to bypass certificate validation in VPN site-to-site connections that use certificate-based authentication. Successful exploitation could allow interception or modification of traffic traversing the VPN tunnel.",
-      "refs": "https://support.checkpoint.com/results/sk/sk185035",
-      "source": "NVD",
-      "time": "2026-06-09 01:43:20"
-    },
-    {
-      "cve_id": "CVE-2026-11504",
-      "title": "高危漏洞: CVE-2026-11504 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-08 20:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in Tenda CX12L 16.03.53.12. The impacted element is the function setSchedWifi of the file /goform/openSchedWifi of the component Wi-Fi Schedule Configuration Endpoint. Performing a manipulation of the argument schedStartTime/schedEndTime results in stack-based buffer overflow. The attack may be initiated remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/cve-a/moist/issues/2\nhttps://vuldb.com/cve/CVE-2026-11504\nhttps://vuldb.com/submit/835649",
-      "source": "NVD",
-      "time": "2026-06-09 01:43:10"
-    },
-    {
-      "cve_id": "CVE-2026-11503",
-      "title": "高危漏洞: CVE-2026-11503 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-08 18:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Tenda CX12L 16.03.53.12. The affected element is the function form_fast_setting_wifi_set of the file /goform/fast_setting_wifi_set of the component Wi-Fi Configuration Endpoint. Such manipulation of the argument ssid leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/cve-a/moist/issues/1\nhttps://vuldb.com/cve/CVE-2026-11503\nhttps://vuldb.com/submit/835648",
-      "source": "NVD",
-      "time": "2026-06-08 20:59:13"
-    },
-    {
-      "cve_id": "CVE-2026-11501",
-      "title": "高危漏洞: CVE-2026-11501 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 18:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in SourceCodester Hospitals Patient Records Management System 1.0. This issue affects some unknown processing of the file /classes/Master.php?f=save_patient. The manipulation of the argument ID results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/showmesvg/horized/issues/1\nhttps://vuldb.com/cve/CVE-2026-11501\nhttps://vuldb.com/submit/835506",
-      "source": "NVD",
-      "time": "2026-06-08 20:59:09"
-    },
-    {
-      "cve_id": "CVE-2026-41724",
-      "title": "高危漏洞: CVE-2026-41724 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-06-08 17:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "VMware Cloud Foundation Operations contains multiple stored cross-site scripting vulnerabilities.A malicious actor with privileges to create policies, views or text-widgets may be able to inject scripts to perform administrative actions in VMware Cloud Foundation Operations.",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37513",
-      "source": "NVD",
-      "time": "2026-06-08 20:59:00"
-    },
-    {
-      "cve_id": "CVE-2026-41723",
-      "title": "高危漏洞: CVE-2026-41723 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-06-08 17:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "VMware Cloud Foundation Operations contains multiple stored cross-site scripting vulnerabilities.A malicious actor with privileges to create policies, views or text-widgets may be able to inject scripts to perform administrative actions in VMware Cloud Foundation Operations.",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37513",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:55"
-    },
-    {
-      "cve_id": "CVE-2026-41722",
-      "title": "高危漏洞: CVE-2026-41722 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-06-08 17:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "VMware Cloud Foundation Operations contains multiple stored cross-site scripting vulnerabilities.A malicious actor with privileges to create policies, views or text-widgets may be able to inject scripts to perform administrative actions in VMware Cloud Foundation Operations.",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37513",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:50"
-    },
-    {
-      "cve_id": "CVE-2026-3238",
-      "title": "高危漏洞: CVE-2026-3238 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-08 17:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A flaw was found in Samba’s WINS server component when running as an Active Directory Domain Controller. The WINS protocol handlers for certain request types did not properly validate incoming packets, allowing an unauthenticated remote attacker to trigger a NULL pointer dereference and crash the WINS service using specially crafted UDP packets.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-3238\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2486176\nhttps://www.samba.org/samba/security/CVE-2026-3238.html",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:42"
-    },
-    {
-      "cve_id": "CVE-2026-11499",
-      "title": "高危漏洞: CVE-2026-11499 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-08 17:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Tenda HG7HG9 and HG10 300001138_en_xpon. This affects the function formDOMAINBLK of the file /boaform/formDOMAINBLK. Executing a manipulation of the argument blkDomain can lead to stack-based buffer overflow. The attack may be performed from remote.",
-      "refs": "https://github.com/ssaaaa1234/Tenda-HG10-formDOMAINBLK-stack-overflow-2\nhttps://vuldb.com/cve/CVE-2026-11499\nhttps://vuldb.com/submit/834888",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:36"
-    },
-    {
-      "cve_id": "CVE-2026-11498",
-      "title": "高危漏洞: CVE-2026-11498 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-08 17:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda HG7HG9 and HG10 300001138_en_xpon. Affected by this issue is the function asp_voip_OtherSet of the file /boaform/voip_other_set of the component Web Management Interface. Performing a manipulation of the argument funckey_transfer results in stack-based buffer overflow. The attack is possible to be carried out remotely.",
-      "refs": "https://github.com/ssaaaa1234/tenda-hg10-voip-other-set-stack-overflow\nhttps://vuldb.com/cve/CVE-2026-11498\nhttps://vuldb.com/submit/834887",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:29"
-    },
-    {
-      "cve_id": "CVE-2026-11490",
-      "title": "高危漏洞: CVE-2026-11490 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in code-projects Online Music Site 1.0. This issue affects some unknown processing of the file /Frontend/Search.php. This manipulation of the argument Category causes sql injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://code-projects.org/\nhttps://github.com/xiaobbai/CVE1/issues/1\nhttps://vuldb.com/cve/CVE-2026-11490",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:24"
-    },
-    {
-      "cve_id": "CVE-2026-11489",
-      "title": "高危漏洞: CVE-2026-11489 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 13:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in code-projects Online Music Site 1.0. This vulnerability affects unknown code of the file /Administrator/PHP/AdminDeleteAlbum.php. The manipulation of the argument ID results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/11snk/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-11489",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:19"
-    },
-    {
-      "cve_id": "CVE-2026-11488",
-      "title": "高危漏洞: CVE-2026-11488 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 13:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in code-projects Simple Flight Ticket Booking System 1.0. This affects an unknown part of the file checkUser.php of the component POST Parameter Handler. The manipulation of the argument Username leads to sql injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/K1venn/cves/issues/1\nhttps://vuldb.com/cve/CVE-2026-11488",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:14"
-    },
-    {
-      "cve_id": "CVE-2026-11486",
-      "title": "高危漏洞: CVE-2026-11486 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 13:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. Affected by this vulnerability is an unknown functionality of the file /archive1.php. Performing a manipulation of the argument sy results in sql injection. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
-      "refs": "https://github.com/ssaaaa1234/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-11486\nhttps://vuldb.com/submit/834111",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:09"
-    },
-    {
-      "cve_id": "CVE-2026-11485",
-      "title": "高危漏洞: CVE-2026-11485 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 13:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /archive2.php. Such manipulation of the argument sy leads to sql injection. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/ssaaaa1234/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-11485\nhttps://vuldb.com/submit/834110",
-      "source": "NVD",
-      "time": "2026-06-08 20:58:03"
-    },
-    {
-      "cve_id": "CVE-2026-11484",
-      "title": "高危漏洞: CVE-2026-11484 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 13:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in SourceCodester Class and Exam Timetabling System 1.0. This impacts an unknown function of the file /archive3.php. This manipulation of the argument sy causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://github.com/ssaaaa1234/cve/issues/3\nhttps://vuldb.com/cve/CVE-2026-11484\nhttps://vuldb.com/submit/834109",
-      "source": "NVD",
-      "time": "2026-06-08 20:57:55"
-    },
-    {
-      "cve_id": "CVE-2026-11483",
-      "title": "高危漏洞: CVE-2026-11483 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-08 13:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in SourceCodester Class and Exam Timetabling System 1.0. This affects an unknown function of the file /archive4.php. The manipulation of the argument sy results in sql injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/ssaaaa1234/cve/issues/4\nhttps://vuldb.com/cve/CVE-2026-11483\nhttps://vuldb.com/submit/834108",
-      "source": "NVD",
-      "time": "2026-06-08 20:57:47"
     }
   ]
 }
