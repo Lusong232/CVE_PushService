@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3018",
+      "title": "高危漏洞: CVE-2026-3018 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-10 18:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Newsletters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘wpmlsubscriber_id’ parameter in all versions up to, and including, 4.13 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/newsletters-lite/tags/4.11/wp-mailinglist-plugin.php#L6040\nhttps://plugins.trac.wordpress.org/changeset/3566485/newsletters-lite\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/8e2672b5-64a2-4b30-b0be-2a9303d46ac1?source=cve",
+      "source": "NVD",
+      "time": "2026-06-10 20:14:21"
+    },
+    {
+      "cve_id": "CVE-2025-6254",
+      "title": "高危漏洞: CVE-2025-6254 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-10 18:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Doctreat Core plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.6.8. This is due to the doctreat_process_registration() function not properly restricting the roles that a user can register with. This makes it possible for unauthenticated attackers to register as an administrator user.",
+      "refs": "https://themeforest.net/item/doctreat-doctors-directory-wordpress-theme/24867777\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5fa37909-932c-4879-bbf0-8b44cc995cc0?source=cve",
+      "source": "NVD",
+      "time": "2026-06-10 20:14:14"
+    },
+    {
+      "cve_id": "CVE-2026-9067",
+      "title": "高危漏洞: CVE-2026-9067 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-10 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The Schema & Structured Data for WP & AMP WordPress plugin before 1.60 does not check user capabilities on its frontend AJAX file-upload handlers and does not validate the actual content of uploaded files against the endpoint's intended media type, allowing unauthenticated users to upload any file type accepted by WordPress's media library through endpoints that should only accept images or videos.",
+      "refs": "https://wpscan.com/vulnerability/7fac98eb-f82c-4705-a956-aba650945826/",
+      "source": "NVD",
+      "time": "2026-06-10 20:14:08"
+    },
+    {
+      "cve_id": "CVE-2026-8071",
+      "title": "高危漏洞: CVE-2026-8071 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-10 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Anti-Spam by CleanTalk. Spam protection WordPress plugin before 6.79 does not properly sanitize content within a custom shortcode used in its email-encoding feature, allowing unauthenticated attackers to inject arbitrary web scripts into approved comments that will execute when any user (including administrators) views the post.",
+      "refs": "https://wpscan.com/vulnerability/0d4635b5-2d79-4337-a1ad-6b8d02cfd64b/",
+      "source": "NVD",
+      "time": "2026-06-10 20:14:04"
+    },
+    {
+      "cve_id": "CVE-2026-3326",
+      "title": "高危漏洞: CVE-2026-3326 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-10 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The Xstore WordPress theme before 9.7.3 does not properly sanitise and escape a parameter before using it in a SQL statement via an AJAX action available to unauthenticated users, leading to a SQL injection",
+      "refs": "https://wpscan.com/vulnerability/2c5bdb17-8b12-45b5-878b-627056dc8956/",
+      "source": "NVD",
+      "time": "2026-06-10 20:14:00"
+    },
+    {
+      "cve_id": "CVE-2026-11837",
+      "title": "高危漏洞: CVE-2026-11837 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-10 13:16:38",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A local privilege escalation vulnerability was found in the ansible.posix authorized_key module. The module's keyfile() function uses os.chown() instead of os.lchown() and opens files without O_NOFOLLOW when managing SSH authorized keys. An unprivileged local user can pre-stage symbolic links in their ~/.ssh directory to redirect file ownership changes to arbitrary system paths when an operator runs the authorized_key task as root, leading to local privilege escalation.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-11837\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2487424",
+      "source": "NVD",
+      "time": "2026-06-10 20:13:53"
+    },
+    {
       "cve_id": "CVE-2026-45542",
       "title": "高危漏洞: CVE-2026-45542 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1033,72 +1099,6 @@
       "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
       "source": "NVD",
       "time": "2026-06-10 06:18:54"
-    },
-    {
-      "cve_id": "CVE-2026-34700",
-      "title": "高危漏洞: CVE-2026-34700 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-10 02:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
-      "source": "NVD",
-      "time": "2026-06-10 06:18:49"
-    },
-    {
-      "cve_id": "CVE-2026-34699",
-      "title": "高危漏洞: CVE-2026-34699 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-10 02:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
-      "source": "NVD",
-      "time": "2026-06-10 06:18:44"
-    },
-    {
-      "cve_id": "CVE-2026-34698",
-      "title": "高危漏洞: CVE-2026-34698 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-10 02:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
-      "source": "NVD",
-      "time": "2026-06-10 06:18:39"
-    },
-    {
-      "cve_id": "CVE-2026-34697",
-      "title": "高危漏洞: CVE-2026-34697 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-10 02:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
-      "source": "NVD",
-      "time": "2026-06-10 06:18:34"
-    },
-    {
-      "cve_id": "CVE-2026-34696",
-      "title": "高危漏洞: CVE-2026-34696 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-10 02:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
-      "source": "NVD",
-      "time": "2026-06-10 06:18:30"
-    },
-    {
-      "cve_id": "CVE-2026-34695",
-      "title": "高危漏洞: CVE-2026-34695 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-10 02:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "InDesign Desktop versions 21.3, 20.5.3 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "refs": "https://helpx.adobe.com/security/products/indesign/apsb26-58.html",
-      "source": "NVD",
-      "time": "2026-06-10 06:18:24"
     }
   ]
 }
