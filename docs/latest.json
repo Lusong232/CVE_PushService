@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-11816",
+      "title": "高危漏洞: CVE-2026-11816 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-11 22:16:26",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Keras versions prior to 3.14.0 are vulnerable to a path traversal issue in the archive extraction utilities located in `keras/src/utils/file_utils.py`. The functions `filter_safe_tarinfos()` and `filter_safe_zipinfos()` validate archive member paths against the process current working directory (CWD) instead of the actual extraction destination. When the process runs with CWD set to `/`, which is common in Docker containers, CI/CD runners, and Jupyter environments, the validation boundary becomes the filesystem root, allowing traversal paths to bypass the security check. Additionally, the zip filter contains a bug that causes an `AttributeError` when a blocked entry is encountered, leading to incomplete extraction. Furthermore, Python 3.11 installations lack the `filter=\"data\"` safety net, leaving them entirely reliant on the flawed CWD-based filter. Exploitation of this vulnerability can result in arbitrary file writes outside the intended extraction directory, enabling attackers to overwrite configuration files, inject malicious code, or corrupt machine learning datasets and pipelines.",
+      "refs": "https://github.com/keras-team/keras/commit/2465b6657b02c8eed308759b7e800e295ae01888\nhttps://huntr.com/bounties/a07e3983-7158-4419-af2b-38f1dea01a4f",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:59"
+    },
+    {
+      "cve_id": "CVE-2026-10847",
+      "title": "高危漏洞: CVE-2026-10847 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-11 22:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A local privilege escalation vulnerability exists in Check Point Identity Agent Full for Windows OS. An authenticated local user may be able to execute arbitrary code with SYSTEM privileges due to improper handling of executable resolution during the log collection process. Successful exploitation could allow an attacker to gain elevated privileges on the affected Windows endpoint.",
+      "refs": "https://support.checkpoint.com/results/sk/sk185052",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:51"
+    },
+    {
+      "cve_id": "CVE-2026-7852",
+      "title": "高危漏洞: CVE-2026-7852 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-11 21:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Unrestricted upload of file with dangerous type vulnerability in Limatek System Inc. LimRAD NAC allows Remote Code Inclusion.\n\nThis issue affects LimRAD NAC: before 5.5.7.3.9.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0366",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:43"
+    },
+    {
+      "cve_id": "CVE-2026-8589",
+      "title": "高危漏洞: CVE-2026-8589 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-11 20:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:N",
+      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 13.1.4 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions could have allowed an authenticated user to add unauthorized email addresses to a targeted user's account due to improper sanitization of user-supplied input in certain group setting fields.",
+      "refs": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/600099\nhttps://hackerone.com/reports/3722842",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:38"
+    },
+    {
+      "cve_id": "CVE-2026-7250",
+      "title": "高危漏洞: CVE-2026-7250 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-11 20:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 12.10 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions could have allowed an unauthenticated user to cause denial of service due to improper input validation in the API request parsing middleware.",
+      "refs": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/598311\nhttps://hackerone.com/reports/3671995",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:29"
+    },
+    {
+      "cve_id": "CVE-2026-6552",
+      "title": "高危漏洞: CVE-2026-6552 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-06-11 20:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 15.5 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions could have allowed an authenticated user with group Owner role to take over another group member's GitLab account due to improper authorization in the Group SAML identity management functionality.",
+      "refs": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/597295\nhttps://hackerone.com/reports/3655189",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:23"
+    },
+    {
+      "cve_id": "CVE-2026-10087",
+      "title": "高危漏洞: CVE-2026-10087 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-06-11 20:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 17.1 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions could have allowed an authenticated user with developer-role permissions to execute arbitrary client-side code on behalf of a targeted user due to improper input sanitization in the Analytics Dashboard.",
+      "refs": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/601633\nhttps://hackerone.com/reports/3759090",
+      "source": "NVD",
+      "time": "2026-06-12 02:04:14"
+    },
+    {
       "cve_id": "CVE-2026-5497",
       "title": "高危漏洞: CVE-2026-5497 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://r.sec-consult.com/slate\nhttps://sec-consult.com/vulnerability-lab/advisory/local-privilege-escalation-in-slate-digital-connect/",
       "source": "NVD",
       "time": "2026-06-11 01:51:03"
-    },
-    {
-      "cve_id": "CVE-2026-36721",
-      "title": "高危漏洞: CVE-2026-36721 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-10 03:17:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A lack of cryptographic signature verification in the validateAccessToken function of bookcars v8.3 allows attackers to bypass authentication via a forged JWT token.",
-      "refs": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/bookcars/vulnerability-2\nhttps://github.com/CC-T-454455/Vulnerabilities/tree/master/bookcars/vulnerability-2",
-      "source": "NVD",
-      "time": "2026-06-11 01:50:56"
-    },
-    {
-      "cve_id": "CVE-2026-36719",
-      "title": "高危漏洞: CVE-2026-36719 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-10 03:17:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "An information disclosure vulnerability in the /api/v1/user/info endpoint of AgentChat v2.3.0 allows unauthenticated attackers to obtain sensitive information, including SHA256 password hashes, via enumerating user IDs.",
-      "refs": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/agent-chat/vulnerability-3\nhttps://github.com/CC-T-454455/Vulnerabilities/tree/master/agent-chat/vulnerability-3",
-      "source": "NVD",
-      "time": "2026-06-11 01:50:51"
-    },
-    {
-      "cve_id": "CVE-2026-3018",
-      "title": "高危漏洞: CVE-2026-3018 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-10 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Newsletters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘wpmlsubscriber_id’ parameter in all versions up to, and including, 4.13 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://plugins.trac.wordpress.org/browser/newsletters-lite/tags/4.11/wp-mailinglist-plugin.php#L6040\nhttps://plugins.trac.wordpress.org/changeset/3566485/newsletters-lite\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/8e2672b5-64a2-4b30-b0be-2a9303d46ac1?source=cve",
-      "source": "NVD",
-      "time": "2026-06-10 20:14:21"
-    },
-    {
-      "cve_id": "CVE-2025-6254",
-      "title": "高危漏洞: CVE-2025-6254 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-10 18:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Doctreat Core plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.6.8. This is due to the doctreat_process_registration() function not properly restricting the roles that a user can register with. This makes it possible for unauthenticated attackers to register as an administrator user.",
-      "refs": "https://themeforest.net/item/doctreat-doctors-directory-wordpress-theme/24867777\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5fa37909-932c-4879-bbf0-8b44cc995cc0?source=cve",
-      "source": "NVD",
-      "time": "2026-06-10 20:14:14"
-    },
-    {
-      "cve_id": "CVE-2026-9067",
-      "title": "高危漏洞: CVE-2026-9067 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-10 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Schema & Structured Data for WP & AMP WordPress plugin before 1.60 does not check user capabilities on its frontend AJAX file-upload handlers and does not validate the actual content of uploaded files against the endpoint's intended media type, allowing unauthenticated users to upload any file type accepted by WordPress's media library through endpoints that should only accept images or videos.",
-      "refs": "https://wpscan.com/vulnerability/7fac98eb-f82c-4705-a956-aba650945826/",
-      "source": "NVD",
-      "time": "2026-06-10 20:14:08"
-    },
-    {
-      "cve_id": "CVE-2026-8071",
-      "title": "高危漏洞: CVE-2026-8071 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-10 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Anti-Spam by CleanTalk. Spam protection WordPress plugin before 6.79 does not properly sanitize content within a custom shortcode used in its email-encoding feature, allowing unauthenticated attackers to inject arbitrary web scripts into approved comments that will execute when any user (including administrators) views the post.",
-      "refs": "https://wpscan.com/vulnerability/0d4635b5-2d79-4337-a1ad-6b8d02cfd64b/",
-      "source": "NVD",
-      "time": "2026-06-10 20:14:04"
-    },
-    {
-      "cve_id": "CVE-2026-3326",
-      "title": "高危漏洞: CVE-2026-3326 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-10 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The Xstore WordPress theme before 9.7.3 does not properly sanitise and escape a parameter before using it in a SQL statement via an AJAX action available to unauthenticated users, leading to a SQL injection",
-      "refs": "https://wpscan.com/vulnerability/2c5bdb17-8b12-45b5-878b-627056dc8956/",
-      "source": "NVD",
-      "time": "2026-06-10 20:14:00"
     }
   ]
 }
