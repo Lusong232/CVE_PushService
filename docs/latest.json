@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5497",
+      "title": "高危漏洞: CVE-2026-5497 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-11 18:16:21",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "vLLM versions 0.8.0 and later are vulnerable to an Out-of-Memory (OOM) Denial of Service (DoS) attack due to unbounded frame count processing in the `VideoMediaIO.load_base64()` method. When processing `video/jpeg` data URLs, the method splits the base64 data string on commas to extract individual JPEG frames without enforcing a frame count limit. An attacker can exploit this by crafting a single API request containing thousands of comma-separated base64-encoded JPEG frames in a data URL, causing the server to decode all frames into memory and crash due to excessive memory consumption. This vulnerability is reachable via the OpenAI-compatible chat completions API and does not require authentication.",
+      "refs": "https://github.com/vllm-project/vllm/commit/58ee61422169ce17e08248f8efa1e9df434fe395\nhttps://huntr.com/bounties/7bd92629-b396-4449-8f88-6c0092530eb4",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:55"
+    },
+    {
+      "cve_id": "CVE-2023-33999",
+      "title": "高危漏洞: CVE-2023-33999 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-11 17:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in WPVibes WP Mail Log allows DOM-Based XSS.\n\nThis issue affects WP Mail Log: from n/a through 1.0.2.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/wp-mail-log/vulnerability/wordpress-wp-mail-log-plugin-1-0-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:50"
+    },
+    {
+      "cve_id": "CVE-2026-41856",
+      "title": "高危漏洞: CVE-2026-41856 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-11 15:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Spring GraphQL annotation detection mechanism for @Controller data fetchers may not correctly resolve annotations on methods within type hierarchies. This can be an issue if such annotations are used for authorization decisions. When all conditions are met, security annotations can be ignored at runtime.\n\nAffected versions:\nSpring for GraphQL 2.0.0 through 2.0.3; 1.4.0 through 1.4.5; 1.3.0 through 1.3.8; 1.0.0 through 1.0.6.",
+      "refs": "https://spring.io/security/cve-2026-41856",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:46"
+    },
+    {
+      "cve_id": "CVE-2026-41700",
+      "title": "高危漏洞: CVE-2026-41700 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-11 15:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Spring for GraphQL applications that have enabled the WebSocket transport are vulnerable to Cross-Site WebSocket Hijacking. An attacker can trick an authenticated user into visiting a malicious page, allowing the attacker to execute arbitrary GraphQL operations with the victim's credentials.\n\nAffected versions:\nSpring for GraphQL 2.0.0 through 2.0.3; 1.4.0 through 1.4.5; 1.3.0 through 1.3.8; 1.0.0 through 1.0.6.",
+      "refs": "https://spring.io/security/cve-2026-41700",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:40"
+    },
+    {
+      "cve_id": "CVE-2026-41699",
+      "title": "高危漏洞: CVE-2026-41699 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-11 15:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Spring for GraphQL applications are vulnerable to Unsafe Deserialization when processing paginated GraphQL queries. An attacker can craft a malicious GraphQL request that can lead to Remote Code Execution when the application exposes a paginated (Connection) field and the classpath contains specific classes that can be leveraged during deserialization.\n\nAffected versions:\nSpring for GraphQL 2.0.0 through 2.0.3; 1.4.0 through 1.4.5; 1.3.0 through 1.3.8.",
+      "refs": "https://spring.io/security/cve-2026-41699",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:36"
+    },
+    {
+      "cve_id": "CVE-2026-40999",
+      "title": "高危漏洞: CVE-2026-40999 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-11 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "When WS-Addressing is used with non-anonymous ReplyTo or FaultTo addresses, Spring WS may initiate outbound connections through configured WebServiceMessageSender instances to destinations taken directly from request headers without verifying that those destinations are safe to connect to.\n\nAffected versions:\nSpring Web Services 5.0.0 through 5.0.1; 4.1.0 through 4.1.3; 4.0.0 through 4.0.18; 3.1.0 through 3.1.8.",
+      "refs": "https://spring.io/security/cve-2026-40999",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:30"
+    },
+    {
+      "cve_id": "CVE-2026-40998",
+      "title": "高危漏洞: CVE-2026-40998 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-11 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Jaxp13XPathTemplate evaluated XPath expressions for StreamSource and SAXSource inputs using a code path that parsed attacker-controlled XML with the JDK's default DocumentBuilderFactory behavior instead of Spring's hardened parser configuration. Applications that evaluate XPath against untrusted XML payloads could therefore be exposed to XML External Entity (XXE) style attacks.\n\nAffected versions:\nSpring Web Services 5.0.0 through 5.0.1; 4.1.0 through 4.1.3; 4.0.0 through 4.0.18; 3.1.0 through 3.1.8.",
+      "refs": "https://spring.io/security/cve-2026-40998",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:25"
+    },
+    {
+      "cve_id": "CVE-2026-40994",
+      "title": "高危漏洞: CVE-2026-40994 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-11 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "Wss4jSecurityInterceptor initialized its BSP (WS-I Basic Security Profile) compliance flag so that inbound validation disabled WSS4J BSP enforcement on RequestData. Services that validate WS-Security on the network could therefore accept messages that violate BSP rules, weakening protocol-level checks.\n\nAffected versions:\nSpring Web Services 5.0.0 through 5.0.1; 4.1.0 through 4.1.3; 4.0.0 through 4.0.18; 3.1.0 through 3.1.8.",
+      "refs": "https://spring.io/security/cve-2026-40994",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:18"
+    },
+    {
+      "cve_id": "CVE-2026-40987",
+      "title": "高危漏洞: CVE-2026-40987 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-11 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L",
+      "description": "A malicious or compromised FTP/SFTP/SMB server can write arbitrary files anywhere on the client filesystem (outside the configured local-directory) with attacker-controlled content.\n\nAffected versions:\nSpring Integration 7.0.0 through 7.0.4; 6.5.0 through 6.5.8; 6.4.0 through 6.4.11; 6.3.0 through 6.3.14; 5.5.0 through 5.5.20.",
+      "refs": "https://spring.io/security/cve-2026-40987",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:11"
+    },
+    {
+      "cve_id": "CVE-2026-10795",
+      "title": "高危漏洞: CVE-2026-10795 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-11 15:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The UpdraftPlus: WP Backup & Migration Plugin plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.26.4 via the UpdraftPlus_Remote_Communications_V2::wp_loaded function. This is due to insufficient validation of the remote communications message format, where signature verification can be bypassed and unchecked decryption return values collapse to a predictable all-zero encryption key. This makes it possible for unauthenticated attackers to forge arbitrary RPC commands and run them as the connected administrator, such as uploading and activating a malicious plugin, which ultimately leads to remote code execution.",
+      "refs": "https://plugins.svn.wordpress.org/updraftplus/tags/1.26.4/vendor/team-updraft/common-libs/src/updraft-rpc/class-udrpc.php\nhttps://plugins.svn.wordpress.org/updraftplus/tags/1.26.4/vendor/team-updraft/common-libs/src/updraft-rpc/class-udrpc2.php\nhttps://plugins.trac.wordpress.org/changeset/3561938/updraftplus/trunk/vendor/team-updraft/common-libs/src/updraft-rpc/class-udrpc2.php",
+      "source": "NVD",
+      "time": "2026-06-11 20:36:04"
+    },
+    {
       "cve_id": "CVE-2026-35273",
       "title": "高危漏洞: CVE-2026-35273 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -989,116 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/2c5bdb17-8b12-45b5-878b-627056dc8956/",
       "source": "NVD",
       "time": "2026-06-10 20:14:00"
-    },
-    {
-      "cve_id": "CVE-2026-11837",
-      "title": "高危漏洞: CVE-2026-11837 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-10 13:16:38",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A local privilege escalation vulnerability was found in the ansible.posix authorized_key module. The module's keyfile() function uses os.chown() instead of os.lchown() and opens files without O_NOFOLLOW when managing SSH authorized keys. An unprivileged local user can pre-stage symbolic links in their ~/.ssh directory to redirect file ownership changes to arbitrary system paths when an operator runs the authorized_key task as root, leading to local privilege escalation.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-11837\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2487424",
-      "source": "NVD",
-      "time": "2026-06-10 20:13:53"
-    },
-    {
-      "cve_id": "CVE-2026-45542",
-      "title": "高危漏洞: CVE-2026-45542 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-10 10:16:33",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
-      "description": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.2.6, 5.3.5, 5.4.4, 5.5.4, and 6.0, a heap buffer overflow exists in the Security Scheme 2 (SRP6a) session-setup path of the protocomm component. The first-phase handler (handle_session_command0() in components/protocomm/src/security/security2.c) trusts the length of a client-supplied protobuf field for the SRP6a username and copies it into a buffer whose size is derived from a narrower destination type. The resulting truncation-versus-copy asymmetry corrupts the heap when an oversized value is supplied. This issue has been patched in versions 5.2.7, 5.3.6, 5.4.5, 5.5.5, and 6.0.1.",
-      "refs": "https://github.com/espressif/esp-idf/commit/0ea58d79845ad674d0358d5de246015a68c4cb4f\nhttps://github.com/espressif/esp-idf/commit/56c3e385611e63162d0f2f8504ac4ae2ccfccef0\nhttps://github.com/espressif/esp-idf/commit/71eb2dbe6aaef830719ecac8edf409e2992b64b2",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:40"
-    },
-    {
-      "cve_id": "CVE-2026-45541",
-      "title": "高危漏洞: CVE-2026-45541 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-10 10:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.2.6, 5.3.5, 5.4.4, 5.5.4, and 6.0, a NULL-pointer dereference exists in the WebSocket subprotocol-negotiation path of the esp_http_server component. While parsing the client-supplied Sec-WebSocket-Protocol request header during the WebSocket handshake, the tokenisation result is dereferenced without a NULL check, so a malformed header value can crash the server before any application-level authentication runs. This issue has been patched in versions 5.2.7, 5.3.6, 5.4.5, 5.5.5, and 6.0.1.",
-      "refs": "https://github.com/espressif/esp-idf/commit/00a2f7fbbbd8fe6d04729022e1d5c9a49435bfe8\nhttps://github.com/espressif/esp-idf/commit/0dc4ee7537f3b12350f5966cecacd59bba840ec6\nhttps://github.com/espressif/esp-idf/commit/37508ab91124ef426a7396d30f79eba1162700c7",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:36"
-    },
-    {
-      "cve_id": "CVE-2026-45329",
-      "title": "高危漏洞: CVE-2026-45329 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-10 10:16:32",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.4 and 6.0, several ESP-TEE secure-service wrappers in esp_secure_services.c and esp_secure_services_iram.c validated only some of the caller-supplied pointer arguments, leaving input pointer arguments unchecked. Because the underlying TEE-protected hardware peripherals (e.g., ECC, SHA, SPI) run in RISC-V machine mode (M-mode) with full address-space access, a caller could supply pointers into TEE-exclusive memory as inputs, causing the peripheral to read TEE memory and return results derived from it to the REE. Depending on the wrapper, the result contains raw bytes from TEE memory, a computed function of TEE memory recoverable through repeated calls, or a single bit per call that forms an oracle for incremental disclosure of TEE-resident sensitive data. This issue has been patched in versions 5.5.5 and 6.0.1.",
-      "refs": "https://github.com/espressif/esp-idf/commit/145ba4c42dc8283054cfde9a1c3470db7399192f\nhttps://github.com/espressif/esp-idf/commit/7867f4a57560bf9fc4a931e37ba02b7a3e9f406b\nhttps://github.com/espressif/esp-idf/commit/eebabaff2fdc273b1530fe66e55fb3bcd181dfd6",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:31"
-    },
-    {
-      "cve_id": "CVE-2026-45328",
-      "title": "高危漏洞: CVE-2026-45328 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-10 10:16:32",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.4 and 6.0, the esp_tee component exposes secure-service wrappers in esp_secure_services.c and esp_secure_services_iram.c that bridge calls from the user application (i.e. the REE) to TEE-protected hardware peripherals (AES, SHA, ECC, HMAC, SPI, MMU, WDT) and to the security feature like attestation, OTA updates, secure storage. This issue has been patched in versions 5.5.5 and 6.0.1.",
-      "refs": "https://github.com/espressif/esp-idf/commit/145ba4c42dc8283054cfde9a1c3470db7399192f\nhttps://github.com/espressif/esp-idf/commit/440a5d1906502023f2a0fb0aecbdf0602d14acbf\nhttps://github.com/espressif/esp-idf/commit/764626a1b7c85b943d207da08a2f8f7d7f3def4d",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:26"
-    },
-    {
-      "cve_id": "CVE-2026-53674",
-      "title": "高危漏洞: CVE-2026-53674 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-10 08:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
-      "description": "BuddyPress 14.4.0 contains a regular expression injection vulnerability in the activity mention resolver that, when username compatibility mode is enabled, allows attackers to manipulate a REGEXP database clause by crafting mention names containing regex metacharacters. Attackers can submit @mentions whose metacharacters pass through esc_sql unescaped and are inserted into an unprepared REGEXP query against the users table, enabling boolean-based inference of usernames and denial of service through catastrophic backtracking.",
-      "refs": "https://buddypress.org/\nhttps://wordpress.org/plugins/buddypress/\nhttps://www.vulncheck.com/advisories/buddypress-regexp-injection-via-mention-username-resolution",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:21"
-    },
-    {
-      "cve_id": "CVE-2026-53673",
-      "title": "高危漏洞: CVE-2026-53673 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-10 08:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "BuddyPress 14.4.0 contains an insecure direct object reference vulnerability in the messages REST API that allows authenticated attackers to access arbitrary private message threads by supplying a user_id parameter in the request. Attackers can pass another user's identifier to the get_item_permissions_check method, which validates the supplied user_id instead of the logged-in user and is reused by the update and delete handlers, to read, reply to, or delete any user's private messages.",
-      "refs": "https://buddypress.org/\nhttps://wordpress.org/plugins/buddypress/\nhttps://www.vulncheck.com/advisories/buddypress-private-message-idor-via-rest-api-user-id-parameter",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:15"
-    },
-    {
-      "cve_id": "CVE-2026-46545",
-      "title": "高危漏洞: CVE-2026-46545 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-10 08:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Nimiq is a Rust implementation of the Nimiq Proof-of-Stake protocol based on the Albatross consensus algorithm. Prior to version 1.5.0, a remote, unauthenticated denial-of-service vulnerability in MerkleRadixTrie::put_chunk allows any state-sync peer to crash any node performing state synchronization (freshly joining nodes and recovering nodes). This issue has been patched in version 1.5.0.",
-      "refs": "https://github.com/nimiq/core-rs-albatross/pull/3762\nhttps://github.com/nimiq/core-rs-albatross/releases/tag/v1.5.0\nhttps://github.com/nimiq/core-rs-albatross/security/advisories/GHSA-mw3q-r9wh-h2ff",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:10"
-    },
-    {
-      "cve_id": "CVE-2026-46541",
-      "title": "高危漏洞: CVE-2026-46541 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-10 08:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Nimiq is a Rust implementation of the Nimiq Proof-of-Stake protocol based on the Albatross consensus algorithm. Prior to version 1.4.0, iIn handle_dht_get(), the DhtResults accumulator is only initialized when the first DHT record passes verification. If the first record fails (from a malicious DHT node), DhtResults is never created, and all subsequent valid records are discarded with \"DHT inconsistent state\" errors. This issue has been patched in version 1.4.0.",
-      "refs": "https://github.com/nimiq/core-rs-albatross/pull/3707\nhttps://github.com/nimiq/core-rs-albatross/releases/tag/v1.4.0\nhttps://github.com/nimiq/core-rs-albatross/security/advisories/GHSA-ccqv-2c9q-mqw5",
-      "source": "NVD",
-      "time": "2026-06-10 15:00:04"
-    },
-    {
-      "cve_id": "CVE-2026-46518",
-      "title": "高危漏洞: CVE-2026-46518 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-10 08:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.1, a stored cross-site scripting vulnerability in the prescription CSS/HTML multi-print feature allows a patient portal user to execute arbitrary JavaScript in a clinician's browser session. Patient demographic fields (name, address) are rendered without output encoding in multiprintcss_header(), and portal patients can write attacker-controlled HTML directly into patient_data by calling the PUT api/patient/:num endpoint, which bypasses the intended audit review workflow. Because the XSS fires in the clinician's authenticated session on the main OpenEMR interface, the attacker can access CSRF tokens, session data, and perform actions as the clinician — crossing the patient-to-clinician trust boundary. This issue has been patched in version 8.0.0.1.",
-      "refs": "https://github.com/openemr/openemr/security/advisories/GHSA-4gh4-q39r-45wf",
-      "source": "NVD",
-      "time": "2026-06-10 14:59:59"
     }
   ]
 }
