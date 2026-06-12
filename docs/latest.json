@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-45418",
+      "title": "高危漏洞: CVE-2026-45418 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-12 07:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #132, any authenticated user who can upload videos can add multiple subtitles from different files and change their title (English, Spanish...). The POST /actions/subtitle_edit.php request used to change their title includes a number parameter which is vulnerable to SQL Injection. A boolean-based blind SQL injection can be used to exfiltrate sensitive data. This issue has been patched in version 5.5.3 - #132.",
+      "refs": "https://github.com/MacWarrior/clipbucket-v5/security/advisories/GHSA-q233-m544-6jqr",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:39"
+    },
+    {
+      "cve_id": "CVE-2026-45060",
+      "title": "高危漏洞: CVE-2026-45060 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-12 07:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #129, the actions/progress_video.php endpoint is vulnerable to blind SQL injection. Any unauthenticated user can exploit the ids parameter to execute SQL queries and exfiltrate sensitive data. This issue has been patched in version 5.5.3 - #129.",
+      "refs": "https://github.com/MacWarrior/clipbucket-v5/security/advisories/GHSA-wpq3-gxx7-c76h",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:34"
+    },
+    {
+      "cve_id": "CVE-2026-42846",
+      "title": "高危漏洞: CVE-2026-42846 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-12 07:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #140, ClipBucket's Remote Play feature allows any authenticated user to add a video by importing an external URL as the source. Some shell commands are run with the URL as a parameter. The URL is concatenated directly into shell commands without escaping then executed, so any shell metacharacter in the URL is interpreted. This results in arbitrary command execution. This issue has been patched in version 5.5.3 - #140.",
+      "refs": "https://github.com/MacWarrior/clipbucket-v5/security/advisories/GHSA-hvfx-hxmr-28c7",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:30"
+    },
+    {
+      "cve_id": "CVE-2026-49060",
+      "title": "高危漏洞: CVE-2026-49060 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-12 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in Hippoo Mobile App for WooCommerce allows Privilege Escalation.\n\nThis issue affects Hippoo Mobile App for WooCommerce: from n/a through 1.9.4.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/hippoo/vulnerability/wordpress-hippoo-mobile-app-for-woocommerce-plugin-1-9-4-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:26"
+    },
+    {
+      "cve_id": "CVE-2026-44890",
+      "title": "高危漏洞: CVE-2026-44890 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-12 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Netty is a network application framework for development of protocol servers and clients. In netty-codec-redis prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can cause DoS by sending crafted Redis payloads across multiple connections without `\\r\\n`. This exhausts the server's direct memory pool (OutOfDirectMemoryError), preventing legitimate connections from being processed. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
+      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-6ghj-frrj-jjj3",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:19"
+    },
+    {
+      "cve_id": "CVE-2026-44250",
+      "title": "高危漏洞: CVE-2026-44250 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-12 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Netty is a network application framework for development of protocol servers and clients. In netty-codec-redis prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can cause DoS by sending a crafted Redis payload with deeply nested arrays. This forces the server to allocate a massive number of state objects and collections, leading to memory exhaustion and an OutOfMemoryError. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
+      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-3244-j874-rhc2",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:15"
+    },
+    {
+      "cve_id": "CVE-2026-44249",
+      "title": "高危漏洞: CVE-2026-44249 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-12 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Netty is a network application framework for development of protocol servers and clients. In netty-handler prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can bypass IPv6 subnet rules due to an incorrect masking operation in IpSubnetFilterRule.compareTo(). Valid public IP addresses can bypass the restrictions. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
+      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-3qp7-7mw8-wx86",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:11"
+    },
+    {
+      "cve_id": "CVE-2026-42653",
+      "title": "高危漏洞: CVE-2026-42653 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-12 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in iova.Mihai SliceWP allows Stored XSS.\n\nThis issue affects SliceWP: from n/a through 1.2.6.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/slicewp/vulnerability/wordpress-slicewp-plugin-1-2-6-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:08"
+    },
+    {
+      "cve_id": "CVE-2026-42647",
+      "title": "高危漏洞: CVE-2026-42647 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-06-12 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Beardev JoomSport allows Blind SQL Injection.\n\nThis issue affects JoomSport: from n/a through 5.7.7.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/joomsport-sports-league-results-management/vulnerability/wordpress-joomsport-plugin-5-7-7-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-12 10:35:02"
+    },
+    {
+      "cve_id": "CVE-2026-39494",
+      "title": "高危漏洞: CVE-2026-39494 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-06-12 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WBW Plugins Product Filter by WBW allows Blind SQL Injection.\n\nThis issue affects Product Filter by WBW: from n/a through 3.1.2.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/woo-product-filter/vulnerability/wordpress-product-filter-by-wbw-plugin-3-1-2-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-12 10:34:57"
+    },
+    {
       "cve_id": "CVE-2026-53819",
       "title": "高危漏洞: CVE-2026-53819 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/fission/fission/pull/3391\nhttps://github.com/fission/fission/releases/tag/v1.24.0\nhttps://github.com/fission/fission/security/advisories/GHSA-gx55-f84r-v3r7",
       "source": "NVD",
       "time": "2026-06-11 04:13:13"
-    },
-    {
-      "cve_id": "CVE-2026-50563",
-      "title": "高危漏洞: CVE-2026-50563 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-11 02:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.24.0, Fission's Container Executor path lets a tenant supply Function.spec.podspec directly; the executor merges it into the executor-built podspec and creates a Deployment whose pods run the user's container image. This issue has been patched in version 1.24.0.",
-      "refs": "https://github.com/fission/fission/pull/3391\nhttps://github.com/fission/fission/releases/tag/v1.24.0\nhttps://github.com/fission/fission/security/advisories/GHSA-v455-mv2v-5g92",
-      "source": "NVD",
-      "time": "2026-06-11 04:13:08"
-    },
-    {
-      "cve_id": "CVE-2026-50545",
-      "title": "高危漏洞: CVE-2026-50545 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-11 02:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.24.0, the Environment.spec.runtime.podSpec / spec.builder.podSpec passthrough lacked validation, and MergePodSpec propagated dangerous fields into the generated pods. This issue has been patched in version 1.24.0.",
-      "refs": "https://github.com/fission/fission/pull/3390\nhttps://github.com/fission/fission/pull/3391\nhttps://github.com/fission/fission/releases/tag/v1.24.0",
-      "source": "NVD",
-      "time": "2026-06-11 04:13:03"
-    },
-    {
-      "cve_id": "CVE-2026-49824",
-      "title": "高危漏洞: CVE-2026-49824 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-11 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.24.0, the Fission Function admission webhook (pkg/webhook/function.go) validated that spec.secrets[].namespace and spec.configmaps[].namespace equalled the function's own namespace but performed no equivalent check on spec.environment.namespace. This issue has been patched in version 1.24.0.",
-      "refs": "https://github.com/fission/fission/pull/3389\nhttps://github.com/fission/fission/releases/tag/v1.24.0\nhttps://github.com/fission/fission/security/advisories/GHSA-cvw6-gfvv-953q",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:59"
-    },
-    {
-      "cve_id": "CVE-2026-49823",
-      "title": "高危漏洞: CVE-2026-49823 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-11 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.24.0, a Fission Function spec carries three reference types — Secret, ConfigMap, and Package. The first two were namespace-validated by the admission webhook; PackageRef.Namespace was not. This issue has been patched in version 1.24.0.",
-      "refs": "https://github.com/fission/fission/pull/3389\nhttps://github.com/fission/fission/releases/tag/v1.24.0\nhttps://github.com/fission/fission/security/advisories/GHSA-3r8v-2xmj-5c39",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:53"
-    },
-    {
-      "cve_id": "CVE-2026-49822",
-      "title": "高危漏洞: CVE-2026-49822 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-11 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.24.0, a low-privilege developer who could create a KubernetesWatchTrigger (KWT) in their own namespace was able to establish a persistent surveillance channel over any other namespace. This issue has been patched in version 1.24.0.",
-      "refs": "https://github.com/fission/fission/pull/3379\nhttps://github.com/fission/fission/releases/tag/v1.24.0\nhttps://github.com/fission/fission/security/advisories/GHSA-gc3j-79f2-7vvw",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:49"
-    },
-    {
-      "cve_id": "CVE-2026-49821",
-      "title": "高危漏洞: CVE-2026-49821 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-11 02:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.24.0, Fission's buildermgr controller processed Package CRDs without verifying that Package.spec.environment.namespace matched Package.metadata.namespace. This issue has been patched in version 1.24.0.",
-      "refs": "https://github.com/fission/fission/pull/3379\nhttps://github.com/fission/fission/releases/tag/v1.24.0\nhttps://github.com/fission/fission/security/advisories/GHSA-vjhc-cf4p-72q4",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:42"
-    },
-    {
-      "cve_id": "CVE-2026-46614",
-      "title": "高危漏洞: CVE-2026-46614 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-11 02:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.23.0, the Fission router registers an internal-style route — /fission-function/<name> and /fission-function/<ns>/<name> — for every Function object, independent of whether any HTTPTrigger exists for that function. The route was mounted on the same listener as user-defined HTTPTriggers (svc/router, port 8888), so any caller who could reach the router could invoke any function by guessing its metadata.name (and namespace), bypassing the host / path / method / method-allow-list restrictions encoded in HTTPTrigger objects. This issue has been patched in version 1.23.0.",
-      "refs": "https://github.com/fission/fission/pull/3365\nhttps://github.com/fission/fission/pull/3369\nhttps://github.com/fission/fission/releases/tag/v1.23.0",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:37"
-    },
-    {
-      "cve_id": "CVE-2026-46612",
-      "title": "高危漏洞: CVE-2026-46612 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-11 02:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Fission is an open-source, Kubernetes-native serverless framework that simplifies the deployment of functions and applications on Kubernetes. Prior to version 1.23.0, the Fission storagesvc component registers archive CRUD handlers (/v1/archive GET / POST / DELETE and /v1/archives list) directly on its HTTP router without performing any authentication or authorization. Any caller able to reach the storagesvc ClusterIP — including any other workload in the same Kubernetes cluster — could enumerate archive IDs, download archives belonging to other tenants, upload arbitrary archive content, and delete archives. This issue has been patched in version 1.23.0.",
-      "refs": "https://github.com/fission/fission/pull/3365\nhttps://github.com/fission/fission/pull/3368\nhttps://github.com/fission/fission/releases/tag/v1.23.0",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:32"
-    },
-    {
-      "cve_id": "CVE-2026-45062",
-      "title": "高危漏洞: CVE-2026-45062 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-11 02:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "FrankenPHP is a modern application server for PHP. From version 1.11.2 to before version 1.12.3, the splitPos() function in cgi.go misuses golang.org/x/text/search with search.IgnoreCase when the request path contains a non-ASCII byte. Two distinct flaws in that fallback let an attacker mislead FrankenPHP into treating a non-.php file as a .php script. In any deployment where the attacker can place content into a file served by FrankenPHP (uploads, file storage, etc.), this can be escalated to remote code execution by crafting a URL whose path triggers either flaw. This issue has been patched in version 1.12.3.",
-      "refs": "https://github.com/php/frankenphp/releases/tag/v1.12.3\nhttps://github.com/php/frankenphp/security/advisories/GHSA-3g8v-8r37-cgjm",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:28"
-    },
-    {
-      "cve_id": "CVE-2026-20258",
-      "title": "高危漏洞: CVE-2026-20258 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-11 02:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In Splunk Enterprise versions below 10.2.4, 10.0.7, 9.4.12, and 9.3.13, and Splunk Cloud Platform versions below 10.3.2512.11, 10.2.2510.15, 10.1.2507.23, and 9.3.2411.132, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could store a malicious script in a classic dashboard HTML panel, causing unauthorized JavaScript code to execute in the browser of another user.  \n\nThe vulnerability requires the attacker to phish the victim by tricking them into initiating a request within their browser. The low-privileged user should not be able to exploit the vulnerability at will.",
-      "refs": "https://advisory.splunk.com/advisories/SVD-2026-0608",
-      "source": "NVD",
-      "time": "2026-06-11 04:12:21"
     }
   ]
 }
