@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12183",
+      "title": "高危漏洞: CVE-2026-12183 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-14 02:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Nefteprodukttekhnika BUK TS-G Gas Station Automation System 2.9.1 through 2.10.2 on Linux contains an Improper Authentication vulnerability (CWE-287) in the system configuration module. The /php/ajax-login.php endpoint returns userid=1 (administrator) in response to any HTTP POST request that supplies arbitrary credentials (e.g., action=dologin&login=<any_value>&pwd=<any_value>), and subsequent privileged endpoints under /php/ajax-main.php and /modules/* do not validate a server-side session. A remote unauthenticated attacker can invoke any administrative action exposed by the configuration module, including reading and modifying user rules, fuel tank gauges, fuel dispensers, relays, cash registers, bank terminals, fuel cards, price and customer displays, cash collection, and pricing rules.",
+      "refs": "https://bukts.ru/repo-bukts-current\nhttps://cwe.mitre.org/data/definitions/287.html\nhttps://cwe.mitre.org/data/definitions/306.html",
+      "source": "NVD",
+      "time": "2026-06-14 05:55:42"
+    },
+    {
       "cve_id": "CVE-2026-6428",
       "title": "高危漏洞: CVE-2026-6428 (CVSS 7.6)",
       "cvss_score": 7.6,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-162-01.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-162-01",
       "source": "NVD",
       "time": "2026-06-13 01:31:52"
-    },
-    {
-      "cve_id": "CVE-2026-12066",
-      "title": "高危漏洞: CVE-2026-12066 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-12 22:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in PbootCMS up to 3.2.12. This vulnerability affects the function retrieve of the file apps/home/controller/MemberController.php of the component Password Handler. The manipulation of the argument username/password/email/checkcode results in weak password recovery. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/pbootcmspro/PbootCMS/issues/38\nhttps://github.com/yunyan05/MYCVE/tree/main/PbootCMS/V3.2.12-Account-Takeover\nhttps://vuldb.com/cve/CVE-2026-12066",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:48"
     }
   ]
 }
