@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9109",
+      "title": "高危漏洞: CVE-2026-9109 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-13 15:16:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The GPTranslate – Multilingual AI Translation for WordPress: Automatically Translate Websites plugin for WordPress is vulnerable to Stored Cross-Site Scripting via REST API Translation Storage in all versions up to, and including, 2.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The deterministically derived API key (sha256 of the site URL) is printed in the HTML source of every page via the JavaScript variable gptApiKey, meaning any unauthenticated visitor can retrieve the key and submit malicious translation payloads to the /wp-json/gptranslate/v1/request endpoint without any additional precondition.",
+      "refs": "https://plugins.trac.wordpress.org/browser/gptranslate/tags/2.27.5/assets/js/admin.js#L1\nhttps://plugins.trac.wordpress.org/browser/gptranslate/tags/2.27.5/gptranslate.php#L1134\nhttps://plugins.trac.wordpress.org/browser/gptranslate/tags/2.27.5/gptranslate.php#L3578",
+      "source": "NVD",
+      "time": "2026-06-13 19:08:33"
+    },
+    {
       "cve_id": "CVE-2026-9848",
       "title": "高危漏洞: CVE-2026-9848 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://lists.apache.org/thread/1czhgovkgzdkyp3t61wthn0foogh2grf\nhttp://www.openwall.com/lists/oss-security/2026/06/11/10",
       "source": "NVD",
       "time": "2026-06-13 01:31:39"
-    },
-    {
-      "cve_id": "CVE-2026-50632",
-      "title": "高危漏洞: CVE-2026-50632 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-12 18:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A further incomplete fix for a previous advisory CVE-2026-44417 (Untrusted JMS configuration can lead to RCE) for Apache CXF has been identified, which can allow code execution capabilities, if untrusted users are allowed to configure JMS for Apache CXF. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
-      "refs": "https://lists.apache.org/thread/740ghch5z5y675cn2kzgtyo5k37n6qcw",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:34"
     }
   ]
 }
