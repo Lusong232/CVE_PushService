@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9848",
+      "title": "高危漏洞: CVE-2026-9848 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-13 11:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The WP Ticket plugin for WordPress is vulnerable to SQL Injection via the WordPress search query parameter (`s`) in versions up to, and including, 6.0.4 The plugin hooks WordPress's `posts_request` filter with `wp_ticket_com_posts_request()`, which calls `emd_author_search_results()` when the current request is an unauthenticated front-end search. That function reads `$query->query_vars['s']` — already wp_unslash()'d by `WP_Query::parse_query()`, so wp_magic_quotes protection has been stripped — and concatenates the raw value into a SQL `LIKE` clause inside a UNION sub-SELECT appended to the main query, with no `$wpdb->prepare()` or escaping. This makes it possible for unauthenticated attackers to append additional SQL queries into already-existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-ticket/tags/6.0.4/includes/common-functions.php#L164\nhttps://plugins.trac.wordpress.org/browser/wp-ticket/tags/6.0.4/includes/common-functions.php#L174\nhttps://plugins.trac.wordpress.org/browser/wp-ticket/tags/6.0.4/includes/filter-functions.php#L22",
+      "source": "NVD",
+      "time": "2026-06-13 14:48:17"
+    },
+    {
+      "cve_id": "CVE-2026-54230",
+      "title": "高危漏洞: CVE-2026-54230 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-06-13 11:16:21",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A symlink following vulnerability was found in the ABRT post-create event handler scripts in libreport. Event scripts write output files using shell redirections without the O_NOFOLLOW flag. If the target file is replaced with a symlink, the shell process running as root follows the symlink and writes content to the symlink target, allowing arbitrary file overwrites on the system.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-54230\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2488568",
+      "source": "NVD",
+      "time": "2026-06-13 14:48:07"
+    },
+    {
+      "cve_id": "CVE-2026-54229",
+      "title": "高危漏洞: CVE-2026-54229 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-06-13 11:16:21",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A race condition was found in the abrt-dbus D-Bus service's ChownProblemDir method. ChownProblemDir opens the dump directory with DD_OPEN_READONLY and calls dd_chown to change ownership of all files to the caller's uid, succeeding even while post-create event handlers hold a write lock. This allows an attacker to gain filesystem-level control of the dump directory while privileged event scripts are still running.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-54229\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2488532",
+      "source": "NVD",
+      "time": "2026-06-13 14:47:59"
+    },
+    {
+      "cve_id": "CVE-2026-54228",
+      "title": "高危漏洞: CVE-2026-54228 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-13 11:16:21",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A time-of-check time-of-use (TOCTOU) race condition was found in the abrt-dbus D-Bus service's SetElement method. Between dump directory creation and post-create event execution, any local user can call SetElement to write arbitrary text files into the root-owned dump directory, bypassing package validation and allowing crashes of unpackaged binaries to survive post-create processing.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-54228\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2488531",
+      "source": "NVD",
+      "time": "2026-06-13 14:47:52"
+    },
+    {
       "cve_id": "CVE-2026-6676",
       "title": "高危漏洞: CVE-2026-6676 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://lists.apache.org/thread/740ghch5z5y675cn2kzgtyo5k37n6qcw",
       "source": "NVD",
       "time": "2026-06-13 01:31:34"
-    },
-    {
-      "cve_id": "CVE-2026-50631",
-      "title": "高危漏洞: CVE-2026-50631 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-06-12 18:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A race condition in AbstractOAuthDataProvider allows concurrent requests using the same Refresh Token to bypass single-use semantics and generate multiple valid Access Tokens, when 'recycleRefreshTokens' is set to false. A leaked refresh token can be replayed concurrently by multiple attackers or threads. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
-      "refs": "https://lists.apache.org/thread/s83t3x4r626o9h8rt0ryr1w7w53l1vv8\nhttp://www.openwall.com/lists/oss-security/2026/06/11/8",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:27"
-    },
-    {
-      "cve_id": "CVE-2026-50629",
-      "title": "高危漏洞: CVE-2026-50629 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-06-12 18:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "The 'clientId' parameter from incoming HTTP requests is directly concatenated into OAuth2 server log warning messages without sanitizing control characters. This allows an attacker to inject arbitrary content, including fake log entries, into the server's log files. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
-      "refs": "https://lists.apache.org/thread/xw95po30p8th58ms1no6b0f2375cql00\nhttp://www.openwall.com/lists/oss-security/2026/06/11/6",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:21"
-    },
-    {
-      "cve_id": "CVE-2026-12035",
-      "title": "高危漏洞: CVE-2026-12035 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-12 06:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Views in Google Chrome on Windows prior to 149.0.7827.115 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_01962725236.html\nhttps://issues.chromium.org/issues/520210566",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:14"
-    },
-    {
-      "cve_id": "CVE-2026-12027",
-      "title": "高危漏洞: CVE-2026-12027 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-12 06:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Headless in Google Chrome prior to 149.0.7827.115 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_01962725236.html\nhttps://issues.chromium.org/issues/517517155",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:08"
     }
   ]
 }
