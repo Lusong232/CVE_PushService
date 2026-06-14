@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-54420",
+      "title": "高危漏洞: CVE-2026-54420 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-06-14 12:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn before 5.3.2.0) mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS, as exploited in the wild in May 2026.",
+      "refs": "https://blog.litespeedtech.com/2026/06/01/security-update-for-litespeed-cpanel-plugin-2/\nhttps://www.litespeedtech.com/products/litespeed-web-server/control-panel-support/cpanel",
+      "source": "NVD",
+      "time": "2026-06-14 15:15:52"
+    },
+    {
       "cve_id": "CVE-2026-12174",
       "title": "高危漏洞: CVE-2026-12174 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-cmm3-54f8-px4j",
       "source": "NVD",
       "time": "2026-06-13 01:32:06"
-    },
-    {
-      "cve_id": "CVE-2026-44893",
-      "title": "高危漏洞: CVE-2026-44893 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-12 23:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty is a network application framework for development of protocol servers and clients. In netty-codec-haproxy prior to versions 4.1.135.Final and 4.2.15.Final, when decoding a PP2_TYPE_SSL TLV, HAProxyMessage.readNextTLV() first calls `header.retainedSlice(header.readerIndex(), length)` and only then reads the 1-byte client field and 4-byte verify field. If the attacker sets the TLV length below 5, the subsequent readByte/readInt throws IndexOutOfBoundsException. HAProxyMessageDecoder only catches HAProxyProtocolException around this call, so the IOOBE propagates and the retained slice on the pooled cumulation buffer is never released. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
-      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-cc37-9q2j-3hfv",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:57"
     }
   ]
 }
