@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12174",
+      "title": "高危漏洞: CVE-2026-12174 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-14 05:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in D-Link DCS-935L 1.10.01. This issue affects the function snprintf of the file /web/cgi-bin/greece/rhea of the component HTTP Handler. Such manipulation of the argument data leads to format string. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Real-Simplicity/cve-database/tree/main/CVE_Report_DLink_DCS935L_Format_String\nhttps://vuldb.com/cve/CVE-2026-12174\nhttps://vuldb.com/submit/837209",
+      "source": "NVD",
+      "time": "2026-06-14 10:39:07"
+    },
+    {
       "cve_id": "CVE-2026-12183",
       "title": "高危漏洞: CVE-2026-12183 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-cc37-9q2j-3hfv",
       "source": "NVD",
       "time": "2026-06-13 01:31:57"
-    },
-    {
-      "cve_id": "CVE-2026-10557",
-      "title": "高危漏洞: CVE-2026-10557 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-12 23:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Yarbo Android and iOS applications contain hard-coded MQTT broker credentials that are identical for all users and all devices. These credentials are embedded in the application binary and are readily extractable via APK decompilation. The credentials provide access to cloud MQTT brokers carrying real-time telemetry for the entire global Yarbo robot fleet. They allow both wildcard subscription to all robot telemetry topics and publishing to any robot's command topic using only the robot's serial number.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-162-01.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-162-01",
-      "source": "NVD",
-      "time": "2026-06-13 01:31:52"
     }
   ]
 }
