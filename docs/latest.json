@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12057",
+      "title": "高危漏洞: CVE-2026-12057 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-15 20:16:23",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "When the application executes the JavaScript script embedded in the PDF within the sandbox, it fails to intercept some dangerous interfaces, which allows remote scripts to be loaded, resulting in arbitrary code execution.",
+      "refs": "https://www.foxit.com/support/security-bulletins.html",
+      "source": "NVD",
+      "time": "2026-06-15 22:55:54"
+    },
+    {
+      "cve_id": "CVE-2026-50100",
+      "title": "高危漏洞: CVE-2026-50100 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-15 18:16:28",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Multiple printer drivers provided by Ricoh Company, Ltd. and KONICA MINOLTA JAPAN, INC. contain a privilege escalation vulnerability. If this vulnerability is exploited, an attacker who can log in to a computer running an affected printer driver could elevate privileges by using a specially crafted driver.",
+      "refs": "https://jp.ricoh.com/security/products/vulnerabilities/vul?id=ricoh-2025-000002\nhttps://jvn.jp/en/jp/JVN55319858/\nhttps://www.konicaminolta.jp/business/support/important/260615_01_01.html",
+      "source": "NVD",
+      "time": "2026-06-15 22:55:48"
+    },
+    {
+      "cve_id": "CVE-2026-12222",
+      "title": "高危漏洞: CVE-2026-12222 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-15 14:16:24",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Yealink SIP-T46U 108.86.0.118. Affected is the function mod_webd.BlueToothTest of the file /api/inner/bttest of the component Web FastCGI Service. Executing a manipulation of the argument btMac/pin/reserved can lead to stack-based buffer overflow. The attack needs to be done within the local network. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "http://cdn2.v50to.cc/T46U/T46U_mod_webd_BlueToothTest_off_by_one.zip\nhttps://vuldb.com/cve/CVE-2026-12222\nhttps://vuldb.com/submit/834602",
+      "source": "NVD",
+      "time": "2026-06-15 22:55:43"
+    },
+    {
+      "cve_id": "CVE-2026-12221",
+      "title": "高危漏洞: CVE-2026-12221 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-15 14:16:24",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Yealink SIP-T46U 108.86.0.118. This impacts the function sprintf of the file /api/upgrade/upgrade of the component Firmware Chunk Upload Handler. Performing a manipulation of the argument uid/start_offset results in stack-based buffer overflow. The attack needs to be approached within the local network. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "http://cdn2.v50to.cc/T46U/T46U_mod_upgrade_Upgrade_chunk_stack_overflow.zip\nhttps://vuldb.com/cve/CVE-2026-12221\nhttps://vuldb.com/submit/834207",
+      "source": "NVD",
+      "time": "2026-06-15 22:55:35"
+    },
+    {
+      "cve_id": "CVE-2026-12220",
+      "title": "高危漏洞: CVE-2026-12220 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-15 14:16:24",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Yealink SIP-T46U 108.86.0.118. This affects the function mod_upgrade.SparePartsUpload of the file /api/upgrade/accupgradebychunk of the component Firmware Chunk Upload handler. Such manipulation of the argument uid leads to stack-based buffer overflow. The attack can only be initiated within the local network. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "http://cdn2.v50to.cc/T46U/T46U_mod_upgrade_SparePartsUpload_stack_overflow.zip\nhttps://vuldb.com/cve/CVE-2026-12220\nhttps://vuldb.com/submit/834205",
+      "source": "NVD",
+      "time": "2026-06-15 22:55:30"
+    },
+    {
+      "cve_id": "CVE-2026-12218",
+      "title": "高危漏洞: CVE-2026-12218 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-15 14:16:22",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Yealink SIP-T46U 108.87.50.1. The affected element is the function StartReportInformation of the file /api/inner/beforewifitest of the component Web FastCGI Service. The manipulation of the argument port results in stack-based buffer overflow. Access to the local network is required for this attack. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "http://cdn2.v50to.cc/T46U/T46U_beforewifitest_stack_overflow.zip\nhttps://vuldb.com/cve/CVE-2026-12218\nhttps://vuldb.com/submit/834193",
+      "source": "NVD",
+      "time": "2026-06-15 22:55:24"
+    },
+    {
       "cve_id": "CVE-2026-12217",
       "title": "高危漏洞: CVE-2026-12217 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-5w86-c3rq-vjj7",
       "source": "NVD",
       "time": "2026-06-13 03:52:27"
-    },
-    {
-      "cve_id": "CVE-2026-50010",
-      "title": "高危漏洞: CVE-2026-50010 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-13 00:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, SimpleTrustManagerFactory.engineGetTrustManagers() and related paths wrap any user-supplied plain X509TrustManager in X509TrustManagerWrapper, which extends X509ExtendedTrustManager but implements the 3-arg checkServerTrusted(chain, authType, SSLEngine) by discarding the SSLEngine and calling the 2-arg delegate. Because the object now IS an X509ExtendedTrustManager, neither SunJSSE's internal AbstractTrustManagerWrapper nor Netty's own OpenSslX509TrustManagerWrapper will re-wrap it to add endpoint-identification. Consequently, even though Netty 4.2 sets endpointIdentificationAlgorithm=\"HTTPS\" by default, a client built with `SslContextBuilder.forClient().trustManager(somePlainX509TrustManager)` performs no hostname verification at all. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
-      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-c653-97m9-rcg9",
-      "source": "NVD",
-      "time": "2026-06-13 03:52:22"
-    },
-    {
-      "cve_id": "CVE-2026-48748",
-      "title": "高危漏洞: CVE-2026-48748 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-13 00:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty is a network application framework for development of protocol servers and clients. Prior to version 4.2.15.Final, a memory exhaustion vulnerability in the Netty HTTP/3 codec allows the creation of an infinite number of blocked streams, which can cause OOM error. Version 4.2.15.Final patches the issue.",
-      "refs": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-4grm-h2qv-h6w6",
-      "source": "NVD",
-      "time": "2026-06-13 03:52:16"
-    },
-    {
-      "cve_id": "CVE-2026-47691",
-      "title": "高危漏洞: CVE-2026-47691 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-06-13 00:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, Netty's `DnsResolveContext` insufficiently validates the bailiwick of NS records, enabling DNS Cache Poisoning. An attacker controlling an authoritative name server for a subdomain can poison the cache for parent domains (like `.co.uk`). In `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameServerList#add` method accepts any NS record from the AUTHORITY section as long as the record's name is a suffix of the questionName. Subsequently, the `handleWithAdditional` method caches the associated A records from the ADDITIONAL section directly into the `authoritativeDnsServerCache` under the parent domain's key. This bypasses standard bailiwick rules, where a server authoritative for a subdomain should not be trusted to provide authoritative records for its parent. The poisoned cache is then used for all future resolutions under the parent domain's key. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
-      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-5pvg-856g-cp85",
-      "source": "NVD",
-      "time": "2026-06-13 03:52:10"
-    },
-    {
-      "cve_id": "CVE-2026-7368",
-      "title": "高危漏洞: CVE-2026-7368 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-12 23:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Yarbo cloud does not enforce per-device or per-user authorization. Any client possessing valid credentials, whether the shared hard-coded credentials or legitimate per-user credentials, can subscribe to wildcard topics covering all robots globally, and can publish to any robot's command topic using only the robot's serial number (disclosed in the telemetry stream). Even after removal of hard-coded credentials from the app, a single compromised credential could still provide fleet-wide access without per-device access controls.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-162-01.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-162-01",
-      "source": "NVD",
-      "time": "2026-06-13 01:33:25"
-    },
-    {
-      "cve_id": "CVE-2026-6853",
-      "title": "高危漏洞: CVE-2026-6853 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-12 23:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper restriction of excessive authentication attempts vulnerability in Başbelen Group Food Cafe Businesses Industry and Trade Ltd. Co. Pause+ Mobile App allows Authentication Bypass.\n\nThis issue affects Pause+ Mobile App: from v1.0.6 before v1.5.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0368",
-      "source": "NVD",
-      "time": "2026-06-13 01:33:20"
-    },
-    {
-      "cve_id": "CVE-2026-6211",
-      "title": "高危漏洞: CVE-2026-6211 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-06-12 23:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Unrestricted upload of file with dangerous type vulnerability in Global IT Informatics Services Inc. WEOLL allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects WEOLL: from 2.0.9 before 3.2.45.33.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0369",
-      "source": "NVD",
-      "time": "2026-06-13 01:33:16"
     }
   ]
 }
