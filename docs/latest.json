@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12217",
+      "title": "高危漏洞: CVE-2026-12217 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-15 12:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in DVDFab Virtual Drive 2.0.0.5. Impacted is an unknown function in the library dvdfabio.sys of the component Signed Kernel Driver. The manipulation leads to improper privilege management. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-12217\nhttps://vuldb.com/submit/833857\nhttps://vuldb.com/vuln/370860",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:42"
+    },
+    {
+      "cve_id": "CVE-2026-12214",
+      "title": "高危漏洞: CVE-2026-12214 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-15 12:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Qihoo 360 Total Security 6.0. This vulnerability affects the function RpcStringBindingComposeW of the component Nucleus Engine Monitoring Logic. Performing a manipulation of the argument NetworkAddr results in protection mechanism failure. The attack requires a local approach. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/Gach0ng/vuldb_submit/issues/4\nhttps://vuldb.com/cve/CVE-2026-12214\nhttps://vuldb.com/submit/833135",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:35"
+    },
+    {
+      "cve_id": "CVE-2026-12204",
+      "title": "高危漏洞: CVE-2026-12204 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-15 10:16:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in ShopXO up to 6.7.1. This vulnerability affects the function OrderClose/OrderSuccess/PayLogOrderClose/GoodsGiveIntegral of the file app/api/controller/Crontab.php of the component Scheduled Task Endpoint. Executing a manipulation can lead to authorization bypass. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/yunyan05/MYCVE/tree/main/ShopXO/V6.7.1-Unauthenticated-Crontab-Trigger\nhttps://vuldb.com/cve/CVE-2026-12204\nhttps://vuldb.com/submit/830800",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:31"
+    },
+    {
+      "cve_id": "CVE-2026-12200",
+      "title": "高危漏洞: CVE-2026-12200 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-15 09:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in Ritlabs TinyWeb Server up to 1.94 on Win32. This impacts an unknown function in the library libeay32.dll.html of the component Header Handler. The manipulation of the argument Authorization leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://nathan2.com/posts/tinyweb/\nhttps://vuldb.com/cve/CVE-2026-12200\nhttps://vuldb.com/submit/829894",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:26"
+    },
+    {
+      "cve_id": "CVE-2026-12198",
+      "title": "高危漏洞: CVE-2026-12198 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-15 08:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Microweber up to 2.0.20. This affects the function userfiles_path of the file /api_nosession/thumbnail_img of the component API Endpoint. Executing a manipulation of the argument cache_path_relative can lead to path traversal. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/microweber/microweber/\nhttps://github.com/microweber/microweber/issues/1172\nhttps://github.com/whuHouYF/microweber-vuldb-disclosure-2026/blob/991630c494a99c70a96e456992a04de2ecb5a1e1/reports/microweber-path-traversal.md",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:22"
+    },
+    {
+      "cve_id": "CVE-2026-12197",
+      "title": "高危漏洞: CVE-2026-12197 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-15 08:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Ruijie EG105G-P 2.340. The impacted element is the function nslookup of the file /cgi-bin/luci/api/diagnose of the component JSON-RPC Diagnose Endpoint. Performing a manipulation of the argument params.target results in command injection. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/ictrun/java/issues/6\nhttps://vuldb.com/cve/CVE-2026-12197\nhttps://vuldb.com/submit/829253",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:17"
+    },
+    {
+      "cve_id": "CVE-2026-12193",
+      "title": "高危漏洞: CVE-2026-12193 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-15 08:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in VS Revo RevoUninstaller 2.5.x/2.6.x. The affected element is the function IOCtl_Handler in the library RevoDetector.sys of the component IOCTL Handler. Such manipulation leads to heap-based buffer overflow. The attack must be carried out locally. The exploit is publicly available and might be used. Upgrading to version 2.7.0 is sufficient to fix this issue. It is recommended to upgrade the affected component.",
+      "refs": "https://github.com/Kalagious/RevoDetectorExploit/tree/master\nhttps://jordanhiggins.blog/revouninstaller-pool-overflow-exploit/\nhttps://vandalsuidaho-my.sharepoint.com/:w:/g/personal/higg2059_vandals_uidaho_edu/IQAMHgdfpRAkSqDsoFVswIYNAXjPVFz-admcJyl5ITzYhu0?e=4Ywwza",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:09"
+    },
+    {
+      "cve_id": "CVE-2026-12192",
+      "title": "高危漏洞: CVE-2026-12192 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-15 08:16:43",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in GALAYOU Y4 1.0.0. Impacted is an unknown function of the component Web Server. This manipulation causes buffer overflow. The attack is only possible within the local network. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-12192\nhttps://vuldb.com/submit/825801\nhttps://vuldb.com/vuln/370838",
+      "source": "NVD",
+      "time": "2026-06-15 16:48:02"
+    },
+    {
       "cve_id": "CVE-2026-12191",
       "title": "高危漏洞: CVE-2026-12191 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1011,94 +1099,6 @@
       "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0369",
       "source": "NVD",
       "time": "2026-06-13 01:33:16"
-    },
-    {
-      "cve_id": "CVE-2026-54133",
-      "title": "高危漏洞: CVE-2026-54133 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-12 23:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "jmespath.php allows users to use JMESPath, software for declaratively specifying how to extract elements from a JSON document, in PHP applications with PHP data structures. Versions prior to 2.9.1 can generate and execute attacker-controlled PHP code when `JmesPath\\CompilerRuntime` is used with an attacker-controlled JMESPath expression. The compiler emits parsed JMESPath function names into generated PHP source without sufficient escaping. A crafted expression can cause the generated cache file to contain executable attacker-controlled PHP, which is then loaded by the compiler runtime. The issue is patched in `2.9.1` and later. As a workaround, disable `JP_PHP_COMPILE` and do not use `JmesPath\\CompilerRuntime` with attacker-controlled expressions. Use the default `AstRuntime` for untrusted expressions. Applications that must continue accepting untrusted JMESPath expressions before upgrading should ensure those expressions are never evaluated by the compiler runtime.",
-      "refs": "https://github.com/jmespath/jmespath.php/security/advisories/GHSA-pcw8-m77r-2528",
-      "source": "NVD",
-      "time": "2026-06-13 01:33:12"
-    },
-    {
-      "cve_id": "CVE-2026-53787",
-      "title": "高危漏洞: CVE-2026-53787 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-12 23:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Amasty Order Attributes for Magento 2 before version 4.0.0 contains an unauthenticated arbitrary file upload vulnerability that allows unauthenticated attackers to write arbitrary files to the store's media directory by submitting files of any type or name to the upload endpoint without authentication, session validation, or cart context. Attackers can upload PHP files to achieve remote code execution on servers where the media directory permits PHP execution, or alternatively enable malware hosting, stored cross-site scripting via HTML or SVG uploads, and path traversal to write files outside the intended upload directory.",
-      "refs": "https://amasty.com/order-attributes-for-magento-2.html\nhttps://sansec.io/research/amasty-order-attributes-file-upload\nhttps://www.vulncheck.com/advisories/amasty-order-attributes-for-magento-2-unauthenticated-arbitrary-file-upload",
-      "source": "NVD",
-      "time": "2026-06-13 01:33:04"
-    },
-    {
-      "cve_id": "CVE-2026-47210",
-      "title": "高危漏洞: CVE-2026-47210 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-12 23:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, a sandbox escape vulnerability in vm2 allows arbitrary code execution in the host process when untrusted code is executed with async support on runtimes exposing WebAssembly JSPI (WebAssembly.promising / WebAssembly.Suspending). In the tested configuration, a JSPI-backed Promise can reach Promise.prototype.finally() in a way that bypasses the expected Promise-species hardening and exposes a host-originated rejection object to attacker-controlled species logic, breaking the sandbox boundary. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/6915fa4d9bcebd47b9a4f39a1adc1aa94ef6ffc6\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-6j2x-vhqr-qr7q",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:59"
-    },
-    {
-      "cve_id": "CVE-2026-47209",
-      "title": "高危漏洞: CVE-2026-47209 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-12 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, the BaseHandler.set trap in bridge.js (line 1231) ignores the receiver parameter and unconditionally writes to the host target object. Per the Proxy set trap specification, when receiver !== proxy (e.g., when a child object inherits from the proxy via Object.create), the property assignment should create an own property on the receiver, not on the proxy target. The current implementation always calls otherReflectSet(object, key, value) against the host target, causing all inherited property writes to leak through to the host object. This bug provides an alternative attack vector for writing dangerous cross-realm Symbol keys (e.g., nodejs.util.promisify.custom) to host objects, bypassing any future per-trap isDangerousCrossRealmSymbol guard on the direct set path. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/26d0318b5e6555be4b187ba05d6cf378ccecfe22\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-c4cf-2hgv-2qv6",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:54"
-    },
-    {
-      "cve_id": "CVE-2026-47208",
-      "title": "高危漏洞: CVE-2026-47208 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-12 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, VM2 suffers from a sandbox breakout vulnerability. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/a462655009669c3124ee39498121651597529ea8\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-76w7-j9cq-rx2j",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:50"
-    },
-    {
-      "cve_id": "CVE-2026-47140",
-      "title": "高危漏洞: CVE-2026-47140 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-12 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, NodeVM blocks several dangerous Node.js builtins such as module, worker_threads, cluster, vm, repl, and inspector. However, the denylist misses process and inspector/promises. Both can be used from sandboxed code to reach host-side execution primitives. This allows sandboxed code to bypass the intended builtin restrictions and execute code in the host process. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/a1ed47a98d1cc36cb48c0d566d55889688e0b59b\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-rp36-8xq3-r6c4",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:45"
-    },
-    {
-      "cve_id": "CVE-2026-47139",
-      "title": "高危漏洞: CVE-2026-47139 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-12 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, NodeVM supports excluding public network builtins from the wildcard builtin option. With this configuration direct access to http, https, http2, net, dgram, tls, dns, and dns/promises is blocked. However, Node.js also exposes underscored internal HTTP builtins such as _http_client and _http_server. These are not blocked when the public modules are excluded. Sandboxed code can use these internal builtins to make outbound HTTP requests and open listening HTTP sockets even though the public network modules are denied. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/436053e30eecbabd487e2fd2959c137ac34e2bb1\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-r9pm-gxmw-wv6p",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:41"
-    },
-    {
-      "cve_id": "CVE-2026-47137",
-      "title": "高危漏洞: CVE-2026-47137 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-12 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, the fix for GHSA-8hg8-63c5-gwmx (CVE-2023-37903) introduced a check in nodevm.js line 263 that blocks the combination nesting: true + require: false. However, the check uses strict equality (options.require === false), which is trivially bypassed by omitting the require option entirely. When require is not specified, options.require is undefined, not false. The strict equality check fails, so the security guard is skipped. Immediately after (line 280), the destructuring default require: requireOpts = false assigns requireOpts = false, producing the exact configuration the patch was designed to prevent. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/advisories/GHSA-g644-9gfx-q4q4\nhttps://github.com/patriksimek/vm2/commit/01a7552add345d5a6862623884e6b79a85bf0568\nhttps://github.com/patriksimek/vm2/commit/86ab819f202c3a8dad88cef5705f2e416c5188d7",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:36"
     }
   ]
 }
