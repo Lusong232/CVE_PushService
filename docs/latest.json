@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12191",
+      "title": "高危漏洞: CVE-2026-12191 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-15 07:16:35",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Comma AI Openpilot 0.11. This issue affects the function pickle.load/pickle.loads of the file selfdrive/modeld/modeld.py of the component Pickle Module. The manipulation results in deserialization. The attack is only possible with local access. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-12191\nhttps://vuldb.com/submit/825699\nhttps://vuldb.com/vuln/370837",
+      "source": "NVD",
+      "time": "2026-06-15 10:44:37"
+    },
+    {
+      "cve_id": "CVE-2026-12187",
+      "title": "高危漏洞: CVE-2026-12187 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-15 07:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in GL.iNet GL-MT3000 up to 4.4.5. Affected by this vulnerability is an unknown functionality of the file /usr/bin/one_click_upgrade of the component Online Firmware Upgrade Handler. Such manipulation leads to command injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 4.7 addresses this issue. Upgrading the affected component is advised. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://fw.gl-inet.com/firmware/mt3000/release/mt3000-4.8.1-0819-1755615825.tar\nhttps://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/upgrade_online_url\nhttps://vuldb.com/cve/CVE-2026-12187",
+      "source": "NVD",
+      "time": "2026-06-15 10:44:32"
+    },
+    {
+      "cve_id": "CVE-2026-12186",
+      "title": "高危漏洞: CVE-2026-12186 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-15 05:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function replace_country in the library /usr/lib/oui-httpd/rpc/tor of the component Tor Proxy Service Configuration Handler. This manipulation causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 4.7 is able to address this issue. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://fw.gl-inet.com/firmware/mt3000/release/mt3000-4.8.1-0819-1755615825.tar\nhttps://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/tor_set_config/Readme.md\nhttps://vuldb.com/cve/CVE-2026-12186",
+      "source": "NVD",
+      "time": "2026-06-15 10:44:27"
+    },
+    {
       "cve_id": "CVE-2026-54413",
       "title": "高危漏洞: CVE-2026-54413 (CVSS 8.2)",
       "cvss_score": 8.2,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/advisories/GHSA-g644-9gfx-q4q4\nhttps://github.com/patriksimek/vm2/commit/01a7552add345d5a6862623884e6b79a85bf0568\nhttps://github.com/patriksimek/vm2/commit/86ab819f202c3a8dad88cef5705f2e416c5188d7",
       "source": "NVD",
       "time": "2026-06-13 01:32:36"
-    },
-    {
-      "cve_id": "CVE-2026-47135",
-      "title": "高危漏洞: CVE-2026-47135 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-06-12 23:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, Symbol.for override in setup-sandbox.js only intercepts 2 of 9 dangerous Node.js cross-realm symbols. Combined with the bridge's set/defineProperty/deleteProperty traps having no isDangerousCrossRealmSymbol key check, sandbox code can obtain real cross-realm symbols, write them to host objects, and control host-side behavior — verified with a full util.promisify hijack chain. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/928aef51898b5c52a05f05a40c4cfeb52e172878\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-m5q2-4fm3-vfqp",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:31"
-    },
-    {
-      "cve_id": "CVE-2026-47131",
-      "title": "高危漏洞: CVE-2026-47131 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-12 23:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, by combining Buffer.call.call({}.__lookupGetter__, Buffer, \"__proto__\"), Buffer.call.call({}.__lookupSetter__, Buffer, \"__proto__\"), and Node.js's ERR_INVALID_ARG_TYPE Error, the host's TypeError constructor can be obtained, which allows the escape from the sandbox. This allows attackers to run arbitrary code. This issue has been patched in version 3.11.4.",
-      "refs": "https://github.com/patriksimek/vm2/commit/27c525f4615e2b983f122e2bed327d810126f5c8\nhttps://github.com/patriksimek/vm2/releases/tag/v3.11.4\nhttps://github.com/patriksimek/vm2/security/advisories/GHSA-v6mx-mf47-r5wg",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:26"
-    },
-    {
-      "cve_id": "CVE-2026-46340",
-      "title": "高危漏洞: CVE-2026-46340 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-12 23:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty is a network application framework for development of protocol servers and clients. In versions of netty-transport-sctp prior to 4.1.135.Final and 4.2.15.Final, for each non-complete SctpMessage fragment the handler does `fragments.put(streamId, Unpooled.wrappedBuffer(frag, byteBuf))`, wrapping the previous accumulator and the new slice into a *new* CompositeByteBuf every time. After N fragments the accumulator is an N-deep chain of composites, each holding references and component arrays; readableBytes()/getBytes() on the final buffer recurse N levels. There is no limit on N, on total bytes, or on the number of streamIdentifiers an attacker can open (each gets its own map entry). A peer that never sets the `complete` flag can grow this structure indefinitely from tiny 1-byte DATA chunks. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
-      "refs": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final\nhttps://github.com/netty/netty/releases/tag/netty-4.2.15.Final\nhttps://github.com/netty/netty/security/advisories/GHSA-5xrh-qmmq-w6ch",
-      "source": "NVD",
-      "time": "2026-06-13 01:32:21"
     }
   ]
 }
