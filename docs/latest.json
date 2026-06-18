@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12505",
+      "title": "高危漏洞: CVE-2026-12505 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-18 12:16:44",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in the cifs-utils package where the cifs.upcall helper fails to securely drop its root privileges before looking up user information inside a user-controlled environment. A local, low privileged attacker can exploit this by using a crafted request_key payload to trick the root-owned helper into entering a custom environment (namespace) containing a malicious NSS module. This forces the system to load the attacker's controlled NSS Module and configuration, allowing them to execute arbitrary commands as the root user, elevating their privileges and fully compromising the system.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-12505\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2489805\nhttps://git.samba.org/?p=cifs-utils.git;a=commit;h=972c5b5ff95e3e812bc8daa72d0383654ab0dba7",
+      "source": "NVD",
+      "time": "2026-06-18 15:27:47"
+    },
+    {
+      "cve_id": "CVE-2026-12407",
+      "title": "高危漏洞: CVE-2026-12407 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-18 12:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The E2Pdf – Export Pdf Tool for WordPress plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 1.32.26. This is due to the screen_action() function lacking a dedicated capability check and nonce verification — when invoked via the ?action=screen routing path the controller's index_action() nonce gate is bypassed entirely — while reading an attacker-controlled option name and value from $_POST['wp_screen_options'] and passing them directly to update_option() with no allowlist, relying solely on the page-level e2pdf_templates capability which the plugin's own Permissions UI allows administrators to grant to any role including Subscriber, Contributor, Author, or Editor. This makes it possible for authenticated attackers, with a custom role that has been granted the e2pdf_templates capability, to overwrite arbitrary WordPress options such as default_role and thereby escalate their privileges to administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/e2pdf/tags/1.32.11/classes/controller/e2pdf-templates.php#L1233\nhttps://plugins.trac.wordpress.org/browser/e2pdf/tags/1.32.11/classes/controller/e2pdf-templates.php#L1235\nhttps://plugins.trac.wordpress.org/browser/e2pdf/tags/1.32.11/classes/controller/e2pdf-templates.php#L23",
+      "source": "NVD",
+      "time": "2026-06-18 15:27:43"
+    },
+    {
+      "cve_id": "CVE-2026-48768",
+      "title": "高危漏洞: CVE-2026-48768 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-06-18 08:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "description": "TypeBot is a chatbot builder tool. In versions 3.16.1 and earlier, POST /api/blocks/file-input/v3/generate-upload-url is unauthenticated and uses unsanitized fileName input to construct public/ S3 object keys, while issuing presigned PUT URLs that do not bind Content-Type. As a result, any anonymous visitor to a published bot with a file input can upload attacker-controlled HTML, SVG, or JS to attacker-chosen subpaths, including other tenants’ publicly served result paths, enabling arbitrary content hosting and potential stored XSS on the storage origin. ../ traversal is blocked by S3/MinIO canonicalization (signature mismatch), but forward-slash path injection is exploitable. This issue has been fixed in version 3.17.0.",
+      "refs": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.17.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-fp7x-6pqh-vhvf",
+      "source": "NVD",
+      "time": "2026-06-18 15:27:38"
+    },
+    {
+      "cve_id": "CVE-2026-48764",
+      "title": "高危漏洞: CVE-2026-48764 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-18 08:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "TypeBot is a chatbot builder tool. In versions prior to 3.17.2, SSRF validation is implemented by resolving a hostname once and checking whether the resolved IP belongs to a forbidden range allowing for DNS rebinding bypass. The root cause is a time-of-check to time-of-use gap in the SSRF guard. The validator resolves the hostname and approves it, but the later request path performs a fresh resolution and connects to whatever IP the hostname maps to at that moment. The actual outbound request is then performed later using the original hostname, without pinning the validated IP to the network connection. An attacker who can supply a URL to a public bot that performs a server-side HTTP Request block or server-side script fetch can use DNS rebinding to pass the initial validation and still force the server to connect to a private or metadata address during the real request. This enables server-side access to private network services, cloud metadata endpoints, and other internal HTTP targets that the validator was intended to block. The exact downstream impact depends on the reachable internal services. Concrete consequences include metadata disclosure, access to internal admin panels, credential theft from metadata services, and further compromise through internal-only HTTP interfaces. This issue has been fixed in version 3.17.2.",
+      "refs": "https://github.com/baptisteArno/typebot.io/commit/f56c3c3f771df13a8c11e88f500dfdd78981bed1\nhttps://github.com/baptisteArno/typebot.io/releases/tag/v3.17.2\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-hgqq-whf5-mrrf",
+      "source": "NVD",
+      "time": "2026-06-18 15:27:32"
+    },
+    {
       "cve_id": "CVE-2026-53676",
       "title": "高危漏洞: CVE-2026-53676 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1055,50 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/kastell/vulnerability/wordpress-kastell-theme-2-0-local-file-inclusion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-18 02:26:46"
-    },
-    {
-      "cve_id": "CVE-2026-49108",
-      "title": "高危漏洞: CVE-2026-49108 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-17 22:17:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Moderno < 1.43 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/moderno/vulnerability/wordpress-moderno-theme-1-43-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:41"
-    },
-    {
-      "cve_id": "CVE-2026-40757",
-      "title": "高危漏洞: CVE-2026-40757 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Château <= 1.2.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/chateau/vulnerability/wordpress-chateau-theme-1-2-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:37"
-    },
-    {
-      "cve_id": "CVE-2026-40756",
-      "title": "高危漏洞: CVE-2026-40756 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Zoya <= 1.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/zoya/vulnerability/wordpress-zoya-theme-1-4-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:30"
-    },
-    {
-      "cve_id": "CVE-2026-40752",
-      "title": "高危漏洞: CVE-2026-40752 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Manufaktur Solutions <= 1.1.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/manufaktursolutions/vulnerability/wordpress-manufaktur-solutions-theme-1-1-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:26"
     }
   ]
 }
