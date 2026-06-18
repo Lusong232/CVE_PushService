@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8461",
+      "title": "高危漏洞: CVE-2026-8461 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-18 22:17:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An out-of-bounds write vulnerability in FFmpeg's libavcodec library, specifically in the MagicYUV decoder, allows denial-of-service and, in some cases, can be exploited for remote code execution.\n\n This vulnerability is associated with the file libavcodec/magicyuv.C.\n\n\n\nThis issue affects FFmpeg before version 8.1.2.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23159",
+      "source": "NVD",
+      "time": "2026-06-19 01:55:44"
+    },
+    {
+      "cve_id": "CVE-2026-8024",
+      "title": "高危漏洞: CVE-2026-8024 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-18 22:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A remote, unauthenticated attacker may exploit a deserialization of untrusted data vulnerability in ibaPDA or ibaDatCoordinator to gain full access to the affected systems.",
+      "refs": "https://certvde.com/en/advisories/VDE-2026-051\nhttps://iba.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-051.json",
+      "source": "NVD",
+      "time": "2026-06-19 01:55:39"
+    },
+    {
+      "cve_id": "CVE-2026-56012",
+      "title": "高危漏洞: CVE-2026-56012 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-06-18 22:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in David Lingren Media LIbrary Assistant allows Blind SQL Injection.\n\nThis issue affects Media LIbrary Assistant: from n/a through 3.35.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/media-library-assistant/vulnerability/wordpress-media-library-assistant-plugin-3-35-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-19 01:55:34"
+    },
+    {
+      "cve_id": "CVE-2026-54419",
+      "title": "高危漏洞: CVE-2026-54419 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-18 22:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "claudiopizzillo PIAF-HMS (PBX-In-A-Flash Hotel Management System; no released versions, latest commit 389d2633441b65ced1c104212cd62be2bfca21e5) contains multiple unauthenticated SQL injection vulnerabilities. The application has no authentication mechanism and passes user-supplied HTTP parameters directly into deprecated mysql_query() calls via string concatenation, without sanitization, escaping, or parameterization. Affected sinks include rooms.php (DELETE FROM Rooms WHERE ID = $_GET['ID'], unquoted numeric context), checkuser.php (WHERE Ext = '$_GET[\"Ext\"]'), ec.php (date/extension parameters in a WHERE), checkin.php and wakeup.php ($_POST values into INSERT statements), bills.php ($_POST fields built into a WHERE clause), and rates.php and checkout.php. A remote, unauthenticated attacker can inject arbitrary SQL to read, modify, or delete arbitrary records in the backing database (e.g. rooms.php?ID=1 OR 1=1 deletes all room records). Note: queries run via the legacy mysql_* extension, which does not permit stacked statements.",
+      "refs": "https://github.com/claudiopizzillo/PIAF-HMS\nhttps://github.com/claudiopizzillo/PIAF-HMS/blob/389d2633441b65ced1c104212cd62be2bfca21e5/ec.php#L57\nhttps://github.com/claudiopizzillo/PIAF-HMS/blob/389d2633441b65ced1c104212cd62be2bfca21e5/rooms.php#L16",
+      "source": "NVD",
+      "time": "2026-06-19 01:55:29"
+    },
+    {
+      "cve_id": "CVE-2026-8050",
+      "title": "高危漏洞: CVE-2026-8050 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-18 06:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In SignalRGB versions prior to 1.3.7.0, seven of the thirteen IOCTL handlers dereference the SystemBuffer pointer without first verifying that it is non-NULL. Sending an IOCTL with an empty input buffer causes a NULL pointer dereference, resulting in a kernel crash.",
+      "refs": "https://kb.cert.org/vuls/id/380058",
+      "source": "NVD",
+      "time": "2026-06-19 01:55:21"
+    },
+    {
       "cve_id": "CVE-2026-55746",
       "title": "高危漏洞: CVE-2026-55746 (CVSS 7.6)",
       "cvss_score": 7.6,
@@ -1044,61 +1099,6 @@
       "refs": "https://my.f5.com/manage/s/article/K000161611",
       "source": "NVD",
       "time": "2026-06-18 02:27:46"
-    },
-    {
-      "cve_id": "CVE-2026-55738",
-      "title": "高危漏洞: CVE-2026-55738 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-17 22:18:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A stack-based buffer overflow exists in the raw_to_header() function in src/microtar.c in rxi microtar 0.1.0. The function copies the 100-byte name and linkname fields of a TAR header with strcpy() without guaranteeing null termination of the source. The POSIX ustar format permits these fixed-width fields to be fully populated with non-null bytes, so a crafted archive whose linkname field (followed by the trailing padding of the 512-byte raw header) contains no null terminator causes strcpy() to read past the end of the 512-byte raw header stack buffer and to write past the destination header buffer. A remote attacker who supplies a crafted TAR archive that the victim opens or parses (via mtar_open(), mtar_read_header(), or mtar_find()) can cause an out-of-bounds read and a stack buffer overflow, resulting in denial of service (crash) and potentially arbitrary code execution. Confirmed with AddressSanitizer: stack-buffer-overflow READ of size 356 in raw_to_header at src/microtar.c:112.",
-      "refs": "https://github.com/rxi/microtar\nhttps://github.com/rxi/microtar/blob/master/src/microtar.c#L111\nhttps://raw.githubusercontent.com/rxi/microtar/master/src/microtar.c",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:38"
-    },
-    {
-      "cve_id": "CVE-2026-54819",
-      "title": "高危漏洞: CVE-2026-54819 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-17 22:17:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Webilia Inc. Listdom allows Blind SQL Injection.\n\nThis issue affects Listdom: from n/a through 5.4.0.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/listdom/vulnerability/wordpress-listdom-plugin-5-4-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:34"
-    },
-    {
-      "cve_id": "CVE-2026-54818",
-      "title": "高危漏洞: CVE-2026-54818 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-17 22:17:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in VeronaLabs Slimstat Analytics allows Blind SQL Injection.\n\nThis issue affects Slimstat Analytics: from n/a through 5.4.11.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-slimstat/vulnerability/wordpress-slimstat-analytics-plugin-5-4-11-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:29"
-    },
-    {
-      "cve_id": "CVE-2026-54816",
-      "title": "高危漏洞: CVE-2026-54816 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-17 22:17:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Monetizemore Advanced Ads allows Remote Code Inclusion.\n\nThis issue affects Advanced Ads: from n/a through 2.0.21.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/advanced-ads/vulnerability/wordpress-advanced-ads-plugin-2-0-21-remote-code-execution-rce-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:25"
-    },
-    {
-      "cve_id": "CVE-2026-54815",
-      "title": "高危漏洞: CVE-2026-54815 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-17 22:17:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Cargo RD Cargo Shipping Location for WooCommerce allows Blind SQL Injection.\n\nThis issue affects Cargo Shipping Location for WooCommerce: from n/a through 5.6.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/cargo-shipping-location-for-woocommerce/vulnerability/wordpress-cargo-shipping-location-for-woocommerce-plugin-5-6-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:21"
     }
   ]
 }
