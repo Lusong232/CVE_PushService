@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-53676",
+      "title": "高危漏洞: CVE-2026-53676 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-18 07:17:04",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ThingsBoard contains a prototype pollution vulnerability which may lead to arbitrary code execution within a sandboxed context by a user who can log in to the affected product with the tenant administrator privilege (TENANT_ADMIN).",
+      "refs": "https://github.com/thingsboard/thingsboard/pull/15600\nhttps://jvn.jp/en/jp/JVN16937365/\nhttps://thingsboard.io/docs/releases/releases-table/",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:41"
+    },
+    {
+      "cve_id": "CVE-2026-48759",
+      "title": "高危漏洞: CVE-2026-48759 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-18 07:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "TypeBot is a chatbot builder tool. Versions 3.15.2 and below have an Insecure Direct Object Reference vulnerability through cross-workspace Theme Template modification and deletion. The handleSaveThemeTemplate and handleDeleteThemeTemplate handlers validate that the authenticated user is a non-guest member of the provided workspaceId, but then operate on themeTemplateId via Prisma queries that do NOT include workspaceId in the WHERE clause. This allows any authenticated user to modify or delete theme templates belonging to any other workspace and may expose Template IDs via shared typebots or network traffic. This issue has been fixed in version 3.16.0.",
+      "refs": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.16.0\nhttps://github.com/baptisteArno/typebot.io/security/advisories/GHSA-qv4p-4mp3-pvpv",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:36"
+    },
+    {
+      "cve_id": "CVE-2026-45617",
+      "title": "高危漏洞: CVE-2026-45617 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-18 07:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "LiquidJS is a Shopify/GitHub Pages compatible template engine written in pure JavaScript. In versions 10.25.7 and below, the built-in strip_html filter uses a regex containing four flawed lazy-quantified alternatives, leading to ReDoS via quadratic backtracking. When the input contains many <script, <style, or <!-- opener tokens without matching closers, the V8 regex engine performs O(N²) backtracking, blocking the Node.js event loop. A single ~350 KB request ('<script'.repeat(50000)) stalls the process for ~10 seconds; cost grows quadratically with input size. The default memoryLimit: Infinity does not bound regex CPU, and even when configured strip_html only charges str.length to the limit — the regex itself runs unbounded.  A single unauthenticated request containing crafted untrusted input can cause severe event-loop blocking and CPU amplification that saturates Node.js workers while bypassing memoryLimit protections. This issue has been fixed in version 10.26.0.",
+      "refs": "https://github.com/harttle/liquidjs/commit/3616a744b9abeb425c217b340a2397d46176afb8\nhttps://github.com/harttle/liquidjs/releases/tag/v10.26.0\nhttps://github.com/harttle/liquidjs/security/advisories/GHSA-r7g9-xpmj-5fcq",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:32"
+    },
+    {
+      "cve_id": "CVE-2026-45357",
+      "title": "高危漏洞: CVE-2026-45357 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-18 07:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "LiquidJS is a Shopify/GitHub Pages compatible template engine written in pure JavaScript. In versions 10.25.7 and below, the date filter's strftime implementation parses width specifiers like %9999999d and forwards the captured width unchecked into pad()/padStart(), leading to memory and render limit bypass. In src/util/underscore.ts, the pad loop performs unbounded string concatenation without consulting the Context's memoryLimit or renderLimit, so a single small template ({{ x | date: '%5000000d' }}) produces megabytes of output and unbounded CPU. The memoryLimit and renderLimit options the docs (src/liquid-options.ts:87-92) advertise as DoS controls — and which the docstring explicitly mentions for strftime — are entirely bypassed. Exploitation can cause large memory allocations, high CPU usage, or OOM crashes per render. This issue has been fixed in version 10.26.0.",
+      "refs": "https://github.com/harttle/liquidjs/commit/3129d46dc95efa357b00e5a57ee1af80a13d72ed\nhttps://github.com/harttle/liquidjs/releases/tag/v10.26.0\nhttps://github.com/harttle/liquidjs/security/advisories/GHSA-hh27-hf48-9f5q",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:28"
+    },
+    {
+      "cve_id": "CVE-2026-50200",
+      "title": "高危漏洞: CVE-2026-50200 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-18 06:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Steeltoe is an open source project that provides a collection of libraries that helps users build cloud-native applications. In Steeltoe.Management.Endpoint prior to version 4.2.0 and Steeltoe.Management.EndpointCore prior to version 3.4.0, the `Sanitizer` component in the Environment actuator redacts configuration values by matching the configuration key name against a suffix list. The default list (`password`, `secret`, `key`, `token`, `.*credentials.*`, `vcap_services`) does not cover the standard .NET pattern `ConnectionStrings:<name>` or Steeltoe Connectors' `Steeltoe:Client:<type>:Default:ConnectionString`. There is no value-based scrubbing, so full connection string values including embedded `Password=` and `user:pass@host` segments are returned verbatim in `/actuator/env` responses. Steeltoe.Management.Endpoint 4.2.0 and Steeltoe.Management.EndpointCore 3.4.0 patch the issue. If an immediate upgrade is not possible: On the standard path, remove `env` from the actuator exposure list; add `.*connectionstring.*` to `KeysToSanitize` as a defense-in-depth measure for both paths; and/or require authorization on actuator endpoints.",
+      "refs": "https://github.com/SteeltoeOSS/Steeltoe/commit/bef9f14b710232fca3fbe87e48fdd1b9e6b60d43\nhttps://github.com/SteeltoeOSS/Steeltoe/commit/e50cd31a429b191841120f0d38fa9dda8f751b0a\nhttps://github.com/SteeltoeOSS/security-advisories/security/advisories/GHSA-q62h-354g-5r85",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:23"
+    },
+    {
+      "cve_id": "CVE-2026-50196",
+      "title": "高危漏洞: CVE-2026-50196 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-18 06:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Steeltoe is an open source project that provides a collection of libraries that helps users build cloud-native applications. In Steeltoe.Discovery.Eureka prior to versions 4.2.0 and 3.4.0, `DataCenterInfo.FromJson` throws `ArgumentException` for any `name` value other than `\"MyOwn\"` or `\"Amazon\"`, despite the Java Eureka specification defining a third valid value: `\"Netflix\"`. The exception propagates through the entire registry deserialization chain and is swallowed by the periodic cache refresh task, leaving the local service registry permanently empty or stale. Versions 4.2.0 and 3.4.0 patch the issue. If an immediate upgrade is not possible, remove any registrations using unsupported `DataCenterInfo.name` values from the registry. In mixed Java/Spring and Steeltoe environments, audit for the `Netflix` data center type before deploying Steeltoe Eureka clients.",
+      "refs": "https://github.com/SteeltoeOSS/Steeltoe/commit/b8ed8557bb595863e4f340051d16b26ba40a75f4\nhttps://github.com/SteeltoeOSS/Steeltoe/commit/c34a7399e808d0d11dd977460e81df1f2722df28\nhttps://github.com/SteeltoeOSS/security-advisories/security/advisories/GHSA-j8ph-6fxj-g533",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:16"
+    },
+    {
+      "cve_id": "CVE-2026-50194",
+      "title": "高危漏洞: CVE-2026-50194 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-18 06:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Steeltoe is an open source project that provides a collection of libraries that helps users build cloud-native applications. When Steeltoe management endpoints versions 3.2.2 through 3.3.0 and 4.1.0 are configured to listen on an alternate port (`Management:Endpoints:Port` is configured), the middleware responsible for restricting access to the endpoints uses the `Host` HTTP header rather than the actual network socket port. Versions 3.4.0 and 4.2.0 patch the issue. If an immediate upgrade to a patched version is not possible, add explicit ASP.NET Core authorization (`RequireAuthorization`) to all sensitive actuator endpoints as a defense-in-depth measure independent of port isolation and/or configure the reverse proxy or load balancer to enforce the `Host` header value and prevent clients from setting an arbitrary port.",
+      "refs": "https://github.com/SteeltoeOSS/Steeltoe/commit/4cbc352fe89ac2e6c609554e435ab28996fec5e9\nhttps://github.com/SteeltoeOSS/Steeltoe/commit/b7ca93c510aaa08d7e4ebec40ce20c5811c2c4b6\nhttps://github.com/SteeltoeOSS/security-advisories/security/advisories/GHSA-58f6-6rj2-3v8r",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:07"
+    },
+    {
+      "cve_id": "CVE-2026-48997",
+      "title": "高危漏洞: CVE-2026-48997 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-18 06:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:H",
+      "description": "e107 is a content management system (CMS). Versions  2.3.5 and earlier contain a command injection vulnerability in the ImageMagick resize destination path. In resize_image(), the source path is escaped with escapeshellarg(), but the destination path is inserted inside raw double quotes in the convert command; in the submit-news upload flow, that destination filename includes the first six characters of user-controlled news title input. Because the title filter removes literal spaces but not tab characters, and shell expansions such as $(...) and backticks can survive into the quoted destination argument, /bin/sh -c may evaluate attacker-controlled input. Exploitation is possible only when all of the following non-default settings are enabled: resize_method=ImageMagick, subnews_attach=1, upload_enabled=1, subnews_resize is numeric between 30 and 5000, and the attacker is a non-admin in classes permitted by both subnews_class and upload_class. This issue has been fixed in version 2.3.6.",
+      "refs": "https://github.com/e107inc/e107/releases/tag/v2.3.6\nhttps://github.com/e107inc/e107/security/advisories/GHSA-3j33-c9v4-4p42",
+      "source": "NVD",
+      "time": "2026-06-18 10:40:01"
+    },
+    {
+      "cve_id": "CVE-2026-12530",
+      "title": "高危漏洞: CVE-2026-12530 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-18 06:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Improper neutralization of argument delimiters in the install_packages() method in AWS Bedrock AgentCore Python SDK versions >= 1.1.3 and < 1.6.1 might allow a remote authenticated user to execute arbitrary commands within the Code Interpreter sandbox via crafted package name arguments.\n\n\n\nTo mitigate this issue, users should upgrade to version 1.6.1.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-044-aws/\nhttps://pypi.org/project/bedrock-agentcore/1.6.1/",
+      "source": "NVD",
+      "time": "2026-06-18 10:39:55"
+    },
+    {
       "cve_id": "CVE-2026-48979",
       "title": "高危漏洞: CVE-2026-48979 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1000,105 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/manufaktursolutions/vulnerability/wordpress-manufaktur-solutions-theme-1-1-1-php-object-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-18 02:26:26"
-    },
-    {
-      "cve_id": "CVE-2026-40738",
-      "title": "高危漏洞: CVE-2026-40738 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Eldon <= 1.4.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/eldon/vulnerability/wordpress-eldon-theme-1-4-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:21"
-    },
-    {
-      "cve_id": "CVE-2026-40733",
-      "title": "高危漏洞: CVE-2026-40733 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in ShiftUp <= 1.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/shiftup/vulnerability/wordpress-shiftup-theme-1-3-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:16"
-    },
-    {
-      "cve_id": "CVE-2026-40720",
-      "title": "高危漏洞: CVE-2026-40720 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-17 22:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Royal Elementor Addons Pro < 1.7.1041 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpr-addons-pro/vulnerability/wordpress-royal-elementor-addons-pro-plugin-1-7-1041-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:12"
-    },
-    {
-      "cve_id": "CVE-2026-39590",
-      "title": "高危漏洞: CVE-2026-39590 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Local File Inclusion in Atomlab <= 2.4.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/atomlab/vulnerability/wordpress-atomlab-theme-2-4-5-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:07"
-    },
-    {
-      "cve_id": "CVE-2026-39576",
-      "title": "高危漏洞: CVE-2026-39576 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in SingleMalt <= 1.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/singlemalt/vulnerability/wordpress-singlemalt-theme-1-5-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:03"
-    },
-    {
-      "cve_id": "CVE-2026-39560",
-      "title": "高危漏洞: CVE-2026-39560 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Hiroshi <= 1.5.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/hiroshi/vulnerability/wordpress-hiroshi-theme-1-5-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:25:55"
-    },
-    {
-      "cve_id": "CVE-2026-39559",
-      "title": "高危漏洞: CVE-2026-39559 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Local File Inclusion in Uppercase < 1.2.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/uppercase/vulnerability/wordpress-uppercase-theme-1-2-2-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:25:51"
-    },
-    {
-      "cve_id": "CVE-2026-39556",
-      "title": "高危漏洞: CVE-2026-39556 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Konsept <= 1.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/konsept/vulnerability/wordpress-konsept-theme-1-9-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:25:47"
-    },
-    {
-      "cve_id": "CVE-2026-39523",
-      "title": "高危漏洞: CVE-2026-39523 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Local File Inclusion in Solene Core <= 2.3.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/solene-core/vulnerability/wordpress-solene-core-plugin-2-3-2-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:25:43"
     }
   ]
 }
