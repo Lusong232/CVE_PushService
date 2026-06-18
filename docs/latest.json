@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-55746",
+      "title": "高危漏洞: CVE-2026-55746 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-06-18 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to stored Cross-Site Scripting in the Personal File Storage (PFS) module. A folder title (pff_title) is imported with the 'TXT' filter, which does not strip or encode HTML (the tag check in cot_import is disabled), so an authenticated user can store HTML/JavaScript in a folder title. In modules/pfs/inc/pfs.main.php the title is assigned to the template variable PFF_ROW_TITLE without htmlspecialchars(), and modules/pfs/tpl/pfs.tpl outputs {PFF_ROW_TITLE} unescaped. When the folder listing is viewed (including by other users for public folders), the injected script executes in the victim's browser.",
+      "refs": "https://github.com/Cotonti/Cotonti\nhttps://github.com/Cotonti/Cotonti/blob/f43f1fc38ba4e02027786dad9dac1435c7c52b30/modules/pfs/inc/pfs.main.php#L396",
+      "source": "NVD",
+      "time": "2026-06-18 20:17:33"
+    },
+    {
+      "cve_id": "CVE-2026-55744",
+      "title": "高危漏洞: CVE-2026-55744 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-18 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to Cross-Site Request Forgery in the Personal File Storage (PFS) module. In modules/pfs/inc/pfs.main.php, the file upload action ('a=upload') processes uploaded files without calling cot_check_xg() to validate the anti-CSRF token, even though sibling actions such as 'delete' (line 272) do. A remote attacker who lures an authenticated user into visiting a malicious page can force the browser to submit a forged multipart request that uploads arbitrary files into the victim's PFS storage.",
+      "refs": "https://github.com/Cotonti/Cotonti\nhttps://github.com/Cotonti/Cotonti/blob/f43f1fc38ba4e02027786dad9dac1435c7c52b30/modules/pfs/inc/pfs.main.php#L118",
+      "source": "NVD",
+      "time": "2026-06-18 20:17:27"
+    },
+    {
+      "cve_id": "CVE-2026-55742",
+      "title": "高危漏洞: CVE-2026-55742 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-18 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to Cross-Site Request Forgery in the administration rights handler. In system/admin/admin.rights.php, the rights update action ('a=update') modifies group access rights (including via cot_auth_add_group) without calling cot_check_xg() to validate the anti-CSRF token. A remote attacker who lures an authenticated administrator into visiting a malicious page can force the browser to submit a forged request that grants elevated permissions to an attacker-controlled group, escalating privileges to administrator. Because Cotonti administrators can modify templates and configuration, this can be further leveraged toward remote code execution.",
+      "refs": "https://github.com/Cotonti/Cotonti\nhttps://github.com/Cotonti/Cotonti/blob/f43f1fc38ba4e02027786dad9dac1435c7c52b30/system/admin/admin.rights.php#L53",
+      "source": "NVD",
+      "time": "2026-06-18 20:17:21"
+    },
+    {
+      "cve_id": "CVE-2026-55741",
+      "title": "高危漏洞: CVE-2026-55741 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-18 16:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to Cross-Site Request Forgery in the administration configuration handler. In system/admin/admin.config.php, the configuration update action ('a=update') processes POST data via cot_config_update_options() without calling cot_check_xg() to validate the anti-CSRF token (the 'x' parameter), unlike other admin handlers (e.g. admin.structure.php, admin.cache.php). A remote attacker who lures an authenticated administrator into visiting a malicious page can force the browser to submit a forged request that modifies arbitrary core, module, or plugin configuration options, which can be leveraged to weaken security or enable further compromise.",
+      "refs": "https://github.com/Cotonti/Cotonti\nhttps://github.com/Cotonti/Cotonti/blob/f43f1fc38ba4e02027786dad9dac1435c7c52b30/system/admin/admin.config.php#L55",
+      "source": "NVD",
+      "time": "2026-06-18 20:17:15"
+    },
+    {
+      "cve_id": "CVE-2026-11395",
+      "title": "高危漏洞: CVE-2026-11395 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-18 16:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The CF7 to Webhook plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 5.0.0 via the pull_the_trigger. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. Exploitation requires that the admin-configured webhook URL contains a Contact Form 7 field placeholder in the host segment of the URL, and that the affected form is publicly accessible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/cf7-to-zapier/tags/5.0.0/modules/cf7/class-module-cf7.php#L351\nhttps://plugins.trac.wordpress.org/browser/cf7-to-zapier/tags/5.0.0/modules/cf7/class-module-cf7.php#L524\nhttps://plugins.trac.wordpress.org/browser/cf7-to-zapier/tags/5.0.0/modules/zapier/class-module-zapier.php#L150",
+      "source": "NVD",
+      "time": "2026-06-18 20:17:08"
+    },
+    {
+      "cve_id": "CVE-2026-9860",
+      "title": "高危漏洞: CVE-2026-9860 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-18 14:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Offload, AI & Optimize with Cloudflare Images plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.10.2 via the 'account-id' parameter parameter. This is due to insufficient privilege enforcement on the cf_images_do_setup AJAX handler, which requires only the upload_files capability (Author+) rather than manage_options before writing to wp-config.php, combined with the absence of single-quote escaping — sanitize_text_field() does not strip single quotes, and filter_input(INPUT_POST) bypasses wp_magic_quotes() slashing — allowing a single quote in the account-id or api-key parameter to break out of the single-quoted PHP string literal in the write_config() define() statement. This makes it possible for authenticated attackers, with author-level access and above, to execute code on the server. This is possible because the 'cf-images-nonce' nonce required by the AJAX handler is exposed to all Author-level and above users on wp-admin/upload.php via the CFImages JavaScript object, meaning any upload-capable user can satisfy the nonce check and reach the vulnerable wp-config.php write path.",
+      "refs": "https://plugins.trac.wordpress.org/browser/cf-images/tags/1.10.1/app/class-media.php#L94\nhttps://plugins.trac.wordpress.org/browser/cf-images/tags/1.10.1/app/class-settings.php#L123\nhttps://plugins.trac.wordpress.org/browser/cf-images/tags/1.10.1/app/class-settings.php#L75",
+      "source": "NVD",
+      "time": "2026-06-18 20:17:02"
+    },
+    {
+      "cve_id": "CVE-2026-55740",
+      "title": "高危漏洞: CVE-2026-55740 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-18 14:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Nur-Alam39 bus-ticket (no released versions; latest commit 459cabdbeb99c00225b26e46e3c2c30ae1de7bad) contains an unauthenticated SQL injection vulnerability in bus_info.php. The busid parameter received via HTTP POST is concatenated directly into a MySQL query (select * from bus_info where id=$busid) without sanitization, escaping, or parameterization, and in a numeric (unquoted) context. A remote, unauthenticated attacker can inject arbitrary SQL — for example a UNION-based payload such as busid=-1 UNION SELECT 1,2,3,4,5,6 — to read arbitrary data from the bus_service database. The application connects to the database as the MySQL root account with an empty password, increasing the potential impact. The query is executed via mysqli_query(), which does not permit stacked (semicolon-separated) statements.",
+      "refs": "https://github.com/Nur-Alam39/bus-ticket\nhttps://github.com/Nur-Alam39/bus-ticket/blob/459cabdbeb99c00225b26e46e3c2c30ae1de7bad/bus_info.php#L14-L16",
+      "source": "NVD",
+      "time": "2026-06-18 20:16:52"
+    },
+    {
       "cve_id": "CVE-2026-12505",
       "title": "高危漏洞: CVE-2026-12505 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/cargo-shipping-location-for-woocommerce/vulnerability/wordpress-cargo-shipping-location-for-woocommerce-plugin-5-6-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-18 02:27:21"
-    },
-    {
-      "cve_id": "CVE-2026-54814",
-      "title": "高危漏洞: CVE-2026-54814 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in StylemixThemes Motors allows PHP Local File Inclusion.\n\nThis issue affects Motors: from n/a through 1.4.109.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/motors-car-dealership-classified-listings/vulnerability/wordpress-motors-plugin-1-4-109-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:16"
-    },
-    {
-      "cve_id": "CVE-2026-54813",
-      "title": "高危漏洞: CVE-2026-54813 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-17 22:17:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Brainstorm Force SureDash allows Blind SQL Injection.\n\nThis issue affects SureDash: from n/a through 1.8.0.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/suredash/vulnerability/wordpress-suredash-plugin-1-8-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:11"
-    },
-    {
-      "cve_id": "CVE-2026-54809",
-      "title": "高危漏洞: CVE-2026-54809 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-17 22:17:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in VillaTheme GIFT4U allows Blind SQL Injection.\n\nThis issue affects GIFT4U: from n/a through 1.0.10.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/gift4u-gift-cards-all-in-one-for-woo/vulnerability/wordpress-gift4u-plugin-1-0-10-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:04"
-    },
-    {
-      "cve_id": "CVE-2026-54808",
-      "title": "高危漏洞: CVE-2026-54808 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-17 22:17:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WP Travel WP Travel Gutenberg Blocks allows Blind SQL Injection.\n\nThis issue affects WP Travel Gutenberg Blocks: from n/a through 3.9.4.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-travel-blocks/vulnerability/wordpress-wp-travel-gutenberg-blocks-plugin-3-9-4-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:59"
-    },
-    {
-      "cve_id": "CVE-2026-54417",
-      "title": "高危漏洞: CVE-2026-54417 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-17 22:17:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer overflow in the mtar_next() function in src/microtar.c in rxi microtar 0.1.0 allows a remote attacker to cause a denial of service (uncontrolled CPU consumption / infinite loop) via a crafted tar archive. mtar_next() computes the offset to the next record as round_up(h.size, 512) + sizeof(mtar_raw_header_t) using 32-bit arithmetic. When the header size field is a multiple of 512 in the range 0xFFFFFC01-0xFFFFFE00 (e.g. 0xFFFFFE00), the addition wraps to 0, so mtar_next() seeks to the current record position instead of advancing. As a result, mtar_find() and any loop that iterates entries with mtar_next() repeat indefinitely over the same record, hanging the process at 100% CPU with no recovery.",
-      "refs": "https://github.com/rxi/microtar\nhttps://github.com/rxi/microtar/blob/master/src/microtar.c#L239\nhttps://raw.githubusercontent.com/rxi/microtar/master/src/microtar.c",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:55"
-    },
-    {
-      "cve_id": "CVE-2026-54193",
-      "title": "高危漏洞: CVE-2026-54193 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-17 22:17:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "Contributor Arbitrary File Deletion in Fusion Builder <= 3.15.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/fusion-builder/vulnerability/wordpress-fusion-builder-plugin-3-15-4-arbitrary-file-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:50"
-    },
-    {
-      "cve_id": "CVE-2026-52707",
-      "title": "高危漏洞: CVE-2026-52707 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 22:17:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Local File Inclusion in Kastell <= 2.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/kastell/vulnerability/wordpress-kastell-theme-2-0-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:26:46"
     }
   ]
 }
