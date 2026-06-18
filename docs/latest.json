@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-54390",
+      "title": "高危漏洞: CVE-2026-54390 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 02:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "JTL Shop versions 5.2.0 through 5.7.1 contains a server-side template injection vulnerability that allows unauthenticated attackers to inject malicious template syntax due to unsanitized user-supplied input passed to the Smarty template engine. Attackers can exploit this flaw to read sensitive server-side values such as database credentials and encryption keys, and on versions 5.4.0 through 5.7.1, leverage registered Smarty modifiers including unserialize and file_get_contents to write a webshell to the web root and execute arbitrary commands as the web server user.",
+      "refs": "https://forum.jtl-software.de/threads/jtl-shop-5-7-aktuell-5-7-2.246278/\nhttps://sansec.io/research/jtl-shop-ssti-rce\nhttps://www.vulncheck.com/advisories/jtl-shop-server-side-template-injection-via-smarty-renderer",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:43"
+    },
+    {
+      "cve_id": "CVE-2026-56020",
+      "title": "高危漏洞: CVE-2026-56020 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-19 01:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Webmin HTTP server (miniserv.pl) allows unauthenticated attackers to impersonate any user with a configured SSL client certificate by sending a forged HTTP header. A remote attacker can spoof certificate DNs and authenticate as any user. Fixed in 2.641.",
+      "refs": "https://github.com/webmin/webmin/releases/tag/2.641\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-169-02.json\nhttps://webmin.com/security/#webmin-prior-to-2641",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:39"
+    },
+    {
+      "cve_id": "CVE-2026-55237",
+      "title": "高危漏洞: CVE-2026-55237 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-19 01:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:L",
+      "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions prior to 0.6.62 have a DOM-based Cross-Site Scripting (XSS) vulnerability in AutoGPT's signup page. The application improperly trusts a URL parameter (`next`), which is passed to `router.push`. An attacker can craft a malicious link that, when opened by an authenticated user, performs a client-side redirect and executes arbitrary JavaScript in the context of their browser. This could lead to credential theft, internal network pivoting, and unauthorized actions performed on behalf of the victim. Version 0.6.62 patches the issue.",
+      "refs": "https://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-j2cp-jg5q-38wj\nhttps://github.com/Significant-Gravitas/AutoGPT/security/advisories/GHSA-j2cp-jg5q-38wj",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:34"
+    },
+    {
+      "cve_id": "CVE-2026-55204",
+      "title": "高危漏洞: CVE-2026-55204 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-19 01:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "HAProxy through  3.4.0, fixed in commit 9a6d1fe, contains a null pointer dereference vulnerability in hpack_dht_insert() within src/hpack-tbl.c that fails to validate the return value of hpack_dht_defrag() when the memory pool is exhausted. An attacker can trigger HPACK dynamic table insertions under memory pressure to dereference a NULL pointer and crash HAProxy worker processes, causing denial of service.",
+      "refs": "https://github.com/haproxy/haproxy/commit/9a6d1fe3f00d86ab4ea6ea6ea0a5d48fc058a513\nhttps://www.vulncheck.com/advisories/haproxy-null-pointer-dereference-in-hpack-dht-insert-function",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:30"
+    },
+    {
+      "cve_id": "CVE-2026-55203",
+      "title": "高危漏洞: CVE-2026-55203 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-19 01:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "description": "HAProxy through 3.4.0, fixed in commit 5985276, contains an integer overflow vulnerability in the fcgi_conn structure's drl field that allows buffer misparse as new FCGI record headers. When contentLength is 65535 and paddingLength is 1 or more, the drl field wraps to 0, causing incorrect record consumption and allowing malicious FastCGI backends to desynchronize the FCGI framing parser, potentially causing request routing errors, response smuggling, or memory safety issues.",
+      "refs": "https://github.com/haproxy/haproxy/commit/5985276735777634d8c85f1d73bb7764aab0d6dd\nhttps://www.vulncheck.com/advisories/haproxy-integer-overflow-in-fcgi-demux-record-length-field",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:23"
+    },
+    {
+      "cve_id": "CVE-2026-54104",
+      "title": "高危漏洞: CVE-2026-54104 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-19 01:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The U.S. Government Accountability Office (GAO) Electronic Protest Docketing System (EPDS) and Civilian Board of Contract Appeals (CBCA) Electronic Docketing System (EDS) trusts client-provided values for the 'epds_role_id' parameter without verification, allowing a remote, authenticated attacker to escalate their own privileges.",
+      "refs": "https://epds.gao.gov/\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-169-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-54104",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:19"
+    },
+    {
+      "cve_id": "CVE-2026-54103",
+      "title": "高危漏洞: CVE-2026-54103 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 01:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The U.S. Government Accountability Office (GAO) Electronic Protest Docketing System (EPDS) and Civilian Board of Contract Appeals (CBCA) Electronic Docketing System (EDS) does not authenticate password change requests to the '/update-profile/N' API endpoint. A remote, unauthenticated attacker could change an arbitrary user's password.",
+      "refs": "https://epds.gao.gov/\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-169-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-54103",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:15"
+    },
+    {
+      "cve_id": "CVE-2026-38718",
+      "title": "高危漏洞: CVE-2026-38718 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-19 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "InHand Networks IR912 V1.0.0.r20042 and IR915 V1.0.0.r20042 (including earlier versions) were discovered to contain a buffer overflow vulnerability in the device registration function. This vulnerability could allow an attacker to cause a denial of service attack on the remote target device.",
+      "refs": "https://www.inhand.com/wp-content/uploads/2026/06/InHand-PSA-2026-06_EN.pdf",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:11"
+    },
+    {
+      "cve_id": "CVE-2026-38717",
+      "title": "高危漏洞: CVE-2026-38717 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "InHand Networks IR912 V1.0.0.r20042 and IR915 V1.0.0.r20042 (including earlier versions) were discovered to contain a command injection vulnerability in the file upload function. The vulnerability allows remote attackers to execute arbitrary commands as root via a crafted input.",
+      "refs": "https://www.inhand.com/wp-content/uploads/2026/06/InHand-PSA-2026-06_EN.pdf",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:07"
+    },
+    {
+      "cve_id": "CVE-2026-38716",
+      "title": "高危漏洞: CVE-2026-38716 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "InHand Networks IR912 V1.0.0.r20042 and IR915 V1.0.0.r20042 (including earlier versions) were discovered to contain a command injection vulnerability in the Python application export function. This vulnerability allows remote attackers to execute arbitrary commands as root via a crafted input.",
+      "refs": "https://www.inhand.com/wp-content/uploads/2026/06/InHand-PSA-2026-06_EN.pdf",
+      "source": "NVD",
+      "time": "2026-06-19 04:11:03"
+    },
+    {
+      "cve_id": "CVE-2026-38715",
+      "title": "高危漏洞: CVE-2026-38715 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "InHand Networks IR912 V1.0.0.r20042 and IR915 V1.0.0.r20042 (including earlier versions) were discovered to contain a command injection vulnerability in the log viewing function. This vulnerability allows remote attackers to execute arbitrary commands as root via a crafted input.",
+      "refs": "https://www.inhand.com/wp-content/uploads/2026/06/InHand-PSA-2026-06_EN.pdf",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:59"
+    },
+    {
+      "cve_id": "CVE-2026-38714",
+      "title": "高危漏洞: CVE-2026-38714 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "InHand Networks IR912 V1.0.0.r20042 and IR915 V1.0.0.r20042 (including earlier versions) were discovered to contain a command injection vulnerability in the Python configuration function. This vulnerability allows remote attackers to execute arbitrary commands as root via a crafted input.",
+      "refs": "https://www.inhand.com/wp-content/uploads/2026/06/InHand-PSA-2026-06_EN.pdf",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:52"
+    },
+    {
+      "cve_id": "CVE-2025-53114",
+      "title": "高危漏洞: CVE-2025-53114 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-19 01:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "CometD is a scalable comet implementation for web messaging. In versions 5.0.0 through 5.0.22, 6.0.0 through 6.0.18, 7.0.0 through 7.0.18, and 8.0.0 through 8.0.8, bad clients that always send a fixed batch value when the server is using the acknowledgement extension may cause the unacknowledged message queue to grow indefinitely, eventually causing an `OutOfMemoryError`. Versions 5.0.23, 6.0.19, 7.0.19, and 8.0.9 patch the issue. As a workaround, disable the acknowledgement extension.",
+      "refs": "https://github.com/cometd/cometd/discussions/2116\nhttps://github.com/cometd/cometd/issues/2117\nhttps://github.com/cometd/cometd/pull/2118",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:48"
+    },
+    {
+      "cve_id": "CVE-2025-52465",
+      "title": "高危漏洞: CVE-2025-52465 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-19 00:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GeoServer is an open source server that allows users to share and edit geospatial data. Prior to versions 2.26.4 and 2.27.3, a vulnerability exists that allows an authenticated administrator with access to GeoServer's security system to pass arbitrary file names to the Master Password Dump web page and create files containing the master password in plaintext. The provided file name must be an absolute path to the target file, the target file can not already exist and all parent directories must already exist. Versions 2.26.4 and 2.27.3 contain a fix. GeoServer installations where the web interface is either disabled or completely removed are not affected since the vulnerability exists in one of the web pages.",
+      "refs": "https://github.com/geoserver/geoserver/pull/8584\nhttps://github.com/geoserver/geoserver/security/advisories/GHSA-7qmg-grcp-qf25\nhttps://osgeo-org.atlassian.net/browse/GEOS-11852",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:43"
+    },
+    {
+      "cve_id": "CVE-2025-27511",
+      "title": "高危漏洞: CVE-2025-27511 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-19 00:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GeoServer is an open source server that allows users to share and edit geospatial data. Prior to version 2.27.0 of the GeoServer DB2 DataStore Extension, an administrator can perform a JNDI attack through specially crafted DB2 jdbc url leading to to Remote Code Execution (RCE). Version 2.27.0 fixes the issue.",
+      "refs": "https://github.com/geoserver/geoserver/releases/tag/2.27.0\nhttps://github.com/geoserver/geoserver/security/advisories/GHSA-g628-r368-6vh7\nhttps://nvd.nist.gov/vuln/detail/cve-2023-27867",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:39"
+    },
+    {
+      "cve_id": "CVE-2026-42488",
+      "title": "高危漏洞: CVE-2026-42488 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-18 22:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Some shadow paging errors paths will switch the page-tables without\nupdating the currently running vCPU reference.  This causes a mismatch\nbetween the loaded page-tables and the mapcache metadata which can lead\nto corruption of the mapcache.",
+      "refs": "https://xenbits.xenproject.org/xsa/advisory-494.html\nhttp://www.openwall.com/lists/oss-security/2026/06/09/14\nhttp://xenbits.xen.org/xsa/advisory-494.html",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:35"
+    },
+    {
+      "cve_id": "CVE-2026-42487",
+      "title": "高危漏洞: CVE-2026-42487 (CVSS 7.9)",
+      "cvss_score": 7.9,
+      "published_date": "2026-06-18 22:17:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H",
+      "description": "HVM guest I/O port accesses are subject to either emulation or at least\ntranslation.  Translations are managed by the device model (via\nXEN_DOMCTL_ioport_mapping), and hence the linked list used may changed\nat any time.  Traversal of those lists (while handling guest I/O port\naccesses) therefore needs synchronizing with updates, which was missing\nso far.",
+      "refs": "https://xenbits.xenproject.org/xsa/advisory-491.html\nhttp://www.openwall.com/lists/oss-security/2026/06/09/11\nhttp://xenbits.xen.org/xsa/advisory-491.html",
+      "source": "NVD",
+      "time": "2026-06-19 04:10:31"
+    },
+    {
       "cve_id": "CVE-2026-8461",
       "title": "高危漏洞: CVE-2026-8461 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -912,193 +1099,6 @@
       "refs": "https://github.com/mmaitre314/picklescan/commit/2a8383cfeb4158567f9770d86597300c9e508d0f\nhttps://github.com/mmaitre314/picklescan/security/advisories/GHSA-9gvj-pp9x-gcfr\nhttps://www.vulncheck.com/advisories/picklescan-detection-bypass-via-stack-global-opcode-parsing-logic-flaw",
       "source": "NVD",
       "time": "2026-06-18 02:29:11"
-    },
-    {
-      "cve_id": "CVE-2025-71323",
-      "title": "高危漏洞: CVE-2025-71323 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 01:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "picklescan before 0.0.33 fails to block the ctypes module, allowing attackers to achieve remote code execution by invoking direct syscalls and accessing raw memory. Attackers can craft malicious pickle files using ctypes.WinDLL to load kernel32.dll and execute arbitrary commands, bypassing sandbox protections and gadget chain detection.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-4675-36f9-wf6r\nhttps://www.vulncheck.com/advisories/picklescan-remote-code-execution-via-unblocked-ctypes-module",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:07"
-    },
-    {
-      "cve_id": "CVE-2025-71322",
-      "title": "高危漏洞: CVE-2025-71322 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-18 01:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "PickleScan before 0.0.33 fails to include the pty.spawn function in its unsafe globals list, allowing attackers to bypass security checks. Malicious actors can craft pickle payloads using pty.spawn to achieve arbitrary code execution when files are processed by PickleScan.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-hgrh-qx5j-jfwx\nhttps://www.vulncheck.com/advisories/picklescan-unsafe-globals-check-bypass-via-pty-spawn-function",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:02"
-    },
-    {
-      "cve_id": "CVE-2025-71321",
-      "title": "高危漏洞: CVE-2025-71321 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 01:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "picklescan before 0.0.33 contains an arbitrary file writing vulnerability that allows attackers to bypass the dangerous blocklist by using distutils.file_util.write_file. Attackers can construct malicious pickle objects to overwrite critical system files and achieve denial of service or remote code execution.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-m273-6v24-x4m4\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-file-writing-via-distutils-module-bypass",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:57"
-    },
-    {
-      "cve_id": "CVE-2025-71320",
-      "title": "高危漏洞: CVE-2025-71320 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 01:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "picklescan before 0.0.33 contains an incomplete deny-list that fails to block pydoc.locate and operator.methodcaller functions, allowing attackers to bypass security checks. Remote attackers can craft malicious pickle files using these unblocked functions to achieve arbitrary code execution when the pickle is deserialized.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-84r2-jw7c-4r5q\nhttps://www.vulncheck.com/advisories/picklescan-remote-code-execution-via-incomplete-disallowed-inputs",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:49"
-    },
-    {
-      "cve_id": "CVE-2026-55743",
-      "title": "高危漏洞: CVE-2026-55743 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-17 23:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "The shell tool command allowlist in the SecurityPolicy of OpenHuman desktop agent through 0.54.0 (default Supervised security policy) can be bypassed to execute arbitrary OS commands with the privileges of the desktop user. Two flaws in src/openhuman/security/policy.rs combine: (1) is_args_safe() blocks the find flags -exec and -ok but not the functionally identical -execdir and -okdir, which also execute an arbitrary command for each matched file; and (2) skip_env_assignments() strips leading inline KEY=value environment-variable assignments before allowlist validation, so a command such as GIT_EXTERNAL_DIFF=<cmd> git diff is validated as the allowed git diff but, when executed via the shell, runs <cmd> through git's environment-driven hooks (for example GIT_EXTERNAL_DIFF or GIT_SSH_COMMAND). Because the sandbox is the primary trust boundary between untrusted LLM-processed content and the host operating system, an attacker can achieve remote code execution via indirect prompt injection: a malicious document, email, calendar event, or web page ingested by the agent instructs it to run a benign-looking allowlisted command, resulting in arbitrary command execution, data exfiltration, arbitrary file read/write, and lateral movement on the user's machine. The issue was fixed in commit 60050aa09a870f53ed7e4cd40ed41fd2860329e7 (first released in 0.54.22-staging; first stable release 0.56.0), which blocks -execdir/-okdir for find.",
-      "refs": "https://github.com/tinyhumansai/openhuman\nhttps://github.com/tinyhumansai/openhuman/blob/v0.53.49-staging/src/openhuman/security/policy.rs\nhttps://github.com/tinyhumansai/openhuman/commit/60050aa09a870f53ed7e4cd40ed41fd2860329e7",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:45"
-    },
-    {
-      "cve_id": "CVE-2026-54812",
-      "title": "高危漏洞: CVE-2026-54812 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-17 23:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in StylemixThemes Motors allows Blind SQL Injection.\n\nThis issue affects Motors: from n/a through 1.4.109.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/motors-car-dealership-classified-listings/vulnerability/wordpress-motors-plugin-1-4-109-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:38"
-    },
-    {
-      "cve_id": "CVE-2026-54810",
-      "title": "高危漏洞: CVE-2026-54810 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-17 23:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Missing Authorization vulnerability in Nexi Payments Nexi XPay allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Nexi XPay: from n/a through 8.3.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/cartasi-x-pay/vulnerability/wordpress-nexi-xpay-plugin-8-3-1-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:33"
-    },
-    {
-      "cve_id": "CVE-2026-54415",
-      "title": "高危漏洞: CVE-2026-54415 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 23:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Missing Authorization in the server management routes (routes/admin.php) in Azuriom Azuriom CMS before 1.2.11 on all platforms allows an authenticated attacker with the admin.access permission to create AzLink server tokens and take over non-admin user accounts by changing their passwords and email addresses via crafted HTTP requests to /admin/servers/create and the AzLink API endpoints (/api/azlink/password, /api/azlink/email, /api/azlink/user/{id}).",
-      "refs": "https://github.com/Azuriom/Azuriom\nhttps://github.com/Azuriom/Azuriom/commit/4b744bc0dd11f205f5aa053c6db8a949d3f0608e\nhttps://github.com/Azuriom/Azuriom/releases/tag/v1.2.11",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:28"
-    },
-    {
-      "cve_id": "CVE-2026-49502",
-      "title": "高危漏洞: CVE-2026-49502 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-06-17 23:16:59",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Dell PowerFlex Manager, version(s) [Versions], contain(s) an Improper Authentication vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Information disclosure, Information tampering, and Unauthorized access.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:24"
-    },
-    {
-      "cve_id": "CVE-2026-47103",
-      "title": "高危漏洞: CVE-2026-47103 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-17 23:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Python StateMachine versions 3.0.0 before 3.2.0 contains a remote code execution vulnerability that allows attackers to execute arbitrary code by supplying malicious SCXML documents containing crafted `<data expr=\"...\">` attributes evaluated unsafely. The SCXMLProcessor passes attacker-controlled expression strings through a call chain ending in Python's built-in eval() without sandboxing, enabling arbitrary code execution in the context of the hosting process.",
-      "refs": "https://github.com/fgmacedo/python-statemachine/releases/tag/v3.2.0\nhttps://github.com/fgmacedo/python-statemachine/security/advisories/GHSA-v4jc-pm6r-3vj8\nhttps://www.vulncheck.com/advisories/python-statemachine-rce-via-scxml-eval-injection",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:19"
-    },
-    {
-      "cve_id": "CVE-2026-42530",
-      "title": "高危漏洞: CVE-2026-42530 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 23:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NGINX Open Source has a vulnerability in the ngx_http_v3_module module. When NGINX Open Source is configured to use the HTTP/3 QUIC module, a remote unauthenticated attacker along with conditions beyond their control can use a specially crafted HTTP/3 session to reopen a QPACK encoder stream. This may cause a Use-after-Free in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR.  \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000161616",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:12"
-    },
-    {
-      "cve_id": "CVE-2026-42055",
-      "title": "高危漏洞: CVE-2026-42055 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 23:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_proxy_v2_module and ngx_http_grpc_module modules. This vulnerability exists when the proxy_http_version to 2 or grpc_pass directives are used to proxy HTTP/2 traffic, the ignore_invalid_headers directive is set to off, and the large_client_header_buffers directive size is larger than 2 megabytes. A remote, unauthenticated attacker, along with conditions beyond their control, could send large headers while creating an upstream request. This may cause a heap-based buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR. \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000161584",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:08"
-    },
-    {
-      "cve_id": "CVE-2026-35066",
-      "title": "高危漏洞: CVE-2026-35066 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-17 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
-      "description": "Dell PowerFlex Manager, version(s) [Versions], contain(s) an Improper Access Control vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to denial of service.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-06-18 02:28:03"
-    },
-    {
-      "cve_id": "CVE-2026-35065",
-      "title": "高危漏洞: CVE-2026-35065 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-17 23:16:45",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerFlex Manager, version(s) [Versions], contain(s) a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Code execution, Denial of service, Information disclosure, Information tampering, Remote execution, Script injection, and Unauthorized access.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:59"
-    },
-    {
-      "cve_id": "CVE-2026-32804",
-      "title": "高危漏洞: CVE-2026-32804 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 23:16:45",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Dell PowerFlex Manager, version(s) [Versions], contain(s) an Improper Authentication vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Unauthorized access.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:55"
-    },
-    {
-      "cve_id": "CVE-2026-22283",
-      "title": "高危漏洞: CVE-2026-22283 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-17 23:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerFlex Manager, version(s) Version prior to 4.8, contain(s) an Inclusion of Functionality from Untrusted Control Sphere vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:50"
-    },
-    {
-      "cve_id": "CVE-2026-11311",
-      "title": "高危漏洞: CVE-2026-11311 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-17 23:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "When NGINX Plus is configured as the data plane for NGINX Gateway Fabric, an injection vulnerability exists in the NGINX configuration generator component of NGINX Gateway Fabric. User-supplied string values from the NginxProxy Custom Resource Definition serverTokens field and the AuthenticationFilter Custom Resource Definition extraAuthArgs field are rendered directly into NGINX configuration templates without sanitization or escaping. An authenticated attacker with permission to create or modify these Custom Resource Definitions may craft values that inject arbitrary NGINX configuration directives. This is a control plane issue; there is no data plane exposure from the vulnerability trigger itself. \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000161611",
-      "source": "NVD",
-      "time": "2026-06-18 02:27:46"
     }
   ]
 }
