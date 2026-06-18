@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-49454",
+      "title": "高危漏洞: CVE-2026-49454 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-19 05:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Relyra is a strict-by-default SAML 2.0 Service Provider library for Elixir and Phoenix. Versions 1.0.0 and 1.1.0 accept forged SAML signatures because SignatureValue was not cryptographically verified before the library returned a successful authentication result. The XMLDSig trust boundary was incomplete as :public_key.verify over the exclusive-C14N canonicalized SignedInfo was not performed against the configured IdP certificate's public key, DigestValue was not recomputed over the canonicalized referenced element, and canonicalize/2 remained an unused passthrough in the signature-verification path. The result was a structure-only acceptance path where document shape and trust-source rejection could succeed without proving the signature bytes. A forged SignatureValue carrying an attacker-controlled NameID could be accepted as {:ok}. This issue has been fixed in version 1.2.0.",
+      "refs": "https://github.com/szTheory/relyra/commit/2e456897af3158c175bb490ce7fc51d6241c8922\nhttps://github.com/szTheory/relyra/commit/8910200\nhttps://github.com/szTheory/relyra/security/advisories/GHSA-jv46-xfwm-36j7",
+      "source": "NVD",
+      "time": "2026-06-19 06:52:23"
+    },
+    {
+      "cve_id": "CVE-2026-49257",
+      "title": "高危漏洞: CVE-2026-49257 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-06-19 05:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "mcp-pinot is a Python-based Model Context Protocol (MCP) server for interacting with Apache Pinot. In versions 3.0.1 and below, mcp-pinot defaults to running an HTTP MCP server bound to 0.0.0.0:8080 with no authentication enabled. All MCP tools, including SQL query execution, schema creation, and table-config mutation, are reachable by any network-adjacent caller. The server proxies these calls using server-side Pinot credentials, producing a confused-deputy condition that yields full read/write access to the configured Pinot cluster. This issue has been fixed in version 3.1.0",
+      "refs": "https://github.com/startreedata/mcp-pinot/commit/1c7d3f9cd384854bf72c127d230bdb32299475ad\nhttps://github.com/startreedata/mcp-pinot/issues/90\nhttps://github.com/startreedata/mcp-pinot/pull/95",
+      "source": "NVD",
+      "time": "2026-06-19 06:52:19"
+    },
+    {
+      "cve_id": "CVE-2026-49252",
+      "title": "高危漏洞: CVE-2026-49252 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-06-19 05:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "description": "deepstream is a server that allows clients and backend services to sync data, send messages and make rpcs at scale. Versions prior to 10.0.5  are vulnerable to Prototype Pollution. Exploitation can lead to potential privilege escalation from any authenticated user with write permission to any record. This issue has been fixed in version 10.0.5.",
+      "refs": "https://github.com/deepstreamIO/deepstream.io/commit/54b8e2958a98df444b5b5d9a66e22872afd84e44\nhttps://github.com/deepstreamIO/deepstream.io/security/advisories/GHSA-9v98-6g37-x9g6",
+      "source": "NVD",
+      "time": "2026-06-19 06:52:14"
+    },
+    {
+      "cve_id": "CVE-2026-46699",
+      "title": "高危漏洞: CVE-2026-46699 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-06-19 05:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:L",
+      "description": "conda-smithy is a tool for combining a conda recipe with configurations to build using freely hosted CI services into a single repository. Prior to version 3.61.0, a vulnerability in the conda-forge automated webservices allowed unintended write access to feedstock repositories through GitHub username takeover. The root cause is the use of mutable GitHub usernames as identifiers for repository invitation routing, rather than stable, immutable GitHub user IDs. Version 3.61.0 fixes the issue.",
+      "refs": "https://github.com/conda-forge/conda-smithy/commit/3b0bcd92ebd6f41edd341401d84583a20911c587\nhttps://github.com/conda-forge/conda-smithy/security/advisories/GHSA-g95q-3cmj-fvh8",
+      "source": "NVD",
+      "time": "2026-06-19 06:52:10"
+    },
+    {
+      "cve_id": "CVE-2026-43994",
+      "title": "高危漏洞: CVE-2026-43994 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-19 05:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Coturn is a free open source implementation of TURN and STUN Server. Versions prior to 4.10.0 contain a stack buffer overflow in decode_oauth_token_gcm(). A uint16_t nonce_len field read from an attacker-supplied OAuth access token (0-65535) is passed directly to memcpy() as the copy length into a 256-byte stack buffer (oauth_encrypted_block.nonce[256]) without bounds checking. The overflow occurs before AES-GCM authentication is verified, the attacker does not need to know the OAuth key or produce a valid AES-GCM token. Up to 735 bytes of attacker-controlled data are written past the buffer, may corrupt adjacent stack data, including control-flow data depending on compiler, ABI, and mitigations. Requires --oauth mode (non-default). This may provide a plausible RCE primitive depending on exploit mitigations; because coturn is widely deployed for WebRTC TURN/STUN and --oauth is commonly recommended, impact can be broad. This issue has been fixed in version 4.10.0.",
+      "refs": "https://github.com/coturn/coturn/releases/tag/4.10.0\nhttps://github.com/coturn/coturn/security/advisories/GHSA-74pg-rfh2-5qw5",
+      "source": "NVD",
+      "time": "2026-06-19 06:52:05"
+    },
+    {
+      "cve_id": "CVE-2026-48716",
+      "title": "高危漏洞: CVE-2026-48716 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-06-19 04:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "description": "nanobot is a personal AI assistant. In versions 0.1.5.post3 and prior, the WhatsApp bridge in bridge/src/whatsapp.ts constructs a filesystem path using the fileName field from an incoming WhatsApp document message without sanitization. The WhatsApp bridge downloads media attachments and writes them to disk using a filename derived from the sender's message via documentMessage.fileName, which is concatenated with a prefix and its raw value is passed directly to path.join(mediaDir, outFilename). Node.js path.join resolves .. components, allowing an attacker to escape the intended media/ directory by sending a document with a crafted fileName such as ../../../.ssh/authorized_keys. Because the attacker also controls the file content (the downloaded buffer), this is a write-anywhere primitive — both path and content are attacker-controlled. A fix for this issue is planned for version 0.1.5.post4.",
+      "refs": "https://github.com/HKUDS/nanobot/security/advisories/GHSA-3f63-vcp3-hvqr",
+      "source": "NVD",
+      "time": "2026-06-19 06:52:00"
+    },
+    {
+      "cve_id": "CVE-2026-47846",
+      "title": "高危漏洞: CVE-2026-47846 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 04:16:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Bitnami Cassandra container images are affected by a retained default superuser vulnerability. When a custom administrator account is configured via the CASSANDRA_USER environment variable, the container initialization script creates the new superuser account but fails to drop the built-in cassandra account in certain scenarios. This leaves the default cassandra:cassandra superuser active as an unintended access path.\n\nAffected versions — Container image: 4.0.x prior to 4.0.20-photon-5-r7; 4.1.x prior to 4.1.11-photon-5-r7; 5.0.x prior to 5.0.8-photon-5-r4 / 5.0.8-debian-12-r3.",
+      "refs": "https://github.com/bitnami/containers/security/advisories/GHSA-8q3j-37vg-8fc2",
+      "source": "NVD",
+      "time": "2026-06-19 06:51:54"
+    },
+    {
+      "cve_id": "CVE-2026-25865",
+      "title": "高危漏洞: CVE-2026-25865 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-19 04:16:12",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Punto Switcher through 4.5.0.583 contains an unquoted search path element vulnerability that allows local attackers to execute arbitrary code by exploiting the application's call to WinExec without a fully qualified path for RunDll32.exe when invoking shell32.dll Control_RunDLL input.dll. Attackers can place a malicious executable earlier in the search order to achieve arbitrary code execution in the context of the affected user.",
+      "refs": "https://spektion.com/articles/cve-2026-25865-punto-switcher\nhttps://www.vulncheck.com/advisories/punto-switcher-unquoted-search-path-via-winexec\nhttps://yandex.ru/soft/punto",
+      "source": "NVD",
+      "time": "2026-06-19 06:51:48"
+    },
+    {
       "cve_id": "CVE-2026-54390",
       "title": "高危漏洞: CVE-2026-54390 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1011,94 +1099,6 @@
       "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-9m3x-qqw2-h32h\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-obfuscated-eval-call",
       "source": "NVD",
       "time": "2026-06-18 02:29:50"
-    },
-    {
-      "cve_id": "CVE-2026-53873",
-      "title": "高危漏洞: CVE-2026-53873 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 01:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "picklescan before 1.0.4 contains an incomplete blocklist for the profile module that fails to block the module-level profile.run() function, allowing attackers to achieve arbitrary code execution via exec(). Attackers can craft malicious pickle files calling profile.run(statement) to execute arbitrary Python code while picklescan reports zero security issues.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-7wx9-6375-f5wh\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-profile-run-blocklist-bypass",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:45"
-    },
-    {
-      "cve_id": "CVE-2026-53872",
-      "title": "高危漏洞: CVE-2026-53872 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-18 01:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "picklescan before 0.0.35 contains an unsafe pickle deserialization vulnerability allowing unauthenticated attackers to read arbitrary server files by chaining io.FileIO and urllib.request.urlopen. Attackers can bypass RCE-focused blocklists to exfiltrate sensitive data like /etc/passwd to external servers.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-9726-w42j-3qjr\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-file-read-via-unsafe-pickle-deserialization",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:41"
-    },
-    {
-      "cve_id": "CVE-2026-3490",
-      "title": "高危漏洞: CVE-2026-3490 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-18 01:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "picklescan before 1.0.4 fails to block pkgutil.resolve_name, allowing attackers to bypass the entire blocklist by resolving any dangerous function through indirect REDUCE calls. Remote attackers can invoke any blocked function such as os.system, builtins.exec, or subprocess.call to achieve remote code execution.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-vvpj-8cmc-gx39\nhttps://www.vulncheck.com/advisories/picklescan-universal-blocklist-bypass-via-pkgutil-resolve-name",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:36"
-    },
-    {
-      "cve_id": "CVE-2026-32652",
-      "title": "高危漏洞: CVE-2026-32652 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-18 01:16:45",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell AIOps Collector versions prior to 1.18.3 contain a \"Use of Default Credentials\" vulnerability. A low privileged attacker with console access could potentially exploit this vulnerability to gain Filesystem access. This vulnerability only affects fresh installations of Collector versions earlier than 1.18.3. Systems that have been upgraded (either manually or automatically) to version 1.18.3 or later are not impacted, even if they were originally installed on an earlier version.",
-      "refs": "https://www.dell.com/support/kbdoc/en-in/000477931/dsa-2026-231-security-update-for-dell-aiops-collector-for-default-credential-vulnerability",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:32"
-    },
-    {
-      "cve_id": "CVE-2026-20190",
-      "title": "高危漏洞: CVE-2026-20190 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-18 01:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "A vulnerability in Cisco ISE and ISE-PIC could allow an unauthenticated, remote attacker to view sensitive information on an affected device.\r\n\r\nThis vulnerability is due to improper authorization checks when a resource is accessed. An attacker could exploit this vulnerability by sending crafted traffic to an affected device. A successful exploit could allow the attacker to gain access to sensitive information, including hashed credentials that could be used in future attacks.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-multi-G5WP8vv",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:25"
-    },
-    {
-      "cve_id": "CVE-2026-20181",
-      "title": "高危漏洞: CVE-2026-20181 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-18 01:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability in Cisco ISE and ISE-PIC could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have valid administrative credentials.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a denial of service (DoS) condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-multi-G5WP8vv",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:20"
-    },
-    {
-      "cve_id": "CVE-2026-12151",
-      "title": "高危漏洞: CVE-2026-12151 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-18 01:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Impact:\nThe undici WebSocket client enforces maxPayloadSize on the cumulative byte count of fragments in a message but does not enforce a limit on the number of fragments. A malicious WebSocket server can stream many small or empty continuation frames that each pass per-frame and cumulative-size validation, collectively causing unbounded memory growth in the client process. The result is memory exhaustion and a denial of service.\n\nAffected applications are those using the undici WebSocket client (new WebSocket(...)) or the WebSocketStream API that can be induced to connect to an attacker-controlled or compromised WebSocket endpoint.\n\nAll releases starting at undici 6.17.0 are affected.\n\nPatches: Upgrade to undici >= 6.26.0, >= 7.28.0, or >= 8.5.0. Workarounds:\nNo workaround is available. The fix must be applied through an upgrade.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/nodejs/undici/security/advisories/GHSA-vxpw-j846-p89q",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:16"
-    },
-    {
-      "cve_id": "CVE-2025-71325",
-      "title": "高危漏洞: CVE-2025-71325 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 01:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "picklescan before 0.0.27 contains a parsing logic error in the _list_globals function when handling STACK_GLOBAL opcodes, failing to track arguments in the correct range and allowing malicious pickle files to bypass detection. Attackers can craft pickle files with arguments at position zero to trigger unexpected exceptions and evade security scanning.",
-      "refs": "https://github.com/mmaitre314/picklescan/commit/2a8383cfeb4158567f9770d86597300c9e508d0f\nhttps://github.com/mmaitre314/picklescan/security/advisories/GHSA-9gvj-pp9x-gcfr\nhttps://www.vulncheck.com/advisories/picklescan-detection-bypass-via-stack-global-opcode-parsing-logic-flaw",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:11"
     }
   ]
 }
