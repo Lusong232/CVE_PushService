@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-56078",
+      "title": "高危漏洞: CVE-2026-56078 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-19 07:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "PraisonAI before 1.5.115 contains a path traversal vulnerability in MultiAgentMonitor that fails to sanitize agent IDs when building file paths. Attackers can include traversal sequences like ../ in agent IDs to read, write, or overwrite arbitrary files, enabling sensitive disclosure, denial of service, or code execution.",
+      "refs": "https://github.com/MervinPraison/PraisonAI\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-766v-q9x3-g744\nhttps://www.vulncheck.com/advisories/praisonai-arbitrary-file-read-and-write-via-path-traversal-in-multiagentmonitor",
+      "source": "NVD",
+      "time": "2026-06-19 10:56:19"
+    },
+    {
+      "cve_id": "CVE-2026-56076",
+      "title": "高危漏洞: CVE-2026-56076 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-19 07:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "PraisonAI before 1.5.128 contains a cross-origin agent execution vulnerability in the AGUI endpoint that allows remote attackers to trigger arbitrary agent execution. The POST /agui endpoint lacks authentication and hardcodes Access-Control-Allow-Origin: * headers, combined with Starlette's Content-Type-agnostic JSON parsing, enabling attackers to bypass CORS preflight checks via simple requests and exfiltrate sensitive agent responses including tool execution results and environment data.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-x462-jjpc-q4q4\nhttps://www.vulncheck.com/advisories/praisonai-cross-origin-agent-execution-via-hardcoded-wildcard-cors-and-missing-authentication-on-agui-endpoint",
+      "source": "NVD",
+      "time": "2026-06-19 10:56:14"
+    },
+    {
+      "cve_id": "CVE-2026-56075",
+      "title": "高危漏洞: CVE-2026-56075 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-19 07:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "PraisonAI before 4.5.128 contains an arbitrary shell command execution vulnerability where the UI modules hardcode approval_mode to auto, overriding administrator configuration from PRAISON_APPROVAL_MODE environment variable. Authenticated attackers can instruct the LLM agent to execute arbitrary shell commands via subprocess.run with shell=True, bypassing the manual approval gate and insufficient command sanitization blocklists.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qwgj-rrpj-75xm\nhttps://www.vulncheck.com/advisories/praisonai-arbitrary-shell-command-execution-via-hardcoded-approval-mode-override",
+      "source": "NVD",
+      "time": "2026-06-19 10:56:07"
+    },
+    {
+      "cve_id": "CVE-2026-54130",
+      "title": "高危漏洞: CVE-2026-54130 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-19 06:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Missing authentication for critical function in M365 Copilot allows an unauthorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54130",
+      "source": "NVD",
+      "time": "2026-06-19 10:56:03"
+    },
+    {
+      "cve_id": "CVE-2026-54017",
+      "title": "高危漏洞: CVE-2026-54017 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-06-19 06:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, the terminal-server reverse proxy in `backend/open_webui/routers/terminals.py` does not fully confine the user-controlled `path` segment before forwarding it to an admin-configured terminal server. An authenticated user who has been granted access to a terminal server can craft `path` values containing encoded `../` traversal sequences that escape the intended path (or policy) scope on that server, reaching unintended endpoints and files on the terminal-server host. Where the terminal server fans requests out to internal services, this also gives SSRF-style reach into those services. This is a separate code path from the `/api/v1/retrieval/process/web` SSRF (GHSA-c6xv-rcvw-v685), with its own input. Two distinct vectors are consolidated here: first, raw path forwarding / single-encoded traversal (original report); and second, a bypass of the subsequently-added `_sanitize_proxy_path` mitigation using double-encoded dots (`%252e%252e`). The attacker-controlled input is the request `path`, supplied by the non-admin user, not anything an administrator configures, so this is not an admin-trust / Rule-9 situation. Version 0.9.6 fixes the issue.",
+      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-r2wg-2mcr-66rv",
+      "source": "NVD",
+      "time": "2026-06-19 10:55:59"
+    },
+    {
+      "cve_id": "CVE-2026-47647",
+      "title": "高危漏洞: CVE-2026-47647 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-06-19 06:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper access control in Microsoft Dynamics 365 allows an authorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47647",
+      "source": "NVD",
+      "time": "2026-06-19 10:55:52"
+    },
+    {
+      "cve_id": "CVE-2026-47633",
+      "title": "高危漏洞: CVE-2026-47633 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-19 06:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Exposure of sensitive information to an unauthorized actor in Cost Management Interactive Experiences allows an unauthorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47633",
+      "source": "NVD",
+      "time": "2026-06-19 10:55:47"
+    },
+    {
+      "cve_id": "CVE-2026-32174",
+      "title": "高危漏洞: CVE-2026-32174 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-06-19 06:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+      "description": "Improper authentication in Azure Bot Service allows an authorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32174",
+      "source": "NVD",
+      "time": "2026-06-19 10:55:43"
+    },
+    {
       "cve_id": "CVE-2026-49454",
       "title": "高危漏洞: CVE-2026-49454 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -1011,94 +1099,6 @@
       "refs": "https://www.oracle.com/security-alerts/cspujun2026.html",
       "source": "NVD",
       "time": "2026-06-18 03:59:38"
-    },
-    {
-      "cve_id": "CVE-2026-46933",
-      "title": "高危漏洞: CVE-2026-46933 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-17 18:54:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Applications Manager product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Applications Manager.  While the vulnerability is in Oracle Applications Manager, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Applications Manager. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cspujun2026.html",
-      "source": "NVD",
-      "time": "2026-06-18 03:59:33"
-    },
-    {
-      "cve_id": "CVE-2026-46889",
-      "title": "高危漏洞: CVE-2026-46889 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-17 18:54:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Siebel Apps - Marketing product of Oracle Siebel CRM (component: Marketing).  Supported versions that are affected are 17.0-26.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Siebel Apps - Marketing.  Successful attacks of this vulnerability can result in takeover of Siebel Apps - Marketing. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cspujun2026.html",
-      "source": "NVD",
-      "time": "2026-06-18 03:59:28"
-    },
-    {
-      "cve_id": "CVE-2026-46888",
-      "title": "高危漏洞: CVE-2026-46888 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-17 18:54:06",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Siebel CRM Deployment product of Oracle Siebel CRM (component: Database Upgrade).  Supported versions that are affected are 17.0-26.5. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where Siebel CRM Deployment executes to compromise Siebel CRM Deployment.  Successful attacks of this vulnerability can result in takeover of Siebel CRM Deployment. CVSS 3.1 Base Score 7.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cspujun2026.html",
-      "source": "NVD",
-      "time": "2026-06-18 03:59:22"
-    },
-    {
-      "cve_id": "CVE-2026-46887",
-      "title": "高危漏洞: CVE-2026-46887 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-17 18:54:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Siebel Apps - Marketing product of Oracle Siebel CRM (component: Marketing).  Supported versions that are affected are 17.0-26.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Siebel Apps - Marketing.  Successful attacks of this vulnerability can result in takeover of Siebel Apps - Marketing. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cspujun2026.html",
-      "source": "NVD",
-      "time": "2026-06-18 03:59:17"
-    },
-    {
-      "cve_id": "CVE-2026-47747",
-      "title": "高危漏洞: CVE-2026-47747 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-17 04:16:44",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "stable-diffusion.cpp is a pure C/C++ library for running diffusion model (Stable Diffusion, Flux, Wan, Qwen Image, Z-Image, and more) inference. In versions prior to master-584-0a7ae07, the pickle .ckpt parser in src/model.cpp contained a heap buffer overflow vulnerability in the BINUNICODE opcode handler. The issue was caused by sign confusion on the opcode length field. A crafted .ckpt file could trigger memcpy with a very large length derived from a negative signed value, causing immediate heap corruption.\nThe issue has been resolved in version master-584-0a7ae07. If developers are unable to immediately update their applications they can work around this issue by only loading .ckpt checkpoint files from trusted sources and preferring trusted model sources and safer formats such as .safetensors where possible.",
-      "refs": "https://github.com/leejet/stable-diffusion.cpp/commit/0a7ae07f948eff4611968a65a22bd7c7031ad74f\nhttps://github.com/leejet/stable-diffusion.cpp/pull/1443\nhttps://github.com/leejet/stable-diffusion.cpp/security/advisories/GHSA-mghm-5mqc-pwmp",
-      "source": "NVD",
-      "time": "2026-06-18 03:59:10"
-    },
-    {
-      "cve_id": "CVE-2026-22312",
-      "title": "高危漏洞: CVE-2026-22312 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-17 04:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "The device has a webserver that exposes a REST API authenticated with a constant token. The unauthenticated API can be used by an attacker to get access to system settings, modify the configuration\nand execute some commands (e.g. system reboot).",
-      "refs": "https://www.cvcn.gov.it/cvcn/cve/CVE-2026-22312",
-      "source": "NVD",
-      "time": "2026-06-18 03:59:04"
-    },
-    {
-      "cve_id": "CVE-2026-9675",
-      "title": "高危漏洞: CVE-2026-9675 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-18 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Impact:\nThe undici WebSocket client enforces maxPayloadSize per-frame but does not enforce the cumulative size of fragmented uncompressed messages. A malicious WebSocket server can stream many small fragments that each pass per-frame validation but collectively exceed the configured limit, causing unbounded memory growth in the client process. The result is memory exhaustion and a denial of service.\n\nAffected applications are those using the undici WebSocket client (new WebSocket(...)) that can be induced to connect to an attacker-controlled or compromised WebSocket endpoint.\n\nThis is a regression specific to undici 8.1.0. The 6.25.0 line shipped the equivalent cumulative check from the start and is unaffected. The 7.x line never had the maxPayloadSize feature and is also unaffected.\n\nPatches:\nUpgrade to undici >= 8.5.0.\n\nWorkarounds:\nNo workaround is available. The fix must be applied through an upgrade.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/nodejs/undici/security/advisories/GHSA-38rv-x7px-6hhq",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:54"
-    },
-    {
-      "cve_id": "CVE-2026-53874",
-      "title": "高危漏洞: CVE-2026-53874 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 01:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "picklescan before 1.0.1 contains an unsafe deserialization vulnerability allowing unauthenticated users to execute arbitrary code by hiding eval calls nested under callable objects via getattr. Attackers can embed malicious code in pickle files that evades detection but executes when the pickle is loaded from untrusted sources.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-9m3x-qqw2-h32h\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-obfuscated-eval-call",
-      "source": "NVD",
-      "time": "2026-06-18 02:29:50"
     }
   ]
 }
