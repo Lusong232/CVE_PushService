@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10658",
+      "title": "高危漏洞: CVE-2026-10658 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-23 09:16:26",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+      "description": "A missing length validation in the Zephyr Bluetooth Host ISO receive path can be triggered by malformed HCI ISO data. In bt_iso_recv() (subsys/bluetooth/host/iso.c), when processing PB=START/SINGLE fragments, the code pulls a TS SDU header (8 bytes, ts=1) or a non-TS SDU header (4 bytes, ts=0) without first verifying that buf->len contains at least that many bytes. The outer HCI ISO length check in hci_iso() validates payload length consistency but not the minimum inner SDU header size, so a packet with payload length 1 passes hci_iso() and then reaches net_buf_pull_mem(), which asserts buf->len >= len. As a result, malformed ISO traffic deterministically triggers a kernel assert (denial of service) in assert-enabled builds, and in non-assert builds the same path may proceed with an undersized buffer, leading to out-of-bounds read behavior. The issue affects products using the Zephyr Host with CONFIG_BT_ISO_RX enabled, particularly where incoming HCI data can be influenced by a malicious or compromised controller or malformed forwarded ISO traffic.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-26g8-rmpf-j6cw",
+      "source": "NVD",
+      "time": "2026-06-23 14:39:16"
+    },
+    {
+      "cve_id": "CVE-2026-10651",
+      "title": "高危漏洞: CVE-2026-10651 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-23 09:16:26",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+      "description": "A malformed Bluetooth Classic SDP attribute can trigger a reachable assertion in Zephyr's SDP parser. In subsys/bluetooth/host/classic/sdp.c, bt_sdp_parse_attribute() accepts an input buffer once it contains the 1-byte attribute type and 2-byte attribute id, but then unconditionally pulls an additional byte for the value type without verifying that the byte is present. A truncated 3-byte attribute (for example 09 00 09) therefore reaches net_buf_simple_pull() with insufficient remaining length, triggering the __ASSERT_NO_MSG(buf->len >= len) check and a kernel panic in assert-enabled builds (denial of service). In builds where assertions are disabled, parsing may continue past the end of the available buffer, leading to an out-of-bounds read and undefined behavior.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-p93g-3r68-cj53",
+      "source": "NVD",
+      "time": "2026-06-23 14:39:09"
+    },
+    {
       "cve_id": "CVE-2026-54232",
       "title": "高危漏洞: CVE-2026-54232 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://xenbits.xenproject.org/xsa/advisory-491.html\nhttp://www.openwall.com/lists/oss-security/2026/06/09/11\nhttp://xenbits.xen.org/xsa/advisory-491.html",
       "source": "NVD",
       "time": "2026-06-19 04:10:31"
-    },
-    {
-      "cve_id": "CVE-2026-8461",
-      "title": "高危漏洞: CVE-2026-8461 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-18 22:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "An out-of-bounds write vulnerability in FFmpeg's libavcodec library, specifically in the MagicYUV decoder, allows denial-of-service and, in some cases, can be exploited for remote code execution.\n\n This vulnerability is associated with the file libavcodec/magicyuv.C.\n\n\n\nThis issue affects FFmpeg before version 8.1.2.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23159",
-      "source": "NVD",
-      "time": "2026-06-19 01:55:44"
-    },
-    {
-      "cve_id": "CVE-2026-8024",
-      "title": "高危漏洞: CVE-2026-8024 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-18 22:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A remote, unauthenticated attacker may exploit a deserialization of untrusted data vulnerability in ibaPDA or ibaDatCoordinator to gain full access to the affected systems.",
-      "refs": "https://certvde.com/en/advisories/VDE-2026-051\nhttps://iba.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-051.json",
-      "source": "NVD",
-      "time": "2026-06-19 01:55:39"
     }
   ]
 }
