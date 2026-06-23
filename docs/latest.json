@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-56815",
+      "title": "高危漏洞: CVE-2026-56815 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-06-23 23:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "pwnlift before d7a9544, in a privileged deployment, contains a symlink following vulnerability in the upload handler in Components/Pages/Home.razor.",
+      "refs": "https://github.com/rasta-mouse/pwnlift/commit/d7a95449d9ee1ea09ec1529286685f6187afbbed\nhttps://www.openwall.com/lists/oss-security/2026/06/23/2",
+      "source": "NVD",
+      "time": "2026-06-24 01:10:26"
+    },
+    {
+      "cve_id": "CVE-2026-35019",
+      "title": "高危漏洞: CVE-2026-35019 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-23 23:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NetComm NF20MESH routers running firmware R6B031 and earlier contain an authentication bypass vulnerability that allows unauthenticated attackers to gain administrative access by exploiting a hardcoded AES-256 key used to encrypt session cookies for the web management interface. Attackers can forge a valid encrypted session cookie using the shared hardcoded key and bypass authentication checks to obtain full administrative control of the management interface while any legitimate administrator session is active.",
+      "refs": "https://signal11.io/advisories/netcomm-nf20-mesh-authentication-bypass\nhttps://support.netcommwireless.com/api/Media/Firmware/4407c21d-e990-49a4-9754-b72475f20c76?Product=NF20MESH%20Release%20Notes.pdf\nhttps://support.netcommwireless.com/products/nf20mesh#Firmware",
+      "source": "NVD",
+      "time": "2026-06-24 01:10:21"
+    },
+    {
+      "cve_id": "CVE-2026-35018",
+      "title": "高危漏洞: CVE-2026-35018 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-23 23:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NetComm NF20MESH routers running firmware R6B031 and earlier contain an authenticated remote code execution vulnerability that allows authenticated attackers to execute arbitrary commands as root by injecting shell metacharacters into the username JSON parameter processed by the dalStorage_addUserAccount function. Attackers can exploit the unsafe concatenation of user-supplied input into a shell command string passed to rut_doSystemAction without sanitization to achieve full root-level command execution on the underlying operating system.",
+      "refs": "https://signal11.io/advisories/netcomm-nf20-mesh-remote-code-execution\nhttps://support.netcommwireless.com/api/Media/Firmware/4407c21d-e990-49a4-9754-b72475f20c76?Product=NF20MESH%20Release%20Notes.pdf\nhttps://support.netcommwireless.com/products/nf20mesh#Firmware",
+      "source": "NVD",
+      "time": "2026-06-24 01:10:16"
+    },
+    {
+      "cve_id": "CVE-2026-9733",
+      "title": "高危漏洞: CVE-2026-9733 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-23 16:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Mojolicious::Plugin::Web::Auth::OAuth2 versions through 0.17 for Perl have an insecure default state parameter.\n\nWhen no state generator is specified in the constructor, the module defaults to using a SHA-1 hash of predictable and low-entropy sources, including the epoch time (which is leaked via the HTTP Date header) and a call to Perl's built-in rand function.\n\nA predictable state allows an attacker to hijack another user's session through cross site request forgery (CSRF).",
+      "refs": "https://datatracker.ietf.org/doc/html/rfc6749#section-10.12\nhttps://metacpan.org/release/HAYAJO/Mojolicious-Plugin-Web-Auth-0.17/source/lib/Mojolicious/Plugin/Web/Auth/OAuth2.pm#L129-131\nhttps://security.metacpan.org/patches/M/Mojolicious-Plugin-Web-Auth/0.17/CVE-2026-9733-r2.patch",
+      "source": "NVD",
+      "time": "2026-06-24 01:10:11"
+    },
+    {
+      "cve_id": "CVE-2026-8379",
+      "title": "高危漏洞: CVE-2026-8379 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-23 15:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Frontend File Manager Plugin WordPress plugin through 23.6 does not properly enforce its nonce check on the file download handler, allowing unauthenticated attackers to download files uploaded by any user through the Frontend File Manager Plugin WordPress plugin through 23.6 by iterating identifiers.",
+      "refs": "https://wpscan.com/vulnerability/71619406-19bb-437f-9538-fdf73de98827/",
+      "source": "NVD",
+      "time": "2026-06-24 01:10:07"
+    },
+    {
       "cve_id": "CVE-2026-56784",
       "title": "高危漏洞: CVE-2026-56784 (CVSS 8.3)",
       "cvss_score": 8.3,
@@ -1044,61 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47633",
       "source": "NVD",
       "time": "2026-06-19 10:55:47"
-    },
-    {
-      "cve_id": "CVE-2026-32174",
-      "title": "高危漏洞: CVE-2026-32174 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-19 06:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
-      "description": "Improper authentication in Azure Bot Service allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32174",
-      "source": "NVD",
-      "time": "2026-06-19 10:55:43"
-    },
-    {
-      "cve_id": "CVE-2026-49454",
-      "title": "高危漏洞: CVE-2026-49454 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-06-19 05:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Relyra is a strict-by-default SAML 2.0 Service Provider library for Elixir and Phoenix. Versions 1.0.0 and 1.1.0 accept forged SAML signatures because SignatureValue was not cryptographically verified before the library returned a successful authentication result. The XMLDSig trust boundary was incomplete as :public_key.verify over the exclusive-C14N canonicalized SignedInfo was not performed against the configured IdP certificate's public key, DigestValue was not recomputed over the canonicalized referenced element, and canonicalize/2 remained an unused passthrough in the signature-verification path. The result was a structure-only acceptance path where document shape and trust-source rejection could succeed without proving the signature bytes. A forged SignatureValue carrying an attacker-controlled NameID could be accepted as {:ok}. This issue has been fixed in version 1.2.0.",
-      "refs": "https://github.com/szTheory/relyra/commit/2e456897af3158c175bb490ce7fc51d6241c8922\nhttps://github.com/szTheory/relyra/commit/8910200\nhttps://github.com/szTheory/relyra/security/advisories/GHSA-jv46-xfwm-36j7",
-      "source": "NVD",
-      "time": "2026-06-19 06:52:23"
-    },
-    {
-      "cve_id": "CVE-2026-49257",
-      "title": "高危漏洞: CVE-2026-49257 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-06-19 05:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "mcp-pinot is a Python-based Model Context Protocol (MCP) server for interacting with Apache Pinot. In versions 3.0.1 and below, mcp-pinot defaults to running an HTTP MCP server bound to 0.0.0.0:8080 with no authentication enabled. All MCP tools, including SQL query execution, schema creation, and table-config mutation, are reachable by any network-adjacent caller. The server proxies these calls using server-side Pinot credentials, producing a confused-deputy condition that yields full read/write access to the configured Pinot cluster. This issue has been fixed in version 3.1.0",
-      "refs": "https://github.com/startreedata/mcp-pinot/commit/1c7d3f9cd384854bf72c127d230bdb32299475ad\nhttps://github.com/startreedata/mcp-pinot/issues/90\nhttps://github.com/startreedata/mcp-pinot/pull/95",
-      "source": "NVD",
-      "time": "2026-06-19 06:52:19"
-    },
-    {
-      "cve_id": "CVE-2026-49252",
-      "title": "高危漏洞: CVE-2026-49252 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-19 05:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
-      "description": "deepstream is a server that allows clients and backend services to sync data, send messages and make rpcs at scale. Versions prior to 10.0.5  are vulnerable to Prototype Pollution. Exploitation can lead to potential privilege escalation from any authenticated user with write permission to any record. This issue has been fixed in version 10.0.5.",
-      "refs": "https://github.com/deepstreamIO/deepstream.io/commit/54b8e2958a98df444b5b5d9a66e22872afd84e44\nhttps://github.com/deepstreamIO/deepstream.io/security/advisories/GHSA-9v98-6g37-x9g6",
-      "source": "NVD",
-      "time": "2026-06-19 06:52:14"
-    },
-    {
-      "cve_id": "CVE-2026-46699",
-      "title": "高危漏洞: CVE-2026-46699 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-06-19 05:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:L",
-      "description": "conda-smithy is a tool for combining a conda recipe with configurations to build using freely hosted CI services into a single repository. Prior to version 3.61.0, a vulnerability in the conda-forge automated webservices allowed unintended write access to feedstock repositories through GitHub username takeover. The root cause is the use of mutable GitHub usernames as identifiers for repository invitation routing, rather than stable, immutable GitHub user IDs. Version 3.61.0 fixes the issue.",
-      "refs": "https://github.com/conda-forge/conda-smithy/commit/3b0bcd92ebd6f41edd341401d84583a20911c587\nhttps://github.com/conda-forge/conda-smithy/security/advisories/GHSA-g95q-3cmj-fvh8",
-      "source": "NVD",
-      "time": "2026-06-19 06:52:10"
     }
   ]
 }
