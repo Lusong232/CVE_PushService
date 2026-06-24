@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3652",
+      "title": "高危漏洞: CVE-2026-3652 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-24 12:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The ARForms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `value` parameter of the `arf_save_incomplete_form_data` AJAX action in all versions up to, and including, 7.1.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that will execute whenever an administrator views the \"Partial Filled Form Entries\" page in the ARForms dashboard.",
+      "refs": "https://codecanyon.net/item/arforms-wordpress-form-builder-plugin/6023165\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b6ca5856-9010-4bb3-a024-92b3b4d500b4?source=cve",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:44"
+    },
+    {
+      "cve_id": "CVE-2026-54639",
+      "title": "高危漏洞: CVE-2026-54639 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-24 09:16:25",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Style Dictionary, a build system for creating cross-platform styles, has a prototype pollution vulnerability starting in version 4.3.0 and prior to version 5.4.4. Impact users have: direct usage of `convertTokenData(tokens, { output: 'object' });`; indirect usage, via using Expand API; and/or indirect usage via SD's transform lifecycle. Impact is high for this when style-dictionary is used as an integration in a NodeJS server application. Impact is moderate for when style-dictionary is used as an integration in a Web application. Impact is low for most common cases where the user of style-dictionary also maintains the tokens, and access is limited via read/write access to the repository/workflows where it is used. A patch has been published in version `5.4.4`. The only known workaround is to sanitize token data first. Whether using DTCG format or old Style Dictionary format, check the token data object recursively for any object keys that include `__proto__`.",
+      "refs": "https://github.com/style-dictionary/style-dictionary/commit/209085d9782cfc0783c4d983f3f1bb2c515954ec\nhttps://github.com/style-dictionary/style-dictionary/commit/23b5e8dda143441f0d6b8e2b4222e2da98058bc5\nhttps://github.com/style-dictionary/style-dictionary/pull/1702",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:39"
+    },
+    {
+      "cve_id": "CVE-2026-7574",
+      "title": "高危漏洞: CVE-2026-7574 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-06-24 08:16:34",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "description": "Anthropic Claude Desktop Cowork VM image handling (confirmed across v1.1348.0 through v1.2278.0, including v1.1348.0, v1.1617.0, and v1.2278.0) validates only file presence and a version marker string before booting rootfs.img, but does not verify image content integrity at time-of-use. A local attacker with unprivileged code execution as the victim macOS user can modify the VM root filesystem image and have it trusted on subsequent Cowork VM boots, enabling persistent arbitrary code execution in the VM and access to host-mounted directories. The estimated CWE mapping is CWE-353 (Missing Support for Integrity Check).",
+      "refs": "https://cfp.recon.cx/recon-2026/talk/DZUQYU/\nhttps://takeonme.org/gcves/GCVE-1337-2026-00000000000000000000000000000000000000000000000001110111111101011111111110000000000000000000000000000000000000000000000000000001010",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:34"
+    },
+    {
+      "cve_id": "CVE-2026-56785",
+      "title": "高危漏洞: CVE-2026-56785 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-06-24 07:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "FlatPress versions prior to commit 10be83c, contains a stored cross-site scripting vulnerability in comment and contact forms where name, URL, and email fields are rendered without proper output encoding in Smarty templates. Attackers can inject arbitrary HTML and JavaScript through these fields to execute malicious scripts in browsers of viewers including administrators, or bypass URL scheme validation to inject javascript: or data: URIs.",
+      "refs": "https://github.com/dilipk5/flatpressd-cms-sxss\nhttps://github.com/flatpressblog/flatpress/commit/10be83cbaac5ce0e51250b9d57de7f257b8f34f8\nhttps://www.vulncheck.com/advisories/flatpress-stored-cross-site-scripting-via-unescaped-comment-and-contact-form-fields",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:28"
+    },
+    {
+      "cve_id": "CVE-2026-54588",
+      "title": "高危漏洞: CVE-2026-54588 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-24 07:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
+      "description": "Poweradmin is a web-based DNS administration tool for PowerDNS server. Versions prior to 4.2.4 and 4.3.3 use the attacker-controlled `HTTP_HOST` request header as the authoritative source for building callback URLs in its OIDC, SAML, and logout authentication flows without any validation. An unauthenticated attacker can poison the `redirect_uri` sent to the Identity Provider, causing the IdP to redirect the victim's authorization code to an attacker-controlled server - resulting in full account takeover with no credentials required. Versions 4.2.4 and 4.3.3 patch the issue.",
+      "refs": "https://github.com/poweradmin/poweradmin/releases/tag/v4.2.4\nhttps://github.com/poweradmin/poweradmin/releases/tag/v4.3.3\nhttps://github.com/poweradmin/poweradmin/security/advisories/GHSA-3735-5339-xfwx",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:23"
+    },
+    {
+      "cve_id": "CVE-2026-54513",
+      "title": "高危漏洞: CVE-2026-54513 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-24 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, BasicPolymorphicTypeValidator.Builder.allowIfSubTypeIsArray() allowlists any array type based only on clazz.isArray(), without validating the array's component (element) type against the configured allowlist. A PTV built with allowIfSubTypeIsArray() plus an explicit concrete-type allowlist therefore still permits EvilType[] even though EvilType is not allowlisted. When Jackson deserializes the elements and no per-element type IDs are present, it instantiates the component type directly with no further PTV check, bypassing the allowlist. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.",
+      "refs": "https://github.com/FasterXML/jackson-databind/commit/01d1692c8d0ed03e51a0e3c4f8a9e6908e4931e5\nhttps://github.com/FasterXML/jackson-databind/commit/24529da29fdf46ff94ca38de9ebf31cd188f5e8e\nhttps://github.com/FasterXML/jackson-databind/issues/5981",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:19"
+    },
+    {
+      "cve_id": "CVE-2026-54512",
+      "title": "高危漏洞: CVE-2026-54512 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-24 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety mechanism guarding polymorphic deserialization. When polymorphic typing is enabled and a type identifier contains generic parameters (i.e. the type ID string contains <), DatabindContext._resolveAndValidateGeneric() validates only the raw container class name (the substring before <) against the configured PTV. If the container type is approved, the method parses the full canonical type string via TypeFactory.constructFromCanonical() and returns the fully parameterized type without ever validating the nested type arguments against the PTV. The nested type arguments are then resolved, instantiated, and populated as beans during deserialization. An attacker who controls the type ID can therefore place a denied class as a generic type parameter of an allowed container — for example java.util.ArrayList<com.evil.Gadget> when only java.util.ArrayList is allow-listed. The container passes the PTV check; com.evil.Gadget is loaded via Class.forName(name, true, loader), instantiated, and its properties are set from attacker-controlled JSON. This completely bypasses an explicitly configured PTV allow-list. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.",
+      "refs": "https://github.com/FasterXML/jackson-databind/commit/434d6c511de7fdd9872f29157aafb6162d12d8d5\nhttps://github.com/FasterXML/jackson-databind/issues/5988\nhttps://github.com/FasterXML/jackson-databind/security/advisories/GHSA-j3rv-43j4-c7qm",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:14"
+    },
+    {
+      "cve_id": "CVE-2026-41862",
+      "title": "高危漏洞: CVE-2026-41862 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-24 05:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Spring Statemachine's Kryo-based persistence backends (JPA, MongoDB, Redis and ZooKeeper) deserialise persisted state-machine contexts without enforcing a class allowlist (CWE-502, deserialisation of untrusted data), which can lead to remote code execution inside the application JVM.\n\nAffected versions:\nSpring Statemachine 4.0.0 through 4.0.1\nSpring Statemachine 3.2.0 through 3.2.4",
+      "refs": "https://spring.io/security/cve-2026-41862",
+      "source": "NVD",
+      "time": "2026-06-24 14:37:06"
+    },
+    {
+      "cve_id": "CVE-2026-12112",
+      "title": "高危漏洞: CVE-2026-12112 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-24 05:16:54",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in the foreman-mcp-server. A session management vulnerability in the MCP Server allows unauthenticated attackers to hijack active administrative sessions due to an improper cache of authenticated client connections, by trusting a non-secret session ID without re-validating authentication tokens and by logging all newly created session IDs to standard logs. This issue can result in privilege escalation and infrastructure-wide code execution.",
+      "refs": "https://access.redhat.com/errata/RHSA-2026:28438\nhttps://access.redhat.com/security/cve/CVE-2026-12112\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2488031",
+      "source": "NVD",
+      "time": "2026-06-24 14:36:58"
+    },
+    {
+      "cve_id": "CVE-2026-11807",
+      "title": "高危漏洞: CVE-2026-11807 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-24 05:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "A missing authorization vulnerability was found in the Event-Driven Ansible (EDA) websocket API. The /api/eda/ws/ansible-rulebook endpoint does not verify user permissions when processing Worker messages. Any authenticated user can send a forged message with an arbitrary activation_id to receive plaintext credentials associated with that activation, including OAuth tokens, vault passwords, and SSH keys.",
+      "refs": "https://access.redhat.com/errata/RHSA-2026:28376\nhttps://access.redhat.com/errata/RHSA-2026:28377\nhttps://access.redhat.com/errata/RHSA-2026:28492",
+      "source": "NVD",
+      "time": "2026-06-24 14:36:53"
+    },
+    {
+      "cve_id": "CVE-2026-54555",
+      "title": "高危漏洞: CVE-2026-54555 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-24 04:16:49",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "rtk filters and compresses command outputs before they reach your LLM context. Prior to 0.42.2, the permission splitter did not conservatively split or reject several shell constructs that Bash treats as command execution boundaries or nested execution. As a result, a command beginning with an allowed prefix such as git could hide a second command behind one of these constructs. rtk rewrite returned exit code 0, causing the Claude hook to emit permissionDecision: \"allow\". The rewritten command still contained the hidden command, so it ran without the user confirmation or denial that the permission rules were intended to enforce. This vulnerability is fixed in 0.42.2.",
+      "refs": "https://github.com/rtk-ai/rtk/security/advisories/GHSA-7gxq-fvfc-g327",
+      "source": "NVD",
+      "time": "2026-06-24 14:36:49"
+    },
+    {
+      "cve_id": "CVE-2026-54328",
+      "title": "高危漏洞: CVE-2026-54328 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-24 04:16:49",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Pi is a minimal terminal coding harness. From 0.74.0 until 0.78.1, Pi versions with temporary npm or git extension package installs used predictable paths under the operating system temporary directory. On Linux-based multi-user systems, a local attacker who can write to the shared temporary directory could prepare the expected package location before another user runs pi with a temporary extension package source. Pi could then load attacker-controlled extension code in the victim user's process.  This vulnerability is fixed in 0.78.1.",
+      "refs": "https://github.com/earendil-works/pi/commit/a98e087e5d08ea2a536bf73dbb0aebb87c3ef72e\nhttps://github.com/earendil-works/pi/commit/ea3465a8e371a12d0167a06b60f93878e3a3df44\nhttps://github.com/earendil-works/pi/pull/5345",
+      "source": "NVD",
+      "time": "2026-06-24 14:36:42"
+    },
+    {
+      "cve_id": "CVE-2026-39253",
+      "title": "高危漏洞: CVE-2026-39253 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-24 04:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An issue in Pivotal CRM v.6.6.04.08 allows a remote attacker to execute arbitrary code via the Pivotal.Core.Common.dll and Pivotal.Engine.Client.Services.Conversion.dll components.",
+      "refs": "https://support.pivotal.aurea.com/article/129552-remediating-insecure-deserialization-cwe-502-in-pivotal-6-6-04-08-smart-client-pbs\nhttps://timtimxs.github.io/CVE-2026-39253-Advisory/",
+      "source": "NVD",
+      "time": "2026-06-24 14:36:35"
+    },
+    {
       "cve_id": "CVE-2026-54322",
       "title": "高危漏洞: CVE-2026-54322 (CVSS 7.7)",
       "cvss_score": 7.7,
@@ -956,149 +1099,6 @@
       "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-77p2-9rcr-5w27\nhttps://www.vulncheck.com/advisories/capgo-rate-limit-bypass-via-user-controlled-device-id-parameter",
       "source": "NVD",
       "time": "2026-06-23 10:12:43"
-    },
-    {
-      "cve_id": "CVE-2026-56323",
-      "title": "高危漏洞: CVE-2026-56323 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-23 06:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Capgo before 12.128.2 contains an information disclosure vulnerability in the /functions/v1/channel_self endpoint that allows unauthenticated attackers to enumerate non-public channel names and determine app existence and subscription status. Remote attackers can send GET requests with arbitrary app_id parameters to disclose internal rollout channels, enumerate valid applications across tenants, and leak billing status without authentication or device binding.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-469v-6vw5-hxpq\nhttps://www.vulncheck.com/advisories/capgo-unauthenticated-channel-enumeration-and-app-oracle-via-get-channel-self",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:39"
-    },
-    {
-      "cve_id": "CVE-2026-56314",
-      "title": "高危漏洞: CVE-2026-56314 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-23 06:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Capgo before 12.128.12 fails to filter deleted app versions when joining channels during /updates resolution, allowing deleted bundles to remain selectable. Attackers can continue deploying deleted bundles to devices by exploiting the missing app_versions.deleted filter in channel version joins.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-hqq2-87cp-j83x\nhttps://www.vulncheck.com/advisories/capgo-deleted-bundle-selection-via-missing-deletion-filter-in-updates-endpoint",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:34"
-    },
-    {
-      "cve_id": "CVE-2026-56280",
-      "title": "高危漏洞: CVE-2026-56280 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-23 06:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
-      "description": "Cap-go before 12.128.2 contains a privilege inversion vulnerability in GET /build/logs/:jobId that allows read-only API key holders to cancel running native builds. The endpoint registers an abort listener on the SSE stream that unconditionally invokes cancelBuildOnDisconnect() using the privileged server-side BUILDER_API_KEY when clients disconnect, bypassing the app.build_native permission check required by the explicit POST /build/cancel/:jobId endpoint. Attackers with read-only API keys can repeatedly disrupt native build operations and CI/CD workflows by opening the log stream and dropping the connection.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-95g7-xwwx-j737\nhttps://www.vulncheck.com/advisories/cap-go-privilege-inversion-in-build-log-stream-via-sse-disconnect",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:30"
-    },
-    {
-      "cve_id": "CVE-2026-56268",
-      "title": "高危漏洞: CVE-2026-56268 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-23 06:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Flowise before 3.1.2 contains an information disclosure vulnerability in the /api/v1/chatflows/apikey/:apikey endpoint. When the keyonly query parameter is omitted (the default), the endpoint returns not only the chatflows bound to the supplied API key but also all chatflows across every workspace that have no API key assigned, because the underlying query lacks any workspace filter. An attacker with a valid API key for one workspace can therefore retrieve the full ChatFlow configuration (including flowData with system prompts and node configurations, chatbotConfig, apiConfig, and credential IDs) of unprotected chatflows belonging to other workspaces.",
-      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-c2c9-mfw7-p8hw\nhttps://www.vulncheck.com/advisories/flowise-cross-workspace-information-disclosure-via-chatflows-apikey-endpoint",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:26"
-    },
-    {
-      "cve_id": "CVE-2026-56266",
-      "title": "高危漏洞: CVE-2026-56266 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-23 06:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Crawl4AI before 0.8.7 contains a server-side request forgery vulnerability in the /crawl, /crawl/stream, /md, and /llm endpoints that fetch arbitrary user-supplied URLs without validation. Unauthenticated attackers can bypass the internal-address blocklist using IPv6-mapped IPv4 addresses to reach internal services and cloud metadata endpoints.",
-      "refs": "https://github.com/unclecode/crawl4ai\nhttps://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg\nhttps://www.vulncheck.com/advisories/crawl4ai-server-side-request-forgery-via-direct-crawl-endpoints",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:21"
-    },
-    {
-      "cve_id": "CVE-2026-55409",
-      "title": "高危漏洞: CVE-2026-55409 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-06-23 06:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
-      "description": "Filament is a collection of full-stack components for accelerated Laravel development. From 3.0.0 until 3.3.53, a disabled RichEditor field rendered its raw state without sanitizing HTML. Where the data stored in this field's state isn't sanitized already when the form state was filled, an attacker could plant malicious HTML or JavaScript and achieve XSS that executes for users who view the form. This vulnerability is fixed in 3.3.53.",
-      "refs": "https://github.com/filamentphp/filament/security/advisories/GHSA-m9cv-24rx-8mv7",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:16"
-    },
-    {
-      "cve_id": "CVE-2026-48506",
-      "title": "高危漏洞: CVE-2026-48506 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-23 06:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePackReader.TrySkip() recursively descends into nested arrays and maps without incrementing the reader depth or calling the configured depth checks. This bypasses MessagePackSecurity.MaximumObjectGraphDepth, the library's documented protection against deeply nested object graphs. Many generated and dynamic formatters call reader.Skip() when they encounter unknown map keys, unknown array members, ignored fields, or data that should be skipped for forward compatibility. A deeply nested value in one of these skipped positions can therefore cause unbounded recursion and an uncatchable StackOverflowException. This vulnerability is fixed in 2.5.301 and 3.1.7.",
-      "refs": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-vh6j-jc39-fggf",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:09"
-    },
-    {
-      "cve_id": "CVE-2026-48505",
-      "title": "高危漏洞: CVE-2026-48505 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-06-23 06:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Filament is a collection of full-stack components for accelerated Laravel development. From 4.0.0 until 4.11.5 and 5.6.5, a flaw in the handling of recovery codes for app-based multi-factor authentication allows the same recovery code to be reused via concurrent submission. This issue does not affect email-based MFA. It also only applies when recovery codes are enabled. If an attacker gains access to both the user's password and their recovery codes, they get two authenticated sessions per recovery code burned instead of one, or more if they batch the parallel submissions wider, materially extending the attacker's window of access compared to what the single-use guarantee implies. This vulnerability is fixed in 4.11.5 and 5.6.5.",
-      "refs": "https://github.com/filamentphp/filament/security/advisories/GHSA-mc5j-f6wx-h9qh",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:05"
-    },
-    {
-      "cve_id": "CVE-2026-48109",
-      "title": "高危漏洞: CVE-2026-48109 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-06-23 06:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
-      "description": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, A vulnerability exists in the optional LZ4 decompression path used by MessagePack compression modes Lz4Block and Lz4BlockArray. The decoder implementation is based on a deprecated fast-decompression algorithm that does not take a source-length bound. A remote attacker can send a crafted MessagePack payload with manipulated LZ4 token/length fields to force out-of-bounds reads from the compressed input buffer. In affected environments, this can trigger an AccessViolationException during decompression, causing process termination (denial of service). Under some conditions, limited unintended memory disclosure from over-read data may also be possible before failure. This vulnerability is fixed in 2.5.301 and 3.1.7.",
-      "refs": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-hv8m-jj95-wg3x",
-      "source": "NVD",
-      "time": "2026-06-23 10:12:01"
-    },
-    {
-      "cve_id": "CVE-2025-71358",
-      "title": "高危漏洞: CVE-2025-71358 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-23 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.29 fails to detect malicious pickle files that exploit idlelib.autocomplete.AutoComplete.get_entity function in reduce methods. Attackers can embed undetected code in pickle files that executes arbitrary commands when loaded by victims using pickle.load().",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-6w4w-5w54-rjvr\nhttps://www.vulncheck.com/advisories/picklescan-remote-code-execution-via-idlelib-autocomplete-autocomplete-get-entity",
-      "source": "NVD",
-      "time": "2026-06-23 10:11:56"
-    },
-    {
-      "cve_id": "CVE-2025-71344",
-      "title": "高危漏洞: CVE-2025-71344 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-23 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.30 (affected versions 0.0.26 and earlier) fails to detect the ensurepip._run_pip built-in function when scanning pickle files, allowing attackers to execute arbitrary code. Malicious pickle files embedding ensurepip._run_pip calls in __reduce__ methods bypass picklescan detection and achieve remote code execution upon pickle.load() invocation.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-xp4f-hrf8-rxw7\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-undetected-ensurepip-run-pip-function",
-      "source": "NVD",
-      "time": "2026-06-23 10:11:51"
-    },
-    {
-      "cve_id": "CVE-2025-71339",
-      "title": "高危漏洞: CVE-2025-71339 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-23 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Picklescan before 0.0.33 fails to detect the numpy.f2py.crackfortran._eval_length gadget in pickle __reduce__ methods, allowing arbitrary code execution. Attackers can craft malicious pickle files that execute arbitrary Python code when loaded by victims who trust Picklescan's safety validation.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-6556-fwc2-fg2p\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-numpy-f2py-crackfortran-eval-length-gadget",
-      "source": "NVD",
-      "time": "2026-06-23 10:11:45"
-    },
-    {
-      "cve_id": "CVE-2026-55603",
-      "title": "高危漏洞: CVE-2026-55603 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-23 05:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
-      "description": "http-proxy-middleware is node.js http-proxy middleware. From 3.0.4 until 3.0.7 and 4.1.1, fixRequestBody() is the library's documented helper for re-emitting a request body that was already consumed by a body parser. When the outgoing Content-Type is multipart/form-data, it rebuilds the body with handlerFormDataBodyData(), which interpolates each req.body key and value directly into the multipart wire format without neutralizing CR/LF. A \\r\\n inside a value (or key) lets an attacker close the current part and inject an entirely new form part. Because the proxy's own body parser saw a single opaque value, any gateway-side policy or validation performed on req.body is evaluated against a different set of fields than the upstream backend ultimately parses a request/parameter desynchronization across the trust boundary. This vulnerability is fixed in 3.0.7 and 4.1.1.",
-      "refs": "https://github.com/chimurai/http-proxy-middleware/security/advisories/GHSA-gcq2-9pq2-cxqm",
-      "source": "NVD",
-      "time": "2026-06-23 06:44:58"
     }
   ]
 }
