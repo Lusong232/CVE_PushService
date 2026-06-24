@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-54297",
+      "title": "高危漏洞: CVE-2026-54297 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-25 01:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Faraday is an HTTP client library abstraction layer that provides a common interface over many adapters. From 1.0.0 until 1.10.6 and 2.14.3, Faraday::NestedParamsEncoder, the default nested query parameter encoder/decoder in Faraday, decodes nested query strings without enforcing a maximum nesting depth. A crafted query string causes Faraday to build a deeply nested Ruby Hash structure. The internal dehash routine then recursively walks this attacker-controlled structure without a depth limit. At sufficient depth, Ruby raises an uncaught SystemStackError (stack level too deep), crashing the calling thread or worker. This can lead to denial of service in applications that pass attacker-controlled query strings to Faraday's nested query parsing or URL-building paths. This vulnerability is fixed in 1.10.6 and 2.14.3.",
+      "refs": "https://github.com/lostisland/faraday/security/advisories/GHSA-98m9-hrrm-r99r",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:48"
+    },
+    {
+      "cve_id": "CVE-2026-56121",
+      "title": "高危漏洞: CVE-2026-56121 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-25 00:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Feast before 0.63.0 contains an unsafe deserialization vulnerability that allows unauthenticated or unauthorized attackers to achieve remote code execution by sending a crafted gRPC request to the registry server. The user_defined_function.body field of an OnDemandFeatureView spec is decoded from base64 and passed to dill.loads() before any authorization check is performed, enabling attackers to embed a malicious serialized Python object with an arbitrary __reduce__ method to execute OS commands as the feast service account.",
+      "refs": "https://github.com/feast-dev/feast/commit/835cda8e2c1359f1f496ad72701dbd6a73bdb25a\nhttps://github.com/feast-dev/feast/releases/tag/v0.63.0\nhttps://huntr.com/bounties/d64b8111-180b-46ba-afa3-c877fda2ede6",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:42"
+    },
+    {
+      "cve_id": "CVE-2026-56111",
+      "title": "高危漏洞: CVE-2026-56111 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-25 00:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Marlin Firmware through 2.1.2.7, fixed in commit 1f255d1, when built with MESH_BED_LEVELING enabled, contains an out-of-bounds write vulnerability in the M421 G-code handler that allows attackers to corrupt firmware memory by supplying out-of-range X and Y grid indices. Attackers can send a single crafted G-code command via USB serial, network interface, or malicious gcode file to write an attacker-controlled 32-bit float value past the z_values array bounds, corrupting adjacent firmware variables and causing denial of service or firmware state corruption.",
+      "refs": "https://github.com/MarlinFirmware/Marlin/commit/1f255d16ec2d456454fd444494cfb338d62b0fa1\nhttps://github.com/MarlinFirmware/Marlin/issues/28467\nhttps://github.com/MarlinFirmware/Marlin/pull/28468",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:38"
+    },
+    {
+      "cve_id": "CVE-2026-49269",
+      "title": "高危漏洞: CVE-2026-49269 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-25 00:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Apple M1 GPUs retain register file data between compute shader dispatches from different processes. A sandboxed Metal attacker app can run a GPU reader shader that reads stale register values left by a separate sandboxed victim app. In the proof of concept, GPUVictim.app generates a fresh random 128-bit secret using SecRandomCopyBytes and loads it into GPU registers. GPUAttacker.app, a separate sandboxed app, recovers the exact secret from stale GPU register state. NOTE: The vendor stated that this behavior affects only legacy hardware and has already been addressed at the hardware level in current-generation Apple Silicon.",
+      "refs": "https://gist.github.com/scndls/9cbe31f2b0b1578eaeb311e601335355",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:34"
+    },
+    {
+      "cve_id": "CVE-2026-57303",
+      "title": "高危漏洞: CVE-2026-57303 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-24 22:17:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Jenkins Assembla Plugin 1.4 and earlier does not configure its XML parser to prevent XML external entity (XXE) attacks, allowing attackers able to control the responses of the configured Assembla server to extract secrets from the Jenkins controller or perform server-side request forgery.",
+      "refs": "https://www.jenkins.io/security/advisory/2026-06-24/#SECURITY-3692%20(1)",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:30"
+    },
+    {
+      "cve_id": "CVE-2026-57301",
+      "title": "高危漏洞: CVE-2026-57301 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-24 22:17:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Jenkins OWASP ZAP Plugin 1.0.7 and earlier performs build operations on the Jenkins controller rather than the assigned agent, allowing attackers with Item/Configure permission to execute arbitrary code on the Jenkins controller.",
+      "refs": "https://www.jenkins.io/security/advisory/2026-06-24/#SECURITY-3649",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:24"
+    },
+    {
+      "cve_id": "CVE-2026-57296",
+      "title": "高危漏洞: CVE-2026-57296 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-24 22:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Jenkins External Workspace Manager Plugin 1.3.2 and earlier does not reject path traversal sequences in the custom workspace path provided to the exwsAllocate Pipeline step, allowing attackers with Item/Configure permission to read arbitrary files on the Jenkins controller file system, which can lead to remote code execution.",
+      "refs": "https://www.jenkins.io/security/advisory/2026-06-24/#SECURITY-3777",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:17"
+    },
+    {
+      "cve_id": "CVE-2026-57281",
+      "title": "高危漏洞: CVE-2026-57281 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-24 22:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Jenkins Script Security Plugin 1402.v94c9ce464861 and earlier does not reject Groovy AST transformation annotations carrying an extensions member, allowing attackers able to run sandboxed Groovy scripts to execute code outside the sandbox if a suitable script is present on the classpath of the component that evaluates the script.",
+      "refs": "https://www.jenkins.io/security/advisory/2026-06-24/#SECURITY-3793",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:12"
+    },
+    {
+      "cve_id": "CVE-2026-57280",
+      "title": "高危漏洞: CVE-2026-57280 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-24 22:17:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Jenkins Script Security Plugin 1402.v94c9ce464861 and earlier does not intercept the implicit type casts applied to the elements of typed for-each loops in sandboxed Groovy scripts, allowing attackers able to provide such scripts to invoke arbitrary constructors and bypass the sandbox protection.",
+      "refs": "https://www.jenkins.io/security/advisory/2026-06-24/#SECURITY-3792",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:08"
+    },
+    {
+      "cve_id": "CVE-2026-35025",
+      "title": "高危漏洞: CVE-2026-35025 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-24 22:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "ProFTPD through 1.3.9b and 1.3.10rc2 contains an access control bypass vulnerability that allows authenticated FTP users to circumvent Directory ACL restrictions by prefixing paths with /proc/self/root in the RNFR command handler. Attackers can exploit the unresolved symlink components in dir_canonical_path() to cause dir_check() to perform lexical path comparisons that match no configured Directory block, enabling rename operations on files in DenyAll-protected directories and subsequent retrieval of those files. Mitigation: Sessions configured with DefaultRoot (chroot) are not affected, as chroot changes the directory to which /proc/self/root resolves.",
+      "refs": "http://www.proftpd.org/\nhttps://github.com/proftpd/proftpd/issues/2170\nhttps://www.vulncheck.com/advisories/proftpd-acl-bypass-via-proc-self-root-path-prefix-in-rnfr",
+      "source": "NVD",
+      "time": "2026-06-25 03:26:04"
+    },
+    {
+      "cve_id": "CVE-2026-10749",
+      "title": "高危漏洞: CVE-2026-10749 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-24 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Post Duplicator WordPress plugin before 3.0.15 does not safely handle custom meta-data during post duplication, storing attacker-supplied serialized values without the WordPress meta API's double-serialization protection, allowing users with Contributor-level access and above to inject a PHP Object.",
+      "refs": "https://wpscan.com/vulnerability/224c36b5-e604-4eb3-aad8-47283b95e994/",
+      "source": "NVD",
+      "time": "2026-06-25 03:25:59"
+    },
+    {
+      "cve_id": "CVE-2026-10735",
+      "title": "高危漏洞: CVE-2026-10735 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-24 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Multiple Shapedsmart-post-show-pro WordPress plugin before 4.0.2, Real Testimonials Pro WordPress plugin before 3.2.5, Product Slider for WooCommerce Pro WordPress plugin before 3.5.3 Pro smart-post-show-pro WordPress plugin before 4.0.2, Real Testimonials Pro WordPress plugin before 3.2.5, Product Slider for WooCommerce Pro WordPress plugin before 3.5.3 were distributed with malicious code through the vendor's compromised update server, allowing unauthenticated attackers to deploy a second-stage payload that exfiltrates credentials and other sensitive data and grants full control of affected sites.",
+      "refs": "https://wpscan.com/vulnerability/160ee7f7-91b6-4cce-9462-837130621402/",
+      "source": "NVD",
+      "time": "2026-06-25 03:25:52"
+    },
+    {
       "cve_id": "CVE-2026-56351",
       "title": "高危漏洞: CVE-2026-56351 (CVSS 8.2)",
       "cvss_score": 8.2,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/langflow-ai/langflow/pull/12832\nhttps://github.com/langflow-ai/langflow/security/advisories/GHSA-qrpv-q767-xqq2",
       "source": "NVD",
       "time": "2026-06-24 03:51:00"
-    },
-    {
-      "cve_id": "CVE-2026-50574",
-      "title": "高危漏洞: CVE-2026-50574 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-24 01:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "yt-dlp is a command-line audio/video downloader. Prior to 2026.06.09, if aria2c is used as an external downloader for a fragmented manifest format (such as an HLS/DASH stream), yt-dlp passes insufficiently sanitized input to aria2c that allows an attacker to perform an arbitrary file write. On Windows platforms, this can lead to immediate arbitrary code execution. On non-Windows platforms, this can lead to arbitrary code execution upon the next invocation of yt-dlp. This vulnerability is fixed in 2026.06.09.",
-      "refs": "https://github.com/yt-dlp/yt-dlp/security/advisories/GHSA-vx4q-3cr2-7cg2",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:56"
-    },
-    {
-      "cve_id": "CVE-2026-50023",
-      "title": "高危漏洞: CVE-2026-50023 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-24 01:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "yt-dlp is a command-line audio/video downloader. Prior to 2026.06.09, a vulnerability exists in yt-dlp that allows a remote attacker to write arbitrary OS-shortcut files (such as .desktop, .url, .webloc) to the user's filesystem, bypassing the remediation for CVE-2024-38519. The allowlist explicitly included the unsafe extensions .desktop, .url, and .webloc so that the functionality of the --write-link option (and its variants) could be preserved. These allowlist inclusions can be exploited by an attacker to write malicious OS-shortcut files in the context of a media or subtitles download. This vulnerability is fixed in 2026.06.09.",
-      "refs": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/tag/2026.06.09.230517\nhttps://github.com/yt-dlp/yt-dlp/commit/e578e265f7c6ca94a74b30e0d8d6196a4d19fb6a\nhttps://github.com/yt-dlp/yt-dlp/releases/tag/2026.06.09",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:49"
-    },
-    {
-      "cve_id": "CVE-2026-48519",
-      "title": "高危漏洞: CVE-2026-48519 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-06-24 01:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.2, the \"Shareable Playground\" (or \"Public Flows\" in code) contains a critical RCE vulnerability. Shareable Playground feature works by enabling the execution of workflows by unauthenticated users, by accessing a link. Specifically, it enables the route /api/v1/build_public_tmp to execute any public flow, given a public flow ID. When the route executes the flow, it allows for providing arbitrary custom Python code as the nodes code, inside the JSON payload. The vulnerable field is data.nodes[X].data.node.template.code.value. This vulnerability is fixed in 1.9.2.",
-      "refs": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-v5ff-9q35-q26f",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:44"
-    },
-    {
-      "cve_id": "CVE-2026-44959",
-      "title": "高危漏洞: CVE-2026-44959 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-24 01:17:00",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A missing validation of user input exists when saving delivery limitations in Revive Adserver 6.0.6 and earlier. A low‑privileged user could add an unexpected component parameter and inject malicious PHP code into the compiledlimitations field, which would then be executed during banner delivery. Input sanitisation has been improved to ensure that unexpected parameters are filtered out.",
-      "refs": "https://hackerone.com/reports/3744200",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:40"
-    },
-    {
-      "cve_id": "CVE-2026-34916",
-      "title": "高危漏洞: CVE-2026-34916 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-24 01:16:53",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A missing validation of user input when saving delivery limitations in Revive Adserver 6.0.6 and earlier could allow a low‑privileged user to use the logical parameter to inject malicious PHP code into the compiledlimitations field on the database and have it executed during banner delivery. Input sanitisation has been improved to ensure that the parameter is properly validated.",
-      "refs": "https://hackerone.com/reports/3656781",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:36"
-    },
-    {
-      "cve_id": "CVE-2026-34914",
-      "title": "高危漏洞: CVE-2026-34914 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-06-24 01:16:53",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
-      "description": "A missing sanitisation of user input in the zone-include.php script of Revive Adserver 6.0.6 and earlier. A low‑privileged user could exploit the clientid parameter to perform blind SQL injection attacks. Input sanitisation has been improved to ensure that all parameters processed by the script are properly validated.",
-      "refs": "https://hackerone.com/reports/3653196",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:32"
-    },
-    {
-      "cve_id": "CVE-2026-33760",
-      "title": "高危漏洞: CVE-2026-33760 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-24 01:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.0, Langflow's /api/v1/monitor router exposes 7 endpoints that perform read, write, and delete operations on user-owned resources — messages, sessions, build artifacts, and LLM transaction logs — without verifying that the authenticated requester owns the targeted resource. Any authenticated user can read, modify, rename, or permanently delete another user's data by supplying the target's resource ID or flow_id. This is a classic IDOR/BOLA vulnerability. Notably, the same source file (monitor.py) contains one correctly-implemented endpoint that uses an ownership check, demonstrating the correct pattern was known but inconsistently applied. This vulnerability is fixed in 1.9.0.",
-      "refs": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-9c59-2mvc-vfr8",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:27"
-    },
-    {
-      "cve_id": "CVE-2026-13007",
-      "title": "高危漏洞: CVE-2026-13007 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-24 01:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Tenable Identity Exposure contains multiple unauthenticated API endpoints under /w/api/* that expose sensitive application configuration data including cleartext LDAP credentials, SAML configuration, user accounts, and directory settings to unauthenticated remote attackers. Affected responses are served with Cache-Control: public headers and without Vary: Cookie, allowing reverse proxies and CDNs to cache and serve sensitive data to unauthenticated users even after authentication is applied.",
-      "refs": "https://www.tenable.com/security/research/tns-2026-16",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:23"
-    },
-    {
-      "cve_id": "CVE-2026-12958",
-      "title": "高危漏洞: CVE-2026-12958 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-24 01:16:41",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Missing symlink validation in Language Servers for AWS may allow an arbitrary file write outside of the workspace trust boundary. This may occur when a local user opens a workspace with a maliciously crafted symlink that resolves to a file path outside the workspace trust boundary.\n\n\n\nTo remediate this issue, users should upgrade to version 1.69.0 or higher.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-047-aws/",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:16"
-    },
-    {
-      "cve_id": "CVE-2026-12957",
-      "title": "高危漏洞: CVE-2026-12957 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-24 01:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper trust boundary enforcement in Language Servers for AWS before version 1.65.0 on all supported platforms may allow a for arbitrary code execution. If a local user opens a maliciously crafted workspace, any commands within the project configuration files may be automatically executed. This issue requires the user to trust the workspace when prompted.\n\n\n\nTo remediate this issue, users should upgrade to Language Servers for AWS version 1.65.0 or higher.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-047-aws/",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:10"
-    },
-    {
-      "cve_id": "CVE-2026-48517",
-      "title": "高危漏洞: CVE-2026-48517 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-23 06:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, MessagePack-CSharp's typeless deserialization includes MessagePackSerializerOptions.ThrowIfDeserializingTypeIsDisallowed(Type) as a safety check for dangerous types. The default implementation checks the outer type name, but it does not recursively inspect array element types or generic type arguments. As a result, a type that would be blocked directly can be wrapped inside an array or constructed generic type and pass the outer type check. The formatter machinery can then materialize formatters for the inner blocked type. This vulnerability is fixed in 2.5.301 and 3.1.7.",
-      "refs": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-qhmf-xw27-6rqr",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:06"
-    },
-    {
-      "cve_id": "CVE-2026-48516",
-      "title": "高危漏洞: CVE-2026-48516 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-23 06:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "MessagePack for C# is a MessagePack serializer for C#. Prior to 2.5.301 and 3.1.7, InterfaceLookupFormatter<TKey,TElement> constructs an internal Dictionary<TKey, IGrouping<TKey,TElement>> with the default equality comparer instead of the security-aware comparer supplied by options.Security.GetEqualityComparer<TKey>(). This formatter omission allows hash-collision CPU denial of service against ILookup<TKey,TElement> even when the application has opted into the untrusted-data security posture This vulnerability is fixed in 2.5.301 and 3.1.7.",
-      "refs": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-q2h6-ghwm-5qm8",
-      "source": "NVD",
-      "time": "2026-06-24 03:50:01"
     }
   ]
 }
