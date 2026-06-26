@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-57881",
+      "title": "高危漏洞: CVE-2026-57881 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-26 16:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated\nstack-based buffer overflow vulnerability exists in vlsvr in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient length validation when processing remote login data. A remote\nattacker may exploit this vulnerability by sending crafted login data with\noverly long input, resulting in memory corruption, denial of service, or potentially\narbitrary code execution.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:43"
+    },
+    {
+      "cve_id": "CVE-2026-57880",
+      "title": "高危漏洞: CVE-2026-57880 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated\nstack-based buffer overflow vulnerability exists in ssvr in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient bounds checking when parsing RTSP Digest authentication fields. A\nremote attacker may exploit this vulnerability by sending a crafted RTSP\nrequest containing overly long authentication data, resulting in memory\ncorruption, denial of service, or potentially arbitrary code execution.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:36"
+    },
+    {
+      "cve_id": "CVE-2026-57879",
+      "title": "高危漏洞: CVE-2026-57879 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated\nstack-based buffer overflow vulnerability exists in ssvr in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient bounds checking when processing RTSP custom authentication data. A\nremote attacker may exploit this vulnerability by sending a crafted RTSP\nrequest, resulting in memory corruption, denial of service, or potentially\narbitrary code execution.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:31"
+    },
+    {
+      "cve_id": "CVE-2026-57878",
+      "title": "高危漏洞: CVE-2026-57878 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated\nstack-based buffer overflow vulnerability exists in thttpd in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient bounds checking when processing web request parameters in a\nspecific request path. A remote attacker may exploit this vulnerability by\nsending a crafted HTTP request with overly long input, resulting in memory\ncorruption, denial of service, or potentially arbitrary code execution.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:27"
+    },
+    {
+      "cve_id": "CVE-2026-57877",
+      "title": "高危漏洞: CVE-2026-57877 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "An unauthenticated\nformat string vulnerability exists in vlsvr in GeoVision GV-LPC2011 and\nGV-LPC2211 V1.12 and earlier. The vulnerability is caused by improper handling\nof externally controlled input during log message formatting in the login\nprocessing path. A remote attacker may exploit this vulnerability by sending\ncrafted login data, potentially causing information disclosure, memory\ncorruption, or a denial of service.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:22"
+    },
+    {
+      "cve_id": "CVE-2026-57876",
+      "title": "高危漏洞: CVE-2026-57876 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An unauthenticated\nout-of-bounds write vulnerability exists in onvif.cgi in GeoVision GV-LPC2011\nand GV-LPC2211 V1.12 and earlier. The vulnerability is caused by insufficient\nbounds checking when processing HTTP request body data. A remote attacker may\nexploit this vulnerability by sending a crafted request with excessive input,\ncausing memory corruption and resulting in a denial of service.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:18"
+    },
+    {
+      "cve_id": "CVE-2026-57875",
+      "title": "高危漏洞: CVE-2026-57875 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An unauthenticated\nNULL pointer dereference vulnerability exists in the HTTP request parsing logic\nof multiple CGI components in GeoVision GV-LPC2011 and GV-LPC2211 V1.12 and\nearlier. The vulnerability is caused by improper validation of required HTTP\nrequest metadata before it is used by the affected components. A remote attacker\nmay exploit this vulnerability by sending a specially crafted HTTP request,\ncausing the affected process to crash and resulting in a denial of service.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:13"
+    },
+    {
+      "cve_id": "CVE-2026-57874",
+      "title": "高危漏洞: CVE-2026-57874 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An unauthenticated\nbuffer overflow vulnerability exists in IEEE8021x_upload.cgi in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient bounds checking when parsing filename values in multipart upload\ndata. A remote attacker may exploit this vulnerability by sending a crafted\nupload request with overly long input, causing memory corruption and resulting\nin a denial of service.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:08"
+    },
+    {
+      "cve_id": "CVE-2026-57873",
+      "title": "高危漏洞: CVE-2026-57873 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An unauthenticated\nNULL pointer dereference vulnerability exists in IEEE8021x_upload.cgi in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\nimproper validation of multipart upload headers when processing\ncertificate-related upload fields. A remote attacker may exploit this\nvulnerability by sending a malformed multipart request, causing the affected\nCGI process to crash and resulting in a denial of service.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:39:01"
+    },
+    {
+      "cve_id": "CVE-2026-57872",
+      "title": "高危漏洞: CVE-2026-57872 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An unauthenticated\ndirectory traversal vulnerability exists in get_fcont.cgi in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient validation of user-supplied file path input before the requested\nfile is accessed by the CGI component. A remote attacker may exploit this\nvulnerability by sending a crafted request to read arbitrary files accessible\nto the affected process, resulting in information disclosure.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-06-26 19:38:56"
+    },
+    {
+      "cve_id": "CVE-2026-2053",
+      "title": "高危漏洞: CVE-2026-2053 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-26 16:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "The WSO2 API Manager's message flow component, when processing WS-Addressing headers, does not sufficiently validate or restrict user-controlled input within these headers. This omission allows an attacker to manipulate WS-Addressing headers to specify arbitrary destinations for server-initiated requests.\n\nSuccessful exploitation allows an unauthenticated attacker to control the destination of server-initiated requests originating from the WSO2 API Manager. This direct control can enable unauthorized access to internal network resources or services that would typically be inaccessible from external networks.",
+      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5072/",
+      "source": "NVD",
+      "time": "2026-06-26 19:38:47"
+    },
+    {
       "cve_id": "CVE-2026-50741",
       "title": "高危漏洞: CVE-2026-50741 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -978,127 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/checkview/vulnerability/wordpress-checkview-automated-testing-plugin-2-1-0-broken-access-control-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-26 03:46:52"
-    },
-    {
-      "cve_id": "CVE-2026-54843",
-      "title": "高危漏洞: CVE-2026-54843 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-25 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in MDTF <= 1.3.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-meta-data-filter-and-taxonomy-filter/vulnerability/wordpress-mdtf-plugin-1-3-7-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:45"
-    },
-    {
-      "cve_id": "CVE-2026-54842",
-      "title": "高危漏洞: CVE-2026-54842 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-25 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Missing Authorization vulnerability in Royal Plugins Royal MCP allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Royal MCP: from n/a through 1.4.25.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/royal-mcp/vulnerability/wordpress-royal-mcp-plugin-1-4-25-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:41"
-    },
-    {
-      "cve_id": "CVE-2026-54841",
-      "title": "高危漏洞: CVE-2026-54841 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Sensitive Data Exposure in Vitepos <= 3.4.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/vitepos-lite/vulnerability/wordpress-vitepos-plugin-3-4-2-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:37"
-    },
-    {
-      "cve_id": "CVE-2026-54838",
-      "title": "高危漏洞: CVE-2026-54838 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-25 22:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Subscriber SQL Injection in WC Vendors Marketplace <= 2.6.8 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wc-vendors/vulnerability/wordpress-wc-vendors-marketplace-plugin-2-6-8-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:33"
-    },
-    {
-      "cve_id": "CVE-2026-54836",
-      "title": "高危漏洞: CVE-2026-54836 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-25 22:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in YMC Filter allows SQL Injection.\n\nThis issue affects YMC Filter: from n/a through 3.11.5.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/ymc-smart-filter/vulnerability/wordpress-filter-grids-plugin-3-11-5-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:29"
-    },
-    {
-      "cve_id": "CVE-2026-54830",
-      "title": "高危漏洞: CVE-2026-54830 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 22:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in Five Star Restaurant Reservations <= 2.7.19 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/restaurant-reservations/vulnerability/wordpress-five-star-restaurant-reservations-plugin-2-7-19-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:25"
-    },
-    {
-      "cve_id": "CVE-2026-54829",
-      "title": "高危漏洞: CVE-2026-54829 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 22:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Jacob N. Breetvelt WP Photo Album Plus allows Blind SQL Injection.\n\nThis issue affects WP Photo Album Plus: from n/a through 9.1.13.005.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-photo-album-plus/vulnerability/wordpress-wp-photo-album-plus-plugin-9-1-13-005-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:21"
-    },
-    {
-      "cve_id": "CVE-2026-54828",
-      "title": "高危漏洞: CVE-2026-54828 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in Motors <= 1.4.109 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/motors-car-dealership-classified-listings/vulnerability/wordpress-motors-plugin-1-4-109-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:14"
-    },
-    {
-      "cve_id": "CVE-2026-54823",
-      "title": "高危漏洞: CVE-2026-54823 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-25 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Contributor Remote Code Execution (RCE) in Widget Options <= 4.2.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/widget-options/vulnerability/wordpress-widget-options-plugin-4-2-3-remote-code-execution-rce-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:10"
-    },
-    {
-      "cve_id": "CVE-2026-54822",
-      "title": "高危漏洞: CVE-2026-54822 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-25 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Subscriber SQL Injection in SALESmanago & Leadoo <= 3.11.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/salesmanago/vulnerability/wordpress-salesmanago-leadoo-plugin-3-11-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:06"
-    },
-    {
-      "cve_id": "CVE-2026-54821",
-      "title": "高危漏洞: CVE-2026-54821 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-06-25 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "Subscriber Sensitive Data Exposure in Visual Link Preview <= 2.3.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/visual-link-preview/vulnerability/wordpress-visual-link-preview-plugin-2-3-1-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:46:02"
     }
   ]
 }
