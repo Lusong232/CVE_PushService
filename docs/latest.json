@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-47220",
+      "title": "高危漏洞: CVE-2026-47220 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 03:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.37.0 until 1.37.5 and 1.38.3, when the %REQUESTED_SERVER_NAME(X:Y)% is used in log format and host related options is specified, like HOST_FIRST, SNI_FIRST, it's possible to crash Envoy when the specified host header is missing in the request headers. This vulnerability is fixed in 1.37.5 and 1.38.3.",
+      "refs": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-j9wh-4qfm-wf2v",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:39"
+    },
+    {
+      "cve_id": "CVE-2026-56876",
+      "title": "高危漏洞: CVE-2026-56876 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-27 02:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "extract-zip does not validate symlink targets when extracting zip archives. When processing a malicious zip file containing a symlink with a relative path like '../../../../etc/passwd', extract-zip will extract the symlink without validation, allowing it to point outside the extraction directory. Depending on how extract-zip is used, an attacker could read or write to arbitrary files.",
+      "refs": "https://github.com/ziad626/extract-zip-security-research/security/advisories/GHSA-x7jf-2287-qcpf\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-177-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-56876",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:32"
+    },
+    {
+      "cve_id": "CVE-2026-55441",
+      "title": "高危漏洞: CVE-2026-55441 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-27 02:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.4, mise's trust feature gates config files (mise.toml, .tool-versions) through trust_check, but task-include files are loaded on a path that never reaches it. When a directory has a task-include dir (mise-tasks/, .mise/tasks/, …) but no config file, mise falls back to the default includes and renders each task's tera fields — and that tera environment has exec() registered. A {{ exec(command='…') }} in any rendered field runs arbitrary commands the moment the tasks are merely listed. There's no config file to gate on, so no trust prompt ever appears. Read-only commands trigger it: mise tasks, mise task ls, mise run, mise tasks --usage (the query shell completion runs on Tab). The victim only has to cd into a cloned repo and list or tab-complete a task. This vulnerability is fixed in 2026.6.4.",
+      "refs": "https://github.com/jdx/mise/security/advisories/GHSA-77g9-363w-rccq",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:28"
+    },
+    {
+      "cve_id": "CVE-2026-54341",
+      "title": "高危漏洞: CVE-2026-54341 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 02:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Dragonfly is an in-memory data store built for modern application workloads. Prior to 1.39.0, a crafted RESTORE payload triggers an out-of-bounds read in DragonflyDB's listpack collection loaders, crashing the entire server process (SIGSEGV). Because DragonflyDB requires no authentication by default and RESTORE is a normal keyspace command, an unauthenticated remote attacker can crash the server with a single ~24-byte command — a remote, repeatable denial of service. This vulnerability is fixed in 1.39.0.",
+      "refs": "https://github.com/dragonflydb/dragonfly/pull/7502\nhttps://github.com/dragonflydb/dragonfly/security/advisories/GHSA-cwjr-j869-h8q9\nhttps://github.com/dragonflydb/dragonfly/security/advisories/GHSA-cwjr-j869-h8q9",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:23"
+    },
+    {
+      "cve_id": "CVE-2026-48743",
+      "title": "高危漏洞: CVE-2026-48743 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 02:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "description": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, Envoy can translate a downstream HTTP/3 request that is complete at the transport layer (HEADERS with FIN / headers-only close) but still carries a nonzero Content-Length into a complete upstream HTTP/1 request with unresolved body debt. In an HTTP/1 upstream deployment where the origin replies before reading the declared body and keeps the connection reusable, the beginning of the next Envoy-generated upstream request can be consumed as the first request's body. The remaining bytes are then parsed by the origin as a new HTTP/1 request. This was reproduced as a route-bypass/desync: direct /pwn was denied by Envoy, but the second downstream H3 stream received the response for backend-parsed GET /pwn HTTP/1.1. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.",
+      "refs": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-8phg-2h2q-jgxf",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:18"
+    },
+    {
+      "cve_id": "CVE-2026-48044",
+      "title": "高危漏洞: CVE-2026-48044 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 02:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.23.0 until 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a  vulnerability has been identified in Envoy's zstd decompressor implementation (ZstdDecompressorImpl). When zstd decompression is enabled, processing a specially crafted, highly compressed zstd payload can lead to massive memory allocation. An attacker can exploit this to cause severe memory exhaustion, potentially resulting in an Out-Of-Memory (OOM) kill and Denial of Service (DoS) for the Envoy proxy. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.",
+      "refs": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-m3p9-47wh-88wg",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:12"
+    },
+    {
+      "cve_id": "CVE-2026-48042",
+      "title": "高危漏洞: CVE-2026-48042 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 02:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, destructor of JSON Object results in stack overflow when deeply O(100K) nested objects are present. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.",
+      "refs": "https://github.com/envoyproxy/envoy/blob/099a9d71ebfd8aa9f823e1738b34138cb634a07b/source/common/json/json_loader.h#L21\nhttps://github.com/envoyproxy/envoy/security/advisories/GHSA-f24p-rxw2-g6pv",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:08"
+    },
+    {
+      "cve_id": "CVE-2026-33646",
+      "title": "高危漏洞: CVE-2026-33646 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-27 02:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.3.10, mise processes .tool-versions files through the Tera template engine during parsing, with the exec() function registered, enabling arbitrary command execution. Unlike .mise.toml files, .tool-versions files are not subject to trust verification in non-paranoid mode. This means an attacker can place a malicious .tool-versions file in a git repository, and when a victim with mise activated cds into the directory, arbitrary commands execute without any trust prompt. This vulnerability is fixed in 2026.3.10.",
+      "refs": "https://github.com/jdx/mise/security/advisories/GHSA-fjj5-v948-whjj",
+      "source": "NVD",
+      "time": "2026-06-27 06:03:00"
+    },
+    {
+      "cve_id": "CVE-2026-5757",
+      "title": "高危漏洞: CVE-2026-5757 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 00:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Unauthenticated remote information disclosure vulnerability in Ollama's model quantization engine allows an attacker to read and exfiltrate the server's heap memory, potentially leading to sensitive data exposure, further compromise, and stealthy persistence.",
+      "refs": "https://kb.cert.org/vuls/id/518910\nhttps://ollama.com\nhttps://www.kb.cert.org/vuls/id/518910",
+      "source": "NVD",
+      "time": "2026-06-27 06:02:56"
+    },
+    {
+      "cve_id": "CVE-2026-0828",
+      "title": "高危漏洞: CVE-2026-0828 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-27 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Kernel driver ProcessMonitorDriver.sys in Safetica's endpoint client x64 , versions 10.5.75.0 and 11.11.4.0, allows unprivileged user to abuse IOCTL path and terminate protected system processes.",
+      "refs": "https://www.safetica.com/\nhttps://www.kb.cert.org/vuls/id/818729",
+      "source": "NVD",
+      "time": "2026-06-27 06:02:52"
+    },
+    {
+      "cve_id": "CVE-2026-0685",
+      "title": "高危漏洞: CVE-2026-0685 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-27 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Server side template inject (SSTI) in the expression evaluation component in Genshi Template Engine version 0.7.9 allows a remote attacker to achieve remote code execution (RCE) via crafted template expressions.",
+      "refs": "https://github.com/edgewall/genshi/\nhttps://www.kb.cert.org/vuls/id/244846",
+      "source": "NVD",
+      "time": "2026-06-27 06:02:46"
+    },
+    {
+      "cve_id": "CVE-2025-11919",
+      "title": "高危漏洞: CVE-2025-11919 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-06-27 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "The default JVM can access files and directories under `/tmp/` including the `$TemporaryDirectory` of other users on the same cloud instance (`/tmp/UserTemporaryFiles/`).  The `-init` file for the the JVM initialization exists in the vulnerable directory during the startup of the JVM.  An attacker with access to the shared `/tmp/` space can preemptively create or replace `.jar` files or directories (via the `-init` file) that the victim JVM will resolve first in its classpath.  By strategically placing a malicious version of a commonly used library (e.g., `commons-io`) in a location that is included in the classpath before the legitimate version, an attacker can cause the JVM to load the malicious class during startup, thereby executing the attacker's code.",
+      "refs": "https://github.com/PeterRoberge/vulnerability-wolfram-cloud-14.2/blob/main/disclosure.md\nhttps://www.kb.cert.org/vuls/id/553375\nhttps://github.com/PeterRoberge/vulnerability-wolfram-cloud-14.2/blob/main/disclosure.md",
+      "source": "NVD",
+      "time": "2026-06-27 06:02:42"
+    },
+    {
+      "cve_id": "CVE-2025-64152",
+      "title": "高危漏洞: CVE-2025-64152 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-26 21:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Apache IoTDB.\n\nThis issue affects Apache IoTDB: from 1.0.0 before 1.3.6, from 2.0.0 before 2.0.7.\n\nUsers are recommended to upgrade to version 1.3.6 and 2.0.7, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread/sjms84rlt4g78fwmjcowxmtjp1q8b9q4\nhttp://www.openwall.com/lists/oss-security/2026/03/09/3",
+      "source": "NVD",
+      "time": "2026-06-27 06:02:35"
+    },
+    {
+      "cve_id": "CVE-2025-55017",
+      "title": "高危漏洞: CVE-2025-55017 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-06-26 21:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Apache IoTDB.\n\nThis issue affects Apache IoTDB: from 2.0.0 before 2.0.6, from 1.0.0 before 1.3.6.\n\nUsers are recommended to upgrade to version 1.3.6 and 2.0.6, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread/lk08wlxq9sp64mo8hw6wvjxd3bh3lpqg\nhttp://www.openwall.com/lists/oss-security/2026/03/09/2",
+      "source": "NVD",
+      "time": "2026-06-27 06:02:30"
+    },
+    {
       "cve_id": "CVE-2026-57518",
       "title": "高危漏洞: CVE-2026-57518 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -945,160 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/newsletters-lite/vulnerability/wordpress-newsletters-plugin-4-13-broken-access-control-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-27 00:58:13"
-    },
-    {
-      "cve_id": "CVE-2026-54839",
-      "title": "高危漏洞: CVE-2026-54839 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Sensitive Data Exposure in Trinity Backup &#8211; Backup, Migrate, Restore, Clone &amp; Schedule Backups <= 2.0.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/trinity-backup/vulnerability/wordpress-trinity-backup-backup-migrate-restore-clone-schedule-backups-plugin-2-0-9-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:58:07"
-    },
-    {
-      "cve_id": "CVE-2026-54837",
-      "title": "高危漏洞: CVE-2026-54837 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Broken Access Control in Intranet &amp; Private Site &#8211; All-In-One Intranet <= 1.8.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/all-in-one-intranet/vulnerability/wordpress-intranet-private-site-all-in-one-intranet-plugin-1-8-1-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:58:01"
-    },
-    {
-      "cve_id": "CVE-2026-54835",
-      "title": "高危漏洞: CVE-2026-54835 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in Five Star Restaurant Menu <= 2.5.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/food-and-drink-menu/vulnerability/wordpress-five-star-restaurant-menu-plugin-2-5-2-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:56"
-    },
-    {
-      "cve_id": "CVE-2026-54834",
-      "title": "高危漏洞: CVE-2026-54834 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Sensitive Data Exposure in Object Cache 4 everyone <= 2.3.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/object-cache-4-everyone/vulnerability/wordpress-object-cache-4-everyone-plugin-2-3-2-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:51"
-    },
-    {
-      "cve_id": "CVE-2026-54833",
-      "title": "高危漏洞: CVE-2026-54833 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Unauthenticated Backdoor in Enable CORS <= 2.0.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/enable-cors/vulnerability/wordpress-enable-cors-plugin-2-0-3-backdoor-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:46"
-    },
-    {
-      "cve_id": "CVE-2026-54832",
-      "title": "高危漏洞: CVE-2026-54832 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in Gutenverse Companion <= 2.5.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/gutenverse-companion/vulnerability/wordpress-gutenverse-companion-plugin-2-5-0-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:42"
-    },
-    {
-      "cve_id": "CVE-2026-54831",
-      "title": "高危漏洞: CVE-2026-54831 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in GeoDirectory <= 2.8.162 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/geodirectory/vulnerability/wordpress-geodirectory-plugin-2-8-162-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:36"
-    },
-    {
-      "cve_id": "CVE-2026-54827",
-      "title": "高危漏洞: CVE-2026-54827 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in Real Estate 7 <= 3.5.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/realestate-7/vulnerability/wordpress-real-estate-7-theme-3-5-9-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:29"
-    },
-    {
-      "cve_id": "CVE-2026-54826",
-      "title": "高危漏洞: CVE-2026-54826 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
-      "description": "Subscriber Insecure Direct Object References (IDOR) in SupportCandy <= 3.4.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/supportcandy/vulnerability/wordpress-supportcandy-plugin-3-4-6-insecure-direct-object-references-idor-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:25"
-    },
-    {
-      "cve_id": "CVE-2026-54825",
-      "title": "高危漏洞: CVE-2026-54825 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in wpDataTables <= 7.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpdatatables/vulnerability/wordpress-wpdatatables-plugin-7-4-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:16"
-    },
-    {
-      "cve_id": "CVE-2026-54824",
-      "title": "高危漏洞: CVE-2026-54824 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Sensitive Data Exposure in Ads by WPQuads <= 3.0.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/quick-adsense-reloaded/vulnerability/wordpress-ads-by-wpquads-plugin-3-0-3-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:09"
-    },
-    {
-      "cve_id": "CVE-2026-54820",
-      "title": "高危漏洞: CVE-2026-54820 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-06-26 23:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in JetBooking <= 4.0.4.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/jet-booking/vulnerability/wordpress-jetbooking-plugin-4-0-4-1-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:57:02"
-    },
-    {
-      "cve_id": "CVE-2025-68064",
-      "title": "高危漏洞: CVE-2025-68064 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Contributor Local File Inclusion in Goya Core < 1.0.9.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/goya-core/vulnerability/wordpress-goya-core-plugin-1-0-9-4-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:56:58"
-    },
-    {
-      "cve_id": "CVE-2025-68063",
-      "title": "高危漏洞: CVE-2025-68063 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Contributor Local File Inclusion in Splash - Sport Club WordPress Theme for Basketball, Football, Hockey <= 4.4.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/splash/vulnerability/wordpress-splash-sport-club-wordpress-theme-for-basketball-football-hockey-theme-4-4-3-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 00:56:54"
     }
   ]
 }
