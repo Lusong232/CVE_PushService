@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-50741",
+      "title": "高危漏洞: CVE-2026-50741 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-26 10:16:53",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Bypass to the fix for CVE-2026-34916. Variants of such vectors have been also reported by phucrio and offsetmd. The fix can be bypassed either by sending a disallowed but otherwise valid plugin identifier as `type`, or using the `ox.setChannelTargeting` XML-RPC API method.",
+      "refs": "https://hackerone.com/reports/3780854\nhttps://hackerone.com/reports/3781492",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:57"
+    },
+    {
+      "cve_id": "CVE-2026-48933",
+      "title": "高危漏洞: CVE-2026-48933 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 10:16:52",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw in Node.js WebCrypto implementation can crash the process if the input of `subtle.encrypt()` is a multiple of 2GiB.\r\n\r\nThis vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
+      "refs": "https://nodejs.org/en/blog/vulnerability/june-2026-security-releases",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:53"
+    },
+    {
+      "cve_id": "CVE-2026-48618",
+      "title": "高危漏洞: CVE-2026-48618 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-06-26 10:16:52",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "A flaw in Node.js TLS hostname handling can cause Node.js unicode dot separator handling can lead to tls wildcard-depth authentication bypass due to resolver and verifier hostname normalization mismat.\r\n\r\nThis can lead to confidentiality impact or bypass of the intended security boundary under affected configurations.\r\n\r\nThis vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
+      "refs": "https://nodejs.org/en/blog/vulnerability/june-2026-security-releases",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:49"
+    },
+    {
+      "cve_id": "CVE-2026-9222",
+      "title": "高危漏洞: CVE-2026-9222 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-26 08:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior only require the password hash when authenticating with backend services from the client. This could allow an attacker, who knows the hash, to authenticate and gain full access.",
+      "refs": "https://raw.githubusercontent.com/cisagov/CSAF/refs/heads/develop/csaf_files/VA/white/2026/va-26-176-01.json",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:44"
+    },
+    {
+      "cve_id": "CVE-2026-9221",
+      "title": "高危漏洞: CVE-2026-9221 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 08:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Setracker2 Android Companion App (com.tgelec.setracker) versions 3.1.5 and earlier uses MD5 to generate a request signature for authenticating communications between the mobile client and the backend REST API. Attackers could potentially reverse the signature to recover the session ID. With the session ID exposed, an attacker could impersonate the legitimate user and issue authenticated API requests.",
+      "refs": "https://raw.githubusercontent.com/cisagov/CSAF/refs/heads/develop/csaf_files/VA/white/2026/va-26-176-01.json",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:38"
+    },
+    {
+      "cve_id": "CVE-2026-9220",
+      "title": "高危漏洞: CVE-2026-9220 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-26 08:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior encrypts requests between the watch and its backend with static hardcoded AES keys and initialization vectors. This allows an attacker to decrypt Setracker2 watch traffic.",
+      "refs": "https://raw.githubusercontent.com/cisagov/CSAF/refs/heads/develop/csaf_files/VA/white/2026/va-26-176-01.json",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:32"
+    },
+    {
+      "cve_id": "CVE-2026-57456",
+      "title": "高危漏洞: CVE-2026-57456 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-26 00:16:42",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Vim is an open source, command line text editor. Prior to 9.2.0699, Vim's Python omni-completion (runtime/autoload/python3complete.vim and the legacy pythoncomplete.vim) executes reconstructed function and class definitions from the current buffer with exec() as part of populating the completion dictionary. When reconstructing that source, each scope's docstring is inserted verbatim between triple quotes with no escaping, so a hostile buffer can break out of the triple-quoted literal and execute attacker-controlled Python during omni-completion. This vulnerability is fixed in 9.2.0699.",
+      "refs": "https://github.com/vim/vim/commit/cce141c42740f122dd8486ae04e21c2a81016ba8\nhttps://github.com/vim/vim/releases/tag/v9.2.0699\nhttps://github.com/vim/vim/security/advisories/GHSA-ppj8-wqjf-6fp3",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:26"
+    },
+    {
+      "cve_id": "CVE-2026-57455",
+      "title": "高危漏洞: CVE-2026-57455 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-26 00:16:42",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Vim is an open source, command line text editor. Prior to 9.2.0698, the single-byte branch of spell_soundfold_sofo() in src/spell.c translates a word through a spell file's SOFO (sound-folding) byte map into a caller-owned result buffer. Its copy loop advances the output index ri with no upper bound and terminates only on the input NUL, writing one byte per input byte into the MAXWLEN-element stack buffer the caller provides. A word longer than MAXWLEN, passed to soundfold() (or reached via sound-based spell suggestion) while a SOFO-based spell language is active, therefore writes past the end of that buffer. This is a stack out-of-bounds write that corrupts the call frame and crashes the editor. This vulnerability is fixed in 9.2.0698.",
+      "refs": "https://github.com/vim/vim/commit/497f931f85339d175d7f69588dd249e8ccfed41b\nhttps://github.com/vim/vim/releases/tag/v9.2.0698\nhttps://github.com/vim/vim/security/advisories/GHSA-q8mh-6qm3-25g4",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:21"
+    },
+    {
+      "cve_id": "CVE-2026-55895",
+      "title": "高危漏洞: CVE-2026-55895 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-26 00:16:41",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Vim is an open source, command line text editor. Prior to 9.2.0663, a Vimscript code injection vulnerability exists in s:NetrwLocalRmFile() in the netrw plugin (runtime/pack/dist/opt/netrw/autoload/netrw.vim) when deleting a local file from the browser. A filename derived from the buffer's directory listing is interpolated into an Ex command line passed to :execute with only the backslash character escaped, allowing a crafted filename containing a bar (|) to terminate the intended command and execute arbitrary Vimscript, including shell commands via :call system() and :!.  This vulnerability is fixed in 9.2.0663.",
+      "refs": "https://github.com/vim/vim/commit/55bc757a5d436e59d50fe43f7cda94b118f86cb2\nhttps://github.com/vim/vim/releases/tag/v9.2.0663\nhttps://github.com/vim/vim/security/advisories/GHSA-vhh8-v6wx-hjjh",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:17"
+    },
+    {
+      "cve_id": "CVE-2026-55693",
+      "title": "高危漏洞: CVE-2026-55693 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-26 00:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Vim is an open source, command line text editor. Prior to 9.2.0653, the tree_count_words() function in src/spellfile.c fills in the word-count fields of a spell-file word trie by walking it iteratively with a depth counter. The counter is bounded only by the trie structure itself; it is never checked against the size of the fixed MAXWLEN-element stack arrays it indexes (arridx[], curi[], wordcount[]). A crafted .spl/.sug file pair, loaded when the user invokes spell suggestion, can drive the descent arbitrarily deep, so the function writes past the end of those arrays. This is a stack out-of-bounds write that corrupts the call frame and crashes the editor. This vulnerability is fixed in 9.2.0653.",
+      "refs": "https://github.com/vim/vim/commit/a80874d9b84a01040e3d1aef2d4a59e1934dafb7\nhttps://github.com/vim/vim/releases/tag/v9.2.0653\nhttps://github.com/vim/vim/security/advisories/GHSA-wgh4-64f7-q3jq",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:12"
+    },
+    {
+      "cve_id": "CVE-2026-12490",
+      "title": "高危漏洞: CVE-2026-12490 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-25 15:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "When a provide-xfr is given with a tls-auth-name, a secondary requesting a transfer should provide a client certificate with that name. However, no client certificate is needed when the request comes in over TLS over the regular tls-port (and not the tls-auth-port) or over over TCP over the regular port, when the other conditions of the provide-xfr rule match.",
+      "refs": "https://www.nlnetlabs.nl/downloads/nsd/CVE-2026-12490.txt",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:07"
+    },
+    {
+      "cve_id": "CVE-2026-12246",
+      "title": "高危漏洞: CVE-2026-12246 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-25 15:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "NSD version 4.14.0 introduced a bug where a specially crafted APL RR, with an adflength larger than permitted for the address family will overwrite the stack when the zone is written to disk, with a maximum of 111 attacker controlled bytes.",
+      "refs": "https://www.nlnetlabs.nl/downloads/nsd/CVE-2026-12246.txt",
+      "source": "NVD",
+      "time": "2026-06-26 14:43:00"
+    },
+    {
+      "cve_id": "CVE-2026-12245",
+      "title": "高危漏洞: CVE-2026-12245 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-25 15:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NSD from version 4.13.0 has a heap use-after-free bug in logging errors on TLS connections, causing a crash of the server process, which can be triggered trivially by sending a DNS query over a DoT connection, and closing the connection without reading the response.",
+      "refs": "https://www.nlnetlabs.nl/downloads/nsd/CVE-2026-12245.txt",
+      "source": "NVD",
+      "time": "2026-06-26 14:42:55"
+    },
+    {
+      "cve_id": "CVE-2026-12244",
+      "title": "高危漏洞: CVE-2026-12244 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-25 15:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "If NSD is configured as secondary for a zone, the primary of that zone can crash NSD with an AXFR containing a DNS message with a special crafted SVCB RR with an rdata size of 65512, that let's an (uint16_t) variable that is used to allocate space needed for the RR wrap (because total size > 65535), causing a heap overflow. The attacker can perform a controlled (RCE class) head write of up to 65509 bytes",
+      "refs": "https://www.nlnetlabs.nl/downloads/nsd/CVE-2026-12244.txt",
+      "source": "NVD",
+      "time": "2026-06-26 14:42:49"
+    },
+    {
       "cve_id": "CVE-2026-40083",
       "title": "高危漏洞: CVE-2026-40083 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -945,160 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/visual-link-preview/vulnerability/wordpress-visual-link-preview-plugin-2-3-1-sensitive-data-exposure-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-26 03:46:02"
-    },
-    {
-      "cve_id": "CVE-2026-49506",
-      "title": "高危漏洞: CVE-2026-49506 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-25 22:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell Wyse Management Suite, versions prior to WMS 5.5 HF1, contain an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Remote Code Execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-in/000465356/dsa-2026-225?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:58"
-    },
-    {
-      "cve_id": "CVE-2026-46734",
-      "title": "高危漏洞: CVE-2026-46734 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-06-25 22:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3, contain an Improper Certificate Validation vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Protection mechanism bypass.",
-      "refs": "https://www.dell.com/support/kbdoc/en-hk/000475656/dsa-2026-267?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:54"
-    },
-    {
-      "cve_id": "CVE-2026-46733",
-      "title": "高危漏洞: CVE-2026-46733 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-25 22:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell Display and Peripheral Manager (DDPM Windows), versions prior to 2.3, contain an Improper Access Control vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Code execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-fm/000477679/dsa-2026-277?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:50"
-    },
-    {
-      "cve_id": "CVE-2026-41120",
-      "title": "高危漏洞: CVE-2026-41120 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-25 22:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell Wyse Management Suite, versions prior to WMS 5.5 HF1, contain an Acceptance of Extraneous Untrusted Data With Trusted Data vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Remote Code Execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-in/000465356/dsa-2026-225?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:43"
-    },
-    {
-      "cve_id": "CVE-2026-27366",
-      "title": "高危漏洞: CVE-2026-27366 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 22:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Broken Access Control in MainWP Child <= 6.1.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mainwp-child/vulnerability/wordpress-mainwp-child-plugin-6-1-1-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:39"
-    },
-    {
-      "cve_id": "CVE-2026-40079",
-      "title": "高危漏洞: CVE-2026-40079 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-25 08:17:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Command Injection due to lack of sanitization in the escape_command() function. The escape_command() function at lib/rrd.php is a no-op: it returns $command unchanged. The command line built by rrdtool_function_graph() is passed through this function and then to shell_exec($full_commandline). The risk is in __rrd_execute() where text_format values from graph templates (which may contain host variable substitutions) reach shell_exec without adequate escaping. This issue has been addressed in version 1.2.31.",
-      "refs": "https://github.com/Cacti/cacti/commit/4c09efaebf3a9faec66969d0b5c4aceaf397f37f\nhttps://github.com/Cacti/cacti/security/advisories/GHSA-xq98-376r-hv9j",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:35"
-    },
-    {
-      "cve_id": "CVE-2026-39948",
-      "title": "高危漏洞: CVE-2026-39948 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-25 07:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request parameter is retrieved via the raw accessor grv() (rather than gfrv() with FILTER_VALIDATE_IS_REGEX validation) and concatenated directly into RLIKE SQL clauses in lib/html_graph.php and lib/html_tree.php, which are reachable pre-authentication through graph_view.php on installations with guest graph viewing enabled. Because the unbalanced-quote payload bypasses the regex validation that would otherwise reject it, an unauthenticated attacker can inject arbitrary SQL to compromise the confidentiality, integrity, and availability of the database. This advisory is similar to GHSA-69gg-mjfm-jjpc. This issue has been fixed in version 1.2.31.",
-      "refs": "https://github.com/Cacti/cacti/commit/136ae6ef0715e77bca69c0eb60781f5e17df0795\nhttps://github.com/Cacti/cacti/security/advisories/GHSA-9jqv-4cpm-vm2c",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:31"
-    },
-    {
-      "cve_id": "CVE-2025-60474",
-      "title": "高危漏洞: CVE-2025-60474 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 07:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A buffer overflow in the gf_media_import function (/media_tools/av_parsers.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input.",
-      "refs": "https://github.com/gpac/gpac/commit/bd7fd6be546e0cd9e599c6b262c338c5f2ecec5c\nhttps://github.com/gpac/gpac/issues/3287\nhttps://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/38/38_gf_media_import_media_tools_media_import_c_1297",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:27"
-    },
-    {
-      "cve_id": "CVE-2025-60467",
-      "title": "高危漏洞: CVE-2025-60467 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 07:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A use-after-free in the gf_filter_pid_inst_swap_delete_task function (/filter_core/filter_pid.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted media file.",
-      "refs": "https://github.com/gpac/gpac/commit/976dacf65cb6986a4e4f350fb8d3ed0a17dc3a77\nhttps://github.com/gpac/gpac/issues/3286\nhttps://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/37/37_gf_filter_pid_inst_swap_delete_task_filter_core_filter_pid_c_574",
-      "source": "NVD",
-      "time": "2026-06-26 03:45:22"
-    },
-    {
-      "cve_id": "CVE-2026-33612",
-      "title": "高危漏洞: CVE-2026-33612 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 21:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:L",
-      "description": "A malicious authoritative server can send a crafted zone via the ZoneToCache function that leads to cache poisoning.",
-      "refs": "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-powerdns-2026-08.html",
-      "source": "NVD",
-      "time": "2026-06-26 01:03:54"
-    },
-    {
-      "cve_id": "CVE-2026-9702",
-      "title": "高危漏洞: CVE-2026-9702 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 15:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The InPost PL WordPress plugin before 1.9.1 does not verify that the request originates from the legitimate buyer before allowing the WooCommerce order parcel-locker destination to be updated, allowing unauthenticated attackers to silently redirect the shipping destination of any pending or processing order on the site.",
-      "refs": "https://wpscan.com/vulnerability/79b27813-3d75-46a3-98d3-e6d8eb8ad467/",
-      "source": "NVD",
-      "time": "2026-06-26 01:03:46"
-    },
-    {
-      "cve_id": "CVE-2026-5305",
-      "title": "高危漏洞: CVE-2026-5305 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-25 15:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Email Address Encoder WordPress plugin before 1.0.25, email-encoder-premium WordPress plugin before 0.3.12 does not properly handle email replacement, which could allow unauthenticated users to perform Stored XSS attacks",
-      "refs": "https://wpscan.com/vulnerability/bf59610b-98ba-4c05-b2fc-85c163e9a389/",
-      "source": "NVD",
-      "time": "2026-06-26 01:03:39"
-    },
-    {
-      "cve_id": "CVE-2026-12937",
-      "title": "高危漏洞: CVE-2026-12937 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 16:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Tourfic – AI Powered Travel Booking, Hotel Booking & Car Rental WordPress Plugin plugin for WordPress is vulnerable to generic SQL Injection via the 'post_id' parameter in all versions up to, and including, 2.22.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The AJAX handler is registered for unauthenticated users via wp_ajax_nopriv_tf_room_availability, and the required nonce is emitted on the public single-hotel page template, allowing unauthenticated attackers to freely obtain a valid nonce and reach the vulnerable code path.",
-      "refs": "https://plugins.trac.wordpress.org/browser/tourfic/tags/2.22.7/inc/Classes/Helper.php#L1164\nhttps://plugins.trac.wordpress.org/browser/tourfic/tags/2.22.7/inc/Classes/Hotel/Hotel.php#L305\nhttps://plugins.trac.wordpress.org/browser/tourfic/tags/2.22.7/inc/Classes/Hotel/Hotel.php#L543",
-      "source": "NVD",
-      "time": "2026-06-25 19:32:38"
-    },
-    {
-      "cve_id": "CVE-2026-13311",
-      "title": "高危漏洞: CVE-2026-13311 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-25 13:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "shell-quote prior to 1.8.5 finalizes parsed tokens in parse() using Array.prototype.concat as a reduce accumulator, which reallocates and copies the entire growing array on every iteration. As a result parse() runs in O(n^2) time relative to the number of input tokens. An attacker who can supply an attacker-controlled string to any code path that calls parse() (no shell metacharacters are required; plain space-separated words suffice) can block the single-threaded Node.js event loop for an extended period with a small input, resulting in a denial of service. There is no code execution or data disclosure; impact is to availability only. Fixed in 1.8.5.",
-      "refs": "https://github.com/ljharb/shell-quote/security/advisories/GHSA-395f-4hp3-45gv\nhttps://www.npmjs.com/package/shell-quote",
-      "source": "NVD",
-      "time": "2026-06-25 19:32:33"
     }
   ]
 }
