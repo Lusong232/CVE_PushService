@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-13500",
+      "title": "高危漏洞: CVE-2026-13500 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-28 23:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in antlr ANTLR4 up to 4.13.2. Affected is an unknown function of the file tool/src/org/antlr/v4/codegen/model/OutputFile.java of the component Grammar Action Block Handler. Executing a manipulation can lead to code injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/wooyun123/wooyun/issues/4\nhttps://vuldb.com/cve/CVE-2026-13500\nhttps://vuldb.com/submit/838568",
+      "source": "NVD",
+      "time": "2026-06-29 03:02:22"
+    },
+    {
       "cve_id": "CVE-2026-13498",
       "title": "高危漏洞: CVE-2026-13498 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/gallery-plugin/vulnerability/wordpress-gallery-plugin-4-7-8-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-27 01:02:38"
-    },
-    {
-      "cve_id": "CVE-2026-57636",
-      "title": "高危漏洞: CVE-2026-57636 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-26 23:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in wpForo Forum <= 3.0.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpforo/vulnerability/wordpress-wpforo-forum-plugin-3-0-9-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:02:33"
     }
   ]
 }
