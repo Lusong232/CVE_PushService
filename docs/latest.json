@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-13488",
+      "title": "高危漏洞: CVE-2026-13488 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-28 19:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in SourceCodester Class and Exam Timetabling System 1.0/7.php. Affected by this vulnerability is an unknown functionality of the file /preview7.php. The manipulation of the argument course_year_section results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/yan-124/yan/issues/4\nhttps://vuldb.com/cve/CVE-2026-13488\nhttps://vuldb.com/submit/838190",
+      "source": "NVD",
+      "time": "2026-06-28 21:15:49"
+    },
+    {
+      "cve_id": "CVE-2026-13487",
+      "title": "高危漏洞: CVE-2026-13487 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-28 19:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /archive.php. The manipulation of the argument sy leads to sql injection. The attack may be initiated remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/lffaker/cybersec/issues/4\nhttps://vuldb.com/cve/CVE-2026-13487\nhttps://vuldb.com/submit/838189",
+      "source": "NVD",
+      "time": "2026-06-28 21:15:45"
+    },
+    {
+      "cve_id": "CVE-2026-13486",
+      "title": "高危漏洞: CVE-2026-13486 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-28 18:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0/6.php. This impacts an unknown function of the file /preview6.php. Executing a manipulation of the argument course_year_section can lead to sql injection. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/lffaker/cybersec/issues/5\nhttps://vuldb.com/cve/CVE-2026-13486\nhttps://vuldb.com/submit/838188",
+      "source": "NVD",
+      "time": "2026-06-28 21:15:37"
+    },
+    {
+      "cve_id": "CVE-2026-13485",
+      "title": "高危漏洞: CVE-2026-13485 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-28 18:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Class and Exam Timetabling System 1.0. This affects an unknown function of the file /preview.php. Performing a manipulation of the argument course_year_section results in sql injection. The attack can be initiated remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/lffaker/cybersec/issues/6\nhttps://vuldb.com/cve/CVE-2026-13485\nhttps://vuldb.com/submit/838185",
+      "source": "NVD",
+      "time": "2026-06-28 21:15:29"
+    },
+    {
       "cve_id": "CVE-2026-10646",
       "title": "高危漏洞: CVE-2026-10646 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1055,50 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/ays-popup-box/vulnerability/wordpress-popup-box-plugin-6-0-1-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-27 01:02:28"
-    },
-    {
-      "cve_id": "CVE-2026-57628",
-      "title": "高危漏洞: CVE-2026-57628 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-06-26 23:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Administrator SQL Injection in WP All Import <= 4.0.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-all-import/vulnerability/wordpress-wp-all-import-plugin-4-0-1-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:02:23"
-    },
-    {
-      "cve_id": "CVE-2026-57527",
-      "title": "高危漏洞: CVE-2026-57527 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-26 23:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Zed Attack Proxy (ZAP) ViewState add-on before version 4 contains an insecure deserialization vulnerability that allows attackers who control a proxied web server to achieve arbitrary code execution by embedding a malicious serialized Java object in the javax.faces.ViewState HTTP response parameter. The JSFViewState.decode() method base64-decodes the ViewState value and passes it directly to ObjectInputStream.readObject() without a deserialization filter, allowlist, or type restriction, causing the malicious object to be deserialized within the ZAP JVM when the Desktop UI renders the ViewState panel.",
-      "refs": "https://github.com/zaproxy/zap-extensions/commit/ac6c3f94d38505bc0facea286a4d3728044c6e5c\nhttps://github.com/zaproxy/zap-extensions/pull/7481\nhttps://github.com/zaproxy/zap-extensions/releases/tag/viewstate-v4",
-      "source": "NVD",
-      "time": "2026-06-27 01:02:18"
-    },
-    {
-      "cve_id": "CVE-2026-57325",
-      "title": "高危漏洞: CVE-2026-57325 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in NanoMag <= 1.8 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/nanomag/vulnerability/wordpress-nanomag-theme-1-8-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:02:10"
-    },
-    {
-      "cve_id": "CVE-2026-57322",
-      "title": "高危漏洞: CVE-2026-57322 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in weMail <= 2.1.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wemail/vulnerability/wordpress-wemail-plugin-2-1-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:02:06"
     }
   ]
 }
