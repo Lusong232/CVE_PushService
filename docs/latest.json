@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58056",
+      "title": "高危漏洞: CVE-2026-58056 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-06-28 10:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+      "description": "RustDesk gates incoming control messages on per-capability flags rather than on the session's authorized connection type, and a file-transfer session does not clear those flags. A peer holding only a valid FileTransfer authorization can inject keyboard and mouse input and reach the unguarded screenshot and display-capture handlers, acting outside its granted scope.",
+      "refs": "https://github.com/bikini/exploitarium/tree/main/rustdesk-session-permission-pocs\nhttps://www.vulncheck.com/advisories/rustdesk-filetransfer-session-authorization-scope-bypass",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:56"
+    },
+    {
+      "cve_id": "CVE-2026-58054",
+      "title": "高危漏洞: CVE-2026-58054 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-28 10:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "MyBB 1.8.40 does not restrict which usergroup a limited Admin Control Panel user may assign when creating or editing users; the user module offers the Administrators group (gid 4) and its datahandler's verify_usergroup() unconditionally returns true. An admin holding only the delegated user-management permission can assign the Administrators group to an account and escalate to the full Administrator permission set.",
+      "refs": "https://github.com/bikini/exploitarium/tree/main/mybb-limited-acp-to-admin\nhttps://www.vulncheck.com/advisories/mybb-privilege-escalation-from-limited-acp-user-management-to-administrator",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:51"
+    },
+    {
+      "cve_id": "CVE-2026-58053",
+      "title": "高危漏洞: CVE-2026-58053 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-06-28 10:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Gitea act_runner with the Docker backend (through act 0.262.0) passes a workflow's container.options string to the Docker job container's HostConfig and, when configured with privileged: false, forces only the Privileged flag off while merging options such as --pid=host, --cap-add, and --security-opt unchanged. A user who can run a workflow on a Docker-backed runner can create a job container with host namespaces and broad capabilities and escape to the host as root despite privileged mode being disabled.",
+      "refs": "https://github.com/bikini/exploitarium/tree/main/gitea-act-runner-container-options-poc\nhttps://www.vulncheck.com/advisories/gitea-act-runner-container-hardening-bypass-via-workflow-container-options",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:47"
+    },
+    {
+      "cve_id": "CVE-2026-58050",
+      "title": "高危漏洞: CVE-2026-58050 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-06-28 10:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "libssh2 through 1.11.1 reads an attacker-controlled 32-bit attribute count from a publickey-subsystem response and uses it in the allocation num_attrs * sizeof(libssh2_publickey_attribute) without bounds checking, so on 32-bit platforms the multiplication overflows to an undersized buffer. A malicious SSH server can then drive the attribute-parsing loop to write past the allocation, causing a heap buffer overflow in a connecting libssh2 client.",
+      "refs": "https://github.com/bikini/exploitarium/tree/main/libssh2-publickey-list-calc-poc\nhttps://github.com/libssh2/libssh2/blob/master/src/publickey.c\nhttps://www.vulncheck.com/advisories/libssh2-integer-overflow-in-publickey-subsystem-attribute-allocation",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:39"
+    },
+    {
+      "cve_id": "CVE-2026-58049",
+      "title": "高危漏洞: CVE-2026-58049 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-06-28 10:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "FFmpeg's RASC video decoder (decode_dlta in libavcodec/rasc.c) performs 32-bit reads and writes at the row cursor before the NEXT_LINE row-boundary check and validates the DLTA region in pixel rather than byte units, so a DLTA run on a PAL8 frame can access several bytes past the row allocation. A crafted media stream using the RASC FourCC, decoded by libavcodec, triggers a bitstream-controlled out-of-bounds heap write and adjacent out-of-bounds read, leading to memory corruption.",
+      "refs": "https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/rasc.c\nhttps://github.com/bikini/exploitarium/tree/main/ffmpeg-rasc-dlta-calc-poc\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-write-in-rasc-decoder-decode-dlta",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:35"
+    },
+    {
+      "cve_id": "CVE-2026-8095",
+      "title": "高危漏洞: CVE-2026-8095 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-06-28 08:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Frontend File Manager Plugin plugin for WordPress is vulnerable to Authenticated Arbitrary File Deletion in versions up to and including 23.6. This is due to a case-sensitive bypass of the wpfm_dir_path parameter sanitization in the wpfm_file_meta_update AJAX handler, where supplying WPFM_DIR_PATH in uppercase evades the unset check and is normalized to wpfm_dir_path by sanitize_key() during update_post_meta(), allowing an attacker to overwrite the stored file path with an arbitrary filesystem path that is then passed directly to unlink() in delete_file_locally() without any directory containment validation. This makes it possible for authenticated attackers with Subscriber-level access to delete arbitrary files on the server, including sensitive files such as wp-config.php, potentially leading to full site takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/nmedia-user-file-uploader/tags/23.6/inc/file.class.php#L729\nhttps://plugins.trac.wordpress.org/browser/nmedia-user-file-uploader/tags/23.6/inc/files.php#L767\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/506006ce-7b1c-4f9d-93f3-abc87abea2bb?source=cve",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:31"
+    },
+    {
+      "cve_id": "CVE-2026-10643",
+      "title": "高危漏洞: CVE-2026-10643 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-06-28 08:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H",
+      "description": "Zephyr's IP socket recvmsg() implementation (subsys/net/lib/sockets/sockets_inet.c, insert_pktinfo()) validated the user-supplied ancillary (msg_control) buffer using only the payload length (msg-msg_controllen < pktinfo_len) before writing a full control message consisting of an aligned cmsg header plus the payload. Because the check omitted the cmsg header size, a control buffer whose length falls in the under-checked window (e.g. 16-27 bytes for IPv4 IP_PKTINFO on a 64-bit target, where a single element actually occupies 28 bytes) passes the guard yet causes a fixed-size out-of-bounds write of up to one cmsg header (~12 bytes) past the end of the buffer. Under CONFIG_USERSPACE the recvmsg verifier allocates a kernel-heap copy of the control buffer sized to msg_controllen and runs the implementation against it, so the overflow corrupts kernel heap memory and is triggerable from an unprivileged userspace thread; in supervisor mode it corrupts the caller's buffer. The path is reachable on a UDP/IP socket with IP_PKTINFO/IPV6_RECVPKTINFO (or hoplimit/timestamping) enabled when the application calls recvmsg() with an undersized control buffer and a datagram is received; part of the overwritten bytes (the destination IP in ipi_addr) is influenced by the received packet. The fix makes the capacity check use NET_CMSG_SPACE(pktinfo_len) (aligned header + aligned data) and returns -ENOMEM when the buffer is too small. Affected: v3.6.0 through v4.4.0.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/01fe77b2ec3885583f709a17c5203ce02bd77012",
+      "source": "NVD",
+      "time": "2026-06-28 14:54:24"
+    },
+    {
       "cve_id": "CVE-2026-12415",
       "title": "高危漏洞: CVE-2026-12415 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/h5p/vulnerability/wordpress-h5p-plugin-1-17-7-arbitrary-file-deletion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-27 01:02:01"
-    },
-    {
-      "cve_id": "CVE-2026-57319",
-      "title": "高危漏洞: CVE-2026-57319 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in FOX <= 1.4.8 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/woocommerce-currency-switcher/vulnerability/wordpress-fox-plugin-1-4-8-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:57"
-    },
-    {
-      "cve_id": "CVE-2026-57317",
-      "title": "高危漏洞: CVE-2026-57317 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Simply Schedule Appointments <= 1.6.12.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/simply-schedule-appointments/vulnerability/wordpress-simply-schedule-appointments-plugin-1-6-12-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:53"
-    },
-    {
-      "cve_id": "CVE-2026-57315",
-      "title": "高危漏洞: CVE-2026-57315 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-26 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Contributor Remote Code Execution (RCE) in Blocksy Companion Pro <= 2.1.45 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/blocksy-companion-pro/vulnerability/wordpress-blocksy-companion-pro-plugin-2-1-45-remote-code-execution-rce-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:48"
-    },
-    {
-      "cve_id": "CVE-2026-57314",
-      "title": "高危漏洞: CVE-2026-57314 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in SureCart <= 4.3.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/surecart/vulnerability/wordpress-surecart-plugin-4-3-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:43"
-    },
-    {
-      "cve_id": "CVE-2026-57312",
-      "title": "高危漏洞: CVE-2026-57312 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Everest Forms <= 3.4.8 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/everest-forms/vulnerability/wordpress-everest-forms-plugin-3-4-8-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:34"
-    },
-    {
-      "cve_id": "CVE-2026-56773",
-      "title": "高危漏洞: CVE-2026-56773 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-26 23:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Teable's v2 REST API controller lacks @Permissions metadata on ORPC endpoints, allowing any authenticated user to bypass authorization checks. Attackers can read table schemas, create tables, and modify or delete records across bases and tables via endpoints like GET /api/v2/tables/get and POST /api/v2/tables/updateRecords.",
-      "refs": "https://github.com/teableio/teable/pull/3285\nhttps://github.com/teableio/teable/releases/tag/release.2026-06-15T04-43-24Z.1912\nhttps://www.vulncheck.com/advisories/teable-missing-authorization-in-v2-rest-api",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:28"
-    },
-    {
-      "cve_id": "CVE-2026-56072",
-      "title": "高危漏洞: CVE-2026-56072 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in WoodMart <= 8.5.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/woodmart/vulnerability/wordpress-woodmart-theme-8-5-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:01:24"
     }
   ]
 }
