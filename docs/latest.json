@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10646",
+      "title": "高危漏洞: CVE-2026-10646 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-06-28 13:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Zephyr's BSD-sockets getaddrinfo() implementation (subsys/net/lib/sockets/getaddrinfo.c) passes a pointer to a stack-allocated state object (struct getaddrinfo_state ai_state) as the user_data of an asynchronous DNS resolver query. The socket layer waits on a semaphore with a timeout deliberately set slightly longer than the resolver's own per-query timeout. When that semaphore wait nonetheless times out (-EAGAIN) - which can occur when the resolver's timeout work is delayed by workqueue contention, or in the documented multi-retry configuration where CONFIG_NET_SOCKETS_DNS_TIMEOUT exceeds CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL - the pre-fix code retries the query (goto again) without cancelling the previous one and without resetting the semaphore. The previous query slot remains active in the resolver with its callback and the stack pointer as user_data, and ai_state-dns_id is overwritten so the stale query can no longer be cancelled. A subsequent DNS response delivered over UDP and matched by its 16-bit transaction id (in dispatcher_cb()/dns_read()), or the resolver's own delayed query-timeout work, then invokes dns_resolve_cb() against the now out-of-scope stack frame, writing through the stale pointer (state-status, state-idx, state-ai_arr[], and k_sem_give()). Because the triggering response is network-delivered and its 16-bit id is spoofable/replayable by an on- or off-path attacker, this is a network-influenceable use-after-return that can corrupt reused stack memory, leading to crashes/denial of service or memory corruption. The fix cancels the timed-out query by name and type before retrying and resets the local semaphore, eliminating the stale callback path. Affected: Zephyr v4.0.0 through v4.4.0.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/cd27da58eedb8d0fe380dd340b81ca5afa35de45\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-h752-vhmf-29w6",
+      "source": "NVD",
+      "time": "2026-06-28 18:58:35"
+    },
+    {
       "cve_id": "CVE-2026-58056",
       "title": "高危漏洞: CVE-2026-58056 (CVSS 7.6)",
       "cvss_score": 7.6,
@@ -1088,17 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/wemail/vulnerability/wordpress-wemail-plugin-2-1-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-06-27 01:02:06"
-    },
-    {
-      "cve_id": "CVE-2026-57321",
-      "title": "高危漏洞: CVE-2026-57321 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-06-26 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
-      "description": "Contributor Arbitrary File Deletion in H5P <= 1.17.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/h5p/vulnerability/wordpress-h5p-plugin-1-17-7-arbitrary-file-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:02:01"
     }
   ]
 }
