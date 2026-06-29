@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-57346",
+      "title": "高危漏洞: CVE-2026-57346 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-29 18:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Epiphyt Embed Privacy allows Path Traversal.\n\nThis issue affects Embed Privacy: from n/a through 1.12.3.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/embed-privacy/vulnerability/wordpress-embed-privacy-plugin-1-12-3-arbitrary-file-deletion-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-06-29 20:58:30"
+    },
+    {
+      "cve_id": "CVE-2026-25707",
+      "title": "高危漏洞: CVE-2026-25707 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-29 18:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A relative path traversal bug problem when processing repository metadata in libzypp before 17.38.10 could be used by remote attackers supplying repositories to overwrite files on the system, leading to denial of service or privilege escalation.",
+      "refs": "https://bugzilla.suse.com/show_bug.cgi?id=1259802\nhttps://github.com/openSUSE/libzypp/commit/f09feda7fca03c941218aab0bb161cc82b185b6b",
+      "source": "NVD",
+      "time": "2026-06-29 20:58:23"
+    },
+    {
+      "cve_id": "CVE-2026-13601",
+      "title": "高危漏洞: CVE-2026-13601 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-06-29 18:16:30",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "A flaw was found in Yelp due to an overly permissive Content Security Policy (CSP) implementation provided by yelp-xsl. A malicious Flatpak application can open crafted help content through the OpenURI portal. By embedding an untrusted CSS stylesheet within a structured SVG document, attacker-controlled content can bypass Flatpak's intended sandbox isolation, allowing Yelp to evaluate local XML inclusions and disclose arbitrary user-readable host files through remote CSS resource requests. This may result in the unauthorized disclosure of sensitive information.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-13601\nhttps://blogs.gnome.org/mcatanzaro/2026/05/11/flatpak-sandbox-escape-via-yelp/\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2494110",
+      "source": "NVD",
+      "time": "2026-06-29 20:58:19"
+    },
+    {
+      "cve_id": "CVE-2026-13555",
+      "title": "高危漏洞: CVE-2026-13555 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 18:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in itsourcecode Online Hotel Management System 1.0. Affected by this issue is some unknown functionality of the file /admin/mod_users/controller.php?action=add. The manipulation of the argument Name results in sql injection. The attack can be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/Hh-176/CVE/issues/6\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-13555",
+      "source": "NVD",
+      "time": "2026-06-29 20:58:11"
+    },
+    {
+      "cve_id": "CVE-2026-13553",
+      "title": "高危漏洞: CVE-2026-13553 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 18:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in itsourcecode Online Hotel Management System 1.0. Affected is an unknown function of the file /admin/mod_amenities/controller.php?action=add. Executing a manipulation of the argument image can lead to unrestricted upload. It is possible to launch the attack remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Hh-176/CVE/issues/4\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-13553",
+      "source": "NVD",
+      "time": "2026-06-29 20:58:07"
+    },
+    {
+      "cve_id": "CVE-2026-13552",
+      "title": "高危漏洞: CVE-2026-13552 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 18:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in itsourcecode Online Hotel Management System 1.0. This impacts an unknown function of the file /admin/mod_amenities/controller.php?action=edit. Performing a manipulation of the argument amen_id results in sql injection. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/Hh-176/CVE/issues/3\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-13552",
+      "source": "NVD",
+      "time": "2026-06-29 20:58:02"
+    },
+    {
+      "cve_id": "CVE-2026-22078",
+      "title": "高危漏洞: CVE-2026-22078 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 17:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:H",
+      "description": "Because O+ Connect's IPC service does not authenticate clients, external applications can escalate privileges and perform sensitive actions through the IPC channel.",
+      "refs": "https://security.oppo.com/en/noticeDetail?notice_only_key=NOTICE-2070415238859333632",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:58"
+    },
+    {
+      "cve_id": "CVE-2026-13551",
+      "title": "高危漏洞: CVE-2026-13551 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in itsourcecode Baptism Information Management System 1.0. This affects an unknown function of the file /editBaptism.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Hh-176/CVE/issues/2\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-13551",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:54"
+    },
+    {
+      "cve_id": "CVE-2026-13550",
+      "title": "高危漏洞: CVE-2026-13550 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in itsourcecode Baptism Information Management System 1.0. The impacted element is an unknown function of the file /delbaptism.php. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/Hh-176/CVE/issues/1\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-13550",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:50"
+    },
+    {
+      "cve_id": "CVE-2026-13547",
+      "title": "高危漏洞: CVE-2026-13547 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 17:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Hanwang e-Face General Management Platform 6.3.5.4. This issue affects some unknown processing of the file /manage/resourceUpload/upload.do. Executing a manipulation of the argument File can lead to unrestricted upload. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/SrO0wcxd9i6ByukOizGcIgpBnRd\nhttps://vuldb.com/cve/CVE-2026-13547\nhttps://vuldb.com/submit/842646",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:44"
+    },
+    {
+      "cve_id": "CVE-2026-13546",
+      "title": "高危漏洞: CVE-2026-13546 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-29 17:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Feehi CMS up to 2.1.1. This vulnerability affects unknown code of the file /api/articles of the component REST API Endpoint. Performing a manipulation results in missing authentication. The attack may be initiated remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/liufee/cms/issues/87\nhttps://vuldb.com/cve/CVE-2026-13546\nhttps://vuldb.com/submit/842603",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:38"
+    },
+    {
+      "cve_id": "CVE-2026-13545",
+      "title": "高危漏洞: CVE-2026-13545 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-29 17:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in D-Link DCS-935L 1.10.01. This affects the function sub_400E40 of the file setconf.cgi of the component POST Parameter Handler. Such manipulation of the argument UID leads to os command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/Real-Simplicity/cve-database/tree/main/CVE_Report_DLink_DCS935L_Command_Injection\nhttps://vuldb.com/cve/CVE-2026-13545\nhttps://vuldb.com/submit/842589",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:33"
+    },
+    {
+      "cve_id": "CVE-2026-13539",
+      "title": "高危漏洞: CVE-2026-13539 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-29 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Wavlink WL-NU516U1-A M16U1_V240425. The impacted element is the function sub_407504 of the file /cgi-bin/wireless.cgi of the component POST Parameter Handler. Such manipulation of the argument Guest_ssid leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used. It is suggested to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-06-22-5ccde97-mt7628-squashfs-sysupgrade.bin\nhttps://github.com/Svigo-o/Wavlink_vul/tree/main/wavlink-wl-nu516u1-wireless-guestwifi-guestssid-buffer-overflow\nhttps://vuldb.com/cve/CVE-2026-13539",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:25"
+    },
+    {
+      "cve_id": "CVE-2025-2902",
+      "title": "高危漏洞: CVE-2025-2902 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-29 15:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
+      "description": "Improper Authorization Vulnerability of Maintenance Utility in Hitachi Virtual Storage Platform.\n\nThis issue affects Hitachi Virtual Storage Platform E390, E590, E790, E990, E1090, E390H, E590H, E790H, E1090H: before DKCMAIN Ver. 93-07-26-xx/00, GUM Ver. 93-07-26/00; Hitachi Virtual Storage Platform 5100, 5500, 5100H, 5500H, 5200, 5600, 5200H, 5600H: before DKCMAIN Ver. 90-09-27-00/00, GUM Ver. 90-09-27/00; Hitachi Virtual Storage Platform G130, G150, G350, G370, G700, G900, F350, F370, F700, F900: before DKCMAIN Ver. 88-08-16-xx/00, GUM Ver. 88-08-20/00.",
+      "refs": "https://www.hitachi.com/products/it/storage-solutions/sec_info/2026/2026_305.html",
+      "source": "NVD",
+      "time": "2026-06-29 20:57:18"
+    },
+    {
       "cve_id": "CVE-2026-13528",
       "title": "高危漏洞: CVE-2026-13528 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -945,160 +1099,6 @@
       "refs": "https://github.com/canonical/lxd/pull/18585\nhttps://github.com/canonical/lxd/security/advisories/GHSA-hhf9-qw4v-72xp\nhttps://github.com/canonical/lxd/security/advisories/GHSA-hhf9-qw4v-72xp",
       "source": "NVD",
       "time": "2026-06-27 03:28:54"
-    },
-    {
-      "cve_id": "CVE-2026-45257",
-      "title": "高危漏洞: CVE-2026-45257 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-26 23:16:39",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The KTLS receive path decrypted each record in place, assuming that the mbufs holding received data were anonymous and safe to modify.  This assumption does not hold for data placed on a socket by sendfile(2), which can reference file-backed memory directly through non-anonymous M_EXTPG pages or EXT_SFBUF mbufs.  When the sender transmits such data over a loopback connection without enabling KTLS on the transmit side, the file-backed mbufs reach the receiver's decryption path unchanged.  Decrypting a record in place then overwrites the backing file's page cache instead of a private copy of the data.\n\nAn unprivileged local user who can read a file can overwrite its contents with data of their choosing by sending the file over a loopback connection on which they have enabled KTLS receive.  The write modifies the page cache directly, so it bypasses file flags such as schg and is written back to disk.  By overwriting a setuid binary or other trusted file, a local user can escalate privileges, potentially gaining full control of the affected system.",
-      "refs": "https://security.freebsd.org/advisories/FreeBSD-SA-26:26.ktls.asc\nhttp://www.openwall.com/lists/oss-security/2026/06/10/20\nhttp://www.openwall.com/lists/oss-security/2026/06/10/21",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:50"
-    },
-    {
-      "cve_id": "CVE-2026-30041",
-      "title": "高危漏洞: CVE-2026-30041 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer overflow in the PSD parser compnent of FastStone Image Viewer v8.3 allows attackers to execute arbitrary code or cause a Denial of Service (DoS) via supplying a crafted PSD file.",
-      "refs": "https://kb.cert.org/vuls/id/936962\nhttps://www.faststone.org/FSIVDownload.htm",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:43"
-    },
-    {
-      "cve_id": "CVE-2026-11702",
-      "title": "高危漏洞: CVE-2026-11702 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 17:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Bytes::Random::Secure::Tiny versions through 1.011 for Perl share internal state across forked processes.\n\nWhen an object is initialised before forking, then the internal state for the PRNG is shared across processes and identical random streams will be produced.\n\nSecrets generated in multiprocess applications are predictable across processes.",
-      "refs": "https://github.com/daoswald/Bytes-Random-Secure-Tiny/issues/6\nhttps://github.com/daoswald/Bytes-Random-Secure-Tiny/pull/7\nhttps://security.metacpan.org/patches/B/Bytes-Random-Secure-Tiny/1.011/CVE-2026-11702-r1.patch",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:36"
-    },
-    {
-      "cve_id": "CVE-2026-11625",
-      "title": "高危漏洞: CVE-2026-11625 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 17:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Bytes::Random::Secure versions through 0.29 for Perl share internal state across forked processes.\n\nWhen an object is initialised before forking, or when the functional interface is used, then the internal state for the PRNG is shared across processes and identical random streams will be produced.\n\nSecrets generated in multiprocess applications are predictable across processes.",
-      "refs": "https://github.com/daoswald/Bytes-Random-Secure/issues/3\nhttps://github.com/daoswald/Bytes-Random-Secure/pull/4\nhttps://security.metacpan.org/patches/B/Bytes-Random-Secure/0.29/CVE-2026-11625-r1.patch",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:32"
-    },
-    {
-      "cve_id": "CVE-2026-49486",
-      "title": "高危漏洞: CVE-2026-49486 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 16:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Apache Airflow FTP provider's `FTPSHook.get_conn()` created an `ftplib.FTP_TLS` connection but never called `prot_p()`, so although the control channel was TLS-protected the data channel was transmitted in cleartext. Any deployment using `FTPSHook` or `FTPSFileTransmitOperator` to move files over FTPS exposed file contents and credentials-in-transit to a network attacker able to observe the data connection. Upgrade apache-airflow-providers-ftp to `3.15.1` or later, which issues `PROT P` to encrypt the data channel.",
-      "refs": "https://github.com/apache/airflow/pull/67946\nhttps://lists.apache.org/thread/gwnsxlt9hfj5pc543wxtogbnjdn04xj1",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:28"
-    },
-    {
-      "cve_id": "CVE-2026-10835",
-      "title": "高危漏洞: CVE-2026-10835 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-26 15:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The SALESmanago & Leadoo WordPress plugin before 3.11.3 does not properly sanitise and escape a parameter passed to one of its AJAX actions before using it in a SQL statement, and fails to enforce authorisation on that action, allowing authenticated users with minimal permissions, such as subscribers, to perform SQL injection attacks.",
-      "refs": "https://wpscan.com/vulnerability/3c7b37ab-b069-4257-82b2-5b4c54f7e503/",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:23"
-    },
-    {
-      "cve_id": "CVE-2026-7531",
-      "title": "高危漏洞: CVE-2026-7531 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-26 04:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Use-after-free in PQC hybrid key-share handling. This is an incomplete-fix follow-up to CVE-2026-5460 (released in 5.9.1): a malicious TLS 1.3 server sending a truncated PQC hybrid KeyShare can still trigger the error cleanup path to operate on freed memory.",
-      "refs": "https://github.com/wolfSSL/wolfssl/pull/10327\nhttps://www.wolfssl.com/docs/security-vulnerabilities/",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:19"
-    },
-    {
-      "cve_id": "CVE-2026-46602",
-      "title": "高危漏洞: CVE-2026-46602 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 04:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The TIFF decoder does not set a limit on the size of tiles in tiled images, permitting a malicious or corrupt image containing a very large tile to cause unbounded memory consumption.",
-      "refs": "https://go.dev/cl/788422\nhttps://go.dev/issue/79905\nhttps://pkg.go.dev/vuln/GO-2026-5062",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:15"
-    },
-    {
-      "cve_id": "CVE-2026-46601",
-      "title": "高危漏洞: CVE-2026-46601 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 04:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The webp decoder can panic when processing a VP8 chunk with dimensions that do not match the canvas size.",
-      "refs": "https://go.dev/cl/787681\nhttps://go.dev/issue/79869\nhttps://pkg.go.dev/vuln/GO-2026-5061",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:08"
-    },
-    {
-      "cve_id": "CVE-2026-10512",
-      "title": "高危漏洞: CVE-2026-10512 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 04:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The X25519 x86_64 assembly implementation fails to clear the most significant bit during the final modular reduction, so the computed result may not be fully reduced modulo the field prime 2^255 - 19. This can leave the field element in a non-canonical form, producing an incorrect result from the scalar multiplication and potentially a wrong shared secret. The final carry-propagation chains in the x64 and AVX2 reduction routines could overflow into the top bit, and the high limb was not masked afterward, so the 255-bit field element was left non-canonical.",
-      "refs": "https://github.com/wolfSSL/wolfssl/pull/10536\nhttps://www.wolfssl.com/docs/security-vulnerabilities/",
-      "source": "NVD",
-      "time": "2026-06-27 03:28:02"
-    },
-    {
-      "cve_id": "CVE-2026-10097",
-      "title": "高危漏洞: CVE-2026-10097 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 04:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "wolfSSL's AVX2-optimized ML-KEM implementation (mlkem_cmp_avx2) compares only 1536 of the 1568 ciphertext bytes during the Fujisaki-Okamoto re-encryption check in ML-KEM-1024 decapsulation. Ciphertexts that differ from the expected re-encryption solely in bytes 1536-1567 bypass implicit rejection and are accepted as valid, breaking IND-CCA2 security. An attacker able to submit chosen ciphertexts to a decapsulation oracle that uses a static ML-KEM-1024 key, and to observe whether the genuine shared secret or the implicit-rejection secret was produced, can use this as a plaintext-checking oracle to recover the private key. A proof of concept recovered a full ML-KEM-1024 private key with approximately 98% success using roughly 350 chosen ciphertexts. The flaw is a deterministic logic error and does not rely on timing measurements.",
-      "refs": "https://github.com/wolfSSL/wolfssl/pull/10430\nhttps://www.wolfssl.com/docs/security-vulnerabilities/",
-      "source": "NVD",
-      "time": "2026-06-27 03:27:57"
-    },
-    {
-      "cve_id": "CVE-2026-57667",
-      "title": "高危漏洞: CVE-2026-57667 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-26 23:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Sales Representative SQL Injection in Groundhogg <= 4.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/groundhogg/vulnerability/wordpress-groundhogg-plugin-4-5-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:03:37"
-    },
-    {
-      "cve_id": "CVE-2026-57663",
-      "title": "高危漏洞: CVE-2026-57663 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-26 23:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in Recipe Maker For Your Food Blog from Zip Recipes <= 8.2.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/zip-recipes/vulnerability/wordpress-recipe-maker-for-your-food-blog-from-zip-recipes-plugin-8-2-7-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:03:33"
-    },
-    {
-      "cve_id": "CVE-2026-57662",
-      "title": "高危漏洞: CVE-2026-57662 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-06-26 23:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in Contest Gallery <= 30.0.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/contest-gallery/vulnerability/wordpress-contest-gallery-plugin-30-0-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-06-27 01:03:29"
     }
   ]
 }
