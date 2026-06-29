@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12912",
+      "title": "高危漏洞: CVE-2026-12912 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-06-30 01:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in libtiff. A remote attacker could exploit this vulnerability by providing a specially crafted PixarLog-compressed TIFF image. This issue occurs when decoding Pixarlog codec images with the PIXARLOGDATAFMT_8BITABGR output format and a specific stride value, leading to a heap-based buffer overflow. This could potentially result in arbitrary code execution or a denial of service (DoS).",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-12912\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2492871\nhttps://gitlab.com/libtiff/libtiff/-/merge_requests/873",
+      "source": "NVD",
+      "time": "2026-06-30 03:42:31"
+    },
+    {
+      "cve_id": "CVE-2026-13749",
+      "title": "高危漏洞: CVE-2026-13749 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-30 00:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization in the Snowpark annotation processor callback template in Snowflake CLI versions prior to 3.19 allowed arbitrary code execution during application bundling or deployment. An attacker could exploit this by supplying crafted project content that is interpolated into generated Python code, causing Snowflake CLI to execute attacker-controlled code in the local context of the user running the CLI. Successful exploitation requires the victim to run the relevant bundling or deployment workflow against attacker-controlled project content, and any resulting code runs with the privileges of that local execution context. The fix is available in Snowflake CLI version 3.19, and users must manually upgrade.",
+      "refs": "https://community.snowflake.com/s/article/Snowflake-CLI-Vulnerability-Advisory",
+      "source": "NVD",
+      "time": "2026-06-30 03:42:27"
+    },
+    {
+      "cve_id": "CVE-2026-13744",
+      "title": "高危漏洞: CVE-2026-13744 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-06-30 00:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Improper neutralization of attacker-controlled content in Snowflake CLI versions prior to 3.19 allowed unintended SQL execution. By supplying crafted repository content, project configuration, manifest data, or specification input, an attacker could cause Snowflake CLI to execute unintended SQL in the context of the victim user's Snowflake session. Successful exploitation requires the victim to process attacker-controlled content through a vulnerable command path and is limited by the privileges assigned to that session. The fix is available in Snowflake CLI version 3.19. Users must manually upgrade.",
+      "refs": "https://community.snowflake.com/s/article/Snowflake-CLI-Vulnerability-Advisory",
+      "source": "NVD",
+      "time": "2026-06-30 03:42:23"
+    },
+    {
+      "cve_id": "CVE-2026-13583",
+      "title": "高危漏洞: CVE-2026-13583 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-30 00:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Edimax EW-7478APC 1.04. Impacted is the function formUSBFolder of the file /goform/formUSBFolder of the component POST Request Handler. Such manipulation of the argument ShareName/SelectName leads to buffer overflow. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-formUSBFolder-34b53a41781f80d5b1f8ebce442de53f\nhttps://vuldb.com/cve/CVE-2026-13583\nhttps://vuldb.com/submit/844118",
+      "source": "NVD",
+      "time": "2026-06-30 03:42:18"
+    },
+    {
+      "cve_id": "CVE-2026-13582",
+      "title": "高危漏洞: CVE-2026-13582 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-30 00:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Edimax EW-7478APC 1.04. This issue affects the function formUSBAccount of the file /goform/formUSBAccount of the component POST Request Handler. This manipulation of the argument UserName/Password causes buffer overflow. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-formUSBAccount-34b53a41781f8077ad48e4c3af9be499\nhttps://vuldb.com/cve/CVE-2026-13582\nhttps://vuldb.com/submit/844117",
+      "source": "NVD",
+      "time": "2026-06-30 03:42:12"
+    },
+    {
+      "cve_id": "CVE-2026-13580",
+      "title": "高危漏洞: CVE-2026-13580 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-06-30 00:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Edimax EW-7478APC 1.04. This affects the function formQoS of the file /goform/formQoS of the component POST Request Handler. The manipulation of the argument selSSID leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-formQoS-34b53a41781f8095bffacdea103a82d1\nhttps://vuldb.com/cve/CVE-2026-13580\nhttps://vuldb.com/submit/844115",
+      "source": "NVD",
+      "time": "2026-06-30 03:42:05"
+    },
+    {
+      "cve_id": "CVE-2026-49049",
+      "title": "高危漏洞: CVE-2026-49049 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-29 23:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The Helix3 plugin for Joomla exposes an ajax handler task, that allows unauthenticated attackers to delete arbitrary files, write arbitrary JSON files and update template parameters.",
+      "refs": "https://www.joomshaper.com/",
+      "source": "NVD",
+      "time": "2026-06-30 03:41:59"
+    },
+    {
       "cve_id": "CVE-2026-57338",
       "title": "高危漏洞: CVE-2026-57338 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/opf/openproject/security/advisories/GHSA-f2rx-x2qj-2hgj\nhttps://github.com/opf/openproject/security/advisories/GHSA-f2rx-x2qj-2hgj",
       "source": "NVD",
       "time": "2026-06-27 10:11:34"
-    },
-    {
-      "cve_id": "CVE-2026-46386",
-      "title": "高危漏洞: CVE-2026-46386 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-27 04:17:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "OpenProject is open-source, web-based project management software. Prior to , the official openproject/openproject Docker image ships ENV SECRET_KEY_BASE=OVERWRITE_ME as the default Rails master key. Combined with cookies_serializer = :marshal, this gives any logged-in user a deterministic Marshal-deserialization path reachable via the /my/two_factor_devices cookie reader This vulnerability is fixed in .",
-      "refs": "https://github.com/opf/openproject/security/advisories/GHSA-r85r-gjq2-f83r",
-      "source": "NVD",
-      "time": "2026-06-27 10:11:30"
-    },
-    {
-      "cve_id": "CVE-2026-32833",
-      "title": "高危漏洞: CVE-2026-32833 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-27 04:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Cudy LT300 3.0 running firmware prior to version 2.5.12 contains an OS command injection vulnerability that allows authenticated attackers to execute arbitrary commands by injecting shell metacharacters into the cbid.system.ntp.current POST parameter in the system time configuration interface. Attackers can submit malicious payloads through the NTP settings endpoint to achieve remote code execution on the underlying system.",
-      "refs": "https://www.cudy.com/en-us/pages/download-center/lt300-3-0\nhttps://www.vulncheck.com/advisories/cudy-lt300-os-command-injection-via-ntp-configuration",
-      "source": "NVD",
-      "time": "2026-06-27 10:11:26"
-    },
-    {
-      "cve_id": "CVE-2026-13372",
-      "title": "高危漏洞: CVE-2026-13372 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-27 03:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect link resolution by display name in the custom PowerShell VPN editor in Devolutions Remote Desktop Manager 2026.2.5 through 2026.2.11 allows an authenticated attacker with write access to a shared workspace to execute a PowerShell script in another user's context via a display name collision with an existing VPN script link.",
-      "refs": "https://devolutions.net/security/advisories/DEVO-2026-0021/",
-      "source": "NVD",
-      "time": "2026-06-27 10:11:19"
-    },
-    {
-      "cve_id": "CVE-2026-45195",
-      "title": "高危漏洞: CVE-2026-45195 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-27 00:16:30",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Kernel software installed and running inside a Host VM may post improper commands to the GPU Firmware to trigger a memory read or write outside the permitted range of memory for the host kernel.\n\n\n\nAddresses passed to the GPU Firmware can be used by the Firmware for more privileged memory accesses than are permitted by the system.",
-      "refs": "https://www.imaginationtech.com/gpu-driver-vulnerabilities/",
-      "source": "NVD",
-      "time": "2026-06-27 10:11:15"
-    },
-    {
-      "cve_id": "CVE-2026-21734",
-      "title": "高危漏洞: CVE-2026-21734 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-27 00:16:30",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "A web page that contains unusual GPU shader code is loaded into the GPU compiler process and can trigger a write out-of-bounds write crash in the GPU shader compiler library. On certain platforms, when the compiler process has system privileges this could enable further exploits on the device.\n\n\n\nAn edge case using a very small value in GPU shader code can cause a segmentation fault in the GPU shader compiler due to am out-of-bounds write.",
-      "refs": "https://www.imaginationtech.com/gpu-driver-vulnerabilities/",
-      "source": "NVD",
-      "time": "2026-06-27 10:11:08"
-    },
-    {
-      "cve_id": "CVE-2026-48930",
-      "title": "高危漏洞: CVE-2026-48930 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-26 10:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw in Node.js TLS hostname handling can cause Embedded-nul hostnames can lead to silent authority rebinding due to c-string truncation in resolver bindings.\r\n\r\nThis vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-      "refs": "https://nodejs.org/en/blog/vulnerability/june-2026-security-releases",
-      "source": "NVD",
-      "time": "2026-06-27 10:11:03"
-    },
-    {
-      "cve_id": "CVE-2026-48619",
-      "title": "高危漏洞: CVE-2026-48619 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-26 10:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A flaw in Node.js HTTP/2 client allows a server to send an unlimited number of ORIGIN frames, which could lead to an Out of Memory error on the client.\r\n\r\nThis vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
-      "refs": "https://nodejs.org/en/blog/vulnerability/june-2026-security-releases",
-      "source": "NVD",
-      "time": "2026-06-27 10:10:55"
     }
   ]
 }
