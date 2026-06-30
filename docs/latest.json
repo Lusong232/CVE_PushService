@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-56808",
+      "title": "高危漏洞: CVE-2026-56808 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-30 15:16:32",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "DGM3103SCT provided by AVTECH Security Corporation contains an OS command injection vulnerability, which may lead to arbitrary command execution with the root privilege by a user who can log in to the web management console of the affected product.",
+      "refs": "https://jvn.jp/en/jp/JVN28979424/\nhttps://www.avtech.com.tw/global/en/IP%20Camera?search=DGM3103SCT",
+      "source": "NVD",
+      "time": "2026-06-30 19:39:08"
+    },
+    {
+      "cve_id": "CVE-2026-56137",
+      "title": "高危漏洞: CVE-2026-56137 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-06-30 15:16:32",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "RPG MAKER MV and MZ provided by Gotcha Gotcha Games Inc. contain an OS command injection vulnerability. If a user loads a specially crafted save-file, arbitrary OS command may be executed.",
+      "refs": "https://jvn.jp/en/jp/JVN69681784/\nhttps://rpgmakerofficial.com/en/news/4188/\nhttps://rpgmakerofficial.com/news/4183/",
+      "source": "NVD",
+      "time": "2026-06-30 19:39:04"
+    },
+    {
+      "cve_id": "CVE-2026-14164",
+      "title": "高危漏洞: CVE-2026-14164 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-30 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A double free issue has been identified in libarchive's RAR5 reader. During parsing of a specially crafted RAR5 archive, the filtered_buf pointer may remain stale after being freed during unpacking state reinitialization. Subsequent processing of another archive entry can trigger a second free of the same memory region, resulting in a double-free condition. Successful exploitation may cause applications using the vulnerable libarchive API to terminate unexpectedly, leading to a denial of service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-14164\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2493411\nhttps://github.com/libarchive/libarchive/issues/3069",
+      "source": "NVD",
+      "time": "2026-06-30 19:38:56"
+    },
+    {
+      "cve_id": "CVE-2026-12240",
+      "title": "高危漏洞: CVE-2026-12240 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-06-30 15:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Export User Data plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the unserialize function in all versions up to, and including, 2.2.6. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Successful exploitation requires an administrator to trigger a user data export while a subscriber-level (or higher) user has stored a crafted serialized XLSXWriter object payload as their display name.",
+      "refs": "https://plugins.trac.wordpress.org/browser/export-user-data/tags/2.2.6/library/core/helper.php#L171\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/39f12ff1-63ee-4131-a708-49633f22ccd4?source=cve",
+      "source": "NVD",
+      "time": "2026-06-30 19:38:51"
+    },
+    {
+      "cve_id": "CVE-2026-12073",
+      "title": "高危漏洞: CVE-2026-12073 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-30 14:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ProfileGrid – User Profiles, Groups and Communities plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 5.9.9.5. This is due to the plugin not validating a `user_login` on registration forms that don't contain this parameter, and not properly handling the error messages. This makes it possible for unauthenticated attackers to change email address of user account with ID=1 (usually an administrator), and leverage that to reset the user's password and gain access to their account.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3578435/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/2d35279d-299e-4ca2-8f84-165284e058c8?source=cve",
+      "source": "NVD",
+      "time": "2026-06-30 19:38:40"
+    },
+    {
       "cve_id": "CVE-2026-58302",
       "title": "高危漏洞: CVE-2026-58302 (CVSS 8.4)",
       "cvss_score": 8.4,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/bikini/exploitarium/tree/main/gitea-act-runner-container-options-poc\nhttps://www.vulncheck.com/advisories/gitea-act-runner-container-hardening-bypass-via-workflow-container-options",
       "source": "NVD",
       "time": "2026-06-28 14:54:47"
-    },
-    {
-      "cve_id": "CVE-2026-58050",
-      "title": "高危漏洞: CVE-2026-58050 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-06-28 10:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
-      "description": "libssh2 through 1.11.1 reads an attacker-controlled 32-bit attribute count from a publickey-subsystem response and uses it in the allocation num_attrs * sizeof(libssh2_publickey_attribute) without bounds checking, so on 32-bit platforms the multiplication overflows to an undersized buffer. A malicious SSH server can then drive the attribute-parsing loop to write past the allocation, causing a heap buffer overflow in a connecting libssh2 client.",
-      "refs": "https://github.com/bikini/exploitarium/tree/main/libssh2-publickey-list-calc-poc\nhttps://github.com/libssh2/libssh2/blob/master/src/publickey.c\nhttps://www.vulncheck.com/advisories/libssh2-integer-overflow-in-publickey-subsystem-attribute-allocation",
-      "source": "NVD",
-      "time": "2026-06-28 14:54:39"
-    },
-    {
-      "cve_id": "CVE-2026-58049",
-      "title": "高危漏洞: CVE-2026-58049 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-06-28 10:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
-      "description": "FFmpeg's RASC video decoder (decode_dlta in libavcodec/rasc.c) performs 32-bit reads and writes at the row cursor before the NEXT_LINE row-boundary check and validates the DLTA region in pixel rather than byte units, so a DLTA run on a PAL8 frame can access several bytes past the row allocation. A crafted media stream using the RASC FourCC, decoded by libavcodec, triggers a bitstream-controlled out-of-bounds heap write and adjacent out-of-bounds read, leading to memory corruption.",
-      "refs": "https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/rasc.c\nhttps://github.com/bikini/exploitarium/tree/main/ffmpeg-rasc-dlta-calc-poc\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-write-in-rasc-decoder-decode-dlta",
-      "source": "NVD",
-      "time": "2026-06-28 14:54:35"
-    },
-    {
-      "cve_id": "CVE-2026-8095",
-      "title": "高危漏洞: CVE-2026-8095 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-06-28 08:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The Frontend File Manager Plugin plugin for WordPress is vulnerable to Authenticated Arbitrary File Deletion in versions up to and including 23.6. This is due to a case-sensitive bypass of the wpfm_dir_path parameter sanitization in the wpfm_file_meta_update AJAX handler, where supplying WPFM_DIR_PATH in uppercase evades the unset check and is normalized to wpfm_dir_path by sanitize_key() during update_post_meta(), allowing an attacker to overwrite the stored file path with an arbitrary filesystem path that is then passed directly to unlink() in delete_file_locally() without any directory containment validation. This makes it possible for authenticated attackers with Subscriber-level access to delete arbitrary files on the server, including sensitive files such as wp-config.php, potentially leading to full site takeover.",
-      "refs": "https://plugins.trac.wordpress.org/browser/nmedia-user-file-uploader/tags/23.6/inc/file.class.php#L729\nhttps://plugins.trac.wordpress.org/browser/nmedia-user-file-uploader/tags/23.6/inc/files.php#L767\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/506006ce-7b1c-4f9d-93f3-abc87abea2bb?source=cve",
-      "source": "NVD",
-      "time": "2026-06-28 14:54:31"
-    },
-    {
-      "cve_id": "CVE-2026-10643",
-      "title": "高危漏洞: CVE-2026-10643 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-06-28 08:16:24",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H",
-      "description": "Zephyr's IP socket recvmsg() implementation (subsys/net/lib/sockets/sockets_inet.c, insert_pktinfo()) validated the user-supplied ancillary (msg_control) buffer using only the payload length (msg-msg_controllen < pktinfo_len) before writing a full control message consisting of an aligned cmsg header plus the payload. Because the check omitted the cmsg header size, a control buffer whose length falls in the under-checked window (e.g. 16-27 bytes for IPv4 IP_PKTINFO on a 64-bit target, where a single element actually occupies 28 bytes) passes the guard yet causes a fixed-size out-of-bounds write of up to one cmsg header (~12 bytes) past the end of the buffer. Under CONFIG_USERSPACE the recvmsg verifier allocates a kernel-heap copy of the control buffer sized to msg_controllen and runs the implementation against it, so the overflow corrupts kernel heap memory and is triggerable from an unprivileged userspace thread; in supervisor mode it corrupts the caller's buffer. The path is reachable on a UDP/IP socket with IP_PKTINFO/IPV6_RECVPKTINFO (or hoplimit/timestamping) enabled when the application calls recvmsg() with an undersized control buffer and a datagram is received; part of the overwritten bytes (the destination IP in ipi_addr) is influenced by the received packet. The fix makes the capacity check use NET_CMSG_SPACE(pktinfo_len) (aligned header + aligned data) and returns -ENOMEM when the buffer is too small. Affected: v3.6.0 through v4.4.0.",
-      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/01fe77b2ec3885583f709a17c5203ce02bd77012",
-      "source": "NVD",
-      "time": "2026-06-28 14:54:24"
-    },
-    {
-      "cve_id": "CVE-2026-12415",
-      "title": "高危漏洞: CVE-2026-12415 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-06-27 13:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Invoice Generator plugin for WordPress is vulnerable to privilege escalation due to a missing capability check on the pravel_invoice_edit_account() AJAX action in versions up to, and including, 1.0.0. The handler is exposed via wp_ajax_nopriv_pravel_invoice_edit_account, accepts an attacker-controlled user_id and user_email from POST data, and calls wp_update_user() without verifying authentication, ownership, or a nonce. This makes it possible for unauthenticated attackers to change the email address of any user, including administrators, and then trigger WordPress's password reset flow to gain access to the targeted account.",
-      "refs": "https://plugins.trac.wordpress.org/browser/invoice-creator/trunk/lib/user-manage-function.php#L184\nhttps://plugins.trac.wordpress.org/browser/invoice-creator/trunk/lib/user-manage-function.php#L193\nhttps://plugins.trac.wordpress.org/browser/invoice-creator/trunk/lib/user-manage-function.php#L203",
-      "source": "NVD",
-      "time": "2026-06-27 18:52:43"
     }
   ]
 }
