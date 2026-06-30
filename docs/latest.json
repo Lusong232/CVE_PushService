@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58138",
+      "title": "高危漏洞: CVE-2026-58138 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-01 03:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Orkes Conductor 3.21.21 before 3.30.2 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary OS commands by submitting inline workflow definitions containing malicious JavaScript or Python expressions to the workflow API endpoint prior to authentication. Attackers can exploit unsandboxed GraalVM evaluators configured with HostAccess.ALL or allowAllAccess(true) through INLINE, LAMBDA, DO_WHILE, and SWITCH task types to invoke arbitrary system commands via Java reflection or direct subprocess calls.",
+      "refs": "https://github.com/conductor-oss/conductor/commit/87a7d96aabbb706d6e84f812b93da5165028d18f\nhttps://github.com/conductor-oss/conductor/commit/c691e35e768caeb802c9f06ecdd9674c80081af1\nhttps://github.com/conductor-oss/conductor/releases/tag/v3.30.2",
+      "source": "NVD",
+      "time": "2026-07-01 06:08:52"
+    },
+    {
+      "cve_id": "CVE-2026-10513",
+      "title": "高危漏洞: CVE-2026-10513 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-01 03:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Webmention plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to and including 5.8.0 via parser-derived 'avatar' and 'url' author metadata. This is due to insufficient input sanitization and output escaping on user-supplied MF2 author properties processed by the unauthenticated webmention REST endpoint and rendered directly into HTML 'value' attributes by the edit-comment-form template without esc_attr() or esc_url(). This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a privileged user (moderator or administrator) opens the affected comment edit screen.",
+      "refs": "https://plugins.trac.wordpress.org/browser/webmention/tags/5.7.0/includes/handler/class-mf2.php#L129\nhttps://plugins.trac.wordpress.org/browser/webmention/tags/5.7.0/templates/edit-comment-form.php#L15\nhttps://plugins.trac.wordpress.org/changeset/3583033/webmention",
+      "source": "NVD",
+      "time": "2026-07-01 06:08:45"
+    },
+    {
       "cve_id": "CVE-2026-58377",
       "title": "高危漏洞: CVE-2026-58377 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1077,28 +1099,6 @@
       "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-formUSBAccount-34b53a41781f8077ad48e4c3af9be499\nhttps://vuldb.com/cve/CVE-2026-13582\nhttps://vuldb.com/submit/844117",
       "source": "NVD",
       "time": "2026-06-30 03:42:12"
-    },
-    {
-      "cve_id": "CVE-2026-13580",
-      "title": "高危漏洞: CVE-2026-13580 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-06-30 00:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Edimax EW-7478APC 1.04. This affects the function formQoS of the file /goform/formQoS of the component POST Request Handler. The manipulation of the argument selSSID leads to buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-formQoS-34b53a41781f8095bffacdea103a82d1\nhttps://vuldb.com/cve/CVE-2026-13580\nhttps://vuldb.com/submit/844115",
-      "source": "NVD",
-      "time": "2026-06-30 03:42:05"
-    },
-    {
-      "cve_id": "CVE-2026-49049",
-      "title": "高危漏洞: CVE-2026-49049 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-29 23:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Helix3 plugin for Joomla exposes an ajax handler task, that allows unauthenticated attackers to delete arbitrary files, write arbitrary JSON files and update template parameters.",
-      "refs": "https://www.joomshaper.com/",
-      "source": "NVD",
-      "time": "2026-06-30 03:41:59"
     }
   ]
 }
