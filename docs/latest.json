@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58302",
+      "title": "高危漏洞: CVE-2026-58302 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-06-30 10:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "rtapi_app in linuxcnc-uspace in LinuxCNC before 2.9.9 allows privilege escalation. It is installed SUID root and loads shared library modules via dlopen() by using a user-supplied module name. Insufficient validation of the module name allows path traversal, enabling an unprivileged local user to load an arbitrary shared library. Because the process retains elevated privileges during module loading, this results in local privilege escalation to root.",
+      "refs": "https://bugs.debian.org/1140943\nhttps://github.com/LinuxCNC/linuxcnc/commit/00d534c87464a3ed446656998aa02b8abc74b391\nhttps://github.com/LinuxCNC/linuxcnc/commit/ea7cd579d39b586952a42e3da9a26d3e36e7a272",
+      "source": "NVD",
+      "time": "2026-06-30 14:46:17"
+    },
+    {
+      "cve_id": "CVE-2026-12243",
+      "title": "高危漏洞: CVE-2026-12243 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-06-30 09:16:29",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "NLTK version 3.9.4 is vulnerable to a path traversal attack due to an incomplete fix for GitHub Issue #3504. The `_UNSAFE_NO_PROTOCOL_RE` regex in `nltk/data.py` checks for literal `../` sequences but fails to account for percent-encoded traversal sequences such as `..%2f`. The `url2pathname()` function decodes these sequences after the validation step, allowing an attacker to bypass the protection. This vulnerability enables an attacker to read arbitrary files accessible to the Python process by controlling the resource name parameter passed to `nltk.data.load()` or `nltk.data.find()`. The issue affects applications that rely on NLTK for resource loading, including NLP web applications, Jupyter notebooks, and CLI tools. The default `pathsec.ENFORCE=False` setting exacerbates the impact by not blocking the file read at the `open()` stage.",
+      "refs": "https://huntr.com/bounties/39aa9354-54ca-4e77-96da-580eb1fe6ed1",
+      "source": "NVD",
+      "time": "2026-06-30 14:46:10"
+    },
+    {
       "cve_id": "CVE-2026-8023",
       "title": "高危漏洞: CVE-2026-8023 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1077,28 +1099,6 @@
       "refs": "https://plugins.trac.wordpress.org/browser/invoice-creator/trunk/lib/user-manage-function.php#L184\nhttps://plugins.trac.wordpress.org/browser/invoice-creator/trunk/lib/user-manage-function.php#L193\nhttps://plugins.trac.wordpress.org/browser/invoice-creator/trunk/lib/user-manage-function.php#L203",
       "source": "NVD",
       "time": "2026-06-27 18:52:43"
-    },
-    {
-      "cve_id": "CVE-2023-37524",
-      "title": "高危漏洞: CVE-2023-37524 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-06-27 10:16:27",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "HCL Traveler for Microsoft Outlook (HTMO) is susceptible to vulnerabilities due to .NET Framework 4.5 being out of service.  Since .NET Framework 4.5 has reached end-of-life and no longer receives security updates, it may expose the application to publicly known security weaknesses through vulnerable third-party components.",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0131418",
-      "source": "NVD",
-      "time": "2026-06-27 14:21:41"
-    },
-    {
-      "cve_id": "CVE-2026-56414",
-      "title": "高危漏洞: CVE-2026-56414 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-27 07:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability exists in H.View IP cameras certificate-related upload interfaces allow authenticated users to store arbitrary file content to fixed, persistent filesystem locations without validating file type, structure, or size. This design omission enables the placement of unexpected or malformed data in locations intended for trusted certificate material, which could affect system integrity or behavior even after reboot.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-176-05.json\nhttps://hviewsmart.com/pages/contact-us\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-176-05",
-      "source": "NVD",
-      "time": "2026-06-27 10:13:53"
     }
   ]
 }
