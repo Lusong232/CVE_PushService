@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9711",
+      "title": "高危漏洞: CVE-2026-9711 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-06-30 18:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The EventON - WordPress Virtual Event Calendar Plugin plugin for WordPress (full) is vulnerable to SQL Injection via the WordPress 'search' parameter in versions up to, and including, 5.0.11 due to insufficient escaping on the user supplied parameter and lack of preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database, granted the \"Enable additional search queries\" setting is enabled and at least one published event exists.",
+      "refs": "https://www.myeventon.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/1b5a0c87-59b0-4da4-8949-0957f8e1b479?source=cve",
+      "source": "NVD",
+      "time": "2026-06-30 21:55:18"
+    },
+    {
+      "cve_id": "CVE-2026-8141",
+      "title": "高危漏洞: CVE-2026-8141 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-06-30 18:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Ajax Load More - Filters plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'taxonomy_include_children' parameter in all versions up to, and including, 3.4.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://ajaxloadmore.com/add-ons/filters/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6e8d9f73-8460-4bcb-a9f8-08eb058bcc09?source=cve",
+      "source": "NVD",
+      "time": "2026-06-30 21:55:10"
+    },
+    {
       "cve_id": "CVE-2026-56808",
       "title": "高危漏洞: CVE-2026-56808 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/bikini/exploitarium/tree/main/rustdesk-session-permission-pocs\nhttps://www.vulncheck.com/advisories/rustdesk-filetransfer-session-authorization-scope-bypass",
       "source": "NVD",
       "time": "2026-06-28 14:54:56"
-    },
-    {
-      "cve_id": "CVE-2026-58054",
-      "title": "高危漏洞: CVE-2026-58054 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-06-28 10:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "MyBB 1.8.40 does not restrict which usergroup a limited Admin Control Panel user may assign when creating or editing users; the user module offers the Administrators group (gid 4) and its datahandler's verify_usergroup() unconditionally returns true. An admin holding only the delegated user-management permission can assign the Administrators group to an account and escalate to the full Administrator permission set.",
-      "refs": "https://github.com/bikini/exploitarium/tree/main/mybb-limited-acp-to-admin\nhttps://www.vulncheck.com/advisories/mybb-privilege-escalation-from-limited-acp-user-management-to-administrator",
-      "source": "NVD",
-      "time": "2026-06-28 14:54:51"
-    },
-    {
-      "cve_id": "CVE-2026-58053",
-      "title": "高危漏洞: CVE-2026-58053 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-06-28 10:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Gitea act_runner with the Docker backend (through act 0.262.0) passes a workflow's container.options string to the Docker job container's HostConfig and, when configured with privileged: false, forces only the Privileged flag off while merging options such as --pid=host, --cap-add, and --security-opt unchanged. A user who can run a workflow on a Docker-backed runner can create a job container with host namespaces and broad capabilities and escape to the host as root despite privileged mode being disabled.",
-      "refs": "https://github.com/bikini/exploitarium/tree/main/gitea-act-runner-container-options-poc\nhttps://www.vulncheck.com/advisories/gitea-act-runner-container-hardening-bypass-via-workflow-container-options",
-      "source": "NVD",
-      "time": "2026-06-28 14:54:47"
     }
   ]
 }
