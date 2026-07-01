@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-13228",
+      "title": "高危漏洞: CVE-2026-13228 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-01 19:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Privilege Escalation to Administrator in versions up to, and including, 5.6.3 This is due to an Insecure Direct Object Reference (IDOR) in the create_or_update() function of OsOrdersController, which allows an authenticated Agent to supply an arbitrary order[customer_id] and overwrite any LatePoint customer's email field (including one linked to a WordPress Administrator's account) through the public-scope customer set_data() call, combined with a missing role verification in OsAuthHelper::authorize_customer() which logs in the linked WordPress user without checking its role. This makes it possible for authenticated attackers, with custom (Agent)-level access and above, to elevate their privileges to Administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/controllers/orders_controller.php#L112\nhttps://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/controllers/orders_controller.php#L127\nhttps://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/controllers/orders_controller.php#L137",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:36"
+    },
+    {
+      "cve_id": "CVE-2026-12142",
+      "title": "高危漏洞: CVE-2026-12142 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-01 19:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The NEX-Forms – Ultimate Forms Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via '_name[]' Array Parameter in all versions up to, and including, 9.2.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_kses() output filtering pass provides no mitigation because NEXForms_allowed_tags() explicitly permits &lt;script&gt;, &lt;iframe src/srcdoc&gt;, and JS event handlers such as onClick, onBlur, and onChange in its allow-list.",
+      "refs": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/includes/classes/class.db.php#L2660\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/includes/classes/class.db.php#L2809\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/includes/classes/class.functions.php#L2343",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:30"
+    },
+    {
+      "cve_id": "CVE-2026-11883",
+      "title": "高危漏洞: CVE-2026-11883 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-01 15:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WebAuthn Provider for Two Factor WordPress plugin before 2.5.6 does not correctly validate the second-factor authentication response, allowing an attacker who already knows a user's password to bypass the two-factor authentication requirement by submitting a malformed request.",
+      "refs": "https://wpscan.com/vulnerability/f718390c-1d7c-4048-bce6-a3170998e828/",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:26"
+    },
+    {
+      "cve_id": "CVE-2026-11794",
+      "title": "高危漏洞: CVE-2026-11794 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-01 15:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Advanced Form Integration — Connect Forms to 200+ Apps WordPress plugin before 2.1.1 does not restrict the WordPress role assigned when it creates a user from a public form submission, allowing unauthenticated visitors to create an administrator account when an active integration maps the user role to a public form field. This requires a specific, non-default multi-Advanced Form Integration — Connect Forms to 200+ Apps WordPress plugin before 2.1.1 configuration.",
+      "refs": "https://wpscan.com/vulnerability/614b9517-d6d5-499f-8172-280280a312b2/",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:21"
+    },
+    {
+      "cve_id": "CVE-2026-11568",
+      "title": "高危漏洞: CVE-2026-11568 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-01 15:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Product Configurator for WooCommerce WordPress plugin before 1.7.3 does not perform any authorisation or post-status check before returning WooCommerce product data through a public AJAX action, allowing unauthenticated users to retrieve the data (title, price, weight, stock status, and configurator option pricing/SKUs) of private and draft, non-public products by supplying the product ID. WordPress post-visibility controls are bypassed.",
+      "refs": "https://wpscan.com/vulnerability/e208fee5-dad5-4aeb-b9b5-fbd72a5633e4/",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:16"
+    },
+    {
+      "cve_id": "CVE-2026-10750",
+      "title": "高危漏洞: CVE-2026-10750 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-01 15:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The Royal MCP  WordPress plugin before 1.4.26 does not perform capability checks on the majority of its MCP tools after token authentication, allowing authenticated users with a low-privileged role such as Subscriber to read private content, enumerate all users and their roles, and create, modify, or delete content owned by other users.",
+      "refs": "https://wpscan.com/vulnerability/8678ef91-ff05-43a1-a8e3-6d35da548826/",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:10"
+    },
+    {
+      "cve_id": "CVE-2026-20458",
+      "title": "高危漏洞: CVE-2026-20458 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-01 12:17:13",
+      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Modem, there is a possible memory corruption due to a missing bounds check. This could lead to remote escalation of privilege, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY01402160; Issue ID: MSV-7298.",
+      "refs": "https://corp.mediatek.com/product-security-bulletin/July-2026",
+      "source": "NVD",
+      "time": "2026-07-01 22:07:03"
+    },
+    {
       "cve_id": "CVE-2026-50043",
       "title": "高危漏洞: CVE-2026-50043 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/openziti/ziti/commit/3027fdffd3e57884487b7c46e5e669cfbc8becdf\nhttps://github.com/openziti/ziti/issues/4010\nhttps://github.com/openziti/ziti/pull/4013",
       "source": "NVD",
       "time": "2026-07-01 03:45:57"
-    },
-    {
-      "cve_id": "CVE-2026-49451",
-      "title": "高危漏洞: CVE-2026-49451 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-01 01:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The OpenAPI.NET SDK contains a useful object model for OpenAPI documents in .NET along with common serializers to extract raw OpenAPI JSON and YAML documents from the model. From 2.0.0-preview11 until 2.7.5 and 3.5.4, a small OpenAPI document containing a circular schema reference can cause process termination through stack overflow in Microsoft.OpenApi. The issue affects OpenAPI document parsing through public OpenAPI.NET reader APIs and has been confirmed across both JSON and YAML reader paths. This vulnerability is fixed in 2.7.5 and 3.5.4.",
-      "refs": "https://github.com/microsoft/OpenAPI.NET/security/advisories/GHSA-v5pm-xwqc-g5wc",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:53"
-    },
-    {
-      "cve_id": "CVE-2026-48315",
-      "title": "高危漏洞: CVE-2026-48315 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-01 00:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:49"
-    },
-    {
-      "cve_id": "CVE-2026-48313",
-      "title": "高危漏洞: CVE-2026-48313 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-01 00:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
-      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could lead to arbitrary file system read and limited write access. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue does not require user interaction. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:45"
-    },
-    {
-      "cve_id": "CVE-2026-48307",
-      "title": "高危漏洞: CVE-2026-48307 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-01 00:16:54",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by a reflected Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially resulting in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious link. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:41"
-    },
-    {
-      "cve_id": "CVE-2026-48286",
-      "title": "高危漏洞: CVE-2026-48286 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-01 00:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Adobe Campaign Classic (ACC) versions 7.4.3 build 9396 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/campaign/apsb26-69.html",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:37"
-    },
-    {
-      "cve_id": "CVE-2026-48285",
-      "title": "高危漏洞: CVE-2026-48285 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-01 00:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read access. Exploitation of this issue does not require user interaction. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:29"
-    },
-    {
-      "cve_id": "CVE-2026-48283",
-      "title": "高危漏洞: CVE-2026-48283 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-01 00:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-      "source": "NVD",
-      "time": "2026-07-01 03:45:25"
     }
   ]
 }
