@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14191",
+      "title": "高危漏洞: CVE-2026-14191 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-01 12:16:58",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An out-of-bounds heap write exists in the RAR5 recovery-volume (.rev) parser in WinRAR and UnRAR (RecVolumes5::ReadHeader in recvol5.cpp). The RecItems vector is sized only when the first .rev file in a set is processed; subsequent .rev files supply an independent RecNum value that is validated against that file's own TotalCount field but never against the actual size of RecItems. A crafted set of two or more .rev files can therefore write an attacker-controlled 32-bit value (the header's RevCRC field) to RecItems[RecNum] at an attacker-controlled offset up to 65534 * sizeof(RecVolItem) bytes past the allocation, corrupting adjacent heap objects. Triggering requires the victim to run a recovery/test operation on an attacker-supplied .rev set (for example 'unrar t x.part1.rev', WinRAR 'Repair archive', or auto-recovery when extracting a volume set with a missing .rar part). This is the RAR5-path sibling of CVE-2023-40477 (which was fixed in the RAR3 path only in WinRAR 6.23). Fixed in WinRAR / RAR 7.23.",
+      "refs": "https://nvd.nist.gov/vuln/detail/CVE-2023-40477\nhttps://www.rarlab.com/download.htm",
+      "source": "NVD",
+      "time": "2026-07-01 15:04:34"
+    },
+    {
+      "cve_id": "CVE-2026-54592",
+      "title": "高危漏洞: CVE-2026-54592 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-01 08:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Oj (Optimized JSON) is a JSON parser and Object marshaller packaged as a Ruby gem. In versions prior to 3.17.3, Oj::Doc#each_child, when invoked recursively over a deeply nested JSON document, overflows a fixed-size stack buffer and aborts the process, leading to DoS.  In a two-step chain in ext/oj/fast.c, doc_each_child increments doc->where past the where_path[MAX_STACK = 100] array with no bounds check and never restores it (the doc->where-- is missing), so calling each_child recursively from inside the yield block drives doc->where beyond the array. On the next entry  the function copies the path into the 800-byte stack-local buffer save_path[MAX_STACK]  using wlen = doc->where - doc->where_path, so when the previous recursive call left doc->where past where_path[100] the wlen exceeds MAX_STACK and  the memcpy overflows save_path on the C stack; because the Oj::Doc parser imposes no JSON nesting-depth limit (relying on a C-stack pressure check), deeply nested attacker input reaches this path. This issue has been fixed in version 3.17.3.",
+      "refs": "https://github.com/ohler55/oj/security/advisories/GHSA-3m6q-jj5j-38c9",
+      "source": "NVD",
+      "time": "2026-07-01 15:04:25"
+    },
+    {
       "cve_id": "CVE-2026-57995",
       "title": "高危漏洞: CVE-2026-57995 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://lists.apache.org/thread/hcjh7kdk4l85tb9ksmvcnkhso1ngj50o\nhttp://www.openwall.com/lists/oss-security/2026/06/29/8",
       "source": "NVD",
       "time": "2026-07-01 03:43:39"
-    },
-    {
-      "cve_id": "CVE-2026-49432",
-      "title": "高危漏洞: CVE-2026-49432 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-06-30 19:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Improper Input Validation vulnerability in Apache ActiveMQ, Apache ActiveMQ All, Apache ActiveMQ Stomp.\n\nA remote unauthenticated peer that can reach an exposed STOMP connector can trigger denial-of-service behavior by sending a negative content-length. For the NIO STOMP transport, an attacker can keep streaming body bytes and grow the per-connection command buffer beyond configured limits to cause OOM. For the blocking STOMP protocol, an error will instead force abnormal transport exception handling for the affected connection and closure.\nThis issue affects Apache ActiveMQ: before 5.19.8, from 6.0.0 before 6.2.7; Apache ActiveMQ All: before 5.19.8, from 6.0.0 before 6.2.7; Apache ActiveMQ Stomp: before 5.19.8, from 6.0.0 before 6.2.7.\n\n\n\n\nUsers are recommended to upgrade to version 6.2.7 or 5.19.8, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/fsjb26605syqr8xks249h8gkp86t55d2\nhttp://www.openwall.com/lists/oss-security/2026/06/29/7",
-      "source": "NVD",
-      "time": "2026-07-01 03:43:34"
-    },
-    {
-      "cve_id": "CVE-2025-7406",
-      "title": "高危漏洞: CVE-2025-7406 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-06-30 18:16:33",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Nokia MantaRay NM is vulnerable to a sudo privilege escalation vulnerability where a local attacker possessing administrative (local admin) privileges can escalate to full root privileges on the host. Successful exploitation results in root-level access to the filesystem and the ability to execute actions as root. The risk can be temporarily mitigated by restricting the set of commands permitted via sudo for the affected accounts.",
-      "refs": "https://www.nokia.com/we-are-nokia/security/product-security-advisory/cve-2025-7406/",
-      "source": "NVD",
-      "time": "2026-07-01 03:43:30"
     }
   ]
 }
