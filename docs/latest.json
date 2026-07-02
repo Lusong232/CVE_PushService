@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7311",
+      "title": "高危漏洞: CVE-2026-7311 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-03 03:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The TinyPNG – JPEG, PNG & WebP image compression plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the delete_converted_image_size function in all versions up to, and including, 3.6.13. This makes it possible for authenticated attackers, with author-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). An attacker can exploit this by injecting an arbitrary server file path into the 'convert.path' field of the 'tiny_compress_images' post meta on an attachment they own, then triggering attachment deletion to invoke the vulnerable code path.",
+      "refs": "https://plugins.trac.wordpress.org/browser/tiny-compress-images/tags/3.6.13/src/class-tiny-image-size.php#L245\nhttps://plugins.trac.wordpress.org/browser/tiny-compress-images/tags/3.6.13/src/class-tiny-image.php#L144\nhttps://plugins.trac.wordpress.org/browser/tiny-compress-images/tags/3.6.13/src/class-tiny-plugin.php#L859",
+      "source": "NVD",
+      "time": "2026-07-03 05:59:11"
+    },
+    {
+      "cve_id": "CVE-2026-58465",
+      "title": "高危漏洞: CVE-2026-58465 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-03 03:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Eclipse Wakaama before snapshot/2026-05-26 contains an unbounded memory allocation vulnerability in the CoAP Block1 handler within coap/block.c that allows unauthenticated remote attackers to exhaust server memory by sending a sequence of Block1 PUT requests with incrementing block numbers. Attackers can target the registration endpoint over UDP without authentication, causing the server to repeatedly reallocate a growing accumulation buffer by appending each block payload without enforcing any maximum total size limit, resulting in denial of service through memory exhaustion.",
+      "refs": "https://github.com/eclipse-wakaama/wakaama/commit/a83f1ca28fa090fbc03c3669fef40daf4f89cd03\nhttps://github.com/eclipse-wakaama/wakaama/pull/881\nhttps://github.com/eclipse-wakaama/wakaama/releases/tag/snapshots%2F2026-05-26",
+      "source": "NVD",
+      "time": "2026-07-03 05:59:07"
+    },
+    {
+      "cve_id": "CVE-2026-12168",
+      "title": "高危漏洞: CVE-2026-12168 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-02 23:16:57",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An improper validation vulnerability for driver `GFAC_Sys_x64.sys` in Little Orbit GFAC allows a local attacker to escalate privileges to SYSTEM and execute arbitrary code in kernel mode via crafted messages sent through a Minifilter communication port.",
+      "refs": "https://github.com/FzRsLLaSheR/CVE-2026-12166_CVE-2026-12167_CVE-2026-12168\nhttps://kb.cert.org/vuls/id/639124\nhttps://www.littleorbit.com/",
+      "source": "NVD",
+      "time": "2026-07-03 05:59:01"
+    },
+    {
+      "cve_id": "CVE-2026-12167",
+      "title": "高危漏洞: CVE-2026-12167 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-02 23:16:57",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Minifilter communication port for driver `GFAC_Sys_x64.sys` in Little Orbit GFAC allows a local attacker to access privileged driver functionality via a communication interface that lacks appropriate access restrictions.",
+      "refs": "https://github.com/FzRsLLaSheR/CVE-2026-12166_CVE-2026-12167_CVE-2026-12168\nhttps://kb.cert.org/vuls/id/639124\nhttps://www.littleorbit.com/",
+      "source": "NVD",
+      "time": "2026-07-03 05:58:55"
+    },
+    {
       "cve_id": "CVE-2026-44935",
       "title": "高危漏洞: CVE-2026-44935 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1055,50 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/lms/vulnerability/wordpress-lms-theme-9-7-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:45:21"
-    },
-    {
-      "cve_id": "CVE-2026-27402",
-      "title": "高危漏洞: CVE-2026-27402 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Kids Life | Children School WordPress <= 5.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/kidslife/vulnerability/wordpress-kids-life-children-school-wordpress-theme-5-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:45:16"
-    },
-    {
-      "cve_id": "CVE-2026-27060",
-      "title": "高危漏洞: CVE-2026-27060 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-02 20:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Contributor PHP Object Injection in ARMember Premium <= 7.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/armember/vulnerability/wordpress-armember-premium-plugin-7-0-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:45:11"
-    },
-    {
-      "cve_id": "CVE-2026-11946",
-      "title": "高危漏洞: CVE-2026-11946 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-02 20:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An unauthenticated remote attacker can exhaust\nserver memory via the GetEndpoints Discovery Service in open62541. The\nendpointUrl field of GetEndpointsRequest is not validated for length. An\nattacker can declare an arbitrarily large string (up to ~4.09 GB via the UInt32\nlength field) delivered across intermediate chunks without ever sending the\nfinal chunk. The server buffers all chunks in RAM indefinitely until the\nSecureChannel times out. The attack is\npre-session and bypasses all encryption configurations.\n\n\n\nThe issue affects open62541: from 1.4.0 through 1.4.16, from 1.5.0 through 1.5.4, master.",
-      "refs": "https://github.com/open62541/open62541\nhttps://github.com/open62541/open62541/pull/8142\nhttps://github.com/open62541/open62541/pull/8142/changes/d253818d6c5e870e1db0e360b18138c8bdc809ae",
-      "source": "NVD",
-      "time": "2026-07-03 00:45:07"
-    },
-    {
-      "cve_id": "CVE-2025-69156",
-      "title": "高危漏洞: CVE-2025-69156 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Kids Zone - Children WordPress Theme <= 5.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/kidszone/vulnerability/wordpress-kids-zone-children-wordpress-theme-theme-5-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:45:03"
     }
   ]
 }
