@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-44935",
+      "title": "高危漏洞: CVE-2026-44935 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-03 01:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Missing validation of \"valuesFrom\" references in Helm Deployer of SUSE Rancher Fleet 0.15 before 0.15.2, 0.14 before 0.14.6, 0.13 before 0.13.11 and 0.12 before 0.12.15 could be used by owners of one tenant to access fleet credentials of other tenants.",
+      "refs": "https://github.com/rancher/fleet/security/advisories/GHSA-xr65-5cpm-g36x",
+      "source": "NVD",
+      "time": "2026-07-03 03:09:15"
+    },
+    {
+      "cve_id": "CVE-2024-58352",
+      "title": "高危漏洞: CVE-2024-58352 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-03 01:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Landray OA contains an unauthenticated HQL injection vulnerability that allows unauthenticated attackers to query arbitrary Hibernate entity classes by injecting malicious HQL syntax into the uid POST parameter of the wechatLoginHelper.do endpoint. Attackers can exploit the lack of input sanitization in the string-concatenated filter expression passed to the Hibernate findList() call to extract sensitive data such as administrator password hashes and, with sufficient database privileges, perform file-write operations enabling remote code execution. Exploitation evidence was first observed by the Shadowserver Foundation on 2024-03-11 (UTC).",
+      "refs": "https://blog.csdn.net/fushuang333/article/details/136377020\nhttps://blog.csdn.net/qq_39342001/article/details/137354047\nhttps://cn-sec.com/archives/2532828.html",
+      "source": "NVD",
+      "time": "2026-07-03 03:09:11"
+    },
+    {
+      "cve_id": "CVE-2024-14037",
+      "title": "高危漏洞: CVE-2024-14037 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-03 01:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Redsea Cloud eHR contains an arbitrary file upload vulnerability that allows unauthenticated attackers to achieve remote code execution by uploading malicious files through the PtFjk.mob servlet endpoint. Attackers can submit a multipart POST request with a JSP webshell disguised using a spoofed image/jpeg Content-Type to bypass the absence of extension and MIME type validation, with the uploaded file stored at a predictable path under the uploadfile directory and executed directly by the web server. Exploitation evidence was first observed by the Shadowserver Foundation on 2024-11-03 (UTC).",
+      "refs": "https://cn-sec.com/archives/2734791.html\nhttps://cn-sec.com/archives/3003231.html\nhttps://redseacloud.com/",
+      "source": "NVD",
+      "time": "2026-07-03 03:09:07"
+    },
+    {
+      "cve_id": "CVE-2022-50973",
+      "title": "高危漏洞: CVE-2022-50973 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-03 01:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Yonyou KSOA 9.0 contains an unauthenticated arbitrary file upload vulnerability in the com.sksoft.bill.ImageUpload servlet that allows unauthenticated attackers to upload arbitrary files by submitting a POST request with attacker-controlled filepath and filename parameters without any authentication, file type, extension, or content validation. Attackers can upload a JSP webshell by specifying a malicious filename and root filepath, with the uploaded file stored under the pictures directory and directly executed by the web server, resulting in unauthenticated remote code execution. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-11-07 (UTC).",
+      "refs": "https://buaq.net/go-167023.html\nhttps://cn-sec.com/archives/1329088.html\nhttps://www.cnblogs.com/yang-miemie/p/17714927.html",
+      "source": "NVD",
+      "time": "2026-07-03 03:09:01"
+    },
+    {
+      "cve_id": "CVE-2026-58455",
+      "title": "高危漏洞: CVE-2026-58455 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-03 00:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dockwatch through 0.6.567 contains an unauthenticated OS command injection vulnerability that allows remote attackers to execute arbitrary shell commands by exploiting a missing exit() after an authentication redirect in loader.php combined with unsanitized input passed to shell_exec() in ajax/compose.php. Attackers can seed the required session flag through the incomplete auth check, then inject arbitrary commands via the composePath POST parameter in the composePull action to achieve full host compromise, facilitated by the standard deployment mounting of the Docker socket.",
+      "refs": "https://github.com/Notifiarr/dockwatch/pull/135\nhttps://www.vulncheck.com/advisories/dockwatch-unauthenticated-os-command-injection-via-ajax-compose-php",
+      "source": "NVD",
+      "time": "2026-07-03 03:08:56"
+    },
+    {
+      "cve_id": "CVE-2026-44941",
+      "title": "高危漏洞: CVE-2026-44941 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-07-03 00:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+      "description": "A relative path traversal in the \"keyhint\" option in repomd.xml parsing of libzypp before 17.38.12 can be used by attackers able to supply a malicious repository to inject or overwrite files in the target system as root.",
+      "refs": "https://bugzilla.suse.com/show_bug.cgi?id=1267426\nhttps://github.com/openSUSE/libzypp/commit/294b1bad442d089ca671c5c03adc8031e3b29e04",
+      "source": "NVD",
+      "time": "2026-07-03 03:08:52"
+    },
+    {
+      "cve_id": "CVE-2026-14422",
+      "title": "高危漏洞: CVE-2026-14422 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-02 07:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Out of bounds read and write in Tint in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html\nhttps://issues.chromium.org/issues/517225032",
+      "source": "NVD",
+      "time": "2026-07-03 03:08:45"
+    },
+    {
+      "cve_id": "CVE-2026-14415",
+      "title": "高危漏洞: CVE-2026-14415 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-02 07:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Low)",
+      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html\nhttps://issues.chromium.org/issues/515086856",
+      "source": "NVD",
+      "time": "2026-07-03 03:08:40"
+    },
+    {
+      "cve_id": "CVE-2026-51947",
+      "title": "高危漏洞: CVE-2026-51947 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-02 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An issue in Pivotal CRM 6.6.4.08 and systems using patch-ghi-15381-cwe-502-20251225.zip (fixed in Pivotal CRM 6.6.5.10 and Patch_CWE502_20260316.zip) allows a remote attacker to execute arbitrary code via the Pivotal.Engine.Client.Services.Conversion.dll component. NOTE: this issue exists because of an incomplete fix for CVE-2026-39253.",
+      "refs": "https://support.pivotal.aurea.com/article/129552-remediating-insecure-deserialization-cwe-502-in-pivotal-6-6-04-08-smart-client-pbs\nhttps://timtimxs.github.io/CVE-2026-39253-Advisory/\nhttps://timtimxs.github.io/CVE-2026-51947-Advisory/",
+      "source": "NVD",
+      "time": "2026-07-03 03:08:34"
+    },
+    {
       "cve_id": "CVE-2026-56842",
       "title": "高危漏洞: CVE-2026-56842 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1000,105 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/kidszone/vulnerability/wordpress-kids-zone-children-wordpress-theme-theme-5-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:45:03"
-    },
-    {
-      "cve_id": "CVE-2025-69155",
-      "title": "高危漏洞: CVE-2025-69155 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Fitness Zone WordPress Theme <= 5.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/fitnesszone/vulnerability/wordpress-fitness-zone-wordpress-theme-theme-5-7-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:59"
-    },
-    {
-      "cve_id": "CVE-2025-69154",
-      "title": "高危漏洞: CVE-2025-69154 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in SpaLab | Beauty Salon WordPress Theme <= 6.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/spalab/vulnerability/wordpress-spalab-beauty-salon-wordpress-theme-theme-6-7-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:54"
-    },
-    {
-      "cve_id": "CVE-2025-69153",
-      "title": "高危漏洞: CVE-2025-69153 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Trendy Travel <= 6.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/trendytravel/vulnerability/wordpress-trendy-travel-theme-6-7-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:47"
-    },
-    {
-      "cve_id": "CVE-2025-69152",
-      "title": "高危漏洞: CVE-2025-69152 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Artale | Wedding Photography WordPress <= 2.2.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/artale/vulnerability/wordpress-artale-wedding-photography-wordpress-theme-2-2-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:43"
-    },
-    {
-      "cve_id": "CVE-2025-69134",
-      "title": "高危漏洞: CVE-2025-69134 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Unauthenticated Arbitrary Content Deletion in OpenAI Chatbot for WordPress – Helper <= 1.1.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/helper/vulnerability/wordpress-openai-chatbot-for-wordpress-helper-plugin-1-1-4-arbitrary-content-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:39"
-    },
-    {
-      "cve_id": "CVE-2025-69133",
-      "title": "高危漏洞: CVE-2025-69133 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Subscriber Local File Inclusion in Tourmaster <= 5.4.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/tourmaster/vulnerability/wordpress-tourmaster-plugin-5-4-5-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:34"
-    },
-    {
-      "cve_id": "CVE-2025-69094",
-      "title": "高危漏洞: CVE-2025-69094 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-02 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Subscriber SQL Injection in Unicamp <= 2.2.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/unicamp/vulnerability/wordpress-unicamp-theme-2-2-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:30"
-    },
-    {
-      "cve_id": "CVE-2025-58902",
-      "title": "高危漏洞: CVE-2025-58902 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-02 20:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Local File Inclusion in Lighthouse <= 1.2.12 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/lighthouseschool/vulnerability/wordpress-lighthouse-theme-1-2-12-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:26"
-    },
-    {
-      "cve_id": "CVE-2026-14394",
-      "title": "高危漏洞: CVE-2026-14394 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-02 07:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html\nhttps://issues.chromium.org/issues/511263221",
-      "source": "NVD",
-      "time": "2026-07-03 00:44:18"
     }
   ]
 }
