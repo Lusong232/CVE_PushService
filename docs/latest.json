@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-53478",
+      "title": "高危漏洞: CVE-2026-53478 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-03 23:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper neutralization of special elements used in an OS command ('OS command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to command execution.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-07-04 00:19:09"
+    },
+    {
+      "cve_id": "CVE-2026-49815",
+      "title": "高危漏洞: CVE-2026-49815 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-03 23:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper neutralization of special Elements used in an OS command ('OS command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to execution of arbitrary OS commands.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-07-04 00:19:03"
+    },
+    {
+      "cve_id": "CVE-2026-49814",
+      "title": "高危漏洞: CVE-2026-49814 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-03 23:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to arbitrary command execution.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-07-04 00:18:57"
+    },
+    {
+      "cve_id": "CVE-2026-14460",
+      "title": "高危漏洞: CVE-2026-14460 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-03 23:16:32",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Missing Authorization vulnerability in TUBITAK BILGEM Software Technologies Research Institute pardus-software allows Argument Injection.\n\nThis issue affects pardus-software: from <= 1.0.4 before 1.0.5.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0497",
+      "source": "NVD",
+      "time": "2026-07-04 00:18:47"
+    },
+    {
+      "cve_id": "CVE-2026-14459",
+      "title": "高危漏洞: CVE-2026-14459 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-03 23:16:32",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper neutralization of argument delimiters in a command ('argument injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute pardus-software allows Argument Injection.\n\nThis issue affects pardus-software: from <= 1.0.4 before 1.0.5.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0497",
+      "source": "NVD",
+      "time": "2026-07-04 00:18:40"
+    },
+    {
       "cve_id": "CVE-2026-13341",
       "title": "高危漏洞: CVE-2026-13341 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1044,61 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/wpdatatables/vulnerability/wordpress-wpdatatables-plugin-6-5-1-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:48:09"
-    },
-    {
-      "cve_id": "CVE-2026-57671",
-      "title": "高危漏洞: CVE-2026-57671 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in perfmatters <= 2.6.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/perfmatters/vulnerability/wordpress-perfmatters-plugin-2-6-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:48:05"
-    },
-    {
-      "cve_id": "CVE-2026-57670",
-      "title": "高危漏洞: CVE-2026-57670 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Google Maps CP <= 1.2.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/codepeople-post-map/vulnerability/wordpress-google-maps-cp-plugin-1-2-5-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:59"
-    },
-    {
-      "cve_id": "CVE-2026-57625",
-      "title": "高危漏洞: CVE-2026-57625 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Admin and Site Enhancements (ASE) Pro <= 8.8.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/admin-site-enhancements-pro/vulnerability/wordpress-admin-and-site-enhancements-ase-pro-plugin-8-8-5-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:54"
-    },
-    {
-      "cve_id": "CVE-2026-57624",
-      "title": "高危漏洞: CVE-2026-57624 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Unauthenticated Remote Code Execution (RCE) in Blocksy Companion Pro <= 2.1.46 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/blocksy-companion-pro/vulnerability/wordpress-blocksy-companion-pro-plugin-2-1-46-remote-code-execution-rce-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:49"
-    },
-    {
-      "cve_id": "CVE-2026-57623",
-      "title": "高危漏洞: CVE-2026-57623 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Unauthenticated Arbitrary Code Execution in W3 Total Cache <= 2.9.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/w3-total-cache/vulnerability/wordpress-w3-total-cache-plugin-2-9-4-arbitrary-code-execution-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:45"
     }
   ]
 }
