@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14327",
+      "title": "高危漏洞: CVE-2026-14327 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-03 10:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The AR for WordPress plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 8.40 via the 'file' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. Exploitation requires an attacker to first obtain a valid nonce and secure nonce via the publicly accessible ar_get_fresh_nonce and ar_process_user_image nopriv AJAX handlers, and to reproduce the encryption key locally — both steps are fully achievable by an unauthenticated attacker on any default free or unlicensed installation where ar_licence_key is unset.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/ar-wordpress.php#L118\nhttps://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/ar-wordpress.php#L130\nhttps://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/includes/ar-secure-download.php#L64",
+      "source": "NVD",
+      "time": "2026-07-03 14:21:06"
+    },
+    {
+      "cve_id": "CVE-2026-13768",
+      "title": "高危漏洞: CVE-2026-13768 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-03 08:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "description": "Gardyn devices expose a privileged iothubowner key. Access to this key will allow a malicious user to invoke an IoTHub Registry Manager function which returns connection information for all Gardyn Home Kit and Studio devices. Access to this key also allows a malicious user to execute arbitrary commands on a specific connected device and may allow the malicious user to pivot to other devices on the user's network.",
+      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-03.json\nhttps://mygardyn.com/security/\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-03",
+      "source": "NVD",
+      "time": "2026-07-03 14:21:00"
+    },
+    {
       "cve_id": "CVE-2026-57100",
       "title": "高危漏洞: CVE-2026-57100 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1077,28 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/smart-wishlist-for-more-convert/vulnerability/wordpress-mc-woocommerce-wishlist-plugin-1-9-19-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:46:55"
-    },
-    {
-      "cve_id": "CVE-2026-57351",
-      "title": "高危漏洞: CVE-2026-57351 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in HandL UTM Grabber <= 2.9.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/handl-utm-grabber/vulnerability/wordpress-handl-utm-grabber-plugin-2-9-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:46:51"
-    },
-    {
-      "cve_id": "CVE-2026-57350",
-      "title": "高危漏洞: CVE-2026-57350 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in WP Debugging <= 2.12.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-debugging/vulnerability/wordpress-wp-debugging-plugin-2-12-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:46:45"
     }
   ]
 }
