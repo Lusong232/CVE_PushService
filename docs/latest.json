@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58379",
+      "title": "高危漏洞: CVE-2026-58379 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-04 03:16:37",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in GIMP's Paint Shop Pro (PSP) file format parser. This heap buffer overflow vulnerability allows a remote attacker to cause arbitrary code execution or a denial of service (DoS) by tricking a user into opening a specially crafted PSP image file. The vulnerability occurs because the software incorrectly calculates buffer sizes when processing low bit-depth images, leading to an overwrite of adjacent memory.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-58379\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2495997\nhttps://gitlab.gnome.org/GNOME/gimp/-/commit/b630f167",
+      "source": "NVD",
+      "time": "2026-07-04 05:56:10"
+    },
+    {
       "cve_id": "CVE-2026-53478",
       "title": "高危漏洞: CVE-2026-53478 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1088,17 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/optimole-wp/vulnerability/wordpress-optimole-plugin-4-2-7-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:48:13"
-    },
-    {
-      "cve_id": "CVE-2026-57672",
-      "title": "高危漏洞: CVE-2026-57672 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in wpDataTables <= 6.5.1.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpdatatables/vulnerability/wordpress-wpdatatables-plugin-6-5-1-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:48:09"
     }
   ]
 }
