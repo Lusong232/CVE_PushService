@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9148",
+      "title": "高危漏洞: CVE-2026-9148 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-03 16:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Comments – wpDiscuz plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the guest commenter 'Website' field in versions up to, and including, 7.6.56 This is due to insufficient output escaping in the getCommentAuthor() function, which interpolates the stored comment_author_url value directly into single-quoted HTML attributes without applying esc_url() or esc_attr(). This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wpdiscuz/tags/7.6.48/forms/wpdFormAttr/Field/DefaultField/Website.php#L119\nhttps://plugins.trac.wordpress.org/browser/wpdiscuz/tags/7.6.48/forms/wpdFormAttr/Tools/Sanitizer.php#L14\nhttps://plugins.trac.wordpress.org/browser/wpdiscuz/tags/7.6.48/utils/class.WpdiscuzHelper.php#L1615",
+      "source": "NVD",
+      "time": "2026-07-03 19:26:15"
+    },
+    {
+      "cve_id": "CVE-2026-14544",
+      "title": "高危漏洞: CVE-2026-14544 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-03 16:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in HPLIP (HP Linux Imaging and Printing Software). This vulnerability, an incomplete fix for CVE-2026-8631, may allow a remote attacker to escalate privileges or achieve arbitrary code execution. This can occur through an integer overflow in the hpcups processing path when handling specially crafted print data.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-14544\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2496772",
+      "source": "NVD",
+      "time": "2026-07-03 19:26:11"
+    },
+    {
+      "cve_id": "CVE-2026-4967",
+      "title": "高危漏洞: CVE-2026-4967 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-03 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In IMS, there is a possible out of bounds read due to a missing bounds check. This could lead to remote denial of service with no additional execution privileges needed.",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2072920457676509185",
+      "source": "NVD",
+      "time": "2026-07-03 19:26:07"
+    },
+    {
+      "cve_id": "CVE-2026-9725",
+      "title": "高危漏洞: CVE-2026-9725 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-03 14:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Printcart Web to Print Product Designer for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 2.5.2 This is due to insufficient path validation in the store_design_data() function, which constructs a filesystem path from the user-supplied 'nbd_item_key' POST parameter sanitized only with sanitize_text_field() — which does not strip path traversal sequences — and then passes that path directly to Nbdesigner_IO::delete_folder() and PHP's rename(). The nonce protecting the nbd_save_customer_design AJAX action is freely obtainable by unauthenticated users via the nbd_check_use_logged_in endpoint. This makes it possible for unauthenticated attackers to delete arbitrary files on the affected site's server which may make remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L214\nhttps://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L3246\nhttps://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L3698",
+      "source": "NVD",
+      "time": "2026-07-03 19:26:03"
+    },
+    {
+      "cve_id": "CVE-2026-14352",
+      "title": "高危漏洞: CVE-2026-14352 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-03 14:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The AR for WooCommerce plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 8.40 via the 'file' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. The three intended access controls all fail: valid nonces are freely minted by unauthenticated callers via the nopriv ar_get_fresh_nonce and ar_process_user_image AJAX handlers; the AES-256-CBC encryption key is derived from get_option('ar_licence_key'), which returns false on default free installations and yields a predictable key attackers can use to encrypt their own path payloads; and the Referer check is trivially bypassed because the Referer header is attacker-controlled.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ar-for-woocommerce/tags/8.40/ar-woocommerce.php#L143\nhttps://plugins.trac.wordpress.org/browser/ar-for-woocommerce/tags/8.40/ar-woocommerce.php#L249\nhttps://plugins.trac.wordpress.org/browser/ar-for-woocommerce/tags/8.40/includes/ar-secure-download.php#L64",
+      "source": "NVD",
+      "time": "2026-07-03 19:25:57"
+    },
+    {
+      "cve_id": "CVE-2026-13040",
+      "title": "高危漏洞: CVE-2026-13040 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-03 14:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The NEX-Forms – Ultimate Forms Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'real_val__' parameter in all versions up to, and including, 9.2.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The submission endpoint is registered via wp_ajax_nopriv_submit_nex_form with no nonce verification, making it fully accessible to unauthenticated attackers without any CSRF token.",
+      "refs": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.11/includes/classes/class.functions.php#L2461\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.11/main.php#L2660\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.11/main.php#L467",
+      "source": "NVD",
+      "time": "2026-07-03 19:25:52"
+    },
+    {
       "cve_id": "CVE-2026-14327",
       "title": "高危漏洞: CVE-2026-14327 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1033,72 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/chatbot/vulnerability/wordpress-chatbot-plugin-8-3-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:47:25"
-    },
-    {
-      "cve_id": "CVE-2026-57361",
-      "title": "高危漏洞: CVE-2026-57361 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Survey Maker <= 5.2.2.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/survey-maker/vulnerability/wordpress-survey-maker-plugin-5-2-2-5-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:20"
-    },
-    {
-      "cve_id": "CVE-2026-57360",
-      "title": "高危漏洞: CVE-2026-57360 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in eCommerce Product Catalog <= 3.5.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/ecommerce-product-catalog/vulnerability/wordpress-ecommerce-product-catalog-plugin-3-5-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:16"
-    },
-    {
-      "cve_id": "CVE-2026-57359",
-      "title": "高危漏洞: CVE-2026-57359 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in ReviewX <= 2.3.10 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/reviewx/vulnerability/wordpress-reviewx-plugin-2-3-10-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:12"
-    },
-    {
-      "cve_id": "CVE-2026-57358",
-      "title": "高危漏洞: CVE-2026-57358 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Customize My Account for WooCommerce <= 4.3.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/customize-my-account-for-woocommerce/vulnerability/wordpress-customize-my-account-for-woocommerce-plugin-4-3-9-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:05"
-    },
-    {
-      "cve_id": "CVE-2026-57357",
-      "title": "高危漏洞: CVE-2026-57357 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Search Atlas SEO <= 2.6.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/metasync/vulnerability/wordpress-search-atlas-seo-plugin-2-6-6-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:46:59"
-    },
-    {
-      "cve_id": "CVE-2026-57356",
-      "title": "高危漏洞: CVE-2026-57356 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in MC Woocommerce Wishlist <= 1.9.19 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/smart-wishlist-for-more-convert/vulnerability/wordpress-mc-woocommerce-wishlist-plugin-1-9-19-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:46:55"
     }
   ]
 }
