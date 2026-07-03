@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-13341",
+      "title": "高危漏洞: CVE-2026-13341 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-03 19:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "A vulnerability exists in the Kong Konnect Model Context Protocol (MCP) server prior to version 1.0.0, which could allow a remote attacker to perform an indirect prompt injection attack and execute unintended API requests.",
+      "refs": "https://github.com/Kong/mcp-konnect/security/advisories/GHSA-7767-3m3w-2p44",
+      "source": "NVD",
+      "time": "2026-07-03 21:42:22"
+    },
+    {
+      "cve_id": "CVE-2026-10055",
+      "title": "高危漏洞: CVE-2026-10055 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-07-03 19:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "In Eclipse Theia since version 1.26.0, the backend /services/request-service RPC accepts an attacker-controlled URL from any client connected to the standard /services messaging endpoint, performs the HTTP request server-side, and returns the full response body to the caller.\n\n\n\n\nBecause the destination URL is neither validated nor allowlisted, a remote attacker with access to the Theia service connection can issue server-side HTTP requests to localhost or other backend-reachable hosts and read their responses, exposing internal administrative endpoints, cloud instance metadata services, and other resources that are intentionally outside the browser network boundary.\n\n\n\n\nThe vulnerability affects deployments where the Theia service connection is reachable by untrusted users (for example, multi-tenant or publicly-reachable Theia deployments).",
+      "refs": "https://github.com/eclipse-theia/theia/security/advisories/GHSA-2m57-xxmh-v696\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/446",
+      "source": "NVD",
+      "time": "2026-07-03 21:42:18"
+    },
+    {
+      "cve_id": "CVE-2026-10054",
+      "title": "高危漏洞: CVE-2026-10054 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-03 19:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "In affected versions of Eclipse Theia (1.8.1 and later), the browser backend exposes privileged terminal RPC over WebSocket (/services/shell-terminal, /services/terminals/:id) without service-level authentication.\n\n\n\n\nWebSocket origin validation in @theia/core is fail-open: connections are accepted when the Origin header is missing or when no THEIA_HOSTS allowlist is configured (the default). The Socket.IO integration additionally replaces the real Origin header with a client-supplied fix-origin header that an attacker can control or omit.\n\n\n\n\nAs a result, a foreign-origin web page visited by a user with a running Theia instance can open the /services WebSocket namespace, invoke terminal creation, attach to the resulting terminal data channel, execute arbitrary OS commands, and read their output. This affects both local developer setups (drive-by attack) and hosted or tunneled deployments without strong external authentication.\n\n\n\n\nA fix is in development that enforces same-origin validation by default, removes trust in the fix-origin header, gates HTTP and WebSocket access on a SameSite=Strict; HttpOnly connection-token cookie, and sanitizes shell terminal creation options.",
+      "refs": "https://github.com/eclipse-theia/theia/security/advisories/GHSA-78g8-vm3p-97c6\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/376",
+      "source": "NVD",
+      "time": "2026-07-03 21:42:14"
+    },
+    {
+      "cve_id": "CVE-2026-4321",
+      "title": "高危漏洞: CVE-2026-4321 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-03 18:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Raera - Ankara Web Design and Digital Advertising Agency Destekz allows SQL Injection.\n\nThis issue affects Destekz: through 02062026. NOTE: The vendor was contacted and it was learned that the product is not supported.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0488",
+      "source": "NVD",
+      "time": "2026-07-03 21:42:06"
+    },
+    {
       "cve_id": "CVE-2026-9148",
       "title": "高危漏洞: CVE-2026-9148 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1055,50 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/w3-total-cache/vulnerability/wordpress-w3-total-cache-plugin-2-9-4-arbitrary-code-execution-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-03 00:47:45"
-    },
-    {
-      "cve_id": "CVE-2026-57621",
-      "title": "高危漏洞: CVE-2026-57621 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-02 20:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Booktics <= 1.0.21 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/booktics/vulnerability/wordpress-booktics-plugin-1-0-21-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:38"
-    },
-    {
-      "cve_id": "CVE-2026-57426",
-      "title": "高危漏洞: CVE-2026-57426 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Modula - PRO <= 2.10.8 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/modula/vulnerability/wordpress-modula-pro-plugin-2-10-8-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:33"
-    },
-    {
-      "cve_id": "CVE-2026-57366",
-      "title": "高危漏洞: CVE-2026-57366 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in WPAdverts <= 2.3.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpadverts/vulnerability/wordpress-wpadverts-plugin-2-3-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:29"
-    },
-    {
-      "cve_id": "CVE-2026-57362",
-      "title": "高危漏洞: CVE-2026-57362 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-02 20:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in ChatBot <= 8.3.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/chatbot/vulnerability/wordpress-chatbot-plugin-8-3-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-03 00:47:25"
     }
   ]
 }
