@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14635",
+      "title": "高危漏洞: CVE-2026-14635 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in kirilkirkov Ecommerce-CodeIgniter-Bootstrap up to 222ff31c06687b1c6d0e1ab63953f82c3674c52b. This issue affects some unknown processing of the file application/modules/vendor/controllers/AddProduct.php of the component Vendor Multi-Image Endpoint. Performing a manipulation of the argument folder results in path traversal. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The patch is named 2a9497ff11f36e573ad99e1c357ff0e6ded49745. Applying a patch is the recommended action to fix this issue.",
+      "refs": "https://github.com/kirilkirkov/Ecommerce-CodeIgniter-Bootstrap/\nhttps://github.com/kirilkirkov/Ecommerce-CodeIgniter-Bootstrap/commit/2a9497ff11f36e573ad99e1c357ff0e6ded49745\nhttps://github.com/kirilkirkov/Ecommerce-CodeIgniter-Bootstrap/security/advisories/GHSA-6whv-r5hm-vcjr",
+      "source": "NVD",
+      "time": "2026-07-05 02:56:21"
+    },
+    {
+      "cve_id": "CVE-2026-14535",
+      "title": "高危漏洞: CVE-2026-14535 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-04 22:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "In Trail of Bits fickling versions up to and including 0.1.11, the UnsafeImportsML analysis pass unconditionally calls AnalysisContext.shorten_code(node) on every import node it inspects, regardless of whether the import is flagged as unsafe. This call registers the shortened code representation in the shared AnalysisContext.reported_shortened_code set. When the MLAllowlist analysis pass subsequently runs, it calls the same shorten_code() method, receives already_reported=True for every import, and executes a continue statement that skips its allowlist check entirely. This renders MLAllowlist dead code for all imports — it never evaluates whether an import is in the ML allowlist or not. The MLAllowlist pass was designed to catch imports of modules outside the known-safe ML ecosystem (torch, numpy, transformers, etc.) that slip past the UnsafeImports denylist. With MLAllowlist inoperative, any standard library module not in the UNSAFE_IMPORTS denylist can be invoked via pickle deserialization while fickling's check_safety() returns LIKELY_SAFE. The fickling.load() API chains check_safety() into pickle.loads() as an explicit security gate, meaning a LIKELY_SAFE verdict causes the payload to be deserialized and executed. The root cause is shared mutable state between independently-correct analysis passes — UnsafeImportsML works as designed in isolation, MLAllowlist works as designed in isolation, but the shared reported_shortened_code set causes UnsafeImportsML to poison MLAllowlist's deduplication logic.",
+      "refs": "https://github.com/trailofbits/fickling/commit/41ce7cb01edd97072994039574a2301ebb3f463d\nhttps://github.com/trailofbits/fickling/pull/278\nhttps://github.com/trailofbits/fickling/releases/tag/v0.1.12",
+      "source": "NVD",
+      "time": "2026-07-05 02:56:15"
+    },
+    {
+      "cve_id": "CVE-2026-14534",
+      "title": "高危漏洞: CVE-2026-14534 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-04 22:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Trail of Bits fickling versions up to and including 0.1.10 do not include the Python standard library modules _posixsubprocess, site, and atexit in the UNSAFE_IMPORTS denylist (fickle.py). Because these modules are absent from the denylist, fickling's check_safety() function returns LIKELY_SAFE with zero findings for pickle payloads that invoke dangerous functions including _posixsubprocess.fork_exec (C-level process spawner capable of executing arbitrary binaries), site.execsitecustomize (executes arbitrary site customization code), and atexit._run_exitfuncs (triggers all registered exit handler callbacks). The fickling.load() API chains check_safety() into pickle.loads() as an explicit security gate; a LIKELY_SAFE verdict causes the payload to be deserialized and executed. This shares the same root cause as CVE-2026-22607 (cProfile), CVE-2025-67748 (pty), and CVE-2025-67747 (marshal/types). OvertlyBadEvals does not flag these modules because they are standard library imports. UnsafeImports does not flag them because they are not in the denylist. The UnusedVariables heuristic is defeated by the SETITEMS opcode pattern.",
+      "refs": "https://github.com/trailofbits/fickling/commit/e8408615b63adf034f891f653692ab9b51f0f5af\nhttps://github.com/trailofbits/fickling/pull/272\nhttps://github.com/trailofbits/fickling/releases/tag/v0.1.11",
+      "source": "NVD",
+      "time": "2026-07-05 02:56:07"
+    },
+    {
       "cve_id": "CVE-2026-14622",
       "title": "高危漏洞: CVE-2026-14622 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/lobehub/lobehub/issues/16536\nhttps://github.com/lobehub/lobehub/pull/16601\nhttps://www.vulncheck.com/advisories/lobechat-canary-18-ssrf-via-importfromurl-and-fetchimagefromurl",
       "source": "NVD",
       "time": "2026-07-03 09:57:08"
-    },
-    {
-      "cve_id": "CVE-2026-59094",
-      "title": "高危漏洞: CVE-2026-59094 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-03 04:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Pathway through 0.31.1, fixed in commit d09722e, document store applies a caller-supplied glob pattern to indexed document paths using a hand-written recursive matcher that branches two ways on each ** token without memoization, giving exponential worst-case complexity. The filepath_globpattern value is taken from the body of the unauthenticated HTTP endpoints /v1/retrieve, /v1/inputs and /v2/answer and compiled into a filter evaluated once per indexed document, with no length or **-count limit. A remote unauthenticated attacker can submit a short pattern containing many ** tokens to consume CPU for tens of seconds per request, and a small number of requests denies service.",
-      "refs": "https://github.com/pathwaycom/pathway/commit/d09722eef03fd94bba701836eb4c7fbfa3d3b88e\nhttps://github.com/pathwaycom/pathway/issues/241\nhttps://github.com/pathwaycom/pathway/pull/250",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:03"
-    },
-    {
-      "cve_id": "CVE-2026-59093",
-      "title": "高危漏洞: CVE-2026-59093 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-03 04:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Weaviate before 1.38.0 does not verify that a principal performing an RBAC role assignment holds the permissions granted by the assigned role. The assignRoleToUser and assignRoleToGroup handlers (POST /authz/users/{id}/assign and /authz/groups/{id}/assign) authorize only that the caller may assign roles to the target user or group, not the permissions contained in the assigned roles, unlike role creation which enforces that a user can only create roles with permissions less than or equal to its own. A user holding only the delegated assign_and_revoke_users or assign_and_revoke_groups permission can assign the built-in admin role, or any high-privilege custom role, to itself or others, escalating to full administrative control of the database.",
-      "refs": "https://github.com/weaviate/weaviate/commit/2c75f6fb217631f7751c4b2a7d37a488cef13edb\nhttps://github.com/weaviate/weaviate/pull/11493\nhttps://github.com/weaviate/weaviate/releases/tag/v1.38.0",
-      "source": "NVD",
-      "time": "2026-07-03 09:56:59"
-    },
-    {
-      "cve_id": "CVE-2026-59092",
-      "title": "高危漏洞: CVE-2026-59092 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-03 04:17:07",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
-      "description": "JuiceFS through 1.3.1, fixed in commit a46979c, contains an authentication bypass vulnerability that allows unauthenticated remote attackers to access sensitive debug and metrics endpoints by exploiting improper handler registration on the shared http.DefaultServeMux. Attackers can request the /debug/pprof/cmdline endpoint to obtain the process command line containing metadata engine connection strings with database credentials, granting full read/write access to filesystem metadata, while other pprof handlers leak internal state and profiling handlers enable denial of service.",
-      "refs": "https://github.com/juicedata/juicefs/commit/a46979cdd4082217081ee99b931ddc53d038e47a\nhttps://github.com/juicedata/juicefs/issues/7213\nhttps://github.com/juicedata/juicefs/pull/7214",
-      "source": "NVD",
-      "time": "2026-07-03 09:56:55"
     }
   ]
 }
