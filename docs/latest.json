@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14622",
+      "title": "高危漏洞: CVE-2026-14622 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-04 17:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in jairiidriss restaurant-website-php-mysql up to 521428b5b612449df0cf4a5d15ee40cba67f3d35. This vulnerability affects unknown code of the file /admin/ajax_files of the component AJAX Endpoint. Performing a manipulation results in missing authentication. The attack is possible to be carried out remotely. The exploit has been made public and could be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/jairiidriss/restaurant-website-php-mysql/\nhttps://github.com/jairiidriss/restaurant-website-php-mysql/issues/6\nhttps://vuldb.com/cve/CVE-2026-14622",
+      "source": "NVD",
+      "time": "2026-07-04 18:48:41"
+    },
+    {
       "cve_id": "CVE-2026-12252",
       "title": "高危漏洞: CVE-2026-12252 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/juicedata/juicefs/commit/a46979cdd4082217081ee99b931ddc53d038e47a\nhttps://github.com/juicedata/juicefs/issues/7213\nhttps://github.com/juicedata/juicefs/pull/7214",
       "source": "NVD",
       "time": "2026-07-03 09:56:55"
-    },
-    {
-      "cve_id": "CVE-2026-58467",
-      "title": "高危漏洞: CVE-2026-58467 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-03 04:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Cockpit CMS before release 364 contains a path traversal and local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files or execute PHP files by including unvalidated PATH_INFO derived from REQUEST_URI in filesystem path construction without containment checks. Attackers can inject dot-dot sequences into the URL to traverse outside the designated spaces directory, and when the resolved path ends with a .php extension, the application passes it to include(), enabling local file inclusion on deployments using the PHP built-in server or certain non-default Nginx configurations.",
-      "refs": "https://github.com/cockpit-project/cockpit/releases/tag/364\nhttps://github.com/geo-chen/oss/blob/main/cockpit.md\nhttps://www.vulncheck.com/advisories/cockpit-cms-364-path-traversal-local-file-inclusion-via-index-php",
-      "source": "NVD",
-      "time": "2026-07-03 09:56:48"
     }
   ]
 }
