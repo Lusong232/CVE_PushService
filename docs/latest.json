@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14733",
+      "title": "高危漏洞: CVE-2026-14733 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. This issue affects some unknown processing of the file /edit_coursea.php. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/cyberdrinclk/scve/issues/1\nhttps://vuldb.com/cve/CVE-2026-14733\nhttps://vuldb.com/submit/847983",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:51"
+    },
+    {
+      "cve_id": "CVE-2026-14732",
+      "title": "高危漏洞: CVE-2026-14732 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. This vulnerability affects unknown code of the file /edit_exam.php. The manipulation of the argument ID leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/cyberdrinclj/pcve/issues/1\nhttps://vuldb.com/cve/CVE-2026-14732\nhttps://vuldb.com/submit/847956",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:44"
+    },
+    {
+      "cve_id": "CVE-2026-14722",
+      "title": "高危漏洞: CVE-2026-14722 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 16:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in tiddly-gittly TidGi-Desktop up to 0.13.0. This impacts an unknown function of the file src/services/wiki/wikiWorker/loadWikiTiddlersWithSubWikis.ts of the component Git Repository Import. The manipulation results in code injection. The attack may be performed from remote. The exploit has been made public and could be used.",
+      "refs": "https://github.com/tiddly-gittly/TidGi-Desktop/\nhttps://github.com/tiddly-gittly/TidGi-Desktop/security/advisories/GHSA-9hc2-hjx8-q6pv\nhttps://vuldb.com/cve/CVE-2026-14722",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:39"
+    },
+    {
+      "cve_id": "CVE-2026-14721",
+      "title": "高危漏洞: CVE-2026-14721 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-05 16:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in UTT HiPER 1250GW up to 3.2.7-210907-180535. This affects an unknown function of the file /goform/ConfigWirelessBase_5g of the component Web Endpoint. The manipulation of the argument ssid leads to stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/J-CLOWN-TAROT/UTT\nhttps://vuldb.com/cve/CVE-2026-14721\nhttps://vuldb.com/submit/847632",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:30"
+    },
+    {
+      "cve_id": "CVE-2026-14719",
+      "title": "高危漏洞: CVE-2026-14719 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 16:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in SourceCodester Onlne Examination & Learning Management System 1.0. The impacted element is an unknown function of the file register.php of the component Registration Endpoint. Executing a manipulation of the argument role can lead to improper privilege management. The attack can be executed remotely. The exploit has been published and may be used. The name of the affected product appears to have a typo in it.",
+      "refs": "https://pastebin.com/Z4i5MGxk\nhttps://vuldb.com/cve/CVE-2026-14719\nhttps://vuldb.com/submit/847515",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:25"
+    },
+    {
+      "cve_id": "CVE-2026-14713",
+      "title": "高危漏洞: CVE-2026-14713 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 14:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in SourceCodester Pizzafy E-Commerce System 1.0. This vulnerability affects unknown code of the file /admin/ajax.php?action=confirm_order. The manipulation of the argument ID results in sql injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/J4ng3ay/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-14713\nhttps://vuldb.com/submit/846718",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:21"
+    },
+    {
+      "cve_id": "CVE-2026-14705",
+      "title": "高危漏洞: CVE-2026-14705 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 14:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in code-projects Online Examination 1.0. Affected by this issue is some unknown functionality of the file head.php. Executing a manipulation of the argument uname/password can lead to sql injection. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://code-projects.org/\nhttps://github.com/zzzxc643/CVE1/blob/main/project1/vul1.md\nhttps://vuldb.com/cve/CVE-2026-14705",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:15"
+    },
+    {
+      "cve_id": "CVE-2026-14700",
+      "title": "高危漏洞: CVE-2026-14700 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 13:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Internship Management System 1.0. The impacted element is an unknown function of the file employer/login.php of the component Employer Login Endpoint. The manipulation of the argument email/password leads to sql injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/zzzxc643/CVE1/blob/main/assessment/vul7.md\nhttps://vuldb.com/cve/CVE-2026-14700",
+      "source": "NVD",
+      "time": "2026-07-05 18:58:08"
+    },
+    {
       "cve_id": "CVE-2026-14695",
       "title": "高危漏洞: CVE-2026-14695 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1011,94 +1099,6 @@
       "refs": "https://github.com/eclipse-theia/theia/security/advisories/GHSA-78g8-vm3p-97c6\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/376",
       "source": "NVD",
       "time": "2026-07-03 21:42:14"
-    },
-    {
-      "cve_id": "CVE-2026-4321",
-      "title": "高危漏洞: CVE-2026-4321 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-03 18:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Raera - Ankara Web Design and Digital Advertising Agency Destekz allows SQL Injection.\n\nThis issue affects Destekz: through 02062026. NOTE: The vendor was contacted and it was learned that the product is not supported.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0488",
-      "source": "NVD",
-      "time": "2026-07-03 21:42:06"
-    },
-    {
-      "cve_id": "CVE-2026-9148",
-      "title": "高危漏洞: CVE-2026-9148 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-03 16:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Comments – wpDiscuz plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the guest commenter 'Website' field in versions up to, and including, 7.6.56 This is due to insufficient output escaping in the getCommentAuthor() function, which interpolates the stored comment_author_url value directly into single-quoted HTML attributes without applying esc_url() or esc_attr(). This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wpdiscuz/tags/7.6.48/forms/wpdFormAttr/Field/DefaultField/Website.php#L119\nhttps://plugins.trac.wordpress.org/browser/wpdiscuz/tags/7.6.48/forms/wpdFormAttr/Tools/Sanitizer.php#L14\nhttps://plugins.trac.wordpress.org/browser/wpdiscuz/tags/7.6.48/utils/class.WpdiscuzHelper.php#L1615",
-      "source": "NVD",
-      "time": "2026-07-03 19:26:15"
-    },
-    {
-      "cve_id": "CVE-2026-14544",
-      "title": "高危漏洞: CVE-2026-14544 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-03 16:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in HPLIP (HP Linux Imaging and Printing Software). This vulnerability, an incomplete fix for CVE-2026-8631, may allow a remote attacker to escalate privileges or achieve arbitrary code execution. This can occur through an integer overflow in the hpcups processing path when handling specially crafted print data.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-14544\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2496772",
-      "source": "NVD",
-      "time": "2026-07-03 19:26:11"
-    },
-    {
-      "cve_id": "CVE-2026-4967",
-      "title": "高危漏洞: CVE-2026-4967 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-03 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In IMS, there is a possible out of bounds read due to a missing bounds check. This could lead to remote denial of service with no additional execution privileges needed.",
-      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2072920457676509185",
-      "source": "NVD",
-      "time": "2026-07-03 19:26:07"
-    },
-    {
-      "cve_id": "CVE-2026-9725",
-      "title": "高危漏洞: CVE-2026-9725 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-03 14:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The Printcart Web to Print Product Designer for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 2.5.2 This is due to insufficient path validation in the store_design_data() function, which constructs a filesystem path from the user-supplied 'nbd_item_key' POST parameter sanitized only with sanitize_text_field() — which does not strip path traversal sequences — and then passes that path directly to Nbdesigner_IO::delete_folder() and PHP's rename(). The nonce protecting the nbd_save_customer_design AJAX action is freely obtainable by unauthenticated users via the nbd_check_use_logged_in endpoint. This makes it possible for unauthenticated attackers to delete arbitrary files on the affected site's server which may make remote code execution possible.",
-      "refs": "https://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L214\nhttps://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L3246\nhttps://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L3698",
-      "source": "NVD",
-      "time": "2026-07-03 19:26:03"
-    },
-    {
-      "cve_id": "CVE-2026-14352",
-      "title": "高危漏洞: CVE-2026-14352 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-03 14:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The AR for WooCommerce plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 8.40 via the 'file' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. The three intended access controls all fail: valid nonces are freely minted by unauthenticated callers via the nopriv ar_get_fresh_nonce and ar_process_user_image AJAX handlers; the AES-256-CBC encryption key is derived from get_option('ar_licence_key'), which returns false on default free installations and yields a predictable key attackers can use to encrypt their own path payloads; and the Referer check is trivially bypassed because the Referer header is attacker-controlled.",
-      "refs": "https://plugins.trac.wordpress.org/browser/ar-for-woocommerce/tags/8.40/ar-woocommerce.php#L143\nhttps://plugins.trac.wordpress.org/browser/ar-for-woocommerce/tags/8.40/ar-woocommerce.php#L249\nhttps://plugins.trac.wordpress.org/browser/ar-for-woocommerce/tags/8.40/includes/ar-secure-download.php#L64",
-      "source": "NVD",
-      "time": "2026-07-03 19:25:57"
-    },
-    {
-      "cve_id": "CVE-2026-13040",
-      "title": "高危漏洞: CVE-2026-13040 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-03 14:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The NEX-Forms – Ultimate Forms Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'real_val__' parameter in all versions up to, and including, 9.2.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The submission endpoint is registered via wp_ajax_nopriv_submit_nex_form with no nonce verification, making it fully accessible to unauthenticated attackers without any CSRF token.",
-      "refs": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.11/includes/classes/class.functions.php#L2461\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.11/main.php#L2660\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.11/main.php#L467",
-      "source": "NVD",
-      "time": "2026-07-03 19:25:52"
-    },
-    {
-      "cve_id": "CVE-2026-14327",
-      "title": "高危漏洞: CVE-2026-14327 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-03 10:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The AR for WordPress plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 8.40 via the 'file' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. Exploitation requires an attacker to first obtain a valid nonce and secure nonce via the publicly accessible ar_get_fresh_nonce and ar_process_user_image nopriv AJAX handlers, and to reproduce the encryption key locally — both steps are fully achievable by an unauthenticated attacker on any default free or unlicensed installation where ar_licence_key is unset.",
-      "refs": "https://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/ar-wordpress.php#L118\nhttps://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/ar-wordpress.php#L130\nhttps://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/includes/ar-secure-download.php#L64",
-      "source": "NVD",
-      "time": "2026-07-03 14:21:06"
     }
   ]
 }
