@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14695",
+      "title": "高危漏洞: CVE-2026-14695 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 11:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Multi-Vendor Online Grocery Management System 1.0. This affects the function save_client of the file classes/Users.php of the component Registration Handler. The manipulation of the argument Name results in sql injection. It is possible to launch the attack remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/lee945/cve/issues/6\nhttps://vuldb.com/cve/CVE-2026-14695\nhttps://vuldb.com/submit/846835",
+      "source": "NVD",
+      "time": "2026-07-05 14:29:52"
+    },
+    {
+      "cve_id": "CVE-2026-14690",
+      "title": "高危漏洞: CVE-2026-14690 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 10:17:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in SourceCodester Multi-Vendor Online Grocery Management System 1.0. This affects the function save_users of the file classes/Users.php. This manipulation causes improper authorization. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/lee945/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-14690\nhttps://vuldb.com/submit/846830",
+      "source": "NVD",
+      "time": "2026-07-05 14:29:43"
+    },
+    {
+      "cve_id": "CVE-2026-14688",
+      "title": "高危漏洞: CVE-2026-14688 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 09:21:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in itsourcecode Online Hotel Management System 1.0. The affected element is an unknown function of the file /admin/login.php. The manipulation of the argument email leads to sql injection. The attack may be initiated remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/geminipolo1991-vampire/CVE---Web/issues/1\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-14688",
+      "source": "NVD",
+      "time": "2026-07-05 14:29:36"
+    },
+    {
       "cve_id": "CVE-2026-14660",
       "title": "高危漏洞: CVE-2026-14660 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/ar-wordpress.php#L118\nhttps://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/ar-wordpress.php#L130\nhttps://plugins.trac.wordpress.org/browser/ar-for-wordpress/tags/8.40/includes/ar-secure-download.php#L64",
       "source": "NVD",
       "time": "2026-07-03 14:21:06"
-    },
-    {
-      "cve_id": "CVE-2026-13768",
-      "title": "高危漏洞: CVE-2026-13768 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-03 08:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
-      "description": "Gardyn devices expose a privileged iothubowner key. Access to this key will allow a malicious user to invoke an IoTHub Registry Manager function which returns connection information for all Gardyn Home Kit and Studio devices. Access to this key also allows a malicious user to execute arbitrary commands on a specific connected device and may allow the malicious user to pivot to other devices on the user's network.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-03.json\nhttps://mygardyn.com/security/\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-03",
-      "source": "NVD",
-      "time": "2026-07-03 14:21:00"
-    },
-    {
-      "cve_id": "CVE-2026-57100",
-      "title": "高危漏洞: CVE-2026-57100 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-07-03 07:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Server-side request forgery (ssrf) in Microsoft Entra Provisioning Service (SyncFabric) allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57100",
-      "source": "NVD",
-      "time": "2026-07-03 09:58:06"
-    },
-    {
-      "cve_id": "CVE-2026-54998",
-      "title": "高危漏洞: CVE-2026-54998 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-03 07:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect authorization in Microsoft Exchange Online allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54998",
-      "source": "NVD",
-      "time": "2026-07-03 09:58:01"
     }
   ]
 }
