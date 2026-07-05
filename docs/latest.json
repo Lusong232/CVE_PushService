@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14660",
+      "title": "高危漏洞: CVE-2026-14660 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 07:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in code-projects Online Job Portal 1.0. The affected element is an unknown function of the file login.php. Performing a manipulation of the argument txtUser/txtPass results in sql injection. The attack may be initiated remotely. The exploit has been made public and could be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/aiyuyuyu/cve/blob/main/job_portal_sql.md\nhttps://vuldb.com/cve/CVE-2026-14660",
+      "source": "NVD",
+      "time": "2026-07-05 10:03:39"
+    },
+    {
+      "cve_id": "CVE-2026-14654",
+      "title": "高危漏洞: CVE-2026-14654 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 05:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in SourceCodester Simple and Nice Shopping Cart Script 1.0. Affected is an unknown function of the file /admin/girlsproductdeletequery.php. Such manipulation of the argument user_id leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/Yuesswor/cve/issues/4\nhttps://vuldb.com/cve/CVE-2026-14654\nhttps://vuldb.com/submit/846702",
+      "source": "NVD",
+      "time": "2026-07-05 10:03:35"
+    },
+    {
+      "cve_id": "CVE-2026-14653",
+      "title": "高危漏洞: CVE-2026-14653 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 05:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Simple and Nice Shopping Cart Script 1.0. This impacts an unknown function of the file /admin/mensproductdeletequery.php. This manipulation of the argument user_id causes sql injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/Yuesswor/cve/issues/3\nhttps://vuldb.com/cve/CVE-2026-14653\nhttps://vuldb.com/submit/846701",
+      "source": "NVD",
+      "time": "2026-07-05 10:03:30"
+    },
+    {
+      "cve_id": "CVE-2026-14652",
+      "title": "高危漏洞: CVE-2026-14652 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 05:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Simple and Nice Shopping Cart Script 1.0. This affects an unknown function of the file /admin/login.php of the component Admin Login. The manipulation of the argument Username results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/Yuesswor/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-14652\nhttps://vuldb.com/submit/846692",
+      "source": "NVD",
+      "time": "2026-07-05 10:03:24"
+    },
+    {
+      "cve_id": "CVE-2026-14649",
+      "title": "高危漏洞: CVE-2026-14649 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 04:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Online Voting System 1.0. Impacted is the function test_input of the file /saveVote.php. Performing a manipulation of the argument voterName/voterEmail/voterID/selectedCandidate results in sql injection. The attack can be initiated remotely.",
+      "refs": "https://code-projects.org/\nhttps://gist.github.com/c4ttr4ck/a29b2238099fa07b4f072c21123b55ef\nhttps://vuldb.com/cve/CVE-2026-14649",
+      "source": "NVD",
+      "time": "2026-07-05 10:03:19"
+    },
+    {
+      "cve_id": "CVE-2026-14648",
+      "title": "高危漏洞: CVE-2026-14648 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 04:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Online Voting System up to 0.x/1.0. This issue affects the function test_input of the file /authentication.php of the component Login. Such manipulation of the argument adminUserName/adminPassword leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://gist.github.com/c4ttr4ck/ed954dc2e3da968eb460a18385146f4c\nhttps://vuldb.com/cve/CVE-2026-14648",
+      "source": "NVD",
+      "time": "2026-07-05 10:03:12"
+    },
+    {
       "cve_id": "CVE-2026-14642",
       "title": "高危漏洞: CVE-2026-14642 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1033,72 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54998",
       "source": "NVD",
       "time": "2026-07-03 09:58:01"
-    },
-    {
-      "cve_id": "CVE-2026-45499",
-      "title": "高危漏洞: CVE-2026-45499 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-07-03 07:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Server-side request forgery (ssrf) in Azure OpenAI allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45499",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:57"
-    },
-    {
-      "cve_id": "CVE-2026-41106",
-      "title": "高危漏洞: CVE-2026-41106 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-03 07:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Url redirection to untrusted site ('open redirect') in M365 Copilot allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41106",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:52"
-    },
-    {
-      "cve_id": "CVE-2026-50722",
-      "title": "高危漏洞: CVE-2026-50722 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-03 06:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Libreswan, via the function RSA_authenticate_hash_signature_pkcs1_1_5_rsa(), did not correctly verify the DER encoding of the ASN.1 digest when the IKEv2 AUTH payload was encoded using RSASSA-PKCS1-v1_5 (RFC 8017). A remote attacker can use a variation on the Bleichenbacher attack to forge the AUTH payload when small public exponents are used (e.g., e=3), leading to impersonation. Additionally, a remote attacker, by encoding a shorter than expected hash in the AUTH payload, could trigger an assertion leading to denial-of-service. The daemon aborts and restarts; continued exploitation causes sustained denial of service. Remote code execution is not possible. X.509 certificate verifications of the remote IKE peer are not affected.",
-      "refs": "https://libreswan.org/security/CVE-2026-50721/CVE-2026-50721.txt\nhttps://libreswan.org/security/CVE-2026-50722/\nhttps://libreswan.org/security/CVE-2026-50722/CVE-2026-50722.txt",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:45"
-    },
-    {
-      "cve_id": "CVE-2026-50721",
-      "title": "高危漏洞: CVE-2026-50721 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-03 06:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Libreswan, via the function RSA_authenticate_hash_signature_raw_rsa(), did not correctly verify the length of the authentication hash when the SIG payload of an IKEv1 packet was encoded using PKCS #1 RSA Encryption as per RFC 2313. A remote attacker can use a variation on the Bleichenbacher attack to forge the SIG payload when small public exponents are being used (e.g., e=3), which could lead to impersonation. Additionally, a remote attacker, by encoding a shorter than expected hash in the SIG payload, could trigger an assertion leading to denial-of-service. The daemon aborts and restarts; continued exploitation causes sustained denial of service. Remote code execution is not possible. X.509 certificate verifications of remote IKE peers are not affected.",
-      "refs": "https://libreswan.org/security/CVE-2026-50721/\nhttps://libreswan.org/security/CVE-2026-50721/CVE-2026-50721.txt\nhttps://libreswan.org/security/CVE-2026-50722/CVE-2026-50722.txt",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:40"
-    },
-    {
-      "cve_id": "CVE-2026-12413",
-      "title": "高危漏洞: CVE-2026-12413 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-03 06:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An invalidly formatted IKEv2 fragment causes the Libreswan pluto daemon to crash and restart. Continued exploitation would cause a denial of service. The function reassemble_v2_incoming_fragments() would ignore unknown outer payloads but still store these in a fixed size array msg_digest.digest[PAYLIMIT]. An off-by-one error in the assertion PASSERT(logger, md->digest_roof < elemsof(md->digest)) causes the daemon to abort. No remote code execution is possible. Any configuration that allows IKEv2 connections that do not set fragmentation=no are vulnerable. IKEv1 is not affected.",
-      "refs": "https://libreswan.org/security/CVE-2026-12413/\nhttps://libreswan.org/security/CVE-2026-12413/CVE-2026-12413.txt",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:36"
-    },
-    {
-      "cve_id": "CVE-2026-58460",
-      "title": "高危漏洞: CVE-2026-58460 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-03 05:16:57",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "react-native-receive-sharing-intent contains a path traversal vulnerability that allows a co-resident malicious application to write files outside the intended cache directory by supplying a crafted _display_name value containing dot-dot path components through a malicious ContentProvider. Attackers can fire an explicit ACTION_SEND intent at the consuming app's exported share-receiver activity to overwrite arbitrary files in the consuming app's private data directory, including databases, shared preferences, and cached configuration, with attacker-controlled content.",
-      "refs": "https://github.com/ajith-ab/react-native-receive-sharing-intent/pull/192\nhttps://www.vulncheck.com/advisories/react-native-receive-sharing-intent-path-traversal-via-display-name",
-      "source": "NVD",
-      "time": "2026-07-03 09:57:32"
     }
   ]
 }
