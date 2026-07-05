@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14749",
+      "title": "高危漏洞: CVE-2026-14749 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 21:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in mjperpinosa stumasy up to 327d1b0f2915ba79d7ef8ebb74553e987609d9be. Impacted is the function eval of the file application/pages/imba_calculator/calculate.php. The manipulation of the argument mathematical_sentence leads to code injection. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/mjperpinosa/stumasy/\nhttps://github.com/mjperpinosa/stumasy/issues/5\nhttps://vuldb.com/cve/CVE-2026-14749",
+      "source": "NVD",
+      "time": "2026-07-06 00:00:35"
+    },
+    {
+      "cve_id": "CVE-2026-14747",
+      "title": "高危漏洞: CVE-2026-14747 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 21:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Real State Services 1.0. Affected by this vulnerability is an unknown functionality of the file /addprojectsale.php. The manipulation of the argument amen results in sql injection. The attack can be launched remotely.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/26\nhttps://vuldb.com/cve/CVE-2026-14747",
+      "source": "NVD",
+      "time": "2026-07-06 00:00:31"
+    },
+    {
+      "cve_id": "CVE-2026-14746",
+      "title": "高危漏洞: CVE-2026-14746 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 20:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in code-projects Real State Services 1.0. Affected is an unknown function of the file /addprojectrent.php. The manipulation of the argument amen leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/25\nhttps://vuldb.com/cve/CVE-2026-14746",
+      "source": "NVD",
+      "time": "2026-07-06 00:00:26"
+    },
+    {
+      "cve_id": "CVE-2026-14745",
+      "title": "高危漏洞: CVE-2026-14745 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 20:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in code-projects Real State Services 1.0. This impacts an unknown function of the file /single-list_rent.php. Executing a manipulation of the argument ID can lead to sql injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/24\nhttps://vuldb.com/cve/CVE-2026-14745",
+      "source": "NVD",
+      "time": "2026-07-06 00:00:22"
+    },
+    {
+      "cve_id": "CVE-2026-14744",
+      "title": "高危漏洞: CVE-2026-14744 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 20:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in code-projects Real State Services 1.0. This affects an unknown function of the file /normalHomeRent.php. Performing a manipulation of the argument loc results in sql injection. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/23\nhttps://vuldb.com/cve/CVE-2026-14744",
+      "source": "NVD",
+      "time": "2026-07-06 00:00:18"
+    },
+    {
+      "cve_id": "CVE-2026-14743",
+      "title": "高危漏洞: CVE-2026-14743 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 20:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in code-projects Real State Services 1.0. The impacted element is an unknown function of the file /normalHomeSale.php. Such manipulation of the argument loc leads to sql injection. The attack may be performed from remote. The exploit is publicly available and might be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/6Justdododo6/CVE/issues/22\nhttps://vuldb.com/cve/CVE-2026-14743",
+      "source": "NVD",
+      "time": "2026-07-06 00:00:09"
+    },
+    {
       "cve_id": "CVE-2026-14737",
       "title": "高危漏洞: CVE-2026-14737 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/RT-Thread/rt-thread/\nhttps://github.com/RT-Thread/rt-thread/issues/11425\nhttps://vuldb.com/cve/CVE-2026-14606",
       "source": "NVD",
       "time": "2026-07-04 09:56:04"
-    },
-    {
-      "cve_id": "CVE-2026-14605",
-      "title": "高危漏洞: CVE-2026-14605 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-04 04:16:52",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in RT-Thread up to 5.0.2. Affected by this vulnerability is the function recvmsg in the library bsp/loongson/ls1cdev/libraries/ls1c_can.h of the component ls1c CAN Handler. Such manipulation leads to stack-based buffer overflow. Local access is required to approach this attack. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/RT-Thread/rt-thread/\nhttps://github.com/RT-Thread/rt-thread/issues/11424\nhttps://vuldb.com/cve/CVE-2026-14605",
-      "source": "NVD",
-      "time": "2026-07-04 09:55:58"
-    },
-    {
-      "cve_id": "CVE-2026-58379",
-      "title": "高危漏洞: CVE-2026-58379 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-04 03:16:37",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in GIMP's Paint Shop Pro (PSP) file format parser. This heap buffer overflow vulnerability allows a remote attacker to cause arbitrary code execution or a denial of service (DoS) by tricking a user into opening a specially crafted PSP image file. The vulnerability occurs because the software incorrectly calculates buffer sizes when processing low bit-depth images, leading to an overwrite of adjacent memory.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-58379\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2495997\nhttps://gitlab.gnome.org/GNOME/gimp/-/commit/b630f167",
-      "source": "NVD",
-      "time": "2026-07-04 05:56:10"
-    },
-    {
-      "cve_id": "CVE-2026-53478",
-      "title": "高危漏洞: CVE-2026-53478 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-03 23:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper neutralization of special elements used in an OS command ('OS command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to command execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-04 00:19:09"
-    },
-    {
-      "cve_id": "CVE-2026-49815",
-      "title": "高危漏洞: CVE-2026-49815 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-03 23:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper neutralization of special Elements used in an OS command ('OS command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to execution of arbitrary OS commands.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-04 00:19:03"
-    },
-    {
-      "cve_id": "CVE-2026-49814",
-      "title": "高危漏洞: CVE-2026-49814 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-03 23:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to arbitrary command execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-04 00:18:57"
-    },
-    {
-      "cve_id": "CVE-2026-14460",
-      "title": "高危漏洞: CVE-2026-14460 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-03 23:16:32",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Missing Authorization vulnerability in TUBITAK BILGEM Software Technologies Research Institute pardus-software allows Argument Injection.\n\nThis issue affects pardus-software: from <= 1.0.4 before 1.0.5.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0497",
-      "source": "NVD",
-      "time": "2026-07-04 00:18:47"
     }
   ]
 }
