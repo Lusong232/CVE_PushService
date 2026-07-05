@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14737",
+      "title": "高危漏洞: CVE-2026-14737 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 19:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Hanwang e-Face General Management Platform 6.3.5.4. This impacts an unknown function of the file /sysAuthStr/querySysAuthStr.do. The manipulation of the argument order leads to sql injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used.",
+      "refs": "https://ucn9h68n9289.feishu.cn/docx/RWItdiw5Go02UsxHxgNcMWBqnJc?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-14737\nhttps://vuldb.com/submit/848640",
+      "source": "NVD",
+      "time": "2026-07-05 21:07:30"
+    },
+    {
+      "cve_id": "CVE-2026-14736",
+      "title": "高危漏洞: CVE-2026-14736 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 18:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Ruijie RG-UAC up to 1.0-R1.8.2.p5. The impacted element is an unknown function of the file user_auth_commit.php. Performing a manipulation of the argument upload_image results in unrestricted upload. The attack is possible to be carried out remotely. The exploit has been made public and could be used.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/OiAKwH3hRi3oVpkQyeycjjPrnL8?fromScene=spaceOverview\nhttps://vuldb.com/cve/CVE-2026-14736\nhttps://vuldb.com/submit/848624",
+      "source": "NVD",
+      "time": "2026-07-05 21:07:24"
+    },
+    {
+      "cve_id": "CVE-2026-14735",
+      "title": "高危漏洞: CVE-2026-14735 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 18:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in code-projects Smart Parking System 1.0. The affected element is an unknown function of the file /parkings/parkings.php. Such manipulation of the argument street/city/status leads to sql injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://medium.com/@avdzav10/sql-injection-leading-to-arbitrary-file-read-in-smart-parking-system-php-2cd5b084f9e1\nhttps://vuldb.com/cve/CVE-2026-14735",
+      "source": "NVD",
+      "time": "2026-07-05 21:07:18"
+    },
+    {
+      "cve_id": "CVE-2026-14734",
+      "title": "高危漏洞: CVE-2026-14734 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-05 18:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in SourceCodester Class and Exam Timetabling System 1.0. Impacted is an unknown function of the file /edit_product.php. This manipulation of the argument ID causes sql injection. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+      "refs": "https://github.com/cyberdrinclc-bot/cves/issues/1\nhttps://vuldb.com/cve/CVE-2026-14734\nhttps://vuldb.com/submit/848001",
+      "source": "NVD",
+      "time": "2026-07-05 21:07:10"
+    },
+    {
       "cve_id": "CVE-2026-14733",
       "title": "高危漏洞: CVE-2026-14733 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1055,50 +1099,6 @@
       "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0497",
       "source": "NVD",
       "time": "2026-07-04 00:18:47"
-    },
-    {
-      "cve_id": "CVE-2026-14459",
-      "title": "高危漏洞: CVE-2026-14459 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-03 23:16:32",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Improper neutralization of argument delimiters in a command ('argument injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute pardus-software allows Argument Injection.\n\nThis issue affects pardus-software: from <= 1.0.4 before 1.0.5.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0497",
-      "source": "NVD",
-      "time": "2026-07-04 00:18:40"
-    },
-    {
-      "cve_id": "CVE-2026-13341",
-      "title": "高危漏洞: CVE-2026-13341 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-03 19:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "A vulnerability exists in the Kong Konnect Model Context Protocol (MCP) server prior to version 1.0.0, which could allow a remote attacker to perform an indirect prompt injection attack and execute unintended API requests.",
-      "refs": "https://github.com/Kong/mcp-konnect/security/advisories/GHSA-7767-3m3w-2p44",
-      "source": "NVD",
-      "time": "2026-07-03 21:42:22"
-    },
-    {
-      "cve_id": "CVE-2026-10055",
-      "title": "高危漏洞: CVE-2026-10055 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-03 19:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "In Eclipse Theia since version 1.26.0, the backend /services/request-service RPC accepts an attacker-controlled URL from any client connected to the standard /services messaging endpoint, performs the HTTP request server-side, and returns the full response body to the caller.\n\n\n\n\nBecause the destination URL is neither validated nor allowlisted, a remote attacker with access to the Theia service connection can issue server-side HTTP requests to localhost or other backend-reachable hosts and read their responses, exposing internal administrative endpoints, cloud instance metadata services, and other resources that are intentionally outside the browser network boundary.\n\n\n\n\nThe vulnerability affects deployments where the Theia service connection is reachable by untrusted users (for example, multi-tenant or publicly-reachable Theia deployments).",
-      "refs": "https://github.com/eclipse-theia/theia/security/advisories/GHSA-2m57-xxmh-v696\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/446",
-      "source": "NVD",
-      "time": "2026-07-03 21:42:18"
-    },
-    {
-      "cve_id": "CVE-2026-10054",
-      "title": "高危漏洞: CVE-2026-10054 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-03 19:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In affected versions of Eclipse Theia (1.8.1 and later), the browser backend exposes privileged terminal RPC over WebSocket (/services/shell-terminal, /services/terminals/:id) without service-level authentication.\n\n\n\n\nWebSocket origin validation in @theia/core is fail-open: connections are accepted when the Origin header is missing or when no THEIA_HOSTS allowlist is configured (the default). The Socket.IO integration additionally replaces the real Origin header with a client-supplied fix-origin header that an attacker can control or omit.\n\n\n\n\nAs a result, a foreign-origin web page visited by a user with a running Theia instance can open the /services WebSocket namespace, invoke terminal creation, attach to the resulting terminal data channel, execute arbitrary OS commands, and read their output. This affects both local developer setups (drive-by attack) and hosted or tunneled deployments without strong external authentication.\n\n\n\n\nA fix is in development that enforces same-origin validation by default, removes trust in the fix-origin header, gates HTTP and WebSocket access on a SameSite=Strict; HttpOnly connection-token cookie, and sanitizes shell terminal creation options.",
-      "refs": "https://github.com/eclipse-theia/theia/security/advisories/GHSA-78g8-vm3p-97c6\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/376",
-      "source": "NVD",
-      "time": "2026-07-03 21:42:14"
     }
   ]
 }
