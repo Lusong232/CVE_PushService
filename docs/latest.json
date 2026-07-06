@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58380",
+      "title": "高危漏洞: CVE-2026-58380 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-06 23:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in GIMP's PNM file format parser. When parsing a specially crafted PNM file, the pnmscanner_gettoken() function writes a null terminator one byte past the end of a stack-allocated buffer due to an off-by-one error in the loop boundary check. This could lead to memory corruption, potentially resulting in denial of service or arbitrary code execution.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-58380\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2496135\nhttps://gitlab.gnome.org/GNOME/gimp/-/commit/83699817",
+      "source": "NVD",
+      "time": "2026-07-07 01:35:14"
+    },
+    {
+      "cve_id": "CVE-2026-24012",
+      "title": "高危漏洞: CVE-2026-24012 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-06 17:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Uncontrolled Resource Consumption vulnerability in Apache IoTDB. \n\nSome interface fails to impose reasonable\nlimits on the time span and aggregation interval of the query. An attacker\ncan construct a request with extreme parameters (e.g., a very large time\nrange combined with a minimal interval). This forces the DataNode to build\nan enormous result set in memory, which exhausts the Java heap and causes\nthe DataNode process to crash.\n\nThis issue affects Apache IoTDB: from 1.3.3 before 2.0.8.\n\nUsers are recommended to upgrade to version 2.0.8, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread/0g5th1t2vj6j8hm5t9w3xh9n6f6ht9z8",
+      "source": "NVD",
+      "time": "2026-07-07 01:35:09"
+    },
+    {
+      "cve_id": "CVE-2026-6382",
+      "title": "高危漏洞: CVE-2026-6382 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-06 16:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The FileOrganizer  WordPress plugin before 1.1.9, Advanced File Manager  WordPress plugin before 5.4.12, File Manager Pro  WordPress plugin before 2.1.1, File Manager WordPress plugin before 8.0.4 do not properly escape a parameter before passing it to a shell command when processing image operations, allowing authenticated users to perform OS Command Injection. This requires the server to have the ImageMagick convert CLI available without either the PHP imagick or GD extensions.",
+      "refs": "https://wpscan.com/vulnerability/a27f70b7-a4cc-42fa-88c1-19adfe1593a8/",
+      "source": "NVD",
+      "time": "2026-07-07 01:35:04"
+    },
+    {
+      "cve_id": "CVE-2026-12083",
+      "title": "高危漏洞: CVE-2026-12083 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-06 16:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Admin and Site Enhancements (ASE) WordPress plugin before 8.8.4, admin-site-enhancements-pro WordPress plugin before 8.8.4 does not perform authentication, authorization, or nonce checks on a role-restoration request handler, allowing unauthenticated attackers to restore a previously demoted administrator account back to the administrator role. This is an incomplete fix of CVE-2024-43333 / CVE-2025-24648, which closed the issue for only one of the demotion paths the WordPress role API exposes.",
+      "refs": "https://wpscan.com/vulnerability/a0c94f7f-6314-4ff2-bb92-ec02146975ff/",
+      "source": "NVD",
+      "time": "2026-07-07 01:34:58"
+    },
+    {
+      "cve_id": "CVE-2026-11962",
+      "title": "高危漏洞: CVE-2026-11962 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-06 16:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The FileOrganizer  WordPress plugin before 1.2.0 does not validate the file type on several of its file-management operations, allowing authenticated users who have been granted file-manager access — which its premium add-on can extend to sub-administrator roles — to upload arbitrary PHP files and achieve remote code execution. This is an incomplete fix of CVE-2024-7985, which only added file-type validation to the upload operation.",
+      "refs": "https://wpscan.com/vulnerability/88390679-80c5-439f-89d1-2f46aff8cfdb/",
+      "source": "NVD",
+      "time": "2026-07-07 01:34:54"
+    },
+    {
+      "cve_id": "CVE-2026-11855",
+      "title": "高危漏洞: CVE-2026-11855 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-06 16:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Simple Membership WordPress plugin before 4.7.5 does not verify the authenticity of Stripe webhook requests when no signing secret is configured, nor escape a value taken from them before outputting it in an administrator notice, allowing unauthenticated attackers to inject arbitrary web scripts that execute in the context of a logged-in administrator.",
+      "refs": "https://wpscan.com/vulnerability/217cb606-a0f2-4427-9262-cfe1cc90474e/",
+      "source": "NVD",
+      "time": "2026-07-07 01:34:49"
+    },
+    {
+      "cve_id": "CVE-2026-11766",
+      "title": "高危漏洞: CVE-2026-11766 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-06 16:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Ultimate Member  WordPress plugin before 2.12.0 does not properly sanitise and escape the value of custom textarea profile fields before outputting it on user profiles, allowing authenticated users with Subscriber-level access and above to store JavaScript that executes when any user, including an administrator, views the affected profile.",
+      "refs": "https://wpscan.com/vulnerability/96adb2d3-af34-4455-97d4-90af58049e78/",
+      "source": "NVD",
+      "time": "2026-07-07 01:34:44"
+    },
+    {
+      "cve_id": "CVE-2026-10830",
+      "title": "高危漏洞: CVE-2026-10830 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-06 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The AllCoach  WordPress plugin before 1.0.2 does not verify that an email address submitted to a public account-registration endpoint is not already associated with an existing user before overwriting that user's password, allowing unauthenticated attackers to reset the password of arbitrary accounts, including administrators, and take over the site.",
+      "refs": "https://wpscan.com/vulnerability/194e35d8-08ca-402d-a9bb-52383bc3dfab/",
+      "source": "NVD",
+      "time": "2026-07-07 01:34:39"
+    },
+    {
+      "cve_id": "CVE-2024-6228",
+      "title": "高危漏洞: CVE-2024-6228 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-06 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Notifications for Forms & WordPress Actions WordPress plugin before 2.6 does not validate a user-supplied value before using it to build a server-side file inclusion path, allowing authenticated users with subscriber-level access and above to include and execute arbitrary local PHP files on the server.",
+      "refs": "https://wpscan.com/vulnerability/6382bfea-6265-4f4b-b26e-4219d9ed78aa/",
+      "source": "NVD",
+      "time": "2026-07-07 01:34:33"
+    },
+    {
       "cve_id": "CVE-2026-6901",
       "title": "高危漏洞: CVE-2026-6901 (CVSS 7.7)",
       "cvss_score": 7.7,
@@ -1000,105 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58290",
       "source": "NVD",
       "time": "2026-07-04 09:58:42"
-    },
-    {
-      "cve_id": "CVE-2026-58289",
-      "title": "高危漏洞: CVE-2026-58289 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58289",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:38"
-    },
-    {
-      "cve_id": "CVE-2026-58288",
-      "title": "高危漏洞: CVE-2026-58288 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58288",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:31"
-    },
-    {
-      "cve_id": "CVE-2026-58287",
-      "title": "高危漏洞: CVE-2026-58287 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58287",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:26"
-    },
-    {
-      "cve_id": "CVE-2026-58286",
-      "title": "高危漏洞: CVE-2026-58286 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
-      "description": "Improper access control in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58286",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:22"
-    },
-    {
-      "cve_id": "CVE-2026-58285",
-      "title": "高危漏洞: CVE-2026-58285 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58285",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:18"
-    },
-    {
-      "cve_id": "CVE-2026-58284",
-      "title": "高危漏洞: CVE-2026-58284 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Improper authorization in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58284",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:14"
-    },
-    {
-      "cve_id": "CVE-2026-58283",
-      "title": "高危漏洞: CVE-2026-58283 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
-      "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58283",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:10"
-    },
-    {
-      "cve_id": "CVE-2026-58282",
-      "title": "高危漏洞: CVE-2026-58282 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
-      "description": "Improper access control in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58282",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:06"
-    },
-    {
-      "cve_id": "CVE-2026-58276",
-      "title": "高危漏洞: CVE-2026-58276 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58276",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:59"
     }
   ]
 }
