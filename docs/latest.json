@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9181",
+      "title": "高危漏洞: CVE-2026-9181 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-07 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ArcGIS Server contains a directory traversal vulnerability.  An unauthenticated attacker could exploit this issue by sending crafted path parameters.  Successful exploitation could allow access to sensitive files on the system. This issue impacts all versions of ArcGIS Server 12.0 and prior.",
+      "refs": "https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/may-2026-arcgis-security-bulletin",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:46"
+    },
+    {
+      "cve_id": "CVE-2026-55380",
+      "title": "高危漏洞: CVE-2026-55380 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-07 03:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0.",
+      "refs": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst\nhttps://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675\nhttps://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:42"
+    },
+    {
+      "cve_id": "CVE-2026-55379",
+      "title": "高危漏洞: CVE-2026-55379 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-07 03:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/BdfFontFile.py bdf_char() read the BBX width and height field from a BDF font file and passed attacker-controlled dimensions to Image.new() without calling Image._decompression_bomb_check(), bypassing Pillow's documented decompression bomb protection and allowing excessive memory allocation. This issue is fixed in version 12.3.0.",
+      "refs": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst\nhttps://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d\nhttps://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:37"
+    },
+    {
+      "cve_id": "CVE-2026-54060",
+      "title": "高危漏洞: CVE-2026-54060 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-07 03:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0.",
+      "refs": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst\nhttps://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d\nhttps://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:33"
+    },
+    {
+      "cve_id": "CVE-2026-54059",
+      "title": "高危漏洞: CVE-2026-54059 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-07 03:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/PcfFontFile.py _load_bitmaps() read glyph dimensions from the PCF METRICS section and passed them directly to Image.frombytes() without calling Image._decompression_bomb_check(), allowing crafted PCF font data to cause excessive memory allocation. This issue is fixed in version 12.3.0.",
+      "refs": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst\nhttps://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d\nhttps://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:29"
+    },
+    {
+      "cve_id": "CVE-2026-48614",
+      "title": "高危漏洞: CVE-2026-48614 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-07 02:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "An improper authorization vulnerability in the Plesk XML API allows an authenticated user to inject arbitrary configuration directives, resulting in arbitrary file write as root and full privilege escalation on the underlying server.",
+      "refs": "https://support.plesk.com/hc/en-us/articles/41171817973143-Vulnerability-in-Plesk-XML-API",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:24"
+    },
+    {
+      "cve_id": "CVE-2026-5268",
+      "title": "高危漏洞: CVE-2026-5268 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-07 00:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "An authentication bypass vulnerability exists in\nthe default SFTP server component utilized across the Ciena products listed. This vulnerability allows a remote, unauthenticated attacker to bypass\nsecurity controls and gain unauthorized access to the underlying filesystem.\nSuccessful exploitation could allow an attacker to read or modify system files.",
+      "refs": "https://www.ciena.com/product-security",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:19"
+    },
+    {
+      "cve_id": "CVE-2026-13708",
+      "title": "高危漏洞: CVE-2026-13708 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-06 21:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Imager::File::JPEG versions before 1.003 for Perl leak heap memory when reading a JPEG with repeated APP13 markers in i_readjpeg_wiol.\n\ni_readjpeg_wiol walks the marker list libjpeg returns and, for each APP13 marker, allocates a new buffer with *iptc_itext = mymalloc(...) and overwrites the previous pointer without freeing it. Only the final payload is later turned into a Perl scalar and freed, so a JPEG with N such markers leaks the first N-1 payloads on every read.\n\nIn a long-lived process, such as an upload or thumbnailing service, repeated reads accumulate these leaks and exhaust available memory, a denial of service.\n\nThe same handler ships bundled in the Imager distribution, where versions before 1.032 are affected and the fix ships in 1.032.",
+      "refs": "https://github.com/tonycoz/imager/commit/9f1c485ca3ee15dc261549e11afb356866552c3a.patch\nhttps://metacpan.org/release/TONYC/Imager-File-JPEG-1.003/source/Changes\nhttp://www.openwall.com/lists/oss-security/2026/07/06/4",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:14"
+    },
+    {
+      "cve_id": "CVE-2026-49042",
+      "title": "高危漏洞: CVE-2026-49042 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-06 19:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Improper Input Validation vulnerability in Apache Camel.\n\nThis issue affects Apache Camel: from 4.8.0 through 4.18.2, from 4.19.0 through 4.20.0.\n\nUsers are recommended to upgrade to version 4.18.3, 4.21.0, which fixes the issue.",
+      "refs": "https://camel.apache.org/security/CVE-2026-49042.html",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:09"
+    },
+    {
+      "cve_id": "CVE-2026-46588",
+      "title": "高危漏洞: CVE-2026-46588 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-06 19:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Improper Input Validation vulnerability in Apache Camel.\n\nThis issue affects Apache Camel: through 4.14.7, from 4.15.0 through 4.18.2, from 4.19.0 through 4.20.0.\n\nUsers are recommended to upgrade to version 4.14.8, 4.18.3, 4.21.0, which fixes the issue.",
+      "refs": "https://camel.apache.org/security/CVE-2026-46588.html",
+      "source": "NVD",
+      "time": "2026-07-07 06:06:04"
+    },
+    {
+      "cve_id": "CVE-2026-46587",
+      "title": "高危漏洞: CVE-2026-46587 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-06 19:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Improper Input Validation vulnerability in Apache Camel.\n\nThis issue affects Apache Camel: through 4.14.7, from 4.15.0 through 4.18.2, from 4.19.0 through 4.20.0.\n\nUsers are recommended to upgrade to version 4.14.8, 4.18.3, 4.21.0, which fixes the issue.",
+      "refs": "https://camel.apache.org/security/CVE-2026-46587.html",
+      "source": "NVD",
+      "time": "2026-07-07 06:05:59"
+    },
+    {
+      "cve_id": "CVE-2026-46454",
+      "title": "高危漏洞: CVE-2026-46454 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-06 17:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Input Validation vulnerability in Apache Camel Cometd Component.\n\nThe camel-cometd component maps inbound Bayeux (CometD) message headers into the Camel Exchange without applying a HeaderFilterStrategy. CometdBinding.populateExchangeFromMessage copies the entire ext.CamelHeaders map supplied by the CometD client directly onto the Camel message (message.setHeaders), so any header name - including Camel-internal control headers such as CamelHttpUri, CamelFileName or CamelJmsDestinationName - is accepted unmodified. Because a CometdComponent installs no Bayeux SecurityPolicy by default, any client that can complete the Bayeux handshake against the CometD endpoint can publish such a message without authentication. An attacker can therefore inject arbitrary Camel control headers that influence the behaviour of downstream producers in the route (for example redirecting an HTTP producer, changing a file name, or overriding a JMS destination); the injected headers also persist across internal direct, seda and vm hops. The concrete downstream impact depends on which producers the route uses.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix implements a HeaderFilterStrategy in the camel-cometd binding (a long-standing TODO in the code) that filters the Camel header namespace case-insensitively on inbound mapping, so client-supplied Camel* / camel* headers are no longer copied into the Exchange. For deployments that cannot upgrade immediately, strip the Camel control headers from inbound CometD messages before they reach any downstream producer (for example removeHeaders('Camel*') and removeHeaders('camel*') at the start of the route), and install an explicit Bayeux SecurityPolicy on the CometdComponent so that only authenticated clients can publish.",
+      "refs": "https://camel.apache.org/security/CVE-2026-46454.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/7",
+      "source": "NVD",
+      "time": "2026-07-07 06:05:54"
+    },
+    {
+      "cve_id": "CVE-2026-43865",
+      "title": "高危漏洞: CVE-2026-43865 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-06 17:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in Apache Camel Hazelcast component.\n\nThe camel-hazelcast component creates and manages Hazelcast instances using a default configuration that applies no Java deserialization filter. When Camel builds the Hazelcast Config itself - that is, when no user-supplied HazelcastInstance, hazelcastConfigUri, or referenced Config bean is provided - neither Hazelcast's JavaSerializationFilterConfig nor a Camel-side ObjectInputFilter is configured, so objects received over the Hazelcast cluster protocol are deserialized inside Hazelcast's own serialization layer (ObjectInputStream.readObject) before Camel ever processes them. An attacker who can join or otherwise reach the Hazelcast cluster can publish a crafted serialized Java object that is then deserialized on every Camel node, resulting in remote code execution. The exposure is present by default and requires no opt-in endpoint configuration: any route using a hazelcast consumer (hazelcast-topic, hazelcast-queue, hazelcast-seda, hazelcast-map, hazelcast-multimap, hazelcast-replicatedmap, hazelcast-list, hazelcast-set), as well as the HazelcastAggregationRepository and HazelcastIdempotentRepository, is affected whenever the managed instance is created from Camel's default configuration.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix makes Camel apply a default Hazelcast JavaSerializationFilterConfig (whitelisting the java., javax. and org.apache.camel. class-name prefixes and blacklisting java.net.) to instances it creates from its own default configuration, while leaving any user-supplied Config or HazelcastInstance untouched. For deployments that cannot upgrade immediately, configure a deserialization filter on the Hazelcast instance (Hazelcast JavaSerializationFilterConfig, or the JVM-wide system property -Djdk.serialFilter=!java.net.**;java.**;javax.**;org.apache.camel.**;!*) and enable Hazelcast cluster authentication and TLS to restrict who can reach the cluster.",
+      "refs": "https://camel.apache.org/security/CVE-2026-43865.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/5",
+      "source": "NVD",
+      "time": "2026-07-07 06:05:47"
+    },
+    {
+      "cve_id": "CVE-2026-42527",
+      "title": "高危漏洞: CVE-2026-42527 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-06 17:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in Apache Camel.\n\nThe default ObjectInputFilter pattern shipped with several Apache Camel components for defense-in-depth deserialization filtering ('java.**;javax.**;org.apache.camel.**;!*', or the no-'javax.**' variant in the aggregation-repository components) uses a recursive 'java.**' glob that admits classes whose hashCode/equals/readObject methods perform network I/O, notably java.net.URL and java.net.InetAddress. When an attacker can deliver a Java-serialized payload to an affected Camel consumer, deserialization of a HashMap (or any collection that calls hashCode on its elements) containing java.net.URL keys causes the JVM to issue DNS queries to the attacker-supplied host during the deserialization side-effect. The class-level filter check passes because the resulting object's class (HashMap) is allow-listed; the DNS query is observable on an attacker-controlled DNS server, providing an out-of-band side channel. The exposure is highest on the camel-jms family because JmsBinding.extractBodyFromJms invokes ObjectMessage.getObject() unconditionally when mapJmsMessage=true (default). Affected components: camel-jms, camel-sjms, camel-amqp, camel-mina, camel-netty, camel-netty-http, camel-vertx-http, camel-infinispan, and the aggregation repository components camel-leveldb, camel-cassandraql, camel-consul, camel-sql (JDBC aggregation repository).\nThis issue affects Apache Camel: from 4.14.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to a version that contains the CAMEL-23372 fix once available: 4.21.0 for the 4.21.x line, 4.18.3 for the 4.18.x line, and 4.14.8 for the 4.14.x line. For deployments that cannot upgrade immediately, configure a JMS-provider-side allow-list (Apache ActiveMQ Artemis 'deserializationAllowList' / 'deserializationDenyList', Apache ActiveMQ Classic 'org.apache.activemq.SERIALIZABLE_PACKAGES') as the primary mitigation, and/or override the in-code default via the endpoint-level 'deserializationFilter' option or the JVM-wide '-Djdk.serialFilter' system property with an explicit deny: '!java.net.**;java.**;javax.**;org.apache.camel.**;!*' (or '!java.net.**;java.**;org.apache.camel.**;!*' for the aggregation-repository components, which do not include javax.**).",
+      "refs": "https://camel.apache.org/security/CVE-2026-42527.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/4",
+      "source": "NVD",
+      "time": "2026-07-07 06:05:40"
+    },
+    {
+      "cve_id": "CVE-2026-40859",
+      "title": "高危漏洞: CVE-2026-40859 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-06 17:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in Apache Camel.\n\nThe camel-vertx-http component deserializes HTTP response bodies carrying the Content-Type application/x-java-serialized-object using a raw java.io.ObjectInputStream, without applying any ObjectInputFilter (VertxHttpHelper.deserializeJavaObjectFromStream) This deserialization path is reached only when the producer endpoint is configured with transferException=true (or the component-level allowJavaSerializedObject=true) and throwExceptionOnFailure is left at its default value of true; in that case a backend HTTP response with a 5xx status and the application/x-java-serialized-object content type has its body deserialized with no class restrictions. An attacker who controls the backend the Camel producer talks to - through a man-in-the-middle position on an unencrypted (plain HTTP) connection, or by compromising the backend service - can return a crafted serialized Java object and, if a suitable gadget chain is present on the classpath, achieve remote code execution on the Camel application host. The path is not reachable in the default configuration, where transferException is false.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.20.0.\n\nUsers are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. After upgrading, the deserialization performed by both helper utilities is constrained by a default ObjectInputFilter (allow-list java.**;javax.**;org.apache.camel.**;!*), which can be customised through the new deserializationFilter endpoint option or the JVM-wide -Djdk.serialFilter system property. For deployments that cannot upgrade immediately: do not enable transferException=true (or allowJavaSerializedObject=true) on producers that talk to untrusted or network-reachable backends; ensure producer connections use TLS (https) so that a response cannot be substituted by a man-in-the-middle; and, where the option is required, set an explicit -Djdk.serialFilter allow-list (for example java.**;org.apache.camel.**;!*) to constrain deserialization.",
+      "refs": "https://camel.apache.org/security/CVE-2026-40859.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/3",
+      "source": "NVD",
+      "time": "2026-07-07 06:05:30"
+    },
+    {
+      "cve_id": "CVE-2026-40047",
+      "title": "高危漏洞: CVE-2026-40047 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-06 17:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability in Apache Camel Docling component.\n\nThe camel-docling component invokes the external `docling` command-line tool by assembling an argument list in DoclingProducer and executing it through java.lang.ProcessBuilder. Custom CLI arguments supplied through the `CamelDoclingCustomArguments` exchange header (a List<String>) were appended to that argument list with insufficient validation: the original implementation relied on a denylist of disallowed flags and only rejected path values that contained a literal `../` sequence. As a result, a Camel route that forwards externally-influenced data into the `CamelDoclingCustomArguments` header (or into the path-bearing headers used to build the invocation) could cause the producer to pass unrecognized or unintended `docling` CLI flags to the subprocess, and could supply path-like argument values that resolved outside the intended directory through traversal sequences not caught by the literal `../` check. Because Camel itself builds the `docling` invocation from these values, the component is responsible for constraining them, and the weak validation allowed CLI-argument injection and directory traversal in the arguments passed to the external tool. The invocation uses the list-based form of ProcessBuilder, so a shell does not interpret the argument values; OS command injection through shell metacharacters was not possible, and the metacharacter rejection added by the fix is defense-in-depth.\nThis issue affects Apache Camel: from 4.15.0 before 4.18.3.\n\nUsers are recommended to upgrade to a release that contains the CAMEL-23212 fix. On the mainline the fix is included from Apache Camel 4.19.0 (and later releases such as 4.20.0). For users on the 4.18.x LTS releases stream, upgrade to 4.18.3. The fix replaces the denylist with a strict allowlist of recognized `docling` CLI flags (rejecting any unrecognized flag, and rejecting producer-managed flags such as the output-directory flags), defensively rejects shell metacharacters in argument values, and normalizes path-like values with Path.normalize() before validating them so that traversal sequences which bypass a literal `../` check are detected. As defence in depth, route authors should avoid mapping untrusted message content into the `CamelDoclingCustomArguments` header and the path-bearing headers, and should strip Camel-internal headers from messages that arrive from untrusted producers.",
+      "refs": "https://camel.apache.org/security/CVE-2026-40047.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/2",
+      "source": "NVD",
+      "time": "2026-07-07 06:05:21"
+    },
+    {
       "cve_id": "CVE-2026-48316",
       "title": "高危漏洞: CVE-2026-48316 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -923,182 +1099,6 @@
       "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-h3qp-7fh3-f8h4\nhttps://www.vulncheck.com/advisories/picklescan-unsafe-deserialization-via-torch-utils-data-datapipes-utils-decoder-basichandlers",
       "source": "NVD",
       "time": "2026-07-04 14:11:12"
-    },
-    {
-      "cve_id": "CVE-2025-71367",
-      "title": "高危漏洞: CVE-2025-71367 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.34 fails to detect _operator.attrgetter function calls in pickle payloads, allowing attackers to bypass security checks. Remote attackers can craft malicious pickle files using _operator.attrgetter in reduce methods to execute arbitrary code when pickle.load() processes the file.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-46h3-79wf-xr6c\nhttps://www.vulncheck.com/advisories/picklescan-remote-code-execution-via-operator-attrgetter-detection-bypass",
-      "source": "NVD",
-      "time": "2026-07-04 14:11:04"
-    },
-    {
-      "cve_id": "CVE-2025-71366",
-      "title": "高危漏洞: CVE-2025-71366 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.28 fails to detect malicious torch.utils.bottleneck.__main__.run_cprofile function calls in pickle files, allowing attackers to bypass safety checks. Remote attackers can embed undetected code in pickle files to achieve arbitrary code execution when victims load the files.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-4r9r-ch6f-vxmx\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-torch-utils-bottleneck-main-run-cprofile",
-      "source": "NVD",
-      "time": "2026-07-04 14:11:00"
-    },
-    {
-      "cve_id": "CVE-2025-71364",
-      "title": "高危漏洞: CVE-2025-71364 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.30 fails to detect the asyncio.unix_events._UnixSubprocessTransport._start function in pickle reduce methods, allowing remote code execution. Attackers can craft malicious pickle files embedding this built-in function that evade detection but execute arbitrary commands when loaded.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-q77w-mwjj-7mqx\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-undetected-asyncio-unix-events-unixsubprocesstransport-start",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:56"
-    },
-    {
-      "cve_id": "CVE-2025-71362",
-      "title": "高危漏洞: CVE-2025-71362 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.33 fails to detect unsafe deserialization when numpy.f2py.crackfortran functions call eval on arbitrary strings. Attackers can embed malicious code in pickle files that executes when loaded from untrusted sources.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-r8g5-cgf2-4m4m\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-unsafe-deserialization-in-numpy-f2py-crackfortran",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:50"
-    },
-    {
-      "cve_id": "CVE-2025-71360",
-      "title": "高危漏洞: CVE-2025-71360 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.29 fails to detect malicious pickle files using idlelib.calltip.get_entity function in reduce methods. Attackers can embed undetected code in pickle files that executes remote commands when loaded by victims.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-9xph-j2h6-g47v\nhttps://www.vulncheck.com/advisories/picklescan-remote-code-execution-via-undetected-idlelib-calltip-get-entity",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:45"
-    },
-    {
-      "cve_id": "CVE-2025-71359",
-      "title": "高危漏洞: CVE-2025-71359 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.29 fails to detect malicious pickle payloads that utilize lib2to3.pgen2.grammar.Grammar.loads in the reduce method, allowing remote code execution. Attackers can craft pickle files embedding dangerous code that evades picklescan detection and executes during pickle.load() deserialization.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-f54q-57x4-jg88\nhttps://www.vulncheck.com/advisories/picklescan-unsafe-deserialization-via-lib2to3-pgen2-grammar-grammar-loads",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:41"
-    },
-    {
-      "cve_id": "CVE-2025-71356",
-      "title": "高危漏洞: CVE-2025-71356 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.28 fails to detect malicious torch.fx.experimental.symbolic_shapes.ShapeEnv.evaluate_guards_expression function calls in pickle files. Attackers can embed undetected code in pickle files that executes remote code when loaded by victims.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-f4x7-rfwp-v3xw\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-torch-fx-experimental-symbolic-shapes-shapeenv-evaluate-guards-expression",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:37"
-    },
-    {
-      "cve_id": "CVE-2025-71353",
-      "title": "高危漏洞: CVE-2025-71353 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.28 fails to detect malicious pickle files that exploit torch._dynamo.guards.GuardBuilder.get function in reduce methods. Attackers can craft pickle files with embedded code that evades picklescan detection and executes arbitrary commands when loaded.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-86cj-95qr-2p4f\nhttps://www.vulncheck.com/advisories/picklescan-remote-code-execution-via-torch-dynamo-guards-guardbuilder-get",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:30"
-    },
-    {
-      "cve_id": "CVE-2025-71347",
-      "title": "高危漏洞: CVE-2025-71347 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.33 fails to detect malicious pickle files using numpy.f2py.crackfortran.param_eval function in reduce methods, allowing attackers to bypass security checks. Remote attackers can embed undetected code in pickle files that executes during deserialization, enabling arbitrary code execution in applications loading untrusted pickle data.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-cffc-mxrf-mhh4\nhttps://www.vulncheck.com/advisories/picklescan-undetected-remote-code-execution-via-numpy-f2py-crackfortran-param-eval",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:26"
-    },
-    {
-      "cve_id": "CVE-2025-71345",
-      "title": "高危漏洞: CVE-2025-71345 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.30 fails to detect malicious pickle files that invoke torch.utils.bottleneck.__main__.run_autograd_prof function. Attackers can embed undetected code in pickle files that executes during deserialization, enabling remote code execution.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-4whj-rm5r-c2v8\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-torch-utils-bottleneck-main-run-autograd-prof",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:22"
-    },
-    {
-      "cve_id": "CVE-2025-71343",
-      "title": "高危漏洞: CVE-2025-71343 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.30 fails to detect malicious pickle files that exploit lib2to3.pgen2.pgen.ParserGenerator.make_label function in the reduce method. Attackers can craft malicious pickle files with embedded code that evades detection but executes arbitrary commands when pickle.load() is called.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-p9w7-82w4-7q8m\nhttps://www.vulncheck.com/advisories/picklescan-arbitrary-code-execution-via-lib2to3-pgen2-pgen-parsergenerator-make-label-detection-bypass",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:18"
-    },
-    {
-      "cve_id": "CVE-2025-71342",
-      "title": "高危漏洞: CVE-2025-71342 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 10:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "picklescan before 0.0.30 fails to detect malicious pickle files using idlelib.run.Executive.runcode in reduce methods. Attackers can embed undetected code in pickle files that executes during pickle.load, enabling remote code execution in PyTorch models and supply chain attacks.",
-      "refs": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-m869-42cg-3xwr\nhttps://www.vulncheck.com/advisories/picklescan-undetected-remote-code-execution-via-idlelib-run-executive-runcode",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:13"
-    },
-    {
-      "cve_id": "CVE-2026-54424",
-      "title": "高危漏洞: CVE-2026-54424 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-04 09:16:27",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An Incorrect Use of Privileged APIs vulnerability in Unity Parsec on Windows hosts leads to a potential Elevation of Privilege. This issue affects Parsec through v2026-05-04.0. The patched version is Parsec for Windows version 150-104a. A user can generate a situation where there is an instance of parsecd.exe running as NT AUTHORITY\\SYSTEM with a user-controlled value of the AppData environment variable.",
-      "refs": "https://github.com/tomadimitrie/CVE-2026-54424\nhttps://parsec.app/\nhttps://support.parsec.app/hc/en-us/articles/50612943726612-CVE-2026-54424",
-      "source": "NVD",
-      "time": "2026-07-04 14:10:08"
-    },
-    {
-      "cve_id": "CVE-2026-58426",
-      "title": "高危漏洞: CVE-2026-58426 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-04 05:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Gitea Actions Artifacts V4 signed URL HMAC ambiguity allows cross-repository artifact read and cross-task upload-state write",
-      "refs": "https://blog.gitea.com/release-of-1.26.2/\nhttps://github.com/go-gitea/gitea/pull/37707\nhttps://github.com/go-gitea/gitea/releases/tag/v1.26.2",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:32"
-    },
-    {
-      "cve_id": "CVE-2026-58424",
-      "title": "高危漏洞: CVE-2026-58424 (CVSS 8.9)",
-      "cvss_score": 8.9,
-      "published_date": "2026-07-04 05:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:H/A:H",
-      "description": "Permanent Fork PR Workflow Approval Gate Bypass",
-      "refs": "https://blog.gitea.com/release-of-1.26.3-and-1.26.4/\nhttps://github.com/go-gitea/gitea/pull/38010\nhttps://github.com/go-gitea/gitea/releases/tag/v1.26.4",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:28"
-    },
-    {
-      "cve_id": "CVE-2026-58423",
-      "title": "高危漏洞: CVE-2026-58423 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-04 05:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "LFS authentication bypass via malformed SSH sub-verb allows unauthorized read access to private repositories",
-      "refs": "https://blog.gitea.com/release-of-1.26.3-and-1.26.4/\nhttps://github.com/go-gitea/gitea/pull/38008\nhttps://github.com/go-gitea/gitea/releases/tag/v1.26.4",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:24"
     }
   ]
 }
