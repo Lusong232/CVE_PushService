@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14778",
+      "title": "高危漏洞: CVE-2026-14778 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-06 08:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SourceCodester Onlne Examination & Learning Management System 1.0. This affects an unknown part of the file /ajax_enroll.php of the component Enrollment Management. The manipulation of the argument student_id/schedule_id/action leads to improper authorization. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. The name of the affected product appears to have a typo in it.",
+      "refs": "https://github.com/nuiifornet/A033/blob/main/OE-LMS-IDOR-ajax_enroll.md\nhttps://vuldb.com/cve/CVE-2026-14778\nhttps://vuldb.com/submit/850695",
+      "source": "NVD",
+      "time": "2026-07-06 15:01:32"
+    },
+    {
       "cve_id": "CVE-2026-14772",
       "title": "高危漏洞: CVE-2026-14772 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57983",
       "source": "NVD",
       "time": "2026-07-04 09:57:22"
-    },
-    {
-      "cve_id": "CVE-2026-57981",
-      "title": "高危漏洞: CVE-2026-57981 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-04 05:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57981",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:18"
     }
   ]
 }
