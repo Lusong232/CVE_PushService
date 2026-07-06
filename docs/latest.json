@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6901",
+      "title": "高危漏洞: CVE-2026-6901 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-06 19:16:31",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Untrusted Search Path vulnerability in B&R Industrial Automation GmbH APROL.\n\nThis issue affects APROL: before R 4.4-01P5.",
+      "refs": "https://br-cws-assets.de-fra-1.linodeobjects.com/SA26P011-661853b7.pdf",
+      "source": "NVD",
+      "time": "2026-07-06 20:37:13"
+    },
+    {
+      "cve_id": "CVE-2026-6900",
+      "title": "高危漏洞: CVE-2026-6900 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-06 19:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper certificate validation vulnerability in B&R Industrial Automation GmbH APROL.\n\nThis issue affects APROL: before R 4.4-01P5.",
+      "refs": "https://br-cws-assets.de-fra-1.linodeobjects.com/SA26P011-661853b7.pdf",
+      "source": "NVD",
+      "time": "2026-07-06 20:37:09"
+    },
+    {
+      "cve_id": "CVE-2026-4249",
+      "title": "高危漏洞: CVE-2026-4249 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-06 19:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+      "description": "The throttling event handling mechanism in multiple WSO2 products accepts user-supplied JSON payloads without sufficient validation of their structure and content. This allows an unauthenticated remote attacker to inject malicious JSON data that can lead to a persistent denial of service condition.\n\nSuccessful exploitation of this vulnerability can disrupt the API Gateway, preventing legitimate API traffic from being processed and impacting complete service availability. The denial of service is persistent, requiring manual intervention to restore normal operations.",
+      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5236/",
+      "source": "NVD",
+      "time": "2026-07-06 20:37:04"
+    },
+    {
+      "cve_id": "CVE-2026-9165",
+      "title": "高危漏洞: CVE-2026-9165 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-06 17:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+      "description": "A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). Central does not limit the depth of GraphQL queries served on the authenticated GraphQL API. An authenticated user with a valid API token can send deeply nested queries that cause excessive resource consumption in Central, resulting in a denial of service for the management plane.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-9165\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2480505",
+      "source": "NVD",
+      "time": "2026-07-06 20:37:00"
+    },
+    {
+      "cve_id": "CVE-2026-14809",
+      "title": "高危漏洞: CVE-2026-14809 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-06 17:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Prog Management System developed by PROG MIS has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read database contents.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11026-3df18-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11025-fa1d9-1.html",
+      "source": "NVD",
+      "time": "2026-07-06 20:36:53"
+    },
+    {
+      "cve_id": "CVE-2026-14808",
+      "title": "高危漏洞: CVE-2026-14808 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-06 16:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Prog\n  Management System developed by PROG MIS has a Exposure of Sensitive\n  Information vulnerability, allowing unauthenticated remote attackers to view\n  a specific page and obtain the database account and password.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11026-3df18-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11025-fa1d9-1.html",
+      "source": "NVD",
+      "time": "2026-07-06 20:36:49"
+    },
+    {
+      "cve_id": "CVE-2026-14807",
+      "title": "高危漏洞: CVE-2026-14807 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-06 16:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ERP App developed by PROG MIS has a Use of Hard-coded Credentials vulnerability, allowing unauthenticated remote attackers to log in to view application code and obtain the database account and password.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11024-c5c1a-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11023-3abe8-1.html",
+      "source": "NVD",
+      "time": "2026-07-06 20:36:42"
+    },
+    {
+      "cve_id": "CVE-2026-14802",
+      "title": "高危漏洞: CVE-2026-14802 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-06 16:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in react create-react-app up to 5.0.1 on macOS. This affects the function startBrowserProcess of the file openBrowser.js of the component react-dev-utils. Performing a manipulation results in os command injection. Remote exploitation of the attack is possible. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/react/create-react-app/\nhttps://github.com/react/create-react-app/issues/17269\nhttps://vuldb.com/cve/CVE-2026-14802",
+      "source": "NVD",
+      "time": "2026-07-06 20:36:36"
+    },
+    {
       "cve_id": "CVE-2026-14778",
       "title": "高危漏洞: CVE-2026-14778 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1011,94 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58276",
       "source": "NVD",
       "time": "2026-07-04 09:57:59"
-    },
-    {
-      "cve_id": "CVE-2026-57993",
-      "title": "高危漏洞: CVE-2026-57993 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "Server-side request forgery (ssrf) in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57993",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:54"
-    },
-    {
-      "cve_id": "CVE-2026-57992",
-      "title": "高危漏洞: CVE-2026-57992 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57992",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:50"
-    },
-    {
-      "cve_id": "CVE-2026-57991",
-      "title": "高危漏洞: CVE-2026-57991 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "Improper link resolution before file access ('link following') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to disclose information over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57991",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:46"
-    },
-    {
-      "cve_id": "CVE-2026-57988",
-      "title": "高危漏洞: CVE-2026-57988 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-04 05:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
-      "description": "Relative path traversal in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57988",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:42"
-    },
-    {
-      "cve_id": "CVE-2026-57986",
-      "title": "高危漏洞: CVE-2026-57986 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57986",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:38"
-    },
-    {
-      "cve_id": "CVE-2026-57985",
-      "title": "高危漏洞: CVE-2026-57985 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-04 05:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:L",
-      "description": "Improper input validation in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57985",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:33"
-    },
-    {
-      "cve_id": "CVE-2026-57984",
-      "title": "高危漏洞: CVE-2026-57984 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57984",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:26"
-    },
-    {
-      "cve_id": "CVE-2026-57983",
-      "title": "高危漏洞: CVE-2026-57983 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-07-04 05:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Improper authorization in Microsoft Edge (Chromium-based) allows an unauthorized attacker to bypass a security feature over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57983",
-      "source": "NVD",
-      "time": "2026-07-04 09:57:22"
     }
   ]
 }
