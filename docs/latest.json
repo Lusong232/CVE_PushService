@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-48316",
+      "title": "高危漏洞: CVE-2026-48316 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-07 01:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:49"
+    },
+    {
+      "cve_id": "CVE-2025-53831",
+      "title": "高危漏洞: CVE-2025-53831 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-07 01:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L",
+      "description": "DrawIO for ownCloud is an application for using DrawIO with the file storage, synchronization, and sharing application ownCloud Classic. In DrawIO for ownCloud prior to version 1.0.2, which corresponds to ownCloud 10 prior to version 10.15.3, attackers with access to the DrawIO app can leverage improper neutralization of input during web page generation to achieve stored XSS. Upgrade ownCloud 10 to version 10.15.3 or later or upgrade DrawIO for ownCloud 10 to version 1.0.2 or later to receive a patch.",
+      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-r9j8-fr2h-m47q",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:45"
+    },
+    {
+      "cve_id": "CVE-2026-59196",
+      "title": "高危漏洞: CVE-2026-59196 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-07 00:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
+      "description": "pnpm is a package manager. Prior to 10.34.4 and 11.7.0, a crafted lockfile alias could be joined directly under a hoisted node_modules directory. Traversal aliases could escape that directory, while reserved aliases such as .bin or .pnpm could overwrite pnpm-owned layout.  This vulnerability is fixed in 10.34.4 and 11.7.0.",
+      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-fr4h-3cph-29xv",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:41"
+    },
+    {
+      "cve_id": "CVE-2026-59195",
+      "title": "高危漏洞: CVE-2026-59195 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-07 00:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:L",
+      "description": "pnpm is a package manager. Prior to 10.34.4 and 11.8.0, pnpm accepts package names from the env lockfile configDependencies section and uses those names directly when creating config dependency symlinks under node_modules/.pnpm-config. A malicious repository can commit a crafted pnpm-lock.yaml whose env-lockfile document contains a traversal-shaped config dependency name. During pnpm install, pnpm installs the config dependency and creates a symlink at a path derived from that name. This vulnerability is fixed in 10.34.4 and 11.8.0.",
+      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-qrv3-253h-g69c",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:34"
+    },
+    {
+      "cve_id": "CVE-2026-59194",
+      "title": "高危漏洞: CVE-2026-59194 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-07 00:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
+      "description": "pnpm is a package manager. Prior to 10.34.4 and 11.7.0, a crafted patch entry could resolve outside the configured patches directory and cause pnpm patch-remove to delete an arbitrary reachable file. This vulnerability is fixed in 10.34.4 and 11.7.0.",
+      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-72r4-9c5j-mj57",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:30"
+    },
+    {
+      "cve_id": "CVE-2025-53830",
+      "title": "高危漏洞: CVE-2025-53830 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-07 00:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Anti-Virus for ownCloud is an anti-virus application for file storage, synchronization, and sharing application ownCloud. Versions of Anti-Virus for ownCloud before 1.2.3 are vulnerable to Server-Side Request Forgery (SSRF). This corresponds to versions of ownCloud 10 prior to 10.15.3. Upgrade ownCloud 10 to version 10.15.3 or later or upgrade Anti-Virus for ownCloud 10 to version 1.2.3 or later to receive a fix.",
+      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-3wg4-mg27-hj4w",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:25"
+    },
+    {
+      "cve_id": "CVE-2025-53829",
+      "title": "高危漏洞: CVE-2025-53829 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-07 00:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "ownCloud is a file storage, synchronization, and sharing application. In ownCloud 10 prior to version 10.15.3, an attacker with administrative privileges can exploit a path traversal vulnerability in the system to execute arbitrary code. Upgrade ownCloud 10 to version 10.15.3 or later to receive a patch.",
+      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-4439-4wxm-c9px",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:22"
+    },
+    {
+      "cve_id": "CVE-2025-53828",
+      "title": "高危漏洞: CVE-2025-53828 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-07-07 00:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SharePoint for ownCloud is an application for using SharePoint with the file storage, synchronization, and sharing application ownCloud Classic. In SharePoint for ownCloud prior to version 0.4.1, which corresponds to ownCloud 10 prior to 10.15.3, an attacker with administrative privileges can use a SSRF vulnerability in the SharePoint app to execute arbitrary code on the system. Upgrade ownCloud 10 to version 10.15.3 or later to receive SharePoint for ownCloud 0.4.1, the fixed version.",
+      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-4m66-rpfj-m5f6",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:17"
+    },
+    {
+      "cve_id": "CVE-2025-53827",
+      "title": "高危漏洞: CVE-2025-53827 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-07 00:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "ownCloud Core is the server-side component of the file storage, synchronization, and sharing application ownCloud Classic. In versions prior to 10.15.3, the Updater on ownCloud 10 before 10.15.3 has an exposed dangerous method or function. Attackers with administrative privileges may leverage functionality to execute arbitrary code. This issue has been fixed in version 10.15.3.",
+      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-hvcx-ph66-mmvw",
+      "source": "NVD",
+      "time": "2026-07-07 03:41:12"
+    },
+    {
       "cve_id": "CVE-2026-58380",
       "title": "高危漏洞: CVE-2026-58380 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1000,105 +1099,6 @@
       "refs": "https://blog.gitea.com/release-of-1.26.3-and-1.26.4/\nhttps://github.com/go-gitea/gitea/pull/38008\nhttps://github.com/go-gitea/gitea/releases/tag/v1.26.4",
       "source": "NVD",
       "time": "2026-07-04 09:59:24"
-    },
-    {
-      "cve_id": "CVE-2026-58299",
-      "title": "高危漏洞: CVE-2026-58299 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Time-of-check time-of-use (toctou) race condition in Microsoft Edge for Android allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58299",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:19"
-    },
-    {
-      "cve_id": "CVE-2026-58298",
-      "title": "高危漏洞: CVE-2026-58298 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58298",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:14"
-    },
-    {
-      "cve_id": "CVE-2026-58297",
-      "title": "高危漏洞: CVE-2026-58297 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
-      "description": "Exposure of private personal information to an unauthorized actor in Microsoft Edge for Android allows an unauthorized attacker to disclose information over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58297",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:10"
-    },
-    {
-      "cve_id": "CVE-2026-58296",
-      "title": "高危漏洞: CVE-2026-58296 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
-      "description": "Exposure of private personal information to an unauthorized actor in Microsoft Edge for Android allows an unauthorized attacker to disclose information over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58296",
-      "source": "NVD",
-      "time": "2026-07-04 09:59:03"
-    },
-    {
-      "cve_id": "CVE-2026-58295",
-      "title": "高危漏洞: CVE-2026-58295 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
-      "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to bypass a security feature over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58295",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:59"
-    },
-    {
-      "cve_id": "CVE-2026-58294",
-      "title": "高危漏洞: CVE-2026-58294 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58294",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:55"
-    },
-    {
-      "cve_id": "CVE-2026-58293",
-      "title": "高危漏洞: CVE-2026-58293 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "External control of file name or path in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58293",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:51"
-    },
-    {
-      "cve_id": "CVE-2026-58292",
-      "title": "高危漏洞: CVE-2026-58292 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L",
-      "description": "Improper input validation in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58292",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:47"
-    },
-    {
-      "cve_id": "CVE-2026-58290",
-      "title": "高危漏洞: CVE-2026-58290 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-04 05:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:H/A:L",
-      "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58290",
-      "source": "NVD",
-      "time": "2026-07-04 09:58:42"
     }
   ]
 }
