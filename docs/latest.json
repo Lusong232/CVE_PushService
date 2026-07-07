@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-57851",
+      "title": "高危漏洞: CVE-2026-57851 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-08 01:16:36",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "MSI Feature Manager contains a local privilege escalation vulnerability in the KernCoreLib64.sys kernel driver that allows any locally logged-on user to perform arbitrary physical memory read/write and unrestricted I/O port operations by accessing exposed IOCTL handlers without administrator privileges. Attackers can exploit the accessible device object through IOCTL handlers to manipulate kernel objects, tamper with kernel-mode callbacks, bypass Protected Process Light protections, and disable security software.",
+      "refs": "https://github.com/readmsr/MSI_FeatureManager_CVE\nhttps://www.vulncheck.com/advisories/msi-gamegaraj-kerncorelib64-sys-privilege-escalation-via-ioctl-handlers",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:55"
+    },
+    {
+      "cve_id": "CVE-2026-23698",
+      "title": "高危漏洞: CVE-2026-23698 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-08 01:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vtiger CRM through 8.4.0 contains an authenticated remote code execution vulnerability in the admin module import feature that allows administrator-level attackers to upload arbitrary PHP files by submitting a crafted zip archive through the ModuleManager import function, which extracts contents directly into the modules/ directory under the web root without validating file types beyond the manifest.xml descriptor. Attackers can place executable PHP files in the modules/ directory that become directly accessible via HTTP, bypassing Vtiger's authentication and authorization layer entirely since Apache resolves the path and invokes the PHP interpreter before the application routing layer is involved, resulting in a persistent web shell independent of the originating session.",
+      "refs": "https://jivasecurity.com/writeups/vtiger-rce-module-import-cve-2026-23698\nhttps://www.vtiger.com/\nhttps://www.vulncheck.com/advisories/vtiger-crm-authenticated-rce-via-module-import-file-upload",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:50"
+    },
+    {
+      "cve_id": "CVE-2026-23697",
+      "title": "高危漏洞: CVE-2026-23697 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-08 01:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vtiger CRM before 8.4.0 contains an authenticated file upload vulnerability that allows low-privileged users to achieve remote code execution by uploading a .phar file containing arbitrary PHP code through the Documents module, bypassing the extension denylist in config.inc.php which omits the .phar extension. The uploaded file is stored with its original .phar extension under the web-accessible storage directory, and a misconfigured .htaccess using Apache 2.2 syntax is silently ignored on Apache 2.4 deployments, allowing unauthenticated HTTP requests to directly execute the uploaded PHP payload.",
+      "refs": "https://jivasecurity.com/writeups/vtiger-rce-phar-upload-cve-2026-23697\nhttps://www.vtiger.com/\nhttps://www.vulncheck.com/advisories/vtiger-crm-authenticated-file-upload-rce-via-documents-module",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:44"
+    },
+    {
+      "cve_id": "CVE-2026-13020",
+      "title": "高危漏洞: CVE-2026-13020 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-08 01:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A Weak Password Recovery Mechanism for Forgotten Password exists in Esri Portal for ArcGIS versions 12.1 and earlier on Windows, Linux and Kubernetes. A remote, unauthorized attacker may assume ownership of a user’s account by manipulating this mechanism. ArcGIS Administrators should configure an email server with ArcGIS Enterprise to facilitate user self-service password recovery. The ability for an administrator to reset a user’s password remains unchanged.",
+      "refs": "https://www.esri.com/arcgis-blog/products/trust-arcgis/administration/june-2026-arcgis-security-bulletin",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:39"
+    },
+    {
+      "cve_id": "CVE-2026-13019",
+      "title": "高危漏洞: CVE-2026-13019 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-08 01:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Esri Portal for ArcGIS versions 12.1 and earlier on Windows, Linux and Kubernetes have a missing authentication for critical function vulnerability allows a remote, unauthenticated attacker to access an unprotected API.",
+      "refs": "https://www.esri.com/arcgis-blog/products/trust-arcgis/administration/june-2026-arcgis-security-bulletin",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:35"
+    },
+    {
+      "cve_id": "CVE-2011-10043",
+      "title": "高危漏洞: CVE-2011-10043 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-07 20:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Module::Load versions before 0.22 for Perl allow arbitrary modules outside of @INC to be loaded.\n\nModule names starting with \"::\" could be passed to the load function to specify arbitrary module paths.\n\nAttackers able to influence module names passed to load could use that bug to execute arbitrary code.",
+      "refs": "https://blogs.perl.org/users/michael_g_schwern/2011/10/how-not-to-load-a-module-or-bad-interfaces-make-good-people-do-bad-things.html\nhttps://metacpan.org/release/BINGOS/Module-Load-0.22/changes\nhttps://metacpan.org/release/BINGOS/Module-Load-0.22/diff/BINGOS/Module-Load-0.20/lib/Module/Load.pm",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:31"
+    },
+    {
+      "cve_id": "CVE-2026-33264",
+      "title": "高危漏洞: CVE-2026-33264 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-07 18:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A bug in `BaseSerialization.deserialize()` allowed unrestricted `import_string()` of attacker-controlled class paths when the Scheduler / API Server loaded a serialized DAG: a DAG author could embed a malicious trigger into a DAG to gain remote code execution on the API Server / Scheduler process, crossing the Airflow security boundary that DAG-author code must never execute in those processes. Users are advised to upgrade to `apache-airflow` 3.3.0 or later. As a defense-in-depth mitigation, deployments where DAG-author trust is limited can restrict the `[core] allowed_deserialization_classes` config to a narrow allowlist.",
+      "refs": "https://github.com/apache/airflow/pull/66002\nhttps://github.com/apache/airflow/pull/68528\nhttps://lists.apache.org/thread/otvdw8qt2y7xy2n5nq9xby9ky4rf5ltj",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:25"
+    },
+    {
+      "cve_id": "CVE-2026-12277",
+      "title": "高危漏洞: CVE-2026-12277 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-07 14:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "description": "The Frontend File Manager Plugin WordPress plugin through 23.6 does not validate a file path derived from user input before deleting the referenced file, allowing unauthenticated users to delete arbitrary files on the server (such as wp-config.php) when guest upload mode is enabled. Deleting wp-config.php forces the site into its setup routine, which can be leveraged toward a full site takeover.",
+      "refs": "https://wpscan.com/vulnerability/30f208f6-9d7b-4aaf-8689-496521d1a1dc/",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:19"
+    },
+    {
+      "cve_id": "CVE-2026-38976",
+      "title": "高危漏洞: CVE-2026-38976 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-07 06:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "mrubyc through 3.4.1 was found to contain a NULL pointer dereference in src/vm.c in op_super() / OP_SUPER due to a missing runtime guard for top-level super.",
+      "refs": "https://github.com/hayat01sh1da/mrubyc/commit/c4aa2a06bfdd13a0f1ae5165c5760a2530314a42\nhttps://github.com/mrubyc/mrubyc\nhttps://github.com/mrubyc/mrubyc/issues/276",
+      "source": "NVD",
+      "time": "2026-07-08 03:40:13"
+    },
+    {
       "cve_id": "CVE-2026-6101",
       "title": "高危漏洞: CVE-2026-6101 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-fr4h-3cph-29xv",
       "source": "NVD",
       "time": "2026-07-07 03:41:41"
-    },
-    {
-      "cve_id": "CVE-2026-59195",
-      "title": "高危漏洞: CVE-2026-59195 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-07 00:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:L",
-      "description": "pnpm is a package manager. Prior to 10.34.4 and 11.8.0, pnpm accepts package names from the env lockfile configDependencies section and uses those names directly when creating config dependency symlinks under node_modules/.pnpm-config. A malicious repository can commit a crafted pnpm-lock.yaml whose env-lockfile document contains a traversal-shaped config dependency name. During pnpm install, pnpm installs the config dependency and creates a symlink at a path derived from that name. This vulnerability is fixed in 10.34.4 and 11.8.0.",
-      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-qrv3-253h-g69c",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:34"
-    },
-    {
-      "cve_id": "CVE-2026-59194",
-      "title": "高危漏洞: CVE-2026-59194 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-07 00:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
-      "description": "pnpm is a package manager. Prior to 10.34.4 and 11.7.0, a crafted patch entry could resolve outside the configured patches directory and cause pnpm patch-remove to delete an arbitrary reachable file. This vulnerability is fixed in 10.34.4 and 11.7.0.",
-      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-72r4-9c5j-mj57",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:30"
-    },
-    {
-      "cve_id": "CVE-2025-53830",
-      "title": "高危漏洞: CVE-2025-53830 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-07 00:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Anti-Virus for ownCloud is an anti-virus application for file storage, synchronization, and sharing application ownCloud. Versions of Anti-Virus for ownCloud before 1.2.3 are vulnerable to Server-Side Request Forgery (SSRF). This corresponds to versions of ownCloud 10 prior to 10.15.3. Upgrade ownCloud 10 to version 10.15.3 or later or upgrade Anti-Virus for ownCloud 10 to version 1.2.3 or later to receive a fix.",
-      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-3wg4-mg27-hj4w",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:25"
-    },
-    {
-      "cve_id": "CVE-2025-53829",
-      "title": "高危漏洞: CVE-2025-53829 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-07-07 00:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "ownCloud is a file storage, synchronization, and sharing application. In ownCloud 10 prior to version 10.15.3, an attacker with administrative privileges can exploit a path traversal vulnerability in the system to execute arbitrary code. Upgrade ownCloud 10 to version 10.15.3 or later to receive a patch.",
-      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-4439-4wxm-c9px",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:22"
-    },
-    {
-      "cve_id": "CVE-2025-53828",
-      "title": "高危漏洞: CVE-2025-53828 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-07 00:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "SharePoint for ownCloud is an application for using SharePoint with the file storage, synchronization, and sharing application ownCloud Classic. In SharePoint for ownCloud prior to version 0.4.1, which corresponds to ownCloud 10 prior to 10.15.3, an attacker with administrative privileges can use a SSRF vulnerability in the SharePoint app to execute arbitrary code on the system. Upgrade ownCloud 10 to version 10.15.3 or later to receive SharePoint for ownCloud 0.4.1, the fixed version.",
-      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-4m66-rpfj-m5f6",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:17"
-    },
-    {
-      "cve_id": "CVE-2025-53827",
-      "title": "高危漏洞: CVE-2025-53827 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-07 00:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "ownCloud Core is the server-side component of the file storage, synchronization, and sharing application ownCloud Classic. In versions prior to 10.15.3, the Updater on ownCloud 10 before 10.15.3 has an exposed dangerous method or function. Attackers with administrative privileges may leverage functionality to execute arbitrary code. This issue has been fixed in version 10.15.3.",
-      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-hvcx-ph66-mmvw",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:12"
-    },
-    {
-      "cve_id": "CVE-2026-58380",
-      "title": "高危漏洞: CVE-2026-58380 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-06 23:16:40",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in GIMP's PNM file format parser. When parsing a specially crafted PNM file, the pnmscanner_gettoken() function writes a null terminator one byte past the end of a stack-allocated buffer due to an off-by-one error in the loop boundary check. This could lead to memory corruption, potentially resulting in denial of service or arbitrary code execution.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-58380\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2496135\nhttps://gitlab.gnome.org/GNOME/gimp/-/commit/83699817",
-      "source": "NVD",
-      "time": "2026-07-07 01:35:14"
-    },
-    {
-      "cve_id": "CVE-2026-24012",
-      "title": "高危漏洞: CVE-2026-24012 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-06 17:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Uncontrolled Resource Consumption vulnerability in Apache IoTDB. \n\nSome interface fails to impose reasonable\nlimits on the time span and aggregation interval of the query. An attacker\ncan construct a request with extreme parameters (e.g., a very large time\nrange combined with a minimal interval). This forces the DataNode to build\nan enormous result set in memory, which exhausts the Java heap and causes\nthe DataNode process to crash.\n\nThis issue affects Apache IoTDB: from 1.3.3 before 2.0.8.\n\nUsers are recommended to upgrade to version 2.0.8, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/0g5th1t2vj6j8hm5t9w3xh9n6f6ht9z8",
-      "source": "NVD",
-      "time": "2026-07-07 01:35:09"
-    },
-    {
-      "cve_id": "CVE-2026-6382",
-      "title": "高危漏洞: CVE-2026-6382 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-06 16:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "The FileOrganizer  WordPress plugin before 1.1.9, Advanced File Manager  WordPress plugin before 5.4.12, File Manager Pro  WordPress plugin before 2.1.1, File Manager WordPress plugin before 8.0.4 do not properly escape a parameter before passing it to a shell command when processing image operations, allowing authenticated users to perform OS Command Injection. This requires the server to have the ImageMagick convert CLI available without either the PHP imagick or GD extensions.",
-      "refs": "https://wpscan.com/vulnerability/a27f70b7-a4cc-42fa-88c1-19adfe1593a8/",
-      "source": "NVD",
-      "time": "2026-07-07 01:35:04"
     }
   ]
 }
