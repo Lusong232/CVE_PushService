@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7017",
+      "title": "高危漏洞: CVE-2026-7017 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-08 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+      "description": "HTTP::Tiny versions before 0.095 for Perl forward credential headers to cross-origin redirect targets.\n\nWhen the server returns a 3xx redirect, `_maybe_redirect` follows the `Location:` header and `_prepare_headers_and_cb` re-merges the caller's `headers` argument into the new request, without checking whether the redirect target shares an origin with the original URL. Caller-supplied `Authorization`, `Cookie` and `Proxy-Authorization` headers are therefore re-sent to whatever host the redirect names, across scheme, host or port boundaries, and including `https` to `http` downgrades that expose them in plaintext on the wire.\n\nThe HTTP::Tiny POD note that \"Authorization headers will not be included in a redirected request\" applied only to the URL-userinfo Basic-auth path, not to headers passed explicitly by the caller.",
+      "refs": "https://github.com/Perl-Toolchain-Gang/HTTP-Tiny/commit/84984ef3930ddd4afcf5eb83b40d3cee200739c3.patch\nhttps://github.com/Perl-Toolchain-Gang/HTTP-Tiny/commit/8f32ca89e21c3ad0422adc698fa6ad17a193f55f.patch\nhttps://github.com/Perl-Toolchain-Gang/HTTP-Tiny/commit/e7a03aedf2395158f2b0d3bad2df943349227bb3.patch",
+      "source": "NVD",
+      "time": "2026-07-08 06:04:36"
+    },
+    {
+      "cve_id": "CVE-2026-59800",
+      "title": "高危漏洞: CVE-2026-59800 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-08 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "9Router before 0.4.44 contains an OS command injection vulnerability in the unauthenticated POST /api/tunnel/tailscale-install endpoint (this route is not covered by the dashboard middleware matcher, so no authorization check is applied). The sudoPassword field from the request body is written to the stdin of a 'sudo -S sh' child process. When sudo does not prompt for a password (the process runs as root, NOPASSWD is configured, or a recent sudo timestamp cache exists), the sudoPassword value is interpreted by sh as a shell command, allowing a remote unauthenticated attacker to execute arbitrary OS commands. Exploitation evidence was first observed by the Shadowserver Foundation on 2026-07-04 (UTC).",
+      "refs": "https://github.com/decolua/9router/security/advisories/GHSA-g6g7-pvmx-m74p\nhttps://www.vulncheck.com/advisories/9router-os-command-injection-via-sudopassword-parameter-in-tailscale-install-endpoint",
+      "source": "NVD",
+      "time": "2026-07-08 06:04:31"
+    },
+    {
+      "cve_id": "CVE-2026-59708",
+      "title": "高危漏洞: CVE-2026-59708 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-08 03:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The GET /api/v1/public/:accessId/portfolio endpoint in ghostfolio accepts private access IDs without validating granteeUserId filtering, allowing unauthenticated access to full portfolio data. Attackers with a private access ID can retrieve sensitive portfolio information including holdings, quantities, buy prices, and performance metrics without authentication.",
+      "refs": "https://github.com/ghostfolio/ghostfolio\nhttps://github.com/ghostfolio/ghostfolio/commit/697ef59e3b58bebc5c21a9e482e4f5643390f316\nhttps://github.com/ghostfolio/ghostfolio/issues/7197",
+      "source": "NVD",
+      "time": "2026-07-08 06:04:27"
+    },
+    {
       "cve_id": "CVE-2026-57851",
       "title": "高危漏洞: CVE-2026-57851 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1066,39 +1099,6 @@
       "refs": "https://camel.apache.org/security/CVE-2026-40047.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/2",
       "source": "NVD",
       "time": "2026-07-07 06:05:21"
-    },
-    {
-      "cve_id": "CVE-2026-48316",
-      "title": "高危漏洞: CVE-2026-48316 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-07 01:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:49"
-    },
-    {
-      "cve_id": "CVE-2025-53831",
-      "title": "高危漏洞: CVE-2025-53831 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-07 01:16:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L",
-      "description": "DrawIO for ownCloud is an application for using DrawIO with the file storage, synchronization, and sharing application ownCloud Classic. In DrawIO for ownCloud prior to version 1.0.2, which corresponds to ownCloud 10 prior to version 10.15.3, attackers with access to the DrawIO app can leverage improper neutralization of input during web page generation to achieve stored XSS. Upgrade ownCloud 10 to version 10.15.3 or later or upgrade DrawIO for ownCloud 10 to version 1.0.2 or later to receive a patch.",
-      "refs": "https://github.com/owncloud/security-advisories/security/advisories/GHSA-r9j8-fr2h-m47q",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:45"
-    },
-    {
-      "cve_id": "CVE-2026-59196",
-      "title": "高危漏洞: CVE-2026-59196 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-07 00:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
-      "description": "pnpm is a package manager. Prior to 10.34.4 and 11.7.0, a crafted lockfile alias could be joined directly under a hoisted node_modules directory. Traversal aliases could escape that directory, while reserved aliases such as .bin or .pnpm could overwrite pnpm-owned layout.  This vulnerability is fixed in 10.34.4 and 11.7.0.",
-      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-fr4h-3cph-29xv",
-      "source": "NVD",
-      "time": "2026-07-07 03:41:41"
     }
   ]
 }
