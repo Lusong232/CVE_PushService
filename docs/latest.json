@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-6101",
+      "title": "高危漏洞: CVE-2026-6101 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-07 22:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The AMP for WP – Accelerated Mobile Pages plugin for WordPress is vulnerable to Arbitrary File Write in versions up to and including 1.1.12. This is due to unsafe ZIP file extraction in the ampforwp_save_local_font() function combined with inadequate cleanup that fails to remove nested directories and files. This makes it possible for authenticated attackers, with Author-level access and above, and permissions granted by an Administrator, to write arbitrary files to the server in a web-accessible location, potentially leading to remote code execution on hosts that execute PHP files in the uploads directory.",
+      "refs": "https://plugins.trac.wordpress.org/browser/accelerated-mobile-pages/tags/1.1.12/accelerated-moblie-pages.php#L1616\nhttps://plugins.trac.wordpress.org/browser/accelerated-mobile-pages/tags/1.1.12/includes/options/admin-config.php#L1700\nhttps://plugins.trac.wordpress.org/browser/accelerated-mobile-pages/tags/1.1.12/includes/options/redux-core/core/panel.php#L175",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:35"
+    },
+    {
+      "cve_id": "CVE-2026-53479",
+      "title": "高危漏洞: CVE-2026-53479 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-07 22:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper neutralization of special elements used in an OS command ('OS command Injection') vulnerability. A remote high privileged attacker could potentially exploit this vulnerability, leading to protection mechanism bypass. This is a Critical vulnerability as it allows an attacker to invoke arbitrary command execution with root privileges; so Dell recommends customers to upgrade at the earliest opportunity.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:31"
+    },
+    {
+      "cve_id": "CVE-2026-44938",
+      "title": "高危漏洞: CVE-2026-44938 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-07 22:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been identified in Fleet's agent-side deployer, which did not filter security-sensitive keys from namespaceLabels in fleet.yaml (or BundleDeployment.spec.options.namespaceLabels) when applying them to the target namespace.\n\n\n\n\nAn attacker with git push access to a\n Fleet-monitored repository could overwrite Pod Security Standards (PSS)\n enforcement labels on a target namespace. This allows the attacker to \nweaken admission controls and deploy workloads that PSS policies would \notherwise block.",
+      "refs": "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2026-44938\nhttps://github.com/advisories/GHSA-864g-863m-vcvq",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:25"
+    },
+    {
+      "cve_id": "CVE-2026-53483",
+      "title": "高危漏洞: CVE-2026-53483 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-07 21:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 an improper authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to unauthorized access. This is a critical severity vulnerability as it allows an attacker to take complete control of system; so Dell recommends customers to upgrade at the earliest opportunity.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:20"
+    },
+    {
+      "cve_id": "CVE-2026-53481",
+      "title": "高危漏洞: CVE-2026-53481 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-07 21:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper limitation of a pathname to a restricted directory ('Path Traversal') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to unauthorized access to the system. This is a critical severity vulnerability as it allows an attacker to take complete control of system; so Dell recommends customers to upgrade at the earliest opportunity.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:14"
+    },
+    {
+      "cve_id": "CVE-2026-13696",
+      "title": "高危漏洞: CVE-2026-13696 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-07 20:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of special elements used in an LDAP query ('LDAP injection') vulnerability in HAVELSAN Inc. Liman MYS allows LDAP Injection.\n\nThis issue affects Liman MYS: before release.Master.1107.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0504",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:10"
+    },
+    {
+      "cve_id": "CVE-2026-11348",
+      "title": "高危漏洞: CVE-2026-11348 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-07 20:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper verification of cryptographic signature vulnerability in HAVELSAN Inc. Liman MYS allows Fake the Source of Data.\n\nThis issue affects Liman MYS: before release.Master.1107.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0504",
+      "source": "NVD",
+      "time": "2026-07-08 01:05:02"
+    },
+    {
+      "cve_id": "CVE-2026-4375",
+      "title": "高危漏洞: CVE-2026-4375 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-07-07 14:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The DoLeads Integrator WordPress plugin through 0.65, wp2epub WordPress plugin through 0.65 have been seen to be used to achieve RCE, once they are added adding to a blog, for example using a vulnerability where unclosed extensions from wordpress.org can be installed by unauthorized users.",
+      "refs": "https://wpscan.com/vulnerability/dd043e6c-e6c6-4c8d-aab0-5265d28f5cf6/",
+      "source": "NVD",
+      "time": "2026-07-08 01:04:58"
+    },
+    {
+      "cve_id": "CVE-2026-12375",
+      "title": "高危漏洞: CVE-2026-12375 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-07 14:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The uncanny-automator-pro WordPress plugin before 7.3.0.6 was distributed with malicious code after the vendor's uncanny-automator-pro WordPress plugin before 7.3.0.6 update/distribution infrastructure was compromised; the injected backdoor grants unauthenticated attackers an administrator session on affected sites and beacons the site's secret keys and administrator details to attacker-controlled servers.",
+      "refs": "https://wpscan.com/vulnerability/ddc83705-3df6-427c-957b-935135330f73/",
+      "source": "NVD",
+      "time": "2026-07-08 01:04:49"
+    },
+    {
+      "cve_id": "CVE-2026-40138",
+      "title": "高危漏洞: CVE-2026-40138 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-07 01:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A critical pre-authentication vulnerability exists in the authentication subsystem of BeyondTrust Remote Support and Privileged Remote Access. Improper validation of authentication data may allow a network-positioned attacker to bypass access controls and gain unauthorized access to the appliance, including accounts with elevated privileges. Exploitation requires a specific authentication configuration to be enabled",
+      "refs": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-03",
+      "source": "NVD",
+      "time": "2026-07-08 01:04:43"
+    },
+    {
       "cve_id": "CVE-2026-11340",
       "title": "高危漏洞: CVE-2026-11340 (CVSS 8.3)",
       "cvss_score": 8.3,
@@ -989,116 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/a27f70b7-a4cc-42fa-88c1-19adfe1593a8/",
       "source": "NVD",
       "time": "2026-07-07 01:35:04"
-    },
-    {
-      "cve_id": "CVE-2026-12083",
-      "title": "高危漏洞: CVE-2026-12083 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-06 16:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Admin and Site Enhancements (ASE) WordPress plugin before 8.8.4, admin-site-enhancements-pro WordPress plugin before 8.8.4 does not perform authentication, authorization, or nonce checks on a role-restoration request handler, allowing unauthenticated attackers to restore a previously demoted administrator account back to the administrator role. This is an incomplete fix of CVE-2024-43333 / CVE-2025-24648, which closed the issue for only one of the demotion paths the WordPress role API exposes.",
-      "refs": "https://wpscan.com/vulnerability/a0c94f7f-6314-4ff2-bb92-ec02146975ff/",
-      "source": "NVD",
-      "time": "2026-07-07 01:34:58"
-    },
-    {
-      "cve_id": "CVE-2026-11962",
-      "title": "高危漏洞: CVE-2026-11962 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-06 16:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The FileOrganizer  WordPress plugin before 1.2.0 does not validate the file type on several of its file-management operations, allowing authenticated users who have been granted file-manager access — which its premium add-on can extend to sub-administrator roles — to upload arbitrary PHP files and achieve remote code execution. This is an incomplete fix of CVE-2024-7985, which only added file-type validation to the upload operation.",
-      "refs": "https://wpscan.com/vulnerability/88390679-80c5-439f-89d1-2f46aff8cfdb/",
-      "source": "NVD",
-      "time": "2026-07-07 01:34:54"
-    },
-    {
-      "cve_id": "CVE-2026-11855",
-      "title": "高危漏洞: CVE-2026-11855 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-06 16:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Simple Membership WordPress plugin before 4.7.5 does not verify the authenticity of Stripe webhook requests when no signing secret is configured, nor escape a value taken from them before outputting it in an administrator notice, allowing unauthenticated attackers to inject arbitrary web scripts that execute in the context of a logged-in administrator.",
-      "refs": "https://wpscan.com/vulnerability/217cb606-a0f2-4427-9262-cfe1cc90474e/",
-      "source": "NVD",
-      "time": "2026-07-07 01:34:49"
-    },
-    {
-      "cve_id": "CVE-2026-11766",
-      "title": "高危漏洞: CVE-2026-11766 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-07-06 16:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Ultimate Member  WordPress plugin before 2.12.0 does not properly sanitise and escape the value of custom textarea profile fields before outputting it on user profiles, allowing authenticated users with Subscriber-level access and above to store JavaScript that executes when any user, including an administrator, views the affected profile.",
-      "refs": "https://wpscan.com/vulnerability/96adb2d3-af34-4455-97d4-90af58049e78/",
-      "source": "NVD",
-      "time": "2026-07-07 01:34:44"
-    },
-    {
-      "cve_id": "CVE-2026-10830",
-      "title": "高危漏洞: CVE-2026-10830 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-06 16:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The AllCoach  WordPress plugin before 1.0.2 does not verify that an email address submitted to a public account-registration endpoint is not already associated with an existing user before overwriting that user's password, allowing unauthenticated attackers to reset the password of arbitrary accounts, including administrators, and take over the site.",
-      "refs": "https://wpscan.com/vulnerability/194e35d8-08ca-402d-a9bb-52383bc3dfab/",
-      "source": "NVD",
-      "time": "2026-07-07 01:34:39"
-    },
-    {
-      "cve_id": "CVE-2024-6228",
-      "title": "高危漏洞: CVE-2024-6228 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-06 16:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Notifications for Forms & WordPress Actions WordPress plugin before 2.6 does not validate a user-supplied value before using it to build a server-side file inclusion path, allowing authenticated users with subscriber-level access and above to include and execute arbitrary local PHP files on the server.",
-      "refs": "https://wpscan.com/vulnerability/6382bfea-6265-4f4b-b26e-4219d9ed78aa/",
-      "source": "NVD",
-      "time": "2026-07-07 01:34:33"
-    },
-    {
-      "cve_id": "CVE-2026-6901",
-      "title": "高危漏洞: CVE-2026-6901 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-06 19:16:31",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Untrusted Search Path vulnerability in B&R Industrial Automation GmbH APROL.\n\nThis issue affects APROL: before R 4.4-01P5.",
-      "refs": "https://br-cws-assets.de-fra-1.linodeobjects.com/SA26P011-661853b7.pdf",
-      "source": "NVD",
-      "time": "2026-07-06 20:37:13"
-    },
-    {
-      "cve_id": "CVE-2026-6900",
-      "title": "高危漏洞: CVE-2026-6900 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-06 19:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Improper certificate validation vulnerability in B&R Industrial Automation GmbH APROL.\n\nThis issue affects APROL: before R 4.4-01P5.",
-      "refs": "https://br-cws-assets.de-fra-1.linodeobjects.com/SA26P011-661853b7.pdf",
-      "source": "NVD",
-      "time": "2026-07-06 20:37:09"
-    },
-    {
-      "cve_id": "CVE-2026-4249",
-      "title": "高危漏洞: CVE-2026-4249 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-06 19:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-      "description": "The throttling event handling mechanism in multiple WSO2 products accepts user-supplied JSON payloads without sufficient validation of their structure and content. This allows an unauthenticated remote attacker to inject malicious JSON data that can lead to a persistent denial of service condition.\n\nSuccessful exploitation of this vulnerability can disrupt the API Gateway, preventing legitimate API traffic from being processed and impacting complete service availability. The denial of service is persistent, requiring manual intervention to restore normal operations.",
-      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5236/",
-      "source": "NVD",
-      "time": "2026-07-06 20:37:04"
-    },
-    {
-      "cve_id": "CVE-2026-9165",
-      "title": "高危漏洞: CVE-2026-9165 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-06 17:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). Central does not limit the depth of GraphQL queries served on the authenticated GraphQL API. An authenticated user with a valid API token can send deeply nested queries that cause excessive resource consumption in Central, resulting in a denial of service for the management plane.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-9165\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2480505",
-      "source": "NVD",
-      "time": "2026-07-06 20:37:00"
     }
   ]
 }
