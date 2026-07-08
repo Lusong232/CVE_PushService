@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-60002",
+      "title": "高危漏洞: CVE-2026-60002 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-08 09:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "ssh in OpenSSH before 10.4 can have a use-after-free when a server changes its host key during a key re-exchange. (This outcome occurs only on the client side.)",
+      "refs": "https://marc.info/?l=openssh-unix-dev&m=178333966933090&w=2\nhttps://www.openssh.org/releasenotes.html#10.4p1\nhttps://www.openwall.com/lists/oss-security/2026/07/06/5",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:52"
+    },
+    {
+      "cve_id": "CVE-2026-56843",
+      "title": "高危漏洞: CVE-2026-56843 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-08 09:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Incorrect authorization in the XML-RPC API of WebPros Plesk before 18.0.78.4 allows a low-privileged authenticated customer to look up domains they do not own, because ownership is enforced only for certain lookup filters and schema validation is bypassed for legacy protocol versions. This results in cross-tenant disclosure of other tenants' FTP credentials stored in cleartext, which can be leveraged to execute code as another tenant's system user.",
+      "refs": "https://support.plesk.com/hc/en-us/articles/41178305151255-Vulnerability-in-Plesk-XML-API-Cleartext-FTP-Password-Exposure",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:44"
+    },
+    {
+      "cve_id": "CVE-2026-55436",
+      "title": "高危漏洞: CVE-2026-55436 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-08 09:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Coder allows organizations to provision remote development environments via Terraform. Starting in version 2.30.0 and prior to versions 2.32.7, 2.33.8, and 2.34.2, the AI Bridge Proxy (`aibridgeproxyd`) created a goproxy server whose default transport set `InsecureSkipVerify: true` and only assigned a secure transport when an upstream proxy was configured. In the default configuration (no upstream proxy), outbound HTTPS to the Coder access URL accepted any TLS certificate. Practical exploitation requires an on-path (man-in-the-middle) position between the AI Bridge Proxy and the Coder server. Deployments where they are co-located over loopback are effectively unaffected. The fix in versions 2.32.7, 2.33.8, and 2.34.2 applies the secure transport (TLS 1.2 or higher using system root CAs) unconditionally. As a workaround, ensure the Coder access URL uses a trusted certificate and secure the network path between the AI Bridge Proxy and the Coder server (for example, loopback or mTLS).",
+      "refs": "https://github.com/coder/coder/pull/26131\nhttps://github.com/coder/coder/releases/tag/v2.32.7\nhttps://github.com/coder/coder/releases/tag/v2.33.8",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:39"
+    },
+    {
+      "cve_id": "CVE-2026-55431",
+      "title": "高危漏洞: CVE-2026-55431 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-08 09:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Coder allows organizations to provision remote development environments via Terraform. Prior to versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2, `coder open app` opens external workspace-app URLs without validating the scheme or host. When an external app URL contains the `$SESSION_TOKEN` placeholder the CLI replaces it with the user's real session token before handing the URL to the OS open handler. Practical exploitation requires the victim to run `coder open app` against a workspace whose external app definition the attacker controls. Only a malicious template author can control external app URLs. The fix in versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2 applies a URL-scheme allowlist in the CLI and limits `$SESSION_TOKEN` substitution to trusted destinations like the web frontend. As a workaround, avoid running `coder open app` for untrusted workspaces.",
+      "refs": "https://github.com/coder/coder/pull/26146\nhttps://github.com/coder/coder/releases/tag/v2.29.17\nhttps://github.com/coder/coder/releases/tag/v2.32.7",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:33"
+    },
+    {
+      "cve_id": "CVE-2026-55429",
+      "title": "高危漏洞: CVE-2026-55429 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-08 08:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Coder allows organizations to provision remote development environments via Terraform. Prior to versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2, `UpsertWorkspaceApp` overwrites an existing app's `agent_id` on a primary-key conflict and `insertAgentApp` accepts the app ID from the provisioner's `CompleteJob` payload without verifying it belongs to the workspace being built. `CompleteJob` runs under `dbauthz.AsProvisionerd` so the authorization layer does not block the cross-workspace upsert. Exploitation requires elevated access as a template author or external provisioner operator. The fix in versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2 verifies that any existing `workspace_apps` row matching the supplied ID belongs to the workspace being built and rejects cross-workspace agent reassignment. No known workarounds are available.",
+      "refs": "https://github.com/coder/coder/pull/26103\nhttps://github.com/coder/coder/releases/tag/v2.29.17\nhttps://github.com/coder/coder/releases/tag/v2.32.7",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:28"
+    },
+    {
+      "cve_id": "CVE-2026-55428",
+      "title": "高危漏洞: CVE-2026-55428 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-08 08:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Coder allows organizations to provision remote development environments via Terraform. Prior to versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2, the tailnet coordinator validates that an agent's `Addresses` derive from its authenticated UUID but applies no equivalent check to `AllowedIPs`. The coordinator forwards agent-supplied `AllowedIPs` verbatim to tunnel peers which install them into the WireGuard peer configuration. The fix in versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2 validates each `AllowedIPs` prefix against the authenticating agent's UUID just like `Addresses`. As a workaround, monitor coordinator logs for agents advertising unexpected `AllowedIPs` prefixes.",
+      "refs": "https://github.com/coder/coder/pull/26144\nhttps://github.com/coder/coder/releases/tag/v2.29.17\nhttps://github.com/coder/coder/releases/tag/v2.32.7",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:22"
+    },
+    {
+      "cve_id": "CVE-2026-55427",
+      "title": "高危漏洞: CVE-2026-55427 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-08 08:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Coder allows organizations to provision remote development environments via Terraform. Prior to versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2, `coder config-ssh` wrote server-supplied SSH settings (`HostnameSuffix`, `SSHConfigOptions`) into the user's `~/.ssh/config` without sanitizing embedded newlines or restricting directives so a malicious or compromised Coder server could inject arbitrary SSH configuration. Practical exploitation requires control of the server-supplied values through a malicious or compromised deployment, a man-in-the-middle position or admin access to the `HostnameSuffix` and `SSHConfigOptions` settings. The fix in versions 2.29.7, 2.32.7, 2.33.8, and 2.34.2 validates `HostnameSuffix` and `SSHConfigOptions` against a strict character set that rejects newlines and other control characters. As a workaround, inspect `coder config-ssh --dry-run` output before applying changes.",
+      "refs": "https://github.com/coder/coder/pull/26154\nhttps://github.com/coder/coder/releases/tag/v2.29.17\nhttps://github.com/coder/coder/releases/tag/v2.32.7",
+      "source": "NVD",
+      "time": "2026-07-08 13:41:15"
+    },
+    {
       "cve_id": "CVE-2026-59705",
       "title": "高危漏洞: CVE-2026-59705 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://camel.apache.org/security/CVE-2026-46591.html",
       "source": "NVD",
       "time": "2026-07-07 10:05:30"
-    },
-    {
-      "cve_id": "CVE-2026-46590",
-      "title": "高危漏洞: CVE-2026-46590 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-06 17:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in Apache Camel PQC component.\n\nThe camel-pqc component persists post-quantum key metadata (KeyMetadata) through pluggable KeyLifecycleManager implementations. HashicorpVaultKeyLifecycleManager and AwsSecretsManagerKeyLifecycleManager read that metadata back from the configured secret backend by deserializing a Base64-wrapped value with a raw java.io.ObjectInputStream.readObject() and no ObjectInputFilter or class allow-list; the cast to KeyMetadata happens only after readObject() returns, so any readObject() side effects in a crafted object run before the type check. The same unfiltered legacy-migration read also remained in FileBasedKeyLifecycleManager (for the stored KeyPair and KeyMetadata). A principal who can write to the operator-controlled backend that holds these values - the HashiCorp Vault KV path, or the AWS Secrets Manager secret (requiring a Vault token or secretsmanager:PutSecretValue) - could store a crafted serialized object that is deserialized during normal key-lifecycle operations, potentially leading to code execution in the context of the application that manages the keys. This is an incomplete-remediation follow-on to CVE-2026-40048 (CAMEL-23200), which changed FileBasedKeyLifecycleManager to store metadata as JSON / PKCS#8 / X.509 but did not add an ObjectInputFilter, did not cover the Vault and AWS sibling managers, and left FileBasedKeyLifecycleManager's own legacy-migration deserialization unfiltered.\nThis issue affects Apache Camel: from 4.18.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.18.x LTS releases stream, then they are suggested to upgrade to 4.18.3. For deployments that cannot upgrade immediately, restrict write access to the key backend so that only the application's own identity can write the camel-pqc secrets (least-privilege HashiCorp Vault policies and secretsmanager:PutSecretValue IAM), and keep the PQC key material in a backend separate from any data that less-trusted principals can write.",
-      "refs": "https://camel.apache.org/security/CVE-2026-46590.html",
-      "source": "NVD",
-      "time": "2026-07-07 10:05:23"
-    },
-    {
-      "cve_id": "CVE-2026-46585",
-      "title": "高危漏洞: CVE-2026-46585 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-06 17:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Improper Input Validation, Authorization Bypass Through User-Controlled Key vulnerability in Apache Camel Lucene Component.\n\nThe camel-lucene producer reads the search phrase from an Exchange header (LuceneConstants.HEADER_QUERY) whose value was the plain string QUERY (and RETURN_LUCENE_DOCS for HEADER_RETURN_LUCENE_DOCS). Because these names do not start with the Camel / camel prefix, HttpHeaderFilterStrategy - which blocks only the Camel header namespace on the HTTP boundary - let them pass from an inbound HTTP request straight into the Exchange. In a route that exposes a Lucene query operation behind an HTTP consumer (for example platform-http), any HTTP client could therefore set the QUERY header and have its value executed against the full-text index, overriding the query the route intended to run. Depending on what is indexed, this allows reading documents the request should not have access to (for example a match-all query returns the entire index, or the route's intended per-user filter can be replaced), and expensive regular-expression queries can consume significant CPU. No credentials are required when the HTTP consumer is unauthenticated.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. After upgrading, routes that set the query via the raw header name must use CamelLuceneQuery (and CamelLuceneReturnLuceneDocs) instead of QUERY / RETURN_LUCENE_DOCS. For deployments that cannot upgrade immediately, strip the attacker-controllable headers before the Lucene producer and set the query from a trusted source (for example removeHeader('QUERY') and removeHeader('RETURN_LUCENE_DOCS'), then setHeader('QUERY', constant(...)) at the start of the route).",
-      "refs": "https://camel.apache.org/security/CVE-2026-46585.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/12",
-      "source": "NVD",
-      "time": "2026-07-07 10:05:16"
-    },
-    {
-      "cve_id": "CVE-2026-46457",
-      "title": "高危漏洞: CVE-2026-46457 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-06 17:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Improper Input Validation vulnerability in Apache Camel NATS component.\n\nThe camel-nats component maps inbound NATS message headers into the Camel Exchange but defaulted its headerFilterStrategy to a bare new DefaultHeaderFilterStrategy() with no inbound rules configured (NatsConfiguration). With no inFilter, inFilterPattern or inFilterStartsWith set, DefaultHeaderFilterStrategy.applyFilterToExternalHeaders returns not filtered for every header name, so NatsConsumer copies every NATS message header - including Camel-internal control headers such as CamelHttpUri, CamelFileName or CamelSqlQuery - unmodified onto the Camel message. A client able to publish to the consumed NATS subject can therefore inject arbitrary Camel control headers that influence the behaviour of downstream producers in the route (for example redirecting an HTTP producer, changing a file name, or overriding a query); the injected headers also persist across internal direct, seda and vm hops. The concrete downstream impact depends on which producers the route uses. NATS message headers require NATS 2.2 or later, and the issue is reachable without credentials when the NATS server is configured without authentication (the NATS server default).\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix makes camel-nats default to a dedicated NatsHeaderFilterStrategy that filters the Camel header namespace case-insensitively on inbound mapping, so client-supplied Camel* / camel* headers are no longer copied into the Exchange. For deployments that cannot upgrade immediately, strip the Camel control headers from inbound NATS messages before they reach any downstream producer (for example removeHeaders('Camel*') and removeHeaders('camel*') at the start of the route), and enable authentication on the NATS server so that only trusted clients can publish to the consumed subject.",
-      "refs": "https://camel.apache.org/security/CVE-2026-46457.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/10",
-      "source": "NVD",
-      "time": "2026-07-07 10:05:08"
-    },
-    {
-      "cve_id": "CVE-2026-46456",
-      "title": "高危漏洞: CVE-2026-46456 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-06 17:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Input Validation vulnerability in Apache Camel AWS2-SQS Component.\n\n\nThe camel-aws2-sqs component map inbound message attributes into the Camel Exchange through a component-specific HeaderFilterStrategy. Sqs2HeaderFilterStrategy configured only an outbound filter (setOutFilterPattern, which blocks Camel*, breadcrumbId and org.apache.camel.* headers being written to the broker) but did not configure an inbound filter. As a result, when Sqs2Consumer copies each SQS MessageAttribute into the Exchange via HeaderFilterStrategy.applyFilterToExternalHeaders, DefaultHeaderFilterStrategy applied no inbound rule and treated every header name as not filtered - including Camel-internal control headers such as CamelHttpUri, CamelFileName or CamelSqlQuery - copying them unmodified onto the Camel message. Any principal able to send messages to the consumed SQS queue (for example a cross-account sender or a lower-privileged in-account component holding sqs:SendMessage) could therefore set arbitrary Camel control headers that influence the behaviour of downstream producers in the route (for example redirecting an HTTP producer, changing a file name, or overriding a query); the injected headers also persist across internal direct, seda and vm hops. The concrete downstream impact depends on which producers the route uses.\n\n\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix adds an inbound HeaderFilterStrategy rule to Sqs2HeaderFilterStrategy that filters the Camel header namespace case-insensitively on inbound mapping, so sender-supplied Camel* / camel* headers are no longer copied into the Exchange. For deployments that cannot upgrade immediately, strip the Camel control headers from inbound messages before they reach any downstream producer (for example removeHeaders('Camel*') and removeHeaders('camel*') at the start of the route), and restrict who may send to the consumed SQS queue by applying least-privilege sqs:SendMessage permissions on the queue resource policy.",
-      "refs": "https://camel.apache.org/security/CVE-2026-46456.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/9",
-      "source": "NVD",
-      "time": "2026-07-07 10:05:01"
-    },
-    {
-      "cve_id": "CVE-2026-46455",
-      "title": "高危漏洞: CVE-2026-46455 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-06 17:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Insufficient Session Expiration vulnerability in Apache Camel Keycloak Component.\n\nThe camel-keycloak security helper KeycloakSecurityHelper.parseAndVerifyAccessToken builds a Keycloak TokenVerifier using withChecks(...) with only the subject-exists check and the realm-URL (issuer) check. Keycloak's TokenVerifier.withChecks(...) appends to an initially empty check list - the upstream default checks are installed only when withDefaultChecks() is called - so the built-in IS_ACTIVE predicate, which validates the token's exp (expiration) and nbf (not-before) claims, is never applied. As a result the helper verifies the token signature, subject and issuer but does not enforce the token's validity window: an access token that is expired, or not yet valid, is accepted as valid. Routes that rely on this helper to authenticate inbound requests therefore accept access tokens that are outside their intended lifetime.\nThis issue affects Apache Camel: from 4.18.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix makes KeycloakSecurityHelper.parseAndVerifyAccessToken include the TokenVerifier.IS_ACTIVE check so that expired or not-yet-valid access tokens are rejected, aligning the helper with Keycloak's default check set. For deployments that cannot upgrade immediately, enforce token expiration outside the helper - for example validate the access token's exp/nbf claims in the route before trusting it, keep Keycloak access-token lifetimes short, and ensure any upstream gateway or resource server also validates the token validity window.",
-      "refs": "https://camel.apache.org/security/CVE-2026-46455.html\nhttp://www.openwall.com/lists/oss-security/2026/07/05/8",
-      "source": "NVD",
-      "time": "2026-07-07 10:04:54"
-    },
-    {
-      "cve_id": "CVE-2026-43867",
-      "title": "高危漏洞: CVE-2026-43867 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-06 17:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in Apache Camel PQC Component.\n\nThe camel-pqc component persists post-quantum key metadata (KeyMetadata) through pluggable KeyLifecycleManager implementations. AwsSecretsManagerKeyLifecycleManager.deserializeMetadata() reads that metadata back from the configured AWS Secrets Manager secret by Base64-decoding the stored value and deserializing it with a raw java.io.ObjectInputStream.readObject() and no ObjectInputFilter or class allow-list; the cast to KeyMetadata happens only after readObject() returns, so any readObject() side effects in a crafted object run before the type check. A principal who can write to the AWS Secrets Manager secret that holds this metadata (requiring secretsmanager:PutSecretValue on that secret) could store a crafted serialized object that is deserialized during normal key-lifecycle operations, potentially leading to code execution in the context of the application that manages the keys. This is the same underlying defect, in the same code path and remediated by the same fix, as CVE-2026-46590, which was reported independently and additionally covers the HashiCorp Vault and file-based sibling managers; both are incomplete-remediation follow-ons to CVE-2026-40048 (CAMEL-23200).\nThis issue affects Apache Camel: from 4.18.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.18.x LTS releases stream, then they are suggested to upgrade to 4.18.3. For deployments that cannot upgrade immediately, restrict write access to the AWS Secrets Manager secret that holds the camel-pqc key metadata so that only the application’s own identity holds secretsmanager:PutSecretValue on it (least-privilege IAM), and keep the PQC key material in a secret separate from any data that less-trusted principals can write.",
-      "refs": "https://camel.apache.org/security/CVE-2026-43867.html",
-      "source": "NVD",
-      "time": "2026-07-07 10:04:46"
-    },
-    {
-      "cve_id": "CVE-2026-43866",
-      "title": "高危漏洞: CVE-2026-43866 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-06 17:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Deserialization of Untrusted Data vulnerability in Apache Camel, Apache Camel JMS component.\n\nJmsBinding.extractBodyFromJms() in camel-jms - and the equivalent JmsBinding in camel-sjms - deserializes the payload of an incoming JMS ObjectMessage via jakarta.jms.ObjectMessage.getObject() whenever the mapJmsMessage option is enabled (the default) and Camel acts as a JMS consumer. The CVE-2026-40860 hardening added a post-deserialization class check that rejects classes outside the default allow-list java.**;javax.**;org.apache.camel.**;!*. However org.apache.camel.support.DefaultExchangeHolder itself lives in the allow-listed org.apache.camel.** namespace, so an ObjectMessage whose top-level object is a DefaultExchangeHolder passes the check. The receiving side then calls DefaultExchangeHolder.unmarshal() on it without requiring the transferExchange option to be enabled - an asymmetric trust boundary, since the sending side gates ObjectMessage and transferExchange handling but the receiving side did not - writing every non-null field of the holder into the Exchange: the message body, the IN and OUT headers, the exchange properties, the variables, the exchange id and the exception. An attacker who can publish an ObjectMessage to a queue or topic consumed by an affected Camel application can therefore inject arbitrary Exchange state using only universally-trusted java.lang and java.util types, with no deserialization gadget chain required, to manipulate routing and headers, exchange properties and error handling. The same handling applies to camel-sjms and camel-sjms2, and to the JMS-family components built on JmsComponent and JmsBinding: camel-amqp, camel-activemq and camel-activemq6. This is a bypass of the CVE-2026-40860 fix rather than a flaw in it.\nThis issue affects Apache Camel: from 3.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0; Apache Camel: from 3.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. After upgrading, JMS ObjectMessage handling is disabled by default in camel-jms, camel-sjms and the JMS-family components (a new objectMessageEnabled option defaults to false at the component and endpoint level), so an incoming ObjectMessage - including a DefaultExchangeHolder payload - is no longer deserialized unless the option is explicitly enabled; only set objectMessageEnabled=true when the consumed JMS destination is fed exclusively by trusted producers. For deployments that cannot upgrade immediately, restrict publish access to the queues and topics consumed by Camel to trusted producers via JMS broker authorization, and do not expose JMS consumers that map ObjectMessage bodies to untrusted networks; a JMS-provider deserialization allow-list does not mitigate this specific bypass because the crafted payload uses only universally-trusted classes.",
-      "refs": "https://camel.apache.org/security/CVE-2026-43866.html",
-      "source": "NVD",
-      "time": "2026-07-07 10:04:39"
     }
   ]
 }
