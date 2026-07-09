@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-59224",
+      "title": "高危漏洞: CVE-2026-59224 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-10 01:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. Prior to 0.10.0, backend/open_webui/routers/terminals.py built the ws_terminal upstream URL from an unencoded session_id and appended user_id as a query parameter, allowing query injection to make the terminal backend resolve another user identity; the HTTP proxy path also forwarded X-User-Id as an integrity-unbound identity claim. This issue is fixed in version 0.10.0.",
+      "refs": "https://github.com/open-webui/open-webui/commit/5f3a628a8d291bb5d33e1a0b0c89fb62a2927934\nhttps://github.com/open-webui/open-webui/pull/26042\nhttps://github.com/open-webui/open-webui/releases/tag/v0.10.0",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:57"
+    },
+    {
+      "cve_id": "CVE-2026-59219",
+      "title": "高危漏洞: CVE-2026-59219 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-10 01:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.0 before 0.10.0 with Redis configured, Socket.IO connect, user-join, join-channels, join-note, and the terminal websocket first-message authentication used decode_token without the Redis-backed is_valid_token revocation check, allowing revoked JWTs to continue authenticating realtime connections. This issue is fixed in version 0.10.0.",
+      "refs": "https://github.com/open-webui/open-webui/commit/33b91bd8ae8a100a5a306c91441a7d0b422c4cde\nhttps://github.com/open-webui/open-webui/releases/tag/v0.10.0\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-855v-hq7w-jmjw",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:53"
+    },
+    {
+      "cve_id": "CVE-2026-59216",
+      "title": "高危漏洞: CVE-2026-59216 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-10 01:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. Prior to 0.10.0, get_event_call delivered execute:python and execute:tool Socket.IO events to a client-supplied session_id after checking only that the session was connected, allowing authenticated users who learned another socket ID through ydoc:document:join to run code interpreter Python or tools in that user session. This issue is fixed in version 0.10.0.",
+      "refs": "https://github.com/open-webui/open-webui/commit/386ac958144dbbbf0aa6e268070d72b681a318aa\nhttps://github.com/open-webui/open-webui/pull/25763\nhttps://github.com/open-webui/open-webui/releases/tag/v0.10.0",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:45"
+    },
+    {
+      "cve_id": "CVE-2026-59214",
+      "title": "高危漏洞: CVE-2026-59214 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-10 01:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. Prior to 0.10.0, Open WebUI runs client-side Python with Pyodide in a same-origin web worker, allowing stored chat payloads that use pyodide.http.pyfetch or the js module fetch and XMLHttpRequest APIs to issue authenticated same-origin requests when a victim clicks Run, which can reach admin-only endpoints and execute server-side code through configured tools. This issue is fixed in version 0.10.0.",
+      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-4r2p-27mh-5m22",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:41"
+    },
+    {
+      "cve_id": "CVE-2026-58459",
+      "title": "高危漏洞: CVE-2026-58459 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-10 01:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injection vulnerability in gpsprof that allows attackers who control the GPS device subtype value to execute arbitrary shell commands by embedding backtick payloads in the gnuplot plot title without proper escaping. The subtype field sourced from a DEVICES JSON log entry or NMEA PGRMT sentence is written into a generated gnuplot program via a set title statement with only double-quote characters escaped, enabling arbitrary shell command execution as the user running gnuplot when the victim renders the generated plot through the gpsprof and gnuplot workflow.",
+      "refs": "https://github.com/ntpsec/gpsd/commit/1a6bb7bcbdf58aa940132e630870af061dc88537\nhttps://github.com/ntpsec/gpsd/commit/4c06658e988f4ced1a7a574ce082a22ef625df56\nhttps://github.com/ntpsec/gpsd/commit/5581ba196d826a984fbfaf792b7d58535f9911ce",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:36"
+    },
+    {
+      "cve_id": "CVE-2026-15190",
+      "title": "高危漏洞: CVE-2026-15190 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-10 01:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in SourceCodester Simple and Nice Shopping Cart Script 1.0. This affects an unknown part of the file /login.php. Performing a manipulation of the argument Username results in sql injection. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
+      "refs": "https://github.com/zainaakinyi45-boop/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-15190\nhttps://vuldb.com/submit/851483",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:30"
+    },
+    {
+      "cve_id": "CVE-2026-11404",
+      "title": "高危漏洞: CVE-2026-11404 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-10 00:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Cesanta Mongoose before 7.22 contains an out-of-bounds read in the built-in TLS server function mg_tls_server_recv_hello(), which uses an attacker-controlled session_id_len byte from a TLS ClientHello as a buffer index without validating it against the length of received data. A remote, unauthenticated attacker can send a single crafted ClientHello with an oversized session id length to read past the receive buffer, crashing any HTTPS, MQTTS, or WSS service built on MG_TLS_BUILTIN.",
+      "refs": "https://github.com/cesanta/mongoose\nhttps://github.com/cesanta/mongoose/commit/c288ac1f38424ffdd4d2fd5e1893fd4962642db3\nhttps://github.com/cesanta/mongoose/releases/tag/7.22",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:26"
+    },
+    {
+      "cve_id": "CVE-2026-14261",
+      "title": "高危漏洞: CVE-2026-14261 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-09 22:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "A vulnerability in the Xerte Online Tools allows for authentication bypass and remote code execution via reinstallation through the /setup/ folder, enabling attackers to reinstall the service to a remote database they control.",
+      "refs": "https://github.com/thexerteproject/xerteonlinetoolkits/commit/8fec6602e80c5d35903d65e65b65b794297d8e90\nhttps://github.com/thexerteproject/xerteonlinetoolkits/issues/1532\nhttps://www.xerte.org.uk/index.php/en/news/blog/80-news/364-xerte-3-14-and-3-15-important-security-update",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:20"
+    },
+    {
+      "cve_id": "CVE-2026-12116",
+      "title": "高危漏洞: CVE-2026-12116 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-09 22:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability in the Xerte Online Tools allows for RCE through the antivirus binary path in the tools server settings, which can be changed to a PHP interpreter, allowing an attacker to upload PHP data that will then be executed.",
+      "refs": "https://github.com/thexerteproject/xerteonlinetoolkits/commit/8ef20628f80bd88bd1fe3e5844a9116a910086b7\nhttps://github.com/thexerteproject/xerteonlinetoolkits/issues/1543\nhttps://www.xerte.org.uk/index.php/en/news/blog/80-news/364-xerte-3-14-and-3-15-important-security-update",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:14"
+    },
+    {
+      "cve_id": "CVE-2026-11571",
+      "title": "高危漏洞: CVE-2026-11571 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 15:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Everest Forms  WordPress plugin before 3.5.0 does not reliably delete temporary CSV files generated during email-notification processing and leaves them publicly accessible in the uploads directory, allowing unauthenticated attackers to retrieve other users' form submission records via predictable, enumerable filenames.",
+      "refs": "https://wpscan.com/vulnerability/4bd381e9-2f4e-4e61-99af-88f50aed71f5/",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:10"
+    },
+    {
+      "cve_id": "CVE-2026-52200",
+      "title": "高危漏洞: CVE-2026-52200 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-09 06:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An issue in Generic OEM UZ801_v2.1 4G LTE Router V3.4.3 allows a remote attacker to execute arbitrary code via the /ajax web management API endpoint in MifiService.apk",
+      "refs": "https://github.com/lamaper/CVE-2026-52200\nhttps://github.com/lamaper/UZ801-MifiService-Broken-Access-Control\nhttps://github.com/lamaper/CVE-2026-52200",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:04"
+    },
+    {
+      "cve_id": "CVE-2026-51535",
+      "title": "高危漏洞: CVE-2026-51535 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 06:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In OpENer 2.3.0 (commit 76b95cf), a resource exhaustion (Denial of Service) vulnerability exists in its network processing loop.",
+      "refs": "https://gist.github.com/MrAlaskan/bec306c51fec9f777b2599f5dea09dd1\nhttps://github.com/EIPStackGroup/OpENer/issues/562\nhttps://github.com/EIPStackGroup/OpENer/issues/562",
+      "source": "NVD",
+      "time": "2026-07-10 03:22:00"
+    },
+    {
+      "cve_id": "CVE-2026-35552",
+      "title": "高危漏洞: CVE-2026-35552 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-09 06:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "In CAXperts UPVWebServices 2.4.2212.603 through 2.7.6 and UDiTH Portal 2026.0.0 through 2026.2.0, an authenticated remote user can invoke an administrative API endpoint intended for privileged users. Due to missing authorization checks, this allows the attacker to deactivate the application's license.",
+      "refs": "https://caxperts.com\nhttps://github.com/caxperts/security-advisories/blob/main/2026/CAXSEC-2026-001_portal.md",
+      "source": "NVD",
+      "time": "2026-07-10 03:21:54"
+    },
+    {
+      "cve_id": "CVE-2026-31309",
+      "title": "高危漏洞: CVE-2026-31309 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 06:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Improper authorization in the /tequilapi/config/user endpoint of Mysterium Node before v1.36.0 allows unauthenticated attackers to arbitrarily overwrite the node's configuration and achieve a full node takeover via supplying a crafted POST request.",
+      "refs": "https://github.com/mysteriumnetwork/node/\nhttps://github.com/mysteriumnetwork/node/blob/1.35.5/tequilapi/tequil/routes.go#L26\nhttps://github.com/mysteriumnetwork/node/commit/83051199cd641dd4ed9057b958e5616df1309f19",
+      "source": "NVD",
+      "time": "2026-07-10 03:21:48"
+    },
+    {
       "cve_id": "CVE-2026-60109",
       "title": "高危漏洞: CVE-2026-60109 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -945,160 +1099,6 @@
       "refs": "https://github.com/gradio-app/gradio/commit/1c5c53842df9c2750552d85c19a92e7e732cff3f\nhttps://github.com/gradio-app/gradio/issues/13593\nhttps://github.com/gradio-app/gradio/pull/13596",
       "source": "NVD",
       "time": "2026-07-09 09:57:38"
-    },
-    {
-      "cve_id": "CVE-2026-59803",
-      "title": "高危漏洞: CVE-2026-59803 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 04:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "rpcx through 1.9.3, fixed in commit 047aec1, contains a denial-of-service vulnerability in protocol.Message.Decode (protocol/message.go). When a message has the compression flag set, the payload is gzip-decompressed via util.Unzip with no limit on the decompressed output size. The only built-in size guard, protocol.MaxMessageLength, is checked against the compressed on-the-wire frame length, not the decompressed size, so it provides no protection. Because decoding (and decompression) occurs in readRequest before authentication, a single unauthenticated connection can send a small (under 2 MB) gzip-compressed message that expands to gigabytes of heap allocation, leading to out-of-memory conditions and service unavailability.",
-      "refs": "https://github.com/smallnest/rpcx/commit/047aec18efa7d037105e2b72c36dd2ae05e1acc6\nhttps://github.com/smallnest/rpcx/issues/942\nhttps://github.com/smallnest/rpcx/pull/943",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:34"
-    },
-    {
-      "cve_id": "CVE-2026-59802",
-      "title": "高危漏洞: CVE-2026-59802 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-09 04:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "PasswordPusher before 2.8.1 accepts data URI schemes in URL push payloads due to insufficient validation in the valid_url function. Attackers can create malicious pushes containing data:text/html URIs that execute arbitrary JavaScript in victims' browsers when clicked, enabling phishing and credential theft under the trusted PasswordPusher domain.",
-      "refs": "https://github.com/pglombardo/PasswordPusher/security/advisories/GHSA-76c2-66pg-fj2f\nhttps://www.vulncheck.com/advisories/passwordpusher-redirect-based-xss-via-data-uri-in-url-push-payload",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:29"
-    },
-    {
-      "cve_id": "CVE-2026-58253",
-      "title": "高危漏洞: CVE-2026-58253 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-09 04:16:54",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:L",
-      "description": "NATS Server is a high-performance server for NATS.io, the cloud and edge native messaging system. Prior to 2.14.0, 2.12.7, and 2.11.16, when no_auth_user was configured, a parser fast path intended for ordinary client connections could also apply to route or leafnode listeners, allowing an unauthenticated peer to bypass inter-server CONNECT authentication and operate with the privileges associated with that connection type. This issue is fixed in versions 2.14.0, 2.12.7, and 2.11.16.",
-      "refs": "https://github.com/nats-io/nats-server/commit/7b81dd455ea95960090a84858c7662827948d1b6\nhttps://github.com/nats-io/nats-server/commit/8b8e1ad4ceed32321e00d4fc6e76be05bc13bca6\nhttps://github.com/nats-io/nats-server/commit/b86147e81710a52b72a7f7275f91d69f723f5cb3",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:25"
-    },
-    {
-      "cve_id": "CVE-2026-58250",
-      "title": "高危漏洞: CVE-2026-58250 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 04:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "NATS Server is a high-performance server for NATS.io, the cloud and edge native messaging system. Prior to 2.12.8 and 2.11.17, an unauthenticated peer with network access to a leafnode listener with compression enabled could crash the server during the pre-authentication leafnode handshake by sending repeated leafnode INFO protocol messages before authentication and account setup completed. This issue is fixed in versions 2.12.8 and 2.11.17.",
-      "refs": "https://github.com/nats-io/nats-server/commit/8dcb26eaea78fdcbe96dbee5986d6019fd5cb94a\nhttps://github.com/nats-io/nats-server/commit/fc5fe39177533e9dbdd651d2458285bfae1dde27\nhttps://github.com/nats-io/nats-server/releases/tag/v2.11.17",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:21"
-    },
-    {
-      "cve_id": "CVE-2026-58213",
-      "title": "高危漏洞: CVE-2026-58213 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-09 04:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "NATS Server is a high-performance server for NATS.io, the cloud and edge native messaging system. Prior to 2.14.1 and 2.12.9, an MQTT client could include protocol control characters in subscription filters that were later forwarded as NATS protocol data to route or leafnode connections, corrupting the forwarded protocol stream and allowing injection of unintended NATS protocol operations. This issue is fixed in versions 2.14.1 and 2.12.9.",
-      "refs": "https://github.com/nats-io/nats-server/commit/366837cfc65ab9ccb4f98193c65e8daf238582d8\nhttps://github.com/nats-io/nats-server/commit/64ebae40051ee497c481e10f316238faf0de1736\nhttps://github.com/nats-io/nats-server/commit/f14856b9e57a36818f43851cb69b6e33670885c9",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:16"
-    },
-    {
-      "cve_id": "CVE-2026-58210",
-      "title": "高危漏洞: CVE-2026-58210 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 04:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "NATS Server is a high-performance server for NATS.io, the cloud and edge native messaging system. Prior to 2.14.3 and 2.12.12, an unauthenticated MQTT client could cause the server to retain large incomplete MQTT CONNECT packets before authentication completed, consuming server memory while the parser waited for the advertised MQTT packet length. This issue is fixed in versions 2.14.3 and 2.12.12.",
-      "refs": "https://github.com/nats-io/nats-server/commit/bce9ef39469e610aeddb819194ceb7f7edfc0861\nhttps://github.com/nats-io/nats-server/commit/e016e47bbf70304945f2ae9dc397e4862adefaf5\nhttps://github.com/nats-io/nats-server/releases/tag/v2.12.12",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:10"
-    },
-    {
-      "cve_id": "CVE-2026-55760",
-      "title": "高危漏洞: CVE-2026-55760 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 04:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Handlebars.java provides logic-less and semantic Mustache templates with Java. Prior to 4.5.2, applications that pass user-controlled input to Handlebars.compile() using FileTemplateLoader or ClassPathTemplateLoader are vulnerable to path traversal, allowing arbitrary file read through template names derived from URL path parameters, request parameters, or other user-controlled sources. This issue is fixed in version 4.5.2.",
-      "refs": "https://github.com/jknack/handlebars.java/commit/d177cdee8b750385ca7a0d0f89f2d4be73e28f4e\nhttps://github.com/jknack/handlebars.java/releases/tag/v4.5.2\nhttps://github.com/jknack/handlebars.java/security/advisories/GHSA-r4gv-qr8j-p3pg",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:06"
-    },
-    {
-      "cve_id": "CVE-2026-55404",
-      "title": "高危漏洞: CVE-2026-55404 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "yt-dlp and youtube-dl are command-line audio/video downloaders. Prior to 2026.7.4, the --write-link, --write-url-link, and --write-desktop-link options can write .url or .desktop shortcut files using attacker-controlled webpage_url or filename metadata without sufficient validation or escaping, allowing malicious file:// URI injection on Windows or newline-based desktop entry key injection on Linux that can execute commands if the generated shortcut is opened. This issue is fixed in version 2026.7.4.",
-      "refs": "https://github.com/yt-dlp/yt-dlp/commit/b6590aaa1e3808155d69c9a79a797ae484163789\nhttps://github.com/yt-dlp/yt-dlp/releases/tag/2026.07.04\nhttps://github.com/yt-dlp/yt-dlp/security/advisories/GHSA-6v4j-43gg-vj32",
-      "source": "NVD",
-      "time": "2026-07-09 09:57:01"
-    },
-    {
-      "cve_id": "CVE-2026-14891",
-      "title": "高危漏洞: CVE-2026-14891 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-07-09 04:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "HashiCorp Nomad and Nomad Enterprise are vulnerable to a sandbox escape in the Docker task driver that may allow a job submitter to bind-mount a host path into a container even when volume bind mounts are disabled, potentially leading to reading and writing files on the host. This vulnerability, CVE-2026-14891, is fixed in Nomad Community Edition 2.0.4 and Nomad Enterprise 2.0.4, 1.11.8, and 1.10.14.",
-      "refs": "https://discuss.hashicorp.com/t/hcsec-2026-21-nomad-vulnerable-to-sandbox-escape-in-docker-task-driver/77561",
-      "source": "NVD",
-      "time": "2026-07-09 09:56:56"
-    },
-    {
-      "cve_id": "CVE-2026-14373",
-      "title": "高危漏洞: CVE-2026-14373 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-09 04:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "HashiCorp Nomad and Nomad Enterprise did not enforce the allow_privileged restriction for the Docker task driver's host namespace mode options. This may allow an authenticated job submitter to run a container in a host namespace and access information belonging to the host or to other workloads on the same client. This vulnerability, CVE-2026-14373, is fixed in Nomad Community Edition 2.0.4 and Nomad Enterprise 2.0.4, 1.11.8, and 1.10.14.",
-      "refs": "https://discuss.hashicorp.com/t/hcsec-2026-19-nomad-docker-driver-vulnerable-to-host-namespace-bypass-on-linux/77557",
-      "source": "NVD",
-      "time": "2026-07-09 09:56:51"
-    },
-    {
-      "cve_id": "CVE-2026-39822",
-      "title": "高危漏洞: CVE-2026-39822 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-09 01:17:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "On Unix systems, opening a file in an os.Root improperly follows symlinks to locations outside of the Root when the final path component of the a path is a symbolic link and the path ends in /. For example, 'root.Open(\"symlink/\")' will open \"symlink\" even when \"symlink\" is a symbolic link pointing outside of the root.",
-      "refs": "https://go.dev/cl/797880\nhttps://go.dev/issue/79005\nhttps://groups.google.com/g/golang-announce/c/OrmQE_Yp5Sc",
-      "source": "NVD",
-      "time": "2026-07-09 09:56:46"
-    },
-    {
-      "cve_id": "CVE-2026-59257",
-      "title": "高危漏洞: CVE-2026-59257 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-08 22:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "n8n before 1.123.61, 2.x before 2.27.4, and 2.28.x before 2.28.1 contains a SQL injection vulnerability in the legacy MySQL v1 node's executeQuery operation. The operation substitutes evaluated {{ ... }} expression values directly into the raw SQL string without parameterization. When a workflow uses this operation with expression-sourced values and is connected to an externally-reachable trigger (such as a Webhook node), attacker-controlled input reaching those expressions results in SQL injection, allowing execution of arbitrary SQL with the configured MySQL credentials' privileges. The MySQL v2 node, which uses parameterized queries, is not affected.",
-      "refs": "https://github.com/n8n-io/n8n/security/advisories/GHSA-hwmj-qg4v-cvg9\nhttps://www.vulncheck.com/advisories/n8n-sql-injection-in-mysql-v1-executequery-operation-via-expression-interpolation",
-      "source": "NVD",
-      "time": "2026-07-09 05:58:20"
-    },
-    {
-      "cve_id": "CVE-2026-60102",
-      "title": "高危漏洞: CVE-2026-60102 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-09 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Horde Virtual File System (VFS) API before 3.0.1 contains an OS command injection vulnerability in the Horde_Vfs_Smb driver where the _escapeShellCommand() method fails to sanitize command substitution sequences, allowing authenticated attackers to inject arbitrary shell commands through user-controlled filenames. Attackers can supply malicious filenames containing unescaped command substitution payloads through operations such as file upload, folder creation, rename, or deletion, which are interpolated into a double-quoted shell context and executed via proc_open() through /bin/sh -c before smbclient runs, resulting in arbitrary command execution on the underlying system.",
-      "refs": "https://github.com/horde/Vfs/commit/41f74b4acfc144e09013d04dd121e0a5da808361\nhttps://github.com/horde/Vfs/pull/10\nhttps://github.com/horde/Vfs/releases/tag/v3.0.1",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:36"
-    },
-    {
-      "cve_id": "CVE-2026-59928",
-      "title": "高危漏洞: CVE-2026-59928 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, a Markdown document containing many repeated or distinct reference-link definitions causes quadratic work in src/mistune/block_parser.py and the ref_links environment dictionary handling, allowing denial of service through CPU exhaustion. This issue is fixed in version 3.3.0.",
-      "refs": "https://github.com/lepture/mistune/commit/2b04d7ba341c16ac78fe82d3076bdd5c3de87c69\nhttps://github.com/lepture/mistune/releases/tag/v3.3.0\nhttps://github.com/lepture/mistune/security/advisories/GHSA-ffq3-xpv3-j92q",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:31"
     }
   ]
 }
