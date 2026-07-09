@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8848",
+      "title": "高危漏洞: CVE-2026-8848 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-09 16:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Popup Maker – Boost Sales, Conversions, Optins, Subscribers with the Ultimate WP Popup Builder plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.22.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with editor-level access and above, to install and activate an arbitrary plugin from an attacker-controlled URL, leading to remote code execution. Exploitation requires that a valid Popup Maker Pro license is active on the target site and that Popup Maker Pro is not yet installed, as these conditions are necessary for the legacy v1/connect/info endpoint to issue the bearer token used to satisfy the install endpoint's only non-spoofable validation check.",
+      "refs": "https://plugins.trac.wordpress.org/browser/popup-maker/tags/1.21.5/classes/Controllers/RestAPI.php#L194\nhttps://plugins.trac.wordpress.org/browser/popup-maker/tags/1.21.5/classes/RestAPI/Connect.php#L330\nhttps://plugins.trac.wordpress.org/browser/popup-maker/tags/1.21.5/classes/RestAPI/Connect.php#L445",
+      "source": "NVD",
+      "time": "2026-07-09 19:56:05"
+    },
+    {
+      "cve_id": "CVE-2026-33390",
+      "title": "高危漏洞: CVE-2026-33390 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-09 16:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "An Incorrect Privilege Assignment vulnerability was discovered in the synchronization functionality due to Arc sensors receiving CLI permissions. An authenticated user with limited privileges can push administrative CLI commands through the sync, altering the device configuration, and/or affecting its availability.",
+      "refs": "https://security.nozominetworks.com/NN-2026:13-01",
+      "source": "NVD",
+      "time": "2026-07-09 19:56:01"
+    },
+    {
+      "cve_id": "CVE-2026-31985",
+      "title": "高危漏洞: CVE-2026-31985 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-09 16:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
+      "description": "When the upstream Guardian or CMC was configured in the Remote Collector via n2os-tui, the generated configuration disabled TLS certificate verification, and no option was provided to enable it. A malicious actor could perform a man-in-the-middle attack and intercept the communication between the Remote Collector and the Guardian or CMC. This could result in theft of the sync token, impersonation of the server, injection of spoofed data (such as false asset information or vulnerabilities) into the Guardian or CMC, or disruption of the data flow between the Remote Collector and the Guardian or CMC.",
+      "refs": "https://security.nozominetworks.com/NN-2026:12-01",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:57"
+    },
+    {
+      "cve_id": "CVE-2026-31984",
+      "title": "高危漏洞: CVE-2026-31984 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 16:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A denial-of-service vulnerability caused by unbounded resource allocation was discovered in the audit logging functionality, due to a missing size limit on input recorded into audit entries. An unauthenticated attacker can submit requests containing excessively large input that is recorded into audit entries, possibly exhausting the available disk space and rendering the system inoperable.",
+      "refs": "https://security.nozominetworks.com/NN-2026:11-01",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:50"
+    },
+    {
+      "cve_id": "CVE-2026-31982",
+      "title": "高危漏洞: CVE-2026-31982 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-09 16:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "An Open Redirect vulnerability was discovered in the SAML Single Sign-On functionality due to insufficient validation of a user-controlled redirection parameter. An unauthenticated attacker can craft a request to the SAML sign-in endpoint and poison the cached SAML redirection for other users who subsequently initiate SAML Single Sign-On, enabling phishing and credential-theft attacks, as well as disrupting SAML authentication for all affected users.",
+      "refs": "https://security.nozominetworks.com/NN-2026:9-01",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:46"
+    },
+    {
+      "cve_id": "CVE-2026-15000",
+      "title": "高危漏洞: CVE-2026-15000 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-09 16:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Connect Contact Form 7 and Mailchimp plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Mailchimp Merge Field Values in all versions up to, and including, 0.9.78.06 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload is only triggered when a privileged user (Administrator) performs a Contact Lookup for the email address submitted via the CF7 form, meaning execution is deferred until an administrator interacts with the affected entry.",
+      "refs": "https://plugins.trac.wordpress.org/browser/contact-form-7-mailchimp-extension/tags/0.9.78.05/assets/js/chimpmatic-lite.js#L1706\nhttps://plugins.trac.wordpress.org/browser/contact-form-7-mailchimp-extension/tags/0.9.78.05/assets/js/chimpmatic-lite.js#L2036\nhttps://plugins.trac.wordpress.org/browser/contact-form-7-mailchimp-extension/tags/0.9.78.05/includes/api/class-cmatic-contact-lookup.php#L237",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:41"
+    },
+    {
+      "cve_id": "CVE-2026-14245",
+      "title": "高危漏洞: CVE-2026-14245 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-09 16:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass leading to Administrator Account Takeover in all versions up to, and including, 5.5.1. This is due to the `um_reset_password_process_hook()` function performing no server-side verification that the OTP validation step was completed, and relying solely on a public `form_nonce` nonce that the plugin itself emits to unauthenticated visitors via the `moumprvar` JavaScript object on the Ultimate Member password reset page, while still accepting the attacker-controlled `username_b` parameter to target any WordPress user without role restriction or any binding to a previously validated OTP session. This makes it possible for unauthenticated attackers to obtain a freshly generated password-reset URL for an arbitrary Administrator account — returned in a 302 `Location` header — and use it to take full control of that account. Exploitation requires the Ultimate Member Password Reset Form integration to be active and the plugin to not be configured for phone-only reset.",
+      "refs": "https://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.0/handler/forms/class-moumpasswordreset.php#L181\nhttps://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.0/handler/forms/class-moumpasswordreset.php#L367\nhttps://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.0/handler/forms/class-moumpasswordreset.php#L372",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:36"
+    },
+    {
+      "cve_id": "CVE-2026-47840",
+      "title": "高危漏洞: CVE-2026-47840 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "description": "A network attacker positioned between UAA and its LDAP directory can impersonate the directory using any certificate from any trusted CA, then harvest the LDAP bind password and every end-user password sent during simple-bind authentication, and return forged group memberships that grant themselves admin scopes. This affects every deployment that authenticates users against LDAP over StartTLS.\nAffected versions: UAA versions prior to v78.13.0; Cf-deployment versions prior to v56.2.0.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47840-ldap-starttls-unconditionally-disables-hostname-verification/",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:29"
+    },
+    {
+      "cve_id": "CVE-2026-47831",
+      "title": "高危漏洞: CVE-2026-47831 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 15:16:24",
+      "vector_string": "CVSS:3.0/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Use of a cryptographically weak random number generator in the GenerateRandomPassword function in bosh-windows-stemcell-builder allows a remote attacker to brute-force the resulting SSH login via TCP/22.\nAffected versions: bosh-windows-stemcell-builder versions prior to v2019.98.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47831-cryptographically-weak-password-generation-in-bosh-windows-stemcell-builder-allows-remote-ssh-brute-force-attacks/",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:25"
+    },
+    {
+      "cve_id": "CVE-2026-47830",
+      "title": "高危漏洞: CVE-2026-47830 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-09 15:16:24",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Incorrect Permission Assignment in BOSH.Utils.psm1 in BOSH-Ecosystem bosh-windows-stemcell-builder allows low-privilege authenticated users to overwrite C:\\bosh\\service_wrapper.exe or C:\\bosh\\bosh-agent.exe and gain NT AUTHORITY\\SYSTEM on the next service restart or reboot. This can lead to full host control.\nAffected versions: bosh-windows-stemcell-builder versions prior to v2019.98.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47830-incorrect-permission-assignment-allows-local-privilege-escalation-to-system-via-executable-overwrite/",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:17"
+    },
+    {
+      "cve_id": "CVE-2026-47829",
+      "title": "高危漏洞: CVE-2026-47829 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-09 15:16:24",
+      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Argument Injection in bosh-cli allows a compromised BOSH Director to inject arbitrary OpenSSH options into the locally-spawned ssh process when an operator runs bosh ssh -c, bosh logs -f, or other non-interactive SSH paths, leading to local command execution on the operator's workstation.\nAffected versions: bosh-cli versions prior to v7.10.4.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47829-argument-injection-in-bosh-cli-allows-local-command-execution-on-operator-workstations-via-compromised-director/",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:13"
+    },
+    {
+      "cve_id": "CVE-2026-47828",
+      "title": "高危漏洞: CVE-2026-47828 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-09 15:16:23",
+      "vector_string": "CVSS:3.0/AV:A/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "During bosh create-env and bosh delete-env, the CLI uploads compiled CPI packages and rendered job templates to the new VM's DAV blobstore over HTTPS without verifying the server certificate, even though a CA certificate for that endpoint is available in the installation manifest. A network attacker can terminate the TLS connection, harvest the Basic-auth credentials, and read the rendered-templates archive containing every bootstrap secret for the new BOSH Director, then replay the credentials against the real VM's agent for root code execution.\nAffected versions: bosh-cli versions prior to v7.10.4.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47828-missing-tls-certificate-verification-in-bosh-cli-allows-root-code-execution-via-man-in-the-middle-credential-replay/",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:07"
+    },
+    {
+      "cve_id": "CVE-2026-47826",
+      "title": "高危漏洞: CVE-2026-47826 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-09 15:16:23",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The blobs.yml path key traversal vulnerability in the BOSH CLI tool allows an attacker to write arbitrary files and exfiltrate sensitive information.\nAffected versions: BOSH CLI tool versions prior to v7.10.4.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47826-blobs-yaml-path-traversal-allows-file-writes/",
+      "source": "NVD",
+      "time": "2026-07-09 19:55:03"
+    },
+    {
+      "cve_id": "CVE-2026-5523",
+      "title": "高危漏洞: CVE-2026-5523 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-09 14:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Divi Form Builder plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 5.1.8. This is due to the update_user() function accepting a user ID parameter from form submissions without verifying that the authenticated user has permission to edit that specific user account, and the handle_register_submission() function only checking if any user is logged in rather than validating permissions for the target user. This makes it possible for authenticated attackers, with subscriber-level access and above, to change the email address and password of any user account, including administrators, resulting in complete account takeover.",
+      "refs": "https://diviengine.com/divi-form-builder-changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/cb158acc-69d7-4a7d-b356-7de1f6b37019?source=cve",
+      "source": "NVD",
+      "time": "2026-07-09 19:54:58"
+    },
+    {
+      "cve_id": "CVE-2026-41857",
+      "title": "高危漏洞: CVE-2026-41857 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-09 14:16:20",
+      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A compromised or malicious BOSH Director can execute arbitrary shell commands on the operator's workstation when the operator runs bosh ssh (or bosh scp/bosh logs -f) with default flags.\nAffected versions: BOSH CLI versions prior to 7.10.5.",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41857-bosh-cli-shell-injection/",
+      "source": "NVD",
+      "time": "2026-07-09 19:54:53"
+    },
+    {
       "cve_id": "CVE-2026-47646",
       "title": "高危漏洞: CVE-2026-47646 (CVSS 9.3)",
       "cvss_score": 9.3,
@@ -934,171 +1099,6 @@
       "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-3mv2-5q57-2v8h\nhttps://www.vulncheck.com/advisories/freerdp-use-after-free-via-race-condition-in-drdynvc-channel-callback\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-3mv2-5q57-2v8h",
       "source": "NVD",
       "time": "2026-07-09 00:26:26"
-    },
-    {
-      "cve_id": "CVE-2026-56250",
-      "title": "高危漏洞: CVE-2026-56250 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Capgo before 12.128.2 allows upload-scoped API keys to modify the mutable app_versions.r2_path field through PostgREST, enabling retargeting to arbitrary R2 bundle objects. Attackers can patch r2_path to point to victim objects, soft-delete the attacker-controlled version, and trigger the on_version_update cleanup function to delete the victim R2 object, causing denial of service and bundle availability disruption.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-pw8p-5jg6-cxj3\nhttps://www.vulncheck.com/advisories/capgo-arbitrary-r2-object-deletion-via-mutable-r2-path-in-app-versions\nhttps://github.com/Cap-go/capgo/security/advisories/GHSA-pw8p-5jg6-cxj3",
-      "source": "NVD",
-      "time": "2026-07-09 00:26:17"
-    },
-    {
-      "cve_id": "CVE-2026-56246",
-      "title": "高危漏洞: CVE-2026-56246 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-08 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Capgo before 12.128.2 contains a broken access control vulnerability in the organization management API where a scoped API key (limited_to_orgs) inherits its owner-user's permissions, allowing destructive cross-organization actions. When a user is an admin in two organizations and creates a write-mode API key restricted to one organization, that key can still perform destructive operations (e.g., DELETE /organization, DELETE /organization/members) against another organization. The root cause is route-level authorization (rbac_check_permission_direct) that evaluates the key owner's user privileges before enforcing the API key's limited_to_orgs scope.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-ccm4-hf72-p28m\nhttps://www.vulncheck.com/advisories/capgo-cross-organization-authorization-bypass-via-scoped-api-key-privilege-inheritance\nhttps://github.com/Cap-go/capgo/security/advisories/GHSA-ccm4-hf72-p28m",
-      "source": "NVD",
-      "time": "2026-07-09 00:26:11"
-    },
-    {
-      "cve_id": "CVE-2026-56226",
-      "title": "高危漏洞: CVE-2026-56226 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Capgo (Cap-go/capgo) before 12.128.2 exposes the Supabase PostgREST RPC function public.get_orgs_v6(userid uuid), which is SECURITY DEFINER and granted to the anon role, allowing unauthenticated access. Because the function accepts a caller-supplied user UUID without verifying it matches the authenticated user, an attacker using only the public publishable API key can query POST /rest/v1/rpc/get_orgs_v6 with an arbitrary user UUID to retrieve that user's organization membership, roles, subscription/trial metadata, and management_email (PII).",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-m7mm-35v3-82f4\nhttps://www.vulncheck.com/advisories/capgo-unauthenticated-organization-data-disclosure-via-get-orgs-v6-rpc",
-      "source": "NVD",
-      "time": "2026-07-09 00:26:05"
-    },
-    {
-      "cve_id": "CVE-2026-56086",
-      "title": "高危漏洞: CVE-2026-56086 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-08 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.6, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an Incorrect Authorization vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to unauthorized access.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-07-09 00:26:00"
-    },
-    {
-      "cve_id": "CVE-2026-54061",
-      "title": "高危漏洞: CVE-2026-54061 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-08 22:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Dgraph is an open source distributed GraphQL database. Prior to version 25.3.5, Dgraph Alpha exposes the RPCs used for external snapshot import on the public gRPC port `:9080` without authentication or authorization. As a result, an unauthenticated network client can open `StreamExtSnapshot` and send Badger stream data to the target group’s store. In addition, the receiver calls `Prepare()` before processing the stream. This operation deletes and replaces the existing DB data. Version 25.3.5 patches the issue.",
-      "refs": "https://github.com/dgraph-io/dgraph/releases/tag/v25.3.5\nhttps://github.com/dgraph-io/dgraph/security/advisories/GHSA-rrwh-6jrq-wp5v\nhttps://github.com/dgraph-io/dgraph/security/advisories/GHSA-rrwh-6jrq-wp5v",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:54"
-    },
-    {
-      "cve_id": "CVE-2026-53482",
-      "title": "高危漏洞: CVE-2026-53482 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 22:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an Integer overflow or wraparound vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:49"
-    },
-    {
-      "cve_id": "CVE-2026-44840",
-      "title": "高危漏洞: CVE-2026-44840 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 22:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Dgraph is an open source distributed GraphQL database. Prior to version 25.3.4, the `checkUserPassword` GraphQL query in Dgraph is vulnerable to DQL (Dgraph Query Language) injection. User-supplied password values are interpolated directly into a DQL `checkpwd()` query via `fmt.Sprintf` without any escaping or parameterization. An attacker can inject a password containing a double-quote character to break out of the DQL string literal and append arbitrary DQL query blocks. Version 25.3.4 patches the issue.",
-      "refs": "https://github.com/dgraph-io/dgraph/commit/cee702c93f141eeb0c96a81f70830ec9e459efac\nhttps://github.com/dgraph-io/dgraph/releases/tag/v25.3.4\nhttps://github.com/dgraph-io/dgraph/security/advisories/GHSA-q2m9-6jp9-c6mc",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:40"
-    },
-    {
-      "cve_id": "CVE-2026-41122",
-      "title": "高危漏洞: CVE-2026-41122 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-08 22:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain a stored cross-site scripting vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability. Exploitation may lead to information disclosure, session theft, or client-side request forgery.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000481268/dsa-2026-278-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:36"
-    },
-    {
-      "cve_id": "CVE-2026-22927",
-      "title": "高危漏洞: CVE-2026-22927 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-08 22:16:57",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Omnissa Workspace ONE® Tunnel for Windows addresses a   Local Privilege Escalation Vulnerability.",
-      "refs": "https://www.omnissa.com/omnissa-security-response/\nhttps://www.omnissa.com/omsa-2026-0002",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:31"
-    },
-    {
-      "cve_id": "CVE-2026-15053",
-      "title": "高危漏洞: CVE-2026-15053 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 22:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Tanium addressed a denial of service vulnerability in Tanium Server.",
-      "refs": "https://security.tanium.com/TAN-2026-016",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:27"
-    },
-    {
-      "cve_id": "CVE-2026-8307",
-      "title": "高危漏洞: CVE-2026-8307 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-08 21:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Webbeyaz Web Design Mediküm Web allows SQL Injection.\n\nThis issue affects Mediküm Web: through 08072026. NOTE: The vendor was contacted and it was learned that the product is not supported.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0518",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:21"
-    },
-    {
-      "cve_id": "CVE-2026-6820",
-      "title": "高危漏洞: CVE-2026-6820 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-08 21:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The VikBooking Hotel Booking Engine & PMS plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'email' parameter in all versions up to, and including, 1.8.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/controller.php#L11208\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/site/controller.php#L307\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e2b4586a-f87d-4a51-8f4e-932d7254518e?source=cve",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:17"
-    },
-    {
-      "cve_id": "CVE-2026-5356",
-      "title": "高危漏洞: CVE-2026-5356 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 21:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Improper Input Validation in all versions up to, and including, 5.4.0. This is due to the plugin's Stripe Connect payment processor accepting a client-supplied PaymentIntent ID. This makes it possible for unauthenticated attackers to pay an arbitrary amount by supplying a previously succeeded PaymentIntent token.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3509569/latepoint\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/1b1338c4-36a8-47b0-b3cf-c5dc690f8c1c?source=cve",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:12"
-    },
-    {
-      "cve_id": "CVE-2026-6854",
-      "title": "高危漏洞: CVE-2026-6854 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 20:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to time-based blind SQL Injection via the 'mc_auth' parameter in all versions up to, and including, 3.7.8 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3515996/my-calendar\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/aa1ed81c-04cb-4ccd-8c30-b1d943730909?source=cve",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:06"
-    },
-    {
-      "cve_id": "CVE-2026-6818",
-      "title": "高危漏洞: CVE-2026-6818 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-08 20:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The VikBooking Hotel Booking Engine & PMS plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'special_requests' parameter in all versions up to, and including, 1.8.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/helpers/widgets/booking_details.php#L684\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/views/editorder/tmpl/default.php#L2717\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/views/orders/tmpl/default.php#L769",
-      "source": "NVD",
-      "time": "2026-07-09 00:25:02"
     }
   ]
 }
