@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-60109",
+      "title": "高危漏洞: CVE-2026-60109 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 23:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Zeek before 8.0.9 contains a null pointer dereference vulnerability in its Kerberos protocol analyzer that allows unauthenticated remote attackers to crash the sensor by sending a crafted KRB_ERROR message with error-code 25 (KDC_ERR_PREAUTH_REQUIRED) containing a PA-DATA element with padata-type 2, 3, 11, or 19. Attackers can exploit a parser and analyzer state mismatch where proc_padata() dereferences an uninitialized pa_data_element field selected by the wrong parsing arm, triggering a crash via a single UDP or TCP packet to port 88 without any credentials or prior authentication.",
+      "refs": "https://github.com/zeek/zeek/commit/c82e3c734893d932e94310aec0dbeb1ffcea169d\nhttps://github.com/zeek/zeek/releases/tag/v8.0.9\nhttps://www.vulncheck.com/advisories/zeek-null-pointer-dereference-dos-via-kerberos-krb-error-parsing",
+      "source": "NVD",
+      "time": "2026-07-10 01:11:48"
+    },
+    {
+      "cve_id": "CVE-2026-60108",
+      "title": "高危漏洞: CVE-2026-60108 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 23:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Zeek before 8.0.9 contains an uncontrolled memory consumption vulnerability in the FTP analyzer that allows unauthenticated remote attackers to cause process termination by sending a crafted FTP control session negotiating AUTH GSSAPI followed by a large ADAT control line. Attackers can exploit the NVT_Analyzer component's lack of a maximum line length check, causing it to continuously double its internal buffer without bounds during base64 decoding of an attacker-controlled ADAT token, resulting in denial of service of the Zeek sensor.",
+      "refs": "https://github.com/zeek/zeek/commit/93ff6950a90cfa9d00c1062cde429313a0402a01\nhttps://github.com/zeek/zeek/releases/tag/v8.0.9\nhttps://www.vulncheck.com/advisories/zeek-uncontrolled-memory-consumption-dos-via-ftp-analyzer",
+      "source": "NVD",
+      "time": "2026-07-10 01:11:43"
+    },
+    {
+      "cve_id": "CVE-2026-54801",
+      "title": "高危漏洞: CVE-2026-54801 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-09 23:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been identified in CPCI85 Central Processing/Communication (All versions < V26.20), SICORE Base system (All versions < V26.20.0). The affected application contains insufficient validation of authentication credentials when processing administrative account modifications through the web API. This could allow an authenticated attacker to bypass security controls and gain unauthorized elevated privileges.",
+      "refs": "https://cert-portal.siemens.com/productcert/html/ssa-229470.html",
+      "source": "NVD",
+      "time": "2026-07-10 01:11:37"
+    },
+    {
+      "cve_id": "CVE-2026-4256",
+      "title": "高危漏洞: CVE-2026-4256 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-09 22:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Improper neutralization of special elements used in an LDAP query ('LDAP injection') vulnerability in PEAKUP Technology Inc. PassGate allows LDAP Injection.\n\nThis issue affects PassGate: through 30042026.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0523",
+      "source": "NVD",
+      "time": "2026-07-10 01:11:32"
+    },
+    {
+      "cve_id": "CVE-2026-57111",
+      "title": "高危漏洞: CVE-2026-57111 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-09 16:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Permissive Cross-Origin Resource Sharing (CORS) in the REST API (helix-rest, org.apache.helix.rest.server.filters.CORSFilter) in Apache Helix through 2.0.0 on all platforms allows a remote attacker controlling a web page visited by an authorized user to read responses from and issue cross-origin requests to administrative REST endpoints via a cross-origin request from an arbitrary origin, since the filter unconditionally returns Access-Control-Allow-Origin: * together with Access-Control-Allow-Credentials: true and reflects arbitrary Access-Control-Request-Method / Access-Control-Request-Headers values in preflight responses. Users are recommended to upgrade to version 2.0.1, which fixes this issue.",
+      "refs": "https://lists.apache.org/thread/wy2yv90lvqzx46vkg35xrtfddffq9cfj\nhttp://www.openwall.com/lists/oss-security/2026/07/08/11",
+      "source": "NVD",
+      "time": "2026-07-10 01:11:26"
+    },
+    {
+      "cve_id": "CVE-2026-15121",
+      "title": "高危漏洞: CVE-2026-15121 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-09 07:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Use after free in WebRTC in Google Chrome prior to 150.0.7871.115 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01162222768.html\nhttps://issues.chromium.org/issues/523712556",
+      "source": "NVD",
+      "time": "2026-07-10 01:11:21"
+    },
+    {
       "cve_id": "CVE-2026-9253",
       "title": "高危漏洞: CVE-2026-9253 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/lepture/mistune/commit/2b04d7ba341c16ac78fe82d3076bdd5c3de87c69\nhttps://github.com/lepture/mistune/releases/tag/v3.3.0\nhttps://github.com/lepture/mistune/security/advisories/GHSA-ffq3-xpv3-j92q",
       "source": "NVD",
       "time": "2026-07-09 03:08:31"
-    },
-    {
-      "cve_id": "CVE-2026-59925",
-      "title": "高危漏洞: CVE-2026-59925 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, long sequences of well-formed double-asterisk or triple-asterisk emphasis pairs around a character cause quadratic work in src/mistune/inline_parser.py because the parser scans forward for matching close markers from every potential opening run, allowing denial of service in default Mistune parsing. This issue is fixed in version 3.3.0.",
-      "refs": "https://github.com/lepture/mistune/commit/5de41fb8e527004dbc363e047a3c380c9288c74f\nhttps://github.com/lepture/mistune/releases/tag/v3.3.0\nhttps://github.com/lepture/mistune/security/advisories/GHSA-4j32-57v6-6g45",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:27"
-    },
-    {
-      "cve_id": "CVE-2026-59922",
-      "title": "高危漏洞: CVE-2026-59922 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 01:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.0, a run of closed tilde, equals-sign, or caret marker pairs around a character causes quadratic work in src/mistune/plugins/formatting.py when the strikethrough, mark, or insert plugin scans for matching markers from each possible start position, allowing denial of service through CPU exhaustion. This issue is fixed in version 3.3.0.",
-      "refs": "https://github.com/lepture/mistune/commit/96d0f57f8fe9eeb06bb4cff521962a27d7c402e7\nhttps://github.com/lepture/mistune/releases/tag/v3.3.0\nhttps://github.com/lepture/mistune/security/advisories/GHSA-c8j7-8cv4-2xmq",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:22"
-    },
-    {
-      "cve_id": "CVE-2026-59892",
-      "title": "高危漏洞: CVE-2026-59892 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 01:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpenTelemetry JavaScript is the OpenTelemetry JavaScript client. Prior to 2.9.0, @opentelemetry/propagator-jaeger decodes incoming uber-trace-id and uberctx-* HTTP header values with decodeURIComponent() without handling decode errors, allowing an unauthenticated remote attacker to send a malformed percent-encoded value that throws an uncaught URIError and terminates a Node.js process using JaegerPropagator as the active propagator. This issue is fixed in version 2.9.0.",
-      "refs": "https://github.com/open-telemetry/opentelemetry-js/commit/b1c196d49d54caae59741cca0a9d57d101d7ea88\nhttps://github.com/open-telemetry/opentelemetry-js/releases/tag/v2.9.0\nhttps://github.com/open-telemetry/opentelemetry-js/security/advisories/GHSA-45rx-2jwx-cxfr",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:18"
-    },
-    {
-      "cve_id": "CVE-2026-59887",
-      "title": "高危漏洞: CVE-2026-59887 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 01:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "linkify-it is a links recognition library with full Unicode support. Prior to 5.0.2, the mailto: schema validator used by .test() and .match() can be invoked at every mailto: occurrence and scan the remaining input through src_email_name in lib/re.mjs, causing O(n^2) CPU consumption on crafted user text. This issue is fixed in version 5.0.2.",
-      "refs": "https://github.com/markdown-it/linkify-it/commit/105e5d77f7d119871d2b2d86ed208568eb3e7ffe\nhttps://github.com/markdown-it/linkify-it/releases/tag/5.0.2\nhttps://github.com/markdown-it/linkify-it/security/advisories/GHSA-v245-v573-v5vm",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:11"
-    },
-    {
-      "cve_id": "CVE-2026-59731",
-      "title": "高危漏洞: CVE-2026-59731 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-09 01:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Astro is a web framework for content-driven websites. Version 6.4.7 performs authorization decisions on a partially decoded pathname after reaching the iterative URL decoder limit, while later rewrite route matching performs an additional decodeURI() operation and can resolve the request to a protected route. This issue is fixed in version 6.4.8.",
-      "refs": "https://github.com/withastro/astro/commit/27c80ea92248993e5fce94b2c26d87d611ab6785\nhttps://github.com/withastro/astro/pull/17109\nhttps://github.com/withastro/astro/releases/tag/astro@6.4.8",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:06"
-    },
-    {
-      "cve_id": "CVE-2026-59261",
-      "title": "高危漏洞: CVE-2026-59261 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-09 01:17:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "OpenClaw before 2026.5.28 contains a credential exposure vulnerability where workspace dotenv files can override provider credentials. Attackers with lower-trust access to configured input paths can expose sensitive data and credentials that should remain within trusted boundaries.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4pqj-3c56-5fqq\nhttps://www.vulncheck.com/advisories/openclaw-credential-override-via-workspace-dotenv-files",
-      "source": "NVD",
-      "time": "2026-07-09 03:08:02"
     }
   ]
 }
