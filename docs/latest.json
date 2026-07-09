@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-47646",
+      "title": "高危漏洞: CVE-2026-47646 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-07-09 08:17:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Dynamics 365 Customer Voice allows an unauthorized attacker to perform spoofing over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47646",
+      "source": "NVD",
+      "time": "2026-07-09 14:39:38"
+    },
+    {
+      "cve_id": "CVE-2026-15137",
+      "title": "高危漏洞: CVE-2026-15137 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-09 08:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in code-projects Interview Management System 1.0. This vulnerability affects unknown code of the file \\inc\\classes\\View.php. This manipulation of the argument ID causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/susususua-AI/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-15137",
+      "source": "NVD",
+      "time": "2026-07-09 14:39:33"
+    },
+    {
+      "cve_id": "CVE-2026-15135",
+      "title": "高危漏洞: CVE-2026-15135 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-09 08:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in code-projects Online Food Order System 1.0. This affects an unknown part of the file /edit_food_items.php. The manipulation of the argument update results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/susususua-AI/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-15135",
+      "source": "NVD",
+      "time": "2026-07-09 14:39:26"
+    },
+    {
+      "cve_id": "CVE-2026-15134",
+      "title": "高危漏洞: CVE-2026-15134 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-09 08:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in CodeAstro Simple Online Leave Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /SimpleOnlineLeave/index.php. Executing a manipulation of the argument email can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://codeastro.com/\nhttps://github.com/yihaofuweng/cve/issues/71\nhttps://vuldb.com/cve/CVE-2026-15134",
+      "source": "NVD",
+      "time": "2026-07-09 14:39:21"
+    },
+    {
       "cve_id": "CVE-2026-59723",
       "title": "高危漏洞: CVE-2026-59723 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/helpers/widgets/booking_details.php#L684\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/views/editorder/tmpl/default.php#L2717\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.9/admin/views/orders/tmpl/default.php#L769",
       "source": "NVD",
       "time": "2026-07-09 00:25:02"
-    },
-    {
-      "cve_id": "CVE-2026-6230",
-      "title": "高危漏洞: CVE-2026-6230 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 20:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Tainacan plugin for WordPress is vulnerable to time-based blind SQL Injection via the 'geoquery' parameter in all versions up to and including 1.0.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-      "refs": "https://github.com/tainacan/tainacan/commit/579d28d7752b27ed3407f5197abb6349b3efc3c9\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/241d9cd3-9331-49b2-8083-dc646070488e?source=cve",
-      "source": "NVD",
-      "time": "2026-07-09 00:24:56"
-    },
-    {
-      "cve_id": "CVE-2026-3688",
-      "title": "高危漏洞: CVE-2026-3688 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-08 20:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The WCFM Membership – WooCommerce Memberships for Multivendor Marketplace plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.11.10. This is due to the 'wcfmvm_membership_change' AJAX action not validating user permission to modify other users. This makes it possible for authenticated attackers, with vendor level access and above, to change any user's role to 'wcfm_vendor' by changing their membership plan.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3520777/wc-multivendor-membership\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/8a934ccd-9330-4585-9994-838940d24980?source=cve",
-      "source": "NVD",
-      "time": "2026-07-09 00:24:52"
-    },
-    {
-      "cve_id": "CVE-2026-51937",
-      "title": "高危漏洞: CVE-2026-51937 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "An issue in Oneblog V2.3.9 allows a remote attacker to obtain sensitive information via the RestApiController.java, JsApiTicketComponent.java, and the GetAccessTokenComponent.java component",
-      "refs": "https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Get_access_token.html\nhttps://gist.github.com/Passwords404/2599df955cdb36b36b9551b5b7809114\nhttps://github.com/zhangyd-c/OneBlog/issues/43",
-      "source": "NVD",
-      "time": "2026-07-09 00:24:44"
-    },
-    {
-      "cve_id": "CVE-2026-14895",
-      "title": "高危漏洞: CVE-2026-14895 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-08 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "String::Util versions before 1.36 for Perl are susceptible to a regular expression denial of service.\n\nThe trim and rtrim functions stripped trailing whitespace with s/\\s*$//u. Because \\s* matches greedily and the $ anchor fails whenever a non-whitespace character follows the whitespace, the regex engine retries the match at each offset of a long whitespace run, producing quadratic backtracking. The fix replaces \\s*$ with \\s+$.\n\nAny caller that passes untrusted input to trim or rtrim can trigger CPU exhaustion with a string containing a long run of whitespace.",
-      "refs": "https://github.com/scottchiefbaker/String-Util/commit/f8150867aaeb8f57c59601aefb2193f2caed8745.patch\nhttps://github.com/scottchiefbaker/String-Util/releases\nhttps://metacpan.org/release/BAKERSCOT/String-Util-1.36/diff/BAKERSCOT/String-Util-1.35#lib/String/Util.pm",
-      "source": "NVD",
-      "time": "2026-07-09 00:24:38"
     }
   ]
 }
