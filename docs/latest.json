@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15378",
+      "title": "高危漏洞: CVE-2026-15378 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-07-10 18:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "description": "A flaw was found in the `guardrails-detectors` component. This vulnerability allows a remote attacker to perform a blind Server-Side Request Forgery (SSRF) by submitting a specially crafted XML Schema Definition (XSD) string. This can lead to unauthorized access to sensitive information, including credentials from cloud metadata services, Kubernetes API, internal MinIO, and other internal network endpoints. Additionally, it enables local file reads of critical data such as service account tokens and pod secrets.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-15378\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2498941",
+      "source": "NVD",
+      "time": "2026-07-10 21:58:04"
+    },
+    {
       "cve_id": "CVE-2026-13347",
       "title": "高危漏洞: CVE-2026-13347 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01162222768.html\nhttps://issues.chromium.org/issues/523238265",
       "source": "NVD",
       "time": "2026-07-09 22:30:41"
-    },
-    {
-      "cve_id": "CVE-2026-15117",
-      "title": "高危漏洞: CVE-2026-15117 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 07:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Payments in Google Chrome prior to 150.0.7871.115 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01162222768.html\nhttps://issues.chromium.org/issues/522568496",
-      "source": "NVD",
-      "time": "2026-07-09 22:30:36"
     }
   ]
 }
