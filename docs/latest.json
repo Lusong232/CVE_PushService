@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-59834",
+      "title": "高危漏洞: CVE-2026-59834 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-10 07:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.1, the block search endpoint POST /api/search/fullTextSearchBlock concatenates attacker-controlled paths values into SQL predicates used by non-SQL search modes, allowing an unauthenticated publish visitor to inject a UNION SELECT and return rows from hidden documents by projecting an allowed visible box and path. This issue is fixed in versions 3.7.1.",
+      "refs": "https://github.com/siyuan-note/siyuan/commit/57bcad4b331836880bfe6be25d4180bdcf10db0d\nhttps://github.com/siyuan-note/siyuan/commit/d0f0fe146fb07d594fcadc4f48d4f7c30ac01d1e\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.7.1",
+      "source": "NVD",
+      "time": "2026-07-10 09:56:24"
+    },
+    {
+      "cve_id": "CVE-2026-59832",
+      "title": "高危漏洞: CVE-2026-59832 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-10 07:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.1, the /snippets/*filepath route handler serveSnippets in kernel/server/serve.go joins a single-decoded request path with the snippets directory without subpath containment or sensitive-path checks, allowing an authenticated request such as /snippets/%2e%2e/%2e%2e/conf/conf.json to read workspace secrets and the document database. This issue is fixed in versions 3.7.1.",
+      "refs": "https://github.com/siyuan-note/siyuan/commit/68cc0f537dfa4502496dfa794e71835421c25c09\nhttps://github.com/siyuan-note/siyuan/releases/tag/v3.7.1\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-275h-v5h9-vr82",
+      "source": "NVD",
+      "time": "2026-07-10 09:56:17"
+    },
+    {
+      "cve_id": "CVE-2026-33655",
+      "title": "高危漏洞: CVE-2026-33655 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-10 07:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 0.12.0-alpha.1, the default SSRF protection configuration did not apply IP filtering to hostnames; with ApplyIPFilterForDomain disabled by default, URL validation checked domain allow/block rules but did not resolve a hostname and validate the resolved IP address, allowing authenticated users to configure Webhook, Bark, or Gotify notification URLs that point at an internal or metadata IP address. This issue is fixed in version 0.12.0-alpha.1.",
+      "refs": "https://github.com/QuantumNous/new-api/commit/20399d3c8fcb4e3649d53163eb11940fd6763743\nhttps://github.com/QuantumNous/new-api/releases/tag/v0.12.0-alpha.1\nhttps://github.com/QuantumNous/new-api/security/advisories/GHSA-6qcr-qxgr-m7fv",
+      "source": "NVD",
+      "time": "2026-07-10 09:56:12"
+    },
+    {
+      "cve_id": "CVE-2026-58143",
+      "title": "高危漏洞: CVE-2026-58143 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-10 06:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Cotonti Siena 0.9.26 and earlier contains a cross-site request forgery vulnerability that allows unauthenticated attackers to modify administrator configuration by tricking a logged-in administrator into submitting a forged POST request to the admin.php config update handler, which never invokes the application's CSRF validation function. Attackers can disable the PFS module's file extension whitelist by setting pfsfilecheck to 0, enabling any user with PFS access to upload and execute arbitrary PHP files on the server.",
+      "refs": "https://gist.github.com/sermikr0/75686815e441c07462cfdea2fed5d305\nhttps://www.vulncheck.com/advisories/cotonti-siena-csrf-via-admin-php-config-update-endpoint",
+      "source": "NVD",
+      "time": "2026-07-10 09:56:08"
+    },
+    {
+      "cve_id": "CVE-2026-58123",
+      "title": "高危漏洞: CVE-2026-58123 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-10 06:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Hermes WebUI before 0.51.788 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary shell commands by accessing the embedded terminal API endpoints without credentials. Attackers can create a session, attach a PTY shell, and write arbitrary commands through the terminal input endpoint to achieve full command execution as the server process user via four sequential unauthenticated HTTP requests.",
+      "refs": "https://github.com/nesquena/hermes-webui/commit/d257e5f36cfa9328600c8bde6f0de09a6ad9b6f4\nhttps://github.com/nesquena/hermes-webui/pull/5268\nhttps://github.com/nesquena/hermes-webui/releases/tag/v0.51.788",
+      "source": "NVD",
+      "time": "2026-07-10 09:56:04"
+    },
+    {
+      "cve_id": "CVE-2026-58122",
+      "title": "高危漏洞: CVE-2026-58122 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-10 06:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Hermes WebUI before 0.51.307 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to circumvent local-origin IP restrictions on onboarding endpoints by supplying a spoofed X-Forwarded-For header with a loopback address. Attackers can exploit this bypass to perform server-side request forgery against internal services including cloud metadata endpoints, overwrite LLM provider configuration and API keys with attacker-controlled values, or initiate OAuth device-code flows to obtain persistent access tokens stored in auth.json.",
+      "refs": "https://github.com/nesquena/hermes-webui/commit/70596e6993be0d4cee083c1c1a86f5e7ad5d57b7\nhttps://github.com/nesquena/hermes-webui/pull/3758\nhttps://github.com/nesquena/hermes-webui/releases/tag/v0.51.307",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:59"
+    },
+    {
+      "cve_id": "CVE-2026-57028",
+      "title": "高危漏洞: CVE-2026-57028 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-10 06:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "An Improper Restriction of Communication Channel to Intended Endpoints vulnerability in Juniper Networks Junos OS Evolved allows an unauthenticated, network-based attacker to cause license exhaustion.\n\n\nDue to an incorrect initialization, a process which should only be able to communicate internally within the device, can be reached over the network via an open port. This leads to unauthorized access to the license management.\n\nThis issue affects all Junos OS Evolved versions before 23.2R2-EVO.",
+      "refs": "https://supportportal.juniper.net/JSA110088",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:55"
+    },
+    {
+      "cve_id": "CVE-2026-57026",
+      "title": "高危漏洞: CVE-2026-57026 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-10 06:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An Improper Validation of Syntactic Correctness of Input vulnerability in the SIP plugin of Juniper Networks Junos OS on MX Series with SPC3 and SRX Series allows an unauthenticated, network-based attacker to cause a Denial-of-Service (DoS).If the SIP ALG is enabled on an affected device, the processing of a malformed SIP invite packet will cause a flow processing daemon (flowd) crash and restart. This leads to a complete service outage until the system has automatically recovered.\n\n\n\nThis issue affects Junos OS on MX Series with SPC3 and SRX Series:\n\n\n  *  all versions before 23.2R2-S7,\n  *  23.4 versions before 23.4R2-S8,\n  *  24.2 versions before 24.2R2-S5,\n  *  24.4 versions before 24.4R2-S4,\n  *  25.2 versions before 25.2R2,\n  *  25.4 versions before 25.4R1-S2.",
+      "refs": "https://supportportal.juniper.net/JSA110086",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:50"
+    },
+    {
+      "cve_id": "CVE-2026-57023",
+      "title": "高危漏洞: CVE-2026-57023 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-10 06:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An Improper Validation of Specified Quantity in Input vulnerability in the TCP proxy plugin of Juniper Networks Junos OS on MX Series with SPC3, and SRX Series allows an unauthenticated, network-based attacker to cause a complete Denial of Service (DoS).\n\nWhen TCP proxy is engaged in a flow session, to support ALGs, Advanced Anti-Malware, ICAP or UTM, a TCP packet with specifically malformed TCP header will cause flow processing daemon (flowd) to crash and restart. This causes a complete service outage until the system has automatically recovered.\n\n\n\nThis issue affects Junos OS on MX with SPC3, and SRX Series: \n\n\n\n  *  23.4 versions before 23.4R2-S7, \n  *  24.2 versions before 24.2R2-S4, \n  *  24.4 versions before 24.4R2-S3,\n  *  25.2 versions before 25.2R2.\n\n\n\n\nThis issue does not affect releases before 23.4R1.",
+      "refs": "https://supportportal.juniper.net/JSA110083",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:46"
+    },
+    {
+      "cve_id": "CVE-2026-55604",
+      "title": "高危漏洞: CVE-2026-55604 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-10 06:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+      "description": "DeepSeek MCP Server is an MCP server for DeepSeek V4. Starting in version 1.4.2 and prior to version 1.7.0, the process-global `SessionStore` accepts caller-supplied `session_id` values without binding them to any authenticated principal or transport session. An attacker can enumerate active session IDs via `deepseek_sessions`, then reuse a victim-controlled `session_id` in `deepseek_chat` to retrieve and continue the victim's conversation context. Version 1.7.0 contains a patch.",
+      "refs": "https://github.com/arikusi/deepseek-mcp-server/releases/tag/v1.7.0\nhttps://github.com/arikusi/deepseek-mcp-server/security/advisories/GHSA-fh3r-g96v-f578",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:40"
+    },
+    {
+      "cve_id": "CVE-2026-53963",
+      "title": "高危漏洞: CVE-2026-53963 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-10 06:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, a malicious second factor name on an attacker-controlled account was not escaped in the delete confirmation dialog, allowing stored cross-site scripting when an administrator impersonated that account. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+      "refs": "https://github.com/discourse/discourse/commit/40de62cddadc65c328a1028ab999f3fa94adbfed\nhttps://github.com/discourse/discourse/commit/529e17d4d570a48972e7cf64720e5dd1fdf23ca8\nhttps://github.com/discourse/discourse/commit/d92973e51a46cf6dd20c71e6068e6769b67eea5b",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:36"
+    },
+    {
+      "cve_id": "CVE-2026-44787",
+      "title": "高危漏洞: CVE-2026-44787 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-10 06:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, the signup flow could allow newly registered users to set primary_group_id and gain whisper-group privileges without legitimate group membership on sites with whispers_allowed_groups configured. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+      "refs": "https://github.com/discourse/discourse/commit/012796ac28c85b30aa233c5ef042fc66efff8126\nhttps://github.com/discourse/discourse/commit/0f50a07a6ef4b33f3f826ce6d7bf6d7bd16912d8\nhttps://github.com/discourse/discourse/commit/5418e3027dba109e27a4796463686d61e190ac29",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:30"
+    },
+    {
+      "cve_id": "CVE-2026-15271",
+      "title": "高危漏洞: CVE-2026-15271 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-10 06:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in TOTOLINK A3000RU, A3100R, A950RG, AC1200T10, CP450, CS185R_T10 and EX200 up to 20260906. Affected by this issue is some unknown functionality of the file /etc/boa/boa.conf of the component Web Interface. The manipulation leads to least privilege violation. The attack may be initiated remotely. The attack's complexity is rated as high. The exploitation is known to be difficult.",
+      "refs": "https://app.notion.com/p/A3000RU-V5-9c-5185-37a1f5ba989080d38bb6ca58b2a98c64?source=copy_link\nhttps://vuldb.com/cve/CVE-2026-15271\nhttps://vuldb.com/submit/852316",
+      "source": "NVD",
+      "time": "2026-07-10 09:55:23"
+    },
+    {
       "cve_id": "CVE-2026-55212",
       "title": "高危漏洞: CVE-2026-55212 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -956,149 +1099,6 @@
       "refs": "https://www.cloudfoundry.org/blog/cve-2026-47826-blobs-yaml-path-traversal-allows-file-writes/",
       "source": "NVD",
       "time": "2026-07-09 19:55:03"
-    },
-    {
-      "cve_id": "CVE-2026-5523",
-      "title": "高危漏洞: CVE-2026-5523 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-09 14:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Divi Form Builder plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 5.1.8. This is due to the update_user() function accepting a user ID parameter from form submissions without verifying that the authenticated user has permission to edit that specific user account, and the handle_register_submission() function only checking if any user is logged in rather than validating permissions for the target user. This makes it possible for authenticated attackers, with subscriber-level access and above, to change the email address and password of any user account, including administrators, resulting in complete account takeover.",
-      "refs": "https://diviengine.com/divi-form-builder-changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/cb158acc-69d7-4a7d-b356-7de1f6b37019?source=cve",
-      "source": "NVD",
-      "time": "2026-07-09 19:54:58"
-    },
-    {
-      "cve_id": "CVE-2026-41857",
-      "title": "高危漏洞: CVE-2026-41857 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-09 14:16:20",
-      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A compromised or malicious BOSH Director can execute arbitrary shell commands on the operator's workstation when the operator runs bosh ssh (or bosh scp/bosh logs -f) with default flags.\nAffected versions: BOSH CLI versions prior to 7.10.5.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-41857-bosh-cli-shell-injection/",
-      "source": "NVD",
-      "time": "2026-07-09 19:54:53"
-    },
-    {
-      "cve_id": "CVE-2026-47646",
-      "title": "高危漏洞: CVE-2026-47646 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-09 08:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Dynamics 365 Customer Voice allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47646",
-      "source": "NVD",
-      "time": "2026-07-09 14:39:38"
-    },
-    {
-      "cve_id": "CVE-2026-15137",
-      "title": "高危漏洞: CVE-2026-15137 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-09 08:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in code-projects Interview Management System 1.0. This vulnerability affects unknown code of the file \\inc\\classes\\View.php. This manipulation of the argument ID causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://code-projects.org/\nhttps://github.com/susususua-AI/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-15137",
-      "source": "NVD",
-      "time": "2026-07-09 14:39:33"
-    },
-    {
-      "cve_id": "CVE-2026-15135",
-      "title": "高危漏洞: CVE-2026-15135 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-09 08:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in code-projects Online Food Order System 1.0. This affects an unknown part of the file /edit_food_items.php. The manipulation of the argument update results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://code-projects.org/\nhttps://github.com/susususua-AI/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-15135",
-      "source": "NVD",
-      "time": "2026-07-09 14:39:26"
-    },
-    {
-      "cve_id": "CVE-2026-15134",
-      "title": "高危漏洞: CVE-2026-15134 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-09 08:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in CodeAstro Simple Online Leave Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /SimpleOnlineLeave/index.php. Executing a manipulation of the argument email can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://codeastro.com/\nhttps://github.com/yihaofuweng/cve/issues/71\nhttps://vuldb.com/cve/CVE-2026-15134",
-      "source": "NVD",
-      "time": "2026-07-09 14:39:21"
-    },
-    {
-      "cve_id": "CVE-2026-59723",
-      "title": "高危漏洞: CVE-2026-59723 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-09 07:16:56",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Cline is an autonomous coding agent as an SDK, IDE extension, or CLI assistant. Prior to 3.0.30, the Cline Hub dashboard server launched by the cline dashboard command accepts WebSocket connections on the /browser endpoint without validating the Origin header, and when ROOM_SECRET is unset for local 127.0.0.1 binds, isAuthorizedBrowserRequest() allows attacker-controlled websites to send desktopCommand frames that read workspace state, mutate MCP and provider settings, and trigger command execution when a provider or model is configured. This issue is fixed in version 3.0.30.",
-      "refs": "https://github.com/cline/cline/commit/d09270940f5746f288cfc4a5039b46a2f4d5d01e\nhttps://github.com/cline/cline/pull/11724\nhttps://github.com/cline/cline/releases/tag/cli-v3.0.30",
-      "source": "NVD",
-      "time": "2026-07-09 10:00:17"
-    },
-    {
-      "cve_id": "CVE-2026-54784",
-      "title": "高危漏洞: CVE-2026-54784 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-09 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. In version 1.9.0, CoreWCF SPNEGO SecurityContextToken negotiation can expose the proof key recovered from the RSTR when TransportWithMessageCredential with Windows client credentials and session establishment are used, allowing an observer to impersonate the authenticated Windows principal and decrypt or forge WS-SecureConversation traffic. This issue is fixed in version 1.9.1.",
-      "refs": "https://github.com/CoreWCF/CoreWCF/commit/2afae08b2fa5288428df89e8161116b816cf6b4b\nhttps://github.com/CoreWCF/CoreWCF/commit/f216aa6929d41dc99cee098b1e69c260ec4c41c7\nhttps://github.com/CoreWCF/CoreWCF/releases/tag/v1.9.1",
-      "source": "NVD",
-      "time": "2026-07-09 10:00:12"
-    },
-    {
-      "cve_id": "CVE-2026-54783",
-      "title": "高危漏洞: CVE-2026-54783 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-09 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF WS-Security endorsing and supporting signature verification does not ensure the selected ds:Signature covers the expected Security header target, allowing an attacker with one captured signed SOAP envelope to replay arbitrary service operations as the victim principal. This issue is fixed in versions 1.8.1 and 1.9.1.",
-      "refs": "https://github.com/CoreWCF/CoreWCF/commit/0589692d4b9a41d21b34ac48281e95f6df7f4ce5\nhttps://github.com/CoreWCF/CoreWCF/commit/30aef805270976c42477e3f2a05f4e563d86e247\nhttps://github.com/CoreWCF/CoreWCF/commit/4618f24165ad018ad3ed2636bf8c3bc87d2a3be2",
-      "source": "NVD",
-      "time": "2026-07-09 10:00:07"
-    },
-    {
-      "cve_id": "CVE-2026-54782",
-      "title": "高危漏洞: CVE-2026-54782 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-09 07:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF SAML 1.1 and SAML 2.0 token validation does not correctly resolve the issuer signing key or require signed tokens when IdentityConfiguration is used with federated bindings, allowing an unauthenticated remote attacker to impersonate any principal the trusted STS could issue. This issue is fixed in versions 1.8.1 and 1.9.1.",
-      "refs": "https://github.com/CoreWCF/CoreWCF/commit/0b8c8af851260e85e8402af53233d1b8f87dfb6f\nhttps://github.com/CoreWCF/CoreWCF/commit/0e63c2cca55763d8be6b226a234579280a09e7b6\nhttps://github.com/CoreWCF/CoreWCF/commit/e5cc9b6a4ecc102a50d782093bfc72e0790abe3d",
-      "source": "NVD",
-      "time": "2026-07-09 10:00:03"
-    },
-    {
-      "cve_id": "CVE-2026-54781",
-      "title": "高危漏洞: CVE-2026-54781 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-09 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF SAML token validation does not enforce SubjectConfirmation method URIs or holder-of-key proof keys in SamlSecurityTokenHandler, allowing holder-of-key downgrade or custom confirmation method assertions to authenticate a subject without proving authority over the assertion. This issue is fixed in versions 1.8.1 and 1.9.1.",
-      "refs": "https://github.com/CoreWCF/CoreWCF/commit/6a99df3242f54acd6f89edfd6050430b72d0c685\nhttps://github.com/CoreWCF/CoreWCF/commit/86dd3232b6b8aaf32281be9e8d798afad6145d58\nhttps://github.com/CoreWCF/CoreWCF/commit/9eb9b46d1c2af06fb71f656a02f4d5b4649c1f03",
-      "source": "NVD",
-      "time": "2026-07-09 09:59:56"
-    },
-    {
-      "cve_id": "CVE-2026-54774",
-      "title": "高危漏洞: CVE-2026-54774 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-09 07:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, SamlSerializer skips final SignatureValue verification when a CoreWCF service validates SAML tokens using a non-X.509 signing token, allowing an attacker to reference a non-X.509 SecurityToken key identifier and bypass assertion signature verification. This issue is fixed in versions 1.8.1 and 1.9.1.",
-      "refs": "https://github.com/CoreWCF/CoreWCF/commit/65d09022749854ba943e376aefb958dec05b00d8\nhttps://github.com/CoreWCF/CoreWCF/commit/b914495ce63c44924664643b60a262e7595081a4\nhttps://github.com/CoreWCF/CoreWCF/commit/e7454132876ecc7e2cf80e541a44376eeb54979b",
-      "source": "NVD",
-      "time": "2026-07-09 09:59:52"
-    },
-    {
-      "cve_id": "CVE-2026-54772",
-      "title": "高危漏洞: CVE-2026-54772 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 07:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, an unauthenticated remote attacker that can reach a NetTcpBinding, NetNamedPipeBinding, or UnixDomainSocketBinding endpoint can trigger premature EOF handling in the CoreWCF net.tcp, net.pipe, or net.uds framing handshake and pin one server thread-pool worker at full CPU per connection. This issue is fixed in versions 1.8.1 and 1.9.1.",
-      "refs": "https://github.com/CoreWCF/CoreWCF/commit/03ddbced349931a2da6c0efcdf745c0722eff77c\nhttps://github.com/CoreWCF/CoreWCF/commit/7ddd966d6e58564a32ab30c825dd693b45a34a55\nhttps://github.com/CoreWCF/CoreWCF/commit/c4212988cd6fd472783d0413426eeac61044097a",
-      "source": "NVD",
-      "time": "2026-07-09 09:59:48"
     }
   ]
 }
