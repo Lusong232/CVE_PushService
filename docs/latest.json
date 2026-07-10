@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-54423",
+      "title": "高危漏洞: CVE-2026-54423 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-10 12:17:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:H",
+      "description": "In OpenStack Ironic before 37.0.1, an Ironic user with the ability to deploy nodes using the IPMI management interface can maliciously use the send_raw step to send arbitrary IPMI commands to a node, bypassing Ironic's access control.",
+      "refs": "https://bugs.launchpad.net/ironic/+bug/2150458\nhttps://security.openstack.org/ossa/OSSA-2026-025.html",
+      "source": "NVD",
+      "time": "2026-07-10 14:33:29"
+    },
+    {
+      "cve_id": "CVE-2026-15070",
+      "title": "高危漏洞: CVE-2026-15070 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-10 12:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Salon Booking System – Free Version plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 10.30.32. This is due to missing or incorrect nonce validation on the setCustomText function. This makes it possible for unauthenticated attackers to inject arbitrary PHP code into the web-accessible translate-constants.php file within the plugin directory, enabling remote code execution on the server via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. sanitize_text_field() is applied to the POST 'value' parameter but does not neutralize the characters — single quotes, parentheses, semicolons, $, and [] — required to break out of the PHP string literal into which the value is interpolated before being written to disk via file_put_contents().",
+      "refs": "https://plugins.trac.wordpress.org/browser/salon-booking-system/tags/10.30.32/src/SLN/Action/Ajax/SetCustomText.php#L17\nhttps://plugins.trac.wordpress.org/browser/salon-booking-system/tags/10.30.32/src/SLN/Action/Init.php#L628\nhttps://plugins.trac.wordpress.org/browser/salon-booking-system/tags/10.30.32/src/SLN/Plugin.php#L407",
+      "source": "NVD",
+      "time": "2026-07-10 14:33:22"
+    },
+    {
+      "cve_id": "CVE-2026-14894",
+      "title": "高危漏洞: CVE-2026-14894 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-10 12:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Super Forms – Drag & Drop Form Builder plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 6.3.313 via the submit_form function. This is due to missing file type validation and the absence of any capability check on the submit_form nopriv AJAX handler, whose only barrier is a session nonce freely obtainable by unauthenticated visitors via a separate nopriv endpoint. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The nonce requirement is trivially bypassed because the super_create_nonce nopriv AJAX action allows any unauthenticated visitor to mint a valid sf_nonce and session cookie in a single prior request, reducing exploitation to two unauthenticated HTTP requests.",
+      "refs": "https://github.com/RensTillmann/super-forms/commit/c5838f5877c72b738c54ed970935c77ae6830c3a\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e9c7fb16-efbb-41e9-be13-98e96c1e9100?source=cve",
+      "source": "NVD",
+      "time": "2026-07-10 14:33:18"
+    },
+    {
+      "cve_id": "CVE-2026-13430",
+      "title": "高危漏洞: CVE-2026-13430 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-10 12:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Post Export Import with Media plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.13.1 via the import_media_file_secure function. This is due to insufficient file extension validation caused by a trailing-dot filename bypass, where the extension allow-list check in ajax_import_media_start() uses pathinfo() on the raw ZIP entry name (e.g., 'shell.php.'), which returns an empty string for the extension, causing the allow-list guard to be skipped and the file to be extracted to a temporary location, after which import_media_file_secure() copies it into the WordPress uploads directory without re-validating the extension. This makes it possible for authenticated attackers, with administrator-level access and above, to upload files that may be executable, which makes remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/post-export-import-with-media/tags/1.13.1/includes/class-media-handler.php#L268\nhttps://plugins.trac.wordpress.org/browser/post-export-import-with-media/tags/1.13.1/includes/class-media-handler.php#L364\nhttps://plugins.trac.wordpress.org/browser/post-export-import-with-media/tags/1.13.1/includes/class-media-handler.php#L389",
+      "source": "NVD",
+      "time": "2026-07-10 14:33:12"
+    },
+    {
+      "cve_id": "CVE-2026-15319",
+      "title": "高危漏洞: CVE-2026-15319 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-10 11:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in Sipeed PicoClaw up to 0.2.9. This affects the function IPAllowlist of the file web/backend/middleware/access_control.go of the component Launcher. Such manipulation leads to improper access controls. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. The name of the patch is 3126. A patch should be applied to remediate this issue.",
+      "refs": "https://github.com/sipeed/picoclaw/\nhttps://github.com/sipeed/picoclaw/issues/3069\nhttps://github.com/sipeed/picoclaw/pull/3126",
+      "source": "NVD",
+      "time": "2026-07-10 14:33:08"
+    },
+    {
+      "cve_id": "CVE-2026-54771",
+      "title": "高危漏洞: CVE-2026-54771 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-10 08:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.65.3, a Langroid application exposing a chat interface to untrusted users may allow direct tool invocation via raw JSON payloads, even when tools are registered with `use=False, handle=True`. Version 0.65.3 fixes the issue.",
+      "refs": "https://github.com/langroid/langroid/security/advisories/GHSA-gjgq-w2m6-wr5q",
+      "source": "NVD",
+      "time": "2026-07-10 14:33:03"
+    },
+    {
+      "cve_id": "CVE-2026-54769",
+      "title": "高危漏洞: CVE-2026-54769 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-10 08:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Langroid is a framework for building large-language-model-powered applications. Versions prior to 0.65.2 are vulnerable to a critical Sandbox Escape leading to Remote Code Execution (RCE) in its `TableChatAgent` and `VectorStore` capabilities. When these agents evaluate LLM-generated tool messages with `full_eval=True`, they attempt to sandbox the execution by explicitly setting `locals` to an empty dictionary `{}` inside Python's `eval()` function. However, this relies on an incomplete understanding of Python's execution model. Because `__builtins__` is not explicitly scrubbed from the `globals` dictionary mapping, Python implicitly injects all built-ins during execution, granting full access to functions like `__import__('os').system()`. Since `TableChatAgent.pandas_eval()` executes external LLM outputs natively, this bypass permits any attacker providing prompt payload to achieve unauthenticated RCE on the host system. Version 0.65.2 patches the issue.",
+      "refs": "https://github.com/langroid/langroid/security/advisories/GHSA-q9p7-wqxg-mrhc",
+      "source": "NVD",
+      "time": "2026-07-10 14:32:56"
+    },
+    {
+      "cve_id": "CVE-2026-50181",
+      "title": "高危漏洞: CVE-2026-50181 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-10 08:16:33",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.64.0, Langroid's `ReadFileTool` and `WriteFileTool` appear to treat `curr_dir` as the intended working-directory boundary for file operations. However, the tools only change the process working directory to `curr_dir` and then operate on the user-supplied `file_path` without resolving and enforcing that the final path remains inside `curr_dir`. As a result, a tool caller can supply path traversal sequences such as `../secret.txt` to read files outside the configured current directory, or `../written_by_tool.txt` to write files outside that directory. This can impact applications that expose Langroid file tools to an LLM agent, user-controlled tool call, or delegated coding/documentation agent while relying on `curr_dir` to restrict file access to a project/workspace directory. Version 0.64.0 patches the issue.",
+      "refs": "https://github.com/langroid/langroid/commit/56e2756ecab70a70a7e6edbee2f2187b8484683e\nhttps://github.com/langroid/langroid/security/advisories/GHSA-fg23-3346-88f5",
+      "source": "NVD",
+      "time": "2026-07-10 14:32:51"
+    },
+    {
+      "cve_id": "CVE-2026-12598",
+      "title": "高危漏洞: CVE-2026-12598 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-10 08:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The LoginPress Pro plugin for WordPress is vulnerable to authentication bypass in versions up to and including 6.2.3 via the Spotify Social Login addon. This is due to the loginpress_on_spotify_login() function trusting the unverified 'email' field returned by Spotify's /v1/me endpoint and using it directly with get_user_by('email', $profile['email']) to identify and log in an existing WordPress account, without confirming that the Spotify user actually owns the email address (Spotify documents that the profile email is unverified) and without requiring the user to prove ownership of the matching WordPress account. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including Administrators, by registering a Spotify account using the targeted user's email address and authenticating via the Spotify provider.",
+      "refs": "https://loginpress.pro/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/bef61f05-a2dc-4f61-a5da-7161a9912196?source=cve",
+      "source": "NVD",
+      "time": "2026-07-10 14:32:46"
+    },
+    {
+      "cve_id": "CVE-2026-12597",
+      "title": "高危漏洞: CVE-2026-12597 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-10 08:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The LoginPress Pro plugin for WordPress is vulnerable to Authentication Bypass via the GitHub OAuth callback in versions up to, and including, 6.2.3. The vulnerability exists in the loginpress_on_github_login() function, which blindly trusts the first element (profile[0]['email']) of the array returned by GitHub's /user/emails endpoint as an account-binding identifier without verifying that the email carries a verified === true status. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including administrators, by adding an unverified email address matching a local account to their GitHub profile and triggering the OAuth callback via a crafted code parameter — causing the plugin to call get_user_by('email', ...) and establish an authenticated session for the matched account. Practical exploitation is conditional on GitHub returning the attacker-added unverified email at index 0 of the /user/emails response, as GitHub typically prioritizes the primary verified address first; nonetheless, the absence of any email verification check in the plugin constitutes a fundamental authentication bypass flaw.",
+      "refs": "https://loginpress.pro/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/4f3ee9f6-6465-4caf-9aef-72dd37c61a2c?source=cve",
+      "source": "NVD",
+      "time": "2026-07-10 14:32:38"
+    },
+    {
+      "cve_id": "CVE-2026-12595",
+      "title": "高危漏洞: CVE-2026-12595 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-10 08:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The LoginPress Pro plugin for WordPress is vulnerable to Authentication Bypass via Unverified OAuth Email in all versions up to and including 6.2.3. The vulnerability exists in the loginpress_on_discord_login() Discord OAuth callback handler, which accepts the email field returned by Discord's /users/@me endpoint without ever checking that the profile's verified flag is true, then directly maps that email to a local WordPress account via get_user_by('email', $profile['email']) and issues an authenticated session cookie via wp_set_auth_cookie(). This makes it possible for unauthenticated attackers to take over any existing WordPress account — including administrator accounts — by registering a Discord account configured with an unverified email address that matches the target user's registered WordPress email and completing the standard Discord OAuth flow.",
+      "refs": "https://loginpress.pro/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/5949980f-2506-49be-9105-40ec2d2a4f77?source=cve",
+      "source": "NVD",
+      "time": "2026-07-10 14:32:28"
+    },
+    {
       "cve_id": "CVE-2026-59834",
       "title": "高危漏洞: CVE-2026-59834 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -978,127 +1099,6 @@
       "refs": "https://security.nozominetworks.com/NN-2026:13-01",
       "source": "NVD",
       "time": "2026-07-09 19:56:01"
-    },
-    {
-      "cve_id": "CVE-2026-31985",
-      "title": "高危漏洞: CVE-2026-31985 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-09 16:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
-      "description": "When the upstream Guardian or CMC was configured in the Remote Collector via n2os-tui, the generated configuration disabled TLS certificate verification, and no option was provided to enable it. A malicious actor could perform a man-in-the-middle attack and intercept the communication between the Remote Collector and the Guardian or CMC. This could result in theft of the sync token, impersonation of the server, injection of spoofed data (such as false asset information or vulnerabilities) into the Guardian or CMC, or disruption of the data flow between the Remote Collector and the Guardian or CMC.",
-      "refs": "https://security.nozominetworks.com/NN-2026:12-01",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:57"
-    },
-    {
-      "cve_id": "CVE-2026-31984",
-      "title": "高危漏洞: CVE-2026-31984 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 16:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A denial-of-service vulnerability caused by unbounded resource allocation was discovered in the audit logging functionality, due to a missing size limit on input recorded into audit entries. An unauthenticated attacker can submit requests containing excessively large input that is recorded into audit entries, possibly exhausting the available disk space and rendering the system inoperable.",
-      "refs": "https://security.nozominetworks.com/NN-2026:11-01",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:50"
-    },
-    {
-      "cve_id": "CVE-2026-31982",
-      "title": "高危漏洞: CVE-2026-31982 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-09 16:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "An Open Redirect vulnerability was discovered in the SAML Single Sign-On functionality due to insufficient validation of a user-controlled redirection parameter. An unauthenticated attacker can craft a request to the SAML sign-in endpoint and poison the cached SAML redirection for other users who subsequently initiate SAML Single Sign-On, enabling phishing and credential-theft attacks, as well as disrupting SAML authentication for all affected users.",
-      "refs": "https://security.nozominetworks.com/NN-2026:9-01",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:46"
-    },
-    {
-      "cve_id": "CVE-2026-15000",
-      "title": "高危漏洞: CVE-2026-15000 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-09 16:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Connect Contact Form 7 and Mailchimp plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Mailchimp Merge Field Values in all versions up to, and including, 0.9.78.06 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload is only triggered when a privileged user (Administrator) performs a Contact Lookup for the email address submitted via the CF7 form, meaning execution is deferred until an administrator interacts with the affected entry.",
-      "refs": "https://plugins.trac.wordpress.org/browser/contact-form-7-mailchimp-extension/tags/0.9.78.05/assets/js/chimpmatic-lite.js#L1706\nhttps://plugins.trac.wordpress.org/browser/contact-form-7-mailchimp-extension/tags/0.9.78.05/assets/js/chimpmatic-lite.js#L2036\nhttps://plugins.trac.wordpress.org/browser/contact-form-7-mailchimp-extension/tags/0.9.78.05/includes/api/class-cmatic-contact-lookup.php#L237",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:41"
-    },
-    {
-      "cve_id": "CVE-2026-14245",
-      "title": "高危漏洞: CVE-2026-14245 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-09 16:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass leading to Administrator Account Takeover in all versions up to, and including, 5.5.1. This is due to the `um_reset_password_process_hook()` function performing no server-side verification that the OTP validation step was completed, and relying solely on a public `form_nonce` nonce that the plugin itself emits to unauthenticated visitors via the `moumprvar` JavaScript object on the Ultimate Member password reset page, while still accepting the attacker-controlled `username_b` parameter to target any WordPress user without role restriction or any binding to a previously validated OTP session. This makes it possible for unauthenticated attackers to obtain a freshly generated password-reset URL for an arbitrary Administrator account — returned in a 302 `Location` header — and use it to take full control of that account. Exploitation requires the Ultimate Member Password Reset Form integration to be active and the plugin to not be configured for phone-only reset.",
-      "refs": "https://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.0/handler/forms/class-moumpasswordreset.php#L181\nhttps://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.0/handler/forms/class-moumpasswordreset.php#L367\nhttps://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.0/handler/forms/class-moumpasswordreset.php#L372",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:36"
-    },
-    {
-      "cve_id": "CVE-2026-47840",
-      "title": "高危漏洞: CVE-2026-47840 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
-      "description": "A network attacker positioned between UAA and its LDAP directory can impersonate the directory using any certificate from any trusted CA, then harvest the LDAP bind password and every end-user password sent during simple-bind authentication, and return forged group memberships that grant themselves admin scopes. This affects every deployment that authenticates users against LDAP over StartTLS.\nAffected versions: UAA versions prior to v78.13.0; Cf-deployment versions prior to v56.2.0.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47840-ldap-starttls-unconditionally-disables-hostname-verification/",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:29"
-    },
-    {
-      "cve_id": "CVE-2026-47831",
-      "title": "高危漏洞: CVE-2026-47831 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-09 15:16:24",
-      "vector_string": "CVSS:3.0/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Use of a cryptographically weak random number generator in the GenerateRandomPassword function in bosh-windows-stemcell-builder allows a remote attacker to brute-force the resulting SSH login via TCP/22.\nAffected versions: bosh-windows-stemcell-builder versions prior to v2019.98.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47831-cryptographically-weak-password-generation-in-bosh-windows-stemcell-builder-allows-remote-ssh-brute-force-attacks/",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:25"
-    },
-    {
-      "cve_id": "CVE-2026-47830",
-      "title": "高危漏洞: CVE-2026-47830 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-09 15:16:24",
-      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incorrect Permission Assignment in BOSH.Utils.psm1 in BOSH-Ecosystem bosh-windows-stemcell-builder allows low-privilege authenticated users to overwrite C:\\bosh\\service_wrapper.exe or C:\\bosh\\bosh-agent.exe and gain NT AUTHORITY\\SYSTEM on the next service restart or reboot. This can lead to full host control.\nAffected versions: bosh-windows-stemcell-builder versions prior to v2019.98.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47830-incorrect-permission-assignment-allows-local-privilege-escalation-to-system-via-executable-overwrite/",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:17"
-    },
-    {
-      "cve_id": "CVE-2026-47829",
-      "title": "高危漏洞: CVE-2026-47829 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-09 15:16:24",
-      "vector_string": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Argument Injection in bosh-cli allows a compromised BOSH Director to inject arbitrary OpenSSH options into the locally-spawned ssh process when an operator runs bosh ssh -c, bosh logs -f, or other non-interactive SSH paths, leading to local command execution on the operator's workstation.\nAffected versions: bosh-cli versions prior to v7.10.4.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47829-argument-injection-in-bosh-cli-allows-local-command-execution-on-operator-workstations-via-compromised-director/",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:13"
-    },
-    {
-      "cve_id": "CVE-2026-47828",
-      "title": "高危漏洞: CVE-2026-47828 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-09 15:16:23",
-      "vector_string": "CVSS:3.0/AV:A/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "During bosh create-env and bosh delete-env, the CLI uploads compiled CPI packages and rendered job templates to the new VM's DAV blobstore over HTTPS without verifying the server certificate, even though a CA certificate for that endpoint is available in the installation manifest. A network attacker can terminate the TLS connection, harvest the Basic-auth credentials, and read the rendered-templates archive containing every bootstrap secret for the new BOSH Director, then replay the credentials against the real VM's agent for root code execution.\nAffected versions: bosh-cli versions prior to v7.10.4.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47828-missing-tls-certificate-verification-in-bosh-cli-allows-root-code-execution-via-man-in-the-middle-credential-replay/",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:07"
-    },
-    {
-      "cve_id": "CVE-2026-47826",
-      "title": "高危漏洞: CVE-2026-47826 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-09 15:16:23",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The blobs.yml path key traversal vulnerability in the BOSH CLI tool allows an attacker to write arbitrary files and exfiltrate sensitive information.\nAffected versions: BOSH CLI tool versions prior to v7.10.4.",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47826-blobs-yaml-path-traversal-allows-file-writes/",
-      "source": "NVD",
-      "time": "2026-07-09 19:55:03"
     }
   ]
 }
