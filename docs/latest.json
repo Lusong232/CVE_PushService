@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-61447",
+      "title": "高危漏洞: CVE-2026-61447 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-11 22:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfiltrate all environment secrets and execute arbitrary code on the host system.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-2xv2-w8cq-5gxw\nhttps://www.vulncheck.com/advisories/praisonai-before-remote-code-execution-via-codeagent",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:53"
+    },
+    {
+      "cve_id": "CVE-2026-61445",
+      "title": "高危漏洞: CVE-2026-61445 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-11 22:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "PraisonAI before 4.6.78 contains arbitrary file write and command execution vulnerabilities in the AICoder component due to missing path validation and command sanitization in LLM tool calls. Attackers can inject malicious prompts through the chat interface to write files to arbitrary filesystem locations and execute arbitrary shell commands with root privileges.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-9mp3-24cc-77mg\nhttps://www.vulncheck.com/advisories/praisonai-before-arbitrary-file-write-and-command-execution",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:48"
+    },
+    {
+      "cve_id": "CVE-2026-61442",
+      "title": "高危漏洞: CVE-2026-61442 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-11 22:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "PraisonAI Platform (praisonai-platform) before 0.1.9 fails to enforce owner/admin authorization on the PATCH routes for projects, issues, and agents, which only require workspace-member role. A workspace member can modify owner-created records; for projects, a member can reassign lead_id to their own user id and then delete the owner-created project, bypassing the delete route's owner/admin permission check.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/commit/846568c7a5d8ce9e71e56e4c213f027c04909753\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-c78w-2q4r-68r7\nhttps://www.vulncheck.com/advisories/praisonai-platform-before-authorization-bypass-via-patch",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:44"
+    },
+    {
+      "cve_id": "CVE-2026-61439",
+      "title": "高危漏洞: CVE-2026-61439 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-11 22:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "PraisonAI versions before 4.6.78 contain a prompt injection defense misconfiguration where the block threshold defaults to CRITICAL severity, allowing HIGH-level threats to pass through unblocked. Attackers can submit single-vector prompt injection attacks such as instruction overrides or financial manipulation that trigger HIGH severity detection but are logged without blocking, enabling system prompt extraction and unauthorized tool invocations.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-fj8f-m44g-c479\nhttps://www.vulncheck.com/advisories/praisonai-before-prompt-injection-defense-bypass",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:40"
+    },
+    {
+      "cve_id": "CVE-2026-61429",
+      "title": "高危漏洞: CVE-2026-61429 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-07-11 22:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "PraisonAI versions before 1.6.78 contain a server-side request forgery vulnerability in the Crawl4AI/Chromium backend that allows attackers to bypass SSRF validation by exploiting DNS rebinding and HTTP redirects. Attackers can craft URLs that resolve to internal services after the initial validation check, enabling the headless browser to follow redirects and read internal responses including sensitive canary values.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-6g59-gm2v-qhvq\nhttps://www.vulncheck.com/advisories/praisonai-before-ssrf-via-crawl4ai-chromium-backend",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:35"
+    },
+    {
+      "cve_id": "CVE-2026-61428",
+      "title": "高危漏洞: CVE-2026-61428 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-11 22:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "PraisonAI AgentMail versions before 4.6.78 lack signature verification in webhook mode, allowing unauthenticated attackers to inject messages with spoofed sender addresses. Attackers can POST crafted message.received events to the webhook endpoint to inject arbitrary content into the agent and trigger replies to attacker-controlled addresses, bypassing sender allow/block lists.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qj9c-59p6-8cgx\nhttps://www.vulncheck.com/advisories/praisonai-agentmail-before-message-injection-via-webhook",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:30"
+    },
+    {
+      "cve_id": "CVE-2026-61426",
+      "title": "高危漏洞: CVE-2026-61426 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-11 22:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+      "description": "PraisonAI before 1.7.3 contains an insecure default configuration that binds to all interfaces with no API key requirement and wildcard CORS. Unauthenticated attackers can call GET /api/agents to read agent instructions and system prompts, or POST /api/chat to invoke agents without authentication.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-6wjp-v33h-5cvq\nhttps://www.vulncheck.com/advisories/praisonai-before-unauthenticated-agent-access-via-insecure-defaults",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:25"
+    },
+    {
+      "cve_id": "CVE-2026-60090",
+      "title": "高危漏洞: CVE-2026-60090 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-11 22:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "PraisonAI before 4.6.78 fails to validate the caller-controlled dimension argument in the PGVector and Cassandra knowledge-store create_collection() backends. Although schema, keyspace, and collection-name identifiers are validated, the dimension value (declared as int but not enforced at runtime) is interpolated directly into the vector column of the generated CREATE TABLE DDL. A caller able to influence collection-creation dimensions can pass a string such as '3); DROP TABLE tenant_secrets; --' to inject SQL/CQL tokens into the statement executed by the database driver.",
+      "refs": "https://github.com/MervinPraison/PraisonAI/commit/3aa9cbc2bd49c23a32be0a89a5e620d13d843eab\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-wf65-4jjx-q444\nhttps://www.vulncheck.com/advisories/praisonai-before-sql-cql-injection-via-vector-dimension",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:19"
+    },
+    {
+      "cve_id": "CVE-2026-56303",
+      "title": "高危漏洞: CVE-2026-56303 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-11 22:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Capgo before 12.128.2 contains an information disclosure vulnerability in the find_apikey_by_value PostgreSQL function marked SECURITY DEFINER and executable by the anon role. Unauthenticated attackers can call this function via the /rest/v1/rpc/find_apikey_by_value endpoint to retrieve sensitive API key metadata including user_id, mode, org scoping, and expiration details when supplied a valid key value.",
+      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-2xjq-h43m-592f\nhttps://www.vulncheck.com/advisories/capgo-unauthenticated-api-key-metadata-disclosure-via-security-definer-rpc-function",
+      "source": "NVD",
+      "time": "2026-07-12 02:44:14"
+    },
+    {
       "cve_id": "CVE-2026-1359",
       "title": "高危漏洞: CVE-2026-1359 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-4w49-gwv8-fpjg\nhttps://www.vulncheck.com/advisories/praisonai-before-unauthenticated-ssrf-via-webhook-url",
       "source": "NVD",
       "time": "2026-07-11 00:51:41"
-    },
-    {
-      "cve_id": "CVE-2026-59796",
-      "title": "高危漏洞: CVE-2026-59796 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-10 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "In JetBrains TeamCity before 2026.1.2 pipeline modification was possible due to improper permission checks",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:35"
-    },
-    {
-      "cve_id": "CVE-2026-59795",
-      "title": "高危漏洞: CVE-2026-59795 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-10 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "In JetBrains TeamCity before 2026.1.2 stored XSS via unauthenticated agent registration was possible",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:31"
-    },
-    {
-      "cve_id": "CVE-2026-59794",
-      "title": "高危漏洞: CVE-2026-59794 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-10 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "In JetBrains TeamCity before 2026.1.2 stored XSS on the cloud profile page was possible via agent-reported data",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:26"
-    },
-    {
-      "cve_id": "CVE-2026-59793",
-      "title": "高危漏洞: CVE-2026-59793 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-10 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains TeamCity before 2026.1.2 arbitrary file access was possible via the Perforce VCS integration",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:20"
-    },
-    {
-      "cve_id": "CVE-2026-59792",
-      "title": "高危漏洞: CVE-2026-59792 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-10 23:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
-      "description": "In JetBrains IntelliJ IDEA before 2026.1.4, \n2026.2 code execution via path traversal in project workspace ID handling was possible",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:14"
-    },
-    {
-      "cve_id": "CVE-2026-56765",
-      "title": "高危漏洞: CVE-2026-56765 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-10 23:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vikunja before 2.2.1 contains an authorization flaw where the LinkSharing.ReadAll endpoint exposes share hashes to users with read access, enabling permission escalation to admin-level shares. The GetTaskAttachment endpoint performs permission checks against user-supplied task IDs but fetches attachments by sequential ID without verifying ownership, allowing attackers to download and delete all file attachments across all projects instance-wide.",
-      "refs": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-2pv8-4c52-mf8j\nhttps://www.vulncheck.com/advisories/vikunja-unauthenticated-instance-wide-data-breach-via-link-share-hash-disclosure-chained-with-cross-project-attachment-idor",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:09"
-    },
-    {
-      "cve_id": "CVE-2026-56305",
-      "title": "高危漏洞: CVE-2026-56305 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-10 23:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Capgo before 12.128.2 contains an authentication bypass vulnerability in the password change endpoint that allows attackers to change user passwords without requiring current password confirmation. Attackers with temporary session access can exploit this flaw to permanently lock out legitimate users and achieve full account takeover.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-rjr5-qxqj-cx8g\nhttps://www.vulncheck.com/advisories/capgo-authentication-bypass-in-password-change-via-missing-current-password-validation",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:05"
-    },
-    {
-      "cve_id": "CVE-2026-56279",
-      "title": "高危漏洞: CVE-2026-56279 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 23:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Capgo before 12.128.2 contains an information disclosure vulnerability in the get_orgs_v7(userid) RPC function that remains publicly invokable despite intended private access controls. Unauthenticated attackers can supply arbitrary user UUIDs to retrieve foreign users' organization membership, roles, management emails, and billing metadata.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-fch8-pp28-mw2x\nhttps://www.vulncheck.com/advisories/capgo-information-disclosure-via-get-orgs-v7-rpc-endpoint",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:59"
-    },
-    {
-      "cve_id": "CVE-2026-56261",
-      "title": "高危漏洞: CVE-2026-56261 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-10 23:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Crawl4AI before 0.8.7 contains a server-side request forgery (SSRF) vulnerability in the Docker API server's /crawl/job and /llm/job endpoints, which accept webhook URLs without destination validation. An attacker can supply webhook URLs pointing to private or internal IP ranges, Docker networks, or cloud metadata endpoints (e.g. 169.254.169.254), causing the server to make requests to internal services and potentially expose cloud metadata.",
-      "refs": "https://github.com/unclecode/crawl4ai\nhttps://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg\nhttps://www.vulncheck.com/advisories/crawl4ai-server-side-request-forgery-via-webhook-urls",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:53"
     }
   ]
 }
