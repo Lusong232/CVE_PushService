@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15338",
+      "title": "高危漏洞: CVE-2026-15338 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-11 12:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The LA-Studio Element Kit for Elementor plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.6.1 via the get_type_template function. This makes it possible for authenticated attackers, with contributor-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. The wp_normalize_path function used in get_template only normalizes directory separators and does not resolve or reject path traversal sequences, while the extension check is trivially bypassed because the caller already appends the required extension to the traversal payload.",
+      "refs": "https://plugins.trac.wordpress.org/browser/lastudio-element-kit/tags/1.6.1/includes/addons/progress-bar.php#L866\nhttps://plugins.trac.wordpress.org/browser/lastudio-element-kit/tags/1.6.1/includes/addons/progress-bar.php#L869\nhttps://plugins.trac.wordpress.org/browser/lastudio-element-kit/tags/1.6.1/lastudio-element-kit.php#L430",
+      "source": "NVD",
+      "time": "2026-07-11 13:31:55"
+    },
+    {
+      "cve_id": "CVE-2026-13353",
+      "title": "高危漏洞: CVE-2026-13353 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 12:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Ultimate CSV Importer – WordPress Import & Export for CSV, XML & Excel plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 8.0.1 via the 'MappedFields' parameter. This is due to missing capability checks on the AJAX handlers for install_addon, saveMappedFields, and StartImport, combined with the plugin nonce being exposed to any authenticated user who can load an admin page, allowing a Subscriber to install the Import WooCommerce add-on, persist attacker-controlled PHP expressions in the MappedFields parameter, and trigger evaluation via eval() in ImportHelpers::get_meta_values(). This makes it possible for authenticated attackers, with subscriber-level access and above, to execute code on the server.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-ultimate-csv-importer/tags/8.0.1/InstallAddons.php#L66\nhttps://plugins.trac.wordpress.org/browser/wp-ultimate-csv-importer/tags/8.0.1/SaveMapping.php#L1562\nhttps://plugins.trac.wordpress.org/browser/wp-ultimate-csv-importer/tags/8.0.1/SaveMapping.php#L185",
+      "source": "NVD",
+      "time": "2026-07-11 13:31:47"
+    },
+    {
+      "cve_id": "CVE-2026-13114",
+      "title": "高危漏洞: CVE-2026-13114 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-11 12:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Motors – Car Dealership & Classified Listings Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content and User Biographical Info in all versions up to, and including, 1.4.112 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.108/assets/js/listing-manager/libs/tooltip.js#L59\nhttps://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.108/assets/js/listing-manager/libs/tooltip.js#L73\nhttps://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.108/includes/helpers.php#L278",
+      "source": "NVD",
+      "time": "2026-07-11 13:31:40"
+    },
+    {
+      "cve_id": "CVE-2026-13756",
+      "title": "高危漏洞: CVE-2026-13756 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 10:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Grid Builder plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.3.3. This is due to missing authorization and meta key validation in the `update()` handler for the `/wp-json/wpgb/v2/metadata` REST endpoint. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator by updating their own `wp_capabilities` user meta with a crafted nested array payload.",
+      "refs": "https://docs.wpgridbuilder.com/changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6a42e0e8-a8c7-4bc5-80ca-5ef69d1f0b6c?source=cve",
+      "source": "NVD",
+      "time": "2026-07-11 13:31:34"
+    },
+    {
       "cve_id": "CVE-2026-55175",
       "title": "高危漏洞: CVE-2026-55175 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1055,50 +1099,6 @@
       "refs": "https://lists.apache.org/thread/fm8cpvzbox2qqy99ztglm8wkk1nrg9ng",
       "source": "NVD",
       "time": "2026-07-11 00:49:46"
-    },
-    {
-      "cve_id": "CVE-2026-40007",
-      "title": "高危漏洞: CVE-2026-40007 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Uncontrolled Recursion, Uncontrolled Resource Consumption vulnerability in Apache IoTDB.\nWhen pipe_air_gap_receiver_enabled=true, the IoTDB AirGap receiver's\nreadLength method calls itself recursively each time it recognises the\nE-language prefix in socket data, with no depth limit. An unauthenticated\nattacker can send a stream of repeated E-language prefixes that drives the\nrecursion arbitrarily deep, exhausting the receiver thread's JVM stack and\nraising StackOverflowError.\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/tr23kh6kp8drrsv8ypv1mqm4v5kyy23m",
-      "source": "NVD",
-      "time": "2026-07-11 00:49:38"
-    },
-    {
-      "cve_id": "CVE-2026-15378",
-      "title": "高危漏洞: CVE-2026-15378 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-10 18:16:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
-      "description": "A flaw was found in the `guardrails-detectors` component. This vulnerability allows a remote attacker to perform a blind Server-Side Request Forgery (SSRF) by submitting a specially crafted XML Schema Definition (XSD) string. This can lead to unauthorized access to sensitive information, including credentials from cloud metadata services, Kubernetes API, internal MinIO, and other internal network endpoints. Additionally, it enables local file reads of critical data such as service account tokens and pod secrets.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-15378\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2498941",
-      "source": "NVD",
-      "time": "2026-07-10 21:58:04"
-    },
-    {
-      "cve_id": "CVE-2026-13347",
-      "title": "高危漏洞: CVE-2026-13347 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 16:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Hide My WP Lite plugin for WordPress is vulnerable to Arbitrary File Read in versions up to and including 1.3 via the he_wrapper_js and he_wrapper_css query parameters processed by the elementor_assets_filter() function. This is due to the function concatenating user-supplied input directly onto ABSPATH and passing the result to file_get_contents() without any path traversal validation, allow-list, realpath containment, or extension check; the result is then echoed in the HTTP response. Although the output is passed through wp_kses_post(), that function only filters HTML tags and does not prevent disclosure of arbitrary file contents. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the affected site's server (such as wp-config). Note: The exploit requires the Elementor plugin and the 'Hide Elementor' feature to be enabled.",
-      "refs": "https://plugins.trac.wordpress.org/browser/hide-wp-login/tags/1.3/includes/functions.php#L117\nhttps://plugins.trac.wordpress.org/browser/hide-wp-login/tags/1.3/includes/functions.php#L139\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e044c51c-40e0-4d33-8921-616d59e0e0d8?source=cve",
-      "source": "NVD",
-      "time": "2026-07-10 19:43:16"
-    },
-    {
-      "cve_id": "CVE-2026-15330",
-      "title": "高危漏洞: CVE-2026-15330 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-10 13:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in zhayujie CowAgent up to 2.1.1. Impacted is the function _build_image_content/_download_to_data_url of the file agent/tools/vision/vision.py of the component Vision Tool. Executing a manipulation of the argument image can lead to server-side request forgery. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. Upgrading to version 2.1.2 is recommended to address this issue. This patch is called e85290cddcbb5ffc9c235927f4c92e5b4c3ec264. Upgrading the affected component is advised.",
-      "refs": "https://github.com/zhayujie/CowAgent/\nhttps://github.com/zhayujie/CowAgent/commit/e85290cddcbb5ffc9c235927f4c92e5b4c3ec264\nhttps://github.com/zhayujie/CowAgent/issues/2872",
-      "source": "NVD",
-      "time": "2026-07-10 19:43:10"
     }
   ]
 }
