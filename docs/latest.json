@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-1359",
+      "title": "高危漏洞: CVE-2026-1359 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 17:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Genolve – AI image AI video generation plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the genolve_setOpt() function in all versions up to, and including, 5.0.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to update arbitrary WordPress options, including enabling user registration and setting the default role to administrator, resulting in privilege escalation.",
+      "refs": "https://plugins.trac.wordpress.org/changeset?reponame=&new=3460465%40genolve-toolkit&old=3432371%40genolve-toolkit\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/8f64361a-e5b5-4481-b25c-bdffeb80c198?source=cve",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:37"
+    },
+    {
+      "cve_id": "CVE-2026-9282",
+      "title": "高危漏洞: CVE-2026-9282 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-11 15:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The W3 Total Cache plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 2.9.4 via the setupSources function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. Exploitation requires enabling manual minify mode and supplying a manual-format minify filename so that the hash is empty and the f_array[] entries are not overwritten before reaching setupSources().",
+      "refs": "https://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.9.4/Minify_MinifiedFileRequestHandler.php#L191\nhttps://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.9.4/Minify_Plugin.php#L132\nhttps://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.9.4/lib/Minify/Minify/Controller/MinApp.php#L109",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:30"
+    },
+    {
+      "cve_id": "CVE-2026-6939",
+      "title": "高危漏洞: CVE-2026-6939 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-11 15:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The CorvusPay WooCommerce Payment Gateway plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'approval_code' parameter in all versions up to, and including, 2.7.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The unauthenticated REST endpoint POST /wp-json/corvuspay/success/ is registered with permission_callback set to __return_true, and although a signature validation step exists it only logs the result without halting execution, meaning an attacker can supply a completely arbitrary signature and have a malicious approval_code stored in the database unchallenged.",
+      "refs": "https://plugins.trac.wordpress.org/browser/corvuspay-woocommerce-integration/tags/2.7.2/includes/class-wc-gateway-corvuspay.php#L1713\nhttps://plugins.trac.wordpress.org/browser/corvuspay-woocommerce-integration/tags/2.7.2/includes/class-wc-gateway-corvuspay.php#L202\nhttps://plugins.trac.wordpress.org/browser/corvuspay-woocommerce-integration/tags/2.7.2/includes/class-wc-order-corvuspay.php#L185",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:26"
+    },
+    {
+      "cve_id": "CVE-2026-4661",
+      "title": "高危漏洞: CVE-2026-4661 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-11 15:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The WP CTA – Sticky CTA Builder, Generate Leads, Promote Sales plugin for WordPress is vulnerable to time-based blind SQL Injection via the 'fildname' parameter in all versions up to, and including, 2.2.2. This is due to insufficient escaping of user-supplied column names in the ajaxCheck() method and lack of preparation in the $wpdb->update() call. The vulnerability is compounded by the complete absence of authorization checks and the endpoint being registered for unauthenticated users via wp_ajax_nopriv_. This makes it possible for unauthenticated attackers to inject arbitrary SQL queries and extract sensitive information from the database via time-based blind SQL injection techniques, including administrator password hashes.",
+      "refs": "https://plugins.trac.wordpress.org/browser/easy-sticky-sidebar/tags/1.7.4/inc/ClassActions.php#L17\nhttps://plugins.trac.wordpress.org/browser/easy-sticky-sidebar/tags/1.7.4/inc/ClassActions.php#L186\nhttps://plugins.trac.wordpress.org/browser/easy-sticky-sidebar/tags/1.7.4/inc/ClassActions.php#L193",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:22"
+    },
+    {
+      "cve_id": "CVE-2026-15155",
+      "title": "高危漏洞: CVE-2026-15155 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 15:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Essential Addons for Elementor – Popular Elementor Templates & Widgets plugin for WordPress is vulnerable to Authenticated Account Takeover via Email Header Injection in all versions up to, and including, 6.6.10 This is due to insufficient server-side validation of a Login/Register widget setting used to construct outgoing email headers — the allowed-values restriction is enforced only in the client-side editor UI and not on the server, and the applied sanitization does not strip or encode CR/LF characters, allowing CRLF sequences stored in that setting to survive into raw mail headers. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject an additional Bcc header into the WordPress administrator's password-reset notification email, receive a copy of a valid administrator password-reset link, and achieve full administrator account takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/essential-addons-for-elementor-lite/tags/6.6.10/includes/Elements/Login_Register.php#L3333\nhttps://plugins.trac.wordpress.org/browser/essential-addons-for-elementor-lite/tags/6.6.10/includes/Traits/Login_Registration.php#L1271\nhttps://plugins.trac.wordpress.org/browser/essential-addons-for-elementor-lite/tags/6.6.10/includes/Traits/Login_Registration.php#L1622",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:17"
+    },
+    {
+      "cve_id": "CVE-2025-6784",
+      "title": "高危漏洞: CVE-2025-6784 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 15:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Code Engine plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 0.3.5 via the 'code-engine' shortcode. This is due to the plugin not restricting access to the code injecting functionality of the plugin. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3345666\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/1a5f970a-e6a0-4dc7-8e99-342a32f5fd49?source=cve",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:12"
+    },
+    {
+      "cve_id": "CVE-2026-7655",
+      "title": "高危漏洞: CVE-2026-7655 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-11 14:16:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SureCart plugin for WordPress is vulnerable to privilege escalation via account takeover in versions up to, and including, 4.2.3. This is due to the plugin not properly validating a user's identity prior to updating their details like email during customer profile synchronization from webhook events. This makes it possible for unauthenticated attackers to change linked user's email addresses, including administrators if the administrator account is linked to a SureCart customer record, and leverage that to reset the user's password and gain access to their account if the customer ID is known.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3532438/surecart\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e19f5f7b-6698-4275-a362-15e5441e0fa9?source=cve",
+      "source": "NVD",
+      "time": "2026-07-11 20:55:06"
+    },
+    {
+      "cve_id": "CVE-2026-13378",
+      "title": "高危漏洞: CVE-2026-13378 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-11 14:16:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Form Vibes – Database Manager for Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Contact Form 7 Form Field in all versions up to, and including, 1.5.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/form-vibes/tags/1.5.2/assets/dist/js/submission.js#L1\nhttps://plugins.trac.wordpress.org/browser/form-vibes/tags/1.5.2/inc/integrations/base.php#L141\nhttps://plugins.trac.wordpress.org/browser/form-vibes/tags/1.5.2/inc/integrations/cf7.php#L126",
+      "source": "NVD",
+      "time": "2026-07-11 20:54:59"
+    },
+    {
+      "cve_id": "CVE-2026-3576",
+      "title": "高危漏洞: CVE-2026-3576 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-11 13:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Planyo Online Reservation System plugin for WordPress is vulnerable to Server-Side Request Forgery leading to Local File Inclusion in all versions up to, and including, 3.0. The ulap.php file acts as an AJAX proxy and is directly accessible without WordPress bootstrapping or any authentication. The send_http_post() function validates the host of the provided URL against an allowlist that includes 'localhost', but critically fails to validate the URL scheme/protocol. This makes it possible for unauthenticated attackers to supply a file:// URL (e.g., file://localhost/etc/passwd) which bypasses the host allowlist check because parse_url() returns 'localhost' as the host. The URL is then passed to curl_init() or fopen(), both of which support the file:// protocol, allowing the attacker to read arbitrary local files on the server and have their contents returned in the HTTP response. This can lead to disclosure of sensitive files such as /etc/passwd, wp-config.php (containing database credentials and authentication keys), and other server-side files.",
+      "refs": "https://plugins.trac.wordpress.org/browser/planyo-online-reservation-system/tags/2.7/ulap.php#L118\nhttps://plugins.trac.wordpress.org/browser/planyo-online-reservation-system/tags/2.7/ulap.php#L120\nhttps://plugins.trac.wordpress.org/browser/planyo-online-reservation-system/tags/2.7/ulap.php#L59",
+      "source": "NVD",
+      "time": "2026-07-11 20:54:52"
+    },
+    {
+      "cve_id": "CVE-2026-2354",
+      "title": "高危漏洞: CVE-2026-2354 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 13:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file upload due to a flawed file type validation bypass in the `upload_extension_files()` function in all versions up to, and including, 1.4.6. The `upload_extension_files()` function hooks into WordPress's `wp_check_filetype_and_ext` filter and uses `strpos()` to check if a filename contains a configured extension string, rather than verifying the actual file extension. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files (including PHP) on the affected site's server which may make remote code execution possible, granted the \"Enhanced Multi-Format Image Support\" feature is enabled with at least one extension (e.g., avif) in the allowed formats.",
+      "refs": "https://plugins.trac.wordpress.org/browser/swiss-toolkit-for-wp/tags/1.4.2/includes/plugins/class-boomdevs-swiss-toolkit-extension-supports.php#L49\nhttps://plugins.trac.wordpress.org/browser/swiss-toolkit-for-wp/tags/1.4.2/includes/plugins/class-boomdevs-swiss-toolkit-extension-supports.php#L95\nhttps://plugins.trac.wordpress.org/browser/swiss-toolkit-for-wp/trunk/includes/plugins/class-boomdevs-swiss-toolkit-extension-supports.php#L49",
+      "source": "NVD",
+      "time": "2026-07-11 20:54:44"
+    },
+    {
+      "cve_id": "CVE-2026-15335",
+      "title": "高危漏洞: CVE-2026-15335 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-11 13:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Booking Package plugin for WordPress is vulnerable to generic SQL Injection via 'email' Form Parameter (form<N>) in all versions up to, and including, 1.7.20 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The vulnerable REST API endpoint /wp-json/booking-package/v1/request is registered with permission_callback: __return_true and wp_magic_quotes does not apply to REST-sourced $_POST values, meaning single quotes in the payload reach the SQL sink intact without any authentication requirement. The impact of this is severely limited as the vulnerable parameter goes through is_email.",
+      "refs": "https://plugins.trac.wordpress.org/browser/booking-package/tags/1.7.18/index.php#L243\nhttps://plugins.trac.wordpress.org/browser/booking-package/tags/1.7.18/index.php#L4381\nhttps://plugins.trac.wordpress.org/browser/booking-package/tags/1.7.18/lib/Schedule.php#L12793",
+      "source": "NVD",
+      "time": "2026-07-11 20:54:39"
+    },
+    {
+      "cve_id": "CVE-2026-14262",
+      "title": "高危漏洞: CVE-2026-14262 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-11 13:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Simple JWT Login – Allows you to use JWT on REST endpoints. plugin for WordPress is vulnerable to Authentication Bypass to Privilege Escalation in all versions up to, and including, 3.6.6 via the `payload` parameter. The vulnerability exists because `AuthenticateService::generatePayload()` only overwrites JWT payload keys whose names appear in the admin-configured `jwt_payload` list — leaving any attacker-supplied identity claims such as `email`, `id`, or `username` intact and signed into the JWT with the site's HS256 secret. This makes it possible for authenticated attackers, with subscriber-level access and above, to escalate their privileges to that of an Administrator by injecting a target administrator's email address into the `payload` parameter at the `/wp-json/simple-jwt-login/v1/auth` endpoint, then redeeming the resulting JWT at the `/autologin` endpoint to obtain a fully authenticated session as that administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/simple-jwt-login/tags/3.6.6/src/Services/AuthenticateService.php#L163\nhttps://plugins.trac.wordpress.org/browser/simple-jwt-login/tags/3.6.6/src/Services/AuthenticateService.php#L34\nhttps://plugins.trac.wordpress.org/browser/simple-jwt-login/tags/3.6.6/src/Services/BaseService.php#L269",
+      "source": "NVD",
+      "time": "2026-07-11 20:54:32"
+    },
+    {
       "cve_id": "CVE-2026-15338",
       "title": "高危漏洞: CVE-2026-15338 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/unclecode/crawl4ai\nhttps://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg\nhttps://www.vulncheck.com/advisories/crawl4ai-server-side-request-forgery-via-webhook-urls",
       "source": "NVD",
       "time": "2026-07-11 00:50:53"
-    },
-    {
-      "cve_id": "CVE-2026-56254",
-      "title": "高危漏洞: CVE-2026-56254 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-07-10 23:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "In @capgo/capacitor-updater (Cap-go/capgo) before 12.128.2, the end-to-end encryption scheme distributes the private key to each device that downloads the app. Because the public key can be derived from the private key, an attacker performing a man-in-the-middle attack or compromising the Capgo server can create a validly signed update bundle and cause devices to install an update not produced by the original app maker.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-j2f4-4pfc-p8rx\nhttps://www.vulncheck.com/advisories/capacitor-updater-end-to-end-encryption-bypass-via-private-key-distribution",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:47"
-    },
-    {
-      "cve_id": "CVE-2026-38059",
-      "title": "高危漏洞: CVE-2026-38059 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 23:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The iDirect iQ200 exposes the /api/identity and /api/ REST API endpoints without authentication. An unauthenticated attacker with network access can retrieve sensitive device information including the serial number, Device ID (DID), Terminal Private Key identifier (TPK), MAC address, and exact firmware version. The DID and TPK are used for satellite network authentication in the iDirect platform, potentially enabling terminal impersonation and network reconnaissance.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-01.json\nhttps://support.idirect.net/s/login\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:42"
-    },
-    {
-      "cve_id": "CVE-2026-38057",
-      "title": "高危漏洞: CVE-2026-38057 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-10 23:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "The iDirect iQ200 does not validate CSRF tokens on state-changing API endpoints after authentication. The /api/reboot endpoint accepts POST requests authenticated solely by a session cookie that lacks the SameSite attribute. A remote attacker can host a malicious web page that, when visited by an authenticated administrator, automatically submits a cross-site POST request causing an immediate device reboot and satellite link loss. Repeated attacks can sustain a denial-of-service condition.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-01.json\nhttps://support.idirect.net/s/login\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:37"
-    },
-    {
-      "cve_id": "CVE-2026-29519",
-      "title": "高危漏洞: CVE-2026-29519 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-10 23:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "Lucee CFML Server versions across the 5.3.x, 6.1.x, 6.2.x, and 7.0.x release lines contain a reflected cross-site scripting vulnerability in URL path parsing that allows unauthenticated remote attackers to execute arbitrary JavaScript in a victim's browser by embedding HTML or JavaScript payloads within the request path. Attackers can craft a malicious URL containing injected script content that is reflected in the server's response without proper output encoding, enabling session hijacking or unauthorized actions against the Lucee administrative interface when a victim visits the crafted link.",
-      "refs": "https://github.com/L4V4D0/CVE-2026-29519-Lucee-Reflected-XSS\nhttps://www.vulncheck.com/advisories/lucee-cfml-server-reflected-xss-via-url-path-parsing",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:33"
-    },
-    {
-      "cve_id": "CVE-2026-22660",
-      "title": "高危漏洞: CVE-2026-22660 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-10 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "FlaskBB through 2.2.0, fixed in commit a5da9a5, contains a logic flaw vulnerability that allows authenticated administrators to delete all built-in authorization groups by exploiting a type mismatch in the bulk delete protection check. The bulk AJAX endpoint in the management views compares received JSON integer group IDs against string literals, causing the protection check to always pass, which allows deletion of all six built-in groups and destroys the forum's permission model, potentially rendering the site unusable.",
-      "refs": "https://github.com/flaskbb/flaskbb/commit/a5da9a529adddc65fe31e275192b642a4e32de64\nhttps://github.com/flaskbb/flaskbb/security/advisories/GHSA-r9cf-jxr6-5h3r\nhttps://www.vulncheck.com/advisories/flaskbb-logic-flaw-authorization-group-deletion-via-bulk-ajax-endpoint",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:27"
-    },
-    {
-      "cve_id": "CVE-2026-22659",
-      "title": "高危漏洞: CVE-2026-22659 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-10 22:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "FlaskBB through 2.2.0, fixed in commit acc88cf, contains an authorization bypass vulnerability that allows authenticated moderators to perform unauthorized actions on topics in forums they do not control by submitting crafted topic ID lists. Attackers can include a low-ID topic from a permitted forum as an anchor in a batch request, causing the permission check applied only to the first result to pass, and then execute lock, unlock, delete, or hide actions against topics in unmoderated forums.",
-      "refs": "https://github.com/flaskbb/flaskbb/commit/acc88cfedd011124395e0101cb27432a47f712be\nhttps://github.com/flaskbb/flaskbb/security/advisories/GHSA-9rjj-9p2h-6c55\nhttps://www.vulncheck.com/advisories/flaskbb-authorization-bypass-via-topic-id-manipulation",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:22"
-    },
-    {
-      "cve_id": "CVE-2026-54469",
-      "title": "高危漏洞: CVE-2026-54469 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-10 21:16:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell Unisphere for PowerMax, version(s) 10.3.0.5 and prior, contain(s) a Deserialization of Untrusted Data vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to arbitrary command execution with root privileges.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000483543/dsa-2026-272-dell-powermaxos-dell-powermax-eem-dell-unisphere-for-powermax-dell-unisphere-for-powermax-virtualappliance-dell-unisphere-360-dell-solutionsenabler-and-dell-solutionsenabler-virtualappliance-security-update-for-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:17"
-    },
-    {
-      "cve_id": "CVE-2026-56690",
-      "title": "高危漏洞: CVE-2026-56690 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-10 20:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure, Information exposure, and Unauthorized access.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:12"
-    },
-    {
-      "cve_id": "CVE-2026-56689",
-      "title": "高危漏洞: CVE-2026-56689 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-10 20:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information exposure.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:07"
-    },
-    {
-      "cve_id": "CVE-2026-56688",
-      "title": "高危漏洞: CVE-2026-56688 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-10 20:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability during OS Repository processing to achieve arbitrary command execution as root, potentially leading to full appliance compromise and lateral movement into managed infrastructure.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-11 00:50:00"
-    },
-    {
-      "cve_id": "CVE-2026-40454",
-      "title": "高危漏洞: CVE-2026-40454 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Out-of-bounds Read, Improper Input Validation vulnerability in Apache IoTDB C++ client.\nOut-of-bounds reads in IoTDB C++ client TsBlock deserializer crash client\nprocess on malformed server data.\n\n\nThis issue affects Apache IoTDB C++ client: from 1.3.5 before 1.3.8, from 2.0.5 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/9wml325g6bpovw0jf5ymtc3xl7fwlkrn",
-      "source": "NVD",
-      "time": "2026-07-11 00:49:54"
-    },
-    {
-      "cve_id": "CVE-2026-40008",
-      "title": "高危漏洞: CVE-2026-40008 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-10 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') vulnerability in Apache IoTDB.\nThe pipe processor reads a fully\nqualified Java class name and\ninstantiates it using Class.forName().newInstance() without any\nvalidation or allowlisting.\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/fm8cpvzbox2qqy99ztglm8wkk1nrg9ng",
-      "source": "NVD",
-      "time": "2026-07-11 00:49:46"
     }
   ]
 }
