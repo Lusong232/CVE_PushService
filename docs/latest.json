@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-61876",
+      "title": "高危漏洞: CVE-2026-61876 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-12 20:16:46",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "LuCI versions fail to properly encode DHCPv6 lease hostnames before rendering in status tables, allowing adjacent network attackers to inject HTML markup. Attackers can send a DHCPv6 Client FQDN containing script tags that execute in the administrator's browser when viewing DHCP lease pages.",
+      "refs": "https://github.com/openwrt/luci/security/advisories/GHSA-686p-p8p9-x6fh\nhttps://www.vulncheck.com/advisories/luci-dhcpv6-lease-hostname-stored-cross-site-scripting",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:59"
+    },
+    {
+      "cve_id": "CVE-2026-61875",
+      "title": "高危漏洞: CVE-2026-61875 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-12 20:16:46",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "luci-app-upnp contains a stored cross-site scripting vulnerability that allows unauthenticated LAN clients to inject JavaScript via UPnP IGD AddPortMapping SOAP requests. Attackers can send malicious HTML in the NewPortMappingDescription field, which miniupnpd stores and luci-app-upnp renders without output encoding, executing the payload when administrators view the UPnP or Status pages.",
+      "refs": "https://github.com/openwrt/luci/security/advisories/GHSA-8v49-6387-7f89\nhttps://www.vulncheck.com/advisories/luci-app-upnp-stored-xss-via-upnp-port-mapping-description",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:55"
+    },
+    {
+      "cve_id": "CVE-2026-59260",
+      "title": "高危漏洞: CVE-2026-59260 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-12 20:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OpenWrt luci-app-samba4 read ACL grants file.exec permission on /usr/sbin/smbd, allowing authenticated delegated users to execute the Samba daemon with caller-controlled command-line arguments. Attackers can pass arbitrary Samba global options such as message command to a root smbd process, triggering command execution when SMB protocol messages are processed.",
+      "refs": "https://github.com/openwrt/luci/security/advisories/GHSA-vx64-mmp7-h36c\nhttps://www.vulncheck.com/advisories/openwrt-luci-app-samba4-read-acl-remote-code-execution-via-smbd",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:50"
+    },
+    {
+      "cve_id": "CVE-2026-56313",
+      "title": "高危漏洞: CVE-2026-56313 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-12 20:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Capgo before 12.128.2 contains a cross-organization account disruption vulnerability in the SSO prelink endpoint that allows enterprise administrators to delete password identities of users in foreign organizations. Attackers with org.update_settings permission and an active SSO provider can call the prelink-users endpoint to permanently remove email-based authentication for any user matching the provider's email domain, forcing victims to use the attacker's SSO provider or complete password reset recovery.",
+      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-x3vq-34gg-cwq7\nhttps://www.vulncheck.com/advisories/capgo-cross-organization-account-disruption-via-sso-prelink-endpoint",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:46"
+    },
+    {
+      "cve_id": "CVE-2026-56308",
+      "title": "高危漏洞: CVE-2026-56308 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-12 20:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Capgo before 12.128.2 allows email address changes without requiring current password re-authentication or verification of the existing email address. An attacker with access to a valid session cookie or authenticated browser can change the account email to gain control of account recovery and bypass multi-factor authentication protections.",
+      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-9px4-w25f-mvm4\nhttps://www.vulncheck.com/advisories/capgo-insufficient-authentication-in-email-change-endpoint",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:38"
+    },
+    {
+      "cve_id": "CVE-2026-56271",
+      "title": "高危漏洞: CVE-2026-56271 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-12 20:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.",
+      "refs": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cc4f-hjpj-g9p8\nhttps://www.vulncheck.com/advisories/flowise-weak-default-jwt-secrets-in-authentication-middleware",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:34"
+    },
+    {
+      "cve_id": "CVE-2026-56260",
+      "title": "高危漏洞: CVE-2026-56260 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-12 20:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Crawl4AI before 0.8.7 contains an arbitrary file write vulnerability in the Docker API server's /screenshot and /pdf endpoints. The output_path parameter accepts arbitrary filesystem paths without validation, allowing an attacker to supply absolute or path-traversal values to write to any location writable by the application's user, overwriting server files and causing denial of service.",
+      "refs": "https://github.com/unclecode/crawl4ai\nhttps://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg\nhttps://www.vulncheck.com/advisories/crawl4ai-arbitrary-file-write-via-output-path-parameter",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:27"
+    },
+    {
+      "cve_id": "CVE-2026-56259",
+      "title": "高危漏洞: CVE-2026-56259 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-12 20:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Docker API server that allow attackers to redirect LLM API calls to attacker-controlled endpoints and read arbitrary environment variables. Attackers can exploit the unauthenticated /md, /llm, and /llm/job endpoints by supplying a malicious base_url parameter and setting api_token to env:VARIABLE_NAME to exfiltrate provider API keys and server secrets including JWT SECRET_KEY for authentication bypass.",
+      "refs": "https://github.com/unclecode/crawl4ai/security/advisories/GHSA-f989-c77f-r2cq\nhttps://www.vulncheck.com/advisories/crawl4ai-llm-credential-exfiltration-via-base-url-and-environment-variable-resolution",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:21"
+    },
+    {
+      "cve_id": "CVE-2026-56241",
+      "title": "高危漏洞: CVE-2026-56241 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-12 20:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
+      "description": "Capgo before 12.128.2 contains a privilege escalation vulnerability where demoted super_admin users retain access to delete_non_compliant_bundles and count_non_compliant_bundles RPCs due to stale org_users.user_right column not being cleared during role binding deletion. Attackers can exploit this by maintaining a previously granted super_admin role to enumerate and bulk delete non-compliant bundles across the entire organization indefinitely.",
+      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-rvvc-rvxv-qcrh\nhttps://www.vulncheck.com/advisories/capgo-rbac-demotion-privilege-retention-via-stale-org-users-user-right",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:16"
+    },
+    {
+      "cve_id": "CVE-2026-56238",
+      "title": "高危漏洞: CVE-2026-56238 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-12 20:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Capgo before 12.128.2 contains an information disclosure vulnerability in the Supabase PostgREST global_stats endpoint that allows unauthenticated attackers to read sensitive financial and operational metrics using only the public apikey. Remote attackers can query the /rest/v1/global_stats endpoint to expose MRR, total revenue, plan-tier revenue breakdown, customer counts, and operational telemetry.",
+      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-73rv-fpp7-r3r4\nhttps://www.vulncheck.com/advisories/capgo-unauthenticated-information-disclosure-via-postgrest-global-stats-endpoint",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:11"
+    },
+    {
+      "cve_id": "CVE-2026-15498",
+      "title": "高危漏洞: CVE-2026-15498 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-12 20:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in sergomanov SmartHomeAdatum up to cf495353d81b680675eb8d9aa14a318aa45ce12c. This impacts an unknown function of the file users.php of the component Login. Such manipulation of the argument Login leads to sql injection. The attack may be launched remotely. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-15498\nhttps://vuldb.com/submit/844491\nhttps://vuldb.com/vuln/377805",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:06"
+    },
+    {
+      "cve_id": "CVE-2026-15497",
+      "title": "高危漏洞: CVE-2026-15497 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-12 20:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SonicCloudOrg sonic-agent up to 2.7.2. This affects an unknown function of the file sonic-server-controller/src/main/java/org/cloud/sonic/controller/controller/ExchangeController.java of the component JWT Authentication Filter. This manipulation causes code injection. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/xpp3901/CVE_APPLY/blob/main/V-S001_SonicCloudPlatform_Unauth_ExchangeSend\nhttps://vuldb.com/cve/CVE-2026-15497\nhttps://vuldb.com/submit/844486",
+      "source": "NVD",
+      "time": "2026-07-12 23:50:02"
+    },
+    {
       "cve_id": "CVE-2026-15491",
       "title": "高危漏洞: CVE-2026-15491 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/yhirose/cpp-httplib/commit/fa981cedae004ea9d946f1392b9dec22fac6fee6\nhttps://github.com/yhirose/cpp-httplib/releases/tag/v0.47.0\nhttps://github.com/yhirose/cpp-httplib/security/advisories/GHSA-8ffh-4p95-g3p2",
       "source": "NVD",
       "time": "2026-07-11 03:16:52"
-    },
-    {
-      "cve_id": "CVE-2026-54063",
-      "title": "高危漏洞: CVE-2026-54063 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-11 01:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Excelize is a Go language library for reading and writing Microsoft Excel spreadsheets. Prior to 2.11.0, the checkSheet() function in github.com/xuri/excelize/v2 uses an attacker-controlled <row r=\"N\"> XML attribute value directly as the length argument to make([]xlsxRow, row) without validating it against the Excel row limit (TotalRows = 1,048,576). A specially crafted XLSX file can trigger two denial-of-service variants: (A) an out-of-memory process kill when r=2147483647 forces a ~16 GB allocation attempt, and (B) a runtime panic via out-of-bounds slice indexing when r=-1. Any service that opens attacker-supplied XLSX files and calls GetCellValue is affected. No authentication is required. This issue is fixed in version 2.11.0.",
-      "refs": "https://github.com/qax-os/excelize/releases/tag/v2.11.0\nhttps://github.com/qax-os/excelize/security/advisories/GHSA-h69g-9hx6-f3v4",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:45"
-    },
-    {
-      "cve_id": "CVE-2026-53657",
-      "title": "高危漏洞: CVE-2026-53657 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-11 01:16:57",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Lima launches Linux virtual machines, typically on macOS, for running containerd. Prior to 2.1.3, on an instance of Lima running with the qemu driver, an arbitrary user in the VM could access /run/lima-guestagent.sock when the guest agent is enabled, which could result in running arbitrary commands with root privileges in the VM because the guest agent socket provides tunneling for arbitrary addresses, including Unix socket addresses for privileged daemons like D-Bus. This issue is fixed in version 2.1.3.",
-      "refs": "https://github.com/lima-vm/lima/commit/8a45892378d22f40505c31a38f786a07701b6d50\nhttps://github.com/lima-vm/lima/commit/b08cae8a670cf916d5da11c48a6de76dabd89678\nhttps://github.com/lima-vm/lima/releases/tag/v2.1.3",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:40"
-    },
-    {
-      "cve_id": "CVE-2026-39903",
-      "title": "高危漏洞: CVE-2026-39903 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-11 01:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Simple Machines Forum 2.1 prior to 2.1.8 and 3.0 prior to 3.0 Alpha 5 contains an authorization bypass vulnerability in Sources/Actions/AttachmentApprove.php where a single-character operator error causes the permission check to always pass regardless of user permissions. An authenticated low-privileged user can approve, reject, or delete any pending attachments on any board without holding the required approve_posts permission, bypass moderation queues for their own uploads, and enumerate and delete other users' pending attachments.",
-      "refs": "https://github.com/SimpleMachines/SMF/commit/7d048f8d66aab9af51cd6ee110fbad103cf673e8\nhttps://github.com/SimpleMachines/SMF/commit/a7875e876a647572dd4c45da881b875092caac3d\nhttps://github.com/SimpleMachines/SMF/pull/9181",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:36"
-    },
-    {
-      "cve_id": "CVE-2026-2398",
-      "title": "高危漏洞: CVE-2026-2398 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-11 01:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Authorization bypass through User-Controlled key vulnerability in Adam Retail Automation Ltd. MobilMen 20T allows Privilege Escalation.\n\nThis issue affects MobilMen 20T: from v3 through 10072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0526",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:32"
-    },
-    {
-      "cve_id": "CVE-2026-1667",
-      "title": "高危漏洞: CVE-2026-1667 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-11 01:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The SEO Plugin by Squirrly SEO plugin for WordPress is vulnerable to Arbitrary Post Creation and Stored Cross-Site Scripting in all versions up to, and including, 14.0.0 due to a leak of an API token and insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to create arbitrary posts, and, if the Advanced Custom Fields plugin is installed and activated, inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/changeset?reponame=&new=3586051%40squirrly-seo&old=3474256%40squirrly-seo\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/aebdd464-10b9-4d43-bf38-f0e8ae25625f?source=cve",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:27"
-    },
-    {
-      "cve_id": "CVE-2026-56676",
-      "title": "高危漏洞: CVE-2026-56676 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-11 00:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "9Router is an AI router & token saver. Prior to 0.5.2, 9router validates image URLs by resolving the host before fetching, but open-sse/translator/concerns/image.js performs the later server-side image fetch with a separate DNS resolution. An authenticated attacker with access to the LLM proxy can use a vision-capable model and an attacker-controlled DNS name that first resolves to a public IP and then rebinds to an internal address, allowing server-side requests to internal-only HTTP services. This issue is fixed in version 0.5.2.",
-      "refs": "https://github.com/decolua/9router/commit/c7d07448c58bec1200741de0b73305b860416b82\nhttps://github.com/decolua/9router/releases/tag/v0.5.2\nhttps://github.com/decolua/9router/security/advisories/GHSA-cmhj-wh2f-9cgx",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:23"
-    },
-    {
-      "cve_id": "CVE-2026-55501",
-      "title": "高危漏洞: CVE-2026-55501 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-11 00:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "9Router is an AI router & token saver. Prior to 0.4.80, the dashboard login rate limiter in src/lib/auth/loginLimiter.js derives the client identity from the attacker-controlled X-Forwarded-For HTTP header, and src/app/api/auth/login/route.js uses that spoofable value for checkLock and recordFail. A remote attacker can rotate the X-Forwarded-For value on each login attempt to receive a fresh rate-limit bucket, bypass the 5-attempt threshold and progressive lockout durations, and perform unlimited brute-force attempts against the dashboard password. This issue is fixed in version 0.4.80.",
-      "refs": "https://github.com/decolua/9router/commit/7648c3412b403a29f04967c4b4e9725e228791d4\nhttps://github.com/decolua/9router/releases/tag/v0.4.80\nhttps://github.com/decolua/9router/security/advisories/GHSA-7cfm-pqrj-xgq7",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:19"
-    },
-    {
-      "cve_id": "CVE-2026-55500",
-      "title": "高危漏洞: CVE-2026-55500 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-07-11 00:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "9Router is an AI router & token saver. Prior to 0.4.80, the /api/settings/database endpoint allows full database export (containing all credentials, API keys, OAuth tokens, and settings) and full database import (complete overwrite) without any authentication requirement beyond the ALWAYS_PROTECTED middleware check, which only validates JWT or CLI token. This issue is fixed in version 0.4.80.",
-      "refs": "https://github.com/decolua/9router/commit/0c7c9de00ae3ab81d6580e3cc368483c4c03f6fd\nhttps://github.com/decolua/9router/releases/tag/v0.4.80\nhttps://github.com/decolua/9router/security/advisories/GHSA-qvfm-67h2-2qfx",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:11"
-    },
-    {
-      "cve_id": "CVE-2026-54149",
-      "title": "高危漏洞: CVE-2026-54149 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-11 00:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "MaxKB is an open-source AI assistant for enterprise. Prior to 2.10.0-lts, MaxKB tool import functionality in apps/tools/serializers/tool.py and MCP referencing mode in apps/application/chat_pipeline/step/chat_step/impl/base_chat_step.py do not consistently validate MCP transport type, allowing an authenticated user to import a .tool file containing stdio transport with malicious commands and trigger the configuration through an AI Chat node so MultiServerMCPClient executes arbitrary system commands. This issue is fixed in version 2.10.0-lts.",
-      "refs": "https://github.com/1Panel-dev/MaxKB/releases/tag/v2.10.0-lts\nhttps://github.com/1Panel-dev/MaxKB/security/advisories/GHSA-4pr3-9xhm-98x5\nhttps://github.com/1Panel-dev/MaxKB/security/advisories/GHSA-4pr3-9xhm-98x5",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:07"
-    },
-    {
-      "cve_id": "CVE-2026-33382",
-      "title": "高危漏洞: CVE-2026-33382 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-11 00:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Several Grafana API endpoints, some of them unauthenticated, do not limit the size of the request body before processing it. An attacker can send very large payloads that force excessive memory allocation, potentially exhausting memory and causing a denial of service.",
-      "refs": "https://grafana.com/security/security-advisories/cve-2026-33382",
-      "source": "NVD",
-      "time": "2026-07-11 03:16:03"
-    },
-    {
-      "cve_id": "CVE-2026-15143",
-      "title": "高危漏洞: CVE-2026-15143 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-11 00:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
-      "description": "A flaw was found in the file_type content detector of guardrails-detectors. This vulnerability allows a remote attacker to supply an arbitrary XML Schema Definition (XSD) string, which is processed without proper restrictions. This can lead to server-side requests to arbitrary URLs or local file reads, potentially resulting in sensitive information disclosure, such as cloud provider credentials or access to internal network services.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-15143\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2498165",
-      "source": "NVD",
-      "time": "2026-07-11 03:15:58"
-    },
-    {
-      "cve_id": "CVE-2026-40006",
-      "title": "高危漏洞: CVE-2026-40006 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Memory Allocation with Excessive Size Value, Allocation of Resources Without Limits or Throttling, Missing Authentication for Critical Function vulnerability in Apache IoTDB.\nWhen pipe_air_gap_receiver_enabled=true, the IoTDB AirGap pipe receiver\naccepts raw TCP connections on port 9780 with no authentication. The\nreadLength method reads an attacker-controlled 32-bit integer from the\nsocket and readData passes it directly to new byte[length] with no\nupper-bound check. An unauthenticated attacker can cause the JVM to attempt\nan allocation of up to 2,147,483,647 bytes per connection, exhausting heap\nmemory and crashing or severely degrading the DataNode process.\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/rfpt7m9fvdrw37r3ow5omp2n914z6zqk\nhttp://www.openwall.com/lists/oss-security/2026/07/10/3",
-      "source": "NVD",
-      "time": "2026-07-11 03:15:54"
     }
   ]
 }
