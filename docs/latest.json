@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58281",
+      "title": "高危漏洞: CVE-2026-58281 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-12 05:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Deserialization of untrusted data in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58281",
+      "source": "NVD",
+      "time": "2026-07-12 09:45:59"
+    },
+    {
       "cve_id": "CVE-2026-61447",
       "title": "高危漏洞: CVE-2026-61447 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-cv3g-hj65-pcfh\nhttps://www.vulncheck.com/advisories/praisonai-before-allowlist-bypass-via-find-exec",
       "source": "NVD",
       "time": "2026-07-11 00:51:45"
-    },
-    {
-      "cve_id": "CVE-2026-60091",
-      "title": "高危漏洞: CVE-2026-60091 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-10 23:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "PraisonAI before 4.6.78 contains an unauthenticated server-side request forgery vulnerability in the Jobs API /api/v1/runs endpoint. The webhook_url parameter is validated at request time but re-resolved at connection time, allowing attackers to use DNS rebinding to reach internal services with a blind SSRF attack.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-4w49-gwv8-fpjg\nhttps://www.vulncheck.com/advisories/praisonai-before-unauthenticated-ssrf-via-webhook-url",
-      "source": "NVD",
-      "time": "2026-07-11 00:51:41"
     }
   ]
 }
