@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15491",
+      "title": "高危漏洞: CVE-2026-15491 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-12 18:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in RafyMrX TOKO-ONLINE-ROTI up to ddfe1cd587be0a0b5135d8b6e85cce2ec3aece99. This affects an unknown part. This manipulation causes missing authentication. The attack is possible to be carried out remotely. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-15491\nhttps://vuldb.com/submit/844137\nhttps://vuldb.com/vuln/377798",
+      "source": "NVD",
+      "time": "2026-07-12 20:55:51"
+    },
+    {
+      "cve_id": "CVE-2026-15490",
+      "title": "高危漏洞: CVE-2026-15490 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-12 18:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in RafyMrX TOKO-ONLINE-ROTI up to ddfe1cd587be0a0b5135d8b6e85cce2ec3aece99. Affected by this issue is some unknown functionality of the file proses/add.php. The manipulation of the argument kode_produk/kd_cs results in sql injection. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-15490\nhttps://vuldb.com/submit/844136\nhttps://vuldb.com/vuln/377797",
+      "source": "NVD",
+      "time": "2026-07-12 20:55:44"
+    },
+    {
       "cve_id": "CVE-2026-15489",
       "title": "高危漏洞: CVE-2026-15489 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://lists.apache.org/thread/rfpt7m9fvdrw37r3ow5omp2n914z6zqk\nhttp://www.openwall.com/lists/oss-security/2026/07/10/3",
       "source": "NVD",
       "time": "2026-07-11 03:15:54"
-    },
-    {
-      "cve_id": "CVE-2026-40005",
-      "title": "高危漏洞: CVE-2026-40005 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-10 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Apache IoTDB.\nAn attacker can write arbitrary files anywhere the IoTDB process has write permissions with unsafe API.\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/zw2vkbmy5xkf5y8g237v81hrs4c6b5lq\nhttp://www.openwall.com/lists/oss-security/2026/07/10/2",
-      "source": "NVD",
-      "time": "2026-07-11 03:15:47"
-    },
-    {
-      "cve_id": "CVE-2026-28564",
-      "title": "高危漏洞: CVE-2026-28564 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-10 16:16:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Insufficient Session Expiration, Authentication Bypass by Capture-replay vulnerability in Apache IoTDB.\nREST Basic Authentication Accepts Stale Cached Credentials\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/l38wpy7flvvfwv4rkps87l5z8gprnfy0\nhttp://www.openwall.com/lists/oss-security/2026/07/10/1",
-      "source": "NVD",
-      "time": "2026-07-11 03:15:41"
     }
   ]
 }
