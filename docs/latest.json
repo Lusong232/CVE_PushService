@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15511",
+      "title": "高危漏洞: CVE-2026-15511 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-13 07:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Comfast CF-WR631AX V3 up to 2.7.0.8. Affected by this vulnerability is the function system_wl_upload_pic_file of the file /usr/bin/webmgnt of the component FastCGI Backend. This manipulation of the argument filename causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/luminarydawn/cve/tree/main/Command%20Injection%20in%20Comfast%20CF-WR631AX%20V3%20%E2%80%94%20WiFi%20Portal%20Image%20Upload%20(CWE-78)\nhttps://vuldb.com/cve/CVE-2026-15511\nhttps://vuldb.com/submit/846719",
+      "source": "NVD",
+      "time": "2026-07-13 09:48:57"
+    },
+    {
+      "cve_id": "CVE-2026-15506",
+      "title": "高危漏洞: CVE-2026-15506 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-13 06:16:34",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in SecureAge CatchPulse up to 10.9.3. The affected element is an unknown function in the library saappctl.sys of the component Driver. Such manipulation leads to heap-based buffer overflow. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.",
+      "refs": "https://vandalsuidaho-my.sharepoint.com/:w:/g/personal/higg2059_vandals_uidaho_edu/IQAcnBjRQKVxQbLuSb5CI-8nAdTRuWZMO0jEuQ5PUQT7__s?e=4sd123\nhttps://vuldb.com/cve/CVE-2026-15506\nhttps://vuldb.com/submit/845584",
+      "source": "NVD",
+      "time": "2026-07-13 09:48:52"
+    },
+    {
       "cve_id": "CVE-2026-10667",
       "title": "高危漏洞: CVE-2026-10667 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/kevva/decompress\nhttps://github.com/kevva/decompress/issues/114\nhttps://www.npmjs.com/package/decompress",
       "source": "NVD",
       "time": "2026-07-11 05:51:11"
-    },
-    {
-      "cve_id": "CVE-2026-38076",
-      "title": "高危漏洞: CVE-2026-38076 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer overflow in the jbig2_arith_iaid_ctx_new() function of Artifex commit cc37d0 allows attackers to cause a Denial of Service (DoS) via a crafted input.",
-      "refs": "http://artifex.com\nhttps://gist.github.com/dkjsone/c237b83ffa9ebd7028b5db7f410fcf78\nhttps://github.com/ArtifexSoftware/jbig2dec",
-      "source": "NVD",
-      "time": "2026-07-11 05:51:05"
-    },
-    {
-      "cve_id": "CVE-2026-56675",
-      "title": "高危漏洞: CVE-2026-56675 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-11 01:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
-      "description": "9Router is an AI router & token saver. Prior to 0.5.2, 9router treats loopback requests as trusted and allows /v1/* access without an API key, so a same-host reverse proxy that forwards public traffic to the backend through 127.0.0.1 causes src/dashboardGuard.js to misclassify external requests as local. A remote unauthenticated attacker can access /v1 APIs such as /v1/models and may abuse configured upstream provider credentials through /v1 proxy endpoints depending on enabled providers. This issue is fixed in version 0.5.2.",
-      "refs": "https://github.com/decolua/9router/commit/da667836cc7584bea0edd893de1d590c9ea279dc\nhttps://github.com/decolua/9router/releases/tag/v0.5.2\nhttps://github.com/decolua/9router/security/advisories/GHSA-x5c9-v98j-722r",
-      "source": "NVD",
-      "time": "2026-07-11 03:17:10"
     }
   ]
 }
