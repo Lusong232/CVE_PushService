@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-55772",
+      "title": "高危漏洞: CVE-2026-55772 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-14 03:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.",
+      "refs": "https://github.com/cedar-policy/cedar-java/security/advisories/GHSA-93g4-m6xv-cmvr",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:45"
+    },
+    {
+      "cve_id": "CVE-2026-49972",
+      "title": "高危漏洞: CVE-2026-49972 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-14 03:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Laravel-Mediable before 7.0.0 contains a file upload vulnerability that allows unauthenticated attackers to achieve remote code execution by uploading a file with an embedded PHP extension disguised within a double extension such as shell.php.jpg. The PATHINFO_FILENAME extraction preserves the inner .php extension in the base name, and on misconfigured Apache or nginx servers that execute any filename containing .php as PHP, the stored file is interpreted as executable code while all MIME type, extension, and aggregate type validation checks pass due to the outer .jpg extension.",
+      "refs": "https://github.com/plank/laravel-mediable/commit/49e3583bed13423611b3391f89e6b002571eed73\nhttps://github.com/plank/laravel-mediable/releases/tag/7.0.0\nhttps://www.vulncheck.com/advisories/laravel-mediable-file-upload-rce-via-extension-bypass",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:38"
+    },
+    {
+      "cve_id": "CVE-2026-49970",
+      "title": "高危漏洞: CVE-2026-49970 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-14 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Laravel-Mediable before 7.0.0 contains a path traversal vulnerability in the File::sanitizePath() function that allows attackers to write uploaded files to arbitrary locations by controlling the directory argument passed to MediaUploader::toDestination(). Attackers can exploit the permissive character-class regex that allows both dot and slash characters combined with an ineffective trailing trim() call to bypass sanitization and upload files to sensitive locations such as the document root, environment configuration files, or application configuration directories, enabling remote code execution.",
+      "refs": "https://github.com/plank/laravel-mediable/commit/6d1e7fb39922fdfb3b2d120e13f4eb2e653ae082\nhttps://github.com/plank/laravel-mediable/releases/tag/7.0.0\nhttps://www.vulncheck.com/advisories/laravel-mediable-path-traversal-via-file-sanitizepath",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:32"
+    },
+    {
+      "cve_id": "CVE-2026-49969",
+      "title": "高危漏洞: CVE-2026-49969 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-14 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "Laravel-Mediable before 7.0.0 contains a server-side request forgery vulnerability that allows remote attackers to issue arbitrary HTTP requests from the server by supplying unvalidated caller-controlled URLs to endpoints backed by MediaUploader::fromSource(). Attackers can craft URLs targeting RFC-1918 addresses, loopback interfaces, cloud metadata endpoints, or file:// URIs through RemoteUrlAdapter to reach internal infrastructure, retrieve sensitive files, and exfiltrate cloud credentials such as IAM tokens from instance metadata services.",
+      "refs": "https://github.com/plank/laravel-mediable/commit/7e9e3000fa05fe16e678f15bfb51a091e60c2cb8\nhttps://github.com/plank/laravel-mediable/releases/tag/7.0.0\nhttps://www.vulncheck.com/advisories/laravel-mediable-ssrf-via-remoteurladapter-url-handling",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:28"
+    },
+    {
+      "cve_id": "CVE-2026-61500",
+      "title": "高危漏洞: CVE-2026-61500 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-14 02:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Rejetto HFS 3.0.0 through 3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and discloses outputs of the same generator to unauthenticated clients during login. A remote attacker can collect a small number of login responses, reconstruct the generator's state, recover the signing key, and forge a valid administrator session cookie, leading to full administrative access and remote code execution via the server_code configuration feature.",
+      "refs": "https://github.com/rejetto/hfs/releases/tag/v3.2.1\nhttps://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:24"
+    },
+    {
+      "cve_id": "CVE-2026-61463",
+      "title": "高危漏洞: CVE-2026-61463 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-14 02:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Shiori contains a privilege escalation vulnerability in the account update endpoint that allows authenticated users to modify the owner field without authorization checks. Attackers can escalate to administrator by submitting a crafted PATCH request with owner: true, then re-authenticate to obtain an admin JWT token granting full system access.",
+      "refs": "https://github.com/go-shiori/shiori\nhttps://github.com/go-shiori/shiori/commit/6c8a7dbc11b131609bfda736b14d61c51f9027b2\nhttps://github.com/go-shiori/shiori/issues/1196",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:20"
+    },
+    {
+      "cve_id": "CVE-2026-61462",
+      "title": "高危漏洞: CVE-2026-61462 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-14 02:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "mcp-gitlab contains a path traversal vulnerability in the job_id parameter of build/index.js that allows attackers to redirect GitLab API requests to arbitrary endpoints. Attackers can supply crafted job_id values like ../../../user to escape the intended path prefix and access arbitrary GitLab API resources using the operator's personal access token.",
+      "refs": "https://github.com/zereight/gitlab-mcp\nhttps://github.com/zereight/gitlab-mcp/commit/e2a81a047ab8750fa5bfa1763b5d85e5616f3994\nhttps://github.com/zereight/gitlab-mcp/issues/587",
+      "source": "NVD",
+      "time": "2026-07-14 05:44:15"
+    },
+    {
       "cve_id": "CVE-2026-41041",
       "title": "高危漏洞: CVE-2026-41041 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -1022,83 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Plugin/newsletters-lite/vulnerability/wordpress-newsletters-plugin-4-14-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:06:59"
-    },
-    {
-      "cve_id": "CVE-2026-57389",
-      "title": "高危漏洞: CVE-2026-57389 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-13 18:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Adrian Tobey Groundhogg groundhogg allows Path Traversal.This issue affects Groundhogg: from n/a through <= 4.4.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/groundhogg/vulnerability/wordpress-groundhogg-plugin-4-4-1-arbitrary-file-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:55"
-    },
-    {
-      "cve_id": "CVE-2026-57388",
-      "title": "高危漏洞: CVE-2026-57388 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Themefic Hydra Booking hydra-booking allows Stored XSS.This issue affects Hydra Booking: from n/a through <= 1.1.44.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/hydra-booking/vulnerability/wordpress-hydra-booking-plugin-1-1-44-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:50"
-    },
-    {
-      "cve_id": "CVE-2026-57387",
-      "title": "高危漏洞: CVE-2026-57387 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in picu picu picu allows Stored XSS.This issue affects picu: from n/a through <= 3.5.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/picu/vulnerability/wordpress-picu-plugin-3-5-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:46"
-    },
-    {
-      "cve_id": "CVE-2026-57386",
-      "title": "高危漏洞: CVE-2026-57386 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect Privilege Assignment vulnerability in Kodezen LLC aBlocks ablocks allows Privilege Escalation.This issue affects aBlocks: from n/a through < 2.9.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/ablocks/vulnerability/wordpress-ablocks-plugin-2-9-1-privilege-escalation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:39"
-    },
-    {
-      "cve_id": "CVE-2026-57385",
-      "title": "高危漏洞: CVE-2026-57385 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in appsbd Vitepos vitepos-lite allows Blind SQL Injection.This issue affects Vitepos: from n/a through <= 3.4.2.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/vitepos-lite/vulnerability/wordpress-vitepos-plugin-3-4-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:34"
-    },
-    {
-      "cve_id": "CVE-2026-57383",
-      "title": "高危漏洞: CVE-2026-57383 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in eyecix JobSearch wp-jobsearch allows Stored XSS.This issue affects JobSearch: from n/a through <= 3.2.9.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/wp-jobsearch/vulnerability/wordpress-jobsearch-plugin-3-2-9-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:30"
-    },
-    {
-      "cve_id": "CVE-2026-57382",
-      "title": "高危漏洞: CVE-2026-57382 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Mitchell Bennis Simple File List simple-file-list allows Reflected XSS.This issue affects Simple File List: from n/a through <= 6.3.8.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/simple-file-list/vulnerability/wordpress-simple-file-list-plugin-6-3-8-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:25"
     }
   ]
 }
