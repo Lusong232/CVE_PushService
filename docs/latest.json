@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-41041",
+      "title": "高危漏洞: CVE-2026-41041 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-13 18:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "URL path injection via unencoded user-supplied identifiers vulnerability in Apache Gravitino.\n\nThis issue affects Apache Gravitino: from 1.0.0 before 1.2.1.\n\nUsers are recommended to upgrade to version 1.2.1, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread/4dnwg1qzb2yns1fkfmq0z45vmwyzytgz\nhttp://www.openwall.com/lists/oss-security/2026/07/13/1",
+      "source": "NVD",
+      "time": "2026-07-14 03:11:29"
+    },
+    {
+      "cve_id": "CVE-2026-12582",
+      "title": "高危漏洞: CVE-2026-12582 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-13 15:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The Library Management System WordPress plugin before 3.5.8 does not sanitize and escape a user-supplied parameter before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection and extract arbitrary data from the database, including user password hashes.",
+      "refs": "https://wpscan.com/vulnerability/762dd8c3-8972-46ef-90c2-9f3f5dce4370/",
+      "source": "NVD",
+      "time": "2026-07-14 03:11:25"
+    },
+    {
+      "cve_id": "CVE-2026-12275",
+      "title": "高危漏洞: CVE-2026-12275 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-13 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "The Tutor LMS  WordPress plugin before 3.9.13 does not, in its Droip and Kirki page-builder integration, perform the enrollment, purchase, and private-course capability checks it enforces in its core course handler, allowing authenticated users with subscriber-level access to enroll in paid or private courses without authorization, read private course content, and mark arbitrary courses as completed, on sites where the Droip or Kirki integration is active.",
+      "refs": "https://wpscan.com/vulnerability/fcd43a87-8721-4455-b014-ac81d53fc671/",
+      "source": "NVD",
+      "time": "2026-07-14 03:11:20"
+    },
+    {
+      "cve_id": "CVE-2026-11964",
+      "title": "高危漏洞: CVE-2026-11964 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-13 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The User Registration & Membership  WordPress plugin before 5.2.2 does not verify the authenticity of incoming payment-provider webhook notifications before acting on them, allowing unauthenticated attackers to forge a payment-approved event and activate a paid membership subscription without completing a real payment.",
+      "refs": "https://wpscan.com/vulnerability/faf55649-8f76-4abf-a6b9-0d0774e22d29/",
+      "source": "NVD",
+      "time": "2026-07-14 03:11:14"
+    },
+    {
+      "cve_id": "CVE-2026-11963",
+      "title": "高危漏洞: CVE-2026-11963 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-13 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The User Registration & Membership  WordPress plugin before 5.2.2 does not perform an authorization check on a membership-upgrade action and derives the user to modify from a caller-supplied identifier instead of the current user, allowing any authenticated user such as a subscriber to change another user's WordPress role and membership tier.",
+      "refs": "https://wpscan.com/vulnerability/a34a916a-983e-48a5-8f10-99214ee3b613/",
+      "source": "NVD",
+      "time": "2026-07-14 03:11:09"
+    },
+    {
       "cve_id": "CVE-2026-61498",
       "title": "高危漏洞: CVE-2026-61498 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Plugin/simple-file-list/vulnerability/wordpress-simple-file-list-plugin-6-3-8-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:06:25"
-    },
-    {
-      "cve_id": "CVE-2026-57381",
-      "title": "高危漏洞: CVE-2026-57381 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Property Hive PropertyHive propertyhive allows Reflected XSS.This issue affects PropertyHive: from n/a through <= 2.2.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/propertyhive/vulnerability/wordpress-propertyhive-plugin-2-2-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:21"
-    },
-    {
-      "cve_id": "CVE-2026-57380",
-      "title": "高危漏洞: CVE-2026-57380 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in hupe13 Extensions for Leaflet Map extensions-leaflet-map allows DOM-Based XSS.This issue affects Extensions for Leaflet Map: from n/a through <= 5.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/extensions-leaflet-map/vulnerability/wordpress-extensions-for-leaflet-map-plugin-5-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:17"
-    },
-    {
-      "cve_id": "CVE-2026-57379",
-      "title": "高危漏洞: CVE-2026-57379 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPPOOL FormyChat social-contact-form allows Stored XSS.This issue affects FormyChat: from n/a through <= 2.15.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/social-contact-form/vulnerability/wordpress-formychat-plugin-2-15-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:13"
-    },
-    {
-      "cve_id": "CVE-2026-57378",
-      "title": "高危漏洞: CVE-2026-57378 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Missing Authorization vulnerability in Phil Kurth Advanced Forms advanced-forms allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Advanced Forms: from n/a through <= 1.9.3.7.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/advanced-forms/vulnerability/wordpress-advanced-forms-plugin-1-9-3-7-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:06"
-    },
-    {
-      "cve_id": "CVE-2026-57376",
-      "title": "高危漏洞: CVE-2026-57376 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Element Invader ElementInvader Addons for Elementor elementinvader-addons-for-elementor allows DOM-Based XSS.This issue affects ElementInvader Addons for Elementor: from n/a through <= 1.4.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/elementinvader-addons-for-elementor/vulnerability/wordpress-elementinvader-addons-for-elementor-plugin-1-4-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:06:01"
     }
   ]
 }
