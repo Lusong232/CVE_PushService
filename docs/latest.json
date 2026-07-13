@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9492",
+      "title": "高危漏洞: CVE-2026-9492 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-13 12:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MBStorage DRAM lighting control module within Gigabyte Control Center (GCC) developed by GIGABYTE Technology has an Improper Access Control vulnerability. Authenticated local attackers can send specific IOCTL commands through the driver MyPortIO_x64.sys bundled with the module, thereby arbitrarily reading and writing physical memory and obtaining kernel-level privileges.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11034-f7f2f-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11033-97316-1.html",
+      "source": "NVD",
+      "time": "2026-07-13 13:58:31"
+    },
+    {
+      "cve_id": "CVE-2026-7162",
+      "title": "高危漏洞: CVE-2026-7162 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-13 12:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Successful\nexploitation of the integer overflow vulnerability could allow an attacker to\nachieve system-level access to the affected software.",
+      "refs": "https://github.com/winfsp/winfsp/releases/tag/v2.2B2\nhttps://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-086",
+      "source": "NVD",
+      "time": "2026-07-13 13:58:23"
+    },
+    {
+      "cve_id": "CVE-2026-15517",
+      "title": "高危漏洞: CVE-2026-15517 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-13 09:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in Jinher OA 1.0. The affected element is an unknown function of the file /C6/JHSoft.Web.PlanSummarize/PlanGiveOut.aspx. This manipulation of the argument httpOID causes sql injection. Remote exploitation of the attack is possible. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/weini587/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-15517\nhttps://vuldb.com/submit/849470",
+      "source": "NVD",
+      "time": "2026-07-13 13:58:17"
+    },
+    {
+      "cve_id": "CVE-2026-15515",
+      "title": "高危漏洞: CVE-2026-15515 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-07-13 09:17:04",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Tencent PC Manager 18.1.30242.301. This issue affects some unknown processing in the library qmudisk64.sys of the component QMUDisk Driver. The manipulation leads to uncontrolled search path. The attack must be carried out locally. The attack is considered to have high complexity. The exploitability is assessed as difficult. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/subsubsub1231/qmukiller\nhttps://vuldb.com/cve/CVE-2026-15515\nhttps://vuldb.com/submit/848643",
+      "source": "NVD",
+      "time": "2026-07-13 13:58:12"
+    },
+    {
+      "cve_id": "CVE-2026-15514",
+      "title": "高危漏洞: CVE-2026-15514 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-13 08:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Metasoft 美特软件 MetaCRM up to 6.4.0 Beta06. This vulnerability affects the function RPCService.query of the file /customizemt/xkq/rpc.jsp of the component PHPRPC Remote Call Interface. Executing a manipulation of the argument phprpc_args can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/docx/SX91dyomSoAeHJxnfygckPQNnLL?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-15514\nhttps://vuldb.com/submit/848598",
+      "source": "NVD",
+      "time": "2026-07-13 13:58:06"
+    },
+    {
       "cve_id": "CVE-2026-15511",
       "title": "高危漏洞: CVE-2026-15511 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/cthackers/adm-zip\nhttps://github.com/cthackers/adm-zip/issues/568\nhttps://www.npmjs.com/package/adm-zip",
       "source": "NVD",
       "time": "2026-07-11 05:51:36"
-    },
-    {
-      "cve_id": "CVE-2025-70796",
-      "title": "高危漏洞: CVE-2025-70796 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-11 01:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "An unauthenticated path traversal vulnerability exists in the web management interface of WTI (Wireless Technology, Inc.) version 3.5.0.r 2024/05/24 00:00:00. An unauthenticated attacker can craft malicious HTTP requests containing traversal sequences to access files outside of the intended web root directory. This may allow disclosure of sensitive system files and configuration data",
-      "refs": "https://github.com/LPO26/Path-Traversal-via-Web-Interface-on-WTI-Devices/blob/main/CVE%20Summary\nhttps://github.com/LPO26/Path-Traversal-via-Web-Interface-on-WTI-Devices/tree/main\nhttps://github.com/LPO26/Path-Traversal-via-Web-Interface-on-WTI-Devices/blob/main/CVE%20Summary",
-      "source": "NVD",
-      "time": "2026-07-11 05:51:32"
-    },
-    {
-      "cve_id": "CVE-2026-40452",
-      "title": "高危漏洞: CVE-2026-40452 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 16:16:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Incorrect Authorization, Improper Access Control vulnerability in Apache IoTDB.\nAuthorization bypass in /rest/v2/fastLastQuery exposes last-value data to unauthorized authenticated users.\n\n\nThis issue affects Apache IoTDB: from 1.3.5 before 1.3.8, from 2.0.5 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/04j2l6dosyboor4o2gvrzbrcrpllmh95\nhttp://www.openwall.com/lists/oss-security/2026/07/10/7",
-      "source": "NVD",
-      "time": "2026-07-11 05:51:26"
-    },
-    {
-      "cve_id": "CVE-2026-59858",
-      "title": "高危漏洞: CVE-2026-59858 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-10 07:17:06",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Vim is an open source, command line text editor. Prior to 9.2.0735, the C omni-completion script in runtime/autoload/ccomplete.vim interpolates the typeref: or typename: extension field of a tags entry, without escaping, into a :vimgrep pattern that is run through :execute. Because :vimgrep honors the bar as a command separator, a crafted tag field can close the search pattern and append an arbitrary Ex command; opening a hostile .c file whose project tags file contains such an entry and invoking C omni-completion runs that command as the editing user. This issue is fixed in version 9.2.0735.",
-      "refs": "https://github.com/vim/vim/commit/6b611b0d15603c52ebdad17172b0232b4f65704e\nhttps://github.com/vim/vim/security/advisories/GHSA-mf92-v4xw-j45x",
-      "source": "NVD",
-      "time": "2026-07-11 05:51:22"
-    },
-    {
-      "cve_id": "CVE-2026-59856",
-      "title": "高危漏洞: CVE-2026-59856 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-10 07:17:06",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Vim is an open source, command line text editor. Prior to 9.2.0736, the PHP omni-completion script in runtime/autoload/phpcomplete.vim interpolates a class or trait name, taken from the contents of the edited buffer, into a search() pattern that is run via win_execute() without escaping. A name containing a single quote can terminate the search() string argument early, and because the bar is honored as an Ex command separator, the remainder of the name is run as Ex commands; via the :! command this allows arbitrary operating-system command execution when a victim opens a crafted PHP file and invokes omni-completion. This issue is fixed in version 9.2.0736.",
-      "refs": "https://github.com/vim/vim/commit/43afc581a37a35762dd0ef292f038b9dc5680a24\nhttps://github.com/vim/vim/security/advisories/GHSA-fh26-8f79-wj97",
-      "source": "NVD",
-      "time": "2026-07-11 05:51:18"
-    },
-    {
-      "cve_id": "CVE-2026-39246",
-      "title": "高危漏洞: CVE-2026-39246 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-10 06:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "decompress before 4.2.2 allows arbitrary symlink creation during archive extraction. When processing symlink entries (type === 'symlink'), the x.linkname field from the archive is passed directly to fs.symlink() without validation (index.js line 121). The preventWritingThroughSymlink check on line 98 only applies to file entries, not symlink creation. An attacker can craft an archive with symlink entries pointing to sensitive files outside the extraction directory (e.g., /etc/passwd), enabling information disclosure when the application reads the extracted contents.",
-      "refs": "https://github.com/kevva/decompress\nhttps://github.com/kevva/decompress/issues/114\nhttps://www.npmjs.com/package/decompress",
-      "source": "NVD",
-      "time": "2026-07-11 05:51:11"
     }
   ]
 }
