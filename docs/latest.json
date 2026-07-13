@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-61498",
+      "title": "高危漏洞: CVE-2026-61498 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-13 22:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/gen_graphs.php endpoint that allows remote unauthenticated attackers to execute arbitrary commands by supplying shell metacharacters in the start, end, key, or format HTTP GET parameters. Attackers can exploit the lack of input sanitization in the graph generation script, which passes user-supplied values directly to shell commands via passthru(), to execute arbitrary OS commands with root privileges due to the web server context having passwordless sudo access.",
+      "refs": "https://damiri.fr/en/cve/CVE-2026-61498\nhttps://www.vitec.com/solutions/iptv-distribution\nhttps://www.vulncheck.com/advisories/vitec-flamingo-unauthenticated-os-command-injection-via-gen-graphs-php",
+      "source": "NVD",
+      "time": "2026-07-14 01:06:03"
+    },
+    {
+      "cve_id": "CVE-2026-60121",
+      "title": "高危漏洞: CVE-2026-60121 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-13 22:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/ping.php endpoint that allows remote attackers to execute arbitrary commands by exploiting a double-evaluation flaw in shell argument handling. The endpoint applies escapeshellarg() to the user-supplied host POST parameter before passing it to a system wrapper, but the wrapper retrieves the decoded value from argv and incorporates it into a second shell_exec() call without escaping, allowing injected commands to execute with root privileges via passwordless sudo.",
+      "refs": "https://damiri.fr/en/cve/CVE-2026-60121\nhttps://www.vitec.com/solutions/iptv-distribution\nhttps://www.vulncheck.com/advisories/vitec-flamingo-unauthenticated-os-command-injection-via-ping-php",
+      "source": "NVD",
+      "time": "2026-07-14 01:05:59"
+    },
+    {
+      "cve_id": "CVE-2026-15584",
+      "title": "高危漏洞: CVE-2026-15584 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-13 21:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A privilege escalation vulnerability was found in the incluster-checks tool for OpenShift. The tool creates privileged debug pods with host filesystem access in the shared default namespace, where any user with the standard edit role can exec into them and obtain root access on cluster nodes.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-15584\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2499647",
+      "source": "NVD",
+      "time": "2026-07-14 01:05:55"
+    },
+    {
       "cve_id": "CVE-2026-61956",
       "title": "高危漏洞: CVE-2026-61956 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1066,39 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Plugin/elementinvader-addons-for-elementor/vulnerability/wordpress-elementinvader-addons-for-elementor-plugin-1-4-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:06:01"
-    },
-    {
-      "cve_id": "CVE-2026-57372",
-      "title": "高危漏洞: CVE-2026-57372 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-13 18:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Server-Side Request Forgery (SSRF) vulnerability in denishua WPJAM Basic wpjam-basic allows Server Side Request Forgery.This issue affects WPJAM Basic: from n/a through <= 7.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/wpjam-basic/vulnerability/wordpress-wpjam-basic-plugin-7-0-server-side-request-forgery-ssrf-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:05:56"
-    },
-    {
-      "cve_id": "CVE-2026-57371",
-      "title": "高危漏洞: CVE-2026-57371 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-13 18:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in denishua WPJAM Basic wpjam-basic allows Object Injection.This issue affects WPJAM Basic: from n/a through <= 7.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/wpjam-basic/vulnerability/wordpress-wpjam-basic-plugin-7-0-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:05:50"
-    },
-    {
-      "cve_id": "CVE-2026-57369",
-      "title": "高危漏洞: CVE-2026-57369 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in themifyme Themify Builder themify-builder allows Reflected XSS.This issue affects Themify Builder: from n/a through <= 7.7.4.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/themify-builder/vulnerability/wordpress-themify-builder-plugin-7-7-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:05:46"
     }
   ]
 }
