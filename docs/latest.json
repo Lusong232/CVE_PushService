@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15692",
+      "title": "高危漏洞: CVE-2026-15692 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-14 21:18:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Tenda BE12 Pro 16.03.66.23. This vulnerability affects the function fromSafeUrlFilter of the file /goform/SafeUrlFilter. Executing a manipulation of the argument page can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/cve-a/dexingzhiqing/issues/2\nhttps://vuldb.com/cve/CVE-2026-15692\nhttps://vuldb.com/submit/856010",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:42"
+    },
+    {
+      "cve_id": "CVE-2026-15691",
+      "title": "高危漏洞: CVE-2026-15691 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-14 21:18:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Tenda BE12 Pro 16.03.66.23. This affects the function fromSafeClientFilter of the file /goform/SafeClientFilter. Performing a manipulation of the argument page results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/cve-a/dexingzhiqing/issues/1\nhttps://vuldb.com/cve/CVE-2026-15691\nhttps://vuldb.com/submit/855999",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:37"
+    },
+    {
+      "cve_id": "CVE-2026-59083",
+      "title": "高危漏洞: CVE-2026-59083 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-14 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Improper Handling of URL Encoding (Hex Encoding) vulnerability in Apache Tomcat's rewrite valve allowed security constraint bypass for some configurations.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.23, from 10.1.0-M1 through 10.1.56, from 9.0.0.M1 through 9.0.119, from 8.5.0 through 8.5.100. Other versions that have reached end of support may also be affected.\n\nUsers are recommended to upgrade to version 11.0.24, 10.1.57 or 9.0.120, which fix the issue.",
+      "refs": "https://lists.apache.org/thread/3g63zos2gkjo5vgnrk8kxmosv47w6wbq\nhttp://www.openwall.com/lists/oss-security/2026/07/14/7",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:29"
+    },
+    {
+      "cve_id": "CVE-2026-12583",
+      "title": "高危漏洞: CVE-2026-12583 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-14 14:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Newsletters WordPress plugin before 4.15 does not prevent deserialization of untrusted input that is stored through a public form, allowing unauthenticated attackers to inject a PHP object and, via a property-oriented gadget chain bundled with the Newsletters WordPress plugin before 4.15, write arbitrary files and execute code on the server.",
+      "refs": "https://wpscan.com/vulnerability/e4c44105-f43d-4dff-8487-7d8ae2691c4e/",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:24"
+    },
+    {
+      "cve_id": "CVE-2026-12511",
+      "title": "高危漏洞: CVE-2026-12511 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-14 14:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The AI Engine  WordPress plugin before 3.5.5 does not sanitize a user-supplied filename before using it to write a downloaded file, allowing authenticated users with editor-level access to write attacker-controlled bytes to an arbitrary location on the server via path traversal.",
+      "refs": "https://wpscan.com/vulnerability/cf3cf59e-da36-429b-8794-5a46587e8462/",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:19"
+    },
+    {
+      "cve_id": "CVE-2026-11563",
+      "title": "高危漏洞: CVE-2026-11563 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-07-14 14:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "description": "The Word Count and Social Shares WordPress plugin through 1.0 does not validate a user-supplied file path before deletion, nor does it have proper authorization or CSRF checks, allowing any authenticated user, such as a Subscriber, to delete arbitrary files on the server, which can lead to a full site takeover (e.g. by deleting wp-config.php).",
+      "refs": "https://wpscan.com/vulnerability/7f4b5f16-6c31-4dcc-94a4-120cb45631bb/",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:13"
+    },
+    {
+      "cve_id": "CVE-2026-58102",
+      "title": "高危漏洞: CVE-2026-58102 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-14 07:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "description": "Crypt::OpenSSL::X509 versions before 2.1.3 for Perl allow a heap out-of-bounds read via a long certificate extension OID in hv_exts.\n\nWhen building the extension hash (via extensions(), extensions_by_long_name(), extensions_by_oid(), or has_extension_oid()), the code passes OBJ_obj2txt()'s return value as the hash-key length; because that value is the OID's full text length rather than the bytes written to the fixed-size buffer (129 bytes), an OID whose text is longer than the 129-byte buffer causes a read past the allocation, exposing adjacent heap memory as the returned hash key. extensions_by_name() uses the static shortname path and is not affected.",
+      "refs": "https://github.com/dsully/perl-crypt-openssl-x509/commit/757289bfce095455c104d4adfe9312e7b339620f.patch\nhttps://metacpan.org/release/JONASBN/Crypt-OpenSSL-X509-2.1.3/source/Changes.md",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:09"
+    },
+    {
+      "cve_id": "CVE-2026-58101",
+      "title": "高危漏洞: CVE-2026-58101 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-14 07:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Crypt::OpenSSL::X509 versions before 2.1.3 for Perl allow denial of service via NULL pointer dereference.\n\nX509V3_EXT_d2i(ext) returns NULL when an extension's DER value fails to parse. basicC, ia5string, and auth_att dereference its result without a NULL check. keyid_data also dereferences akid->keyid, which is NULL for an empty AKI SEQUENCE (DER 30 00) even when the parse succeeds.\n\nA caller invoking an affected helper on an extension from an untrusted certificate triggers a SIGSEGV that crashes the Perl process.",
+      "refs": "https://github.com/dsully/perl-crypt-openssl-x509/commit/4c1e2370556097c253ae27abe9e1097ea377fbd2.patch\nhttps://metacpan.org/release/JONASBN/Crypt-OpenSSL-X509-2.1.3/source/Changes.md",
+      "source": "NVD",
+      "time": "2026-07-15 00:08:04"
+    },
+    {
       "cve_id": "CVE-2026-62422",
       "title": "高危漏洞: CVE-2026-62422 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1011,94 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Theme/setsail/vulnerability/wordpress-setsail-theme-2-1-local-file-inclusion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:12:45"
-    },
-    {
-      "cve_id": "CVE-2026-57800",
-      "title": "高危漏洞: CVE-2026-57800 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Edge-Themes Overworld overworld allows PHP Local File Inclusion.This issue affects Overworld: from n/a through <= 1.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/overworld/vulnerability/wordpress-overworld-theme-1-5-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:39"
-    },
-    {
-      "cve_id": "CVE-2026-57799",
-      "title": "高危漏洞: CVE-2026-57799 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in uxper Nuss nuss allows PHP Local File Inclusion.This issue affects Nuss: from n/a through <= 1.3.6.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/nuss/vulnerability/wordpress-nuss-theme-1-3-6-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:34"
-    },
-    {
-      "cve_id": "CVE-2026-57798",
-      "title": "高危漏洞: CVE-2026-57798 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in SaurabhSharma NewsPlus Shortcodes newsplus-shortcodes allows PHP Local File Inclusion.This issue affects NewsPlus Shortcodes: from n/a through <= 4.2.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/newsplus-shortcodes/vulnerability/wordpress-newsplus-shortcodes-plugin-4-2-0-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:27"
-    },
-    {
-      "cve_id": "CVE-2026-57796",
-      "title": "高危漏洞: CVE-2026-57796 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in VLThemes Leedo leedo allows PHP Local File Inclusion.This issue affects Leedo: from n/a through <= 3.0.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/leedo/vulnerability/wordpress-leedo-theme-3-0-0-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:22"
-    },
-    {
-      "cve_id": "CVE-2026-57795",
-      "title": "高危漏洞: CVE-2026-57795 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in themelexus Kitchor kitchor allows PHP Local File Inclusion.This issue affects Kitchor: from n/a through <= 1.4.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/kitchor/vulnerability/wordpress-kitchor-theme-1-4-3-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:17"
-    },
-    {
-      "cve_id": "CVE-2026-57794",
-      "title": "高危漏洞: CVE-2026-57794 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in uxper Golo Framework golo-framework allows PHP Local File Inclusion.This issue affects Golo Framework: from n/a through <= 1.7.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/golo-framework/vulnerability/wordpress-golo-framework-plugin-1-7-3-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:13"
-    },
-    {
-      "cve_id": "CVE-2026-57793",
-      "title": "高危漏洞: CVE-2026-57793 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Elated-Themes Flow flow allows PHP Local File Inclusion.This issue affects Flow: from n/a through <= 1.8.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/flow/vulnerability/wordpress-flow-theme-1-8-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:09"
-    },
-    {
-      "cve_id": "CVE-2026-57792",
-      "title": "高危漏洞: CVE-2026-57792 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Mikado-Themes Dør dor allows PHP Local File Inclusion.This issue affects Dør: from n/a through <= 2.4.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/dor/vulnerability/wordpress-doer-theme-2-4-1-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:12:03"
     }
   ]
 }
