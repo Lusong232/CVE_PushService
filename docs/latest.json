@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-58233",
+      "title": "高危漏洞: CVE-2026-58233 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-07-14 09:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
+      "description": "SAP Change and Transport System Attach Tool (ctsattach) allows an authenticated attacker to supply a specially crafted archive file which, when processed by the application�s library, can trigger insecure deserialization and lead to remote code execution (RCE) on the system. Successful exploitation requires a victim to process the malicious archive, enabling the attacker to execute the RCE and extract sensitive information and gain control over the system and its processes. This vulnerability has a high impact on confidentiality and integrity of the data, with a low impact on the availability of the system.",
+      "refs": "https://me.sap.com/notes/3773304\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:50"
+    },
+    {
+      "cve_id": "CVE-2026-44761",
+      "title": "高危漏洞: CVE-2026-44761 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-14 09:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "SAP Commerce Cloud could retain a sample OAuth2 client with publicly documented sample credentials originating from sample configuration provided in SAP Help Portal documentation. If left unchanged, an unauthenticated attacker could use these well-known credentials to obtain a valid access token and invoke certain APIs to read and modify data. Successful exploitation results in high impact on confidentiality and integrity, with no impact on availability.",
+      "refs": "https://me.sap.com/notes/3753495\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:43"
+    },
+    {
+      "cve_id": "CVE-2026-44752",
+      "title": "高危漏洞: CVE-2026-44752 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-14 09:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "SAP NetWeaver Application Server Java allows an unauthenticated attacker to inject malicious JavaScript through crafted URLs. When a victim accesses such a URL, the script executes in the user's browser, allowing the attacker to access sensitive session information and modify non-sensitive data displayed in the client�s browser. This results in a high impact on confidentiality, low impact on integrity with no impact on availability of the application.",
+      "refs": "https://me.sap.com/notes/3748227\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:39"
+    },
+    {
+      "cve_id": "CVE-2026-44747",
+      "title": "高危漏洞: CVE-2026-44747 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-14 09:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SAP NetWeaver Application Server ABAP allows an authenticated attacker to leverage logical errors in memory management to cause a memory corruption that could lead to unauthorized data access, modification, or system unavailability. This has high impact on confidentiality, integrity, and availability of the application.",
+      "refs": "https://me.sap.com/notes/3747367\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:35"
+    },
+    {
+      "cve_id": "CVE-2026-44745",
+      "title": "高危漏洞: CVE-2026-44745 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-14 09:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "SAP Approuter does not properly validate incoming request headers during the OAuth2 login flow under certain configurations. This allows an unauthenticated remote attacker to craft a malicious link which, when clicked by a victim, could lead to unauthorized access. Successful exploitation results in a high impact to the confidentiality and integrity with no impact on the availability of the application.",
+      "refs": "https://me.sap.com/notes/3741519\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:31"
+    },
+    {
+      "cve_id": "CVE-2026-27690",
+      "title": "高危漏洞: CVE-2026-27690 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-14 09:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "description": "Due to an HTTP Request Smuggling vulnerability in SAP Approuter, an unauthenticated attacker could send a specially crafted HTTP request that leads to request-response desynchronization. This could result in the exposure of user responses and cause the system to become unavailable. This leads to a high impact on confidentiality and availability.",
+      "refs": "https://me.sap.com/notes/3720138\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:26"
+    },
+    {
+      "cve_id": "CVE-2026-0487",
+      "title": "高危漏洞: CVE-2026-0487 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-07-14 09:16:16",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SAProuter on Microsoft Windows allows an unauthenticated attacker to load library (DLL) files from an untrusted location, allowing them to execute malicious code on the system. This could enable the attacker to hijack the DLL loading process and achieve arbitrary code execution. This has high impact on confidentiality, integrity and availability of the system.",
+      "refs": "https://me.sap.com/notes/3692165\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:22"
+    },
+    {
+      "cve_id": "CVE-2026-59245",
+      "title": "高危漏洞: CVE-2026-59245 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-14 00:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "In the Apache Airflow FAB auth manager, a DAG whose `dag_id` is `DAGs` collided with the global all-DAGs permission resource name produced by `resource_name()`, so a user granted per-DAG `access_control` on that one DAG was silently granted the global all-DAGs permission (privilege escalation). The escalation triggers when a DAG named `DAGs` exists and a lower-privileged user is given per-DAG access to it, granting that user read/edit access to every DAG. Users are advised to upgrade to `apache-airflow-providers-fab` 3.7.2 or later, which disambiguates the resource-name collision.",
+      "refs": "https://github.com/apache/airflow/pull/69106\nhttps://lists.apache.org/thread/70f37q3mwov1vm3zolrfxlzds278c78h\nhttp://www.openwall.com/lists/oss-security/2026/07/13/4",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:18"
+    },
+    {
+      "cve_id": "CVE-2026-58065",
+      "title": "高危漏洞: CVE-2026-58065 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-14 00:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Apache Airflow Git provider runs its git-over-SSH operations with `StrictHostKeyChecking=no` by default, disabling SSH host-key verification. An attacker who can intercept the network path between an Airflow worker and the Git server can impersonate the server (man-in-the-middle), capturing the SSH deploy key or injecting malicious repository content. Deployments that use the Git DAG bundle or Git provider to clone over SSH with a deploy key are affected. The fix changes the default to verify host keys; upgrade to apache-airflow-providers-git `0.4.1` or later and configure a `known_hosts` file.",
+      "refs": "https://github.com/apache/airflow/pull/69103\nhttps://lists.apache.org/thread/fjmclngfksz2kp7llpcjxzdz568h0zhc\nhttp://www.openwall.com/lists/oss-security/2026/07/13/3",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:13"
+    },
+    {
+      "cve_id": "CVE-2026-40553",
+      "title": "高危漏洞: CVE-2026-40553 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-13 21:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Buffer overflow vulnerability has been found in \"extension/readdir.c\" program file of gawk (ftype() routine). This issue could be used to crash the program and potentially to achieve code execution, although the latter has not been confirmed to be feasible. It affects gawk in versions 5.4.0 and below.",
+      "refs": "https://cert.pl/en/posts/2026/07/CVE-2026-40467\nhttps://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=cca0366144336b49aaa7d5d949966ce8e2c70843",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:09"
+    },
+    {
+      "cve_id": "CVE-2026-40469",
+      "title": "高危漏洞: CVE-2026-40469 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-13 21:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Integer overflow vulnerability has been found in \"builtin.c\" program file of gawk (do_sub() routine). This issue could be used to overwrite gawk heap metadata and objects causing the program to crash. It affects 32-bit builds of gawk in versions 5.4.0 and below.",
+      "refs": "https://cert.pl/en/posts/2026/07/CVE-2026-40467\nhttps://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=ae1b2d508f46913269a9e62aceda3636afe8147b",
+      "source": "NVD",
+      "time": "2026-07-14 13:21:02"
+    },
+    {
+      "cve_id": "CVE-2026-40468",
+      "title": "高危漏洞: CVE-2026-40468 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-13 21:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Integer overflow vulnerability has been found in \"builtin.c\" program file of gawk. This issue may lead to memory exhaustion on the hosting operating system and could be used to overwrite gawk heap metadata and objects with attacker-controlled bytes. It affects gawk in versions 5.4.0 and below.",
+      "refs": "https://cert.pl/en/posts/2026/07/CVE-2026-40467\nhttps://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=062f2f2581b991362c046f7f2e238ffa34e6f8c7",
+      "source": "NVD",
+      "time": "2026-07-14 13:20:56"
+    },
+    {
+      "cve_id": "CVE-2026-40467",
+      "title": "高危漏洞: CVE-2026-40467 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-13 21:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Use After Free vulnerability has been found in \"io.c\" program file of gawk (do_getline_redir() routine). This issue may lead to a crash. It affects gawk in versions 5.4.0 and below.",
+      "refs": "https://cert.pl/en/posts/2026/07/CVE-2026-40467\nhttps://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=a2d18c74109e41bec29a23098eba2e00057286d8",
+      "source": "NVD",
+      "time": "2026-07-14 13:20:51"
+    },
+    {
       "cve_id": "CVE-2026-57856",
       "title": "高危漏洞: CVE-2026-57856 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -956,149 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Theme/grandphotography/vulnerability/wordpress-grand-photography-theme-5-7-8-php-object-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:11:10"
-    },
-    {
-      "cve_id": "CVE-2026-57768",
-      "title": "高危漏洞: CVE-2026-57768 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "description": "Incorrect Privilege Assignment vulnerability in favethemes Houzez Login Register houzez-login-register allows Privilege Escalation.This issue affects Houzez Login Register: from n/a through <= 3.3.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/houzez-login-register/vulnerability/wordpress-houzez-login-register-plugin-3-3-3-privilege-escalation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:05"
-    },
-    {
-      "cve_id": "CVE-2026-57745",
-      "title": "高危漏洞: CVE-2026-57745 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in stmcan RT-Theme 18 | Extensions rt18-extensions allows Reflected XSS.This issue affects RT-Theme 18 | Extensions: from n/a through <= 2.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/rt18-extensions/vulnerability/wordpress-rt-theme-18-extensions-plugin-2-5-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:00"
-    },
-    {
-      "cve_id": "CVE-2026-57744",
-      "title": "高危漏洞: CVE-2026-57744 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in stmcan RT-Theme 18 | Extensions rt18-extensions allows Object Injection.This issue affects RT-Theme 18 | Extensions: from n/a through <= 2.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/rt18-extensions/vulnerability/wordpress-rt-theme-18-extensions-plugin-2-5-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:56"
-    },
-    {
-      "cve_id": "CVE-2026-57743",
-      "title": "高危漏洞: CVE-2026-57743 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in stmcan RT-Theme 18 | Extensions rt18-extensions allows PHP Local File Inclusion.This issue affects RT-Theme 18 | Extensions: from n/a through <= 2.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/rt18-extensions/vulnerability/wordpress-rt-theme-18-extensions-plugin-2-5-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:52"
-    },
-    {
-      "cve_id": "CVE-2026-57741",
-      "title": "高危漏洞: CVE-2026-57741 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in AcyMailing Newsletter Team AcyMailing SMTP Newsletter acymailing allows Stored XSS.This issue affects AcyMailing SMTP Newsletter: from n/a through <= 10.11.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/acymailing/vulnerability/wordpress-acymailing-smtp-newsletter-plugin-10-10-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:47"
-    },
-    {
-      "cve_id": "CVE-2026-57740",
-      "title": "高危漏洞: CVE-2026-57740 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
-      "description": "Missing Authorization vulnerability in AcyMailing Newsletter Team AcyMailing SMTP Newsletter acymailing allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AcyMailing SMTP Newsletter: from n/a through <= 10.11.1.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/acymailing/vulnerability/wordpress-acymailing-smtp-newsletter-plugin-10-10-2-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:41"
-    },
-    {
-      "cve_id": "CVE-2026-57739",
-      "title": "高危漏洞: CVE-2026-57739 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in AcyMailing Newsletter Team AcyMailing SMTP Newsletter acymailing allows Blind SQL Injection.This issue affects AcyMailing SMTP Newsletter: from n/a through <= 10.11.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/acymailing/vulnerability/wordpress-acymailing-smtp-newsletter-plugin-10-10-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:36"
-    },
-    {
-      "cve_id": "CVE-2026-57738",
-      "title": "高危漏洞: CVE-2026-57738 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-13 18:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in axiomthemes 777 triple-seven allows Object Injection.This issue affects 777: from n/a through <= 1.13.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/triple-seven/vulnerability/wordpress-777-theme-1-13-0-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:31"
-    },
-    {
-      "cve_id": "CVE-2026-57734",
-      "title": "高危漏洞: CVE-2026-57734 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in tagDiv tagDiv Composer td-composer allows Reflected XSS.This issue affects tagDiv Composer: from n/a through <= 5.4.3.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/td-composer/vulnerability/wordpress-tagdiv-composer-plugin-5-4-3-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:26"
-    },
-    {
-      "cve_id": "CVE-2026-57733",
-      "title": "高危漏洞: CVE-2026-57733 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in tagDiv tagDiv Cloud Library td-cloud-library allows DOM-Based XSS.This issue affects tagDiv Cloud Library: from n/a through <= 3.9.4.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/td-cloud-library/vulnerability/wordpress-tagdiv-cloud-library-plugin-3-9-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:21"
-    },
-    {
-      "cve_id": "CVE-2026-57732",
-      "title": "高危漏洞: CVE-2026-57732 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in tagDiv tagDiv Opt-In Builder td-subscription allows DOM-Based XSS.This issue affects tagDiv Opt-In Builder: from n/a through <= 1.7.4.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/td-subscription/vulnerability/wordpress-tagdiv-opt-in-builder-plugin-1-7-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:17"
-    },
-    {
-      "cve_id": "CVE-2026-57729",
-      "title": "高危漏洞: CVE-2026-57729 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Missing Authorization vulnerability in UX-themes Flatsome flatsome allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Flatsome: from n/a through <= 3.20.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/flatsome/vulnerability/wordpress-flatsome-theme-3-20-5-broken-access-control-vulnerability-3?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:09"
-    },
-    {
-      "cve_id": "CVE-2026-57728",
-      "title": "高危漏洞: CVE-2026-57728 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-13 18:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in UX-themes Flatsome flatsome allows Reflected XSS.This issue affects Flatsome: from n/a through <= 3.20.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/flatsome/vulnerability/wordpress-flatsome-theme-3-20-5-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:10:03"
     }
   ]
 }
