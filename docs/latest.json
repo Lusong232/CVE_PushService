@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-62422",
+      "title": "高危漏洞: CVE-2026-62422 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-14 19:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "In JetBrains YouTrack before 2026.1.13757,\n2025.3.148033,\n2025.2.148048,\n2025.1.148120,\n2024.3.148430,\n2024.2.148429 authentication bypass via direct database access leading to administrative access was possible",
+      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
+      "source": "NVD",
+      "time": "2026-07-14 21:07:22"
+    },
+    {
+      "cve_id": "CVE-2026-56451",
+      "title": "高危漏洞: CVE-2026-56451 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-14 18:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability has been identified in Opcenter X (All versions < V2604). Affected applications do not properly validate the algorithm specified in the JSON Web Token (JWT) header.\r\nThis could allow an unauthenticated remote attacker to forge arbitrary JWT, bypass authentication mechanisms and impersonate any user including administrative accounts, potentially gaining full unauthorized access to the application.",
+      "refs": "https://cert-portal.siemens.com/productcert/html/ssa-096828.html",
+      "source": "NVD",
+      "time": "2026-07-14 21:07:18"
+    },
+    {
+      "cve_id": "CVE-2026-54429",
+      "title": "高危漏洞: CVE-2026-54429 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-14 18:16:33",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+      "description": "A vulnerability has been identified in SIMATIC S7-PLCSIM Advanced (All versions). Affected devices do not properly handle high-volume multicast network traffic, which can exhaust available memory resources in the affected application. This could allow an unauthenticated attacker on the local network segment to cause a denial-of-service condition of the affected application. The affected application becomes inaccessible and requires a manual restart; no project data is lost. Successful exploitation requires a specific project configuration to be already active on the targeted instance.",
+      "refs": "https://cert-portal.siemens.com/productcert/html/ssa-828211.html",
+      "source": "NVD",
+      "time": "2026-07-14 21:07:11"
+    },
+    {
+      "cve_id": "CVE-2026-3014",
+      "title": "高危漏洞: CVE-2026-3014 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-14 18:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Milestone\nhas released a new version of XProtect® (and several cumulative patch updates)\nwhich fix security vulnerability in Management Server API. \n\n\n\nThe vulnerability\ncauses users with edit permissions to the Management Server to be able to\nexecute arbitrary code in context of the Management Server Service.",
+      "refs": "https://support.milestonesys.com/article/CVE-2026-3014-potential-remote-code-execution-by-admin-user-on-Management-Server",
+      "source": "NVD",
+      "time": "2026-07-14 21:07:06"
+    },
+    {
       "cve_id": "CVE-2026-57898",
       "title": "高危漏洞: CVE-2026-57898 (CVSS 9.0)",
       "cvss_score": 9.0,
@@ -1055,50 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Theme/dor/vulnerability/wordpress-doer-theme-2-4-1-local-file-inclusion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:12:03"
-    },
-    {
-      "cve_id": "CVE-2026-57791",
-      "title": "高危漏洞: CVE-2026-57791 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in ThemeMove Brook brook allows PHP Local File Inclusion.This issue affects Brook: from n/a through <= 2.9.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/brook/vulnerability/wordpress-brook-theme-2-9-0-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:59"
-    },
-    {
-      "cve_id": "CVE-2026-57790",
-      "title": "高危漏洞: CVE-2026-57790 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in ThemeMove Billey billey allows PHP Local File Inclusion.This issue affects Billey: from n/a through <= 2.1.8.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/billey/vulnerability/wordpress-billey-theme-2-1-8-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:51"
-    },
-    {
-      "cve_id": "CVE-2026-57789",
-      "title": "高危漏洞: CVE-2026-57789 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in jwsthemes Aqua aqua allows PHP Local File Inclusion.This issue affects Aqua: from n/a through <= 5.1.2.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/aqua/vulnerability/wordpress-aqua-theme-5-1-2-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:47"
-    },
-    {
-      "cve_id": "CVE-2026-57788",
-      "title": "高危漏洞: CVE-2026-57788 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-13 18:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Edge-Themes Aalto aalto allows PHP Local File Inclusion.This issue affects Aalto: from n/a through <= 1.8.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/aalto/vulnerability/wordpress-aalto-theme-1-8-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:42"
     }
   ]
 }
