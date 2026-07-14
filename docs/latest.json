@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-57898",
+      "title": "高危漏洞: CVE-2026-57898 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-07-14 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "In Eclipse BaSyx Java Server SDK versions 2.0.0-milestone-05 to 2.0.0-milestone-12, deployments using the MongoDB backend are vulnerable to an unauthenticated arbitrary file write through the AAS thumbnail API.\n\n\n\n\nThe AAS thumbnail upload path accepted a client-controlled fileName request parameter and passed it through repository file handling as both a repository key and, during thumbnail retrieval, a local filesystem path. With the MongoDB file repository, the supplied filename was treated as an opaque GridFS key and was not normalized or restricted as a filesystem path. A remote attacker could upload thumbnail content using an absolute or traversal-style filename, then trigger thumbnail retrieval so that the uploaded bytes were written to the attacker-chosen path on the server filesystem.\n\n\n\n\nThis could allow writing files anywhere the Java process has permission to write and may lead to remote code execution. The default InMemory backend is not affected by this specific path because it normalizes and restricts file paths to its temporary directory.\n\n\n\n\nThe issue is fixed in Eclipse BaSyx Java Server SDK 2.0.0-milestone-13.",
+      "refs": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/159",
+      "source": "NVD",
+      "time": "2026-07-14 18:29:20"
+    },
+    {
+      "cve_id": "CVE-2026-15416",
+      "title": "高危漏洞: CVE-2026-15416 (CVSS 8.9)",
+      "cvss_score": 8.9,
+      "published_date": "2026-07-14 17:16:40",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "description": "A flaw was identified in Argo CD, the GitOps engine used by Red Hat OpenShift GitOps, that could allow an unauthenticated attacker with network access to the Argo CD repo-server to achieve remote code execution. Under certain conditions, the attacker may then manipulate cached data to deploy malicious Kubernetes resources to managed clusters, potentially resulting in complete cluster compromise.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-15416\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2496732\nhttps://github.com/argoproj/argo-helm/commit/0f245ab",
+      "source": "NVD",
+      "time": "2026-07-14 18:29:13"
+    },
+    {
+      "cve_id": "CVE-2024-7708",
+      "title": "高危漏洞: CVE-2024-7708 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-14 17:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "For requests that have a body, but reading the body may end up in reading 0 bytes, there is a buffer leak.\nThis is particularly the case for 100-Continue, but any request where the network is slow can leak.",
+      "refs": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/29",
+      "source": "NVD",
+      "time": "2026-07-14 18:29:09"
+    },
+    {
+      "cve_id": "CVE-2026-15677",
+      "title": "高危漏洞: CVE-2026-15677 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-14 15:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in code-projects Online Job Portal 1.0. This affects an unknown function of the file /JobSeekerInsert.php. Executing a manipulation of the argument txtFile can lead to unrestricted upload. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/shihuizhang-dazhi/MY-CVE/issues/6\nhttps://vuldb.com/cve/CVE-2026-15677",
+      "source": "NVD",
+      "time": "2026-07-14 18:29:02"
+    },
+    {
+      "cve_id": "CVE-2026-15676",
+      "title": "高危漏洞: CVE-2026-15676 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-14 14:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in code-projects Online Job Portal up to 1.0. The impacted element is an unknown function of the file /Admin/DeleteUser.php. Performing a manipulation results in sql injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/shihuizhang-dazhi/MY-CVE/issues/4\nhttps://vuldb.com/cve/CVE-2026-15676",
+      "source": "NVD",
+      "time": "2026-07-14 18:28:58"
+    },
+    {
+      "cve_id": "CVE-2026-15675",
+      "title": "高危漏洞: CVE-2026-15675 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-14 14:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in code-projects Online Job Portal 1.0. The affected element is an unknown function of the file /Admin/EditUser.php. Such manipulation of the argument UserId leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/shihuizhang-dazhi/MY-CVE/issues/3\nhttps://vuldb.com/cve/CVE-2026-15675",
+      "source": "NVD",
+      "time": "2026-07-14 18:28:51"
+    },
+    {
       "cve_id": "CVE-2026-58233",
       "title": "高危漏洞: CVE-2026-58233 (CVSS 7.6)",
       "cvss_score": 7.6,
@@ -1033,72 +1099,6 @@
       "refs": "https://patchstack.com/database/Wordpress/Theme/aalto/vulnerability/wordpress-aalto-theme-1-8-local-file-inclusion-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-13 22:11:42"
-    },
-    {
-      "cve_id": "CVE-2026-57787",
-      "title": "高危漏洞: CVE-2026-57787 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-13 18:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in CreativeWS CWS SVGicons cws-svgicons allows Blind SQL Injection.This issue affects CWS SVGicons: from n/a through <= 1.5.5.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/cws-svgicons/vulnerability/wordpress-cws-svgicons-plugin-1-5-5-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:37"
-    },
-    {
-      "cve_id": "CVE-2026-57786",
-      "title": "高危漏洞: CVE-2026-57786 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-13 18:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Cross-Site Request Forgery (CSRF) vulnerability in purethemes WorkScout-Core workscout-core allows Authentication Bypass.This issue affects WorkScout-Core: from n/a through <= 1.7.08.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/workscout-core/vulnerability/wordpress-workscout-core-plugin-1-7-08-cross-site-request-forgery-csrf-to-broken-authentication-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:30"
-    },
-    {
-      "cve_id": "CVE-2026-57773",
-      "title": "高危漏洞: CVE-2026-57773 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-13 18:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Zorem Advanced Shipment Tracking for WooCommerce woo-advanced-shipment-tracking allows Blind SQL Injection.This issue affects Advanced Shipment Tracking for WooCommerce: from n/a through <= 4.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/woo-advanced-shipment-tracking/vulnerability/wordpress-advanced-shipment-tracking-for-woocommerce-plugin-4-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:26"
-    },
-    {
-      "cve_id": "CVE-2026-57772",
-      "title": "高危漏洞: CVE-2026-57772 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-13 18:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WP Inventory WP Inventory Manager wp-inventory-manager allows Blind SQL Injection.This issue affects WP Inventory Manager: from n/a through <= 2.4.0.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/wp-inventory-manager/vulnerability/wordpress-wp-inventory-manager-plugin-2-4-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:22"
-    },
-    {
-      "cve_id": "CVE-2026-57771",
-      "title": "高危漏洞: CVE-2026-57771 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-13 18:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Milan Petrovic GD Rating System gd-rating-system allows Blind SQL Injection.This issue affects GD Rating System: from n/a through <= 3.7.",
-      "refs": "https://patchstack.com/database/Wordpress/Plugin/gd-rating-system/vulnerability/wordpress-gd-rating-system-plugin-3-7-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:14"
-    },
-    {
-      "cve_id": "CVE-2026-57770",
-      "title": "高危漏洞: CVE-2026-57770 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-13 18:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data vulnerability in ThemeGoods Grand Photography grandphotography allows Object Injection.This issue affects Grand Photography: from n/a through <= 5.7.8.",
-      "refs": "https://patchstack.com/database/Wordpress/Theme/grandphotography/vulnerability/wordpress-grand-photography-theme-5-7-8-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-13 22:11:10"
     }
   ]
 }
