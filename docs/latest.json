@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-7543",
+      "title": "高危漏洞: CVE-2026-7543 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-16 17:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Breakdance plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'fields' parameter in versions up to, and including, 2.7.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://breakdance.com/breakdance-2-7-2-security-update/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/64f07bca-5d04-4b28-b775-f47ed692575e?source=cve",
+      "source": "NVD",
+      "time": "2026-07-16 18:49:25"
+    },
+    {
+      "cve_id": "CVE-2026-15103",
+      "title": "高危漏洞: CVE-2026-15103 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-16 17:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WPFunnels – Funnel Builder for WooCommerce with Checkout & One Click Upsell plugin for WordPress is vulnerable to Privilege Escalation via arbitrary option update in all versions up to, and including, 3.12.8. This is due to the `update_settings()` REST callback failing to validate the `group_id` path parameter against an allowlist of permitted option names before passing it directly to `get_option()` and `update_option()`, allowing the built-in `wp_user_roles` option — which satisfies the route's loose `[\\w-]+` regex — to be targeted. This makes it possible for authenticated attackers with the `wpf_manage_funnels` capability and above to elevate their privileges to administrator by writing a crafted role definition containing arbitrary capabilities into the `wp_user_roles` option, thereby granting any WordPress role full site administrator access. The `wpf_manage_funnels` capability is typically assigned to the Funnel Manager custom role created by the plugin, meaning this role is the minimum required to exploit the vulnerability.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.8/includes/core/rest-api/Controllers/class-settings-controller.php#L40\nhttps://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.8/includes/core/rest-api/Controllers/class-settings-controller.php#L462\nhttps://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.8/includes/core/rest-api/Controllers/class-settings-controller.php#L66",
+      "source": "NVD",
+      "time": "2026-07-16 18:49:20"
+    },
+    {
+      "cve_id": "CVE-2026-15008",
+      "title": "高危漏洞: CVE-2026-15008 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-16 17:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Uncanny Automator – Easy Automation, Integration, Webhooks & Workflow Builder Plugin plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the fr_token function in all versions up to, and including, 7.3.1.4. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires a Forminator form connected to an Uncanny Automator recipe configured for 'Everyone', allowing unauthenticated form submissions to supply the malicious serialized payload; a gadget chain is present within the plugin via the Action_Helpers_Email __destruct() method, meaning no external gadget library is required.",
+      "refs": "https://plugins.trac.wordpress.org/browser/uncanny-automator/tags/7.3.1.4/src/core/lib/recipe-parts/actions/trait-action-helpers-email.php#L481\nhttps://plugins.trac.wordpress.org/browser/uncanny-automator/tags/7.3.1.4/src/core/lib/utilities/db/class-automator-db-handler-triggers.php#L300\nhttps://plugins.trac.wordpress.org/browser/uncanny-automator/tags/7.3.1.4/src/core/services/email/attachment/handler.php#L201",
+      "source": "NVD",
+      "time": "2026-07-16 18:49:13"
+    },
+    {
+      "cve_id": "CVE-2026-15005",
+      "title": "高危漏洞: CVE-2026-15005 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-16 17:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Loco Translate plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.8.5. This is due to missing or incorrect nonce validation on the execTemplate function. This makes it possible for unauthenticated attackers to execute arbitrary PHP code on the server by supplying a php://filter stream wrapper URI as the 'template' parameter, which bypasses path validation and is passed directly to the include sink in execTemplate() via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+      "refs": "https://plugins.trac.wordpress.org/browser/loco-translate/tags/2.8.3/src/mvc/AdminController.php#L38\nhttps://plugins.trac.wordpress.org/browser/loco-translate/tags/2.8.3/src/mvc/AdminRouter.php#L128\nhttps://plugins.trac.wordpress.org/browser/loco-translate/tags/2.8.3/src/mvc/View.php#L273",
+      "source": "NVD",
+      "time": "2026-07-16 18:49:06"
+    },
+    {
+      "cve_id": "CVE-2026-13741",
+      "title": "高危漏洞: CVE-2026-13741 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-16 17:16:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Digits: WordPress Mobile Number Signup and Login plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 9.1.0.5. This is due to missing authorization and role validation in the `dig_update_wpwc_custom_fields()` function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to escalate their privileges to Administrator by submitting a forged `digits_reg_userrole` value during profile update, granted the site administrator has configured the built-in DIGITS User Role field.",
+      "refs": "https://digits.unitedover.com/changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/02a283b2-a369-4927-a54a-61f26bee6ace?source=cve",
+      "source": "NVD",
+      "time": "2026-07-16 18:49:01"
+    },
+    {
+      "cve_id": "CVE-2026-15013",
+      "title": "高危漏洞: CVE-2026-15013 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-16 13:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SAML Single Sign On – SSO Login plugin for WordPress is vulnerable to Authentication Bypass via SAML Signature Algorithm Confusion in all versions up to, and including, 5.4.3. The vulnerability exists because `Mo_SAML_Utilities::mo_saml_cast_key()` reads the `SignatureMethod` Algorithm attribute directly from the attacker-controlled `SAMLResponse` parameter rather than enforcing the locally configured algorithm, causing the plugin to recast the IdP's RSA public key as an HMAC-SHA1 shared secret and validate the forged signature against it. This makes it possible for unauthenticated attackers to forge a SAML assertion targeting any WordPress account — including administrators — obtain valid WordPress authentication cookies, and achieve full administrator-level account takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/miniorange-saml-20-single-sign-on/tags/5.4.3/class-mo-saml-login-validate.php#L119\nhttps://plugins.trac.wordpress.org/browser/miniorange-saml-20-single-sign-on/tags/5.4.3/class-mo-saml-utilities.php#L416\nhttps://plugins.trac.wordpress.org/browser/miniorange-saml-20-single-sign-on/tags/5.4.3/class-mo-saml-utilities.php#L444",
+      "source": "NVD",
+      "time": "2026-07-16 18:48:54"
+    },
+    {
+      "cve_id": "CVE-2026-13042",
+      "title": "高危漏洞: CVE-2026-13042 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-16 13:16:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The RPB Chessboard plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content in all versions up to, and including, 8.1.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. WordPress's save-time kses sanitization does not mitigate this issue because the crafted payload uses only kses-allowed tags and attributes (such as an &lt;a&gt; element with title and href), and the dangerous attribute-breaking HTML is synthesized entirely at render time by the plugin's own comment_text filter.",
+      "refs": "https://plugins.trac.wordpress.org/browser/rpb-chessboard/tags/8.1.0/php/abstractcontroller.php#L171\nhttps://plugins.trac.wordpress.org/browser/rpb-chessboard/tags/8.1.0/php/abstractcontroller.php#L190\nhttps://plugins.trac.wordpress.org/browser/rpb-chessboard/tags/8.1.0/php/abstractcontroller.php#L220",
+      "source": "NVD",
+      "time": "2026-07-16 18:48:47"
+    },
+    {
       "cve_id": "CVE-2026-21729",
       "title": "高危漏洞: CVE-2026-21729 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-5xc4-j99p-cp4m\nhttps://www.vulncheck.com/advisories/grav-before-password-reset-token-poisoning-via-admin-base-url\nhttps://github.com/getgrav/grav/security/advisories/GHSA-5xc4-j99p-cp4m",
       "source": "NVD",
       "time": "2026-07-16 00:17:46"
-    },
-    {
-      "cve_id": "CVE-2026-61446",
-      "title": "高危漏洞: CVE-2026-61446 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-15 20:18:19",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PraisonAI (praisonaiagents) before 1.6.78 contains a remote code execution vulnerability in the plugin manager, which loads and executes arbitrary Python (.py) files from project-level and user-home .praisonai/plugins/ directories using importlib spec_from_file_location() and exec_module() without code signing, integrity verification, or sandboxing. An attacker who can write a malicious .py file to a plugin directory (for example via path traversal, a supply chain attack, or a compromised dependency) achieves arbitrary code execution when the plugin system initializes.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-m6wp-h223-4c8g\nhttps://www.vulncheck.com/advisories/praisonai-before-remote-code-execution-via-plugin-auto-discovery",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:39"
-    },
-    {
-      "cve_id": "CVE-2026-61443",
-      "title": "高危漏洞: CVE-2026-61443 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-15 20:18:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in SkillTools.run_skill_script() that executes scripts without path containment validation. Attackers can supply absolute file paths to execute arbitrary scripts from any filesystem location, including those outside the intended working directory.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-c44f-37qr-gw3f\nhttps://www.vulncheck.com/advisories/praisonai-before-remote-code-execution-via-skilltools\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-c44f-37qr-gw3f",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:35"
-    },
-    {
-      "cve_id": "CVE-2026-61438",
-      "title": "高危漏洞: CVE-2026-61438 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-15 20:18:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "PraisonAI before 4.6.78 contains a remote code execution vulnerability in JobWorkflowExecutor._exec_inline_python() due to insufficient AST validation of workflow script steps. Attackers can create malicious YAML workflow files with import os statements followed by os.system() calls that bypass sandbox checks and execute arbitrary OS commands with process privileges.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-26mh-57q7-jfvr\nhttps://www.vulncheck.com/advisories/praisonai-before-remote-code-execution-via-broken-ast-sandbox\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-26mh-57q7-jfvr",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:29"
-    },
-    {
-      "cve_id": "CVE-2026-61436",
-      "title": "高危漏洞: CVE-2026-61436 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-15 20:18:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "PraisonAI before 4.6.78 fails to verify Svix webhook signatures in AgentMail webhook mode, allowing unauthenticated attackers to forge message.received events. Attackers can send crafted JSON payloads to the webhook endpoint to invoke configured agents with arbitrary sender addresses and message content.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/commit/2a855c470077c7d2e2479a575f7ef7f548d51c33\nhttps://github.com/MervinPraison/PraisonAI/commit/846568c7a5d8ce9e71e56e4c213f027c04909753\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-7c92-x8vg-4258",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:23"
-    },
-    {
-      "cve_id": "CVE-2026-61435",
-      "title": "高危漏洞: CVE-2026-61435 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-07-15 20:18:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "description": "PraisonAI before 4.6.78 contains an authentication bypass in the Call API agent invocation endpoints (src/praisonai/praisonai/api/agent_invoke.py) when PRAISONAI_CALL_AUTH=disabled is configured. The safeguard intended to restrict the disabled-auth opt-out to localhost binding derives the bind host from request.url.hostname, which is taken from the client-controlled HTTP Host header. A remote, unauthenticated attacker who can reach the service over the network can send a spoofed 'Host: 127.0.0.1' header to bypass the localhost-only restriction and list (GET /api/v1/agents) and invoke (POST /api/v1/agents/{agent_id}/invoke) registered agents without authentication.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/commit/2a855c470077c7d2e2479a575f7ef7f548d51c33\nhttps://github.com/MervinPraison/PraisonAI/commit/846568c7a5d8ce9e71e56e4c213f027c04909753\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-2gpf-2492-q9jh",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:16"
-    },
-    {
-      "cve_id": "CVE-2026-61433",
-      "title": "高危漏洞: CVE-2026-61433 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-15 20:18:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "PraisonAI before 4.6.78 fails to safely encode deployment configuration values when generating Python source code for API servers. Attackers can inject arbitrary Python expressions through the deploy.api.host and agents_file configuration parameters that execute when the generated server starts or handles requests.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/commit/1620b49f36945d8cc8ee5635b906c960df5097a0\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-79fv-7hq9-w7xg\nhttps://www.vulncheck.com/advisories/praisonai-before-code-injection-via-api-deployment-generator",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:09"
-    },
-    {
-      "cve_id": "CVE-2026-61430",
-      "title": "高危漏洞: CVE-2026-61430 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-15 20:18:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "PraisonAI before 1.6.78 contains a server-side request forgery vulnerability in the web_crawl tool that validates hostnames at check time but re-resolves them at connection time without IP pinning. Attackers can use DNS rebinding to bypass SSRF protection and retrieve internal HTTP response bodies from private or loopback services.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qg25-6gc4-48mg\nhttps://www.vulncheck.com/advisories/praisonai-before-dns-rebinding-ssrf-via-web-crawl\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qg25-6gc4-48mg",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:04"
     }
   ]
 }
