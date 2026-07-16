@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-63306",
+      "title": "高危漏洞: CVE-2026-63306 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-16 21:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "stoatchat before 0.13.5 contains an unauthenticated server-side request forgery vulnerability in the /proxy and /embed endpoints that accept arbitrary URLs without DNS resolution filtering or private IP range validation. Attackers can enumerate internal services, fingerprint applications, and reach instance metadata endpoints by supplying malicious URLs or leveraging redirect chains to access internal infrastructure.",
+      "refs": "https://github.com/stoatchat/stoatchat/security/advisories/GHSA-xhww-5g9p-vvq5\nhttps://www.vulncheck.com/advisories/stoatchat-before-unauthenticated-ssrf-via-proxy-and-embed-endpoints",
+      "source": "NVD",
+      "time": "2026-07-17 00:10:22"
+    },
+    {
+      "cve_id": "CVE-2026-63305",
+      "title": "高危漏洞: CVE-2026-63305 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-16 21:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AVideo through 29.0 contains an OS command injection vulnerability in the ffmpeg.json.php endpoint where notifyCode and callback parameters are concatenated into a shell command without escaping. Attackers who can craft a valid encrypted payload can inject arbitrary shell metacharacters into these fields to execute OS commands as the web-server user.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-g9x9-q7qj-6mv5\nhttps://www.vulncheck.com/advisories/avideo-through-os-command-injection-via-ffmpeg-json-php",
+      "source": "NVD",
+      "time": "2026-07-17 00:10:17"
+    },
+    {
+      "cve_id": "CVE-2026-63304",
+      "title": "高危漏洞: CVE-2026-63304 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-16 21:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AVideo through 29.0 contains an OS command injection vulnerability in plugin/API/standAlone/functions.php where the listFFmpegProcesses() function interpolates unsanitized keyword parameters inside single quotes without escaping. Attackers who can craft a valid encrypted codeToExec payload can break out of the single-quoted grep context and execute arbitrary OS commands as the web-server user.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-j44m-77cc-p3cc\nhttps://www.vulncheck.com/advisories/avideo-through-os-command-injection-via-listffmpegprocesses",
+      "source": "NVD",
+      "time": "2026-07-17 00:10:12"
+    },
+    {
+      "cve_id": "CVE-2026-11386",
+      "title": "高危漏洞: CVE-2026-11386 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-07-16 21:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "An input validation and injection vulnerability exists in Canonical ubuntu-pro-client (formerly ubuntu-advantage-tools). The client constructs APT source files (such as /etc/apt/sources.list.d/ubuntu-.list or their DEB822 equivalents) using data received directly from the contract server response via the directives.suites[] and directives.aptURL fields. Because the client utilizes Python's str.format() to write these files without performing escaping, validation, or newline character filtering, a malicious or tampered contract response containing embedded newline (\\n) characters can successfully inject arbitrary, attacker-controlled deb configuration lines into root-owned APT sources. When combined with the unvalidated additionalPackages[] field—which is passed positionally into a root-executed apt-get install command—an attacker capable of spoofing or manipulating the contract response (e.g., via a compromised internal infrastructure, an intercepted connection utilizing a trusted CA, or local logical bugs) can force the client to fetch and install malicious packages. This ultimately leads to arbitrary code execution with root privileges on the affected system. This component is preinstalled on supported Ubuntu Server releases and auto-attaches by default on cloud provider Ubuntu Pro images.",
+      "refs": "https://ubuntu.com/security/CVE-2026-11386",
+      "source": "NVD",
+      "time": "2026-07-17 00:10:08"
+    },
+    {
+      "cve_id": "CVE-2026-35149",
+      "title": "高危漏洞: CVE-2026-35149 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-16 20:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "HCL DFXServer is affected by an Authentication Bypass vulnerability via server response manipulation. An unauthorized user without valid credentials can exploit this flaw by intercepting and altering the server's authentication responses, allowing them to gain unauthorized access to the application without verification.",
+      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0131782",
+      "source": "NVD",
+      "time": "2026-07-17 00:09:59"
+    },
+    {
+      "cve_id": "CVE-2026-35147",
+      "title": "高危漏洞: CVE-2026-35147 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-16 20:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "HCL DFXServer is affected by a Broken Authentication vulnerability via direct API access. The application fails to verify the user's authentication status when accessing specific API endpoints, allowing an unauthenticated attacker to interact with the APIs and perform unauthorized actions without valid credentials.",
+      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0131782",
+      "source": "NVD",
+      "time": "2026-07-17 00:09:52"
+    },
+    {
+      "cve_id": "CVE-2023-49900",
+      "title": "高危漏洞: CVE-2023-49900 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-16 19:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated remote attacker is able to perform remote code execution due to incorrectly sanitized user input in the SetParameter command.",
+      "refs": "https://claroty.com/team82/disclosure-dashboard/cve-2023-49900",
+      "source": "NVD",
+      "time": "2026-07-17 00:09:48"
+    },
+    {
+      "cve_id": "CVE-2023-49899",
+      "title": "高危漏洞: CVE-2023-49899 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-16 19:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated remote attacker can execute any command on the affected device due to not correctly verifying the origin of a communication channel.",
+      "refs": "https://claroty.com/team82/disclosure-dashboard/cve-2023-49899",
+      "source": "NVD",
+      "time": "2026-07-17 00:09:41"
+    },
+    {
+      "cve_id": "CVE-2026-22752",
+      "title": "高危漏洞: CVE-2026-22752 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-07-16 18:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Authentication bypass by primary weakness vulnerability in Spring Security Spring Authorization Server.\n\nThis issue affects Spring Authorization Server: from 7.0.0 through 7.0.4, from 1.5.0 through 1.5.6, from 1.4.0 through 1.4.9, from 1.3.0 through 1.3.10.",
+      "refs": "https://spring.io/security/cve-2026-22752",
+      "source": "NVD",
+      "time": "2026-07-17 00:09:36"
+    },
+    {
+      "cve_id": "CVE-2026-12978",
+      "title": "高危漏洞: CVE-2026-12978 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-16 15:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "The FunnelKit  WordPress plugin before 3.15.0.6 does not escape a user-supplied parameter before reflecting it into the HTML response of one of its page-builder AJAX actions, allowing unauthenticated attackers to perform Reflected Cross-Site Scripting against logged-in users who open a crafted page. The affected action is only registered when the Divi /builder is active.",
+      "refs": "https://wpscan.com/vulnerability/1b22645b-28cb-44f3-a5b9-c81a40175e59/",
+      "source": "NVD",
+      "time": "2026-07-17 00:09:27"
+    },
+    {
       "cve_id": "CVE-2026-7543",
       "title": "高危漏洞: CVE-2026-7543 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -989,116 +1099,6 @@
       "refs": "https://my.f5.com/manage/s/article/K000162231",
       "source": "NVD",
       "time": "2026-07-16 00:18:43"
-    },
-    {
-      "cve_id": "CVE-2026-55723",
-      "title": "高危漏洞: CVE-2026-55723 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-15 23:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "When NGINX Ingress Controller is configured with Custom Resource Definitions (CRDs) or Ingress annotations, an injection vulnerability exists in the configuration generator of NGINX Ingress Controller. Multiple user-controllable fields are written into the generated NGINX configuration without sanitization. An authenticated attacker with permission to create or modify these CRDs or annotations may craft values that inject arbitrary NGINX configuration directives. \n\nImpact:\nAn authenticated attacker granted write access to NGINX Ingress Controller CRDs or Ingress annotations through the Kubernetes API may be able to inject arbitrary NGINX configuration directives, create or delete files, or disable services. There is no data plane exposure; this is a control plane issue only.\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000161800",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:37"
-    },
-    {
-      "cve_id": "CVE-2026-54563",
-      "title": "高危漏洞: CVE-2026-54563 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-15 23:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Cloudreve is a self-hosted file management and sharing system. Prior to 4.16.1, a Cloudreve WebDAV account rooted at a configured folder can send paths such as /dav/%2e%2e/outside.txt because stripPrefix in pkg/webdav/webdav.go joins the decoded request suffix to the account root with fs.URI.JoinRaw without checking containment, allowing the scoped credential to read and list files outside the configured folder and writable credentials to create, overwrite, move, or delete them. This issue is reported as fixed in version 4.16.1.",
-      "refs": "https://github.com/cloudreve/cloudreve/security/advisories/GHSA-w5fv-7x5q-g8qp",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:33"
-    },
-    {
-      "cve_id": "CVE-2026-54560",
-      "title": "高危漏洞: CVE-2026-54560 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-15 23:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
-      "description": "Cloudreve is a self-hosted file management and sharing system. From 4.12.0 until 4.16.1, Cloudreve's OAuth access tokens are issued without the OAuth client_id claim, so the JWT verifier does not load token scopes into request context and RequiredScopes treats the request like non-scoped session authentication, allowing a low-scope OAuth access token to call APIs requiring higher scopes such as file, share, workflow, user setting, WebDAV account, and potentially admin scopes. This issue is fixed in version 4.16.1.",
-      "refs": "https://github.com/cloudreve/cloudreve/commit/ed20843dc3df20a25fcaf6b538647e11c4d68d87\nhttps://github.com/cloudreve/cloudreve/releases/tag/4.16.1\nhttps://github.com/cloudreve/cloudreve/security/advisories/GHSA-vgj4-345g-jcf8",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:28"
-    },
-    {
-      "cve_id": "CVE-2026-42533",
-      "title": "高危漏洞: CVE-2026-42533 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-15 23:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability exists in NGINX Plus and NGINX Open Source when a map directive uses regex matching and a string expression references the map's regex capture variables before referencing the map output variable. Alternatively, the same result could be achieved by using a non-cacheable variable in a string expression under certain conditions. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR.\n\nImpact:\nThis vulnerability may allow remote attackers to cause a denial-of-service (DoS) on the NGINX system or to possibly trigger a code execution. There is no control plane exposure; this is a data plane issue only.\n\n\n\n\n Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
-      "refs": "https://my.f5.com/manage/s/article/K000162097",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:22"
-    },
-    {
-      "cve_id": "CVE-2026-43637",
-      "title": "高危漏洞: CVE-2026-43637 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-15 22:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Cornac before 2.6.0 contains a path traversal (Tar Slip) vulnerability that allows attackers to write arbitrary files outside the intended cache directory by supplying a crafted TAR archive containing ../ sequences, absolute paths, or symlink/hardlink entries to the _extract_archive() function in cornac/utils/download.py. Attackers can trigger this vulnerability through the built-in dataset loaders, which automatically download and extract archives, causing archive.extractall() to write files to arbitrary locations on the filesystem accessible to the running process.",
-      "refs": "https://github.com/PreferredAI/cornac/commit/8a50be72c11569b6747c6b96d6e31a0a1962f1a8\nhttps://github.com/PreferredAI/cornac/pull/709\nhttps://github.com/PreferredAI/cornac/releases/tag/v2.6.0",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:15"
-    },
-    {
-      "cve_id": "CVE-2026-58558",
-      "title": "高危漏洞: CVE-2026-58558 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-15 21:17:31",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Permission control vulnerability in the file system. Impact: Successful exploitation of this vulnerability may affect service confidentiality.",
-      "refs": "https://consumer.huawei.com/en/support/bulletin/2026/7/\nhttps://consumer.huawei.com/en/support/bulletinvision/2026/7/",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:08"
-    },
-    {
-      "cve_id": "CVE-2026-15809",
-      "title": "高危漏洞: CVE-2026-15809 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-15 21:17:03",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in CRI-O. The fix for a previous vulnerability (CVE-2022-4318) was incorrect, allowing it to be bypassed. An attacker capable of setting environment variables on a container can inject a newline character into the HOME environment variable. This issue allows the addition of arbitrary lines into /etc/passwd by use of a specially crafted environment variable.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-15809\nhttps://access.redhat.com/security/cve/cve-2022-4318\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2500846",
-      "source": "NVD",
-      "time": "2026-07-16 00:18:01"
-    },
-    {
-      "cve_id": "CVE-2026-61873",
-      "title": "高危漏洞: CVE-2026-61873 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-15 20:18:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Grav before 9.1.8 contains an arbitrary file write vulnerability in the Form plugin's process.save.filename parameter, which is validated against path traversal before Twig processing but never re-validated after rendering. Attackers can submit form data containing path traversal sequences that are processed through Twig templates, allowing them to write arbitrary files including PHP webshells to the web root or other sensitive directories.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-q532-mvx7-42qg\nhttps://www.vulncheck.com/advisories/grav-before-arbitrary-file-write-via-twig-processed-filename",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:56"
-    },
-    {
-      "cve_id": "CVE-2026-61457",
-      "title": "高危漏洞: CVE-2026-61457 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-15 20:18:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.3 contains a file upload extension bypass in the API media controller. HandlesMediaUploads::validateFileExtension() inspects only the final file extension via pathinfo($filename, PATHINFO_EXTENSION), so a user with api.media.write permission can upload a file with a double extension such as shell.php.jpg to bypass the dangerous extensions blocklist. The web server may then execute the file as PHP, resulting in remote code execution.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-66v2-vxxf-xc3v\nhttps://www.vulncheck.com/advisories/grav-before-remote-code-execution-via-file-upload-extension-bypass\nhttps://github.com/getgrav/grav/security/advisories/GHSA-66v2-vxxf-xc3v",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:52"
-    },
-    {
-      "cve_id": "CVE-2026-61451",
-      "title": "高危漏洞: CVE-2026-61451 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-15 20:18:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "The Grav API plugin (grav-plugin-api) before 1.0.4 does not validate the origin of the client-supplied admin_base_url field in the POST /api/v1/auth/forgot-password endpoint. The sanitizeHttpUrl() function only checks that the URL scheme is http/https and never verifies the host against the server's own origin, so an attacker can supply an arbitrary host. As a result, an unauthenticated attacker can cause the password reset email sent to a victim to contain a reset link pointing at an attacker-controlled server; when the victim follows the link, the valid reset token is disclosed to the attacker, enabling full account takeover. The vulnerable base URL can also be influenced via the Referer or Origin headers.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-5xc4-j99p-cp4m\nhttps://www.vulncheck.com/advisories/grav-before-password-reset-token-poisoning-via-admin-base-url\nhttps://github.com/getgrav/grav/security/advisories/GHSA-5xc4-j99p-cp4m",
-      "source": "NVD",
-      "time": "2026-07-16 00:17:46"
     }
   ]
 }
