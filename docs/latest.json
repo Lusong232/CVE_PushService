@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-21729",
+      "title": "高危漏洞: CVE-2026-21729 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-16 12:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Loki queries with large limits can cause large memory allocations which can impact the availability of the service, depending on its deployment strategy.",
+      "refs": "https://grafana.com/security/security-advisories/cve-2026-21729",
+      "source": "NVD",
+      "time": "2026-07-16 13:31:20"
+    },
+    {
+      "cve_id": "CVE-2026-12753",
+      "title": "高危漏洞: CVE-2026-12753 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-16 12:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Advance Product Search- Voice & Ajax Search for WooCommerce plugin for WordPress is vulnerable to generic SQL Injection via the 's' and 'match' parameter in all versions up to, and including, 1.4.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/th-advance-product-search/tags/1.4.4/inc/thaps-function.php#L125\nhttps://plugins.trac.wordpress.org/browser/th-advance-product-search/tags/1.4.4/inc/thaps-function.php#L34\nhttps://plugins.trac.wordpress.org/browser/th-advance-product-search/tags/1.4.4/inc/thaps-function.php#L86",
+      "source": "NVD",
+      "time": "2026-07-16 13:31:14"
+    },
+    {
+      "cve_id": "CVE-2026-48863",
+      "title": "高危漏洞: CVE-2026-48863 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-16 09:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in libsolv. A stack-based buffer overflow vulnerability exists in the PGP verification component due to incorrect length handling when copying EdDSA 's' MPI into a stack buffer. A remote attacker could craft a malicious Ed25519 PGP signature with mismatched MPI lengths. Processing this crafted signature could lead to a denial of service in automated package or repository processing workflows.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-48863\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2460975\nhttps://github.com/openSUSE/libsolv/commit/44f8c085045b1f771641091bbb2b810d12cff9e8#diff-309f245ec9b669ec78b8159c39e6f50130b4d4a0448f742685f7833d04bc4caaR592",
+      "source": "NVD",
+      "time": "2026-07-16 13:31:10"
+    },
+    {
+      "cve_id": "CVE-2026-3842",
+      "title": "高危漏洞: CVE-2026-3842 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-16 09:16:30",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in QEMU. This vulnerability allows a local attacker within a guest virtual machine to write data beyond its allocated memory. This occurs when cpu_physical_memory_map() returns a shorter length than expected, leading to an out-of-bounds write. Successful exploitation could result in unauthorized access to guest memory or corruption of heap-allocated objects, potentially causing information disclosure, data integrity issues, or a denial of service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-3842\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2458150",
+      "source": "NVD",
+      "time": "2026-07-16 13:31:02"
+    },
+    {
+      "cve_id": "CVE-2026-23538",
+      "title": "高危漏洞: CVE-2026-23538 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-16 09:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A vulnerability was identified in the Feast Feature Server's `/ws/chat` endpoint that allows remote attackers to establish persistent WebSocket connections without any authentication. By opening a large number of simultaneous connections, an attacker can exhaust server resources—such as memory, CPU, and file descriptors—leading to a complete denial of service for legitimate users.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-23538\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2429311\nhttps://github.com/red-hat-data-services/feast/pull/192",
+      "source": "NVD",
+      "time": "2026-07-16 13:30:58"
+    },
+    {
+      "cve_id": "CVE-2026-1609",
+      "title": "高危漏洞: CVE-2026-1609 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-16 09:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "A flaw was found in Keycloak. When the JSON Web Token (JWT) authorization grant preview feature is enabled and a user account is disabled, Keycloak fails to validate the user’s disabled status during JWT authorization grant processing. A remote attacker with low privileges can exploit this improper access control vulnerability by presenting a valid assertion token from an external identity provider to obtain a JWT for a disabled user. This allows unauthorized access to sensitive resources.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-1609\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2435257\nhttps://github.com/keycloak/keycloak/issues/46144",
+      "source": "NVD",
+      "time": "2026-07-16 13:30:53"
+    },
+    {
+      "cve_id": "CVE-2026-15907",
+      "title": "高危漏洞: CVE-2026-15907 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-16 08:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in H3C SecPath F1000-C8300 up to 20260522. This impacts an unknown function of the file /webui/?g=log_fw_nbc_mail_jsondata. Executing a manipulation of the argument subject can lead to sql injection. The attack can be executed remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability. A technical fix is planned to be released.",
+      "refs": "https://ucn9h68n9289.feishu.cn/docx/WCbgdWyJKoibcZxdsuMcUGKSnpf?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-15907\nhttps://vuldb.com/submit/835656",
+      "source": "NVD",
+      "time": "2026-07-16 13:30:47"
+    },
+    {
+      "cve_id": "CVE-2026-40957",
+      "title": "高危漏洞: CVE-2026-40957 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-16 04:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "o  \nCVE-2026-40957 is a frameable content\nvulnerability in the Secure Access server login page prior to 14.55. Attackers\nwith control of a malicious web site could use it to potentially steal\ncredentials from an unwary administrator.",
+      "refs": "https://www.absolute.com/platform/security-information/vulnerability-archive/cve-2026-40957",
+      "source": "NVD",
+      "time": "2026-07-16 13:30:41"
+    },
+    {
+      "cve_id": "CVE-2026-40952",
+      "title": "高危漏洞: CVE-2026-40952 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-16 04:16:57",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "CVE-2026-40952 is a privilege misconfiguration\nin the Secure Access installer for the Windows client and server prior to\nversion 14.55. Attackers with local access to the client or server can use it\nto elevate privileges to Administrator when Secure Access is installed in a\nnon-default location.",
+      "refs": "https://www.absolute.com/platform/security-information/vulnerability-archive/cve-2026-40952",
+      "source": "NVD",
+      "time": "2026-07-16 13:30:36"
+    },
+    {
       "cve_id": "CVE-2026-55652",
       "title": "高危漏洞: CVE-2026-55652 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qg25-6gc4-48mg\nhttps://www.vulncheck.com/advisories/praisonai-before-dns-rebinding-ssrf-via-web-crawl\nhttps://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qg25-6gc4-48mg",
       "source": "NVD",
       "time": "2026-07-16 00:17:04"
-    },
-    {
-      "cve_id": "CVE-2026-61427",
-      "title": "高危漏洞: CVE-2026-61427 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-15 20:18:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "PraisonAI before 4.6.78 exposes the MCP HTTP-stream transport without authentication by default: the CLI --api-key option defaults to None, and the server only enforces Authorization/Bearer checks when an API key is configured. When an operator runs 'praisonai mcp serve --transport http-stream' without an API key, an unauthenticated client (no Authorization header, and no Origin header, which is also permitted) can initialize a session, enumerate the available tools (tools/list), and invoke tools (tools/call). Additionally, the dispatcher forwards tool-call arguments to handlers without validating them against the advertised inputSchema. The server binds to 127.0.0.1 by default, so remote exploitation requires the operator to bind to a network-accessible address (e.g., --host 0.0.0.0).",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-hc5v-gxvj-58wh\nhttps://www.vulncheck.com/advisories/praisonai-before-authentication-bypass-via-http-stream",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:54"
-    },
-    {
-      "cve_id": "CVE-2026-60085",
-      "title": "高危漏洞: CVE-2026-60085 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-15 20:18:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "PraisonAI before 4.6.78 contains an unenforced security policy vulnerability in the default Subprocess Sandbox backend where blocked_commands, blocked_paths, blocked_imports, allow_subprocess, and allow_file_write restrictions are completely ignored. Attackers can execute arbitrary subprocess commands, read sensitive files, and perform destructive operations despite explicit security policy configuration.",
-      "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-5r6c-gj4g-r697\nhttps://www.vulncheck.com/advisories/praisonai-before-unenforced-security-policy-in-subprocess-sandbox",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:39"
-    },
-    {
-      "cve_id": "CVE-2026-58655",
-      "title": "高危漏洞: CVE-2026-58655 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-15 20:18:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The bundled Grav Flex Objects plugin (getgrav/grav-plugin-flex-objects) before 1.4.0 contains a stored server-side template injection vulnerability. When rendering dynamic collection or object titles, the plugin passes user-controlled frontmatter values (page.header.flex.collection.title or page.header.flex.object.title) to Twig's template_from_string(), causing them to be evaluated as Twig code rather than treated as text. This path bypasses Grav's Security::cleanDangerousTwig() sanitization. An attacker who can control the title frontmatter of a publicly reachable Flex Objects page can achieve arbitrary Twig execution and escalate to remote command execution via access to internal Grav services such as the scheduler.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-623v-m3c4-3pw8\nhttps://www.vulncheck.com/advisories/grav-flex-objects-server-side-template-injection-via-dynamic-titles\nhttps://github.com/getgrav/grav/security/advisories/GHSA-623v-m3c4-3pw8",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:34"
-    },
-    {
-      "cve_id": "CVE-2026-57996",
-      "title": "高危漏洞: CVE-2026-57996 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-15 20:18:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "phpMyFAQ before 4.1.5 contains a privilege escalation vulnerability in the user/add API endpoint that allows non-SuperAdmin administrators to create SuperAdmin accounts. A delegated administrator with USER_ADD/EDIT/DELETE permissions can call POST /admin/api/user/add with isSuperAdmin: true and attacker-chosen credentials to create a SuperAdmin account, then authenticate as that account to achieve full instance takeover.",
-      "refs": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-r2f4-v277-hvw9\nhttps://www.vulncheck.com/advisories/phpmyfaq-privilege-escalation-via-missing-superadmin-guard-in-user-add-endpoint",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:28"
-    },
-    {
-      "cve_id": "CVE-2026-56699",
-      "title": "高危漏洞: CVE-2026-56699 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-15 20:18:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Wazuh Manager before 5.0.0-beta3 fails to escape the DataValue.index field when constructing OpenSearch bulk requests, allowing enrolled agents to inject arbitrary NDJSON operations. Attackers can smuggle delete, index, or update operations into bulk requests executed under the manager's admin credentials, enabling document deletion, alert tampering, and cross-agent SIEM state manipulation.",
-      "refs": "https://github.com/wazuh/wazuh/security/advisories/GHSA-ff9g-85jq-r3g3\nhttps://www.vulncheck.com/advisories/wazuh-manager-ndjson-injection-in-inventory-sync-via-agent-controlled-datavalue-index\nhttps://github.com/wazuh/wazuh/security/advisories/GHSA-ff9g-85jq-r3g3",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:21"
-    },
-    {
-      "cve_id": "CVE-2026-56400",
-      "title": "高危漏洞: CVE-2026-56400 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-15 20:18:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "open-webui before 0.3.14 contains a cross-origin resource sharing misconfiguration allowing arbitrary origins with allow_origins=* and authenticated requests to the /api/v1/functions endpoint. Attackers can execute arbitrary code on the openwebui instance by crafting malicious cross-site requests from attacker-controlled websites when an admin user visits them.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-6xcp-7mpr-m7wm\nhttps://www.vulncheck.com/advisories/open-webui-remote-code-execution-via-cors-misconfiguration-and-session-validation",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:17"
-    },
-    {
-      "cve_id": "CVE-2026-56398",
-      "title": "高危漏洞: CVE-2026-56398 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-15 20:18:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Open WebUI before 0.9.5 contains a stored cross-site scripting vulnerability in the OAuth authentication flow where the picture claim URL MIME type is inferred from file extension rather than Content-Type header, allowing SVG files to bypass the profile image validator and be stored as data URIs. Authenticated users who visit the profile image endpoint receive attacker-controlled SVG content with inline disposition and no default security headers, enabling script execution in the same origin to steal authentication tokens and achieve account takeover.",
-      "refs": "https://github.com/open-webui/open-webui/security/advisories/GHSA-3wgj-c2hg-vm6q\nhttps://www.vulncheck.com/advisories/open-webui-stored-cross-site-scripting-via-oauth-picture-claim-svg-data-uri",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:10"
-    },
-    {
-      "cve_id": "CVE-2026-56339",
-      "title": "高危漏洞: CVE-2026-56339 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-15 20:18:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Capgo (Cap-go/capgo) before 12.128.2 contains an information disclosure vulnerability in the Supabase PostgREST SECURITY DEFINER RPC function public.rescind_invitation that allows unauthenticated attackers to enumerate organization existence. The function returns distinct error messages (NO_ORG vs NO_RIGHTS) when called with only a publishable API key, enabling attackers to discover valid organization IDs and increase the attack surface for targeted phishing or social engineering campaigns.",
-      "refs": "https://github.com/Cap-go/capgo/security/advisories/GHSA-8432-3cgm-vw5j\nhttps://www.vulncheck.com/advisories/capgo-unauthenticated-organization-existence-enumeration-via-rescind-invitation-rpc",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:05"
-    },
-    {
-      "cve_id": "CVE-2026-40633",
-      "title": "高危漏洞: CVE-2026-40633 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-15 19:16:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell PowerScale OneFS versions 9.5.0.0 through 9.10.1.7, versions 9.11.0.0 through 9.13.0.2 contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information disclosure.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000483600/dsa-2026-261-security-update-for-dell-powerscale-onefs-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-07-16 00:16:00"
     }
   ]
 }
