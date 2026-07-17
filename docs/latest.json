@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15982",
+      "title": "高危漏洞: CVE-2026-15982 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-17 14:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Aimogen Pro - All-in-One AI Content Writer, Editor, ChatBot & Automation Toolkit plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.8.4. This is due to due to a missing capability check on the 'aiomatic_call_google_ai_function' function. This makes it possible for unauthenticated attackers to leverage the 'aimogen_wp_god_mode' tool to clear function blacklists and execute arbitrary PHP functions, such as creating administrator accounts.",
+      "refs": "https://coderevolution.ro/knowledge-base/faq/full-changelog-aiomatic-automatic-ai-content-writer-editor-gpt-3-gpt-4-chatgpt-chatbot-ai-toolkit/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/53cc91fa-51fd-4d16-b740-a48f8d446b5d?source=cve",
+      "source": "NVD",
+      "time": "2026-07-17 18:30:00"
+    },
+    {
+      "cve_id": "CVE-2026-13765",
+      "title": "高危漏洞: CVE-2026-13765 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-17 13:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The LearnPress – WordPress LMS Plugin for Create and Sell Online Courses plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.4.1 via the check_answer. This makes it possible for unauthenticated attackers to extract the correct-answer markers, full option lists, explanations, and question content for any quiz question on the site — including questions belonging to paid courses the attacker is not enrolled in.",
+      "refs": "https://plugins.trac.wordpress.org/browser/learnpress/tags/4.3.6/inc/course/class-lp-course-no-required-enroll.php#L145\nhttps://plugins.trac.wordpress.org/browser/learnpress/tags/4.3.6/inc/lp-template-functions.php#L1422\nhttps://plugins.trac.wordpress.org/browser/learnpress/tags/4.3.6/inc/rest-api/v1/frontend/class-lp-rest-users-controller.php#L181",
+      "source": "NVD",
+      "time": "2026-07-17 18:29:56"
+    },
+    {
+      "cve_id": "CVE-2026-13352",
+      "title": "高危漏洞: CVE-2026-13352 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-17 13:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 4.16.18 via the allowed_mime_types function. This is due to the unconditional registration of an upload_mimes filter that adds executable file extensions (.exe, .apk, .msi) to the global WordPress MIME allowlist, without scoping the expansion to digital-product upload contexts. This makes it possible for authenticated attackers, with author-level access and above, to upload files that may be executable, which makes remote code execution possible. This filter is registered globally on every request regardless of whether the digital products feature is configured or in use, meaning the expanded MIME allowlist affects all WordPress upload contexts site-wide.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.14/src/Membership/DigitalProducts/Init.php#L9\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.14/src/Membership/DigitalProducts/UploadHandler.php#L18\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.14/src/Membership/DigitalProducts/UploadHandler.php#L49",
+      "source": "NVD",
+      "time": "2026-07-17 18:29:50"
+    },
+    {
       "cve_id": "CVE-2026-15395",
       "title": "高危漏洞: CVE-2026-15395 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1066,39 +1099,6 @@
       "refs": "http://busybox.com\nhttps://lists.busybox.net/pipermail/busybox/2026-June/092352.html",
       "source": "NVD",
       "time": "2026-07-17 02:55:21"
-    },
-    {
-      "cve_id": "CVE-2026-63306",
-      "title": "高危漏洞: CVE-2026-63306 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-16 21:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "stoatchat before 0.13.5 contains an unauthenticated server-side request forgery vulnerability in the /proxy and /embed endpoints that accept arbitrary URLs without DNS resolution filtering or private IP range validation. Attackers can enumerate internal services, fingerprint applications, and reach instance metadata endpoints by supplying malicious URLs or leveraging redirect chains to access internal infrastructure.",
-      "refs": "https://github.com/stoatchat/stoatchat/security/advisories/GHSA-xhww-5g9p-vvq5\nhttps://www.vulncheck.com/advisories/stoatchat-before-unauthenticated-ssrf-via-proxy-and-embed-endpoints",
-      "source": "NVD",
-      "time": "2026-07-17 00:10:22"
-    },
-    {
-      "cve_id": "CVE-2026-63305",
-      "title": "高危漏洞: CVE-2026-63305 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-16 21:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "AVideo through 29.0 contains an OS command injection vulnerability in the ffmpeg.json.php endpoint where notifyCode and callback parameters are concatenated into a shell command without escaping. Attackers who can craft a valid encrypted payload can inject arbitrary shell metacharacters into these fields to execute OS commands as the web-server user.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-g9x9-q7qj-6mv5\nhttps://www.vulncheck.com/advisories/avideo-through-os-command-injection-via-ffmpeg-json-php",
-      "source": "NVD",
-      "time": "2026-07-17 00:10:17"
-    },
-    {
-      "cve_id": "CVE-2026-63304",
-      "title": "高危漏洞: CVE-2026-63304 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-16 21:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "AVideo through 29.0 contains an OS command injection vulnerability in plugin/API/standAlone/functions.php where the listFFmpegProcesses() function interpolates unsanitized keyword parameters inside single quotes without escaping. Attackers who can craft a valid encrypted codeToExec payload can break out of the single-quoted grep context and execute arbitrary OS commands as the web-server user.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-j44m-77cc-p3cc\nhttps://www.vulncheck.com/advisories/avideo-through-os-command-injection-via-listffmpegprocesses",
-      "source": "NVD",
-      "time": "2026-07-17 00:10:12"
     }
   ]
 }
