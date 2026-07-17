@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9171",
+      "title": "高危漏洞: CVE-2026-9171 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-18 03:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "IBM PowerVM Novalink are vulnerable to a denial of service, caused by sending a specially-crafted request. A remote attacker could exploit this vulnerability to cause the server to consume memory resources.",
+      "refs": "https://www.ibm.com/support/pages/node/7280226",
+      "source": "NVD",
+      "time": "2026-07-18 05:42:19"
+    },
+    {
+      "cve_id": "CVE-2026-9135",
+      "title": "高危漏洞: CVE-2026-9135 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-18 03:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "IBM Langflow OSS 1.0.0 through 1.10.0 Langflow versions up to 1.9.2 (commit 94981c443d4918517b9e8163d70fc598dc33a32d) contain a code injection vulnerability in the Policies component's ToolGuard integration that bypasses the allow_custom_components=false security control. The vulnerability exists because the validation mechanism only checks the main component source code in node_template[\"code\"][\"value\"] but fails to validate dynamic CodeInput fields that store generated ToolGuard Python files. Attackers can embed malicious Python code in these unvalidated dynamic fields, which are persisted in Flow.data and later executed server-side when a guarded tool is invoked through the ToolGuard runtime. This allows authenticated users with flow creation privileges to achieve arbitrary Python code execution on the backend despite custom component restrictions. The vulnerability can be escalated through cross-tenant flow manipulation via the agentic MCP update_flow_component_field tool, which accepts attacker-controlled user_id parameters, enabling attackers to inject malicious code into victim users' flows. When combined with publicly accessible flows and specific misconfigurations (AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true), the attack can be conducted with reduced authentication requirements.",
+      "refs": "https://www.ibm.com/support/pages/node/7278920",
+      "source": "NVD",
+      "time": "2026-07-18 05:42:14"
+    },
+    {
+      "cve_id": "CVE-2026-9103",
+      "title": "高危漏洞: CVE-2026-9103 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-18 03:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN configuration is enabled (enabled by default), which may allow an unauthenticated network attacker to obtain full administrative access. Additionally, permissive cross-origin resource sharing (CORS) settings may allow tokens to be exposed to unintended origins, increasing the risk of unauthorized access.",
+      "refs": "https://www.ibm.com/support/pages/node/7278926",
+      "source": "NVD",
+      "time": "2026-07-18 05:42:06"
+    },
+    {
+      "cve_id": "CVE-2026-58195",
+      "title": "高危漏洞: CVE-2026-58195 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 03:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Agentic-Flow is an AI agent orchestration platform. Prior to 2.0.14, agentic-flow MCP server tools in src/mcp/standalone-stdio.ts, src/mcp/fastmcp/servers/claude-flow-sdk.ts, src/mcp/fastmcp/servers/stdio-full.ts, src/mcp/fastmcp/servers/http-streaming-updated.ts, src/mcp/fastmcp/servers/http-sse.ts, src/mcp/fastmcp/servers/poc-stdio.ts, src/mcp/fastmcp/tools/agent/{execute,list,parallel}.ts, src/mcp/fastmcp/tools/swarm/orchestrate.ts, and src/mcp/fastmcp/tools/hooks/pretrain.ts interpolated attacker-influenceable tool parameters such as agent, task, name, language, and agentdb directly into shell command strings passed to execSync(), allowing arbitrary OS command execution with the privileges of the MCP server user. This issue is fixed in version 2.0.14.",
+      "refs": "https://github.com/ruvnet/agentic-flow/commit/0c2ec967736a8b6b85832c6bae2a3e74989705ec\nhttps://github.com/ruvnet/agentic-flow/issues/169\nhttps://github.com/ruvnet/agentic-flow/pull/170",
+      "source": "NVD",
+      "time": "2026-07-18 05:42:01"
+    },
+    {
+      "cve_id": "CVE-2026-52746",
+      "title": "高危漏洞: CVE-2026-52746 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-18 03:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "JSONata is a JSON query and transformation language. Prior to 2.2.0, malicious non-matching inputs to the $toMillis function can cause superlinear backtracking in the ISO-8601 validation regex, leading to denial of service in applications that evaluate user-provided JSONata expressions. This issue is fixed in version 2.2.0.",
+      "refs": "https://github.com/jsonata-js/jsonata/commit/80ba95d170f74e3f20f4f36b8b77d8c85cea7686\nhttps://github.com/jsonata-js/jsonata/commit/d6ffc17cb16a8e53c222205bd274624e919cce0b\nhttps://github.com/jsonata-js/jsonata/pull/782",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:57"
+    },
+    {
+      "cve_id": "CVE-2026-45162",
+      "title": "高危漏洞: CVE-2026-45162 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-18 03:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.17 (LTS) and 12.3.7, multiple Pimcore locations call PHP's unserialize() on data from database columns and filesystem files without the allowed_classes restriction, including lib/Tool/Authentication.php, models/Site/Dao.php, models/DataObject/ClassDefinition/CustomLayout/Dao.php, models/Tool/TmpStore/Dao.php, models/Asset/WebDAV/Service.php, and admin-ui-classic-bundle/src/Helper/Dashboard.php, enabling object injection and remote code execution if an attacker can control the serialized data source. This issue is fixed in versions 11.5.17 (LTS) and 12.3.7.",
+      "refs": "https://github.com/pimcore/pimcore/commit/4788bf3a3a7f2f760a8fe61e522565941e154e1e\nhttps://github.com/pimcore/pimcore/pull/19119\nhttps://github.com/pimcore/pimcore/releases/tag/v12.3.7",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:52"
+    },
+    {
+      "cve_id": "CVE-2026-9762",
+      "title": "高危漏洞: CVE-2026-9762 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-18 02:17:17",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to remote code execution when jdbc url is under user control.",
+      "refs": "https://www.ibm.com/support/pages/node/7279479",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:47"
+    },
+    {
+      "cve_id": "CVE-2026-9202",
+      "title": "高危漏洞: CVE-2026-9202 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-18 02:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to create unlimited user accounts on any Langflow instance; when NEW_USER_IS_ACTIVE=true (documented deployment option), newly created accounts are immediately active and can authenticate to reach RCE endpoints, bypassing the need for AUTO_LOGIN.",
+      "refs": "https://www.ibm.com/support/pages/node/7278929",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:42"
+    },
+    {
+      "cve_id": "CVE-2026-9198",
+      "title": "高危漏洞: CVE-2026-9198 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-18 02:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments",
+      "refs": "https://www.ibm.com/support/pages/node/7278927",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:37"
+    },
+    {
+      "cve_id": "CVE-2026-50273",
+      "title": "高危漏洞: CVE-2026-50273 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-18 02:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Datadog .NET Tracer is a client library for Datadog APM for .NET applications. Prior to 3.43.0, Datadog tracing libraries that implement W3C baggage propagation parse incoming baggage HTTP headers without enforcing DD_TRACE_BAGGAGE_MAX_ITEMS or DD_TRACE_BAGGAGE_MAX_BYTES on extraction, allowing a remote unauthenticated attacker to send a baggage header with many comma-separated key-value pairs or one very large value and cause unbounded CPU and memory consumption in services with baggage propagation enabled. This issue is fixed in version 3.43.0.",
+      "refs": "https://github.com/DataDog/dd-trace-dotnet/commit/38092e0d41a36decbe649e048e48ae1b1607292f\nhttps://github.com/DataDog/dd-trace-dotnet/pull/8555\nhttps://github.com/DataDog/dd-trace-dotnet/releases/tag/v3.43.0",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:32"
+    },
+    {
+      "cve_id": "CVE-2026-13410",
+      "title": "高危漏洞: CVE-2026-13410 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-17 21:17:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L",
+      "description": "Dancer::Plugin::Auth::Google versions through 0.07 for Perl have TLS verification disabled.\n\nThe default user agent is initialised with SSL_verify_mode explicitly disabled.\n\nAn attacker with network man-in-the-middle (MITM) capability between the Dancer application and googleapis.com can intercept the OAuth2 token exchange and userinfo fetch, return a forged access_token and user profile, and be logged in to the Dancer application as any Google user.",
+      "refs": "https://github.com/garu/Dancer-Plugin-Auth-Google/pull/5\nhttps://metacpan.org/pod/Furl#HTTPS-requests-claims-warnings!\nhttps://security.metacpan.org/patches/D/Dancer-Plugin-Auth-Google/0.07/CVE-2026-13410-r1.patch",
+      "source": "NVD",
+      "time": "2026-07-18 05:41:26"
+    },
+    {
       "cve_id": "CVE-2026-8297",
       "title": "高危漏洞: CVE-2026-8297 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/bigbluebutton/bigbluebutton/commit/36fd1b407488a0c56ce620b91184d5a8aea68b3d\nhttps://github.com/bigbluebutton/bigbluebutton/releases/tag/v3.0.21\nhttps://github.com/bigbluebutton/bigbluebutton/security/advisories/GHSA-43hc-5g2m-cqff",
       "source": "NVD",
       "time": "2026-07-17 05:56:12"
-    },
-    {
-      "cve_id": "CVE-2026-46351",
-      "title": "高危漏洞: CVE-2026-46351 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 03:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.21, bbb-web generated conference sessionToken values with insufficiently secure randomness in bbb-common-web/src/main/java/org/bigbluebutton/api/Util.java and bigbluebutton-web/grails-app/controllers/org/bigbluebutton/web/controllers/ApiController.groovy, allowing a session user to predict other users' conference session tokens and impersonate them. This issue is fixed in version 3.0.21.",
-      "refs": "https://github.com/bigbluebutton/bigbluebutton/commit/8457886c248aeba5597ee8749267602d6d117e98\nhttps://github.com/bigbluebutton/bigbluebutton/releases/tag/v3.0.21\nhttps://github.com/bigbluebutton/bigbluebutton/security/advisories/GHSA-7959-pf2v-xc4h",
-      "source": "NVD",
-      "time": "2026-07-17 05:56:08"
-    },
-    {
-      "cve_id": "CVE-2026-46336",
-      "title": "高危漏洞: CVE-2026-46336 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-17 02:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Manyfold is an open source, self-hosted web application for managing a collection of 3d models, particularly focused on 3d printing. From 0.96.0 until 0.140.0, authenticated users can rename uploaded files with path traversal sequences because app/models/model_file.rb uses the user-controlled filename in File.join(model.path, filename) without sufficient sanitization, allowing files to be moved or written outside the configured library directory. This issue is fixed in version 0.140.0.",
-      "refs": "https://github.com/manyfold3d/manyfold/commit/ed6a53e54926708594c07d222155ac3a22f93174\nhttps://github.com/manyfold3d/manyfold/pull/6122\nhttps://github.com/manyfold3d/manyfold/releases/tag/v0.140.0",
-      "source": "NVD",
-      "time": "2026-07-17 05:56:03"
-    },
-    {
-      "cve_id": "CVE-2026-45336",
-      "title": "高危漏洞: CVE-2026-45336 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-17 02:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
-      "description": "HireFlow is a web-based interview management system for managing candidates, scheduling interviews, and tracking hiring progress. In 1.2 and earlier, app.py assigns a hard-coded Flask secret_key used to sign session cookies, allowing unauthenticated attackers who know the public source value to forge cookies containing role=admin and user_id values and bypass authentication. The advisory lists version 1.3 as fixed.",
-      "refs": "https://github.com/StratonWebDesigners/HireFlow/releases/tag/v1.3\nhttps://github.com/StratonWebDesigners/HireFlow/security/advisories/GHSA-x53g-jr84-jrv5",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:59"
-    },
-    {
-      "cve_id": "CVE-2021-27137",
-      "title": "高危漏洞: CVE-2021-27137 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 02:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue was discovered in router/upnp/src/ssdp.c in DD-WRT before 45724. An unsafe strcpy in the UPnP handling functionality allows an unauthenticated remote attacker to send a request that would overflow an internal fixed buffer. Exploitation requires the DD-WRT user to enable UPnP (which is off by default, and only listens on internal interfaces by default). This occurs in ssdp_msearch (reachable by an M-SEARCH request).",
-      "refs": "https://securityaffairs.com/193290/uncategorized/iot-botnet-c0xmo-adds-competitor-killing-capability.html\nhttps://ssd-disclosure.com/ssd-advisory-dd-wrt-upnp-buffer-overflow/\nhttps://svn.dd-wrt.com/changeset/45724",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:55"
-    },
-    {
-      "cve_id": "CVE-2026-14890",
-      "title": "高危漏洞: CVE-2026-14890 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-17 00:19:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "SGLang uses an expert-parallel backup subsystem that exposes a ZeroMQ PULL socket on a routable network interface that does not contain authentication or deserialization safeguards, allowing an attacker to provide a malicious pickle file that results in unauthenticated remote code execution when the feature is enabled and the service is reachable over the network.",
-      "refs": "http://vince.cert.org/vuls/id/326070\nhttps://github.com/sgl-project/sglang/blob/main/python/sglang/srt/elastic_ep/expert_backup_manager.py\nhttps://www.kb.cert.org/vuls/id/326070",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:50"
-    },
-    {
-      "cve_id": "CVE-2026-12585",
-      "title": "高危漏洞: CVE-2026-12585 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-16 15:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Abandoned Cart Lite for WooCommerce WordPress plugin before 6.8.2 does not protect the integrity of its cart-recovery tokens or bind them to the requesting account, allowing unauthenticated attackers to forge a recovery link that logs them in as another user when the automatic-login option is enabled.",
-      "refs": "https://wpscan.com/vulnerability/c94475c8-d129-4735-b599-5094efb20cb8/",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:46"
-    },
-    {
-      "cve_id": "CVE-2026-12525",
-      "title": "高危漏洞: CVE-2026-12525 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-16 15:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Redux Framework WordPress plugin before 4.5.13 does not restrict which user meta keys can be written when saving custom profile fields, allowing users with at least the Subscriber role to escalate their privileges to Administrator by submitting a crafted value while updating their own profile, on sites where the Redux Framework WordPress plugin before 4.5.13's user-profile (Users extension) feature is enabled.",
-      "refs": "https://wpscan.com/vulnerability/11d5d4c2-7ba9-4389-9050-28c90920e34b/",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:41"
-    },
-    {
-      "cve_id": "CVE-2026-36590",
-      "title": "高危漏洞: CVE-2026-36590 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-16 06:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An issue in EMQ NanoMQ v.0.24.9 allows a remote attacker to cause a denial of service via the nni_qos_db_set function in broker_tcp.c component",
-      "refs": "https://github.com/MoXie25/NanoMQ-Memory-Leak-Research.git\nhttps://github.com/MoXie25/NanoMQ-Memory-Leak-Research/blob/main/README.md\nhttps://github.com/MoXie25/NanoMQ-Memory-Leak-Research/blob/main/README.md",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:35"
-    },
-    {
-      "cve_id": "CVE-2026-26718",
-      "title": "高危漏洞: CVE-2026-26718 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-16 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A Cross-Site Request Forgery (CSRF) vulnerability exists in the xxl-job-admin web application v.3.0.0 that allows an attacker to perform unauthorized modifications to Glue IDE shell scripts. The affected endpoint lacks proper CSRF token validation and accepts arbitrary HTTP methods via a permissive request mapping",
-      "refs": "https://github.com/Ibrahim-Sartawi/CVE-2026-26718\nhttps://xxl-job-admin.com\nhttps://github.com/Ibrahim-Sartawi/CVE-2026-26718",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:28"
-    },
-    {
-      "cve_id": "CVE-2025-65720",
-      "title": "高危漏洞: CVE-2025-65720 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-16 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue in Open Source GPT Researcher v3.3.7 allows attackers to execute arbitrary commands on a victim system via user interaction with a crafted HTML page.",
-      "refs": "https://github.com/assafelovic/gpt-researcher\nhttps://www.ox.security/blog/gpt-researcher-remote-code-execution\nhttps://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/",
-      "source": "NVD",
-      "time": "2026-07-17 05:55:22"
-    },
-    {
-      "cve_id": "CVE-2026-9046",
-      "title": "高危漏洞: CVE-2026-9046 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-07-17 01:16:59",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A potential insecure permissions vulnerability was reported in Legion Zone and the Lenovo App Store Windows applications, distributed exclusively in the Chinese market, that when installed on a non‑system partition, could allow a local user to execute arbitrary code.",
-      "refs": "https://iknow.lenovo.com.cn/detail/441420",
-      "source": "NVD",
-      "time": "2026-07-17 02:57:16"
     }
   ]
 }
