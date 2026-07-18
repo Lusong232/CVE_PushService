@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16095",
+      "title": "高危漏洞: CVE-2026-16095 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 19:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Shibby Tomato 1.28 RT-N5x MIPSR2 Build 124. Affected by this issue is the function setup_conntrack of the file /sbin/rc. Executing a manipulation of the argument ct_tcp_timeout can lead to out-of-bounds write. The attack may be performed from remote. This project is superseded by FreshTomato.",
+      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJTQ5S\nhttps://vuldb.com/cve/CVE-2026-16095\nhttps://vuldb.com/submit/855123",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:58"
+    },
+    {
+      "cve_id": "CVE-2026-47871",
+      "title": "高危漏洞: CVE-2026-47871 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "VMware Avi Load Balancer contains a directory traversal vulnerability. Flaws in file path validation allow malicious, authenticated network users to perform directory traversal attacks.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:54"
+    },
+    {
+      "cve_id": "CVE-2026-47870",
+      "title": "高危漏洞: CVE-2026-47870 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+      "description": "VMware Avi Load Balancer contains a privilege escalation vulnerability. A malicious authenticated user with network access may be able to execute remote code.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:49"
+    },
+    {
+      "cve_id": "CVE-2026-47869",
+      "title": "高危漏洞: CVE-2026-47869 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious authenticated user with network access may be able to inject and execute code.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:42"
+    },
+    {
+      "cve_id": "CVE-2026-47868",
+      "title": "高危漏洞: CVE-2026-47868 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "VMware Avi Load Balancer contains a local privilege escalation vulnerability. A malicious user with local access may be able to escalate their privileges to run code as root.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:38"
+    },
+    {
+      "cve_id": "CVE-2026-47867",
+      "title": "高危漏洞: CVE-2026-47867 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious user with network access may be able to access the Avi Control plane and execute code remotely.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:33"
+    },
+    {
+      "cve_id": "CVE-2026-47866",
+      "title": "高危漏洞: CVE-2026-47866 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "VMware Avi Load Balancer contains an authorization bypass vulnerability. A malicious actor on the network can access a limited subset of the Avi Control Plane without proper authorization.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:26"
+    },
+    {
+      "cve_id": "CVE-2026-47865",
+      "title": "高危漏洞: CVE-2026-47865 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "VMware Avi Load Balancer contains an authentication bypass vulnerability. A malicious user with network access may be able to access the Avi Control plane by bypassing the authentication mechanism.\n\nAffected versions:\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:21"
+    },
+    {
+      "cve_id": "CVE-2026-16084",
+      "title": "高危漏洞: CVE-2026-16084 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-18 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Sipeed PicoClaw up to 0.2.9. This impacts the function web_fetch of the file pkg/tools/integration/web.go. This manipulation causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. Patch name: c15aac21fe05ee103a470e1104bc891754e83392. To fix this issue, it is recommended to deploy a patch.",
+      "refs": "https://github.com/sipeed/picoclaw/\nhttps://github.com/sipeed/picoclaw/commit/c15aac21fe05ee103a470e1104bc891754e83392\nhttps://github.com/sipeed/picoclaw/issues/3074",
+      "source": "NVD",
+      "time": "2026-07-18 20:51:17"
+    },
+    {
       "cve_id": "CVE-2026-56741",
       "title": "高危漏洞: CVE-2026-56741 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2x93-h3hg-2xfp\nhttps://www.vulncheck.com/advisories/openclaw-ssrf-via-browser-snapshot",
       "source": "NVD",
       "time": "2026-07-17 13:34:01"
-    },
-    {
-      "cve_id": "CVE-2026-62226",
-      "title": "高危漏洞: CVE-2026-62226 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-17 10:18:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "OpenClaw 2026.3.28 before 2026.5.19 contain an authorization bypass vulnerability in the browser act route that fails to properly validate current-tab URL checks. Attackers with lower-trust access or configured input paths can perform actions requiring stronger authorization or policy checks.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x863-pqjw-hmgf\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-browser-act-route",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:56"
-    },
-    {
-      "cve_id": "CVE-2026-62223",
-      "title": "高危漏洞: CVE-2026-62223 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 10:18:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.5.18 contain an authorization bypass vulnerability in the device-pair approval feature that allows lower-trust callers to execute actions beyond their intended authorization. Attackers can exploit misconfigured input paths to execute or persist unauthorized actions when the affected feature is enabled and reachable.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hx85-fgcw-9vrc\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-device-pair",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:51"
-    },
-    {
-      "cve_id": "CVE-2026-62222",
-      "title": "高危漏洞: CVE-2026-62222 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-17 10:18:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.5.22 contain a vulnerability in setup-mode discovery that allows loading of untrusted workspace plugins. Attackers with lower-trust caller access or control over configured input paths can execute or persist actions beyond their intended authorization level.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rh6r-vvfc-86jq\nhttps://www.vulncheck.com/advisories/openclaw-untrusted-plugin-loading-via-setup-mode",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:43"
-    },
-    {
-      "cve_id": "CVE-2026-62219",
-      "title": "高危漏洞: CVE-2026-62219 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-17 10:18:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
-      "description": "OpenClaw 2026.2.12 before 2026.5.26 contain an authorization bypass vulnerability in the hooks allowedAgentIds validation. A lower-trust caller or configured input path can bypass agent ID restrictions by submitting blank agent IDs, allowing actions that should require stronger authorization or policy checks.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-724r-v4wf-mqc5\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-blank-agent-ids",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:38"
-    },
-    {
-      "cve_id": "CVE-2026-62218",
-      "title": "高危漏洞: CVE-2026-62218 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 10:18:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw 2026.1.20 before 2026.5.27 contain an authorization bypass vulnerability in the device.pair.approve feature that allows lower-trust callers to bypass role-management checks. Attackers can perform actions requiring stronger authorization by reaching the affected feature through configured input paths.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8v95-qqcm-qp9h\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-device-pair-approve",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:34"
-    },
-    {
-      "cve_id": "CVE-2026-62217",
-      "title": "高危漏洞: CVE-2026-62217 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 10:18:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw 2026.5.14-beta.1 before 2026.5.27 contain an authorization flaw in the QQBot exec approvals feature. When the feature is enabled and reachable, a lower-trust caller or configured input path could execute or persist actions beyond the caller's intended authorization, allowing non-allowlisted senders to perform unauthorized operations.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jx6-764p-fgg9\nhttps://www.vulncheck.com/advisories/openclaw-beta-1-authentication-bypass-via-exec-approvals",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:29"
-    },
-    {
-      "cve_id": "CVE-2026-62215",
-      "title": "高危漏洞: CVE-2026-62215 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-07-17 10:18:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability in HTTP Canvas responses that allows lower-trust callers to forge trusted A2UI actions. Attackers can perform actions requiring stronger authorization by submitting crafted requests through configured input paths, bypassing intended policy checks.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vr7j-7684-7gm5\nhttps://www.vulncheck.com/advisories/openclaw-authentication-bypass-via-http-canvas",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:24"
-    },
-    {
-      "cve_id": "CVE-2026-62212",
-      "title": "高危漏洞: CVE-2026-62212 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-17 10:18:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "OpenClaw before 2026.5.28 contains a race condition in the MS Teams safeFetch DNS rebinding check. When the affected feature is enabled and reachable, a lower-trust caller or configured input path could win a timing window between the DNS validation check and use, allowing actions that should have required a stronger authorization or policy check. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wxm8-ghhq-q688\nhttps://www.vulncheck.com/advisories/openclaw-authentication-bypass-via-safefetch",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:20"
-    },
-    {
-      "cve_id": "CVE-2026-62209",
-      "title": "高危漏洞: CVE-2026-62209 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 10:18:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "OpenClaw versions 2026.5.10-beta.1 before 2026.6.5 contain an authorization bypass in the ClickClack agent-mode dispatch feature, which could ignore the toolsAllow policy check. When the affected feature is enabled and reachable, a lower-trust caller or configured input path could perform actions that should have required a stronger authorization or policy check.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wp73-f3gg-w4vr\nhttps://www.vulncheck.com/advisories/openclaw-beta-1-authorization-bypass-via-agent-mode-dispatch",
-      "source": "NVD",
-      "time": "2026-07-17 13:33:14"
     }
   ]
 }
