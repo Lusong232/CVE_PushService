@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16128",
+      "title": "高危漏洞: CVE-2026-16128 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 01:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in zevorn rt-claw up to 0.2.0. This impacts the function receiver_thread of the file claw/services/swarm/swarm.c of the component http_request. Performing a manipulation results in server-side request forgery. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/zevorn/rt-claw/\nhttps://github.com/zevorn/rt-claw/issues/140\nhttps://vuldb.com/cve/CVE-2026-16128",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:38"
+    },
+    {
+      "cve_id": "CVE-2026-16127",
+      "title": "高危漏洞: CVE-2026-16127 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 00:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in zevorn rt-claw up to 0.2.0. This affects the function claw_net_get/claw_net_post of the file claw/tools/tool_net.c of the component http_request. Such manipulation of the argument url leads to server-side request forgery. The attack may be performed from remote. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/zevorn/rt-claw/\nhttps://github.com/zevorn/rt-claw/issues/139\nhttps://vuldb.com/cve/CVE-2026-16127",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:33"
+    },
+    {
+      "cve_id": "CVE-2026-16126",
+      "title": "高危漏洞: CVE-2026-16126 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 00:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in zevorn rt-claw up to 0.2.0. The impacted element is the function handle_rpc_request of the file claw/services/swarm/swarm.c of the component Swarm RPC Receiver. This manipulation causes incorrect authorization. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/zevorn/rt-claw/\nhttps://github.com/zevorn/rt-claw/issues/135\nhttps://github.com/zevorn/rt-claw/issues/137",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:29"
+    },
+    {
+      "cve_id": "CVE-2026-16125",
+      "title": "高危漏洞: CVE-2026-16125 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 00:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in zevorn rt-claw up to 0.2.0. The affected element is the function claw_net_get/claw_net_post of the file claw/services/tools/net.c of the component http_request. The manipulation of the argument url results in server-side request forgery. The attack can be executed remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/zevorn/rt-claw/\nhttps://github.com/zevorn/rt-claw/issues/134\nhttps://vuldb.com/cve/CVE-2026-16125",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:25"
+    },
+    {
+      "cve_id": "CVE-2026-9323",
+      "title": "高危漏洞: CVE-2026-9323 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-18 22:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The urwid web display backend (urwid/display/web.py) generates web session identifiers (urwid_id) in Screen.start() by concatenating two random.randrange(10**9) calls that use Python's Mersenne Twister PRNG, which is not cryptographically secure. Each call consumes approximately 30 bits of PRNG state, and the Mersenne Twister internal state is approximately 19,937 bits, so an attacker who observes approximately 334 session IDs (for example via the X-Urwid-ID HTTP response header) can fully reconstruct the internal state and predict all past and future session IDs (Path B). The same identifier is also used as the filename of a FIFO created in the world-listable /tmp directory (for example /tmp/urwid375487765176907690.in), so any local user on the host can list /tmp to enumerate active session tokens directly (Path A). With a valid session ID, an attacker can read the victim's terminal screen via the polling endpoint, inject keystrokes into the victim's session (yielding OS-level code execution with the session owner's privileges if the session runs a shell), and inject exit sequences or flood the FIFO to terminate or crash the session. A prior Bandit S311 warning on this usage was suppressed with # noqa: S311 rather than fixed",
+      "refs": "https://github.com/urwid/urwid\nhttps://github.com/urwid/urwid/commit/24acd12f0d0598036d0d577f2ee63e4a27b4a3d9\nhttps://github.com/urwid/urwid/issues/1127",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:20"
+    },
+    {
+      "cve_id": "CVE-2026-16117",
+      "title": "高危漏洞: CVE-2026-16117 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-18 22:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Impact: @fastify/http-proxy versions up to and including 11.5.0 fail to rewrite the request prefix when the prefix segment is URL-encoded. Fastify's router URL-decodes paths for route matching, but request.url retains the original encoded form, and the prefix-rewrite step uses a literal string replace against the decoded prefix. A request that encodes one or more characters of the configured prefix therefore matches the route but skips the rewrite, so the raw encoded path is forwarded to the upstream unchanged. The upstream then decodes the path and serves it, letting an attacker reach upstream paths that the proxy was configured to hide via rewritePrefix, including internal or administrative endpoints.\n\nPatches: upgrade to @fastify/http-proxy 11.6.0.\n\nWorkarounds: none.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-http-proxy/security/advisories/GHSA-mx7v-qhg9-2mvv",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:12"
+    },
+    {
+      "cve_id": "CVE-2026-11826",
+      "title": "高危漏洞: CVE-2026-11826 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 22:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OpenPLC_v3 contains a heap-based buffer overflow in the getData() function in webserver/core/modbus_master.cpp. getData() reads characters between two delimiters into a caller-supplied buffer with no size parameter and no bounds check. In parseConfig() the function is invoked with the 100-byte heap-allocated MB_device.dev_name field. An authenticated attacker with access to the OpenPLC web interface can send a crafted HTTP POST to the /modbus endpoint with an oversized device_name value; the value is persisted to mbconfig.cfg and parsed on load, overflowing dev_name and overwriting adjacent struct fields (protocol at offset 108, dev_address at offset 109, ip_port at offset 210). A 200-byte payload writes 100 bytes past the allocation. The result is heap corruption leading to runtime crash and denial of service of the PLC process control loop, with attacker-controlled overwrite of adjacent configuration fields. The upstream repository was archived on 2026-04-04 and no fix is expected; the vendor has confirmed the issue does not affect OpenPLC Runtime v4.",
+      "refs": "https://gist.github.com/Shukhrat-03/5cf1825b72e485ef98a32958dfbc611a#security-vulnerability-report\nhttps://github.com/thiagoralves/OpenPLC_v3\nhttps://github.com/thiagoralves/OpenPLC_v3/commit/b4702061dc14d1024856f71b4543298d77007b88",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:08"
+    },
+    {
+      "cve_id": "CVE-2024-58368",
+      "title": "高危漏洞: CVE-2024-58368 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-18 22:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "SurrealDB versions before 1.1.0 fail to properly parse the ID, DB, and NS headers in HTTP REST API requests containing special characters. Unauthenticated attackers can send crafted HTTP requests with malformed header values to trigger an uncaught exception that crashes the server.",
+      "refs": "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-m24x-r6q3-2vp9\nhttps://www.vulncheck.com/advisories/surrealdb-before-denial-of-service-via-http-headers",
+      "source": "NVD",
+      "time": "2026-07-19 02:46:00"
+    },
+    {
+      "cve_id": "CVE-2024-58366",
+      "title": "高危漏洞: CVE-2024-58366 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-07-18 22:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SurrealDB before 1.1.1 contains a format string vulnerability in the rquickjs Exception::throw_type function when scripting is enabled. Attackers with scripting privileges can supply format string sequences in error inputs to read arbitrary memory or execute code with SurrealDB process privileges.",
+      "refs": "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-q3gg-m8hr-h4x4\nhttps://www.vulncheck.com/advisories/surrealdb-before-format-string-via-scripting-functions",
+      "source": "NVD",
+      "time": "2026-07-19 02:45:56"
+    },
+    {
+      "cve_id": "CVE-2024-58362",
+      "title": "高危漏洞: CVE-2024-58362 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 22:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SurrealDB before 1.5.5 (and 2.0.0-beta before 2.0.0-beta.3) accepts an arbitrary object in the signin and signup operations of the RPC API without recursively validating it for non-computed values. When a record access method defines a SIGNIN or SIGNUP query and the RPC API is exposed to untrusted users, an unauthenticated attacker can encode a binary object containing a subquery using the bincode serialization format and supply it in place of credentials. The subquery is then executed within the database owner's SIGNIN/SIGNUP query under a system user session with the editor role, allowing the attacker to select, create, update, and delete non-IAM resources (though not view the query results directly, and not affect IAM resources, which require the owner role).",
+      "refs": "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-64f8-pjgr-9wmr\nhttps://www.vulncheck.com/advisories/surrealdb-before-query-injection-via-rpc-api",
+      "source": "NVD",
+      "time": "2026-07-19 02:45:51"
+    },
+    {
+      "cve_id": "CVE-2023-54366",
+      "title": "高危漏洞: CVE-2023-54366 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 22:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SurrealDB before 1.0.1 sets default table permissions to FULL instead of NONE, allowing SELECT, CREATE, UPDATE, and DELETE operations on tables without explicit permissions. Attackers with database access or unauthenticated users on publicly exposed instances can perform unrestricted operations on unprotected tables within their authorization scope.",
+      "refs": "https://github.com/surrealdb/surrealdb/security/advisories/GHSA-x5fr-7hhj-34j3\nhttps://www.vulncheck.com/advisories/surrealdb-before-insecure-default-table-permissions",
+      "source": "NVD",
+      "time": "2026-07-19 02:45:45"
+    },
+    {
       "cve_id": "CVE-2026-9147",
       "title": "高危漏洞: CVE-2026-9147 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/toddr/YAML-Syck/commit/44c90a109ec3215ee7ce747bd11209835e123d8b.patch\nhttps://metacpan.org/release/TODDR/YAML-Syck-1.47/changes\nhttp://www.openwall.com/lists/oss-security/2026/07/17/2",
       "source": "NVD",
       "time": "2026-07-18 02:52:32"
-    },
-    {
-      "cve_id": "CVE-2026-38158",
-      "title": "高危漏洞: CVE-2026-38158 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-17 05:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A SQL injection vulnerability in the /ureport/datasource/previewData component of ureport v2.2.9 allows attackers to access sensitive database information via crafted SQL statements.",
-      "refs": "https://github.com/musesix/cve/blob/main/ureport_sqli/ureport.md\nhttps://github.com/youseries/ureport\nhttps://github.com/musesix/cve/blob/main/ureport_sqli/ureport.md",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:26"
-    },
-    {
-      "cve_id": "CVE-2026-15982",
-      "title": "高危漏洞: CVE-2026-15982 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-17 14:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Aimogen Pro - All-in-One AI Content Writer, Editor, ChatBot & Automation Toolkit plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.8.4. This is due to due to a missing capability check on the 'aiomatic_call_google_ai_function' function. This makes it possible for unauthenticated attackers to leverage the 'aimogen_wp_god_mode' tool to clear function blacklists and execute arbitrary PHP functions, such as creating administrator accounts.",
-      "refs": "https://coderevolution.ro/knowledge-base/faq/full-changelog-aiomatic-automatic-ai-content-writer-editor-gpt-3-gpt-4-chatgpt-chatbot-ai-toolkit/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/53cc91fa-51fd-4d16-b740-a48f8d446b5d?source=cve",
-      "source": "NVD",
-      "time": "2026-07-17 18:30:00"
-    },
-    {
-      "cve_id": "CVE-2026-13765",
-      "title": "高危漏洞: CVE-2026-13765 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-17 13:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The LearnPress – WordPress LMS Plugin for Create and Sell Online Courses plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.4.1 via the check_answer. This makes it possible for unauthenticated attackers to extract the correct-answer markers, full option lists, explanations, and question content for any quiz question on the site — including questions belonging to paid courses the attacker is not enrolled in.",
-      "refs": "https://plugins.trac.wordpress.org/browser/learnpress/tags/4.3.6/inc/course/class-lp-course-no-required-enroll.php#L145\nhttps://plugins.trac.wordpress.org/browser/learnpress/tags/4.3.6/inc/lp-template-functions.php#L1422\nhttps://plugins.trac.wordpress.org/browser/learnpress/tags/4.3.6/inc/rest-api/v1/frontend/class-lp-rest-users-controller.php#L181",
-      "source": "NVD",
-      "time": "2026-07-17 18:29:56"
-    },
-    {
-      "cve_id": "CVE-2026-13352",
-      "title": "高危漏洞: CVE-2026-13352 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 13:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 4.16.18 via the allowed_mime_types function. This is due to the unconditional registration of an upload_mimes filter that adds executable file extensions (.exe, .apk, .msi) to the global WordPress MIME allowlist, without scoping the expansion to digital-product upload contexts. This makes it possible for authenticated attackers, with author-level access and above, to upload files that may be executable, which makes remote code execution possible. This filter is registered globally on every request regardless of whether the digital products feature is configured or in use, meaning the expanded MIME allowlist affects all WordPress upload contexts site-wide.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.14/src/Membership/DigitalProducts/Init.php#L9\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.14/src/Membership/DigitalProducts/UploadHandler.php#L18\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.14/src/Membership/DigitalProducts/UploadHandler.php#L49",
-      "source": "NVD",
-      "time": "2026-07-17 18:29:50"
-    },
-    {
-      "cve_id": "CVE-2026-15395",
-      "title": "高危漏洞: CVE-2026-15395 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-17 12:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Kali Forms — Contact Form & Drag-and-Drop Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'digitalSignature' Field Value in all versions up to, and including, 2.4.18 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The required form-submission nonce is publicly available on any page containing the form shortcode, making this exploitable by fully unauthenticated attackers without any precondition beyond the form being published.",
-      "refs": "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.17/Inc/Frontend/class-form-processor.php#L88\nhttps://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.17/Inc/Frontend/class-form-processor.php#L997\nhttps://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.17/Inc/Frontend/class-submission-shortcode.php#L198",
-      "source": "NVD",
-      "time": "2026-07-17 13:35:00"
-    },
-    {
-      "cve_id": "CVE-2026-62387",
-      "title": "高危漏洞: CVE-2026-62387 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-17 10:18:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
-      "description": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.0-rc.16 shipped Access-Control-Allow-Origin: * as its default CORS configuration on all responses, including authenticated endpoints and preflight (OPTIONS) responses. Because the plugin accepts credentials via the Authorization and X-API-Token headers (set programmatically by JavaScript rather than via cookies), an attacker who obtains a valid access token (e.g., via log leakage, Referer headers, browser history, or network capture) can issue fully authenticated cross-origin requests from any malicious website to read sensitive data and perform write operations as the token's user. Fixed in 1.0.0-rc.16.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-93px-98wh-6fj2\nhttps://www.vulncheck.com/advisories/grav-rc-16-cors-misconfiguration-via-api-plugin",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:55"
-    },
-    {
-      "cve_id": "CVE-2026-62386",
-      "title": "高危漏洞: CVE-2026-62386 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-17 10:18:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.0-rc.16 accepts JWT access tokens through the ?token= URL query parameter on every API route (JwtAuthenticator::extractBearerToken fallback). Because tokens are embedded in URLs, they are logged verbatim in web server access logs, leaked via the Referer header, stored in browser history, and captured by upstream proxy and CDN logs, exposing valid admin access tokens. A leaked token grants unauthorized API access, including reading configuration and user data, creating admin accounts, modifying system settings, and deleting pages.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-4hpj-wmpw-ghwq\nhttps://www.vulncheck.com/advisories/grav-rc-16-authentication-bypass-via-token-url-parameter",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:49"
-    },
-    {
-      "cve_id": "CVE-2026-62241",
-      "title": "高危漏洞: CVE-2026-62241 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-17 10:18:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "clawvet self-hosted API server (apps/api) before 0.7.5 hard-codes a fallback JWT secret ('clawvet-dev-secret-change-me') in auth.ts and ships it as the default in .env.example. Because GET /api/v1/scans returns scan records containing userId values without authentication, a remote unauthenticated attacker can harvest a victim's userId, forge a valid HS256 cg_session cookie offline using the known secret, and call GET /api/v1/auth/me to obtain the victim's email address, subscription plan, and secret apiKey. The published clawvet npm package (CLI only) is not affected.",
-      "refs": "https://github.com/MohibShaikh/clawvet/security/advisories/GHSA-9mww-p953-jfc9\nhttps://www.vulncheck.com/advisories/clawvet-hard-coded-jwt-secret-session-forgery",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:42"
-    },
-    {
-      "cve_id": "CVE-2026-62234",
-      "title": "高危漏洞: CVE-2026-62234 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 10:18:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Grav before 2.0.4 fails to restrict cURL protocols in webhook dispatch, allowing authenticated users with api.webhooks.write permission to create webhooks with file://, dict://, or gopher:// URLs. Attackers can trigger webhook events to read local files, access process information, or pivot to internal services via unrestricted protocol handlers.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-58q8-f7v4-w2vf\nhttps://www.vulncheck.com/advisories/grav-ssrf-via-unrestricted-curl-protocols",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:37"
-    },
-    {
-      "cve_id": "CVE-2026-62233",
-      "title": "高危漏洞: CVE-2026-62233 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "grav-plugin-api before 1.0.6 fails to validate super-admin status in createApiKey, generate2fa, and disable2fa endpoints, allowing non-super api.users.write managers to escalate to super-admin. Attackers can mint API keys bound to super-admin accounts or strip 2FA from super-admin users to achieve full instance takeover.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-8gg4-rvvv-cq96\nhttps://www.vulncheck.com/advisories/grav-plugin-api-privilege-escalation-via-createapikey",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:32"
-    },
-    {
-      "cve_id": "CVE-2026-62232",
-      "title": "高危漏洞: CVE-2026-62232 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Grav before 2.0.4 contains a two-factor authentication bypass vulnerability in the login plugin where the regenerate2FASecret task checks only user existence, not authorization, during the pending TOTP challenge window. Attackers who know the victim's password can call this task without a CSRF nonce to overwrite the 2FA secret with an attacker-chosen value, compute a valid TOTP code, and complete authentication while reducing 2FA to password-only protection.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-7mgc-c7pq-3rr3\nhttps://www.vulncheck.com/advisories/grav-2fa-bypass-via-secret-regeneration",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:27"
     }
   ]
 }
