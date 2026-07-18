@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9147",
+      "title": "高危漏洞: CVE-2026-9147 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-18 21:17:06",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "uproot dynamically generates Python class source code from ROOT TStreamerInfo records in a file and compiles it at runtime. Some file-controlled streamer metadata fields (for example, streamer element names) are interpolated into the generated Python source without safe quoting via repr() or the !r format specifier. An attacker who can supply a crafted ROOT file can place Python expression-breaking content into a streamer metadata field. When uproot generates and invokes the corresponding reader method, the injected Python expression is evaluated in the context of the process opening the file, resulting in arbitrary Python code execution in applications that open or process attacker-controlled ROOT files with affected uproot code paths.",
+      "refs": "https://github.com/scikit-hep/uproot5\nhttps://github.com/scikit-hep/uproot5/commit/c045c2824295d907d2e705f31110c742928e50e7\nhttps://github.com/scikit-hep/uproot5/security/advisories/GHSA-6946-mq52-g438",
+      "source": "NVD",
+      "time": "2026-07-18 23:44:24"
+    },
+    {
+      "cve_id": "CVE-2026-16158",
+      "title": "高危漏洞: CVE-2026-16158 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-18 21:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Impact: @fastify/reply-from versions from 8.3.1 up to but not including 12.6.4 build the internal URL cache key by concatenating the destination and source path without a delimiter. Different destination and source pairs can therefore produce the same key while resolving to different upstream URLs. When getUpstream selects an upstream from request data, a URL cached for one upstream can be reused for a request intended for another upstream, causing cross-upstream data access and modification. The default configuration is affected. Setting disableCache to true prevents the behavior. Patches: upgrade to @fastify/reply-from 12.6.4. Workarounds: pass disableCache: true when registering the plugin.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-reply-from/security/advisories/GHSA-v574-6498-x57v",
+      "source": "NVD",
+      "time": "2026-07-18 23:44:20"
+    },
+    {
+      "cve_id": "CVE-2026-15631",
+      "title": "高危漏洞: CVE-2026-15631 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-18 21:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Impact: @fastify/http-proxy versions from 9.4.0 up to and including 11.5.0 fail to validate the resolved WebSocket destination path against the configured rewrite prefix. The WebSocket routing path in WebSocketProxy.findUpstream resolves the destination via the WHATWG URL constructor, which collapses dot segments, so a crafted upgrade request with path traversal sequences can escape the rewrite prefix and reach upstream endpoints that were not meant to be exposed by the proxy. This is a variant of CVE-2021-21322 in a code path that never went through the HTTP fix in fastify/reply-from. Exploitation requires a non-normalizing WebSocket client, since browsers and the ws package normalize the request path before sending, but raw HTTP clients or downstream proxies that forward the request target unchanged make the attack reachable in production topologies. \n\nPatches: upgrade to @fastify/http-proxy 11.6.0. \n\nWorkarounds: none.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-http-proxy/security/advisories/GHSA-7hrw-592w-9wh2",
+      "source": "NVD",
+      "time": "2026-07-18 23:44:15"
+    },
+    {
+      "cve_id": "CVE-2026-16097",
+      "title": "高危漏洞: CVE-2026-16097 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 20:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Shibby Tomato 1.28. This vulnerability affects the function sub_42537C of the component Scheduler Name Handler. The manipulation of the argument a1 results in stack-based buffer overflow. It is possible to launch the attack remotely. This project is superseded by FreshTomato.",
+      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJTQ5U\nhttps://vuldb.com/cve/CVE-2026-16097\nhttps://vuldb.com/submit/855125",
+      "source": "NVD",
+      "time": "2026-07-18 23:44:11"
+    },
+    {
+      "cve_id": "CVE-2026-16096",
+      "title": "高危漏洞: CVE-2026-16096 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-18 20:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Shibby Tomato 1.28 RT-N5x MIPSR2 Build 124. This affects the function sub_40BB50 of the file /proc/webmon_recent_domains. The manipulation leads to stack-based buffer overflow. It is possible to initiate the attack remotely. This project is superseded by FreshTomato.",
+      "refs": "https://gitee.com/Fengyi-Wang/CVE/issues/IJTQ5T\nhttps://vuldb.com/cve/CVE-2026-16096\nhttps://vuldb.com/submit/855124",
+      "source": "NVD",
+      "time": "2026-07-18 23:44:07"
+    },
+    {
       "cve_id": "CVE-2026-16095",
       "title": "高危漏洞: CVE-2026-16095 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-7mgc-c7pq-3rr3\nhttps://www.vulncheck.com/advisories/grav-2fa-bypass-via-secret-regeneration",
       "source": "NVD",
       "time": "2026-07-17 13:34:27"
-    },
-    {
-      "cve_id": "CVE-2026-62231",
-      "title": "高危漏洞: CVE-2026-62231 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.6 contains an authorization bypass: API keys can be created with a restricted scopes array, but the ApiKeyAuthenticator class never reads or enforces these scopes. It loads and returns the owning user's full account object, so a key created with limited scopes (e.g. read-only) can perform any write, delete, or administrative operation the owning user is authorized for. Fixed in 1.0.6.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-x7hm-jc32-v39j\nhttps://www.vulncheck.com/advisories/grav-api-key-scope-bypass-via-apikeyauthenticator",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:20"
-    },
-    {
-      "cve_id": "CVE-2026-62230",
-      "title": "高危漏洞: CVE-2026-62230 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Grav before 2.0.4 ships a default .htaccess (and reference webserver-configs/htaccess.txt) whose rules blocking access to sensitive file types (.yaml, .php, .json, etc.) lack the [NC] flag, making extension matching case-sensitive. On case-insensitive filesystems (Windows/NTFS, macOS/HFS+, or Docker volume mounts), an unauthenticated attacker can request these files with uppercase or mixed-case extensions (e.g., .YAML, .PHP) to bypass the restrictions and read sensitive configuration files that may contain API keys and credentials.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-vwg3-w8w3-pc79\nhttps://www.vulncheck.com/advisories/grav-file-access-bypass-via-case-variation",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:15"
-    },
-    {
-      "cve_id": "CVE-2026-62229",
-      "title": "高危漏洞: CVE-2026-62229 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.5.18 contain an authorization bypass vulnerability in exec allowlist glob matching that allows lower-trust callers to execute actions beyond intended authorization. Attackers can craft input paths that traverse the allowlist glob patterns to execute or persist unauthorized actions when the affected feature is enabled.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-34mr-7r3m-gfg7\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-glob-matching",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:10"
-    },
-    {
-      "cve_id": "CVE-2026-62228",
-      "title": "高危漏洞: CVE-2026-62228 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw before 2026.6.5 contain an authorization bypass vulnerability in node exec approvals that allows lower-trust callers to execute actions beyond their intended authorization by using different gateway and node environments. Attackers can exploit mismatched environment configurations to persist or execute actions that exceed the caller's approved permissions.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8f46-3xx3-8c9m\nhttps://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-node-exec-approvals",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:06"
-    },
-    {
-      "cve_id": "CVE-2026-62227",
-      "title": "高危漏洞: CVE-2026-62227 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-17 10:18:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "OpenClaw 2026.4.14 before 2026.5.26 contain a server-side request forgery vulnerability in browser snapshot routes that fail to validate post-navigation destinations. Attackers with lower-trust access can bypass OpenClaw policy checks to reach network destinations that should have been blocked.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2x93-h3hg-2xfp\nhttps://www.vulncheck.com/advisories/openclaw-ssrf-via-browser-snapshot",
-      "source": "NVD",
-      "time": "2026-07-17 13:34:01"
     }
   ]
 }
