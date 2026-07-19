@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16228",
+      "title": "高危漏洞: CVE-2026-16228 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 18:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /edit_schoolyr.php. Performing a manipulation of the argument ID results in sql injection. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/fichterclapsaddle879-rgb/MyCve/issues/1\nhttps://vuldb.com/cve/CVE-2026-16228\nhttps://vuldb.com/submit/858247",
+      "source": "NVD",
+      "time": "2026-07-19 20:54:06"
+    },
+    {
+      "cve_id": "CVE-2026-16227",
+      "title": "高危漏洞: CVE-2026-16227 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 18:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. This impacts an unknown function of the file /edit_subject.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/fichterclapsaddle879-rgb/MyCve/issues/2\nhttps://vuldb.com/cve/CVE-2026-16227\nhttps://vuldb.com/submit/858246",
+      "source": "NVD",
+      "time": "2026-07-19 20:54:00"
+    },
+    {
       "cve_id": "CVE-2026-16210",
       "title": "高危漏洞: CVE-2026-16210 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://ahnlab.com\nhttps://github.com/Nullbyte3117/CVE-2025-60357\nhttps://github.com/Nullbyte3117/CVE-2025-60357",
       "source": "NVD",
       "time": "2026-07-18 02:53:19"
-    },
-    {
-      "cve_id": "CVE-2024-23564",
-      "title": "高危漏洞: CVE-2024-23564 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-17 22:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "HCL Aftermarket EPC is affected by Business Logic Vulnerability using which a non valid user of the application can obtain passwords from the server and redirect them to their own email address by manipulating the server's response. The application includes checks in the initial requests to verify the validity of the provided UserId, but similar validation is not applied to Email requests when sending passwords to user emails.",
-      "refs": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0131787",
-      "source": "NVD",
-      "time": "2026-07-18 02:53:15"
-    },
-    {
-      "cve_id": "CVE-2026-8396",
-      "title": "高危漏洞: CVE-2026-8396 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-17 21:19:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Improper restriction of XML external entity reference vulnerability in Netcad Software Inc. NetGIS allows Serialized Data External Linking.\n\nThis issue affects NetGIS: from 5.0.66 before 7.2.2.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0570",
-      "source": "NVD",
-      "time": "2026-07-18 02:53:11"
     }
   ]
 }
