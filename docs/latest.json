@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-10130",
+      "title": "高危漏洞: CVE-2026-10130 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-19 07:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "QueryWeaver contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain valid session tokens for existing accounts by submitting a signup request with a known victim email address. The signup route unconditionally creates and links a new token to the matching Identity via a Cypher MERGE operation before checking whether the email belongs to an existing account, causing the server to return a valid authenticated session token for the victim's identity without requiring any prior credentials or user interaction.",
+      "refs": "https://github.com/FalkorDB/QueryWeaver\nhttps://github.com/FalkorDB/QueryWeaver/commit/e6a49f508191d0f1bdad0f146da43819e7849f18\nhttps://www.vulncheck.com/advisories/queryweaver-authentication-bypass-via-email-signup-token-issuance-for-existing-accounts",
+      "source": "NVD",
+      "time": "2026-07-19 09:44:12"
+    },
+    {
+      "cve_id": "CVE-2026-16154",
+      "title": "高危漏洞: CVE-2026-16154 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 05:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0/1.php. Affected by this vulnerability is an unknown functionality of the file /edit_room1.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/justconter/cve/issues/5\nhttps://vuldb.com/cve/CVE-2026-16154\nhttps://vuldb.com/submit/857079",
+      "source": "NVD",
+      "time": "2026-07-19 09:44:07"
+    },
+    {
+      "cve_id": "CVE-2026-16152",
+      "title": "高危漏洞: CVE-2026-16152 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 05:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /edit_rooma.php. Performing a manipulation of the argument ID results in sql injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/justconter/cve/issues/6\nhttps://vuldb.com/cve/CVE-2026-16152\nhttps://vuldb.com/submit/857078",
+      "source": "NVD",
+      "time": "2026-07-19 09:44:02"
+    },
+    {
+      "cve_id": "CVE-2026-12228",
+      "title": "高危漏洞: CVE-2026-12228 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-19 05:17:03",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "A stored cross-site scripting (XSS) vulnerability exists in the `POST /api/prompts/share` endpoint of parisneo/lollms (latest version). The endpoint stores attacker-controlled `prompt_content` into `DBDirectMessage.content` without server-side sanitization. When a victim opens the direct message (DM) thread, the message is rendered by the DM UI through `MessageContentRenderer`, which uses `v-html` to insert rendered HTML into the DOM. The frontend sanitizer, which is regex-based, fails to comprehensively sanitize attacker-controlled HTML, allowing malicious payloads to execute in the victim's browser context. This vulnerability enables any authenticated user to send a malicious prompt-share message to another user's inbox, leading to arbitrary JavaScript execution, authenticated actions as the victim, exposure of same-origin application data, and potential account takeover.",
+      "refs": "https://huntr.com/bounties/25623635-5ceb-4062-8289-02089e6d97c1",
+      "source": "NVD",
+      "time": "2026-07-19 09:43:56"
+    },
+    {
+      "cve_id": "CVE-2026-53994",
+      "title": "高危漏洞: CVE-2026-53994 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-19 04:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ProFTPD mod_sftp contains a heap-based buffer overflow reachable by an authenticated SFTP user. The fxp_packet_read() function accepts the attacker-supplied 32-bit big-endian SFTP packet length without a minimum sanity check. A value of 0 causes an unsigned subtraction elsewhere in the read path to underflow to approximately 4 GB. That oversized request reaches the core memory allocator, where the rounded size is computed in size_t but passed to new_block() as a 32-bit int; the low 32 bits of 0x100000000 are 0, so new_block() returns a small (~512-byte) block while the caller is told it received ~4 GB. The subsequent fill loop then streams attacker-controlled bytes past the end of the 544-byte allocation, producing an attacker-controlled heap buffer overflow. An authenticated user can crash the per-connection ProFTPD session child on demand with a single malformed SFTP packet (packet_len=0 followed by a body greater than approximately 544 bytes), producing reliable authenticated remote denial of service. Depending on heap layout and adjacent allocations, heap metadata corruption and further consequences beyond denial of service may be possible, though only denial of service is demonstrated by the supplied proof of concept.",
+      "refs": "https://github.com/proftpd/proftpd\nhttps://github.com/proftpd/proftpd/commit/7342836fa98e36209660a4c5805c801476f63936\nhttps://www.vulncheck.com/advisories/proftpd-mod-sftp-heap-buffer-overflow-via-unsigned-integer-underflow-and-size-truncation",
+      "source": "NVD",
+      "time": "2026-07-19 09:43:50"
+    },
+    {
       "cve_id": "CVE-2026-16128",
       "title": "高危漏洞: CVE-2026-16128 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1044,61 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/6378a370-fe2f-48e7-984f-6e6c575dba60/",
       "source": "NVD",
       "time": "2026-07-18 02:52:58"
-    },
-    {
-      "cve_id": "CVE-2026-11961",
-      "title": "高危漏洞: CVE-2026-11961 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 15:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The User Registration & Membership  WordPress plugin before 5.2.3 does not validate that the membership tier submitted during public registration is one of the tiers allowed by the registration form before assigning that tier's associated user role, allowing unauthenticated users to register into an arbitrary published membership tier and obtain its role — up to administrator when such a tier exists.",
-      "refs": "https://wpscan.com/vulnerability/2ffab574-8626-472e-b6e4-09bcbaa62349/",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:53"
-    },
-    {
-      "cve_id": "CVE-2026-11575",
-      "title": "高危漏洞: CVE-2026-11575 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-17 15:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The PhonePe Payment Solutions WordPress plugin before 3.1.0 does not properly verify the authenticity of incoming payment callbacks: the secret used to validate the callback signature is empty on sites configured through the current setup flow, so the expected signature reduces to an unkeyed hash of the request body that anyone can compute. This allows unauthenticated attackers to forge a payment-success notification and mark unpaid WooCommerce orders as paid without any payment being made.",
-      "refs": "https://wpscan.com/vulnerability/e35eb029-87c3-4837-87c1-4ad7f6f5817f/",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:48"
-    },
-    {
-      "cve_id": "CVE-2026-57077",
-      "title": "高危漏洞: CVE-2026-57077 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-07-17 06:17:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
-      "description": "YAML::Syck versions before 1.47 for Perl allow an out-of-bounds read via an unbounded newline scan in newline_len.\n\nIn the bundled libsyck newline_len and is_newline dereference the scan pointer, and the following byte for a \"\\r\\n\" pair, with no NUL-terminator or bounds check. During block-scalar lexing at a document boundary the scan runs one byte past the heap lexer buffer. This is an incomplete fix of CVE-2025-11683, on a lexer path the earlier fix did not cover.\n\nAny caller that runs Load or LoadFile on an untrusted document with a block scalar at a document boundary reaches the over-read.",
-      "refs": "https://github.com/toddr/YAML-Syck/commit/44c90a109ec3215ee7ce747bd11209835e123d8b.patch\nhttps://metacpan.org/release/TODDR/YAML-Syck-1.47/changes\nhttps://www.cve.org/CVERecord?id=CVE-2025-11683",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:44"
-    },
-    {
-      "cve_id": "CVE-2026-57076",
-      "title": "高危漏洞: CVE-2026-57076 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-17 06:17:43",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "YAML::Syck versions before 1.47 for Perl allow a heap use-after-free via an anchor name reused as an anchors-table key in syck_hdlr_add_anchor.\n\nIn the bundled libsyck an anchor name allocated by syck_strndup is stored both as node->anchor, freed when the node is freed, and as the key in the parser's anchors table. Freeing the node frees the shared key, and a later anchor redefinition makes st_delete compare against the freed key, so st_strcmp reads freed heap memory. Anchors are a standard YAML feature and need no special flags, so this is reached on the default Load path.\n\nAny caller that runs Load or LoadFile on an untrusted document that redefines an anchor reaches the read of freed memory.",
-      "refs": "https://github.com/toddr/YAML-Syck/commit/44c90a109ec3215ee7ce747bd11209835e123d8b.patch\nhttps://metacpan.org/release/TODDR/YAML-Syck-1.47/changes\nhttp://www.openwall.com/lists/oss-security/2026/07/17/3",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:38"
-    },
-    {
-      "cve_id": "CVE-2026-57075",
-      "title": "高危漏洞: CVE-2026-57075 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-17 06:17:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
-      "description": "YAML::Syck versions before 1.47 for Perl allow an out-of-bounds read via a signed-char lookup-table index in syck_base64dec.\n\nThe base64 decoder in the bundled libsyck indexes the 256-entry static table b64_xtable with a signed char, so any !!binary byte >= 0x80 sign-extends to a negative index and reads before the table. The decoder receives the raw bytes of any !!binary node, a standard YAML type not gated by $LoadBlessed or $LoadCode, so it is reached on the default Load path.\n\nAny caller that runs Load or LoadFile on an untrusted document containing a !!binary scalar with a high-bit byte triggers the read, and the value read can surface in the decoded result.",
-      "refs": "https://github.com/toddr/YAML-Syck/commit/44c90a109ec3215ee7ce747bd11209835e123d8b.patch\nhttps://metacpan.org/release/TODDR/YAML-Syck-1.47/changes\nhttp://www.openwall.com/lists/oss-security/2026/07/17/2",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:32"
     }
   ]
 }
