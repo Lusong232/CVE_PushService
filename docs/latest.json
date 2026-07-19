@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16221",
+      "title": "高危漏洞: CVE-2026-16221 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-19 23:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Impact: fast-uri versions from 2.3.1 through 4.1.0 (including the 3.x line up to 3.1.3 and the 2.x line up to 2.4.2) do not treat a literal backslash character (U+005C) as an authority delimiter. Node's native WHATWG URL parser, used by fetch, undici, and Node's http and https clients, normalizes the backslash to a forward slash for special schemes such as http, https, ws, wss, ftp, and file. As a result, the two parsers extract different hosts from the same input string. Applications that use fast-uri to enforce host-based policy such as allowlists, denylists, loopback or SSRF filtering, redirect validation, or outbound proxy routing before passing the same URL into Node's URL or fetch consumers can be steered to an unintended destination, including cloud metadata endpoints, loopback, or internal hosts. \n\nPatches: upgrade to fast-uri 4.1.1, 3.1.4, or 2.4.3.\n\nWorkarounds: none.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fast-uri/security/advisories/GHSA-v2hh-gcrm-f6hx",
+      "source": "NVD",
+      "time": "2026-07-20 02:50:21"
+    },
+    {
       "cve_id": "CVE-2026-16228",
       "title": "高危漏洞: CVE-2026-16228 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/poco-ai/poco-claw/\nhttps://github.com/poco-ai/poco-claw/issues/138\nhttps://vuldb.com/cve/CVE-2026-16016",
       "source": "NVD",
       "time": "2026-07-18 02:53:27"
-    },
-    {
-      "cve_id": "CVE-2025-60357",
-      "title": "高危漏洞: CVE-2025-60357 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-17 22:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "AhnLab EPP Management v1.0.14.32-6249 was discovered to contain a NoSQL injection vulnerability via the eventlog/agentEvent/list endpoint.",
-      "refs": "https://ahnlab.com\nhttps://github.com/Nullbyte3117/CVE-2025-60357\nhttps://github.com/Nullbyte3117/CVE-2025-60357",
-      "source": "NVD",
-      "time": "2026-07-18 02:53:19"
     }
   ]
 }
