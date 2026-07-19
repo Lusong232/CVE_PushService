@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16210",
+      "title": "高危漏洞: CVE-2026-16210 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 12:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in newpanjing simpleui 2026.01.13. This affects the function self.get_action of the file simpleui/admin.py of the component AjaxAdmin AJAX Endpoint. Performing a manipulation results in missing authentication. Remote exploitation of the attack is possible. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/newpanjing/simpleui/\nhttps://github.com/newpanjing/simpleui/issues/537\nhttps://vuldb.com/cve/CVE-2026-16210",
+      "source": "NVD",
+      "time": "2026-07-19 13:41:46"
+    },
+    {
+      "cve_id": "CVE-2026-16209",
+      "title": "高危漏洞: CVE-2026-16209 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 12:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Gerapy up to 0.9.13. The impacted element is an unknown function of the file gerapy/server/core/views.py of the component Project Upload Endpoint. Such manipulation leads to missing authentication. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The name of the patch is bd4891c60315f17611a3b7a651ffe0fba7cfe71e. Applying a patch is advised to resolve this issue.",
+      "refs": "https://github.com/Gerapy/Gerapy/\nhttps://github.com/Gerapy/Gerapy/commit/bd4891c60315f17611a3b7a651ffe0fba7cfe71e\nhttps://github.com/Gerapy/Gerapy/issues/317",
+      "source": "NVD",
+      "time": "2026-07-19 13:41:38"
+    },
+    {
+      "cve_id": "CVE-2026-16200",
+      "title": "高危漏洞: CVE-2026-16200 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-19 09:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in zevorn rt-claw up to 0.2.0. This impacts the function claw_tool_invoke of the file claw/services/swarm/swarm.c of the component RPC Handler. The manipulation leads to incorrect authorization. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/zevorn/rt-claw/\nhttps://github.com/zevorn/rt-claw/issues/133\nhttps://vuldb.com/cve/CVE-2026-16200",
+      "source": "NVD",
+      "time": "2026-07-19 13:41:31"
+    },
+    {
       "cve_id": "CVE-2026-10130",
       "title": "高危漏洞: CVE-2026-10130 (CVSS 8.2)",
       "cvss_score": 8.2,
@@ -1066,39 +1099,6 @@
       "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0570",
       "source": "NVD",
       "time": "2026-07-18 02:53:11"
-    },
-    {
-      "cve_id": "CVE-2026-7189",
-      "title": "高危漏洞: CVE-2026-7189 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-17 21:19:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Insertion of sensitive information into sent data vulnerability in Proliz Software Ltd. Co. Proliz's OBS allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Proliz's OBS: before v3.6.0.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0571",
-      "source": "NVD",
-      "time": "2026-07-18 02:53:06"
-    },
-    {
-      "cve_id": "CVE-2026-16014",
-      "title": "高危漏洞: CVE-2026-16014 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-17 21:17:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in code-projects Hospital Bed Management System 1.0. This affects an unknown part of the component Login Form. Performing a manipulation of the argument Username results in sql injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
-      "refs": "https://code-projects.org/\nhttps://gitee.com/Ajkss/cve/issues/IJU5GU\nhttps://vuldb.com/cve/CVE-2026-16014",
-      "source": "NVD",
-      "time": "2026-07-18 02:53:02"
-    },
-    {
-      "cve_id": "CVE-2026-9810",
-      "title": "高危漏洞: CVE-2026-9810 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-17 15:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The AI Copilot  WordPress plugin before 1.5.4 does not bind OAuth access tokens to a WordPress user, and accepts any valid token as an administrator session, allowing unauthenticated attackers who complete the public OAuth flow to execute privileged MCP tools as an administrator, including arbitrary user creation and role escalation.",
-      "refs": "https://wpscan.com/vulnerability/6378a370-fe2f-48e7-984f-6e6c575dba60/",
-      "source": "NVD",
-      "time": "2026-07-18 02:52:58"
     }
   ]
 }
