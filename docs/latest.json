@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-64619",
+      "title": "高危漏洞: CVE-2026-64619 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-21 03:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "FileCodeBox before 2.4 contains a rate-limit bypass vulnerability in the IPRateLimit class that allows unauthenticated attackers to circumvent request throttling by supplying attacker-controlled X-Real-IP and X-Forwarded-For headers without verification of trusted reverse proxy origin. Attackers can supply unique spoofed IP values on each request to enumerate all possible share codes and retrieve other users' files without authentication.",
+      "refs": "https://github.com/vastsa/FileCodeBox/commit/1b6d8e7277d3cfa34dc7a85803731d927b2147da\nhttps://github.com/vastsa/FileCodeBox/issues/479\nhttps://github.com/vastsa/FileCodeBox/releases/tag/V2.4",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:32"
+    },
+    {
+      "cve_id": "CVE-2026-63771",
+      "title": "高危漏洞: CVE-2026-63771 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-21 03:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+      "description": "Adminer before 5.4.3 contains a cookie injection vulnerability that allows attackers to manipulate cookie attributes by injecting arbitrary values through the unsanitized X-Forwarded-Prefix HTTP header used in Set-Cookie path attributes. Attackers can exploit a misconfigured reverse proxy to downgrade SameSite protection and enable cross-origin authenticated requests, bypassing cookie security controls.",
+      "refs": "https://github.com/vrana/adminer/issues/1298\nhttps://github.com/vrana/adminer/releases#release-v5.4.3\nhttps://github.com/vrana/adminer/security/advisories/GHSA-c533-9qwm-8w5h",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:28"
+    },
+    {
+      "cve_id": "CVE-2026-63770",
+      "title": "高危漏洞: CVE-2026-63770 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-21 03:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Glance through 0.8.5 contains an IP address spoofing vulnerability in the authentication handler that allows unauthenticated attackers to bypass brute-force lockout protections by supplying arbitrary values in the X-Forwarded-For request header when the server proxied option is enabled. Attackers can manipulate the leftmost value of the X-Forwarded-For header to make each login attempt appear to originate from a distinct IP address, preventing the per-IP failed-login counter from reaching the lockout threshold and enabling unlimited credential guessing against the authentication endpoint.",
+      "refs": "https://github.com/glanceapp/glance/issues/1031\nhttps://github.com/glanceapp/glance/pull/1033\nhttps://www.vulncheck.com/advisories/glance-ip-spoofing-authentication-brute-force-protection-bypass",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:24"
+    },
+    {
+      "cve_id": "CVE-2026-63769",
+      "title": "高危漏洞: CVE-2026-63769 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-21 03:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Huginn through 2022.08.18 contains a server-side request forgery vulnerability in the fetch_url method of ScenarioImport that allows authenticated users to make arbitrary HTTP requests by submitting crafted URLs. Attackers can probe internal network services, enumerate ports via error signatures, and access cloud metadata endpoints to retrieve sensitive credentials.",
+      "refs": "https://github.com/huginn/huginn/issues/3679\nhttps://github.com/huginn/huginn/pull/3684\nhttps://www.vulncheck.com/advisories/huginn-ssrf-via-scenarioimport-fetch-url-method",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:19"
+    },
+    {
+      "cve_id": "CVE-2026-63731",
+      "title": "高危漏洞: CVE-2026-63731 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-21 03:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "HyperDX before 2.31.0 contains a server-side request forgery vulnerability that allows authenticated team members to direct the server to arbitrary internal destinations by supplying a caller-controlled host parameter to the ClickHouse proxy test endpoint with no URL validation or allowlist enforcement. Attackers can exploit the reflected error responses from the endpoint to disclose internal service response bodies, enabling access to internal APIs, container services, and cloud provider metadata endpoints.",
+      "refs": "https://github.com/hyperdxio/hyperdx/commit/1705b37ac68acc222cd038327ed79e167e256a1b\nhttps://github.com/hyperdxio/hyperdx/issues/2588\nhttps://github.com/hyperdxio/hyperdx/pull/2593",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:15"
+    },
+    {
+      "cve_id": "CVE-2026-63108",
+      "title": "高危漏洞: CVE-2026-63108 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-21 03:17:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Roo Code through 3.54.0 contains a command injection vulnerability in the auto-approve execute feature that allows attackers to bypass allowlist/denylist enforcement by nesting command substitutions inside parameter expansion defaults. The command parser in parse-command.ts replaces parameter expansions with opaque placeholders before extracting command substitutions, causing the containsDangerousSubstitution guard to miss nested payloads, which are then auto-approved based on the outer allowlisted command prefix and executed by the shell via execa, enabling arbitrary command execution.",
+      "refs": "https://github.com/geo-chen/oss/blob/main/Roo-Code.md\nhttps://www.vulncheck.com/advisories/roo-code-command-injection-via-parameter-expansion-parsing",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:11"
+    },
+    {
+      "cve_id": "CVE-2026-63107",
+      "title": "高危漏洞: CVE-2026-63107 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-07-21 03:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "LimeSurvey through 6.17.10 and 7.0.4 contains a server-side request forgery vulnerability in the REST API survey template endpoint that allows authenticated users to cause the server to issue arbitrary HTTP requests by supplying a manipulated Host header. Attackers can exploit the unsanitized use of the HTTP Host header in the getTemplateData() function to reach internal network services, cloud metadata endpoints, and extract sensitive credentials such as IAM tokens from instance metadata services.",
+      "refs": "https://github.com/geo-chen/oss/blob/main/limesurvey.md\nhttps://www.vulncheck.com/advisories/limesurvey-ssrf-via-rest-api-survey-template-host-header",
+      "source": "NVD",
+      "time": "2026-07-21 05:55:05"
+    },
+    {
+      "cve_id": "CVE-2026-48389",
+      "title": "高危漏洞: CVE-2026-48389 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-21 03:17:23",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "DNG SDK versions 1.7.1 2536 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+      "refs": "https://helpx.adobe.com/security/products/dng-sdk/apsb26-67.html",
+      "source": "NVD",
+      "time": "2026-07-21 05:54:56"
+    },
+    {
+      "cve_id": "CVE-2026-12341",
+      "title": "高危漏洞: CVE-2026-12341 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-21 03:17:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "This vulnerability\nimpacts all versions of IdentityIQ and allows an unauthenticated attacker\nunauthorized access to protected APIs and data due to improper validation of\nOAuth bearer tokens.",
+      "refs": "https://www.sailpoint.com/security-advisories/",
+      "source": "NVD",
+      "time": "2026-07-21 05:54:52"
+    },
+    {
+      "cve_id": "CVE-2026-64612",
+      "title": "高危漏洞: CVE-2026-64612 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-21 02:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in libcupsfilters and cups-filters. The PNG image reading function creates a libpng reader without installing an error recovery handler, causing the CUPS image filter process to abort when processing a malformed PNG file. An unauthenticated attacker could exploit this by submitting a specially crafted PNG print job, leading to denial of service of the in-flight print job.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-64612\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2502801\nhttps://github.com/OpenPrinting/libcupsfilters/security/advisories/GHSA-7mxj-cfq5-84ch",
+      "source": "NVD",
+      "time": "2026-07-21 05:54:48"
+    },
+    {
+      "cve_id": "CVE-2026-55626",
+      "title": "高危漏洞: CVE-2026-55626 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-21 02:16:54",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "xrdp is an open source RDP server. In versions 0.10.6 and prior, when an authenticated user session is initialized using the Xvnc backend over UNIX domain sockets, the Xvnc process is launched with insufficient authentication mechanisms. A local authenticated attacker could exploit this vulnerability to bypass intended session isolation, allowing them to unauthorizedly view or control the active desktop sessions of other users on the same system. Users using other backends, such as xorgxrdp or Xvnc over TCP sockets, are not affected. This issue has been fixed in version 0.10.6.1.",
+      "refs": "https://github.com/neutrinolabs/xrdp/releases/tag/v0.10.6.1\nhttps://github.com/neutrinolabs/xrdp/security/advisories/GHSA-m3xx-cpc4-982r",
+      "source": "NVD",
+      "time": "2026-07-21 05:54:43"
+    },
+    {
+      "cve_id": "CVE-2026-48812",
+      "title": "高危漏洞: CVE-2026-48812 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-21 02:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.221, FreeScout's attachment download route skips token authentication for any attachment whose `token_type` is set to `1` (`TOKEN_TYPE_LEGACY`). Because this route is unauthenticated and the file path is deterministic, an unauthenticated remote attacker can download any attachment that was created by an older version of FreeScout without possessing a valid token or session. Version 1.8.221 contains a fix.",
+      "refs": "https://github.com/freescout-help-desk/freescout/commit/215241ee2eb73eaa3b47e392599c7dc1b427dc7e\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-wg74-ww4w-2qpc\nhttps://github.com/freescout-help-desk/freescout/security/advisories/GHSA-wg74-ww4w-2qpc",
+      "source": "NVD",
+      "time": "2026-07-21 05:54:38"
+    },
+    {
+      "cve_id": "CVE-2026-39878",
+      "title": "高危漏洞: CVE-2026-39878 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-07-21 02:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Chamilo LMS versions 1.11.38 and earlier contain a stored cross-site scripting vulnerability in the user registration form that allows any unauthenticated attacker to execute arbitrary JavaScript in an administrator's browser session, leading to full platform admin account takeover. This has been patched in 1.11.40.",
+      "refs": "https://github.com/chamilo/chamilo-lms/security/advisories/GHSA-gcjp-f7jm-rrrg",
+      "source": "NVD",
+      "time": "2026-07-21 05:54:33"
+    },
+    {
       "cve_id": "CVE-2026-58484",
       "title": "高危漏洞: CVE-2026-58484 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -956,149 +1099,6 @@
       "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
       "source": "NVD",
       "time": "2026-07-18 20:51:54"
-    },
-    {
-      "cve_id": "CVE-2026-47870",
-      "title": "高危漏洞: CVE-2026-47870 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
-      "description": "VMware Avi Load Balancer contains a privilege escalation vulnerability. A malicious authenticated user with network access may be able to execute remote code.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:49"
-    },
-    {
-      "cve_id": "CVE-2026-47869",
-      "title": "高危漏洞: CVE-2026-47869 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious authenticated user with network access may be able to inject and execute code.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:42"
-    },
-    {
-      "cve_id": "CVE-2026-47868",
-      "title": "高危漏洞: CVE-2026-47868 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "VMware Avi Load Balancer contains a local privilege escalation vulnerability. A malicious user with local access may be able to escalate their privileges to run code as root.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:38"
-    },
-    {
-      "cve_id": "CVE-2026-47867",
-      "title": "高危漏洞: CVE-2026-47867 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious user with network access may be able to access the Avi Control plane and execute code remotely.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:33"
-    },
-    {
-      "cve_id": "CVE-2026-47866",
-      "title": "高危漏洞: CVE-2026-47866 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "VMware Avi Load Balancer contains an authorization bypass vulnerability. A malicious actor on the network can access a limited subset of the Avi Control Plane without proper authorization.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:26"
-    },
-    {
-      "cve_id": "CVE-2026-47865",
-      "title": "高危漏洞: CVE-2026-47865 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "VMware Avi Load Balancer contains an authentication bypass vulnerability. A malicious user with network access may be able to access the Avi Control plane by bypassing the authentication mechanism.\n\nAffected versions:\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37926",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:21"
-    },
-    {
-      "cve_id": "CVE-2026-16084",
-      "title": "高危漏洞: CVE-2026-16084 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-18 17:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in Sipeed PicoClaw up to 0.2.9. This impacts the function web_fetch of the file pkg/tools/integration/web.go. This manipulation causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. Patch name: c15aac21fe05ee103a470e1104bc891754e83392. To fix this issue, it is recommended to deploy a patch.",
-      "refs": "https://github.com/sipeed/picoclaw/\nhttps://github.com/sipeed/picoclaw/commit/c15aac21fe05ee103a470e1104bc891754e83392\nhttps://github.com/sipeed/picoclaw/issues/3074",
-      "source": "NVD",
-      "time": "2026-07-18 20:51:17"
-    },
-    {
-      "cve_id": "CVE-2026-56741",
-      "title": "高危漏洞: CVE-2026-56741 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-18 06:17:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "JLine is a Java library for handling console input. Prior to 3.30.14, 4.0.16, and 4.2.1, the JLine3 Telnet server remote-telnet module does not apply an upper bound to terminal dimensions received via the Telnet NAWS option, and TelnetIO.handleNAWS() in TelnetIO.java:856-879 reads client-supplied width and height as 16-bit unsigned integers and passes values such as 65535x65535 to setTerminalGeometry(), allowing an unauthenticated remote attacker to repeatedly alternate values and trigger continuous expensive rendering work that causes CPU exhaustion and denial of service. This issue is fixed in versions 3.30.14, 4.0.16, and 4.2.1.",
-      "refs": "https://github.com/jline/jline3/commit/3ea9cad8699714dc072fade29d36be0d1e23d708\nhttps://github.com/jline/jline3/commit/733eb353dca7b0ea0252e724445b6defa29c393e\nhttps://github.com/jline/jline3/commit/86b7ba7801988aadb1a67555629522a71d603bd3",
-      "source": "NVD",
-      "time": "2026-07-18 09:30:12"
-    },
-    {
-      "cve_id": "CVE-2026-56740",
-      "title": "高危漏洞: CVE-2026-56740 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-18 06:17:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "JLine is a Java library for handling console input. Prior to 3.30.14, 4.0.16, and 4.2.1, the JLine3 Telnet server remote-telnet module does not limit the number of environment variables a client may inject via the Telnet NEW-ENVIRON option, and TelnetIO.readNEVariables() in TelnetIO.java:1127-1180 stores each variable pair in a HashMap held by ConnectionData, allowing an unauthenticated attacker to flood unique variable pairs before the terminating IAC SE byte and exhaust JVM heap memory with an OutOfMemoryError. This issue is fixed in versions 3.30.14, 4.0.16, and 4.2.1.",
-      "refs": "https://github.com/jline/jline3/commit/0389f0ee6d0375901b602671ad5dafd4d1d4ee09\nhttps://github.com/jline/jline3/commit/4ee3a73849ffb9a85ec748e4e8cd8f6d81f84f40\nhttps://github.com/jline/jline3/commit/934f09e6128cee33c2b13d42b6e859c1ee2d194b",
-      "source": "NVD",
-      "time": "2026-07-18 09:30:08"
-    },
-    {
-      "cve_id": "CVE-2026-56171",
-      "title": "高危漏洞: CVE-2026-56171 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-18 06:17:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
-      "description": "Exposure of private personal information to an unauthorized actor in Windows RDP allows an unauthorized attacker to disclose information over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56171",
-      "source": "NVD",
-      "time": "2026-07-18 09:30:04"
-    },
-    {
-      "cve_id": "CVE-2026-49485",
-      "title": "高危漏洞: CVE-2026-49485 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-18 06:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.9 and 6.9.4.2, all implementations of FHIRPathEngine accept arbitrary FHIRPath expressions and evaluate them without input validation, and the FHIRPath functions matches(), matchesFull(), and replaceMatches() pass user-controlled regular expressions to Java's Pattern.compile() and String.replaceAll() through an incomplete timeout utility. An attacker can send a resource containing an evil regex pattern that causes catastrophic backtracking, exhausting CPU resources and causing denial of service in the FHIR Validator HTTP endpoint and affected org.hl7.fhir.* modules. This issue is fixed in versions 6.9.9 and 6.9.4.2.",
-      "refs": "https://github.com/hapifhir/org.hl7.fhir.core/commit/109c88837c032ef399b2eb87ddde86692065cf41\nhttps://github.com/hapifhir/org.hl7.fhir.core/commit/e08982d2b6f6dcd6c670a762d9cf999179fbe4ed\nhttps://github.com/hapifhir/org.hl7.fhir.core/pull/2463",
-      "source": "NVD",
-      "time": "2026-07-18 09:30:00"
-    },
-    {
-      "cve_id": "CVE-2026-55518",
-      "title": "高危漏洞: CVE-2026-55518 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-18 05:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Avo is a framework to create admin panels for Ruby on Rails apps. Prior to 3.32.1 and 4.0.0.beta.51, Avo's association attach workflow checks attach_<association>? in the UI and GET /resources/:resource/:id/:related/new path, but the actual write endpoint, POST /resources/:resource/:id/:related, does not run the same authorization check before mutating the association through Avo::AssociationsController#create. An authenticated low-privileged Avo user can bypass hidden or disabled attach controls and directly attach related records to a parent record by sending a crafted POST request, which can lead to privilege escalation and cross-tenant data exposure where associations represent authorization-bearing relationships. This issue is fixed in versions 3.32.1 and 4.0.0.beta.51.",
-      "refs": "https://github.com/avo-hq/avo/commit/995928e586fd1788dd496bd51c4dbe4a79cb2b9c\nhttps://github.com/avo-hq/avo/pull/4568\nhttps://github.com/avo-hq/avo/releases/tag/v3.32.1",
-      "source": "NVD",
-      "time": "2026-07-18 09:29:56"
-    },
-    {
-      "cve_id": "CVE-2026-54498",
-      "title": "高危漏洞: CVE-2026-54498 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-07-18 05:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "view_component is a framework for building reusable, testable, and encapsulated view components in Ruby on Rails. From 4.0.0 until 4.12.0, ViewComponent::Base#around_render can return HTML-unsafe strings that bypass the escaping behavior applied to normal #call return values. This creates an XSS risk when downstream applications use around_render to wrap, replace, instrument, or conditionally return content that includes user-controlled data, and ViewComponent::Collection#render_in can amplify the issue by joining per-item results and marking the entire output html_safe, converting raw unsafe output into an ActiveSupport::SafeBuffer. This issue is fixed in version 4.12.0.",
-      "refs": "https://github.com/ViewComponent/view_component/commit/48e5fd2d602344c7d33019fbc5c8b087e315bb78\nhttps://github.com/ViewComponent/view_component/commit/6796b2e89d0bd7b9d7d763a86275e5334731dd61\nhttps://github.com/ViewComponent/view_component/releases/tag/v4.12.0",
-      "source": "NVD",
-      "time": "2026-07-18 09:29:49"
     }
   ]
 }
