@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-1771",
+      "title": "高危漏洞: CVE-2026-1771 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-21 17:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MapSVG plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the SVGFile constructor in all versions up to, and including, 8.14.0 This is due to an incorrect conditional check that prevents file validation from taking place. This makes it possible for authenticated attackers, with Administrator-level access and above, to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/mapsvg-lite-interactive-vector-maps/tags/8.9.1/php/Domain/File/FilesRepository.php#L166\nhttps://plugins.trac.wordpress.org/browser/mapsvg-lite-interactive-vector-maps/tags/8.9.1/php/Domain/SVGFile/SVGFile.php#L24\nhttps://plugins.trac.wordpress.org/browser/mapsvg-lite-interactive-vector-maps/tags/8.9.1/php/Router.php#L641",
+      "source": "NVD",
+      "time": "2026-07-21 18:56:07"
+    },
+    {
+      "cve_id": "CVE-2026-3183",
+      "title": "高危漏洞: CVE-2026-3183 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-21 16:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+      "description": "Zohocorp ManageEngine ADSelfService Plus versions before 6524 are vulnerable to Multi Factor Authentication Bypass.",
+      "refs": "https://www.manageengine.com/products/self-service-password/advisory/CVE-2026-3183.html",
+      "source": "NVD",
+      "time": "2026-07-21 18:56:01"
+    },
+    {
+      "cve_id": "CVE-2026-13439",
+      "title": "高危漏洞: CVE-2026-13439 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-21 14:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Easy Form Builder by WhiteStudio plugin for WordPress is vulnerable to Unauthenticated Privilege Escalation to Administrator in versions up to, and including, 4.0.11 This is due to the password recovery flow using the publicly-visible session identifier ('sid') as the password reset token stored in wp_emsfb_temp_links, combined with a publicly-accessible nonce refresh endpoint (Emsfb/v1/nonce/refresh) that issues valid WordPress REST nonces to unauthenticated visitors. This makes it possible for unauthenticated attackers to reset the password of any WordPress user — including administrators — by scraping the public sid from a published login form page, submitting a recovery request for any known user email via Emsfb/v1/forms/message/add, and then calling Emsfb/v1/forms/recovery/efb_set_password with the known sid to set an arbitrary new password and gain full administrator access.",
+      "refs": "https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L1587\nhttps://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5024\nhttps://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5060",
+      "source": "NVD",
+      "time": "2026-07-21 18:55:54"
+    },
+    {
       "cve_id": "CVE-2026-6952",
       "title": "高危漏洞: CVE-2026-6952 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/meshtastic/firmware/commit/2cc13a1132d94b66a9505e7f07ee2d3e83bd0c95\nhttps://github.com/meshtastic/firmware/security/advisories/GHSA-7ph5-2mjv-69h8",
       "source": "NVD",
       "time": "2026-07-20 13:59:16"
-    },
-    {
-      "cve_id": "CVE-2026-12484",
-      "title": "高危漏洞: CVE-2026-12484 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-20 04:16:28",
-      "vector_string": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability in keras-team/keras version 3.15.0 allows unsafe deserialization of attacker-controlled PyTorch pickle data through the public `keras.layers.TorchModuleWrapper.from_config` method. This method invokes `torch.load(..., weights_only=False)` without requiring an explicit unsafe opt-in, such as a `safe_mode=False` parameter. When called outside a `SafeModeScope(True)` context, the absence of an ambient safe mode state permits unsafe deserialization by default. This issue can lead to arbitrary code execution if untrusted Keras layer configurations are processed using this method. The vulnerability arises because the method does not enforce safe deserialization practices unless explicitly guarded by Keras safe mode.",
-      "refs": "https://huntr.com/bounties/ab14df49-13b5-4442-b754-3189430bfa28",
-      "source": "NVD",
-      "time": "2026-07-20 09:59:48"
-    },
-    {
-      "cve_id": "CVE-2026-16221",
-      "title": "高危漏洞: CVE-2026-16221 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-19 23:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Impact: fast-uri versions from 2.3.1 through 4.1.0 (including the 3.x line up to 3.1.3 and the 2.x line up to 2.4.2) do not treat a literal backslash character (U+005C) as an authority delimiter. Node's native WHATWG URL parser, used by fetch, undici, and Node's http and https clients, normalizes the backslash to a forward slash for special schemes such as http, https, ws, wss, ftp, and file. As a result, the two parsers extract different hosts from the same input string. Applications that use fast-uri to enforce host-based policy such as allowlists, denylists, loopback or SSRF filtering, redirect validation, or outbound proxy routing before passing the same URL into Node's URL or fetch consumers can be steered to an unintended destination, including cloud metadata endpoints, loopback, or internal hosts. \n\nPatches: upgrade to fast-uri 4.1.1, 3.1.4, or 2.4.3.\n\nWorkarounds: none.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fast-uri/security/advisories/GHSA-v2hh-gcrm-f6hx",
-      "source": "NVD",
-      "time": "2026-07-20 02:50:21"
-    },
-    {
-      "cve_id": "CVE-2026-16228",
-      "title": "高危漏洞: CVE-2026-16228 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-19 18:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /edit_schoolyr.php. Performing a manipulation of the argument ID results in sql injection. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/fichterclapsaddle879-rgb/MyCve/issues/1\nhttps://vuldb.com/cve/CVE-2026-16228\nhttps://vuldb.com/submit/858247",
-      "source": "NVD",
-      "time": "2026-07-19 20:54:06"
     }
   ]
 }
