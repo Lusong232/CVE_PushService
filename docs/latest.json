@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-3821",
+      "title": "高危漏洞: CVE-2026-3821 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-22 15:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Supermicro (SMC) SMASH services contain an Arbitrary code execution issue in X14DBG-DAP and X14DBI.\nAn authorized attacker can exploit SMASH’s input capability to compromise data integrity or launch a Denial-of-Service (DoS) attack against the BMC.",
+      "refs": "https://www.supermicro.com/en/support/security_BMC_IPMI_Jul_2026",
+      "source": "NVD",
+      "time": "2026-07-22 18:57:50"
+    },
+    {
+      "cve_id": "CVE-2026-15802",
+      "title": "高危漏洞: CVE-2026-15802 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-22 13:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The WP Foodbakery plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'delete_locations_backup_file_callback' function in all versions up to, and including, 4.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).",
+      "refs": "https://themeforest.net/item/food-bakery-restaurant-bakery-responsive-wordpress-theme/18970331\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/45c8d883-1f97-4c9d-b406-c61e33a0959e?source=cve",
+      "source": "NVD",
+      "time": "2026-07-22 18:57:43"
+    },
+    {
       "cve_id": "CVE-2026-56820",
       "title": "高危漏洞: CVE-2026-56820 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1077,28 +1099,6 @@
       "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
       "source": "NVD",
       "time": "2026-07-22 10:40:06"
-    },
-    {
-      "cve_id": "CVE-2026-61188",
-      "title": "高危漏洞: CVE-2026-61188 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-22 06:18:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Agile Product Lifecycle Management for Process product of Oracle Supply Chain (component: Installation).   The supported version that is affected is 6.2.4. Difficult to exploit vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Agile Product Lifecycle Management for Process.  Successful attacks of this vulnerability can result in takeover of Oracle Agile Product Lifecycle Management for Process. CVSS 3.1 Base Score 7.5 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:40:02"
-    },
-    {
-      "cve_id": "CVE-2026-61186",
-      "title": "高危漏洞: CVE-2026-61186 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-07-22 06:18:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
-      "description": "Vulnerability in the Oracle Agile Engineering Data Management product of Oracle Supply Chain (component: Install).   The supported version that is affected is 6.2.1. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Agile Engineering Data Management.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Agile Engineering Data Management accessible data as well as  unauthorized read access to a subset of Oracle Agile Engineering Data Management accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle Agile Engineering Data Management. CVSS 3.1 Base Score 9.4 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:39:58"
     }
   ]
 }
