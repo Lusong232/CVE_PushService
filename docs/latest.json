@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-64835",
+      "title": "高危漏洞: CVE-2026-64835 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-23 02:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FFmpeg versions 4.4 through 8.1.2 contain an out-of-bounds memory access vulnerability in the ADX audio decoder within libavcodec/adxdec.c that allows attackers to trigger both out-of-bounds reads and writes by supplying a crafted ADX or AAX audio file with a mid-stream channel layout change. When AV_PKT_DATA_NEW_EXTRADATA side data is received mid-stream, the adx_decode_frame function re-parses the stream header but fails to update the internal channel state, causing subsequent decoding operations to access the prev[] state array using a stale channel count.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/1836ef96846937a6cc2443698a693104f5c0b21e\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23659\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-memory-access-in-adx-audio-decoder",
+      "source": "NVD",
+      "time": "2026-07-23 05:56:42"
+    },
+    {
+      "cve_id": "CVE-2026-64834",
+      "title": "高危漏洞: CVE-2026-64834 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-23 02:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "FFmpeg versions 0.6.3 through 8.1.2 contain an infinite loop vulnerability in the RTP/ASF demuxer within libavformat/rtpdec_asf.c that allows remote attackers to cause denial of service by sending a crafted RTP/ASF stream. The rtp_asf_fix_header function fails to validate a minimum chunksize when iterating over ASF objects, causing the loop pointer to never advance when a chunksize is smaller than the 24-byte minimum ASF object header size, resulting in CPU exhaustion that denies service to legitimate users.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/11d5f475be95d22d5f0692220cc772b116abc632\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23663\nhttps://www.vulncheck.com/advisories/ffmpeg-infinite-loop-dos-via-rtp-asf-demuxer",
+      "source": "NVD",
+      "time": "2026-07-23 05:56:37"
+    },
+    {
+      "cve_id": "CVE-2026-64833",
+      "title": "高危漏洞: CVE-2026-64833 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-23 02:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+      "description": "FFmpeg versions 0.7.1 through 8.1.2 contain an out-of-bounds read vulnerability in the S/PDIF muxer that allows attackers to access memory beyond buffer boundaries by supplying a crafted DTS stream with a core_size value larger than the actual packet length. Attackers can exploit the missing bounds check in the spdif_header_dts4 function by providing a malicious DTS-HD audio stream during S/PDIF re-muxing to trigger unauthorized memory reads beyond the packet buffer.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/6f80e2765492700622596af720534cef33dd31b4\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23661\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-read-via-s-pdif-muxer-spdifenc-c",
+      "source": "NVD",
+      "time": "2026-07-23 05:56:32"
+    },
+    {
+      "cve_id": "CVE-2026-64832",
+      "title": "高危漏洞: CVE-2026-64832 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-23 02:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FFmpeg versions 4.4 through 8.1.2 contain a double-free vulnerability in the NVIDIA NVDEC hardware decoder within libavcodec/nvdec.c that allows attackers to trigger memory corruption by supplying a crafted video file. When no decoder surfaces remain, the ff_nvdec_start_frame_sep_ref error path frees memory via nvdec_fdd_priv_free while the calling layer subsequently frees the same frame description data, resulting in a double-free of the underlying decoder context in any FFmpeg-based application using NVDEC hardware-accelerated decoding.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/4c6217477fc64305055b37d9d1d0d76d30e37f97\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23664\nhttps://www.vulncheck.com/advisories/ffmpeg-double-free-in-nvdec-hardware-decoder-via-nvdec-c",
+      "source": "NVD",
+      "time": "2026-07-23 05:56:27"
+    },
+    {
       "cve_id": "CVE-2026-65013",
       "title": "高危漏洞: CVE-2026-65013 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
       "source": "NVD",
       "time": "2026-07-22 10:44:45"
-    },
-    {
-      "cve_id": "CVE-2026-61338",
-      "title": "高危漏洞: CVE-2026-61338 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-22 06:19:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vulnerability in the Oracle Contracts Integration product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Contracts Integration.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Contracts Integration accessible data as well as  unauthorized access to critical data or complete access to all Oracle Contracts Integration accessible data. CVSS 3.1 Base Score 8.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:44:41"
-    },
-    {
-      "cve_id": "CVE-2026-61337",
-      "title": "高危漏洞: CVE-2026-61337 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-22 06:19:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Lease and Finance Management product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.11-12.2.15. Difficult to exploit vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Lease and Finance Management.  Successful attacks of this vulnerability can result in takeover of Oracle Lease and Finance Management. CVSS 3.1 Base Score 7.5 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:44:36"
-    },
-    {
-      "cve_id": "CVE-2026-61336",
-      "title": "高危漏洞: CVE-2026-61336 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-22 06:19:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Lease and Finance Management product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.14-12.2.15. Easily exploitable vulnerability allows high privileged attacker with network access via HTTP to compromise Oracle Lease and Finance Management.  Successful attacks of this vulnerability can result in takeover of Oracle Lease and Finance Management. CVSS 3.1 Base Score 7.2 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:44:29"
-    },
-    {
-      "cve_id": "CVE-2026-61335",
-      "title": "高危漏洞: CVE-2026-61335 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-22 06:19:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vulnerability in the Oracle Product Workbench product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Product Workbench.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Product Workbench accessible data as well as  unauthorized access to critical data or complete access to all Oracle Product Workbench accessible data. CVSS 3.1 Base Score 8.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:44:24"
     }
   ]
 }
