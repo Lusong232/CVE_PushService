@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-63765",
+      "title": "高危漏洞: CVE-2026-63765 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-07-24 03:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Chatwoot before 4.16.0 contains an authentication bypass vulnerability in the direct uploads controller that allows unauthenticated attackers to create arbitrary ActiveStorage blobs in any tenant account. Attackers can exploit missing authentication checks to resolve any account and conversation, then obtain signed PUT URLs to write arbitrary data to the application's storage backend.",
+      "refs": "https://github.com/chatwoot/chatwoot/commit/8dd0d08322edafaec24624b72ed2f6045921cb7b\nhttps://github.com/chatwoot/chatwoot/issues/15072\nhttps://github.com/chatwoot/chatwoot/pull/15039",
+      "source": "NVD",
+      "time": "2026-07-24 05:57:17"
+    },
+    {
+      "cve_id": "CVE-2026-16756",
+      "title": "高危漏洞: CVE-2026-16756 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-24 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Missing connection and header-read timeouts and the absence of a concurrent-connection cap in the default serve() path of Amazon aws-smithy-http-server might allow remote attackers to cause a denial of service by opening many connections and sending partial requests that are never completed, exhausting server sockets and tasks.\n\n\n\nTo mitigate this issue, users should upgrade to aws-smithy-http-server 0.66.5 or later.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-064-aws/\nhttps://crates.io/crates/aws-smithy-http-server/0.66.5\nhttps://github.com/smithy-lang/smithy-rs/security/advisories/GHSA-jvxp-qmx7-gjpx",
+      "source": "NVD",
+      "time": "2026-07-24 05:57:13"
+    },
+    {
+      "cve_id": "CVE-2026-6516",
+      "title": "高危漏洞: CVE-2026-6516 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 02:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "description": "Zohocorp ManageEngine ADAudit Plus versions before 8606 are affected by Unauthenticated Remote code execution due to the vulnerable agent API.",
+      "refs": "https://www.manageengine.com/products/active-directory-audit/cve-2026-6516.html",
+      "source": "NVD",
+      "time": "2026-07-24 05:57:09"
+    },
+    {
+      "cve_id": "CVE-2026-65919",
+      "title": "高危漏洞: CVE-2026-65919 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-24 02:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Meshery before 1.0.57 contains an unauthenticated arbitrary file read vulnerability in the /api/system/fileView and /api/system/fileDownload endpoints that pass user-supplied file parameters directly to os.Open without path validation. Attackers can supply absolute paths or traversal sequences in the file parameter to read arbitrary files from the host filesystem without authentication.",
+      "refs": "https://github.com/meshery/meshery/commit/ea83a26cb090b13be36c07cf24a99f8c637cc765\nhttps://github.com/meshery/meshery/issues/20076\nhttps://github.com/meshery/meshery/pull/20133",
+      "source": "NVD",
+      "time": "2026-07-24 05:57:05"
+    },
+    {
+      "cve_id": "CVE-2026-65918",
+      "title": "高危漏洞: CVE-2026-65918 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-24 02:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+      "description": "PyTorch torchvision through 0.28.0, fixed in commit 4e05dc2, contains an out-of-bounds heap read vulnerability in the GIF decoder's read_from_tensor callback that passes unclamped length to memcpy. Attackers can supply malicious or truncated GIF files to cause denial of service via segmentation fault or disclose adjacent heap memory contents.",
+      "refs": "https://github.com/pytorch/vision/commit/4e05dc22f5f050a9528cc0ea09ceca6cdaf8f4ed\nhttps://github.com/pytorch/vision/issues/9551\nhttps://github.com/pytorch/vision/pull/9520",
+      "source": "NVD",
+      "time": "2026-07-24 05:57:01"
+    },
+    {
+      "cve_id": "CVE-2026-65702",
+      "title": "高危漏洞: CVE-2026-65702 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-24 02:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "description": "Vanna through 2.0.2 contains a path traversal vulnerability in the FileSystemConversationStore persistence integration that allows unauthenticated remote attackers to write attacker-controlled JSON files to arbitrary filesystem locations and read conversation metadata from outside the intended store base directory. Attackers can supply path traversal sequences in the conversation_id parameter submitted to the unauthenticated chat API endpoints to escape the base directory during both write and read operations, enabling arbitrary file write with attacker-controlled content and unauthorized file read on the server filesystem.",
+      "refs": "https://github.com/geo-chen/oss/blob/main/vanna.md\nhttps://www.vulncheck.com/advisories/vanna-path-traversal-via-filesystemconversationstore",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:56"
+    },
+    {
+      "cve_id": "CVE-2026-65701",
+      "title": "高危漏洞: CVE-2026-65701 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-24 02:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "SoftVC VITS Singing Voice Conversion through commit 730930d contains a path traversal vulnerability in the full-song inference server that allows unauthenticated remote attackers to read and exfiltrate arbitrary files by supplying attacker-controlled filesystem paths through the audio_path field of an unauthenticated POST request to the /wav2wav route. Attackers can pass arbitrary server-side paths verbatim to librosa.load, torchaudio.load, and soundfile.write sinks, causing the server to decode and return file contents via the HTTP response body while also writing attacker-specified .wav files to arbitrary locations on the filesystem.",
+      "refs": "https://github.com/geo-chen/oss/blob/main/so-vits-svc.md\nhttps://www.vulncheck.com/advisories/softvc-vits-singing-voice-conversion-path-traversal-via-wav2wav-flask-route",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:49"
+    },
+    {
+      "cve_id": "CVE-2026-65700",
+      "title": "高危漏洞: CVE-2026-65700 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-24 02:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "h2oGPT through 0.2.1 contains a path traversal vulnerability in the OpenAI-compatible files API that allows unauthenticated remote attackers to read, write, and delete arbitrary files accessible to the server process by supplying traversal sequences in the bearer token. The get_user_dir function in openai_server/backend_utils.py uses the bearer token string unsanitized as a path component via os.path.join, and because the default API key is EMPTY authentication is bypassed, enabling attackers to traverse outside the intended user directory through the file content, delete, and upload endpoints to achieve remote code execution by writing to startup hooks or application-loaded files.",
+      "refs": "https://github.com/geo-chen/oss/blob/main/h2ogpt.md\nhttps://www.vulncheck.com/advisories/h2ogpt-path-traversal-via-openai-compatible-files-api",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:45"
+    },
+    {
+      "cve_id": "CVE-2026-47752",
+      "title": "高危漏洞: CVE-2026-47752 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-24 02:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Tugtainer is a self-hosted app for automating updates of Docker containers. Versions prior to 1.30.2 are vulnerable to Server-Side Template Injection (SSTI) in the notification template feature. The `title_template` and `body_template` fields are rendered using an unsandboxed `jinja2.Environment`, allowing any authenticated user to execute arbitrary OS commands as root inside the container. Version 1.30.2 fixes the issue.",
+      "refs": "https://github.com/Quenary/tugtainer/security/advisories/GHSA-g2cj-2x47-78vq\nhttps://github.com/Quenary/tugtainer/security/advisories/GHSA-g2cj-2x47-78vq",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:41"
+    },
+    {
+      "cve_id": "CVE-2026-47743",
+      "title": "高危漏洞: CVE-2026-47743 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-07-24 02:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Shopper is a Headless e-commerce Admin Panel. Prior to 2.8.0, three related defects on admin Livewire components allowed data tampering, sensitive data disclosure, and stored XSS. First, several Livewire components in the admin panel exposed Eloquent model identifiers as public properties without the `#[Locked]` attribute. An authenticated user could rewrite the wire payload from the browser to target any record id, bypassing the implicit scoping enforced by the page routing. Second, `Customers/Create::store()` re-passed a `Hidden` `_password` form field straight into the create payload. The plaintext password was rendered into the HTML and transported through the Livewire snapshot in clear text, exposing credentials in the page DOM and in any logging that captures Livewire payloads. Finally, the product barcode field was rendered through `DNS1DFacade::getBarcodeHTML()` with `{!! !!}`. An attacker with `edit_products` permission could persist malicious payload in the barcode field that would execute in the browser of any admin user viewing that product, enabling session theft and privileged-action chaining. Starting in v2.8.0, all vulnerable Livewire model identifiers are now marked `#[Locked]`; `Customers/Create` no longer round-trips the password through a Hidden form field; the plaintext password is hashed at action boundary and never returned to the client; and the product barcode rendering now escapes the value before passing it to the barcode generator and the output is wrapped in an `<svg>` context that does not interpret event handlers. No known workarounds are available.",
+      "refs": "https://github.com/shopperlabs/shopper/pull/511\nhttps://github.com/shopperlabs/shopper/security/advisories/GHSA-hr9v-r8r2-hg7j",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:36"
+    },
+    {
+      "cve_id": "CVE-2026-47668",
+      "title": "高危漏洞: CVE-2026-47668 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 02:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "DbGate is cross-platform database manager. In versions 7.1.8 and prior, DbGate's JSON script runner (`POST /runners/start`) allows remote code execution via code injection in the `functionName` parameter of JSON script `assign` commands. The `functionName` value is interpolated directly into dynamically generated JavaScript source code via string concatenation. The generated code is then executed in a forked Node.js child process. Version 7.1.9 contains a patch.",
+      "refs": "https://github.com/dbgate/dbgate/releases/tag/v7.1.9\nhttps://github.com/dbgate/dbgate/security/advisories/GHSA-8v3q-9vmx-36vc\nhttps://github.com/runZeroInc/nuclei-templates/blob/main/http/vulnerabilities/dbgate-unauth-rce.yaml",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:29"
+    },
+    {
+      "cve_id": "CVE-2026-43823",
+      "title": "高危漏洞: CVE-2026-43823 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-23 23:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "When initializing an RSA public key from DER or PEM bytes throws an error, the EVP_PKEY* is double-freed: first in the catch block, then in the deinit. This can lead to a crash on future memory allocations. This double-free manifests when BoringSSL cannot decode the public key from the bytes provided. This vulnerability is addressed in swift-crypto version 4.5.1.",
+      "refs": "https://github.com/apple/swift-crypto/security/advisories/GHSA-8q93-f6xh-4f6f\nhttps://github.com/apple/swift-crypto/security/advisories/GHSA-8q93-f6xh-4f6f",
+      "source": "NVD",
+      "time": "2026-07-24 05:56:25"
+    },
+    {
       "cve_id": "CVE-2026-44909",
       "title": "高危漏洞: CVE-2026-44909 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -967,138 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/mailpoet/vulnerability/wordpress-mailpoet-plugin-5-30-0-5-33-0-cross-site-request-forgery-csrf-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-24 00:21:05"
-    },
-    {
-      "cve_id": "CVE-2026-57428",
-      "title": "高危漏洞: CVE-2026-57428 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Sprout Clients <= 3.2.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/sprout-clients/vulnerability/wordpress-sprout-clients-plugin-3-2-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:21:00"
-    },
-    {
-      "cve_id": "CVE-2026-57427",
-      "title": "高危漏洞: CVE-2026-57427 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Download Monitor - WPForms Lock <= 1.0.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/dlm-wpforms-lock/vulnerability/wordpress-download-monitor-wpforms-lock-plugin-1-0-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:51"
-    },
-    {
-      "cve_id": "CVE-2026-57397",
-      "title": "高危漏洞: CVE-2026-57397 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Coaching <= 3.9.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/coaching/vulnerability/wordpress-coaching-theme-3-9-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:47"
-    },
-    {
-      "cve_id": "CVE-2026-57374",
-      "title": "高危漏洞: CVE-2026-57374 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Funnel Kit Funnel Builder PRO <= 3.15.0.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/funnel-builder-pro/vulnerability/wordpress-funnel-kit-funnel-builder-pro-plugin-3-15-0-7-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:42"
-    },
-    {
-      "cve_id": "CVE-2026-57370",
-      "title": "高危漏洞: CVE-2026-57370 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Visitor Traffic Real Time Statistics Pro <= 11.9.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/visitors-traffic-real-time-statistics-pro/vulnerability/wordpress-visitor-traffic-real-time-statistics-pro-plugin-11-9-1-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:38"
-    },
-    {
-      "cve_id": "CVE-2026-57367",
-      "title": "高危漏洞: CVE-2026-57367 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "Subscriber Broken Access Control in WP Booking System < 5.12.8.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-booking-system-premium/vulnerability/wordpress-wp-booking-system-plugin-5-12-8-1-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:33"
-    },
-    {
-      "cve_id": "CVE-2026-27064",
-      "title": "高危漏洞: CVE-2026-27064 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-23 20:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Editor Arbitrary File Upload in Mailster <= 4.1.17 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mailster/vulnerability/wordpress-mailster-plugin-4-1-17-arbitrary-file-upload-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:27"
-    },
-    {
-      "cve_id": "CVE-2026-25405",
-      "title": "高危漏洞: CVE-2026-25405 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-23 20:17:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in eRoom <= 1.7.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/eroom-zoom-meetings-webinar/vulnerability/wordpress-eroom-plugin-1-7-1-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:22"
-    },
-    {
-      "cve_id": "CVE-2026-24552",
-      "title": "高危漏洞: CVE-2026-24552 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-23 20:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in Create by Mediavine <= 2.5.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mediavine-create/vulnerability/wordpress-create-by-mediavine-plugin-2-5-3-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:14"
-    },
-    {
-      "cve_id": "CVE-2026-64611",
-      "title": "高危漏洞: CVE-2026-64611 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 19:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A flaw was found in libcupsfilters. The cfIEEE1284NormalizeMakeModel() function enters an infinite loop when processing a printer-advertised IEEE-1284 device ID with an empty model field, causing sustained CPU consumption. A network-adjacent attacker could exploit this by broadcasting a specially crafted printer advertisement, leading to denial of service.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-64611\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2502799\nhttps://github.com/OpenPrinting/libcupsfilters/security/advisories/GHSA-rcq7-rv5g-j3r4",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:09"
-    },
-    {
-      "cve_id": "CVE-2026-16745",
-      "title": "高危漏洞: CVE-2026-16745 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-23 19:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in odh-dashboard, the web console component of Red Hat OpenShift AI (RHOAI). Due to incorrect network binding, a malicious actor within the cluster can bypass authentication and impersonate any user by providing an arbitrary access token. This allows an attacker to gain unauthorized access to the Kubernetes API, potentially leading to arbitrary code execution, privilege escalation, or information disclosure.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-16745\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2506350",
-      "source": "NVD",
-      "time": "2026-07-24 00:20:03"
-    },
-    {
-      "cve_id": "CVE-2026-15017",
-      "title": "高危漏洞: CVE-2026-15017 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-23 18:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The MDJM Event Management plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.7.8.4. This is due to missing capability checks and nonce verification in the `MDJM_Permissions::set_permissions()` and `MDJM_Employee_Manager::init()` functions, combined with the absence of server-side allow-list validation on the `employee_roles[]` and `new_role` POST parameters before they are passed to `mdjm_set_employee_role()` and `WP_User::set_role()`. This makes it possible for unauthenticated attackers to grant arbitrary MDJM capabilities — including `mdjm_employee` and `mdjm_employee_edit` — to any registered WordPress role, and subsequently leverage a subscriber-level account to escalate privileges to Administrator. `MDJM_Permissions::init()` is registered on the public WordPress `init` hook without any authentication gate, meaning the role-manipulation endpoint is reachable without any prior login.",
-      "refs": "https://plugins.trac.wordpress.org/browser/mobile-dj-manager/tags/1.7.8.4/includes/admin/roles/class-mdjm-permissions.php#L24\nhttps://plugins.trac.wordpress.org/browser/mobile-dj-manager/tags/1.7.8.4/includes/admin/roles/class-mdjm-permissions.php#L36\nhttps://plugins.trac.wordpress.org/browser/mobile-dj-manager/tags/1.7.8.4/includes/admin/users/class-mdjm-employee-manager.php#L406",
-      "source": "NVD",
-      "time": "2026-07-24 00:19:57"
     }
   ]
 }
