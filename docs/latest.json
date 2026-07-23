@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-52688",
+      "title": "高危漏洞: CVE-2026-52688 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-23 17:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "RRSIGs with too few labels can lead to bypass of DNSSEC wildcard validation",
+      "refs": "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-powerdns-2026-10.html",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:42"
+    },
+    {
+      "cve_id": "CVE-2026-16723",
+      "title": "高危漏洞: CVE-2026-16723 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-07-23 17:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A remote code execution (RCE) vulnerability exists in fastjson 1.2.68 through 1.2.83. This vulnerability is exploitable under fastjson's stock default configuration — no AutoType enablement required, no classpath gadget required.",
+      "refs": "https://github.com/alibaba/fastjson2/wiki/Security-Advisory:-Remote-Code-Execution-in-fastjson-1.2.68%E2%80%931.2.83",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:38"
+    },
+    {
+      "cve_id": "CVE-2026-16287",
+      "title": "高危漏洞: CVE-2026-16287 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-23 17:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute pardus-update allows OS Command Injection.\n\nThis issue affects pardus-update: from 0.6.6 before 0.7.0.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0609",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:33"
+    },
+    {
+      "cve_id": "CVE-2024-58330",
+      "title": "高危漏洞: CVE-2024-58330 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-23 17:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "A missing authentication check in Bosch IP cameras of families CPP13 and CPP14 allows an unauthenticated attacker to retrieve video analytics event data.",
+      "refs": "https://psirt.bosch.com/security-advisories/BOSCH-SA-659648.html",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:26"
+    },
+    {
+      "cve_id": "CVE-2024-58023",
+      "title": "高危漏洞: CVE-2024-58023 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-07-23 17:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Information disclosure in Bosch Configuration Manager in Version 7.72.0106 allows an attacker to access sensitive information.",
+      "refs": "https://psirt.bosch.com/security-advisories/BOSCH-SA-981803.html",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:22"
+    },
+    {
+      "cve_id": "CVE-2026-9713",
+      "title": "高危漏洞: CVE-2026-9713 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-23 16:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Lumise Product Designer for WooCommerce plugin for WordPress is vulnerable to SQL Injection via the 'id' and 'table' parameters in the uploaded cart JSON file processed by the checkout AJAX action in versions up to, and including, 2.1.1. This is due to insufficient escaping on the user-supplied parameters before they are appended directly to a raw SQL query in the find_resource() function — the 'id' field is interpolated without quotes into a WHERE clause (numeric context) and 'table' is interpolated into the FROM clause, neither of which is protected by wp_magic_quotes or passed through $wpdb->prepare(). This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://codecanyon.net/item/lumise-product-designer-woocommerce-wordpress/21222684\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ee7555a1-18dc-4b00-81f6-b26706cfb573?source=cve",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:18"
+    },
+    {
+      "cve_id": "CVE-2026-12421",
+      "title": "高危漏洞: CVE-2026-12421 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-23 16:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The ARforms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'password' Field Values in all versions up to, and including, 7.2.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/arforms/trunk/core/helpers/arrecordhelper.php#L704\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/19e48549-8a28-4626-b0b5-b781cd01fa5b?source=cve",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:14"
+    },
+    {
+      "cve_id": "CVE-2026-7534",
+      "title": "高危漏洞: CVE-2026-7534 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-23 14:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The SUMO Reward Points plugin for WordPress is vulnerable to Unauthenticated Stored Cross-Site Scripting via the REST API endpoint `/wp-json/wc-srp/v1/earning` in versions up to, and including, 32.7.0. This is due to the `user_has_cap` filter in the `SRP_REST_Earning_Controller` class unconditionally granting the custom `rs_earning_read` capability to all users — including unauthenticated visitors — combined with missing sanitization of the `reason` parameter in the `create_items()` function and missing output escaping in the `column_default()` method of `SRP_Master_Log`. This makes it possible for unauthenticated attackers to inject arbitrary web scripts into the reward points log that will execute whenever an administrator accesses the Master Log or User Reward Points admin pages.",
+      "refs": "https://codecanyon.net/item/sumo-reward-points-woocommerce-reward-system/7791451\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/366b5051-d042-4425-9aad-b77d93bcd485?source=cve",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:09"
+    },
+    {
+      "cve_id": "CVE-2026-7232",
+      "title": "高危漏洞: CVE-2026-7232 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-23 14:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The FormCraft plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the '[parameter name]' parameter in all versions up to, and including, 3.9.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit chain combines a server-side gap — where composite matrix sub-field keys such as field2_0 and field2_1 are never passed through the sanitization loop and are stored raw via $wpdb->insert() — with a client-side gap where DOMPurify is only invoked when typeof field.value === 'string', but matrix values arrive from the server as arrays, bypassing the check before being mapped to strings and injected into the DOM. Additionally, the same sink is reachable via a second attack vector: array-typed field values are passed through htmlentities() on submission but later reversed by html_entity_decode() at formcraft-main.php:2608 and :2122, restoring the malicious payload before storage and rendering.",
+      "refs": "https://formcraft-wp.com/changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6b30089a-2267-47b9-b0a5-d6eeadfe51d2?source=cve",
+      "source": "NVD",
+      "time": "2026-07-23 19:00:04"
+    },
+    {
       "cve_id": "CVE-2026-15074",
       "title": "高危漏洞: CVE-2026-15074 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1000,105 +1099,6 @@
       "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
       "source": "NVD",
       "time": "2026-07-22 10:47:18"
-    },
-    {
-      "cve_id": "CVE-2026-62547",
-      "title": "高危漏洞: CVE-2026-62547 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-22 06:19:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Workflow product of Oracle E-Business Suite (component: Workflow Notification Mailer).  Supported versions that are affected are 12.2.3-12.2.15. Difficult to exploit vulnerability allows unauthenticated attacker with network access via SMTP to compromise Oracle Workflow.  Successful attacks of this vulnerability can result in takeover of Oracle Workflow. CVSS 3.1 Base Score 8.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:47:13"
-    },
-    {
-      "cve_id": "CVE-2026-62546",
-      "title": "高危漏洞: CVE-2026-62546 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-22 06:19:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Applications Framework product of Oracle E-Business Suite (component: Web Utilities).  Supported versions that are affected are 12.2.8-12.2.15. Easily exploitable vulnerability allows high privileged attacker with network access via HTTP to compromise Oracle Applications Framework.  While the vulnerability is in Oracle Applications Framework, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Applications Framework. CVSS 3.1 Base Score 9.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:47:08"
-    },
-    {
-      "cve_id": "CVE-2026-62534",
-      "title": "高危漏洞: CVE-2026-62534 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-22 06:19:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Applications Framework product of Oracle E-Business Suite (component: Web Utilities).  Supported versions that are affected are 12.2.11-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Applications Framework.  Successful attacks of this vulnerability can result in takeover of Oracle Applications Framework. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:47:04"
-    },
-    {
-      "cve_id": "CVE-2026-62530",
-      "title": "高危漏洞: CVE-2026-62530 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-22 06:19:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vulnerability in the Oracle HRMS (France) product of Oracle E-Business Suite (component: French HR).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle HRMS (France).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle HRMS (France) accessible data as well as  unauthorized access to critical data or complete access to all Oracle HRMS (France) accessible data. CVSS 3.1 Base Score 8.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:58"
-    },
-    {
-      "cve_id": "CVE-2026-62521",
-      "title": "高危漏洞: CVE-2026-62521 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-22 06:19:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Vulnerability in the Oracle HRMS (US) product of Oracle E-Business Suite (component: US Payroll - General).  Supported versions that are affected are 12.2.7-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle HRMS (US).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle HRMS (US) accessible data. CVSS 3.1 Base Score 7.5 (Confidentiality impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:51"
-    },
-    {
-      "cve_id": "CVE-2026-62518",
-      "title": "高危漏洞: CVE-2026-62518 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-22 06:19:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
-      "description": "Vulnerability in the Oracle Production Scheduling product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Production Scheduling.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Production Scheduling accessible data as well as  unauthorized read access to a subset of Oracle Production Scheduling accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Production Scheduling. CVSS 3.1 Base Score 7.6 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:47"
-    },
-    {
-      "cve_id": "CVE-2026-62516",
-      "title": "高危漏洞: CVE-2026-62516 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-22 06:19:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Demantra Demand Management product of Oracle Supply Chain (component: Product Security).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via SQL to compromise Oracle Demantra Demand Management.  Successful attacks of this vulnerability can result in takeover of Oracle Demantra Demand Management. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:42"
-    },
-    {
-      "cve_id": "CVE-2026-62515",
-      "title": "高危漏洞: CVE-2026-62515 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-22 06:19:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Vulnerability in the Oracle Advanced Planning Command Center product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows high privileged attacker with network access via HTTP to compromise Oracle Advanced Planning Command Center.  While the vulnerability is in Oracle Advanced Planning Command Center, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Advanced Planning Command Center accessible data as well as  unauthorized update, insert or delete access to some of Oracle Advanced Planning Command Center accessible data. CVSS 3.1 Base Score 7.6 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:38"
-    },
-    {
-      "cve_id": "CVE-2026-62514",
-      "title": "高危漏洞: CVE-2026-62514 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-22 06:19:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vulnerability in the Oracle Process Manufacturing Regulatory Management product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Process Manufacturing Regulatory Management.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Process Manufacturing Regulatory Management accessible data as well as  unauthorized access to critical data or complete access to all Oracle Process Manufacturing Regulatory Management accessible data. CVSS 3.1 Base Score 8.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:33"
     }
   ]
 }
