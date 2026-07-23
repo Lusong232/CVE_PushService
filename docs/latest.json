@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15074",
+      "title": "高危漏洞: CVE-2026-15074 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-23 12:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "@fastify/static up to and including version 10.1.0 fails to reject dot-dot path segments in request pathnames before the file-resolution stage. This is a bypass of the earlier fix for CVE-2026-6414, which only covered encoded forward slashes. Because the underlying send library normalizes dot segments before applying its own path-traversal guard, an unauthenticated attacker can bypass any route-scoped middleware and read files inside the static root that live under the guarded URL prefix. The bypass does not allow access outside the configured static root by itself, it defeats route-guard filtering only. The issue is patched in @fastify/static 10.1.1.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-static/security/advisories/GHSA-83w8-p2f5-377r",
+      "source": "NVD",
+      "time": "2026-07-23 13:44:16"
+    },
+    {
+      "cve_id": "CVE-2026-16632",
+      "title": "高危漏洞: CVE-2026-16632 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-23 08:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in boazsegev facil.io up to 0.7.4. Affected is the function websocket_on_protocol_error in the library lib/facil/http/parsers/websocket_parser.h of the component WebSocket Frame Parser. This manipulation of the argument on_message causes improper input validation. The attack can be initiated remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/boazsegev/facil.io/\nhttps://github.com/boazsegev/facil.io/issues/169\nhttps://vuldb.com/cve/CVE-2026-16632",
+      "source": "NVD",
+      "time": "2026-07-23 13:44:07"
+    },
+    {
       "cve_id": "CVE-2026-61246",
       "title": "高危漏洞: CVE-2026-61246 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
       "source": "NVD",
       "time": "2026-07-22 10:46:33"
-    },
-    {
-      "cve_id": "CVE-2026-62513",
-      "title": "高危漏洞: CVE-2026-62513 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-22 06:19:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Vulnerability in the Oracle Process Manufacturing Regulatory Management product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Process Manufacturing Regulatory Management.  While the vulnerability is in Oracle Process Manufacturing Regulatory Management, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Process Manufacturing Regulatory Management accessible data as well as  unauthorized update, insert or delete access to some of Oracle Process Manufacturing Regulatory Management accessible data. CVSS 3.1 Base Score 8.5 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:28"
-    },
-    {
-      "cve_id": "CVE-2026-62504",
-      "title": "高危漏洞: CVE-2026-62504 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-22 06:19:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vulnerability in the Oracle Time and Labor product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Time and Labor.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Time and Labor accessible data as well as  unauthorized access to critical data or complete access to all Oracle Time and Labor accessible data. CVSS 3.1 Base Score 8.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cpujul2026.html",
-      "source": "NVD",
-      "time": "2026-07-22 10:46:22"
     }
   ]
 }
