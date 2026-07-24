@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12736",
+      "title": "高危漏洞: CVE-2026-12736 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-24 12:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The Wpify Woo plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 5.4.16. This is due to the SettingsApi::save_option() REST route (POST /wp-json/wpify-woo/v1/option) passing the request-supplied 'option' and 'data' parameters directly to update_option() without any option-name allowlist or value sanitization, while the permission_callback only verifies the manage_woocommerce capability. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to elevate their privileges to Administrator by overwriting arbitrary WordPress options (for example setting default_role to administrator and users_can_register to 1, or disabling security plugins via active_plugins).",
+      "refs": "https://plugins.trac.wordpress.org/browser/wpify-woo/tags/5.4.10/src/Api/SettingsApi.php#L39\nhttps://plugins.trac.wordpress.org/browser/wpify-woo/tags/5.4.10/src/Api/SettingsApi.php#L67\nhttps://plugins.trac.wordpress.org/browser/wpify-woo/tags/5.4.10/src/Managers/ApiManager.php#L18",
+      "source": "NVD",
+      "time": "2026-07-24 13:41:08"
+    },
+    {
+      "cve_id": "CVE-2026-62825",
+      "title": "高危漏洞: CVE-2026-62825 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 09:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "description": "Improper authentication in Azure Key Vault allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62825",
+      "source": "NVD",
+      "time": "2026-07-24 13:41:03"
+    },
+    {
+      "cve_id": "CVE-2026-58275",
+      "title": "高危漏洞: CVE-2026-58275 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 09:17:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "description": "Missing authorization in Azure DNS allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58275",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:58"
+    },
+    {
+      "cve_id": "CVE-2026-56191",
+      "title": "高危漏洞: CVE-2026-56191 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 09:17:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper authentication in Microsoft Exchange Online allows an unauthorized attacker to perform tampering over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56191",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:54"
+    },
+    {
+      "cve_id": "CVE-2026-56167",
+      "title": "高危漏洞: CVE-2026-56167 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-07-24 09:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Server-side request forgery (ssrf) in Azure AI Search allows an authorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56167",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:48"
+    },
+    {
+      "cve_id": "CVE-2026-56165",
+      "title": "高危漏洞: CVE-2026-56165 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-24 09:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Heap-based buffer overflow in Microsoft Account allows an unauthorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56165",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:42"
+    },
+    {
+      "cve_id": "CVE-2026-56160",
+      "title": "高危漏洞: CVE-2026-56160 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-24 09:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper authorization in Azure Red Hat OpenShift (ARO) allows an authorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56160",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:36"
+    },
+    {
+      "cve_id": "CVE-2026-54120",
+      "title": "高危漏洞: CVE-2026-54120 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-24 09:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper input validation in Microsoft Surface allows an authorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54120",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:32"
+    },
+    {
+      "cve_id": "CVE-2026-50517",
+      "title": "高危漏洞: CVE-2026-50517 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-07-24 09:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Deserialization of untrusted data in M365 Copilot allows an authorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50517",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:27"
+    },
+    {
+      "cve_id": "CVE-2026-35425",
+      "title": "高危漏洞: CVE-2026-35425 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-07-24 09:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper access control in Azure API Management (APIM) allows an authorized attacker to execute code over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35425",
+      "source": "NVD",
+      "time": "2026-07-24 13:40:21"
+    },
+    {
       "cve_id": "CVE-2026-42933",
       "title": "高危漏洞: CVE-2026-42933 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -989,116 +1099,6 @@
       "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
       "source": "NVD",
       "time": "2026-07-24 00:24:57"
-    },
-    {
-      "cve_id": "CVE-2026-64809",
-      "title": "高危漏洞: CVE-2026-64809 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains PhpStorm before 2026.2 arbitrary code execution was possible before granting project trust via the configured interpreter",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:52"
-    },
-    {
-      "cve_id": "CVE-2026-64808",
-      "title": "高危漏洞: CVE-2026-64808 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains PhpStorm before 2026.2 arbitrary code execution was possible before granting project trust via project tooling",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:46"
-    },
-    {
-      "cve_id": "CVE-2026-64807",
-      "title": "高危漏洞: CVE-2026-64807 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains WebStorm before 2026.2 arbitrary code execution was possible via a project-supplied linter configuration",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:42"
-    },
-    {
-      "cve_id": "CVE-2026-64806",
-      "title": "高危漏洞: CVE-2026-64806 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains WebStorm before 2026.2 arbitrary code execution was possible before granting project trust via the configured Node.js interpreter",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:37"
-    },
-    {
-      "cve_id": "CVE-2026-64805",
-      "title": "高危漏洞: CVE-2026-64805 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-23 20:18:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains WebStorm before 2026.2 arbitrary code execution was possible before granting project trust via project-local package-manager tooling",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:31"
-    },
-    {
-      "cve_id": "CVE-2026-64804",
-      "title": "高危漏洞: CVE-2026-64804 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-23 20:18:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains WebStorm before 2026.2 arbitrary code execution was possible before granting project trust via project-local linter tooling",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:27"
-    },
-    {
-      "cve_id": "CVE-2026-64803",
-      "title": "高危漏洞: CVE-2026-64803 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-23 20:18:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains GoLand before 2026.2 arbitrary code execution was possible before granting project trust via the configured Go SDK",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:22"
-    },
-    {
-      "cve_id": "CVE-2026-64802",
-      "title": "高危漏洞: CVE-2026-64802 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-23 20:18:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains GoLand before 2026.2 arbitrary code execution was possible before granting project trust in the Go Modules integration",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:18"
-    },
-    {
-      "cve_id": "CVE-2026-61954",
-      "title": "高危漏洞: CVE-2026-61954 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 20:18:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in PayU India <= 3.8.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/payu-india/vulnerability/wordpress-payu-india-plugin-3-8-9-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:11"
-    },
-    {
-      "cve_id": "CVE-2026-61951",
-      "title": "高危漏洞: CVE-2026-61951 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-23 20:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Privilege Escalation in TrueBooker <= 1.2.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/truebooker-appointment-booking/vulnerability/wordpress-truebooker-plugin-1-2-3-privilege-escalation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:06"
     }
   ]
 }
