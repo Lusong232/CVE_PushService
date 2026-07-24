@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-66035",
+      "title": "高危漏洞: CVE-2026-66035 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-25 01:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "libssh2 through 1.11.1, fixed in commit 42e33d8, contains a pre-authentication heap buffer overflow vulnerability that allows a malicious SSH server to corrupt heap metadata in any connecting client by sending a packet with a packet_length smaller than the cipher's block size during Encrypt-then-MAC cipher negotiation. In the fullpacket() function in src/transport.c, the ETM path allocates a buffer of packet_length bytes but copies blocksize minus one bytes via memcpy, causing an overflow that on 32-bit glibc writes attacker-controlled bytes into an adjacent chunk's SIZE field, enabling tcache bin confusion, overlapping live objects, and function pointer overwrite during the session handshake before authentication.",
+      "refs": "https://github.com/libssh2/libssh2/commit/42e33d81577ed4b95d4b4f6f845e5ee8efe5eeb4\nhttps://github.com/libssh2/libssh2/pull/2198\nhttps://www.vulncheck.com/advisories/libssh2-heap-buffer-overflow-via-etm-cipher-negotiation",
+      "source": "NVD",
+      "time": "2026-07-25 03:12:12"
+    },
+    {
+      "cve_id": "CVE-2026-66034",
+      "title": "高危漏洞: CVE-2026-66034 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-25 01:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "libssh2 through 1.11.1, fixed in commit a13bb6c, contains a missing bounds check vulnerability that allows a malicious SSH server to trigger an arbitrary-length heap out-of-bounds read and a free of an uninitialized pointer via the publickey subsystem. In libssh2_publickey_list_fetch(), the version 1 response parser reads a server-controlled comment_len value and advances the parse pointer without verifying sufficient bytes remain in the buffer, causing the out-of-bounds read to leak heap pointers from adjacent allocations defeating ASLR, followed by heap allocator state corruption when the error cleanup path frees an uninitialized pointer from a non-zeroed realloc() region.",
+      "refs": "https://github.com/libssh2/libssh2/commit/a13bb6c773f0d55ad1628cede57e99803cd898d9\nhttps://github.com/libssh2/libssh2/pull/2202\nhttps://www.vulncheck.com/advisories/libssh2-heap-out-of-bounds-read-via-publickey-subsystem",
+      "source": "NVD",
+      "time": "2026-07-25 03:12:07"
+    },
+    {
+      "cve_id": "CVE-2026-66033",
+      "title": "高危漏洞: CVE-2026-66033 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-25 01:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "libssh2 through 1.11.1, fixed in commit a2ed82d, contains a pre-authentication integer underflow vulnerability in the ssh2_cipher_crypt() function in src/openssl.c that allows a malicious SSH server to crash any connecting client by negotiating AES-GCM ciphers during handshake. Attackers can exploit the underflow in the expression computing blocksize minus aadlen minus authentication tag length to trigger an out-of-bounds read and a memcpy call with a near-SIZE_MAX length argument, causing immediate process crash before any authentication occurs.",
+      "refs": "https://github.com/libssh2/libssh2/commit/a2ed82d40964bbc0d64cd717aa0a5a892117d2e6\nhttps://github.com/libssh2/libssh2/pull/2401\nhttps://www.vulncheck.com/advisories/libssh2-integer-underflow-dos-via-aes-gcm-cipher-negotiation",
+      "source": "NVD",
+      "time": "2026-07-25 03:12:03"
+    },
+    {
+      "cve_id": "CVE-2026-66032",
+      "title": "高危漏洞: CVE-2026-66032 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 01:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "libssh2 through 1.11.1, fixed in commit 5e47761, contains a double-free vulnerability in the sftp_open() function in src/sftp.c that allows a malicious SSH server to corrupt the heap of any authenticated client opening an SFTP session. When a server responds to SSH_FXP_OPEN with SSH_FXP_STATUS containing FX_OK, the response data buffer is freed, and if a subsequent sftp_packet_require() call returns a specific error such as LIBSSH2_ERROR_CHANNEL_PACKET_EXCEEDED, the same pointer is freed a second time, enabling tcache dup conditions on glibc systems that allow overlapping allocations and function pointer overwrites.",
+      "refs": "https://github.com/libssh2/libssh2/commit/5e4776146552d898b9c0e1b313cd093fa8dc92d0\nhttps://github.com/libssh2/libssh2/pull/2180\nhttps://www.vulncheck.com/advisories/libssh2-double-free-heap-corruption-via-sftp-open",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:58"
+    },
+    {
+      "cve_id": "CVE-2026-65711",
+      "title": "高危漏洞: CVE-2026-65711 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-25 01:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "sysPass through version 3.2.11 contains an OS command injection vulnerability that allows authenticated administrators to execute arbitrary commands as the web server process user by setting a malicious backup path and triggering a backup. The FileBackupService builds a tar shell command via string concatenation, inserting the admin-configurable siteBackupPath setting without escapeshellarg() or equivalent sanitization before passing it to exec(), causing injected commands to persist and execute on every subsequent backup trigger.",
+      "refs": "https://gist.github.com/sermikr0/16bcbc799dc33d39d5714db9bbcbdb77\nhttps://www.vulncheck.com/advisories/syspass-authenticated-os-command-injection-via-backup-path",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:54"
+    },
+    {
+      "cve_id": "CVE-2026-65710",
+      "title": "高危漏洞: CVE-2026-65710 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-25 01:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "sysPass through version 3.2.11 contains a missing authorization vulnerability that allows authenticated users with the PUBLICLINK_CREATE profile flag to trigger unauthorized decryption and persistent storage of any vault account's password by exploiting the absence of AccountAcl checks in the public link creation flow. Attackers can invoke the saveCreateFromAccountAction endpoint to cause AccountService::getDataForLink to load arbitrary target accounts without AccountFilterUser restrictions, decrypt credentials using the session master key, and serialize cleartext passwords into Vault storage on the PublicLink database row, enabling subsequent unauthenticated retrieval if the generated link hash is recovered.",
+      "refs": "https://github.com/Caycon/cve-advisories/blob/main/2026/sysPass/CVE-2026-65710.md\nhttps://www.vulncheck.com/advisories/syspass-missing-authorization-via-publiclinkcontroller-account-decryption",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:49"
+    },
+    {
+      "cve_id": "CVE-2026-65709",
+      "title": "高危漏洞: CVE-2026-65709 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-25 01:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "sysPass through version 3.2.11 contains a missing object-level authorization vulnerability in the JSON-RPC API that allows API token holders to enumerate account metadata, overwrite passwords, and delete accounts across the entire vault without per-account access control. Attackers can invoke AccountController methods such as viewAction, editAction, deleteAction, and editPassAction without AccountFilterUser checks to modify or delete accounts beyond the scope of their assigned token permissions.",
+      "refs": "https://github.com/Caycon/cve-advisories/blob/main/2026/sysPass/CVE-2026-65709.md\nhttps://www.vulncheck.com/advisories/syspass-missing-object-level-authorization-via-json-rpc-api",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:44"
+    },
+    {
+      "cve_id": "CVE-2026-65708",
+      "title": "高危漏洞: CVE-2026-65708 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-25 01:17:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "sysPass through version 3.2.11 contains an insecure direct object reference vulnerability that allows any authenticated attacker to access account file attachments belonging to accounts they do not have ACL permissions for by exploiting missing authorization checks in AccountFileController. Attackers can supply arbitrary numeric file IDs through the download, view, delete, upload, and list actions to enumerate and manipulate any attachment in the vault, bypassing account-level access controls entirely.",
+      "refs": "https://github.com/Caycon/cve-advisories/blob/main/2026/sysPass/CVE-2026-65708.md\nhttps://www.vulncheck.com/advisories/syspass-insecure-direct-object-reference-via-accountfilecontroller",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:40"
+    },
+    {
+      "cve_id": "CVE-2026-66027",
+      "title": "高危漏洞: CVE-2026-66027 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-25 00:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Suna before 0.9.102 contains a broken access control vulnerability in the message queue API that allows authenticated attackers to access and manipulate queue resources belonging to other users by exploiting missing ownership and account isolation checks. Attackers can read pending prompt queues of all users, read or delete individual sessions, and inject arbitrary prompts into another user's session queue, causing the background drainer to forward malicious messages to the victim's running AI agent with the victim's credentials and permissions.",
+      "refs": "https://github.com/geo-chen/oss/blob/main/suna.md\nhttps://github.com/kortix-ai/suna/commit/7536a7d47fc93abcb66e677fcc993b390c81296a\nhttps://github.com/kortix-ai/suna/pull/4373",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:33"
+    },
+    {
+      "cve_id": "CVE-2026-65693",
+      "title": "高危漏洞: CVE-2026-65693 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-25 00:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Microweber CMS through 2.0.20 contains a server-side template injection vulnerability that allows authenticated administrators to achieve arbitrary OS command execution by injecting Twig expressions into mail templates. Attackers can exploit the unsandboxed Twig environment in TwigView::render(), which lacks SandboxExtension or a SecurityPolicy, to inject malicious expressions such as filter('system') into mail template bodies stored unsanitized in the database, causing automatic payload execution on each subsequent application event that triggers a mail dispatch.",
+      "refs": "https://gist.github.com/W40X/584f4b088d310bc5280cc74bbf97831a\nhttps://www.vulncheck.com/advisories/microweber-cms-server-side-template-injection-via-mail-templates",
+      "source": "NVD",
+      "time": "2026-07-25 03:11:28"
+    },
+    {
       "cve_id": "CVE-2026-8789",
       "title": "高危漏洞: CVE-2026-8789 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/siyuan-note/siyuan/commit/41f2861c87575ff5ac4b50a0520b1a4fe55b4a70\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-pw5c-qhf3-jhwh\nhttps://www.vulncheck.com/advisories/siyuan-before-stored-xss-to-rce-via-attribute-view",
       "source": "NVD",
       "time": "2026-07-24 00:27:30"
-    },
-    {
-      "cve_id": "CVE-2026-65540",
-      "title": "高危漏洞: CVE-2026-65540 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Request Forgery (CSRF) in Popup for CF7 with Sweet Alert <= 1.6.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/cf7-sweet-alert-popup/vulnerability/wordpress-popup-for-cf7-with-sweet-alert-plugin-1-6-5-cross-site-request-forgery-csrf-vulnerability-2?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:27:25"
-    },
-    {
-      "cve_id": "CVE-2026-65539",
-      "title": "高危漏洞: CVE-2026-65539 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Request Forgery (CSRF) in Kwayy HTML Sitemap <= 4.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/kwayy-html-sitemap/vulnerability/wordpress-kwayy-html-sitemap-plugin-4-0-csrf-to-stored-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:27:19"
-    },
-    {
-      "cve_id": "CVE-2026-65532",
-      "title": "高危漏洞: CVE-2026-65532 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-23 20:18:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Shop manager SQL Injection in Persian Woocommerce SMS <= 7.2.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/persian-woocommerce-sms/vulnerability/wordpress-persian-woocommerce-sms-plugin-7-2-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:27:14"
-    },
-    {
-      "cve_id": "CVE-2026-65526",
-      "title": "高危漏洞: CVE-2026-65526 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-23 20:18:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in Visualizer <= 4.0.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/visualizer/vulnerability/wordpress-visualizer-plugin-4-0-6-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:27:10"
-    },
-    {
-      "cve_id": "CVE-2026-65516",
-      "title": "高危漏洞: CVE-2026-65516 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-23 20:18:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Unauthenticated Server Side Request Forgery (SSRF) in PeproDev Ultimate Invoice <= 2.2.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/pepro-ultimate-invoice/vulnerability/wordpress-peprodev-ultimate-invoice-plugin-2-2-6-server-side-request-forgery-ssrf-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:27:03"
-    },
-    {
-      "cve_id": "CVE-2026-65511",
-      "title": "高危漏洞: CVE-2026-65511 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Manual - Documentation, Knowledge Base & Education WordPress Theme <= 7.5.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/manual/vulnerability/wordpress-manual-documentation-knowledge-base-education-wordpress-theme-theme-7-5-4-cross-site-scripting-xss-vulnerability-2?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:56"
-    },
-    {
-      "cve_id": "CVE-2026-65510",
-      "title": "高危漏洞: CVE-2026-65510 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in PeproDev Ultimate Invoice <= 2.2.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/pepro-ultimate-invoice/vulnerability/wordpress-peprodev-ultimate-invoice-plugin-2-2-6-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:51"
-    },
-    {
-      "cve_id": "CVE-2026-65500",
-      "title": "高危漏洞: CVE-2026-65500 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 20:18:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Broken Access Control in Manual - Documentation, Knowledge Base & Education WordPress Theme <= 7.5.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/manual/vulnerability/wordpress-manual-documentation-knowledge-base-education-wordpress-theme-theme-7-5-4-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:46"
-    },
-    {
-      "cve_id": "CVE-2026-65497",
-      "title": "高危漏洞: CVE-2026-65497 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-23 20:18:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Administrator PHP Object Injection in Complianz <= 7.5.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/complianz-gdpr/vulnerability/wordpress-complianz-plugin-7-5-0-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:37"
-    },
-    {
-      "cve_id": "CVE-2026-65495",
-      "title": "高危漏洞: CVE-2026-65495 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 20:18:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Unauthenticated Broken Access Control in Dokan Pro <= 5.0.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/dokan-pro/vulnerability/wordpress-dokan-pro-plugin-5-0-3-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:33"
     }
   ]
 }
