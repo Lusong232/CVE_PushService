@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15704",
+      "title": "高危漏洞: CVE-2026-15704 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-24 17:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Eclipse BaSyx Go Components versions up to and including 1.0.0, ABAC-enabled deployments are vulnerable to an authorization bypass caused by inconsistent trailing-slash handling between the ABAC middleware and the HTTP router.\n\n\n\nThe shared router configuration used Chi's `middleware.StripSlashes`, so a request such as `GET /shells/` was dispatched to the registered `GET /shells` route. However, the ABAC middleware evaluated the original request path including the trailing slash. If ABAC route lookup did not find a matching slash-suffixed route, the request was passed onward and the router then stripped the slash and executed the protected handler without the intended ABAC authorization decision and without the expected ABAC query filters.\n\n\n\nAn unauthenticated or unauthorized network attacker could append a trailing slash to protected API routes to reach handlers that should have been denied by ABAC policy. Depending on the exposed component, HTTP method, and deployed policy, this could allow unauthorized read, create, update, delete, or upload operations.\n\n\n\nThe issue affects ABAC-enabled deployments of services that use the shared router and ABAC middleware, including AAS Repository, Submodel Repository, AAS Registry, Submodel Registry, Concept Description Repository, Discovery, AAS Environment upload, and related services. The issue is fixed in Eclipse BaSyx Go Components v1.0.1.",
+      "refs": "https://github.com/eclipse-basyx/basyx-go-components/pull/442\nhttps://github.com/eclipse-basyx/basyx-go-components/releases/tag/v1.0.1\nhttps://gitlab.eclipse.org/security/cve-assignment/-/work_items/164",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:50"
+    },
+    {
+      "cve_id": "CVE-2026-16519",
+      "title": "高危漏洞: CVE-2026-16519 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-24 16:16:26",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A\nDLL hijacking vulnerability exists in the GeoVision GV-IP Device Utility\ndesktop application. The application loads one or more dynamic-link libraries\n(DLLs) from an unsafe search path, allowing a local attacker to place a\nmalicious DLL in a location searched before the legitimate library\nlocation.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:43"
+    },
+    {
+      "cve_id": "CVE-2026-14172",
+      "title": "高危漏洞: CVE-2026-14172 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-24 15:16:32",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Rapid7 InsightVM, Nexpose, and the Insight Agent execute discovered executables during authenticated assessment without validating file ownership, allowing a local low-privileged user to run code as the scan credential (Scan Engine) or as root/SYSTEM (Insight Agent). Fixed in Scan Engine content 1.1.3935 and Insight Agent content component 0.0.245.0.",
+      "refs": "https://docs.rapid7.com/insight/release-notes-2026-july/#rapid7-agent-insight-agent\nhttps://docs.rapid7.com/insight/release-notes-2026-july/#vulnerability-management-insightvm",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:38"
+    },
+    {
+      "cve_id": "CVE-2026-16870",
+      "title": "高危漏洞: CVE-2026-16870 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-24 14:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Multiple security vulnerabilities in Snowflake libsnowflakeclient versions prior to 2.9.2 could allow remote code execution and credential exfiltration. A stack-based buffer overflow in the file download path could allow remote code execution on a victim host. An attacker could exploit this by uploading a file with a crafted encryption metadata field to a shared internal stage that a victim process later downloads, and impact would be limited to deployments where principals with different privilege levels share the same internal stage. A related out-of-bounds write in the same download path could allow memory corruption with attacker-controlled write primitives. An attacker may exploit this through a crafted initialization vector metadata field on a shared stage, and impact would be limited by the same stage-write precondition. Improper validation of connection parameters could allow an attacker-controlled input to redirect outbound authentication requests — including credentials and tokens — to an attacker-controlled endpoint. Impact is limited to embedding deployments where a lower-privileged principal can influence connection configuration while higher-privileged service credentials are in use. The fix is available in Snowflake libsnowflakeclient version 2.9.2. Users must manually upgrade.",
+      "refs": "https://github.com/snowflakedb/libsnowflakeclient/releases/tag/v2.9.2",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:33"
+    },
+    {
+      "cve_id": "CVE-2026-66141",
+      "title": "高危漏洞: CVE-2026-66141 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-24 13:16:49",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Exim before 4.99.5 allows .forward privilege escalation because force_command for a pipe transport is mishandled.",
+      "refs": "https://openwall.com/lists/oss-security/2026/07/22/9",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:26"
+    },
+    {
+      "cve_id": "CVE-2026-66140",
+      "title": "高危漏洞: CVE-2026-66140 (CVSS 8.4)",
+      "cvss_score": 8.4,
+      "published_date": "2026-07-24 13:16:49",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Exim before 4.99.5 allows directory traversal to access files outside of the spool area, and consequently gain privileges, because arguments related to queue-name are mishandled.",
+      "refs": "https://openwall.com/lists/oss-security/2026/07/22/9",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:22"
+    },
+    {
+      "cve_id": "CVE-2026-66138",
+      "title": "高危漏洞: CVE-2026-66138 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-24 13:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In OpenStack Ironic Python Agent through 11.6.0, a project-scoped user with the manager role can achieve arbitrary code execution on a running Ironic-Python-Agent via a maliciously constructed configuration, because the value of ntp_server is passed to a shell.",
+      "refs": "https://bugs.launchpad.net/ironic-python-agent/+bug/2160050\nhttps://security.openstack.org/ossa/OSSA-2026-027.html",
+      "source": "NVD",
+      "time": "2026-07-24 18:53:17"
+    },
+    {
       "cve_id": "CVE-2026-12736",
       "title": "高危漏洞: CVE-2026-12736 (CVSS 8.0)",
       "cvss_score": 8.0,
@@ -1022,83 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/quiz-master-next/vulnerability/wordpress-quiz-and-survey-master-plugin-11-2-0-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-24 00:25:36"
-    },
-    {
-      "cve_id": "CVE-2026-65451",
-      "title": "高危漏洞: CVE-2026-65451 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-23 20:18:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in MapSVG <= 8.14.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mapsvg/vulnerability/wordpress-mapsvg-plugin-8-14-0-sql-injection-vulnerability-2?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:32"
-    },
-    {
-      "cve_id": "CVE-2026-65450",
-      "title": "高危漏洞: CVE-2026-65450 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-23 20:18:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in MapSVG <= 8.14.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mapsvg-lite-interactive-vector-maps/vulnerability/wordpress-mapsvg-plugin-8-14-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:27"
-    },
-    {
-      "cve_id": "CVE-2026-64815",
-      "title": "高危漏洞: CVE-2026-64815 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-23 20:18:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains IntelliJ IDEA before 2026.2 arbitrary code injection was possible via UI Designer form files",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:23"
-    },
-    {
-      "cve_id": "CVE-2026-64814",
-      "title": "高危漏洞: CVE-2026-64814 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-23 20:18:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "In JetBrains IntelliJ IDEA before 2026.2 unauthorized file access was possible in a Remote Development session",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:16"
-    },
-    {
-      "cve_id": "CVE-2026-64813",
-      "title": "高危漏洞: CVE-2026-64813 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "In JetBrains IntelliJ IDEA before 2026.2 unauthorized settings modification was possible in a Remote Development session",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:10"
-    },
-    {
-      "cve_id": "CVE-2026-64812",
-      "title": "高危漏洞: CVE-2026-64812 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "In JetBrains IntelliJ IDEA before 2026.2 unauthorized input injection was possible in a Remote Development session",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:04"
-    },
-    {
-      "cve_id": "CVE-2026-64811",
-      "title": "高危漏洞: CVE-2026-64811 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-23 20:18:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In JetBrains IntelliJ IDEA before 2026.2 arbitrary code execution was possible before granting project trust via development container configuration",
-      "refs": "https://www.jetbrains.com/privacy-security/issues-fixed/",
-      "source": "NVD",
-      "time": "2026-07-24 00:24:57"
     }
   ]
 }
