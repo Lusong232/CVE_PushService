@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8789",
+      "title": "高危漏洞: CVE-2026-8789 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-24 23:19:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Easy Appointments plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check and missing nonce verification on the `ea_delete_multiple_connections` AJAX action in all versions up to, and including, 3.12.27. This makes it possible for authenticated attackers, with Contributor-level access and above, to delete arbitrary connection records from the `wp_ea_connections` table, disrupting the plugin's core booking functionality.",
+      "refs": "https://plugins.trac.wordpress.org/changeset?reponame=&old=3595856%40easy-appointments&new=3595856%40easy-appointments\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/47ed52b3-4bfe-46ce-aabc-7a4647ab7db5?source=cve",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:43"
+    },
+    {
+      "cve_id": "CVE-2026-58630",
+      "title": "高危漏洞: CVE-2026-58630 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 23:18:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Improper access control in Azure App Service allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58630",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:38"
+    },
+    {
+      "cve_id": "CVE-2026-57106",
+      "title": "高危漏洞: CVE-2026-57106 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 23:18:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Server-side request forgery (ssrf) in Data Quality allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57106",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:32"
+    },
+    {
+      "cve_id": "CVE-2026-56163",
+      "title": "高危漏洞: CVE-2026-56163 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-24 23:18:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Missing authentication for critical function in Microsoft Azure Kubernetes Service allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56163",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:27"
+    },
+    {
+      "cve_id": "CVE-2026-9765",
+      "title": "高危漏洞: CVE-2026-9765 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-07-24 21:18:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Note: The CVE and blog post don't exist because we determined this is actually a cloud-only issue.\n\nAccess Controls are “Broken” when a user can access resources they are not authorized to access. An attacker can bypass any access control mechanisms in a web application, and gain unauthorized access to resources that are not available with their permissions. \n\nBroken access control can allow attackers to:\nAccess resources only accessible to certain users, thus allowing unauthorized access to data\nPerform operations on behalf of other users, leading to account takeovers in the worst cases\nAttempt privilege escalation\nAttempt to take over an account",
+      "refs": "https://grafana.com/security/security-advisories/cve-2026-9765",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:23"
+    },
+    {
+      "cve_id": "CVE-2026-15401",
+      "title": "高危漏洞: CVE-2026-15401 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-24 18:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The VikBooking Hotel Booking Engine & PMS plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'vbfX' parameter in all versions up to, and including, 1.8.13 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The vbfX custom-field value is stored via the public-facing saveorder task, which has no capability or authentication check enforced by default, enabling fully unauthenticated submission of malicious payloads.",
+      "refs": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.12/admin/views/editorder/tmpl/default.php#L1405\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.12/admin/views/editorder/tmpl/default.php#L1420\nhttps://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.12/site/controller.php#L1083",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:19"
+    },
+    {
+      "cve_id": "CVE-2026-10033",
+      "title": "高危漏洞: CVE-2026-10033 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-07-24 18:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "The EventON Action User plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.5.14. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to grant EventON management capabilities and the upload_files capability to any non-administrator WordPress role or user, escalating their privileges within the site. The administrator role is protected by an early-return guard in update_role_caps(), so only non-administrator roles and individual users can be targeted; however, the same unauthenticated exposure also allows attackers to enumerate all WordPress users with their IDs and display names, disclose role and user capability state along with nonce values, and tamper with event-to-user term assignments.",
+      "refs": "https://plugins.trac.wordpress.org/browser/eventon-action-user/trunk/includes/admin/class-admin-ajax.php#L243\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6ca9eaf7-261b-42ab-a779-9e11dde5763b?source=cve",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:14"
+    },
+    {
+      "cve_id": "CVE-2026-16807",
+      "title": "高危漏洞: CVE-2026-16807 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-24 06:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Out of bounds write in Codecs in Google Chrome prior to 150.0.7871.186 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01320465736.html\nhttps://issues.chromium.org/issues/518237034",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:07"
+    },
+    {
+      "cve_id": "CVE-2026-16806",
+      "title": "高危漏洞: CVE-2026-16806 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-24 06:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Use after free in WebMCP in Google Chrome prior to 150.0.7871.186 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01320465736.html\nhttps://issues.chromium.org/issues/522064153",
+      "source": "NVD",
+      "time": "2026-07-25 00:18:03"
+    },
+    {
+      "cve_id": "CVE-2026-16805",
+      "title": "高危漏洞: CVE-2026-16805 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-24 06:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Use after free in Blink in Google Chrome prior to 150.0.7871.186 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01320465736.html\nhttps://issues.chromium.org/issues/523292588",
+      "source": "NVD",
+      "time": "2026-07-25 00:17:57"
+    },
+    {
+      "cve_id": "CVE-2026-16804",
+      "title": "高危漏洞: CVE-2026-16804 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-24 06:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Use after free in Input in Google Chrome prior to 150.0.7871.186 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_01320465736.html\nhttps://issues.chromium.org/issues/524721670",
+      "source": "NVD",
+      "time": "2026-07-25 00:17:50"
+    },
+    {
       "cve_id": "CVE-2026-15704",
       "title": "高危漏洞: CVE-2026-15704 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -978,127 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/dokan-pro/vulnerability/wordpress-dokan-pro-plugin-5-0-3-broken-access-control-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-24 00:26:33"
-    },
-    {
-      "cve_id": "CVE-2026-65494",
-      "title": "高危漏洞: CVE-2026-65494 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Subscriber SQL Injection in Dokan Pro <= 5.0.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/dokan-pro/vulnerability/wordpress-dokan-pro-plugin-5-0-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:28"
-    },
-    {
-      "cve_id": "CVE-2026-65493",
-      "title": "高危漏洞: CVE-2026-65493 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 20:18:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Subscriber PHP Object Injection in Dokan Pro <= 5.0.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/dokan-pro/vulnerability/wordpress-dokan-pro-plugin-5-0-2-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:23"
-    },
-    {
-      "cve_id": "CVE-2026-65492",
-      "title": "高危漏洞: CVE-2026-65492 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Dokan Pro <= 5.0.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/dokan-pro/vulnerability/wordpress-dokan-pro-plugin-5-0-0-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:19"
-    },
-    {
-      "cve_id": "CVE-2026-65488",
-      "title": "高危漏洞: CVE-2026-65488 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-23 20:18:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Request Forgery (CSRF) in LA-Studio Element Kit for Elementor <= 1.6.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/lastudio-element-kit/vulnerability/wordpress-la-studio-element-kit-for-elementor-plugin-1-6-2-cross-site-request-forgery-csrf-to-stored-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:14"
-    },
-    {
-      "cve_id": "CVE-2026-65481",
-      "title": "高危漏洞: CVE-2026-65481 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 20:18:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Contributor Local File Inclusion in Vino <= 1.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/vino/vulnerability/wordpress-vino-theme-1-9-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:09"
-    },
-    {
-      "cve_id": "CVE-2026-65477",
-      "title": "高危漏洞: CVE-2026-65477 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 20:18:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Contributor Local File Inclusion in Tonda Core <= 2.1.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/tonda-core/vulnerability/wordpress-tonda-core-plugin-2-1-2-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:04"
-    },
-    {
-      "cve_id": "CVE-2026-65471",
-      "title": "高危漏洞: CVE-2026-65471 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-23 20:18:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Unauthenticated Cross Site Request Forgery (CSRF) in Avada Core <= 5.15.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/fusion-core/vulnerability/wordpress-avada-core-plugin-5-15-6-cross-site-request-forgery-csrf-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:26:00"
-    },
-    {
-      "cve_id": "CVE-2026-65462",
-      "title": "高危漏洞: CVE-2026-65462 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-23 20:18:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Administrator SQL Injection in Uncanny Automator <= 7.3.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/uncanny-automator/vulnerability/wordpress-uncanny-automator-plugin-7-3-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:53"
-    },
-    {
-      "cve_id": "CVE-2026-65461",
-      "title": "高危漏洞: CVE-2026-65461 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-23 20:18:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Administrator Arbitrary File Upload in Really Simple CSV Importer <= 1.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/really-simple-csv-importer/vulnerability/wordpress-really-simple-csv-importer-plugin-1-3-arbitrary-file-upload-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:48"
-    },
-    {
-      "cve_id": "CVE-2026-65455",
-      "title": "高危漏洞: CVE-2026-65455 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-23 20:18:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Administrator Arbitrary File Upload in MapSVG <= 8.14.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mapsvg-lite-interactive-vector-maps/vulnerability/wordpress-mapsvg-plugin-8-14-0-arbitrary-file-upload-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:41"
-    },
-    {
-      "cve_id": "CVE-2026-65454",
-      "title": "高危漏洞: CVE-2026-65454 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-23 20:18:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in Quiz And Survey Master <= 11.2.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/quiz-master-next/vulnerability/wordpress-quiz-and-survey-master-plugin-11-2-0-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-24 00:25:36"
     }
   ]
 }
