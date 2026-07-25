@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-66374",
+      "title": "高危漏洞: CVE-2026-66374 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-25 09:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
+      "description": "Knot Resolver before 6.4.1 allows remote code execution via a heap-based buffer overflow in the DoQ (DNS-over-QUIC) receive path.",
+      "refs": "https://github.com/venglin/knot-doq\nhttps://openwall.com/lists/oss-security/2026/07/23/6",
+      "source": "NVD",
+      "time": "2026-07-25 13:34:23"
+    },
+    {
+      "cve_id": "CVE-2026-66373",
+      "title": "高危漏洞: CVE-2026-66373 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-25 09:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Redis before 8.8.0, in the unusual case where an authenticated attacker can execute RESTORE, allows remote code execution via a RESTORE payload where the same NACK (pending entry) is referenced by more than one consumer, because deleting both consumers via XGROUP DELCONSUMER leads to a double free. NOTE: this issue exists because of an incomplete fix for CVE-2026-25243.",
+      "refs": "https://github.com/berabuddies/redis-poc\nhttps://github.com/redis/redis/compare/8.6.4...8.8.0\nhttps://github.com/redis/redis/pull/15081",
+      "source": "NVD",
+      "time": "2026-07-25 13:34:16"
+    },
+    {
       "cve_id": "CVE-2026-61892",
       "title": "高危漏洞: CVE-2026-61892 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/chatwoot/chatwoot/commit/8dd0d08322edafaec24624b72ed2f6045921cb7b\nhttps://github.com/chatwoot/chatwoot/issues/15072\nhttps://github.com/chatwoot/chatwoot/pull/15039",
       "source": "NVD",
       "time": "2026-07-24 05:57:17"
-    },
-    {
-      "cve_id": "CVE-2026-16756",
-      "title": "高危漏洞: CVE-2026-16756 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-24 03:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Missing connection and header-read timeouts and the absence of a concurrent-connection cap in the default serve() path of Amazon aws-smithy-http-server might allow remote attackers to cause a denial of service by opening many connections and sending partial requests that are never completed, exhausting server sockets and tasks.\n\n\n\nTo mitigate this issue, users should upgrade to aws-smithy-http-server 0.66.5 or later.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-064-aws/\nhttps://crates.io/crates/aws-smithy-http-server/0.66.5\nhttps://github.com/smithy-lang/smithy-rs/security/advisories/GHSA-jvxp-qmx7-gjpx",
-      "source": "NVD",
-      "time": "2026-07-24 05:57:13"
-    },
-    {
-      "cve_id": "CVE-2026-6516",
-      "title": "高危漏洞: CVE-2026-6516 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-24 02:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
-      "description": "Zohocorp ManageEngine ADAudit Plus versions before 8606 are affected by Unauthenticated Remote code execution due to the vulnerable agent API.",
-      "refs": "https://www.manageengine.com/products/active-directory-audit/cve-2026-6516.html",
-      "source": "NVD",
-      "time": "2026-07-24 05:57:09"
     }
   ]
 }
