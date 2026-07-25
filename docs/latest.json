@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-61892",
+      "title": "高危漏洞: CVE-2026-61892 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 07:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Weintek cMT3092X HMI allows a non-privileged user to modify tokens to escalate privileges.",
+      "refs": "https://dl.weintek.com/public/Document/TEC/TEC25003E_cMT_EasyWeb_V2_Security_Issues.pdf\nhttps://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-204-03.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:35"
+    },
+    {
+      "cve_id": "CVE-2026-60134",
+      "title": "高危漏洞: CVE-2026-60134 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 07:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Weintek cMT3092X HMI allows a non-privileged user to modify cookies to gain elevated privileges.",
+      "refs": "https://dl.weintek.com/public/Document/TEC/TEC25003E_cMT_EasyWeb_V2_Security_Issues.pdf\nhttps://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-204-03.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:31"
+    },
+    {
+      "cve_id": "CVE-2026-61884",
+      "title": "高危漏洞: CVE-2026-61884 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-25 06:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The web management interface of Tycon Systems TPDIN-Monitor-WEB2\n\n does not perform server-side validation of credentials during the login process. By submitting empty values for both credential fields, an unauthenticated remote attacker can bypass the authentication check and establish a valid administrative session. This grants full access to device controls including power relay management, device reboot, remote access service configuration, and network settings, which could allow an attacker to disrupt connected infrastructure or cause physical damage to equipment.",
+      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-202-01.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-202-01\nhttps://www.tyconsystems.com/contact",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:27"
+    },
+    {
+      "cve_id": "CVE-2025-71408",
+      "title": "高危漏洞: CVE-2025-71408 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-25 06:16:50",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NLTK (Natural Language Toolkit) before version 3.9.3 contains an eval injection vulnerability in the nltk.collocations module that allows an attacker who controls command-line arguments to execute arbitrary Python code. When collocations.py is invoked directly, the __main__ block passes command-line arguments directly to eval() as suffixes of BigramAssocMeasures without allowlist validation or sanitization, enabling an attacker to supply a Python expression that escapes the intended attribute lookup and executes arbitrary code including OS commands via the os module.",
+      "refs": "https://aydinnyunus.github.io/2026/06/07/command-injection-nltk-collocations-eval/\nhttps://github.com/nltk/nltk/commit/66f14096d952ec8f04934f515e027534bd4eb0ac\nhttps://github.com/nltk/nltk/pull/3465",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:23"
+    },
+    {
+      "cve_id": "CVE-2026-66041",
+      "title": "高危漏洞: CVE-2026-66041 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 04:18:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FFmpeg 7.0 through 8.1.2, fixed in commit 4da9812, contains a heap out-of-bounds write vulnerability in the vf_quirc filter that allows an attacker to corrupt heap memory by supplying a crafted PGS/SUP subtitle file with mismatched frame dimensions. Attackers can provide a subtitle file whose second presentation has larger dimensions than its first, causing av_image_copy_plane() to copy data exceeding the initial allocation size into the undersized libquirc grayscale image buffer, resulting in heap corruption and process crash with potential for code execution.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/4da9812e25894fb51d62a8875cfa8eb39b5e20f5\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23625\nhttps://www.vulncheck.com/advisories/ffmpeg-heap-out-of-bounds-write-via-vf-quirc-filter",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:18"
+    },
+    {
+      "cve_id": "CVE-2026-66040",
+      "title": "高危漏洞: CVE-2026-66040 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 04:18:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FFmpeg through 8.1.2, fixed in commit b506faf, contains a heap out-of-bounds write vulnerability in the native PNG and APNG encoders that allows remote attackers to corrupt heap memory by supplying a crafted PNG image with a malicious eXIf chunk. Attackers can craft an eXIf chunk where multiple IFD entries reference the same large value payload, causing canonical serialization to expand the output far beyond the undersized allocation estimated by add_exif_profile_size(), resulting in png_write_chunk() writing tens of thousands of bytes past the buffer boundary, leading to deterministic heap corruption, process crash, and potentially arbitrary code execution.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/b506fafec9a19fcbc2be5271875fd4a63d6615bc\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23786\nhttps://www.vulncheck.com/advisories/ffmpeg-heap-out-of-bounds-write-via-png-apng-exif-encoder",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:13"
+    },
+    {
+      "cve_id": "CVE-2026-66039",
+      "title": "高危漏洞: CVE-2026-66039 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 04:18:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FFmpeg through 8.1.2, fixed in commit aafb5c6, contains a signed integer overflow vulnerability in the MACE6 audio decoder that allows attackers to corrupt heap memory by supplying a crafted CAF file with a malicious bytes_per_packet value. Attackers can craft a CAF file with oversized bytes_per_packet and frames_per_packet values in the desc chunk to trigger an integer overflow in mace_decode_frame() during output sample count computation, resulting in an undersized buffer allocation and heap out-of-bounds write that could enable code execution.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/aafb5c655edc76a753275c383ebb139feb032718\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23631\nhttps://www.vulncheck.com/advisories/ffmpeg-mace6-audio-decoder-heap-out-of-bounds-write-via-caf-file",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:08"
+    },
+    {
+      "cve_id": "CVE-2026-66036",
+      "title": "高危漏洞: CVE-2026-66036 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-25 04:18:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FFmpeg through 8.1.2, fixed in commit 5d7112c, contains a heap out-of-bounds write vulnerability in the vf_hqdn3d filter that allows attackers to corrupt heap memory by supplying a crafted video whose frame resolution increases between frames when filtergraph reinitialization is disabled via the -reinit_filter 0 option. Attackers can provide a malicious video input where vf_hqdn3d.config_input() allocates undersized per-plane line-history buffers based on the initial frame width, and subsequent larger frames cause denoise_spatial() to write beyond the allocation boundary, resulting in heap memory corruption.",
+      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/5d7112c60e6f0f0742ce47d448e6da0718a70f4c\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23783\nhttps://www.vulncheck.com/advisories/ffmpeg-heap-out-of-bounds-write-in-vf-hqdn3d-filter",
+      "source": "NVD",
+      "time": "2026-07-25 09:47:01"
+    },
+    {
+      "cve_id": "CVE-2026-62835",
+      "title": "高危漏洞: CVE-2026-62835 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-07-25 04:18:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper authorization in Azure Portal allows an unauthorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62835",
+      "source": "NVD",
+      "time": "2026-07-25 09:46:56"
+    },
+    {
+      "cve_id": "CVE-2026-14603",
+      "title": "高危漏洞: CVE-2026-14603 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-24 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The WowOptin: Next-Gen Popup Maker  WordPress plugin before 1.4.38 does not have proper authorization on a REST endpoint, allowing unauthenticated users to disable all of the site's opt-in forms and insert new template-based opt-in rows into the database.",
+      "refs": "https://wpscan.com/vulnerability/3a06d27a-9405-4cf2-9087-554018d31884/",
+      "source": "NVD",
+      "time": "2026-07-25 09:46:52"
+    },
+    {
+      "cve_id": "CVE-2026-12981",
+      "title": "高危漏洞: CVE-2026-12981 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-24 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The CAFEHAUS API WordPress plugin through 1.0.0 does not have any authentication or authorisation when updating user passwords, allowing unauthenticated attackers to set the password of any user, including administrators, and fully take over their accounts.",
+      "refs": "https://wpscan.com/vulnerability/79fa8b91-f88e-4249-9f17-9e98e879f6fa/",
+      "source": "NVD",
+      "time": "2026-07-25 09:46:48"
+    },
+    {
+      "cve_id": "CVE-2026-12877",
+      "title": "高危漏洞: CVE-2026-12877 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-24 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The Project Management, Bug and Issue Tracking Plugin  WordPress plugin before 5.1.0 does not sanitise and escape user supplied input before using it in a SQL query, allowing unauthenticated attackers to perform SQL injection attacks. This is exploitable in the Project Management, Bug and Issue Tracking Plugin  WordPress plugin before 5.1.0's standard front-end issue-tracker configuration.",
+      "refs": "https://wpscan.com/vulnerability/e9d0ea92-1046-457b-9619-38b61848e36a/",
+      "source": "NVD",
+      "time": "2026-07-25 09:46:42"
+    },
+    {
+      "cve_id": "CVE-2026-12497",
+      "title": "高危漏洞: CVE-2026-12497 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-24 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content  WordPress plugin before 4.16.18 does not consistently enforce the role restriction configured on its front-end registration role-selection field. The set of roles offered to the visitor and the set of roles the registration handler accepts are derived by two different parsers, and for some valid ways of configuring the offered roles the handler ignores the restriction and falls back to accepting any non-administrator role. Combined with the absence of a nonce on the public registration handler, this allows an unauthenticated visitor to register an account with a higher role, such as Editor or Author, than the form was configured to offer.",
+      "refs": "https://wpscan.com/vulnerability/bfb14acb-051c-4bcb-adfc-10a27a00dfe7/",
+      "source": "NVD",
+      "time": "2026-07-25 09:46:35"
+    },
+    {
       "cve_id": "CVE-2026-54342",
       "title": "高危漏洞: CVE-2026-54342 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -956,149 +1099,6 @@
       "refs": "https://www.manageengine.com/products/active-directory-audit/cve-2026-6516.html",
       "source": "NVD",
       "time": "2026-07-24 05:57:09"
-    },
-    {
-      "cve_id": "CVE-2026-65919",
-      "title": "高危漏洞: CVE-2026-65919 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-24 02:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Meshery before 1.0.57 contains an unauthenticated arbitrary file read vulnerability in the /api/system/fileView and /api/system/fileDownload endpoints that pass user-supplied file parameters directly to os.Open without path validation. Attackers can supply absolute paths or traversal sequences in the file parameter to read arbitrary files from the host filesystem without authentication.",
-      "refs": "https://github.com/meshery/meshery/commit/ea83a26cb090b13be36c07cf24a99f8c637cc765\nhttps://github.com/meshery/meshery/issues/20076\nhttps://github.com/meshery/meshery/pull/20133",
-      "source": "NVD",
-      "time": "2026-07-24 05:57:05"
-    },
-    {
-      "cve_id": "CVE-2026-65918",
-      "title": "高危漏洞: CVE-2026-65918 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-24 02:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
-      "description": "PyTorch torchvision through 0.28.0, fixed in commit 4e05dc2, contains an out-of-bounds heap read vulnerability in the GIF decoder's read_from_tensor callback that passes unclamped length to memcpy. Attackers can supply malicious or truncated GIF files to cause denial of service via segmentation fault or disclose adjacent heap memory contents.",
-      "refs": "https://github.com/pytorch/vision/commit/4e05dc22f5f050a9528cc0ea09ceca6cdaf8f4ed\nhttps://github.com/pytorch/vision/issues/9551\nhttps://github.com/pytorch/vision/pull/9520",
-      "source": "NVD",
-      "time": "2026-07-24 05:57:01"
-    },
-    {
-      "cve_id": "CVE-2026-65702",
-      "title": "高危漏洞: CVE-2026-65702 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-24 02:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "description": "Vanna through 2.0.2 contains a path traversal vulnerability in the FileSystemConversationStore persistence integration that allows unauthenticated remote attackers to write attacker-controlled JSON files to arbitrary filesystem locations and read conversation metadata from outside the intended store base directory. Attackers can supply path traversal sequences in the conversation_id parameter submitted to the unauthenticated chat API endpoints to escape the base directory during both write and read operations, enabling arbitrary file write with attacker-controlled content and unauthorized file read on the server filesystem.",
-      "refs": "https://github.com/geo-chen/oss/blob/main/vanna.md\nhttps://www.vulncheck.com/advisories/vanna-path-traversal-via-filesystemconversationstore",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:56"
-    },
-    {
-      "cve_id": "CVE-2026-65701",
-      "title": "高危漏洞: CVE-2026-65701 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-24 02:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "SoftVC VITS Singing Voice Conversion through commit 730930d contains a path traversal vulnerability in the full-song inference server that allows unauthenticated remote attackers to read and exfiltrate arbitrary files by supplying attacker-controlled filesystem paths through the audio_path field of an unauthenticated POST request to the /wav2wav route. Attackers can pass arbitrary server-side paths verbatim to librosa.load, torchaudio.load, and soundfile.write sinks, causing the server to decode and return file contents via the HTTP response body while also writing attacker-specified .wav files to arbitrary locations on the filesystem.",
-      "refs": "https://github.com/geo-chen/oss/blob/main/so-vits-svc.md\nhttps://www.vulncheck.com/advisories/softvc-vits-singing-voice-conversion-path-traversal-via-wav2wav-flask-route",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:49"
-    },
-    {
-      "cve_id": "CVE-2026-65700",
-      "title": "高危漏洞: CVE-2026-65700 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-24 02:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "h2oGPT through 0.2.1 contains a path traversal vulnerability in the OpenAI-compatible files API that allows unauthenticated remote attackers to read, write, and delete arbitrary files accessible to the server process by supplying traversal sequences in the bearer token. The get_user_dir function in openai_server/backend_utils.py uses the bearer token string unsanitized as a path component via os.path.join, and because the default API key is EMPTY authentication is bypassed, enabling attackers to traverse outside the intended user directory through the file content, delete, and upload endpoints to achieve remote code execution by writing to startup hooks or application-loaded files.",
-      "refs": "https://github.com/geo-chen/oss/blob/main/h2ogpt.md\nhttps://www.vulncheck.com/advisories/h2ogpt-path-traversal-via-openai-compatible-files-api",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:45"
-    },
-    {
-      "cve_id": "CVE-2026-47752",
-      "title": "高危漏洞: CVE-2026-47752 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-07-24 02:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Tugtainer is a self-hosted app for automating updates of Docker containers. Versions prior to 1.30.2 are vulnerable to Server-Side Template Injection (SSTI) in the notification template feature. The `title_template` and `body_template` fields are rendered using an unsandboxed `jinja2.Environment`, allowing any authenticated user to execute arbitrary OS commands as root inside the container. Version 1.30.2 fixes the issue.",
-      "refs": "https://github.com/Quenary/tugtainer/security/advisories/GHSA-g2cj-2x47-78vq\nhttps://github.com/Quenary/tugtainer/security/advisories/GHSA-g2cj-2x47-78vq",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:41"
-    },
-    {
-      "cve_id": "CVE-2026-47743",
-      "title": "高危漏洞: CVE-2026-47743 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-07-24 02:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Shopper is a Headless e-commerce Admin Panel. Prior to 2.8.0, three related defects on admin Livewire components allowed data tampering, sensitive data disclosure, and stored XSS. First, several Livewire components in the admin panel exposed Eloquent model identifiers as public properties without the `#[Locked]` attribute. An authenticated user could rewrite the wire payload from the browser to target any record id, bypassing the implicit scoping enforced by the page routing. Second, `Customers/Create::store()` re-passed a `Hidden` `_password` form field straight into the create payload. The plaintext password was rendered into the HTML and transported through the Livewire snapshot in clear text, exposing credentials in the page DOM and in any logging that captures Livewire payloads. Finally, the product barcode field was rendered through `DNS1DFacade::getBarcodeHTML()` with `{!! !!}`. An attacker with `edit_products` permission could persist malicious payload in the barcode field that would execute in the browser of any admin user viewing that product, enabling session theft and privileged-action chaining. Starting in v2.8.0, all vulnerable Livewire model identifiers are now marked `#[Locked]`; `Customers/Create` no longer round-trips the password through a Hidden form field; the plaintext password is hashed at action boundary and never returned to the client; and the product barcode rendering now escapes the value before passing it to the barcode generator and the output is wrapped in an `<svg>` context that does not interpret event handlers. No known workarounds are available.",
-      "refs": "https://github.com/shopperlabs/shopper/pull/511\nhttps://github.com/shopperlabs/shopper/security/advisories/GHSA-hr9v-r8r2-hg7j",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:36"
-    },
-    {
-      "cve_id": "CVE-2026-47668",
-      "title": "高危漏洞: CVE-2026-47668 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-07-24 02:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "DbGate is cross-platform database manager. In versions 7.1.8 and prior, DbGate's JSON script runner (`POST /runners/start`) allows remote code execution via code injection in the `functionName` parameter of JSON script `assign` commands. The `functionName` value is interpolated directly into dynamically generated JavaScript source code via string concatenation. The generated code is then executed in a forked Node.js child process. Version 7.1.9 contains a patch.",
-      "refs": "https://github.com/dbgate/dbgate/releases/tag/v7.1.9\nhttps://github.com/dbgate/dbgate/security/advisories/GHSA-8v3q-9vmx-36vc\nhttps://github.com/runZeroInc/nuclei-templates/blob/main/http/vulnerabilities/dbgate-unauth-rce.yaml",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:29"
-    },
-    {
-      "cve_id": "CVE-2026-43823",
-      "title": "高危漏洞: CVE-2026-43823 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-23 23:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "When initializing an RSA public key from DER or PEM bytes throws an error, the EVP_PKEY* is double-freed: first in the catch block, then in the deinit. This can lead to a crash on future memory allocations. This double-free manifests when BoringSSL cannot decode the public key from the bytes provided. This vulnerability is addressed in swift-crypto version 4.5.1.",
-      "refs": "https://github.com/apple/swift-crypto/security/advisories/GHSA-8q93-f6xh-4f6f\nhttps://github.com/apple/swift-crypto/security/advisories/GHSA-8q93-f6xh-4f6f",
-      "source": "NVD",
-      "time": "2026-07-24 05:56:25"
-    },
-    {
-      "cve_id": "CVE-2026-44909",
-      "title": "高危漏洞: CVE-2026-44909 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-24 01:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Proxygen lacked a generalized slow-consumer detection mechanism in its core HTTP session layer. A remote, unauthenticated attacker could exploit HTTP/2 flow-control by setting SETTINGS_INITIAL_WINDOW_SIZE to 0 or withholding WINDOW_UPDATE frames, causing the server to buffer complete response bodies in memory indefinitely for stalled streams. By opening many simultaneous streams requesting large resources while preventing the server from transmitting responses, an attacker could induce unbounded memory growth leading to service degradation, resource exhaustion, or denial of service. Versions v2017.01.16.00 through v2026.07.20.00 are affected.",
-      "refs": "https://github.com/facebook/proxygen/commit/f28742f21f7022c261b7620d4e6b20d82b6cff72",
-      "source": "NVD",
-      "time": "2026-07-24 02:58:34"
-    },
-    {
-      "cve_id": "CVE-2026-65917",
-      "title": "高危漏洞: CVE-2026-65917 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-24 00:17:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "CyberPanel through 1.9.1, fixed in commit b198460, contains an insecure direct object reference (IDOR) vulnerability in the IncBackups application's incremental-backup handlers (deleteBackup, fetchRestorePoints, and restorePoint) that allows authenticated panel users to access or manipulate other tenants' backup resources by supplying an attacker-controlled globally sequential IncJob integer ID that is never re-scoped to the authorized domain. Attackers can enumerate sequential backup IDs to read another tenant's backup metadata, irrecoverably delete another tenant's backup snapshots, or trigger unauthorized restoration of another tenant's backup job with root privileges.",
-      "refs": "https://github.com/usmannasir/cyberpanel/commit/b1984603f9b0099b39bca46fea176e53b6d4d601\nhttps://github.com/usmannasir/cyberpanel/issues/1828\nhttps://www.vulncheck.com/advisories/cyberpanel-incbackups-idor-via-sequential-backup-id",
-      "source": "NVD",
-      "time": "2026-07-24 02:58:28"
-    },
-    {
-      "cve_id": "CVE-2026-65916",
-      "title": "高危漏洞: CVE-2026-65916 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-24 00:17:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "CyberPanel through 1.9.1, fixed in commit b198460, contains a missing authorization vulnerability in the cancelBackupCreation handler that allows authenticated users to kill, delete, and corrupt other tenants' backups. Attackers can send crafted POST requests with arbitrary backupCancellationDomain and fileName parameters to terminate backup processes, delete backup archives, corrupt backup status files, and remove database records belonging to other tenants.",
-      "refs": "https://github.com/usmannasir/cyberpanel/commit/b1984603f9b0099b39bca46fea176e53b6d4d601\nhttps://github.com/usmannasir/cyberpanel/issues/1829\nhttps://www.vulncheck.com/advisories/cyberpanel-missing-authorization-in-cancelbackupcreation-handler",
-      "source": "NVD",
-      "time": "2026-07-24 02:58:23"
-    },
-    {
-      "cve_id": "CVE-2026-16584",
-      "title": "高危漏洞: CVE-2026-16584 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-07-24 00:17:15",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper handling of an initialization failure in AWS API MCP Server from 0.2.13 through 1.3.46 might allow an actor to bypass the user-configured security policy and execute AWS API operations that the policy was set to deny or gate. When initialization of the security policy enforcement data fails at server startup, the policy check is skipped for the lifetime of the process. IAM permissions on the configured credentials remain in effect and are unaffected.\n\n\n\nTo remediate this issue, users should upgrade to version 1.3.47.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-063-aws/\nhttps://github.com/awslabs/mcp/security/advisories/GHSA-29w2-fq35-v728\nhttps://pypi.org/project/awslabs.aws-api-mcp-server/1.3.47/",
-      "source": "NVD",
-      "time": "2026-07-24 02:58:17"
     }
   ]
 }
