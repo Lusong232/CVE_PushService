@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-66012",
+      "title": "高危漏洞: CVE-2026-66012 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-25 19:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SiYuan before v3.7.2 contains a missing authorization vulnerability in the POST /mcp kernel endpoint, which is gated only by a general auth check (model.CheckAuth) with no admin-role or read-only enforcement. This exposes 31 MCP tools, including a file tool with list/read/write/delete/rename/copy actions across the entire workspace. When the Publish server is enabled in anonymous mode (Conf.Publish.Enable=true and Conf.Publish.Auth.Enable=false), the Publish reverse proxy attaches an anonymous RoleReader JWT to proxied requests, allowing a remote unauthenticated attacker to reach /mcp. The attacker can read conf/conf.json to extract accessAuthCode, api.token, and cookieKey in plaintext, write arbitrary files in the workspace, and plant a plugin into data/plugins/ that executes with nodeIntegration:true and no contextIsolation on the next desktop launch, leading to administrator takeover.",
+      "refs": "https://github.com/siyuan-note/siyuan/commit/c72ca4cd09019e5f64afdee8f8c6ec5ef34858db\nhttps://github.com/siyuan-note/siyuan/security/advisories/GHSA-cvhv-7xhj-xjp8\nhttps://www.vulncheck.com/advisories/siyuan-before-unauthenticated-administrator-takeover-via-mcp",
+      "source": "NVD",
+      "time": "2026-07-25 21:00:37"
+    },
+    {
       "cve_id": "CVE-2026-10818",
       "title": "高危漏洞: CVE-2026-10818 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/quinn-rs/quinn/pull/2694\nhttps://github.com/quinn-rs/quinn/security/advisories/GHSA-4w2j-m93h-cj5j\nhttps://rustsec.org/advisories/RUSTSEC-2026-0185.html",
       "source": "NVD",
       "time": "2026-07-24 09:46:28"
-    },
-    {
-      "cve_id": "CVE-2026-15212",
-      "title": "高危漏洞: CVE-2026-15212 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-24 04:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The WPO365 | Login plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 43.2. This is due to the Ajax_Service::verify_ajax_request() helper gating its wp_verify_nonce() call behind the boolean option 'enable_nonce_check', which is absent from the default 'wpo365_options' array and therefore evaluates to false via get_global_boolean_var(); as a result, the wp_ajax_wpo365_update_settings handler (Ajax_Service::update_settings) accepts POSTs from cross-origin pages and forwards the attacker-supplied 'settings' payload (base64/JSON) to Options_Service::update_options(), which merges every key/value into wpo365_options without a key allowlist. This makes it possible for unauthenticated attackers to overwrite arbitrary plugin options — including enabling the SCIM REST endpoint (enable_scim), planting an attacker-known scim_secret_token, and setting new_usr_default_role to 'administrator' — via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wpo365-login/tags/43.2/Services/Ajax_Service.php#L805\nhttps://plugins.trac.wordpress.org/changeset/3610759/wpo365-login\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/51d0ba58-614e-4284-ae0b-b0b76fc5c46d?source=cve",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:23"
     }
   ]
 }
