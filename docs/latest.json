@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-57990",
+      "title": "高危漏洞: CVE-2026-57990 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-27 02:18:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Files or directories accessible to external parties in Microsoft Edge (Chromium-based) allows an unauthorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57990",
+      "source": "NVD",
+      "time": "2026-07-27 05:49:37"
+    },
+    {
+      "cve_id": "CVE-2026-57989",
+      "title": "高危漏洞: CVE-2026-57989 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-27 02:18:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Origin validation error in Microsoft Edge (Chromium-based) allows an unauthorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57989",
+      "source": "NVD",
+      "time": "2026-07-27 05:49:32"
+    },
+    {
       "cve_id": "CVE-2026-17497",
       "title": "高危漏洞: CVE-2026-17497 (CVSS 8.3)",
       "cvss_score": 8.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/a7e38b617b32f996beaa371bbf04b39907d7a527\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23779\nhttps://www.vulncheck.com/advisories/ffmpeg-vf-swaprect-out-of-bounds-write-via-nv12-frame-processing",
       "source": "NVD",
       "time": "2026-07-24 09:47:00"
-    },
-    {
-      "cve_id": "CVE-2026-65705",
-      "title": "高危漏洞: CVE-2026-65705 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-24 04:17:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "FFmpeg versions 3.4 through 8.1.2 contain an out-of-bounds write vulnerability in the vf_floodfill video filter that allows attackers to corrupt heap memory by supplying a dynamically sized video stream with filtergraph reinitialization disabled via -reinit_filter 0. When config_input() allocates the points traversal stack based on initial frame dimensions and a subsequent larger frame is processed, filter_frame() performs flood-fill neighbor pushes beyond the original allocation boundary, resulting in heap corruption and process crash with potential for code execution depending on heap layout and process hardening.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/f186c50cf53aec20e9a29059cb22ca3f2d59201c\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23780\nhttps://www.vulncheck.com/advisories/ffmpeg-vf-floodfill-out-of-bounds-write-via-filter-frame",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:54"
-    },
-    {
-      "cve_id": "CVE-2026-65704",
-      "title": "高危漏洞: CVE-2026-65704 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-24 04:17:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "FFmpeg through 8.1.2 contains an out-of-bounds write vulnerability that allows attackers to cause heap corruption by supplying a crafted ffconcat file processed with the -safe 0 flag. The TY demuxer's demux_audio() function decrements packet size without bounds checking, producing a negative size value that is passed to memcpy() in shorten_decode_frame(), where conversion to size_t wraps the value to near SIZE_MAX and triggers reads beyond the source allocation and writes far beyond the Shorten decoder's bitstream buffer.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/de771bd52774a52d45b0e2c82e56995a1ef40df7\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23767\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-write-via-ty-demuxer-and-shorten-decoder",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:48"
     }
   ]
 }
