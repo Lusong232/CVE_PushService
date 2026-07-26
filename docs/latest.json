@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-63720",
+      "title": "高危漏洞: CVE-2026-63720 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-26 13:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "datamodel-code-generator prior to version 0.70.0 contains a code injection vulnerability that allows attackers who control input schemas to achieve remote code execution by supplying a malicious customBasePath value containing embedded newlines and a dot-free Python expression. The crafted value is emitted verbatim into a generated 'from ... import ...' statement without identifier validation, causing arbitrary Python code to execute when the generated module is imported.",
+      "refs": "https://github.com/koxudaxi/datamodel-code-generator\nhttps://github.com/koxudaxi/datamodel-code-generator/commit/545a96c5\nhttps://www.vulncheck.com/advisories/datamodel-code-generator-code-injection-via-unvalidated-custombasepath-schema-field",
+      "source": "NVD",
+      "time": "2026-07-26 18:28:13"
+    },
+    {
       "cve_id": "CVE-2026-15962",
       "title": "高危漏洞: CVE-2026-15962 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-204-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-63359",
       "source": "NVD",
       "time": "2026-07-24 09:46:40"
-    },
-    {
-      "cve_id": "CVE-2026-60122",
-      "title": "高危漏洞: CVE-2026-60122 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-24 04:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "gpsd through release-3.27.5, fixed at commit 4c06658, contains a code injection vulnerability in the gpsprof utility that allows an attacker who controls GPS input data to execute arbitrary OS commands by injecting malicious content into the SKY.satellites[].used field, which is inserted unsanitized into a gnuplot heredoc data block. Attackers can supply a used value containing the string EOD to terminate the heredoc early and append gnuplot system() calls, achieving OS command execution as the user running gpsprof when the generated plot script is processed by gnuplot in polar mode.",
-      "refs": "https://gitlab.com/gpsd/gpsd/-/commit/5a9c44a42136b9bb98d460a8a716e9fd344a8d93\nhttps://gitlab.com/gpsd/gpsd/-/work_items/406\nhttps://www.vulncheck.com/advisories/gpsd-gpsprof-code-injection-via-sky-satellites-used-field",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:34"
     }
   ]
 }
