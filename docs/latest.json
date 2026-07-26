@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-17497",
+      "title": "高危漏洞: CVE-2026-17497 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-26 23:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "NoteGen before 0.32.0 grants the Tauri shell plugin shell:allow-execute capability for bash, python, and python3 with arbitrary arguments in the default desktop capabilities. JavaScript running in the application webview can therefore invoke plugin:shell|execute to run attacker-controlled operating system commands with the privileges of the NoteGen process. In combination with script execution in the webview (for example via chat XSS), this enables full remote code execution on the user's machine.",
+      "refs": "https://github.com/codexu/note-gen\nhttps://github.com/codexu/note-gen/commit/00064a4a8ec4177d51094ffb3e15bf0758009c1f\nhttps://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0",
+      "source": "NVD",
+      "time": "2026-07-27 02:56:14"
+    },
+    {
+      "cve_id": "CVE-2026-17496",
+      "title": "高危漏洞: CVE-2026-17496 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-26 23:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "description": "NoteGen before 0.32.0 renders AI chat responses with markdown-it configured with html:true and injects the result into the DOM via dangerouslySetInnerHTML in chat-preview, without HTML sanitization and with CSP set to null. Attacker-controlled content that reaches the model prompt (for example a malicious skill REFERENCE.md that instructs the model to emit HTML) can cause the model response to include executable markup such as an img onerror handler. When the user views the chat response, that markup runs as JavaScript in the privileged Tauri webview, enabling arbitrary script execution in the application context (cross-site scripting).",
+      "refs": "https://github.com/codexu/note-gen\nhttps://github.com/codexu/note-gen/commit/ae3ba948c41d8a74b4a20f4c6f26fcdda2002298\nhttps://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0",
+      "source": "NVD",
+      "time": "2026-07-27 02:56:07"
+    },
+    {
       "cve_id": "CVE-2026-63720",
       "title": "高危漏洞: CVE-2026-63720 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1077,28 +1099,6 @@
       "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/de771bd52774a52d45b0e2c82e56995a1ef40df7\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23767\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-write-via-ty-demuxer-and-shorten-decoder",
       "source": "NVD",
       "time": "2026-07-24 09:46:48"
-    },
-    {
-      "cve_id": "CVE-2026-65703",
-      "title": "高危漏洞: CVE-2026-65703 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-24 04:17:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "FFmpeg versions 2.7 through 8.1.2 contain an out-of-bounds write vulnerability in the TDSC video decoder that allows remote attackers to cause heap corruption by supplying a crafted AVI file that changes frame dimensions across TDSF frames. The tdsc_parse_tdsf() function fails to unreference the existing reference frame before calling av_frame_get_buffer(), causing tdsc_blit() and tdsc_yuv2rgb() to write attacker-controlled pixel data beyond the end of the undersized reference frame buffer, resulting in a process crash and potential code execution.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/fd3ee52fab34d98a95b787d0b5ff45685766200c\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23773\nhttps://www.vulncheck.com/advisories/ffmpeg-out-of-bounds-write-in-tdsc-video-decoder",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:44"
-    },
-    {
-      "cve_id": "CVE-2026-63359",
-      "title": "高危漏洞: CVE-2026-63359 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-24 04:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Appriss Insights (Equifax) Victim Information Notification Exchange (VINE) applications allow an unauthenticated attacker to send a specially-crafted request to bypass the login page, access other users' credentials, take over other user accounts, access sensitive PII, and dump other information from the database.",
-      "refs": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-204-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-63359",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:40"
     }
   ]
 }
