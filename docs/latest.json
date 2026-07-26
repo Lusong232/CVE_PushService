@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15962",
+      "title": "高危漏洞: CVE-2026-15962 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-26 10:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.2.6 via deserialization of untrusted input. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to change user passwords and potentially take over administrator accounts. Note: This can only be exploited if user update integration is enabled and a user meta field is mapped.",
+      "refs": "https://fluentforms.com\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b95ec70c-ac76-48fa-9d9d-01cf1983e504?source=cve",
+      "source": "NVD",
+      "time": "2026-07-26 13:50:49"
+    },
+    {
       "cve_id": "CVE-2026-66012",
       "title": "高危漏洞: CVE-2026-66012 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1088,17 +1099,6 @@
       "refs": "https://gitlab.com/gpsd/gpsd/-/commit/5a9c44a42136b9bb98d460a8a716e9fd344a8d93\nhttps://gitlab.com/gpsd/gpsd/-/work_items/406\nhttps://www.vulncheck.com/advisories/gpsd-gpsprof-code-injection-via-sky-satellites-used-field",
       "source": "NVD",
       "time": "2026-07-24 09:46:34"
-    },
-    {
-      "cve_id": "CVE-2026-25800",
-      "title": "高危漏洞: CVE-2026-25800 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-24 04:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Quinn is a pure-Rust, async-compatible implementation of the IETF QUIC transport protocol. Starting in version 0.1.0 and prior to version 0.11.15, the `Assembler` component that assembles unordered stream fragments into consecutive chunks of the stream incurs some overhead for non-contiguous fragments. Readers that read from a `RecvStream` in order (through an `AsyncRead` impl for example) will be sensitive to peers that send fragments while leaving out early parts of the stream, and in particular, fragments with many gaps (because these cannot be defragmented). In such a scenario, the receiving connection suffers from high buffer overhead, enabling memory exhaustion. Version 0.11.15 fixes the issue.",
-      "refs": "https://github.com/quinn-rs/quinn/pull/2694\nhttps://github.com/quinn-rs/quinn/security/advisories/GHSA-4w2j-m93h-cj5j\nhttps://rustsec.org/advisories/RUSTSEC-2026-0185.html",
-      "source": "NVD",
-      "time": "2026-07-24 09:46:28"
     }
   ]
 }
