@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-14837",
+      "title": "高危漏洞: CVE-2026-14837 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-07-27 16:16:17",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Multiple Lenze products are affected by an improper signature verification vulnerability in the SSH enablement mechanism. A low-privileged local attacker can bypass verification of the SSH enable file signature and enable SSH access on the device. Successful exploitation may result in unauthorized administrative access and complete system compromise.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-077/",
+      "source": "NVD",
+      "time": "2026-07-27 20:11:15"
+    },
+    {
       "cve_id": "CVE-2026-57990",
       "title": "高危漏洞: CVE-2026-57990 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1088,17 +1099,6 @@
       "refs": "https://docs.progress.com/bundle/moveit-transfer-release-notes-2026/page/Fixed-Issues-in-2026.0.3.html",
       "source": "NVD",
       "time": "2026-07-24 09:47:05"
-    },
-    {
-      "cve_id": "CVE-2026-65706",
-      "title": "高危漏洞: CVE-2026-65706 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-24 04:17:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "FFmpeg versions 3.0 through 8.1.2 contain an out-of-bounds write vulnerability in the vf_swaprect video filter that allows attackers to corrupt heap memory by supplying a crafted NV12 video frame with odd width dimensions. The filter_frame() function reuses a temporary row buffer sized for plane 0's single-byte pixel step across all planes, causing an 18-byte memcpy into a 17-byte heap allocation when processing the two-byte-per-sample interleaved chroma plane of a 17x16 NV12 frame, resulting in heap corruption and process crash with potential for code execution.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/commit/a7e38b617b32f996beaa371bbf04b39907d7a527\nhttps://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/23779\nhttps://www.vulncheck.com/advisories/ffmpeg-vf-swaprect-out-of-bounds-write-via-nv12-frame-processing",
-      "source": "NVD",
-      "time": "2026-07-24 09:47:00"
     }
   ]
 }
