@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-61376",
+      "title": "高危漏洞: CVE-2026-61376 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-28 17:16:42",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ELECOM wireless LAN routers and access points devices contain an OS Command Injection vulnerability in Restore Settings. If this vulnerability is exploited, an arbitrary OS command may be executed by an attacker who can log in to the product.",
+      "refs": "https://jvn.jp/en/jp/JVN56870912/\nhttps://www.elecom.co.jp/news/security/20260728-01/",
+      "source": "NVD",
+      "time": "2026-07-28 19:10:06"
+    },
+    {
+      "cve_id": "CVE-2026-59764",
+      "title": "高危漏洞: CVE-2026-59764 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-28 17:16:42",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ELECOM wireless LAN routers and access points devices contain an OS Command Injection vulnerability in WebUI. If this vulnerability is exploited, an arbitrary OS command may be executed by an attacker who can log in to the product.",
+      "refs": "https://jvn.jp/en/jp/JVN56870912/\nhttps://www.elecom.co.jp/news/security/20260728-01/",
+      "source": "NVD",
+      "time": "2026-07-28 19:10:02"
+    },
+    {
+      "cve_id": "CVE-2026-14516",
+      "title": "高危漏洞: CVE-2026-14516 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-28 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Online Scheduling and Appointment Booking System – Bookly plugin for WordPress is vulnerable to time-based SQL Injection via the 'staff_ids' parameter in all versions up to, and including, 27.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Exploitation requires a two-request chain: an attacker first calls the unauthenticated bookly_get_form_id action to seed a booking session carrying malicious staff_ids values, then triggers bookly_render_time to cause the tainted array to reach the vulnerable query; CSRF/nonce validation is absent on both endpoints, meaning this chain can be initiated cross-site.",
+      "refs": "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/27.5/frontend/modules/booking/Ajax.php#L15\nhttps://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/27.5/lib/ChainItem.php#L172\nhttps://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/27.5/lib/ChainItem.php#L65",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:55"
+    },
+    {
+      "cve_id": "CVE-2026-14169",
+      "title": "高危漏洞: CVE-2026-14169 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-28 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Due to incorrect behavior order a low privileged remote attacker could trigger account inconsistent state via crafted input and overwrites existing user passwords which could result in complete administrative unavailability of the device.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-076/",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:51"
+    },
+    {
+      "cve_id": "CVE-2026-14168",
+      "title": "高危漏洞: CVE-2026-14168 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-28 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A low privileged remote attacker can gain administrator privileges due to missing authorization at the insert path of the configuration table resulting in gaining full system access.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-076/",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:46"
+    },
+    {
+      "cve_id": "CVE-2026-14167",
+      "title": "高危漏洞: CVE-2026-14167 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-28 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A low privileged remote attacker can perform privileged configuration changes reserved for the administrator level including permission management due to incorrect authorization.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-076/",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:41"
+    },
+    {
+      "cve_id": "CVE-2026-13161",
+      "title": "高危漏洞: CVE-2026-13161 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-28 17:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to generic SQL Injection via the 'alldata[truebooker_user]' parameter in all versions up to, and including, 1.2.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The check_ajax_referer() nonce guard does not constitute an authentication or authorization barrier because the nonce is exposed to unauthenticated visitors on TrueBooker front-end booking pages; exploitation additionally requires that the required booking fields (category, service, person, date, and time slot) be present in the alldata POST parameter so that execution reaches the vulnerable SQL query branch.",
+      "refs": "https://plugins.trac.wordpress.org/browser/truebooker-appointment-booking/tags/1.2.0/main/function_ajax.php#L14741\nhttps://plugins.trac.wordpress.org/browser/truebooker-appointment-booking/tags/1.2.0/main/function_ajax.php#L14756\nhttps://plugins.trac.wordpress.org/browser/truebooker-appointment-booking/tags/1.2.0/main/function_ajax.php#L14866",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:37"
+    },
+    {
+      "cve_id": "CVE-2026-12800",
+      "title": "高危漏洞: CVE-2026-12800 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-28 17:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Premium Packages – Sell Digital Products Securely plugin for WordPress is vulnerable to SQL Injection via the 'code' parameter of the POST /wp-json/wpdmpp/v1/cart/coupon REST API endpoint in versions up to, and including, 6.2.0. This is due to insufficient escaping on the user-supplied parameter, which is interpolated directly into a raw SQL query string in the CouponCodes::find() method without use of $wpdb->prepare() or esc_sql(). This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wpdm-premium-packages/tags/6.2.0/includes/libs/CouponCodes.php#L26\nhttps://plugins.trac.wordpress.org/browser/wpdm-premium-packages/tags/6.2.0/includes/libs/CouponCodes.php#L82\nhttps://plugins.trac.wordpress.org/browser/wpdm-premium-packages/tags/6.2.0/includes/libs/MiniCartAPI.php#L398",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:31"
+    },
+    {
+      "cve_id": "CVE-2026-15014",
+      "title": "高危漏洞: CVE-2026-15014 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-28 16:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SMS Alert – SMS & OTP for WooCommerce, Order Notifications & Abandoned Cart Recovery plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 3.9.7 via the `billing_phone` parameter. This is due to the `processRegistration()` function using a phone-unbound `$_SESSION['sa_mobile_verified']` boolean flag as the sole gate before issuing an authentication cookie — the flag is set to `true` after any successful OTP validation without being bound to the specific phone number that was verified. This makes it possible for unauthenticated attackers to complete OTP verification for a phone number they control, then resubmit the registration request with a victim's `billing_phone` value to have `wp_set_auth_cookie()` called for the resolved victim account, enabling full authentication as any existing WordPress user whose registered phone number is known or guessable, including administrators.",
+      "refs": "https://plugins.trac.wordpress.org/browser/sms-alert/tags/3.9.6/handler/forms/FormInterface.php#L56\nhttps://plugins.trac.wordpress.org/browser/sms-alert/tags/3.9.6/handler/forms/woocommerce/wc-registration.php#L252\nhttps://plugins.trac.wordpress.org/browser/sms-alert/tags/3.9.6/handler/forms/woocommerce/wc-registration.php#L602",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:26"
+    },
+    {
+      "cve_id": "CVE-2026-12741",
+      "title": "高危漏洞: CVE-2026-12741 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-28 16:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The WP Fast Total Search – The Power of Indexed Search plugin for WordPress is vulnerable to generic SQL Injection via the 'form_data[s]' parameter in all versions up to, and including, 1.80.280 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "refs": "https://plugins.trac.wordpress.org/browser/fulltext-search/tags/1.79.274/fulltext-search.php#L453\nhttps://plugins.trac.wordpress.org/browser/fulltext-search/tags/1.79.274/includes/wpfts_search.php#L825\nhttps://plugins.trac.wordpress.org/browser/fulltext-search/tags/1.80.280/fulltext-search.php#L453",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:21"
+    },
+    {
+      "cve_id": "CVE-2026-11756",
+      "title": "高危漏洞: CVE-2026-11756 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-28 16:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A Deserialization of Untrusted Data vulnerability affecting Station Launcher App in 3DEXPERIENCE platform from Release 3DEXPERIENCE R2023x through Release 3DEXPERIENCE R2026x could lead to an unauthenticated remote code execution.",
+      "refs": "https://www.3ds.com/trust-center/security/security-advisories/cve-2026-11756",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:17"
+    },
+    {
+      "cve_id": "CVE-2026-16585",
+      "title": "高危漏洞: CVE-2026-16585 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-28 15:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Better Messages – Chat Rooms, Group Chat, Private Messages & AI Chat Bots plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the delete_sticker function in all versions up to, and including, 2.15.19. This makes it possible for authenticated attackers, with administrator-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The prefix check intended to restrict deletion to the uploads directory can be bypassed by crafting a URL that begins with the legitimate uploads base URL but embeds ../ traversal sequences in the path portion, as the normalize_sticker function only applies esc_url_raw(), which does not strip ../ sequences, allowing the traversal payload to be stored verbatim in WordPress options.",
+      "refs": "https://plugins.trac.wordpress.org/browser/bp-better-messages/tags/2.15.19/addons/stickers/pack-manager.php#L764\nhttps://plugins.trac.wordpress.org/browser/bp-better-messages/tags/2.15.19/addons/stickers/rest.php#L153\nhttps://plugins.trac.wordpress.org/browser/bp-better-messages/tags/2.15.19/addons/stickers/rest.php#L285",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:12"
+    },
+    {
+      "cve_id": "CVE-2026-14490",
+      "title": "高危漏洞: CVE-2026-14490 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-28 15:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Demi – One Click Demo Import, WP Backup & Site Migration plugin for WordPress is vulnerable to Arbitrary Directory Deletion in all versions up to, and including, 0.0.7. The vulnerability exists because the plugin stores its HMAC signing key and per-step restore token as dotfiles inside a publicly accessible subdirectory of the WordPress uploads folder — without any `.htaccess` or index file protection — and the `demi_restore_step` AJAX handler, registered for unauthenticated callers, explicitly accepts possession of the on-disk signing key as a standalone alternative to WordPress capability and nonce checks; an unauthenticated attacker who retrieves the exposed key can forge a valid signed state envelope to invoke `CleanDir::execute()` with a caller-supplied absolute path that is subject to no allow-list or path-canonicalization check. This makes it possible for unauthenticated attackers to recursively delete arbitrary directories on the server.",
+      "refs": "https://plugins.trac.wordpress.org/browser/demi-backup-migration/tags/0.0.6/classes/Backup/Tasks/CleanDir.php#L61\nhttps://plugins.trac.wordpress.org/browser/demi-backup-migration/tags/0.0.6/classes/Import/Manager.php#L287\nhttps://plugins.trac.wordpress.org/browser/demi-backup-migration/tags/0.0.6/classes/Import/Manager.php#L50",
+      "source": "NVD",
+      "time": "2026-07-28 19:09:06"
+    },
+    {
+      "cve_id": "CVE-2026-17524",
+      "title": "高危漏洞: CVE-2026-17524 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-28 14:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Versions of the package zip-lib before 1.1.0 are vulnerable to Directory Traversal via the caching mechanism for path validation during the extraction process. An attacker can bypass security checks designed to prevent directory traversal. The intended security function, isOutsideTargetFolder, only checks and caches the path status when the initial directory symlink is created during the first extraction.",
+      "refs": "https://github.com/fpsqdb/zip-lib/commit/0c29b1e17050f2611f4f37e6aaa92a60b3cb89d5\nhttps://github.com/fpsqdb/zip-lib/issues/14\nhttps://security.snyk.io/vuln/SNYK-JS-ZIPLIB-13834403",
+      "source": "NVD",
+      "time": "2026-07-28 19:08:59"
+    },
+    {
       "cve_id": "CVE-2026-66473",
       "title": "高危漏洞: CVE-2026-66473 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -945,160 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/post-my-contact-form-7/vulnerability/wordpress-post-my-cf7-form-plugin-6-2-0-broken-access-control-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-07-28 03:13:45"
-    },
-    {
-      "cve_id": "CVE-2026-59533",
-      "title": "高危漏洞: CVE-2026-59533 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in Relevanssi Light <= 1.2.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/relevanssi-light/vulnerability/wordpress-relevanssi-light-plugin-1-2-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:41"
-    },
-    {
-      "cve_id": "CVE-2026-59532",
-      "title": "高危漏洞: CVE-2026-59532 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Other Vulnerability Type in Booking and Rental Manager <= 2.7.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/booking-and-rental-manager-for-woocommerce/vulnerability/wordpress-booking-and-rental-manager-plugin-2-7-2-price-manipulation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:33"
-    },
-    {
-      "cve_id": "CVE-2026-59531",
-      "title": "高危漏洞: CVE-2026-59531 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Unauthenticated Unknown in Falcon – WordPress Optimizations & Tweaks <= 2.10.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/falcon/vulnerability/wordpress-falcon-wordpress-optimizations-tweaks-plugin-2-10-0-unknown-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:28"
-    },
-    {
-      "cve_id": "CVE-2026-59530",
-      "title": "高危漏洞: CVE-2026-59530 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in Stripe For WooCommerce <= 4.0.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/woo-stripe-payment/vulnerability/wordpress-stripe-for-woocommerce-plugin-4-0-7-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:23"
-    },
-    {
-      "cve_id": "CVE-2026-59529",
-      "title": "高危漏洞: CVE-2026-59529 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Sensitive Data Exposure in Ebook Store <= 6.19 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/ebook-store/vulnerability/wordpress-ebook-store-plugin-6-19-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:19"
-    },
-    {
-      "cve_id": "CVE-2026-59528",
-      "title": "高危漏洞: CVE-2026-59528 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Subscriber Sensitive Data Exposure in ShipTime: Discounted Shipping Rates <= 1.1.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/shiptime-discount-shipping/vulnerability/wordpress-shiptime-discounted-shipping-rates-plugin-1-1-1-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:15"
-    },
-    {
-      "cve_id": "CVE-2026-59527",
-      "title": "高危漏洞: CVE-2026-59527 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-07-27 23:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in MapSVG <= 8.14.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/mapsvg-lite-interactive-vector-maps/vulnerability/wordpress-mapsvg-plugin-8-14-0-sql-injection-vulnerability-4?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:10"
-    },
-    {
-      "cve_id": "CVE-2026-61511",
-      "title": "高危漏洞: CVE-2026-61511 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-27 22:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "vBulletin 5.x through 5.7.5 and 6.x through 6.2.1 contains an eval injection vulnerability in the vB5_Template_Runtime::runMaths() method within the template runtime that allows unauthenticated remote attackers to execute arbitrary PHP code by supplying crafted input through the pagenav[pagenumber] parameter. Attackers can exploit the insufficiently restrictive regex filter by using phpfuck-style encoding with permitted characters to inject and execute arbitrary PHP code via the unauthenticated ajax/render template route without any authentication.",
-      "refs": "https://forum.vbulletin.com/forum/vbulletin-announcements/vbulletin-announcements_aa/4509358-security-patch-released-for-vbulletin-6-2-1-6-2-0-and-6-1-6\nhttps://forum.vbulletin.com/forum/vbulletin-announcements/vbulletin-announcements_aa/4509404-vbulletin-6-2-2-is-available\nhttps://karmainsecurity.com/KIS-2026-13",
-      "source": "NVD",
-      "time": "2026-07-28 03:13:06"
-    },
-    {
-      "cve_id": "CVE-2026-59690",
-      "title": "高危漏洞: CVE-2026-59690 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-07-27 21:18:22",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A Missing Authorization vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, MOVEit WAF, and Multi Tenant allows an authenticated attacker with low privileges to perform privileged administrative operations via the REST API that should not be accessible to their permission level, potentially resulting in a system compromise.",
-      "refs": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-July-2026-CVE-2026-59686-CVE-2026-59687-CVE-2026-59688-CVE-2026-59689-CVE-2026-59690",
-      "source": "NVD",
-      "time": "2026-07-28 03:12:59"
-    },
-    {
-      "cve_id": "CVE-2026-59689",
-      "title": "高危漏洞: CVE-2026-59689 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-07-27 21:18:22",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An Incorrect Authorization vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF allows an authenticated attacker with low privileges to escalate privileges to root on the affected appliance, potentially resulting in full system compromise.",
-      "refs": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-July-2026-CVE-2026-59686-CVE-2026-59687-CVE-2026-59688-CVE-2026-59689-CVE-2026-59690",
-      "source": "NVD",
-      "time": "2026-07-28 03:12:54"
-    },
-    {
-      "cve_id": "CVE-2026-59688",
-      "title": "高危漏洞: CVE-2026-59688 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-27 21:18:22",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "An OS Command Injection vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF allows an authenticated attacker with high privileges to execute arbitrary operating system commands on the affected appliance via the backup restore functionality, potentially resulting in complete system compromise.",
-      "refs": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-July-2026-CVE-2026-59686-CVE-2026-59687-CVE-2026-59688-CVE-2026-59689-CVE-2026-59690",
-      "source": "NVD",
-      "time": "2026-07-28 03:12:50"
-    },
-    {
-      "cve_id": "CVE-2026-59687",
-      "title": "高危漏洞: CVE-2026-59687 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-27 21:18:22",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "An OS Command Injection vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF allows an authenticated attacker with high privileges to execute arbitrary operating system commands on the affected appliance via the Geo Location management interface, potentially resulting in complete system compromise.",
-      "refs": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-July-2026-CVE-2026-59686-CVE-2026-59687-CVE-2026-59688-CVE-2026-59689-CVE-2026-59690",
-      "source": "NVD",
-      "time": "2026-07-28 03:12:46"
-    },
-    {
-      "cve_id": "CVE-2026-59686",
-      "title": "高危漏洞: CVE-2026-59686 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-27 21:18:21",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "An OS Command Injection vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF allows an authenticated attacker with high privileges to execute arbitrary operating system commands on the affected appliance via the management interface, potentially resulting in complete system compromise.",
-      "refs": "https://community.progress.com/s/article/LoadMaster-Critical-Security-Bulletin-July-2026-CVE-2026-59686-CVE-2026-59687-CVE-2026-59688-CVE-2026-59689-CVE-2026-59690",
-      "source": "NVD",
-      "time": "2026-07-28 03:12:42"
-    },
-    {
-      "cve_id": "CVE-2026-49158",
-      "title": "高危漏洞: CVE-2026-49158 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-27 20:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in Apache Thrift Ruby bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9\nhttps://lists.apache.org/thread/fmjl8l415tj9zwlob8v2dr5hq1d0hts7\nhttp://www.openwall.com/lists/oss-security/2026/07/24/38",
-      "source": "NVD",
-      "time": "2026-07-28 03:12:37"
     }
   ]
 }
