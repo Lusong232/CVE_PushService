@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-12476",
+      "title": "高危漏洞: CVE-2026-12476 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-29 12:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Easy Digital Downloads plugin for WordPress is vulnerable to Arbitrary File Upload in versions up to and including 3.6.9. This is due to insufficient file type validation in the edd_do_ajax_import_file_upload() function , which only checks the client-supplied $_FILES['edd-import-file']['type'] Content-Type header against an allow-list of CSV mime types, then uses raw move_uploaded_file() (bypassing wp_handle_upload()'s core MIME enforcement) to write the file under its original extension into the web-accessible wp-content/uploads/edd/exports/ directory. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/easy-digital-downloads/tags/3.6.7/includes/admin/import/import-functions.php#L68\nhttps://plugins.trac.wordpress.org/browser/easy-digital-downloads/tags/3.6.7/includes/admin/import/import-functions.php#L87\nhttps://plugins.trac.wordpress.org/browser/easy-digital-downloads/tags/3.6.7/includes/admin/import/import-functions.php#L92",
+      "source": "NVD",
+      "time": "2026-07-29 13:42:27"
+    },
+    {
+      "cve_id": "CVE-2026-12144",
+      "title": "高危漏洞: CVE-2026-12144 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-29 10:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Wholesale for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.0.5. This is due to the `save_requests_meta()` function applying only `sanitize_text_field()` to the `user_role_set` POST parameter before passing it directly to `WP_User::add_role()`, with no allowlist validation against permitted wholesale roles and no capability check such as `current_user_can('promote_users')` or `current_user_can('manage_options')`. This makes it possible for authenticated attackers with author-level access and above to escalate their privileges to administrator by supplying `administrator` as the `user_role_set` value in a crafted request. The function is gated only by a nonce (`request_user_role_nonce`) that is rendered in the meta box on the `wwp_requests` post edit screen; because the post type is registered with `capability_type => 'post'`, any author-level user who has authored a `wwp_requests` post — such as one created via the wholesale registration form — can access this nonce and submit the role-assignment request.",
+      "refs": "https://plugins.trac.wordpress.org/browser/woo-wholesale-pricing/tags/2.0.5/inc/class-wwp-wholesale-requests.php#L274\nhttps://plugins.trac.wordpress.org/browser/woo-wholesale-pricing/tags/2.0.5/inc/class-wwp-wholesale-requests.php#L369\nhttps://plugins.trac.wordpress.org/browser/woo-wholesale-pricing/tags/2.0.5/inc/class-wwp-wholesale-requests.php#L397",
+      "source": "NVD",
+      "time": "2026-07-29 13:42:22"
+    },
+    {
+      "cve_id": "CVE-2026-56822",
+      "title": "高危漏洞: CVE-2026-56822 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-29 08:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, the OcspServerCertificateValidator forwards the SslHandshakeCompletionEvent before the asynchronous OCSP validation completes. This allows the client's downstream handlers to send sensitive application data (e.g., HTTP requests) to a revoked server before the channel is closed by the OCSP check. n io.netty.handler.ssl.ocsp.OcspServerCertificateValidator#userEventTriggered, when an SslHandshakeCompletionEvent is received, the validator immediately calls ctx.fireUserEventTriggered(evt). It then initiates an asynchronous OCSP query using OcspClient.query. Because the handshake completion event is forwarded immediately, downstream handlers in the client's pipeline are notified that the TLS handshake is successful. They may then begin reading and processing incoming application data or sending outgoing data. If the OCSP response later indicates the server's certificate is REVOKED, the validator closes the channel, but by this time, the client may have already leaked sensitive data to a revoked server or processed malicious responses from it. This issue has been fixed in versions 4.1.136.Final and 4.2.16.Final.",
+      "refs": "https://github.com/netty/netty/security/advisories/GHSA-wc96-39fc-566f",
+      "source": "NVD",
+      "time": "2026-07-29 13:42:10"
+    },
+    {
+      "cve_id": "CVE-2026-56821",
+      "title": "高危漏洞: CVE-2026-56821 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-07-29 08:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.136.Final and 4.2.16.Final, the OcspServerCertificateValidator flags an out-of-date OCSP response but does not stop processing it, so an expired GOOD response is still reported as VALID, letting an on-path attacker replay a stale GOOD response to bypass revocation of a since-revoked certificate. Exploitation can lead to certificate revocation bypass via replay of an expired OCSP response. Any application using OcspServerCertificateValidator is affected; a revoked certificate can be accepted. This issue has been fixed in versions 4.1.136.Final and 4.2.16.Final.",
+      "refs": "https://github.com/netty/netty/security/advisories/GHSA-g7hg-vrcf-mvmr",
+      "source": "NVD",
+      "time": "2026-07-29 13:42:01"
+    },
+    {
       "cve_id": "CVE-2026-64863",
       "title": "高危漏洞: CVE-2026-64863 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/appium/java-client/commit/2b9cd442b9dbf56ccc6f1e83aeeb411c0ec230c9\nhttps://github.com/appium/java-client/pull/2408\nhttps://github.com/appium/java-client/releases/tag/v10.1.1",
       "source": "NVD",
       "time": "2026-07-29 03:11:51"
-    },
-    {
-      "cve_id": "CVE-2026-66713",
-      "title": "高危漏洞: CVE-2026-66713 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-28 23:17:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Deserialization of Untrusted Data (CWE-502) in the Tribes-based clustering component\n\n  in Apache Software Foundation Apache Axis2/Java through 2.0.0 on Apache Tomcat\n\n  (only when Tribes clustering is enabled, which is off by default) allows an\n\n  unauthenticated remote attacker with network access to the clustering port to\n\n  execute arbitrary code via a crafted serialized Java object delivered to the cluster\n\n  channel and deserialized in\n\n  org.apache.axis2.clustering.tribes.Axis2ChannelListener#messageReceived. Users are\n\n  recommended to upgrade to version 2.0.1, which fixes this issue by removing the\n\n  clustering feature entirely.",
-      "refs": "https://github.com/apache/axis-axis2-java-core/commit/e6f53b230bddcb40577c84ff290ba51e7265fa15\nhttps://lists.apache.org/thread/fgggbv3sjjqw7p6q0j88gspt9b2rb728\nhttp://www.openwall.com/lists/oss-security/2026/07/28/2",
-      "source": "NVD",
-      "time": "2026-07-29 03:11:46"
-    },
-    {
-      "cve_id": "CVE-2026-62433",
-      "title": "高危漏洞: CVE-2026-62433 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-28 21:19:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "Parts of the DM_OP handling code assumes the caller has provided the\nrequired number of buffers for the given operation without any checking\nbeing done.  As a result, certain operations might access stack\nrubble as structures are possibly uninitialized.",
-      "refs": "https://xenbits.xenproject.org/xsa/advisory-506.html\nhttp://www.openwall.com/lists/oss-security/2026/07/28/22\nhttp://xenbits.xen.org/xsa/advisory-506.html",
-      "source": "NVD",
-      "time": "2026-07-29 03:11:41"
-    },
-    {
-      "cve_id": "CVE-2026-62432",
-      "title": "高危漏洞: CVE-2026-62432 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-07-28 21:19:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "The EVTCHNOP_expand_array hypercall checks for whether FIFO event\nchannels are enabled, but without holding the correct lock.  It can race\nwith EVTCHNOP_reset, resulting in dereferencing a NULL pointer.",
-      "refs": "https://xenbits.xenproject.org/xsa/advisory-505.html\nhttp://www.openwall.com/lists/oss-security/2026/07/28/21\nhttp://xenbits.xen.org/xsa/advisory-505.html",
-      "source": "NVD",
-      "time": "2026-07-29 03:11:37"
-    },
-    {
-      "cve_id": "CVE-2026-62431",
-      "title": "高危漏洞: CVE-2026-62431 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-28 21:19:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The logic to handle periodic Viridian STIMERs performs a division with an\nunchecked user-controlled divisor value, that can be set to zero to cause a #DE\nfault.",
-      "refs": "https://xenbits.xenproject.org/xsa/advisory-504.html\nhttp://www.openwall.com/lists/oss-security/2026/07/28/20\nhttp://xenbits.xen.org/xsa/advisory-504.html",
-      "source": "NVD",
-      "time": "2026-07-29 03:11:30"
     }
   ]
 }
