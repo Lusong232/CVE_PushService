@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-22622",
+      "title": "高危漏洞: CVE-2026-22622 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-30 19:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper input validation in one of the session management interface of Eaton's Tripp Lite series PADM firmware could allow an authenticated user to elevate privileges resulting in unrestricted access to the device.",
+      "refs": "https://www.eaton.com/content/dam/eaton/company/news-insights/cybersecurity/security-bulletins/eaton-vulnerability-advisory.pdf\nhttps://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/eol/secure/eaton-tripp-lite-series-padm-20-eol-notice.pdf",
+      "source": "NVD",
+      "time": "2026-07-30 21:26:45"
+    },
+    {
+      "cve_id": "CVE-2026-22621",
+      "title": "高危漏洞: CVE-2026-22621 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-07-30 19:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Improper input validation in one of the session management interface of Eaton's Tripp Lite Series PADM firmware could allow an authenticated administrator to execute arbitrary commands within a restricted environment.",
+      "refs": "https://www.eaton.com/content/dam/eaton/company/news-insights/cybersecurity/security-bulletins/eaton-vulnerability-advisory.pdf\nhttps://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/eol/secure/eaton-tripp-lite-series-padm-20-eol-notice.pdf",
+      "source": "NVD",
+      "time": "2026-07-30 21:26:39"
+    },
+    {
+      "cve_id": "CVE-2026-22620",
+      "title": "高危漏洞: CVE-2026-22620 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-30 19:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "Improper input validation in the authentication component of Eaton's Tripp Lite series PADM firmware could allow an unauthenticated remote attacker to bypass authentication and gain a privileged user access to the device.",
+      "refs": "https://www.eaton.com/content/dam/eaton/company/news-insights/cybersecurity/security-bulletins/eaton-vulnerability-advisory.pdf\nhttps://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/eol/secure/eaton-tripp-lite-series-padm-20-eol-notice.pdf",
+      "source": "NVD",
+      "time": "2026-07-30 21:26:34"
+    },
+    {
+      "cve_id": "CVE-2026-18361",
+      "title": "高危漏洞: CVE-2026-18361 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-07-30 18:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "The IRIS web application in version 2.4.26 and possibly others is vulnerable to stored cross-site scripting (XSS) in the datastore upload function.",
+      "refs": "https://github.com/sbaresearch/advisories/tree/public/2026/SBA-ADV-20260126-01_DFIR-IRIS_Stored_XSS",
+      "source": "NVD",
+      "time": "2026-07-30 21:26:29"
+    },
+    {
+      "cve_id": "CVE-2026-18360",
+      "title": "高危漏洞: CVE-2026-18360 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-07-30 18:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "The IRIS web application in version 2.4.26 and possibly others is vulnerable to stored cross-site scripting (XSS) in the custom attributes function.",
+      "refs": "https://github.com/sbaresearch/advisories/tree/public/2026/SBA-ADV-20260126-01_DFIR-IRIS_Stored_XSS",
+      "source": "NVD",
+      "time": "2026-07-30 21:26:20"
+    },
+    {
+      "cve_id": "CVE-2026-16969",
+      "title": "高危漏洞: CVE-2026-16969 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-07-30 18:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "The IRIS web application in version 2.4.26 and possibly others is vulnerable to stored cross-site scripting (XSS) in the assets function.",
+      "refs": "https://github.com/sbaresearch/advisories/tree/public/2026/SBA-ADV-20260126-01_DFIR-IRIS_Stored_XSS",
+      "source": "NVD",
+      "time": "2026-07-30 21:26:14"
+    },
+    {
       "cve_id": "CVE-2026-7849",
       "title": "高危漏洞: CVE-2026-7849 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1033,72 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/7b6aea5d-2e2e-4920-9776-b15841ba1f26/",
       "source": "NVD",
       "time": "2026-07-30 00:15:20"
-    },
-    {
-      "cve_id": "CVE-2026-18220",
-      "title": "高危漏洞: CVE-2026-18220 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-07-29 19:16:49",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "An out-of-bounds write vulnerability was found in the BFD library's DLX ELF backend (bfd/elf32-dlx.c) in GNU binutils. The dlx_rtype_to_howto() function maps ELF relocation types to internal howto structures but fails to perform adequate bounds checking on attacker-controlled relocation type values (via ELF32_R_TYPE(r_info)) before indexing into the dlx_elf_howto_table[] array. The DLX relocation type number space is non-contiguous (basic types 0-6, extended types at 0x10000+), but the default case in the switch statement allows arbitrary index values to reach the array access.\n\nA specially crafted ELF/DLX object file can trigger this out-of-bounds write when processed by any BFD-consuming tool (objdump, readelf, strip, ld, nm, objcopy). The vulnerability has been demonstrated to achieve arbitrary code execution via a File Stream Oriented Programming (FSOP) attack against glibc FILE structures (stderr), redirecting control flow to system().\n\nAttack scenarios include CI/CD pipelines performing automated binary analysis, developer workstations running objdump/readelf on untrusted binaries, automated security scanning or malware analysis tools invoking binutils, and package build systems processing third-party code.\n\nNote: This vulnerability is only exploitable when binutils is built with the DLX backend enabled (typically via --enable-targets=all).",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-18220\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2507670",
-      "source": "NVD",
-      "time": "2026-07-29 21:46:48"
-    },
-    {
-      "cve_id": "CVE-2026-16655",
-      "title": "高危漏洞: CVE-2026-16655 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-29 19:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Name Field Nested `password` Member in all versions up to, and including, 6.2.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/browser/fluentform/tags/6.2.6/app/Hooks/Ajax.php#L17\nhttps://plugins.trac.wordpress.org/browser/fluentform/tags/6.2.6/app/Modules/Form/FormDataParser.php#L317\nhttps://plugins.trac.wordpress.org/browser/fluentform/tags/6.2.6/app/Modules/SubmissionHandler/SubmissionHandler.php#L20",
-      "source": "NVD",
-      "time": "2026-07-29 21:46:40"
-    },
-    {
-      "cve_id": "CVE-2026-16597",
-      "title": "高危漏洞: CVE-2026-16597 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-29 19:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The GTM4WP – A Google Tag Manager (GTM) plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via WooCommerce Billing Fields in all versions up to, and including, 1.22.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the GTM4WP WooCommerce order data integration option (GTM4WP_OPTION_INTEGRATE_WCORDERDATA) to be enabled, and is exploited by placing a guest checkout order with a JavaScript payload in a WooCommerce billing field such as the billing first name.",
-      "refs": "https://plugins.trac.wordpress.org/browser/duracelltomi-google-tag-manager/tags/1.22.3/integration/woocommerce.php#L265\nhttps://plugins.trac.wordpress.org/browser/duracelltomi-google-tag-manager/tags/1.22.3/integration/woocommerce.php#L664\nhttps://plugins.trac.wordpress.org/browser/duracelltomi-google-tag-manager/tags/1.22.3/integration/woocommerce.php#L942",
-      "source": "NVD",
-      "time": "2026-07-29 21:46:35"
-    },
-    {
-      "cve_id": "CVE-2026-14900",
-      "title": "高危漏洞: CVE-2026-14900 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-29 19:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Cost Calculator Builder PRO plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.0.3 via the js_to_php function. This is due to insufficient sanitization of the orderDetails[*].originalValue field, which is injected verbatim into a calculator formula string passed to PHP eval() inside js_to_php(), with the regex allow-list in evaluateFormula() only filtering alphanumeric tokens and leaving non-word punctuation characters intact. This makes it possible for unauthenticated attackers to execute code on the server. The only authentication barrier is a nonce check, but the required nonce is publicly emitted on every front-end page via the wp_head hook, making it freely obtainable by unauthenticated visitors. Payloads must be non-word XOR gadgets to bypass sanitization.",
-      "refs": "https://stylemixthemes.com/cost-calculator-plugin/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/4c8f2872-06ff-41a2-b601-77a47470de0c?source=cve",
-      "source": "NVD",
-      "time": "2026-07-29 21:46:30"
-    },
-    {
-      "cve_id": "CVE-2026-14488",
-      "title": "高危漏洞: CVE-2026-14488 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-29 19:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "The Meta Box AIO plugin for WordPress is vulnerable to Missing Authorization via the template_redirect dispatcher in the MB Frontend Submission extension in versions up to, and including, 3.8.0. This is due to the handle_request() function routing the mbfs_delete action without any capability or ownership check, and the nonce verification in check_ajax() being gated behind is_ajax() which is false for template_redirect requests, making it bypassable. This makes it possible for unauthenticated attackers to delete arbitrary posts and pages by supplying an attacker-controlled post ID via the rwmb_frontend_field_object_id GET parameter on any page that hosts a frontend submission form regardless of whether allow_delete is enabled.",
-      "refs": "https://metabox.io/plugins/meta-box-aio/changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e9506f84-3d33-48e0-8dce-d517e1a923e4?source=cve",
-      "source": "NVD",
-      "time": "2026-07-29 21:46:26"
-    },
-    {
-      "cve_id": "CVE-2026-58189",
-      "title": "高危漏洞: CVE-2026-58189 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-29 18:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Apache Traffic Server allows redirect-limit bypass when plugins reset the retry counter, enabling SSRF amplification.\n\nThis issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3.\n\nUsers are recommended to upgrade to version 9.2.15 or 10.1.4, which fix the issue.",
-      "refs": "https://lists.apache.org/thread/5prl9glcm9g2swnq9hqxvnokylm1gr6d",
-      "source": "NVD",
-      "time": "2026-07-29 21:46:21"
     }
   ]
 }
