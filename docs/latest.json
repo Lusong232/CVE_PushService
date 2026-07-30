@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-48449",
+      "title": "高危漏洞: CVE-2026-48449 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-07-30 11:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "refs": "https://helpx.adobe.com/security/products/campaign/apsb26-114.html",
+      "source": "NVD",
+      "time": "2026-07-30 13:30:46"
+    },
+    {
+      "cve_id": "CVE-2026-48448",
+      "title": "高危漏洞: CVE-2026-48448 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-30 11:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to gain file system read access. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "refs": "https://helpx.adobe.com/security/products/campaign/apsb26-114.html",
+      "source": "NVD",
+      "time": "2026-07-30 13:30:42"
+    },
+    {
       "cve_id": "CVE-2026-67595",
       "title": "高危漏洞: CVE-2026-67595 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1077,28 +1099,6 @@
       "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-094/",
       "source": "NVD",
       "time": "2026-07-29 19:14:16"
-    },
-    {
-      "cve_id": "CVE-2026-63231",
-      "title": "高危漏洞: CVE-2026-63231 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-29 15:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A post-authentication SQL injection\nvulnerability in Koollab LMS allowed an authenticated attacker to use an error-based SQL oracle via\nthe face-to-face runs update endpoint to read the entire application database\nand obtain valid JWT tokens for account takeover.",
-      "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-094/",
-      "source": "NVD",
-      "time": "2026-07-29 19:14:10"
-    },
-    {
-      "cve_id": "CVE-2026-63230",
-      "title": "高危漏洞: CVE-2026-63230 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-29 15:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A pre-authentication error-based SQL injection\nvulnerability in Koollab LMS allowed an unauthenticated attacker to read sensitive database\ncontents, including personally identifiable information, credentials, and valid\nJWT tokens that may enable account takeover, via the SCORM report endpoint.",
-      "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-094/",
-      "source": "NVD",
-      "time": "2026-07-29 19:14:04"
     }
   ]
 }
