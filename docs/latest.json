@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-53505",
+      "title": "高危漏洞: CVE-2026-53505 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 03:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor's filters:proportion(<value>) filter does not enforce an upper bound on <value> and runs in the post-transform phase. An attacker can trigger extremely large resizes (CPU/memory exhaustion) and cause denial of service. This issue is fixed in 7.8.0.",
+      "refs": "https://github.com/thumbor/thumbor/commit/2c716119de986cfc68c7071af52a98187e006023\nhttps://github.com/thumbor/thumbor/releases/tag/7.8.0\nhttps://github.com/thumbor/thumbor/security/advisories/GHSA-phj3-59pf-cp83",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:35"
+    },
+    {
+      "cve_id": "CVE-2026-53504",
+      "title": "高危漏洞: CVE-2026-53504 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the convolution filter regular expression performs exponential backtracking on crafted repeated numeric input, allowing a URL request to exhaust processing time. This issue is fixed in 7.8.0.",
+      "refs": "https://github.com/thumbor/thumbor/commit/3f38fe1610d20168e91f76d432212de30727eb2e\nhttps://github.com/thumbor/thumbor/releases/tag/7.8.0\nhttps://github.com/thumbor/thumbor/security/advisories/GHSA-5vjc-7cxw-4w6j",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:30"
+    },
+    {
+      "cve_id": "CVE-2026-53503",
+      "title": "高危漏洞: CVE-2026-53503 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor's filters:convolution(<matrix>, <columns>, <should_normalize>) filter passes the user-controlled <columns> value to a C extension (thumbor/ext/filters/_convolution.c) where it is used as a divisor (for % and /) without validating columns > 0. When columns=0, the C code triggers undefined behavior; on x86_64 this reliably results in a fatal divide-by-zero trap (SIGFPE) and crashes the Thumbor process, causing a remote denial of service. This issue is fixed in 7.8.0.",
+      "refs": "https://github.com/thumbor/thumbor/commit/447e192e3fb92e64c12e5354a56a4a7133f69d73\nhttps://github.com/thumbor/thumbor/releases/tag/7.8.0\nhttps://github.com/thumbor/thumbor/security/advisories/GHSA-cqjp-jf4r-h5q9",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:26"
+    },
+    {
+      "cve_id": "CVE-2026-53501",
+      "title": "高危漏洞: CVE-2026-53501 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-08-01 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor’s HMAC validation can be bypassed due to the use of Python’s .replace() when removing the signature from the URL before validation. Since .replace() removes all occurrences of the substring, an attacker can insert the same signature multiple times in the URL and manipulate the final URL used for validation. This allows crafting URLs where the validated string differs from the actual requested resource, enabling loading images from unintended domains or paths. This issue is fixed in 7.8.0.",
+      "refs": "https://github.com/thumbor/thumbor/commit/e3ae3e2500537b4d735df4144129a649374bb70b\nhttps://github.com/thumbor/thumbor/releases/tag/7.8.0\nhttps://github.com/thumbor/thumbor/security/advisories/GHSA-mw3h-qjxj-6xg9",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:21"
+    },
+    {
+      "cve_id": "CVE-2026-53500",
+      "title": "高危漏洞: CVE-2026-53500 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-08-01 03:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
+      "description": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the ALLOWED_SOURCES configuration passes plain strings to re.match() without escaping dots, so a hostname differing at dot positions can match the allowlist. This issue is fixed in 7.8.0.",
+      "refs": "https://github.com/thumbor/thumbor/commit/68876715350c6c8f49c324e5515e64908830aed7\nhttps://github.com/thumbor/thumbor/releases/tag/7.8.0\nhttps://github.com/thumbor/thumbor/security/advisories/GHSA-6x26-6r6f-m537",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:17"
+    },
+    {
+      "cve_id": "CVE-2026-18481",
+      "title": "高危漏洞: CVE-2026-18481 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-01 03:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Stored cross-site scripting in the participant URL handling in AWS Ops \nWheel before PR #168 might allow an authenticated remote user to steal \nsession tokens and escalate to full administrative control of the \ndeployed instance via a crafted participant_url value containing a \ndangerous URI scheme.\n\n\n\n\n\n\nTo remediate this issue, users should redeploy from the latest version of aws-ops-wheel.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-068-aws/",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:12"
+    },
+    {
+      "cve_id": "CVE-2026-54737",
+      "title": "高危漏洞: CVE-2026-54737 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-01 02:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "@phun-ky/defaults-deep is a library like lodash defaultsDeep with array preservation and no lodash dependency. Prior to 2.0.5, defaultsDeep() recursively merges user-supplied objects without filtering proto, constructor, and prototype, allowing properties to be written to Object.prototype. This issue is fixed in version 2.0.5.",
+      "refs": "https://github.com/phun-ky/defaults-deep/commit/807dba930f8718f9126cad59d949b8fd3539b059\nhttps://github.com/phun-ky/defaults-deep/pull/49\nhttps://github.com/phun-ky/defaults-deep/releases/tag/2.0.5",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:08"
+    },
+    {
+      "cve_id": "CVE-2026-54725",
+      "title": "高危漏洞: CVE-2026-54725 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-01 02:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "vault-secrets-webhook is a Kubernetes mutating webhook that makes direct secret injection into Pods possible. Prior to 1.23.1, parseVaultConfig() in pkg/webhook/config.go accepts the vault.security.banzaicloud.io/vault-addr annotation, MutateConfigMap and MutateSecret call newVaultClient in pkg/webhook/webhook.go, and vault.security.banzaicloud.io/vault-serviceaccount can cause a ServiceAccount JWT to be sent to an attacker-controlled Vault address. This issue is fixed in version 1.23.1.",
+      "refs": "https://github.com/bank-vaults/vault-secrets-webhook/commit/76db45976fee0f54cafd94dffa425e6b542f65a0\nhttps://github.com/bank-vaults/vault-secrets-webhook/releases/tag/v1.23.1\nhttps://github.com/bank-vaults/vault-secrets-webhook/security/advisories/GHSA-r2v3-8gwf-7ghm",
+      "source": "NVD",
+      "time": "2026-08-01 05:57:04"
+    },
+    {
+      "cve_id": "CVE-2026-67822",
+      "title": "高危漏洞: CVE-2026-67822 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-01 01:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Tenda W6-S 1.0.0.4(510) contains a stack-based buffer overflow vulnerability in the /goform/wifiSSIDset endpoint. The function formwrlSSIDset uses sprintf to copy user-controlled 'GO' and 'index' parameters into a 64-byte stack buffer without length restriction, leading to stack overflow.",
+      "refs": "https://github.com/Tristerjh/Tenda/blob/main/Tenda_W6-S_GO_overflow.md\nhttps://github.com/Tristerjh/Tenda/blob/main/Tenda_W6-S_GO_overflow.md",
+      "source": "NVD",
+      "time": "2026-08-01 05:56:58"
+    },
+    {
+      "cve_id": "CVE-2026-12720",
+      "title": "高危漏洞: CVE-2026-12720 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 15:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Kirki  WordPress plugin before 6.0.13 does not restrict which classes may be instantiated when it deserialises data that unauthenticated users can store, leading to PHP Object Injection that is triggered when an administrator later reviews the stored data. With a suitable gadget chain present on the site (via another installed Kirki  WordPress plugin before 6.0.13, , or an outdated WordPress version), this could be leveraged to perform a variety of attacks, such as remote code execution.",
+      "refs": "https://wpscan.com/vulnerability/22f5af1c-972e-4e31-9afa-bf50ac278c66/",
+      "source": "NVD",
+      "time": "2026-08-01 05:56:53"
+    },
+    {
+      "cve_id": "CVE-2026-12695",
+      "title": "高危漏洞: CVE-2026-12695 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-31 15:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The miniOrange 2FA  WordPress plugin before 6.2.6 does not validate the submitted one-time password against the targeted user's stored secret, instead verifying it against an attacker-supplied value, allowing an unauthenticated attacker who knows a victim's password to bypass two-factor authentication and gain access to the victim's account, including administrators.",
+      "refs": "https://wpscan.com/vulnerability/1994ce51-3534-4cb3-b424-d2f9014e8bb3/",
+      "source": "NVD",
+      "time": "2026-08-01 05:56:46"
+    },
+    {
+      "cve_id": "CVE-2026-12251",
+      "title": "高危漏洞: CVE-2026-12251 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-31 15:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Ultimate Member  WordPress plugin before 2.12.1 does not filter administrator-level capabilities from the roles it makes selectable on its registration forms, and its post-registration safeguard against elevated accounts is disabled by default, allowing unauthenticated users to register with a site-defined role that carries administrator capabilities and gain administrative access, when such a role exists and a role-selection field is present on a published registration form.",
+      "refs": "https://wpscan.com/vulnerability/dd394110-cf3c-4158-8b50-7abb8a23a2be/",
+      "source": "NVD",
+      "time": "2026-08-01 05:56:41"
+    },
+    {
       "cve_id": "CVE-2026-52856",
       "title": "高危漏洞: CVE-2026-52856 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -967,138 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/520110535",
       "source": "NVD",
       "time": "2026-07-31 06:00:17"
-    },
-    {
-      "cve_id": "CVE-2026-17990",
-      "title": "高危漏洞: CVE-2026-17990 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in WebAuthn in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted PDF file. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/520018012",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:13"
-    },
-    {
-      "cve_id": "CVE-2026-17920",
-      "title": "高危漏洞: CVE-2026-17920 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in V8 in Google Chrome prior to 151.0.7922.72 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code inside a sandbox via a crafted Chrome Extension. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513413942",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:09"
-    },
-    {
-      "cve_id": "CVE-2026-17918",
-      "title": "高危漏洞: CVE-2026-17918 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Sync in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513127137",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:05"
-    },
-    {
-      "cve_id": "CVE-2026-17744",
-      "title": "高危漏洞: CVE-2026-17744 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-30 09:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Inappropriate implementation in File Input in Google Chrome on Linux prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/500137309",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:01"
-    },
-    {
-      "cve_id": "CVE-2026-17741",
-      "title": "高危漏洞: CVE-2026-17741 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-30 09:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Insufficient validation of untrusted input in WebView in Google Chrome on Android prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/498877660",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:54"
-    },
-    {
-      "cve_id": "CVE-2026-17721",
-      "title": "高危漏洞: CVE-2026-17721 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/523495723",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:50"
-    },
-    {
-      "cve_id": "CVE-2026-17678",
-      "title": "高危漏洞: CVE-2026-17678 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out of bounds read in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/515452019",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:46"
-    },
-    {
-      "cve_id": "CVE-2026-17677",
-      "title": "高危漏洞: CVE-2026-17677 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in ANGLE in Google Chrome on Android prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513921488",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:42"
-    },
-    {
-      "cve_id": "CVE-2026-17675",
-      "title": "高危漏洞: CVE-2026-17675 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513920258",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:38"
-    },
-    {
-      "cve_id": "CVE-2026-17673",
-      "title": "高危漏洞: CVE-2026-17673 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Integer overflow in QUIC in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513735177",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:33"
-    },
-    {
-      "cve_id": "CVE-2026-17672",
-      "title": "高危漏洞: CVE-2026-17672 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Chromecast in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513375270",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:29"
-    },
-    {
-      "cve_id": "CVE-2026-17671",
-      "title": "高危漏洞: CVE-2026-17671 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513257423",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:22"
     }
   ]
 }
