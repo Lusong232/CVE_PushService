@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-18446",
+      "title": "高危漏洞: CVE-2026-18446 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 23:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "fast-uri before 4.1.2, 3.1.5, and 2.4.4 requires a literal double forward slash to recognize a URI authority, so a reference that uses a backslash based introducer in place of it (backslash backslash, forward slash backslash, or backslash forward slash) is parsed with no authority and folds into the path. Node's native WHATWG URL parser instead treats a backslash as interchangeable with a forward slash for special schemes, so the two parsers extract different hosts from the same input. Applications that use fast-uri to enforce host based policy such as allowlists, SSRF filtering, or redirect validation before passing the same URL into Node's URL or fetch consumers can be steered to an unintended host. Upgrade to fast-uri 4.1.2, 3.1.5, or 2.4.4.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fast-uri/security/advisories/GHSA-7p8r-x3mc-p8w7",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:37"
+    },
+    {
+      "cve_id": "CVE-2026-10685",
+      "title": "高危漏洞: CVE-2026-10685 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-07-31 23:16:27",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "The Zephyr Bluetooth GATT client CCC-write response handler gatt_write_ccc_rsp() in subsys/bluetooth/host/gatt.c invoked the application's params->subscribe() callback after it had already called params->notify(conn, params, NULL, 0).\n\nPer the public GATT API, a notify callback with NULL data is the documented signal that the subscription has terminated and the bt_gatt_subscribe_params struct may be freed or reused by the application; calling subscribe() on the struct afterwards is a use-after-free, including an indirect call through the freed params->subscribe function pointer.\n\nThe error branch is remotely (adjacent) reachable: a Zephyr device acting as a GATT client that calls bt_gatt_subscribe() can be driven into this ordering when a connected GATT server peer answers the CCC write with an ATT Error Response (the peer-supplied error code flows through att_error_rsp -> att_handle_rsp into gatt_write_ccc_rsp).\n\nFor applications that free or recycle subscription parameters in their notification-termination handler, this results in memory corruption, a crash (denial of service), or potentially attacker-influenced control flow. The fix reorders the handler so the subscribe() callback runs before the terminating notify(NULL) in both the error and unsubscribe paths.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/c7292f20223637232b6f962141725611a38f6a52\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-29xh-jm2m-4qvx",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:33"
+    },
+    {
+      "cve_id": "CVE-2026-18358",
+      "title": "高危漏洞: CVE-2026-18358 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 21:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in gnome-remote-desktop as shipped in Red Hat Enterprise Linux. When the daemon is running in system mode with RDP enabled, the incoming connection handler bypasses the connection throttler, allowing an unauthenticated remote attacker to open many parallel pre-authentication connections to the RDP listener. This can accumulate accepted sockets and pending routing-token operations until timeout, exhausting resources and preventing legitimate users from establishing RDP sessions. This issue does not affect the upstream version.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-18358\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2462876",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:26"
+    },
+    {
+      "cve_id": "CVE-2026-17561",
+      "title": "高危漏洞: CVE-2026-17561 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 21:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Innotim Software, Telecommunications and Consulting Trade Ltd. Co. Logsign SIEM allows Code Injection.\n\nThis issue affects Logsign SIEM: before 6.4.108.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0717",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:21"
+    },
+    {
+      "cve_id": "CVE-2026-16843",
+      "title": "高危漏洞: CVE-2026-16843 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-31 19:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Some Hikvision Wireless Access Points are vulnerable to authenticated command execution due to insufficient input validation. Attackers with valid credentials can exploit this flaw by sending crafted packets containing malicious commands to affected devices, leading to arbitrary command execution.",
+      "refs": "https://www.hikvision.com/en/support/cybersecurity/security-advisory/command-execution-vulnerability-in-some-wireless-ap-products/",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:17"
+    },
+    {
+      "cve_id": "CVE-2026-15722",
+      "title": "高危漏洞: CVE-2026-15722 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 18:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A stack buffer overflow flaw was found in 389 Directory Server (389-ds-base). The get_ruvelement_from_berval() function in repl5_ruv.c copies digit characters from a network-supplied RUV berval into a fixed 16-byte stack buffer without bounds checking. A remote unauthenticated attacker can crash the LDAP server by sending a crafted StartNSDS50ReplicationRequest extended operation containing a replica ID field with more than 16 digit characters. The overflow occurs during payload decoding, before any authorization check. Stack protectors limit impact to denial of service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-15722\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2499961",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:12"
+    },
+    {
+      "cve_id": "CVE-2026-11770",
+      "title": "高危漏洞: CVE-2026-11770 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 18:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "A flaw was found in 389 Directory Server. An unauthenticated remote attacker can inject LDAP search filters into the CleanAllRUV replication status-check extended operation. Because the handler performs the search against cn=config with elevated replication plugin privileges and returns a boolean match result, the attacker can extract sensitive server configuration metadata, including replication bind DNs and password storage scheme information.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-11770\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2484802\nhttps://github.com/389ds/389-ds-base/blob/main/ldap/servers/plugins/replication/repl_extop.c",
+      "source": "NVD",
+      "time": "2026-08-01 00:30:08"
+    },
+    {
+      "cve_id": "CVE-2026-10079",
+      "title": "高危漏洞: CVE-2026-10079 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-07-31 18:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N",
+      "description": "A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). When processing Kubernetes Deployments, ACS replaces deployment identity metadata based on the openshift.io/encoded-deployment-config label. A user with permission to create Deployments can set this label to \"null\", causing ACS to treat the workload as having empty UID, name and labels and namespace \"default\". This bypasses deploy-time policy detection and enforcement visibility, prevents correct persistence in Central and breaks violation reporting and compliance correlation for the affected deployment.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-10079\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2483158",
+      "source": "NVD",
+      "time": "2026-08-01 00:29:59"
+    },
+    {
+      "cve_id": "CVE-2026-14830",
+      "title": "高危漏洞: CVE-2026-14830 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The FlxWoo WordPress plugin before 3.1.1 does not verify with the payment processor that a checkout session was actually paid before marking the associated order as paid, allowing unauthenticated attackers to complete WooCommerce orders without paying.",
+      "refs": "https://wpscan.com/vulnerability/b866258c-b49b-40db-a0ff-6c0921b5c89f/",
+      "source": "NVD",
+      "time": "2026-08-01 00:29:55"
+    },
+    {
+      "cve_id": "CVE-2026-14333",
+      "title": "高危漏洞: CVE-2026-14333 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Demi  WordPress plugin before 0.0.7 stores its full-site backup archives in a publicly accessible location under a predictable filename and without access protection, allowing unauthenticated attackers to download complete backups including the site database and its user password hashes.",
+      "refs": "https://wpscan.com/vulnerability/df673b6f-2957-460a-b6fe-6e656d9193e0/",
+      "source": "NVD",
+      "time": "2026-08-01 00:29:51"
+    },
+    {
+      "cve_id": "CVE-2026-38709",
+      "title": "高危漏洞: CVE-2026-38709 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the net.set_wan interface. This vulnerability allows attackers to execute arbitrary commands as root via a crafted input.",
+      "refs": "https://www.cudy.com/pages/security-advisory/cudy-sa-26-7-jezzy-4",
+      "source": "NVD",
+      "time": "2026-08-01 00:29:47"
+    },
+    {
+      "cve_id": "CVE-2026-52539",
+      "title": "高危漏洞: CVE-2026-52539 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-07-31 05:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Outstatic CMS <= 2.1.9 contains a hardcoded JWT signing secret. When the OST_TOKEN_SECRET environment variable is not set, the application falls back to the default value which is publicly visible in the source code repository. An unauthenticated remote attacker can exploit this by forging JWT session tokens with arbitrary user data and full administrative permissions.",
+      "refs": "https://github.com/avitorio/outstatic\nhttps://github.com/avitorio/outstatic/blob/canary/packages/outstatic/src/utils/constants.ts",
+      "source": "NVD",
+      "time": "2026-08-01 00:29:42"
+    },
+    {
+      "cve_id": "CVE-2025-69938",
+      "title": "高危漏洞: CVE-2025-69938 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 05:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in renew.php via the parameter membershipType.",
+      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-renew.php-membershiptype-sqli/20250811-membership-management-system-renew.php-membershiptype-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-renew.php-membershiptype-sqli/20250811-membership-management-system-renew.php-membershiptype-sqli.md",
+      "source": "NVD",
+      "time": "2026-08-01 00:29:37"
+    },
+    {
       "cve_id": "CVE-2026-65313",
       "title": "高危漏洞: CVE-2026-65313 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -956,149 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/521864362",
       "source": "NVD",
       "time": "2026-07-31 03:12:30"
-    },
-    {
-      "cve_id": "CVE-2026-17971",
-      "title": "高危漏洞: CVE-2026-17971 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Frame in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/518815075",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:25"
-    },
-    {
-      "cve_id": "CVE-2026-17967",
-      "title": "高危漏洞: CVE-2026-17967 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/518243858",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:21"
-    },
-    {
-      "cve_id": "CVE-2026-17951",
-      "title": "高危漏洞: CVE-2026-17951 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in WebRTC in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/517180511",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:16"
-    },
-    {
-      "cve_id": "CVE-2026-17947",
-      "title": "高危漏洞: CVE-2026-17947 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in WebSockets in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/515438256",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:09"
-    },
-    {
-      "cve_id": "CVE-2026-17935",
-      "title": "高危漏洞: CVE-2026-17935 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Heap buffer overflow in Codecs in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513863267",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:04"
-    },
-    {
-      "cve_id": "CVE-2026-17898",
-      "title": "高危漏洞: CVE-2026-17898 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-30 09:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in DevTools in Google Chrome prior to 151.0.7922.72 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code inside a sandbox via a crafted Chrome Extension. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/506193577",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:00"
-    },
-    {
-      "cve_id": "CVE-2026-17896",
-      "title": "高危漏洞: CVE-2026-17896 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-30 09:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in DevTools in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/525331547",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:55"
-    },
-    {
-      "cve_id": "CVE-2026-17894",
-      "title": "高危漏洞: CVE-2026-17894 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Views in Google Chrome on Linux prior to 151.0.7922.72 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/524825209",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:51"
-    },
-    {
-      "cve_id": "CVE-2026-17887",
-      "title": "高危漏洞: CVE-2026-17887 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-30 09:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in TabStrip in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/523717010",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:46"
-    },
-    {
-      "cve_id": "CVE-2026-17886",
-      "title": "高危漏洞: CVE-2026-17886 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Enterprise in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/523715964",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:42"
-    },
-    {
-      "cve_id": "CVE-2026-17884",
-      "title": "高危漏洞: CVE-2026-17884 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Object lifecycle issue in WebRTC in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/523692228",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:34"
-    },
-    {
-      "cve_id": "CVE-2026-17881",
-      "title": "高危漏洞: CVE-2026-17881 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Integer overflow in WebXR in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/523477987",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:30"
-    },
-    {
-      "cve_id": "CVE-2026-17875",
-      "title": "高危漏洞: CVE-2026-17875 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in PDFium in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted PDF file. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/522299155",
-      "source": "NVD",
-      "time": "2026-07-31 03:11:26"
     }
   ]
 }
