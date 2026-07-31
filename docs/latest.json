@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-52856",
+      "title": "高危漏洞: CVE-2026-52856 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 01:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.13.0, a malformed packet received during the SFTP connection handshake causes a Go panic. This issue is fixed in version 1.13.0.",
+      "refs": "https://github.com/pterodactyl/wings/commit/8e49c7c0eda815d3ada171831876a1c14c493026\nhttps://github.com/pterodactyl/wings/releases/tag/v1.13.0\nhttps://github.com/pterodactyl/wings/security/advisories/GHSA-ghrq-5wpp-hxx5",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:46"
+    },
+    {
+      "cve_id": "CVE-2026-52855",
+      "title": "高危漏洞: CVE-2026-52855 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-08-01 01:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.12.3, {{config.}} placeholders in egg configuration-file templates allow a low-privileged user to read {{config.token}}, {{config.token_id}}, and {{config.docker.registries}} from the full daemon configuration. This issue is fixed in version 1.12.3.",
+      "refs": "https://github.com/pterodactyl/wings/commit/eb65e27ae077a63e38518c490768486af1cd86a9\nhttps://github.com/pterodactyl/wings/releases/tag/v1.12.3\nhttps://github.com/pterodactyl/wings/security/advisories/GHSA-pfvc-3p5h-x7h6",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:41"
+    },
+    {
+      "cve_id": "CVE-2026-18141",
+      "title": "高危漏洞: CVE-2026-18141 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-08-01 00:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "A flaw was found in aap-gateway, a component of Ansible Automation Platform's Event-Driven Ansible (EDA). An unauthenticated remote attacker can bypass mutual Transport Layer Security (mTLS) authentication for event streams. This is achieved by manipulating the event stream URL and forging the HTTP Subject header. The system also inadvertently discloses the expected certificate subject in error messages, which simplifies the attack. This vulnerability allows an attacker to inject arbitrary events into EDA, potentially triggering automated workflows.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-18141\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2508155",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:37"
+    },
+    {
+      "cve_id": "CVE-2026-17566",
+      "title": "高危漏洞: CVE-2026-17566 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-08-01 00:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "pgAdmin 4's Import/Export Data tool builds a psql \\copy (...) command line by interpolating a user-supplied SQL query into a Jinja template and passing the rendered line to psql via --command. To stop an attacker from breaking out of the (...) wrapper, create_import_export_job() (route POST /import_export/job/<sid>, gated only by the ordinary, commonly-granted tools_import_export_data permission) validated the query with a hand-written parenthesis-balance checker, _is_query_parens_balanced(). That checker always treated a backslash before a single quote (\\') as escaping the quote, i.e. as if standard_conforming_strings were off. PostgreSQL has defaulted standard_conforming_strings to on since 9.1 (2010), the default on every PostgreSQL version pgAdmin 4 currently supports (13-18); under that default psql's own \\copy tokenizer treats \\ as an ordinary character, so a single quote immediately after it closes the string literal. A query such as SELECT 'a\\') TO PROGRAM 'echo pwned' x' was therefore accepted as \"balanced\" by pgAdmin's checker (which believed the ) was still inside the string), while psql, run through the actual rendered command line, closes the string at that point and treats the following ) as the end of the wrapping \\copy (...) subquery, exposing an attacker-chosen TO PROGRAM '<command>' clause that psql executes via popen() -- independent of a subsequent syntax error later on the same line. This is the same class of bug as CVE-2025-12762/CVE-2025-13780 (RCE via psql meta-command/COPY injection during PLAIN-format dump restore), reached through an independently written defense in a different module (Import/Export Data rather than Restore) that had its own, different logic bug (inverted backslash-escape semantics rather than a BOM-defeated regex anchor).\n\nThe fix rejects any backslash inside a single-quoted string in the query outright, rather than picking one of the two possible psql interpretations. This is intentionally conservative: because the correct interpretation of \\ depends on the target server's standard_conforming_strings setting, which the checker cannot reliably know at validation time, refusing the query is safer than guessing.\n\nThis issue affects pgAdmin 4: from the introduction of _is_query_parens_balanced() before 9.18.",
+      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/1496fabe28c9f825f6bac0f0d000d9d3276322c3\nhttps://github.com/pgadmin-org/pgadmin4/issues/10213",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:32"
+    },
+    {
+      "cve_id": "CVE-2026-17351",
+      "title": "高危漏洞: CVE-2026-17351 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-01 00:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "The fix for CVE-2026-12045 in pgAdmin 4 9.16 required the LLM-supplied query passed to the AI Assistant's execute_sql_query tool to parse, via sqlparse, as exactly one non-transaction-control statement before running it inside a BEGIN TRANSACTION READ ONLY wrapper. sqlparse's string-literal lexing can disagree with PostgreSQL's own parser: under standard_conforming_strings = on (PostgreSQL's default since 9.1), a backslash immediately before a quote is an ordinary character to PostgreSQL, but sqlparse treats it as escaping the quote. A payload such as SELECT '\\';COMMIT;CREATE TABLE pwn(x int);SELECT 1 --' therefore parses as a single SELECT to sqlparse's validator, while PostgreSQL executes it as four statements: the smuggled COMMIT ends the wrapping read-only transaction, and the trailing ROLLBACK becomes a no-op. This reintroduces the same write/RCE bypass CVE-2026-12045 was meant to close, reachable via the same indirect prompt-injection delivery (an attacker plants the payload in any object the AI Assistant may read; the LLM emits it as a tool call).\n\nAn initial candidate fix ran the query with psycopg's execute(..., prepare=True), intending to force PostgreSQL's own Parse step (extended query protocol) to reject multi-statement text regardless of sqlparse's classification. This candidate fix does not work as submitted: psycopg3's PrepareManager silently ignores the prepare argument whenever the connection's prepare_threshold is None, which is pgAdmin's default for every server connection (the per-server \"Prepare threshold\" field is blank unless an administrator explicitly sets it) -- psycopg3 falls back to the simple query protocol, the same multi-statement-capable path the bypass exploits, so the candidate fix closes nothing on any real-world default configuration.\n\nThe corrected fix sets conn.prepare_threshold = 0 directly on the dedicated, single-use read-only connection the AI Assistant tool opens, structurally forcing the extended query protocol independent of any server-level configuration. Verified against a live PostgreSQL 18 instance: the payload executes successfully under the prepare_threshold=None (default) behavior, and is rejected with \"cannot insert multiple commands into a prepared statement\" once prepare_threshold=0 is set on that connection.\n\nThis issue affects pgAdmin 4: from 9.13 before 9.17.",
+      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/bf4792444446f0e7ab721d23cbd6bfe6afaa7a8b\nhttps://github.com/pgadmin-org/pgadmin4/commit/ef76102bcd1cdb544eb9b4ef18d3382f22b76752\nhttps://github.com/pgadmin-org/pgadmin4/issues/10192",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:25"
+    },
+    {
+      "cve_id": "CVE-2026-17349",
+      "title": "高危漏洞: CVE-2026-17349 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-01 00:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "/misc/workspace/adhoc_connect_server, part of the Workspaces feature introduced in pgAdmin 4 9.0, when passed the id of an existing server, clones that server via Server.clone(), which copies every column from the source row, including user_id, shared, shared_username, and the stored credential fields password, save_password, and tunnel_password. When a non-owner triggered an adhoc connect against another user's (in practice, typically an administrator's) shared server, the clone inherited that user's ownership, shared flag, and stored database credentials verbatim. pgAdmin persisted this cross-tenant, credential-bearing server row before the connection was even attempted, so it survived even when the connection subsequently failed. The non-owner could then open the newly-owned clone and pgAdmin would connect using the source user's stored database password on the non-owner's behalf, granting the non-owner use of database credentials -- and whatever database privileges they confer -- that were never their own.\n\nFix forces the cloned adhoc record's ownership fields (user_id, shared, shared_username) and stored credential fields (password, save_password, tunnel_password) to belong to the calling user and be cleared/private before committing, regardless of the source server's ownership, sharing state, or stored credentials. A regression test asserts that an adhoc connect triggered by a non-owner against another user's shared server persists a row owned by the caller, not shared, and without the source's stored credentials.\n\nThis issue affects pgAdmin 4: from 9.0 before 9.17.",
+      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/64a9cdbd6a240a962144f84418beaf9e66419779\nhttps://github.com/pgadmin-org/pgadmin4/commit/a7e74a6ed685bc34e1f77a8b6a94d00fa3dff815\nhttps://github.com/pgadmin-org/pgadmin4/issues/10200",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:16"
+    },
+    {
+      "cve_id": "CVE-2026-17347",
+      "title": "高危漏洞: CVE-2026-17347 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 00:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MASTER_PASSWORD_HOOK setting, introduced in pgAdmin 4 7.2, lets an administrator configure an external command that returns a per-user encryption key, with %u in the configured string replaced by the current user's name. The previous implementation substituted the username directly into the command string and executed the result with subprocess.Popen(..., shell=True). Because the username can originate from an external authentication source (OAuth/OIDC claims, Kerberos, webserver auth) rather than a value pgAdmin fully controls, a username containing shell metacharacters (';', '$()', backticks, pipes, '&&', newlines) allowed an authenticated user to execute arbitrary commands as the pgAdmin service account in any deployment where the configured hook string uses %u.\n\nFix tokenises the trusted, administrator-configured hook string into an argument vector first (using shlex in POSIX-quoting mode, with backslash-escaping disabled so Windows-style paths are not mis-parsed), substitutes the untrusted username into the individual argv elements, and executes with shell=False. The username is therefore always confined to a single argv element; any shell metacharacters it contains are inert. Administrators whose MASTER_PASSWORD_HOOK previously relied on shell features (pipes, redirection, environment-variable expansion, globbing) within the hook string itself must move that logic into the invoked script, since it is no longer interpreted by a shell.\n\nThis issue affects pgAdmin 4: from 7.2 before 9.17.",
+      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/e7a85767314e7b0fe0b35fe80b9c1af38f48dff6\nhttps://github.com/pgadmin-org/pgadmin4/commit/ea7e798aac27174d2bacee1d6e136bed76a95e23\nhttps://github.com/pgadmin-org/pgadmin4/issues/10191",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:09"
+    },
+    {
+      "cve_id": "CVE-2026-17346",
+      "title": "高危漏洞: CVE-2026-17346 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-01 00:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The fix for CVE-2026-12044 in pgAdmin 4 9.16 hardened qtLiteral and switched sixteen COMMENT ON / pgstattuple / pgstatindex templates to it, but missed several sinks that had been placed in test_sql_string_literal_lint.py's ALLOWLIST on the incorrect assumption that schema, table, publication, and subscription names sourced from pg_catalog via the browser tree could never contain an apostrophe. PostgreSQL permits arbitrary characters in quoted identifiers, so a low-privileged user able to CREATE TABLE, CREATE PUBLICATION, or CREATE SUBSCRIPTION can plant an apostrophe'd object name that breaks out of the unescaped '{{ name }}' template interpolation the moment any user (including a higher-privileged one) opens that object's Statistics or Dependencies tab, allowing arbitrary SQL statement injection in the viewing user's database session.\n\nAffected sinks: the Index Statistics query for all-indexes listing (coll_stats.sql, both the 16_plus and default PostgreSQL-version template variants -- distinct from the single-index stats.sql path already fixed in CVE-2026-12044), and the publication and subscription dependencies.sql / get_position.sql templates (both the pg and ppas/EPAS dialect variants for publications).\n\nFix switches all of these templates to qtLiteral(conn) for name interpolation, and updates publications/__init__.py and subscriptions/__init__.py to pass conn=self.conn into the dependencies.sql render_template call so the qtLiteral filter has a connection to quote against. The corresponding ALLOWLIST entries in test_sql_string_literal_lint.py are removed now that these sinks are properly escaped rather than merely assumed safe. A behavioral regression test renders each fixed template with a stacked-statement apostrophe payload and asserts both that the object name appears exactly as qtLiteral-escaped and that the rendered SQL parses as exactly one statement, verifying the assertion genuinely fails against the pre-patch raw-interpolation form.\n\nThis issue affects pgAdmin 4: the Index Statistics sink from 1.0, and the Publications/Subscriptions sinks from 5.0, both before 9.17.",
+      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/73b3218992cc37af6e10b7e54eaeed6ec293c6b2\nhttps://github.com/pgadmin-org/pgadmin4/commit/f75452bfd0f786d0c071638919d48fc1d76f987d\nhttps://github.com/pgadmin-org/pgadmin4/issues/10193",
+      "source": "NVD",
+      "time": "2026-08-01 03:08:02"
+    },
+    {
+      "cve_id": "CVE-2026-62391",
+      "title": "高危漏洞: CVE-2026-62391 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-31 19:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The security fix for CVE-2025-66518 is incomplete. Any client who can access to Apache Kyuubi Server via Kyuubi frontend protocols can bypass server-side config kyuubi.session.local.dir.allowlist via unprefixed Spark config aliases.\n\nThis issue affects Apache Kyuubi: from 1.6.0 before 1.12.0.\n\nUsers are recommended to upgrade to version 1.12.0, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread/vo4k4nxz23kfzrpp120nsojb0vrkx4w1",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:55"
+    },
+    {
+      "cve_id": "CVE-2026-14919",
+      "title": "高危漏洞: CVE-2026-14919 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ShopMonitor.io  WordPress plugin before 1.2.0 does not properly restrict its email-rerouting test mode, gating it behind a trusted-source check that is satisfiable with client-supplied request headers, allowing unauthenticated attackers to redirect outgoing emails, including the WordPress administrator password-reset email, to an address they control and take over the administrator account.",
+      "refs": "https://wpscan.com/vulnerability/6d929535-9757-44ae-8c58-682f1eb89785/",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:51"
+    },
+    {
+      "cve_id": "CVE-2026-13609",
+      "title": "高危漏洞: CVE-2026-13609 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-07-31 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Frontend Admin by DynamiApps WordPress plugin before 3.29.9 decodes HTML entities in a submitted form field value after sanitizing it, which restores HTML tags that the sanitizer had neutralized. A double-encoded payload submitted by an unauthenticated visitor is therefore stored as a live tag and later output without escaping on the Frontend Admin by DynamiApps WordPress plugin before 3.29.9's front-end display surfaces, resulting in stored cross-site scripting that executes in the browser of any user, including an administrator, who views a page displaying the submitted value.",
+      "refs": "https://wpscan.com/vulnerability/836bc6cd-42f0-4cd9-bb4c-ce5b0ff0d84b/",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:46"
+    },
+    {
+      "cve_id": "CVE-2026-13392",
+      "title": "高危漏洞: CVE-2026-13392 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-07-31 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ElementsKit Elementor Addons  WordPress plugin before 3.10.01 does not prevent a custom-widget definition saved by a user with administrative capabilities from being written verbatim into a generated PHP file that the ElementsKit Elementor Addons  WordPress plugin before 3.10.01 subsequently executes, allowing arbitrary PHP code to run on the server; on a multisite network this lets a non-super subsite Administrator, who is otherwise denied code/file editing, reach host-level code execution beyond the privileges the network grants them.",
+      "refs": "https://wpscan.com/vulnerability/955cbef5-51c3-4d10-86d2-e2882bbb56a4/",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:42"
+    },
+    {
+      "cve_id": "CVE-2026-12721",
+      "title": "高危漏洞: CVE-2026-12721 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-07-31 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The Kirki  WordPress plugin before 6.0.13 does not properly sanitise and escape a value taken from the request before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection attacks.",
+      "refs": "https://wpscan.com/vulnerability/4cba3900-9f29-4928-811c-163827358052/",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:36"
+    },
+    {
+      "cve_id": "CVE-2025-69947",
+      "title": "高危漏洞: CVE-2025-69947 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 05:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SourceCodester Tailor Management System 1.0 is vulnerable to SQL Injection in customeredit.php?id=1.",
+      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-customeredit.php-id-sqli/20250811-tailor-ms-customeredit.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-customeredit.php-id-sqli/20250811-tailor-ms-customeredit.php-id-sqli.md",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:32"
+    },
+    {
+      "cve_id": "CVE-2025-69941",
+      "title": "高危漏洞: CVE-2025-69941 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 05:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SourceCodester Tailor Management System 1.0 is vulnerable to SQL Injection in addmeasurement.php?id=1.",
+      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-addmeasurement.php-id-sqli/20250811-tailor-ms-addmeasurement.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-addmeasurement.php-id-sqli/20250811-tailor-ms-addmeasurement.php-id-sqli.md",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:27"
+    },
+    {
+      "cve_id": "CVE-2025-69937",
+      "title": "高危漏洞: CVE-2025-69937 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 05:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in the edit_type.php endpoint via the Parameter id.",
+      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_type.php-id-sqli/20250811-membership-management-system-edit_type.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_type.php-id-sqli/20250811-membership-management-system-edit_type.php-id-sqli.md",
+      "source": "NVD",
+      "time": "2026-08-01 03:07:20"
+    },
+    {
       "cve_id": "CVE-2026-18446",
       "title": "高危漏洞: CVE-2026-18446 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -923,182 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513257423",
       "source": "NVD",
       "time": "2026-07-31 05:59:22"
-    },
-    {
-      "cve_id": "CVE-2026-17670",
-      "title": "高危漏洞: CVE-2026-17670 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Views in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513228974",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:18"
-    },
-    {
-      "cve_id": "CVE-2026-17669",
-      "title": "高危漏洞: CVE-2026-17669 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/513142464",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:13"
-    },
-    {
-      "cve_id": "CVE-2026-17666",
-      "title": "高危漏洞: CVE-2026-17666 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-30 09:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Cryptographic Flaw in Enterprise in Google Chrome prior to 151.0.7922.72 allowed an attacker in a privileged network position to bypass discretionary access control via malicious network traffic. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/511761758",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:09"
-    },
-    {
-      "cve_id": "CVE-2026-17665",
-      "title": "高危漏洞: CVE-2026-17665 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-30 09:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in V8 in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/511277457",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:05"
-    },
-    {
-      "cve_id": "CVE-2025-69942",
-      "title": "高危漏洞: CVE-2025-69942 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-30 06:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "kishan0725 Hospital Management System 4.0 is vulnerable to SQL Injection in /hms/doctor/view-patient.php?viewid=1.",
-      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/hospitalmanagementsystemproject/20250811-hospital-management-system-view-patient.php-viewid-sqli/20250811-hospital-management-system-view-patient.php-viewid-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/hospitalmanagementsystemproject/20250811-hospital-management-system-view-patient.php-viewid-sqli/20250811-hospital-management-system-view-patient.php-viewid-sqli.md",
-      "source": "NVD",
-      "time": "2026-07-31 05:59:00"
-    },
-    {
-      "cve_id": "CVE-2026-9322",
-      "title": "高危漏洞: CVE-2026-9322 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 01:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "IBM WebSphere Application Server 9.0, and 8.5 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.7 are vulnerable to a denial of service via a crafted HTTP request.",
-      "refs": "https://www.ibm.com/support/pages/node/7278576",
-      "source": "NVD",
-      "time": "2026-07-31 03:13:19"
-    },
-    {
-      "cve_id": "CVE-2026-62663",
-      "title": "高危漏洞: CVE-2026-62663 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 01:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Banks generates meaningful LLM prompts using a simple template language. In versions prior to 2.4.4, all four media filters (image, audio, video, document) in banks accept untrusted user input as file paths via Path(value) and pass them directly to open(file_path, \"rb\") without any path sanitization, canonicalization, or directory restriction. An attacker who controls template variables passed to a banks Prompt can use path traversal (../) to read arbitrary files accessible to the Python process—including .env files, SSH keys, cloud credentials, source code, /etc/passwd, and /etc/shadow—with the content returned base64-encoded in the rendered prompt output, making exfiltration trivial. This is particularly dangerous for applications that use banks to process user-provided template variables before sending prompts to an LLM. This issue has been fixed in version 2.4.4.",
-      "refs": "https://github.com/masci/banks/security/advisories/GHSA-98rr-gvc9-3cjh",
-      "source": "NVD",
-      "time": "2026-07-31 03:13:15"
-    },
-    {
-      "cve_id": "CVE-2026-12945",
-      "title": "高危漏洞: CVE-2026-12945 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-07-31 01:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
-      "description": "IBM Langflow OSS 1.0.0 through 1.10.1 allows authenticated users to access and manipulate other users' build jobs through improper access control on log retrieval and unauthenticated build endpoints.",
-      "refs": "https://www.ibm.com/support/pages/node/7279994",
-      "source": "NVD",
-      "time": "2026-07-31 03:13:10"
-    },
-    {
-      "cve_id": "CVE-2026-12940",
-      "title": "高危漏洞: CVE-2026-12940 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 01:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.10.1  are vulnerable to unauthenticated remote code execution via environment variable injection in the MCP (Model Context Protocol) stdio launcher. The vulnerability exists in src/lfx/src/lfx/base/mcp/util.py where the DANGEROUS_ENV_VARS blocklist fails to include SHELLOPTS , BASHOPTS , and PS4 environment variables.",
-      "refs": "https://www.ibm.com/support/pages/node/7279995",
-      "source": "NVD",
-      "time": "2026-07-31 03:13:06"
-    },
-    {
-      "cve_id": "CVE-2026-11885",
-      "title": "高危漏洞: CVE-2026-11885 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-31 01:16:27",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-      "description": "IBM PowerVM Hypervisor FW1110.00 through FW1110.20, FW1060.00 through FW1060.71, and FW950.00 through FW950.H1 A carefully crafted OS hypervisor call can cause the PowerVM hypervisor to crash or compromise OS memory integrity.",
-      "refs": "https://www.ibm.com/support/pages/node/7280628",
-      "source": "NVD",
-      "time": "2026-07-31 03:13:01"
-    },
-    {
-      "cve_id": "CVE-2026-58222",
-      "title": "高危漏洞: CVE-2026-58222 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-31 00:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw combining LDAP filter injection and improper authorization checks was found in Samba Active Directory Domain Controller (AD DC). When processing LDAP Compare requests, Samba fails to properly validate user-supplied attribute names and executes the resulting internal database search in a trusted context, bypassing normal Access Control List (ACL) enforcement. An authenticated low-privilege domain user can exploit these flaws to disclose confidential Active Directory attributes that would normally be inaccessible. The disclosed information may be leveraged to derive sensitive authentication material, potentially leading to privilege escalation and complete domain compromise. For example: In deployments configured with Group Managed Service Accounts (gMSAs), an attacker can extract the \"msKds-RootKeyData\" attribute and derive gMSA passwords offline, potentially leading to complete domain compromise if privileged gMSAs are present.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-58222\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2502722\nhttps://bugzilla.samba.org/show_bug.cgi?id=16148",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:57"
-    },
-    {
-      "cve_id": "CVE-2026-57862",
-      "title": "高危漏洞: CVE-2026-57862 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-31 00:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Kanboard 1.2.52 and prior contains a server-side request forgery vulnerability that allows authenticated users to bypass SSRF protections by supplying hexadecimal IP address notation in user-controlled URLs. Attackers can submit hexadecimal-encoded internal IP addresses through the web link creation feature, causing cURL to resolve and connect to internal network resources such as cloud instance metadata services, localhost services, and RFC1918 addresses while the isPrivateURL() filter in app/Core/Http/Client.php incorrectly treats the input as safe due to FILTER_VALIDATE_IP rejecting non-dotted-decimal notation.",
-      "refs": "https://gist.github.com/sermikr0/67c8acfc395e465127e729dc309da3ae\nhttps://github.com/kanboard/kanboard\nhttps://www.vulncheck.com/advisories/kanboard-and-prior-ssrf-filter-bypass-via-hexadecimal-ip-notation",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:52"
-    },
-    {
-      "cve_id": "CVE-2026-4978",
-      "title": "高危漏洞: CVE-2026-4978 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 00:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in UMAI Vision Traffic Analysis System allows SQL Injection.\n\nThis issue affects Traffic Analysis System: from 30 before 34.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0703",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:43"
-    },
-    {
-      "cve_id": "CVE-2026-28323",
-      "title": "高危漏洞: CVE-2026-28323 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 00:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SolarWinds Web Help Desk is found to be affected by a SAML authentication bypass vulnerability. This requires the SAML 2.0 authentication method to be enabled.",
-      "refs": "https://documentation.solarwinds.com/en/success_center/whd/content/helpdesksecureconfiguration.htm\nhttps://documentation.solarwinds.com/en/success_center/whd/content/release_notes/whd_2026-2-1_release_notes.htm\nhttps://www.solarwinds.com/trust-center/security-advisories/CVE-2026-28323",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:39"
-    },
-    {
-      "cve_id": "CVE-2026-10842",
-      "title": "高危漏洞: CVE-2026-10842 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 00:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "IBM WebSphere Application Server 8.5, and 9.0 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.7 Traditional and Liberty could allow a remote attacker to bypass security constraints.",
-      "refs": "https://www.ibm.com/support/pages/node/7280131",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:34"
-    },
-    {
-      "cve_id": "CVE-2026-18002",
-      "title": "高危漏洞: CVE-2026-18002 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in Google Lens in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/521864362",
-      "source": "NVD",
-      "time": "2026-07-31 03:12:30"
     }
   ]
 }
