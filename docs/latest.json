@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-34641",
+      "title": "高危漏洞: CVE-2026-34641 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-01 07:17:23",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Premiere Pro is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+      "refs": "https://helpx.adobe.com/security/products/premiere_pro/apsb26-76.html",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:38"
+    },
+    {
+      "cve_id": "CVE-2026-68771",
+      "title": "高危漏洞: CVE-2026-68771 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-01 06:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ComfyUI v0.23.0 contains an unsafe deserialization vulnerability in the LoadTrainingDataset node that allows unauthenticated remote attackers to execute arbitrary Python code by uploading a crafted pickle file and triggering its deserialization. Attackers can upload a malicious shard_*.pkl file via the unauthenticated POST /upload/image endpoint and then queue a workflow graph via POST /prompt referencing the uploaded file, causing torch.load to deserialize the attacker-controlled pickle payload using __reduce__ and execute arbitrary commands as the ComfyUI process user.",
+      "refs": "https://github.com/Comfy-Org/ComfyUI\nhttps://github.com/Comfy-Org/ComfyUI/commit/94ee49b1612824366a8631ea069b2a1fa5c73720\nhttps://github.com/Comfy-Org/ComfyUI/pull/14543",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:34"
+    },
+    {
+      "cve_id": "CVE-2026-68770",
+      "title": "高危漏洞: CVE-2026-68770 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-01 05:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "sentence-transformers contains a security control bypass vulnerability that allows attackers to achieve arbitrary code execution by exploiting a logic flaw in the import_module_class helper within sentence_transformers/util/misc.py, where the guard condition includes an 'or os.path.exists(model_name_or_path)' clause that satisfies the trust gate whenever the supplied path exists on the local filesystem, regardless of the trust_remote_code=False argument. Attackers who can control or influence the contents of a model directory on disk can place malicious Python files such as modeling_*.py referenced via modules.json, causing the code to execute at import time when an application loads the model with SentenceTransformer(path, trust_remote_code=False), bypassing the documented security contract and achieving code execution within the loading process.",
+      "refs": "https://github.com/huggingface/sentence-transformers\nhttps://github.com/huggingface/sentence-transformers/commit/ae1acc3fb2aa2004577b297eb4a915ce7a03316a\nhttps://github.com/huggingface/sentence-transformers/issues/3801",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:30"
+    },
+    {
+      "cve_id": "CVE-2026-65981",
+      "title": "高危漏洞: CVE-2026-65981 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-01 05:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Coturn is a free open source implementation of TURN and STUN Server. Prior to 4.15.0, a server using --mobility authenticates a resumed REFRESH request with the resuming user's credentials but does not verify that identity against the original allocation owner, allowing an authenticated attacker who obtains a victim MOBILITY-TICKET to receive and inject relayed traffic and consume the victim's quota. In the handle_turn_refresh resume branch, the victim allocation (orig_ss) is located solely by the attacker-controlled mobile id, and credentials are only adopted (via copy_auth_parameters) when the resuming session is unauthenticated. Because the attacker's session already has hmackey_set set to 1 from its own prior authentication (which is never reset for long-term-credential sessions), the credential copy is skipped and check_stun_auth validates the REFRESH against the attacker's own identity rather than the allocation owner's. This issue is fixed in version 4.15.0.",
+      "refs": "https://github.com/coturn/coturn/commit/37df0513168f830a7c9ce0a411db0300fa182f05\nhttps://github.com/coturn/coturn/security/advisories/GHSA-69wx-x7x6-pjj8",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:24"
+    },
+    {
+      "cve_id": "CVE-2026-62999",
+      "title": "高危漏洞: CVE-2026-62999 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 04:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Copier is a library and CLI app for rendering project templates. From 9.5.0 through 9.16.0, percent-encoded parent-directory segments or encoded path separators in a template URL can match a configured trusted repository prefix before an HTTP server or Git transport decodes the path, allowing unsafe template features from a repository outside the trusted prefix to run after user interaction. This issue is fixed in version 9.17.0.",
+      "refs": "https://github.com/copier-org/copier/commit/7408f0d6287a7bf452715fd9f25dc54eaba3c295\nhttps://github.com/copier-org/copier/releases/tag/v9.17.0\nhttps://github.com/copier-org/copier/security/advisories/GHSA-34mv-rjq9-5mch",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:17"
+    },
+    {
+      "cve_id": "CVE-2026-53599",
+      "title": "高危漏洞: CVE-2026-53599 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 04:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "REDAXO is a PHP-based content management system. From 5.18.2 until 5.21.1, rex_mediapool::isAllowedExtension in redaxo/src/addons/mediapool/lib/mediapool.php lets an authenticated backend user with media[upload] permission upload a JPEG/PHP polyglot named shell.php.any.jpg, which web servers with multi-extension PHP handlers can execute as the web-server user. This issue is fixed in version 5.21.1.",
+      "refs": "https://github.com/redaxo/core/commit/462e36896bb65d292ba22d711044c23c9cfb0340\nhttps://github.com/redaxo/core/pull/6538\nhttps://github.com/redaxo/core/releases/tag/5.21.1",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:12"
+    },
+    {
+      "cve_id": "CVE-2026-53510",
+      "title": "高危漏洞: CVE-2026-53510 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-01 04:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Savon is a Ruby SOAP client. From 0.9.8 until 2.17.2, Savon::Model .all_operations interpolates attacker-controlled WSDL operation names into Ruby source passed to module_eval, allowing Ruby code execution in the application process. This issue is fixed in version 2.17.2.",
+      "refs": "https://github.com/savonrb/savon/commit/8f22eb543e7436f6247172c9be47e22792d375e9\nhttps://github.com/savonrb/savon/releases/tag/v2.17.2\nhttps://github.com/savonrb/savon/security/advisories/GHSA-mx5j-mp4f-g8jg",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:08"
+    },
+    {
+      "cve_id": "CVE-2026-18394",
+      "title": "高危漏洞: CVE-2026-18394 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-01 04:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "Incorrect authorization in the http_request tool in Strands Agents Tools before 0.8.2 might allow remote attackers to obtain credentials configured via HTTP_REQUEST_TOKEN_CONFIG by influencing the LLM to route requests through actor-controlled proxy infrastructure.\n\n\n\nTo remediate this issue, users should upgrade to version 0.8.2.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-069-aws/\nhttps://github.com/strands-agents/tools/releases/tag/v0.8.2\nhttps://github.com/strands-agents/tools/security/advisories/GHSA-qhw6-2h72-m84v",
+      "source": "NVD",
+      "time": "2026-08-01 09:53:03"
+    },
+    {
+      "cve_id": "CVE-2026-15258",
+      "title": "高危漏洞: CVE-2026-15258 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-07-31 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The Product Feed Manager For WooCommerce  WordPress plugin before 7.6.1 does not properly sanitise and escape product-feed custom filter rules before using them in a SQL query, allowing users with the Contributor role and above to perform SQL injection attacks.",
+      "refs": "https://wpscan.com/vulnerability/9e20442b-047b-46fe-be72-89c637deb6bc/",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:59"
+    },
+    {
+      "cve_id": "CVE-2026-15048",
+      "title": "高危漏洞: CVE-2026-15048 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 15:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Geeky Bot  WordPress plugin before 1.2.8 does not perform an authorization check on one of its AJAX actions, allowing unauthenticated users to retrieve chat-history session metadata including WordPress usernames, user IDs, and timestamps.",
+      "refs": "https://wpscan.com/vulnerability/881d1548-e6c3-4093-ab8c-dc3a9fcccc34/",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:54"
+    },
+    {
+      "cve_id": "CVE-2026-14930",
+      "title": "高危漏洞: CVE-2026-14930 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 15:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The JS Help Desk  WordPress plugin before 3.1.4 does not perform any authorization, nonce, or ownership check on a front-end request dispatcher, allowing unauthenticated users to upload files (limited to the JS Help Desk  WordPress plugin before 3.1.4's inert allowed extensions) and attach them to arbitrary users' support tickets.",
+      "refs": "https://wpscan.com/vulnerability/075ca843-e787-43cc-8de4-54d8ddc63d4a/",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:48"
+    },
+    {
+      "cve_id": "CVE-2026-14319",
+      "title": "高危漏洞: CVE-2026-14319 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The GiveWP  WordPress plugin before 4.16.3 does not properly restrict access to a REST API endpoint that returns recurring-donation records, allowing unauthenticated users to retrieve information about anonymous recurring donors, including their name and subscription details.",
+      "refs": "https://wpscan.com/vulnerability/f90c88a8-e5a5-4bcf-8fa1-59cdfef015a4/",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:42"
+    },
+    {
+      "cve_id": "CVE-2026-43832",
+      "title": "高危漏洞: CVE-2026-43832 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 12:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Full details and mitigation steps are currently restricted and will be published at a later date.",
+      "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-xxx",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:38"
+    },
+    {
+      "cve_id": "CVE-2026-43831",
+      "title": "高危漏洞: CVE-2026-43831 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 12:17:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Full details and mitigation steps are currently restricted and will be published at a later date.",
+      "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-xxx",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:34"
+    },
+    {
+      "cve_id": "CVE-2026-43830",
+      "title": "高危漏洞: CVE-2026-43830 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-07-31 12:17:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Full details and mitigation steps are currently restricted and will be published at a later date.",
+      "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-xxx",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:29"
+    },
+    {
+      "cve_id": "CVE-2026-43829",
+      "title": "高危漏洞: CVE-2026-43829 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-07-31 12:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Full details and mitigation steps are currently restricted and will be published at a later date.",
+      "refs": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-xxx",
+      "source": "NVD",
+      "time": "2026-08-01 09:52:24"
+    },
+    {
       "cve_id": "CVE-2026-53505",
       "title": "高危漏洞: CVE-2026-53505 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -923,182 +1099,6 @@
       "refs": "https://github.com/Leantime/leantime\nhttps://github.com/Leantime/leantime/pull/3656\nhttps://github.com/javokhir-sec/CVE-PoC-Hub/security/advisories/GHSA-gphg-6h4g-mg22",
       "source": "NVD",
       "time": "2026-07-31 06:01:31"
-    },
-    {
-      "cve_id": "CVE-2026-61536",
-      "title": "高危漏洞: CVE-2026-61536 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 03:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Banks generates meaningful LLM prompts using a simple template language. In versions prior to 2.4.3, banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the callable that handles a tool call. There is no allowlist or sanitization on import_path, so any importable Python attribute (e.g. os.system, subprocess.getoutput) can be selected. When the LLM emits a tool_calls entry whose function.name matches the attacker-supplied tool name, the resolved callable is invoked with kwargs decoded from tool_call.function.arguments, yielding arbitrary code execution in the banks-hosting process. This is distinct from GHSA-gphh-9q3h-jgpp / CVE-2026-44209. That advisory was fixed in 2.4.2 by switching src/banks/env.py from Environment to SandboxedEnvironment. The fix does not touch src/banks/extensions/completion.py, and the unsafe import + getattr chain still executes on 2.4.2. The malicious Tool JSON is plain text in the rendered template body — it requires no Jinja attribute access, so the sandbox is irrelevant. This issue has been fixed in version 2.4.3.",
-      "refs": "https://github.com/masci/banks/security/advisories/GHSA-64vx-6h2c-rjh7",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:27"
-    },
-    {
-      "cve_id": "CVE-2026-18245",
-      "title": "高危漏洞: CVE-2026-18245 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-07-31 03:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Improper control of code generation in Amazon @aws-amplify/codegen-ui-react before 2.20.6 might allow a remote authenticated user to execute arbitrary code in end-user browsers, developer machines, CI/CD environments, and server-side rendering contexts via crafted Studio component or theme schema values due to insufficient coverage and effectiveness of the input validation introduced for CVE-2025-4318.\n\n\n\nTo remediate this issue, users should upgrade to version 2.20.6",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-066-aws/\nhttps://github.com/aws-amplify/amplify-codegen-ui/releases/tag/v2.20.6\nhttps://github.com/aws-amplify/amplify-codegen-ui/security/advisories/GHSA-74xx-rjgf-m69j",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:20"
-    },
-    {
-      "cve_id": "CVE-2026-18140",
-      "title": "高危漏洞: CVE-2026-18140 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 03:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Uncontrolled recursion in the unknown-key skip path of the aws-smithy-json runtime crate before 0.62.7, which the smithy-rs code generator invokes from every generated struct deserializer, might allow remote unauthenticated users to cause a denial of service (process abort via stack exhaustion) via a single small HTTP request containing deeply nested JSON to a smithy-rs generated server.\n\n\n\nTo remediate this issue, users should upgrade to aws-smithy-json 0.62.7 or later and rebuild.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-067-aws/\nhttps://crates.io/crates/aws-smithy-json/0.62.7\nhttps://github.com/smithy-lang/smithy-rs/security/advisories/GHSA-8ffr-xgwf-xj56",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:16"
-    },
-    {
-      "cve_id": "CVE-2026-13435",
-      "title": "高危漏洞: CVE-2026-13435 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-07-31 03:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.10.1 contains an improper input validation vulnerability in the PythonREPL sandbox implementation.",
-      "refs": "https://www.ibm.com/support/pages/node/7279987",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:12"
-    },
-    {
-      "cve_id": "CVE-2026-12943",
-      "title": "高危漏洞: CVE-2026-12943 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 03:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM HMC V10.3.1050.0 through 10.3.1064.0 and IBM HMC V11.1.1110.0 through 11.1.1112.0 Management systems in IBM Power environments (HMC and Novalink) could allow an unauthenticated user to execute arbitrary commands with elevated privileges on the system due to improper validation of user supplied input.",
-      "refs": "https://www.ibm.com/support/pages/node/7278667",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:08"
-    },
-    {
-      "cve_id": "CVE-2026-12942",
-      "title": "高危漏洞: CVE-2026-12942 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 03:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.10.1 could allow a remote attacker to traverse directories on the system. An attacker could send a specially crafted URL request containing \"dot dot \" sequences ( /.. /) to view arbitrary files on the system.",
-      "refs": "https://www.ibm.com/support/pages/node/7279993",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:04"
-    },
-    {
-      "cve_id": "CVE-2026-12733",
-      "title": "高危漏洞: CVE-2026-12733 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 03:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "IBM DataPower Gateway could allow a remote attacker to cause a denial of service due to improper resource limitations.",
-      "refs": "https://www.ibm.com/support/pages/node/7278746",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:57"
-    },
-    {
-      "cve_id": "CVE-2026-12118",
-      "title": "高危漏洞: CVE-2026-12118 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 03:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM webMethods Integration (on prem) 10.15, 10.11 could allow an unauthenticated remote attacker to execute arbitrary code on the system due to the deserialization of untrusted data.",
-      "refs": "https://www.ibm.com/support/pages/node/7278857",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:53"
-    },
-    {
-      "cve_id": "CVE-2026-10545",
-      "title": "高危漏洞: CVE-2026-10545 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 03:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "IBM Planning Analytics Local 2.1.0 through 2.1.21 is vulnerable to an open redirect that allows an attacker to redirect users to arbitrary external websites via a crafted URL. If used in SSO authentication flows, this could result in exposure of session tokens and allow attackers to hijack user sessions.",
-      "refs": "https://www.ibm.com/support/pages/node/7278566",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:49"
-    },
-    {
-      "cve_id": "CVE-2026-10535",
-      "title": "高危漏洞: CVE-2026-10535 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-07-31 03:17:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to buffer overflow in setgid helper db2flacc.",
-      "refs": "https://www.ibm.com/support/pages/node/7279466",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:45"
-    },
-    {
-      "cve_id": "CVE-2024-25039",
-      "title": "高危漏洞: CVE-2024-25039 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 03:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "IBM Engineering Requirements Management DOORS and DOORS Web Access 9.7.2.1 through 9.7.2.11, and 9.6.1.1 through 9.6.1.13 do not limit the length of a connection which could allow for a Slowloris HTTP denial of service attack to take place. This can cause the web server to become unresponsive.",
-      "refs": "https://www.ibm.com/support/pages/node/7279145",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:41"
-    },
-    {
-      "cve_id": "CVE-2026-13395",
-      "title": "高危漏洞: CVE-2026-13395 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-30 14:24:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The Online Scheduling and Appointment Booking System  WordPress plugin before 27.8 does not sanitize or properly cast a user-supplied parameter from its unauthenticated front-end booking requests before using it in a SQL query, allowing unauthenticated attackers to perform SQL injection attacks and extract sensitive data such as password hashes from the database.",
-      "refs": "https://wpscan.com/vulnerability/87e75d83-0ffc-4dd1-8839-1d5a90f5ea73/",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:37"
-    },
-    {
-      "cve_id": "CVE-2026-13178",
-      "title": "高危漏洞: CVE-2026-13178 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-30 14:24:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Eventin  WordPress plugin before 4.1.16 does not properly authorize order creation and accepts an attacker-supplied order status, allowing unauthenticated users to create orders marked as paid without completing any payment.",
-      "refs": "https://wpscan.com/vulnerability/09d6135f-b38c-4cfe-8a9f-5d79552c720c/",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:33"
-    },
-    {
-      "cve_id": "CVE-2026-12500",
-      "title": "高危漏洞: CVE-2026-12500 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-30 14:24:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The WP Travel Engine  WordPress plugin before 6.8.2 does not perform a capability check on an AJAX action that updates a WP Travel Engine  WordPress plugin before 6.8.2 option, allowing unauthenticated users to overwrite a site-wide WP Travel Engine  WordPress plugin before 6.8.2 option (the public nonce that gates the action is served to anonymous visitors).",
-      "refs": "https://wpscan.com/vulnerability/10b52de8-c1a8-4b58-9445-737d43033704/",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:26"
-    },
-    {
-      "cve_id": "CVE-2026-17995",
-      "title": "高危漏洞: CVE-2026-17995 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-30 09:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
-      "description": "Out of bounds read in Dawn in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/520972775",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:21"
-    },
-    {
-      "cve_id": "CVE-2026-17991",
-      "title": "高危漏洞: CVE-2026-17991 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-07-30 09:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation of untrusted input in AI in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/07/stable-channel-update-for-desktop_0887107924.html\nhttps://issues.chromium.org/issues/520110535",
-      "source": "NVD",
-      "time": "2026-07-31 06:00:17"
     }
   ]
 }
