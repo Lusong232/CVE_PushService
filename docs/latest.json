@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15414",
+      "title": "高危漏洞: CVE-2026-15414 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-01 11:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events.",
+      "refs": "https://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/admin/partials/membership/meta-box-plan-details.php#L102\nhttps://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/includes/membership/class-wps-membership-plan-cpt.php#L275\nhttps://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/includes/membership/class-wps-membership-plan-cpt.php#L477",
+      "source": "NVD",
+      "time": "2026-08-01 13:45:34"
+    },
+    {
+      "cve_id": "CVE-2026-15006",
+      "title": "高危漏洞: CVE-2026-15006 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-01 11:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Bit integrations – Form Integration, Webhook, Spreadsheets, CRM, LMS & Email Automation plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 2.9.0 via the processAttachment function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information.",
+      "refs": "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Actions/Mail/MailController.php#L123\nhttps://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Actions/Mail/MailController.php#L59\nhttps://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Triggers/CF7/CF7Controller.php#L127",
+      "source": "NVD",
+      "time": "2026-08-01 13:45:27"
+    },
+    {
       "cve_id": "CVE-2026-34641",
       "title": "高危漏洞: CVE-2026-34641 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/eb5a7d86-4762-48ad-83bf-81f048527147/",
       "source": "NVD",
       "time": "2026-07-31 09:51:19"
-    },
-    {
-      "cve_id": "CVE-2026-66416",
-      "title": "高危漏洞: CVE-2026-66416 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-31 03:18:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Leantime 3.6.2 contains a cross-site request forgery vulnerability that allows unauthenticated attackers to perform state-changing actions on behalf of authenticated users by excluding the Laravel VerifyCsrfToken middleware from the global middleware stack in app/Http/Kernel.php. Attackers can craft malicious pages delivered via phishing emails or malicious websites to trigger unauthorized POST, PUT, and DELETE requests that create or delete projects, modify settings, and change permissions as any authenticated user.",
-      "refs": "https://github.com/Leantime/leantime\nhttps://github.com/Leantime/leantime/pull/3659\nhttps://github.com/javokhir-sec/CVE-PoC-Hub/security/advisories/GHSA-x8vx-9g5w-w5rr",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:38"
-    },
-    {
-      "cve_id": "CVE-2026-66415",
-      "title": "高危漏洞: CVE-2026-66415 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-31 03:18:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Leantime 3.6.2 contains a server-side request forgery and local file inclusion vulnerability that allows authenticated attackers to read internal resources by passing unsanitized user-supplied filenames to file_get_contents() in the Blueprints::import() method without path validation. Attackers can submit crafted filenames containing URL wrappers or path traversal sequences through the JSON-RPC API endpoint to access cloud metadata services or read arbitrary files from the server filesystem.",
-      "refs": "https://github.com/Leantime/leantime\nhttps://github.com/Leantime/leantime/pull/3656\nhttps://github.com/javokhir-sec/CVE-PoC-Hub/security/advisories/GHSA-gphg-6h4g-mg22",
-      "source": "NVD",
-      "time": "2026-07-31 06:01:31"
     }
   ]
 }
