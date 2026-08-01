@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16635",
+      "title": "高危漏洞: CVE-2026-16635 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-01 17:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Pronamic Pay plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 10.1.0 This is due to the `maybe_update_user_role()` function passing an attacker-controlled Gravity Forms field value (`$lead[$feed->user_role_field_id]`) directly into `WP_User::set_role()` without any allowlist validation, capability comparison, or permission check to constrain which roles can be assigned. This makes it possible for authenticated attackers, with Subscriber-level access and above, to escalate their own WordPress account to Administrator by tampering with the role field value in a form submission. Exploitation requires that an administrator has already configured a Pronamic Pay payment feed in Gravity Forms with the **Update User Role** option enabled and mapped to a form field; once that configuration is in place, no further preconditions exist to prevent an authenticated attacker from exploiting this vulnerability.",
+      "refs": "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L144\nhttps://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L376\nhttps://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L379",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:34"
+    },
+    {
+      "cve_id": "CVE-2026-16144",
+      "title": "高危漏洞: CVE-2026-16144 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-01 17:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Kali Forms — Contact Form & Drag-and-Drop Builder plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 2.4.20 via the _save_data function. This is due to insufficient validation of the 'thisPermalink' field value before it overwrites a trusted callable placeholder, allowing attacker-controlled strings to reach call_user_func() in _save_data(). This makes it possible for unauthenticated attackers to execute code on the server. Exploitation requires the target form to define a field with a name matching one of the reserved placeholder keys ('thisPermalink', 'entryCounter', or 'submission_link'), as check_if_placeholders_changed() only processes POST keys present in the form's field_type_map.",
+      "refs": "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L1033\nhttps://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L172\nhttps://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L277",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:26"
+    },
+    {
+      "cve_id": "CVE-2026-15964",
+      "title": "高危漏洞: CVE-2026-15964 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-01 17:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Single Sign On For TNG plugin for WordPress is vulnerable to Authentication Bypass via unauthenticated password reset in all versions up to, and including, 2.0.0. This is due to the `ssoprocess_ajax()` function — registered on `wp_ajax_nopriv_ssoprocess_ajax` and therefore reachable without authentication — accepting an attacker-supplied `email` parameter with the `setnewpassword` operation and calling `reset_password()` on the resolved account without any ownership token, email confirmation link, or capability check. The sole guard is a call to `check_ajax_referer()`, which provides no authorization barrier because the `ssoajaxnonce` nonce is publicly broadcast on every front-end page via `wp_localize_script()` into the `SSOPWDREQUIREMENT` JavaScript object; since WordPress computes nonces for logged-out visitors against a shared anonymous session context, any unauthenticated visitor can scrape a valid nonce from the homepage and use it to authenticate the request. This makes it possible for unauthenticated attackers to change the password of any WordPress account, including administrator accounts, enabling complete site takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L102\nhttps://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L120\nhttps://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L69",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:22"
+    },
+    {
+      "cve_id": "CVE-2026-15450",
+      "title": "高危漏洞: CVE-2026-15450 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-01 17:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Nex Forms – Ultimate Form Builder – Lite plugin for WordPress is vulnerable to arbitrary file deletion via path traversal in versions up to, and including, 9.2.3. This is due to the delete_file() AJAX handler retrieving a file path from the database and passing it directly to unlink() with no validation (no realpath(), basename(), or allowlist check), combined with the insert_record() AJAX handler that lets the same authenticated user store an arbitrary value in the target 'location' column (wp_kses() only strips HTML tags and does not neutralize path traversal or absolute paths). This makes it possible for authenticated attackers, with admin-level access and above, to delete arbitrary files on the affected site's server, including wp-config. When the plugin's user-level option is configured to something else, this may be exploitable with lower privileges.",
+      "refs": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L269\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L273\nhttps://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L805",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:15"
+    },
+    {
+      "cve_id": "CVE-2026-15052",
+      "title": "高危漏洞: CVE-2026-15052 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-01 17:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Form Field Values in all versions up to, and including, 4.3.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L1224\nhttps://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L2311\nhttps://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L906",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:10"
+    },
+    {
+      "cve_id": "CVE-2026-15988",
+      "title": "高危漏洞: CVE-2026-15988 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-01 16:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The AI Engine – The Chatbot, AI Framework & MCP for WordPress plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.6.5 This is due to missing or incorrect nonce validation on the reauth_for_authorize function. This makes it possible for unauthenticated attackers to create new administrator accounts with attacker-supplied credentials via a CSRF-based REST authentication bypass, granted they can trick a site administrator into performing an action such as clicking on a link. This bypass can be combined with WordPress's ?_method=POST method-override support to convert a top-navigation GET request into an authenticated POST to the REST users endpoint, requiring no existing account on the attacker's part.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L120\nhttps://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L121\nhttps://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L127",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:06"
+    },
+    {
+      "cve_id": "CVE-2026-3141",
+      "title": "高危漏洞: CVE-2026-3141 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-01 14:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The FormGent plugin for WordPress is vulnerable to unauthorized arbitrary file deletion due to a missing capability check on the /wp-json/formgent/responses/attachments REST API endpoint in all versions up to, and including, 1.9.2 This is due to the REST API route being registered without any authentication middleware in routes/rest/api.php. This makes it possible for unauthenticated attackers to delete arbitrary files within the formgent uploads directory. Additionally, on Linux servers where the wp-content/uploads/formgent directory does not yet exist (the default state after plugin installation), the path traversal protection can be bypassed, enabling deletion of arbitrary files including wp-config.php which can lead to complete site takeover via a fresh WordPress installation.",
+      "refs": "https://plugins.trac.wordpress.org/browser/formgent/tags/1.3.1/app/Http/Controllers/AttachmentController.php#L59\nhttps://plugins.trac.wordpress.org/browser/formgent/tags/1.3.1/routes/rest/api.php#L27\nhttps://plugins.trac.wordpress.org/browser/formgent/trunk/app/Http/Controllers/AttachmentController.php#L59",
+      "source": "NVD",
+      "time": "2026-08-01 18:26:02"
+    },
+    {
       "cve_id": "CVE-2026-15414",
       "title": "高危漏洞: CVE-2026-15414 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/Caycon/cve-advisories/blob/main/2026/WolfCms/CVE-2026-67206.md\nhttps://www.vulncheck.com/advisories/wolf-cms-authenticated-rce-via-filemanagercontroller-file-upload",
       "source": "NVD",
       "time": "2026-07-31 09:51:54"
-    },
-    {
-      "cve_id": "CVE-2026-12946",
-      "title": "高危漏洞: CVE-2026-12946 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-07-31 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to inject arbitrary code on the system, due to the improper control of user input code.",
-      "refs": "https://www.ibm.com/support/pages/node/7278928",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:49"
-    },
-    {
-      "cve_id": "CVE-2026-11536",
-      "title": "高危漏洞: CVE-2026-11536 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-31 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "IBM WebSphere Application Server 9.0, and 8.5 is affected by a remote code execution vulnerability in the SOAP/JMX connector.",
-      "refs": "https://www.ibm.com/support/pages/node/7277544",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:44"
-    },
-    {
-      "cve_id": "CVE-2026-51272",
-      "title": "高危漏洞: CVE-2026-51272 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 03:18:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based buffer overflow vulnerability exists in the latinToUTF8() character encoding conversion function. The function calculates required buffer size by simply doubling input length and reallocates ps_ptr heap buffer without strict boundary validation. Malicious oversized input can trigger insufficient buffer allocation and out-of-bounds write during Latin-1 to UTF-8 conversion, leading to code execution, information disclosure, denial of service or privilege escalation.",
-      "refs": "https://gist.github.com/programmervuln/5d1388bb85dfaf2e7e2700c5a2bceef5\nhttps://github.com/schreibfaul1/ESP32-audioI2S/blob/master/src/Audio.cpp\nhttps://gist.github.com/programmervuln/5d1388bb85dfaf2e7e2700c5a2bceef5",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:40"
-    },
-    {
-      "cve_id": "CVE-2026-13444",
-      "title": "高危漏洞: CVE-2026-13444 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-31 03:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.10.1 can allow an attacker to access another user's private vector documents by creating their own flow with matching Chroma persist_directory and collection_name values. The attacker receives exact victim content in their workflow output despite having no authorization to read the victim's flow. Additionally, the attacker can pollute the victim's collection by inserting their own documents into the shared namespace.",
-      "refs": "https://www.ibm.com/support/pages/node/7279989",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:35"
-    },
-    {
-      "cve_id": "CVE-2026-51291",
-      "title": "高危漏洞: CVE-2026-51291 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 01:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "sqlite 3.41 is vulnerable to use after free in the json.c jsonCacheInsert function of the JSON cache management module.",
-      "refs": "https://github.com/programmervuln/cveadvisory-/blob/main/CVE-2026-51291\nhttps://github.com/sqlite/sqlite/blob/master/src/json.c",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:30"
-    },
-    {
-      "cve_id": "CVE-2026-51290",
-      "title": "高危漏洞: CVE-2026-51290 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-31 01:16:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
-      "description": "SQLite 3.41 has a use-after-free vulnerability in the shared cache lock management logic of the btree module. The program frees a BtLock structure without removing the node from the linked list. Subsequent linked list traversal accesses the released memory, which can lead to denial of service and sensitive memory information disclosure.",
-      "refs": "https://github.com/programmervuln/cveadvisory-/blob/main/CVE-2026-51290md\nhttps://github.com/sqlite/sqlite/blob/master/src/btree.c",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:24"
-    },
-    {
-      "cve_id": "CVE-2026-14602",
-      "title": "高危漏洞: CVE-2026-14602 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-07-30 14:25:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "The Remote API WordPress plugin through 0.2 does not authenticate a request before deserializing user-supplied input, allowing unauthenticated attackers to inject arbitrary PHP objects, which can lead to remote code execution when a suitable gadget chain is present through another installed Remote API WordPress plugin through 0.2.",
-      "refs": "https://wpscan.com/vulnerability/eb5a7d86-4762-48ad-83bf-81f048527147/",
-      "source": "NVD",
-      "time": "2026-07-31 09:51:19"
     }
   ]
 }
