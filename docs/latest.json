@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-8457",
+      "title": "高危漏洞: CVE-2026-8457 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-02 08:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WooCommerce - Social Login plugin for WordPress is vulnerable to Authentication Bypass in all versions up to and including 2.8.7. This is due to the plugin's Apple login handler accepting the Apple id_token and decoding only its base64 payload without verifying the JWT signature against Apple's public keys or validating the issuer, audience, or expiry claims, combined with the security nonce required to invoke the login flow being publicly exposed to unauthenticated users via a localized JavaScript object on the login page. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by supplying a forged id_token whose payload contains the target user's email address, as that email is used without any role exclusion to resolve a WordPress account and immediately issue an authenticated session for it.",
+      "refs": "https://codecanyon.net/item/social-login-wordpress-woocommerce-plugin/8495883\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/53e83037-2cc5-4dc9-b55d-03829df12a65?source=cve",
+      "source": "NVD",
+      "time": "2026-08-02 13:46:41"
+    },
+    {
+      "cve_id": "CVE-2026-18352",
+      "title": "高危漏洞: CVE-2026-18352 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-02 08:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The User Access Manager plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 2.3.15 via the 'uamgetfile' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. This is possible because when attachment_url_to_postid() returns 0 for a traversal path, the plugin falls back to the global post set by a valid ?attachment_id parameter supplied by the attacker, causing the access check to pass against a legitimate public attachment while the file streamed is the attacker-chosen path.",
+      "refs": "https://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/Controller/BaseControllerTrait.php%3A22-50\nhttps://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/Controller/Frontend/RedirectController.php%3A50-99%2C119-141%2C245-252\nhttps://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/File/FileHandler.php%3A79-124%2C270-294",
+      "source": "NVD",
+      "time": "2026-08-02 13:46:34"
+    },
+    {
+      "cve_id": "CVE-2026-13339",
+      "title": "高危漏洞: CVE-2026-13339 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-02 08:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The CubeWP Framework plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 1.1.30 via the 'cubewp_get_svg_content' function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. This is exploitable by unauthenticated attackers because the required nonce is publicly emitted into the markup of any page rendering the CubeWP posts shortcode or widget with AJAX loading enabled, making it harvestable by any guest visitor before submitting the AJAX request.",
+      "refs": "https://plugins.trac.wordpress.org/browser/cubewp-framework/tags/1.1.30/cube/functions/admin-functions.php#L1170\nhttps://plugins.trac.wordpress.org/changeset/3627738/cubewp-framework\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/7ea72320-0e1e-45e3-987d-9ab7eecf1aee?source=cve",
+      "source": "NVD",
+      "time": "2026-08-02 13:46:26"
+    },
+    {
       "cve_id": "CVE-2026-67352",
       "title": "高危漏洞: CVE-2026-67352 (CVSS 7.6)",
       "cvss_score": 7.6,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-renew.php-membershiptype-sqli/20250811-membership-management-system-renew.php-membershiptype-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-renew.php-membershiptype-sqli/20250811-membership-management-system-renew.php-membershiptype-sqli.md",
       "source": "NVD",
       "time": "2026-08-01 00:29:37"
-    },
-    {
-      "cve_id": "CVE-2026-65313",
-      "title": "高危漏洞: CVE-2026-65313 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-31 17:16:59",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A provisioning script used when installing HIPASE-250 (formerly 250\nSCALA) engineering workstations sets a fixed, hard-coded x11vnc\npassword. Because the same credential is applied to every workstation\nprovisioned this way, an attacker with adjacent-network access who\nknows the password can gain VNC access to affected workstations.",
-      "refs": "https://www.andritz.com/",
-      "source": "NVD",
-      "time": "2026-07-31 19:20:42"
-    },
-    {
-      "cve_id": "CVE-2026-65310",
-      "title": "高危漏洞: CVE-2026-65310 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 17:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "ANDRITZ HIPASE-250 (formerly 250 SCALA), in the default configuration\nof affected versions, exposes its data and configuration endpoint\nwithout any authentication and permissive CORS on every response. An\nunauthenticated attacker with network access can read live process\nvalues and server configuration.",
-      "refs": "https://www.andritz.com/",
-      "source": "NVD",
-      "time": "2026-07-31 19:20:36"
-    },
-    {
-      "cve_id": "CVE-2026-65309",
-      "title": "高危漏洞: CVE-2026-65309 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 16:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "ANDRITZ HIPASE-250 (formerly 250 SCALA) in affected versions stores\nand transmits user passwords using a reversible format instead of a\none-way password hash. This allows an attacker able to read the\ncredential store or capture network traffic to recover all stored\npasswords.",
-      "refs": "https://www.andritz.com/",
-      "source": "NVD",
-      "time": "2026-07-31 19:20:32"
     }
   ]
 }
