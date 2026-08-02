@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-68581",
+      "title": "高危漏洞: CVE-2026-68581 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-02 21:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Vikunja versions 0.22.0 through 2.3.0 fail to validate the principal type in API token management. Because user IDs and link-share IDs are independent numeric sequences and both resolve through a generic web.Auth.GetID() interface, a link-share JWT whose numeric ID equals a target user's ID is treated as that user by the /api/v1/tokens endpoints. An authenticated attacker can obtain a target's numeric user ID via authenticated user search, then create link shares on an attacker-writable project until the link-share sequence reaches that value, and use the resulting link-share JWT to list, create, and delete the target user's API tokens (including issuing a new token with attacker-chosen scopes under the target's permissions). Fixed in version 2.4.0.",
+      "refs": "https://github.com/go-vikunja/vikunja/commit/95b7e673fb5ee407498fa4b13e8b4c57847a4a0b\nhttps://github.com/go-vikunja/vikunja/commit/e6b25bd57b537ef9a72b5acdadf446ca5ef77bfa\nhttps://github.com/go-vikunja/vikunja/security/advisories/GHSA-vvcv-vpph-h844",
+      "source": "NVD",
+      "time": "2026-08-02 23:53:15"
+    },
+    {
+      "cve_id": "CVE-2026-68580",
+      "title": "高危漏洞: CVE-2026-68580 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-02 21:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FreeRDP before 3.29.0 contains integer overflow vulnerabilities in the audio input redirection channel (audin) across ALSA, sndio, WinMM, and OpenSL ES backends that fail to validate the FramesPerPacket parameter from RDP servers. Attackers can supply a malicious FramesPerPacket value causing allocation size wraparound, resulting in heap-based buffer overflow on ALSA or denial of service on all platforms.",
+      "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-69xf-pqrw-596x\nhttps://www.vulncheck.com/advisories/freerdp-before-integer-overflow-via-audio-input-channel",
+      "source": "NVD",
+      "time": "2026-08-02 23:53:10"
+    },
+    {
+      "cve_id": "CVE-2026-68579",
+      "title": "高危漏洞: CVE-2026-68579 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-02 21:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:H",
+      "description": "FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.",
+      "refs": "https://github.com/FreeRDP/FreeRDP/commit/5e8e987b469b60a3bafadf8f5afc40f91c09f458\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-m37j-jcr2-8gcc\nhttps://www.vulncheck.com/advisories/freerdp-before-heap-overflow-via-cliprdrstream-read",
+      "source": "NVD",
+      "time": "2026-08-02 23:53:03"
+    },
+    {
+      "cve_id": "CVE-2026-68578",
+      "title": "高危漏洞: CVE-2026-68578 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-02 21:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ArcadeDB versions before 26.7.3 fail to bind the authenticated principal in the MCP HTTP transport, causing all engine permission checks to silently pass as no-ops. Non-root MCP-allowed users can perform arbitrary database writes, DDL, schema mutations, and execute arbitrary JavaScript code via the query tool.",
+      "refs": "https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-6x73-v3rc-f57c\nhttps://www.vulncheck.com/advisories/arcadedb-authentication-bypass-via-mcp-transport",
+      "source": "NVD",
+      "time": "2026-08-02 23:52:58"
+    },
+    {
+      "cve_id": "CVE-2026-67357",
+      "title": "高危漏洞: CVE-2026-67357 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-02 21:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ArcadeDB versions before 26.7.3 contain an information disclosure vulnerability in the MCP get_server_settings tool that leaks the arcadedb.ha.clusterToken in cleartext. Attackers with MCP access can retrieve the cluster token and use it with X-ArcadeDB-Cluster-Token and X-ArcadeDB-Forwarded-User headers to impersonate root and achieve full server compromise.",
+      "refs": "https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-p9wc-4fhr-78wm\nhttps://www.vulncheck.com/advisories/arcadedb-information-disclosure-via-get-server-settings",
+      "source": "NVD",
+      "time": "2026-08-02 23:52:54"
+    },
+    {
+      "cve_id": "CVE-2026-67356",
+      "title": "高危漏洞: CVE-2026-67356 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-02 21:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ArcadeDB before 26.7.3 binds the real LocalDatabase object into JavaScript trigger contexts with HostAccess.ALL, allowing schema-admins to call getSecurity().createUser() without permission checks. Attackers with UPDATE_SCHEMA permission can create triggers that execute JavaScript to create server-wide admin users, escalating privileges beyond their authorization level.",
+      "refs": "https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-38pf-6hp2-pxww\nhttps://www.vulncheck.com/advisories/arcadedb-before-privilege-escalation-via-javascript-trigger",
+      "source": "NVD",
+      "time": "2026-08-02 23:52:47"
+    },
+    {
+      "cve_id": "CVE-2025-71400",
+      "title": "高危漏洞: CVE-2025-71400 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-02 21:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "better-auth passkey versions before 1.4.0 contain an insecure direct object reference vulnerability in the passkey deletion endpoint that allows authenticated users to delete arbitrary passkeys by ID. Attackers with valid sessions can submit crafted requests to the delete-passkey endpoint with enumerated passkey IDs to remove other users' passkeys.",
+      "refs": "https://github.com/better-auth/better-auth/security/advisories/GHSA-4vcf-q4xf-f48m\nhttps://www.vulncheck.com/advisories/better-auth-passkey-before-idor-via-delete-passkey",
+      "source": "NVD",
+      "time": "2026-08-02 23:52:41"
+    },
+    {
+      "cve_id": "CVE-2025-71399",
+      "title": "高危漏洞: CVE-2025-71399 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-08-02 21:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "Better Auth relies on better-call, which uses the rou3 router library. In affected versions of rou3, paths are normalized by removing empty segments, so /path, //path, and ///path resolve to the same route. In Better Auth versions prior to 1.4.5 (which bundles the fixed rou3), this can allow attackers to bypass disabledPaths configuration and path-based rate limits by submitting requests with extra slashes in the URL path. The issue does not apply in deployments where the proxy or platform normalizes URLs by collapsing multiple slashes.",
+      "refs": "https://github.com/better-auth/better-auth/commit/f60b43fa648399534507c9ac7db36d705b8874c3\nhttps://github.com/better-auth/better-auth/security/advisories/GHSA-x732-6j76-qmhm\nhttps://www.vulncheck.com/advisories/better-auth-before-path-normalization-bypass-via-rou3",
+      "source": "NVD",
+      "time": "2026-08-02 23:52:35"
+    },
+    {
       "cve_id": "CVE-2026-8457",
       "title": "高危漏洞: CVE-2026-8457 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1011,94 +1099,6 @@
       "refs": "https://www.hikvision.com/en/support/cybersecurity/security-advisory/command-execution-vulnerability-in-some-wireless-ap-products/",
       "source": "NVD",
       "time": "2026-08-01 00:30:17"
-    },
-    {
-      "cve_id": "CVE-2026-15722",
-      "title": "高危漏洞: CVE-2026-15722 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 18:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A stack buffer overflow flaw was found in 389 Directory Server (389-ds-base). The get_ruvelement_from_berval() function in repl5_ruv.c copies digit characters from a network-supplied RUV berval into a fixed 16-byte stack buffer without bounds checking. A remote unauthenticated attacker can crash the LDAP server by sending a crafted StartNSDS50ReplicationRequest extended operation containing a replica ID field with more than 16 digit characters. The overflow occurs during payload decoding, before any authorization check. Stack protectors limit impact to denial of service.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-15722\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2499961",
-      "source": "NVD",
-      "time": "2026-08-01 00:30:12"
-    },
-    {
-      "cve_id": "CVE-2026-11770",
-      "title": "高危漏洞: CVE-2026-11770 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 18:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "A flaw was found in 389 Directory Server. An unauthenticated remote attacker can inject LDAP search filters into the CleanAllRUV replication status-check extended operation. Because the handler performs the search against cn=config with elevated replication plugin privileges and returns a boolean match result, the attacker can extract sensitive server configuration metadata, including replication bind DNs and password storage scheme information.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-11770\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2484802\nhttps://github.com/389ds/389-ds-base/blob/main/ldap/servers/plugins/replication/repl_extop.c",
-      "source": "NVD",
-      "time": "2026-08-01 00:30:08"
-    },
-    {
-      "cve_id": "CVE-2026-10079",
-      "title": "高危漏洞: CVE-2026-10079 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-07-31 18:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N",
-      "description": "A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). When processing Kubernetes Deployments, ACS replaces deployment identity metadata based on the openshift.io/encoded-deployment-config label. A user with permission to create Deployments can set this label to \"null\", causing ACS to treat the workload as having empty UID, name and labels and namespace \"default\". This bypasses deploy-time policy detection and enforcement visibility, prevents correct persistence in Central and breaks violation reporting and compliance correlation for the affected deployment.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-10079\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2483158",
-      "source": "NVD",
-      "time": "2026-08-01 00:29:59"
-    },
-    {
-      "cve_id": "CVE-2026-14830",
-      "title": "高危漏洞: CVE-2026-14830 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The FlxWoo WordPress plugin before 3.1.1 does not verify with the payment processor that a checkout session was actually paid before marking the associated order as paid, allowing unauthenticated attackers to complete WooCommerce orders without paying.",
-      "refs": "https://wpscan.com/vulnerability/b866258c-b49b-40db-a0ff-6c0921b5c89f/",
-      "source": "NVD",
-      "time": "2026-08-01 00:29:55"
-    },
-    {
-      "cve_id": "CVE-2026-14333",
-      "title": "高危漏洞: CVE-2026-14333 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Demi  WordPress plugin before 0.0.7 stores its full-site backup archives in a publicly accessible location under a predictable filename and without access protection, allowing unauthenticated attackers to download complete backups including the site database and its user password hashes.",
-      "refs": "https://wpscan.com/vulnerability/df673b6f-2957-460a-b6fe-6e656d9193e0/",
-      "source": "NVD",
-      "time": "2026-08-01 00:29:51"
-    },
-    {
-      "cve_id": "CVE-2026-38709",
-      "title": "高危漏洞: CVE-2026-38709 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 06:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the net.set_wan interface. This vulnerability allows attackers to execute arbitrary commands as root via a crafted input.",
-      "refs": "https://www.cudy.com/pages/security-advisory/cudy-sa-26-7-jezzy-4",
-      "source": "NVD",
-      "time": "2026-08-01 00:29:47"
-    },
-    {
-      "cve_id": "CVE-2026-52539",
-      "title": "高危漏洞: CVE-2026-52539 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-07-31 05:17:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Outstatic CMS <= 2.1.9 contains a hardcoded JWT signing secret. When the OST_TOKEN_SECRET environment variable is not set, the application falls back to the default value which is publicly visible in the source code repository. An unauthenticated remote attacker can exploit this by forging JWT session tokens with arbitrary user data and full administrative permissions.",
-      "refs": "https://github.com/avitorio/outstatic\nhttps://github.com/avitorio/outstatic/blob/canary/packages/outstatic/src/utils/constants.ts",
-      "source": "NVD",
-      "time": "2026-08-01 00:29:42"
-    },
-    {
-      "cve_id": "CVE-2025-69938",
-      "title": "高危漏洞: CVE-2025-69938 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 05:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in renew.php via the parameter membershipType.",
-      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-renew.php-membershiptype-sqli/20250811-membership-management-system-renew.php-membershiptype-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-renew.php-membershiptype-sqli/20250811-membership-management-system-renew.php-membershiptype-sqli.md",
-      "source": "NVD",
-      "time": "2026-08-01 00:29:37"
     }
   ]
 }
