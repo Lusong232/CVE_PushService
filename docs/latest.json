@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-65875",
+      "title": "高危漏洞: CVE-2026-65875 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-03 09:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "BaserCMS provided by baserCMS Users Community contains a CSV file injection vulnerability. If a user downloads and opens a CSV file containing malicious code injected by an attacker, the malicious code may be executed.",
+      "refs": "https://basercms.net/security/JVN_94952030\nhttps://jvn.jp/en/vu/JVNVU94952030/",
+      "source": "NVD",
+      "time": "2026-08-03 14:09:34"
+    },
+    {
+      "cve_id": "CVE-2026-3245",
+      "title": "高危漏洞: CVE-2026-3245 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 08:16:29",
+      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A deserialization vulnerability in PRISMAproduction Version 6.5 or earlier that may lead to arbitrary code execution.",
+      "refs": "https://cpp.canon/vulnerability-in-prismaproduction-cve-2026-3245/\nhttps://psirt.canon/advisory-information/cp2026-007/\nhttps://www.canon-europe.com/support/product-security/",
+      "source": "NVD",
+      "time": "2026-08-03 14:09:28"
+    },
+    {
       "cve_id": "CVE-2026-10848",
       "title": "高危漏洞: CVE-2026-10848 (CVSS 7.0)",
       "cvss_score": 7.0,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_type.php-id-sqli/20250811-membership-management-system-edit_type.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_type.php-id-sqli/20250811-membership-management-system-edit_type.php-id-sqli.md",
       "source": "NVD",
       "time": "2026-08-01 03:07:20"
-    },
-    {
-      "cve_id": "CVE-2026-18446",
-      "title": "高危漏洞: CVE-2026-18446 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-07-31 23:16:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "fast-uri before 4.1.2, 3.1.5, and 2.4.4 requires a literal double forward slash to recognize a URI authority, so a reference that uses a backslash based introducer in place of it (backslash backslash, forward slash backslash, or backslash forward slash) is parsed with no authority and folds into the path. Node's native WHATWG URL parser instead treats a backslash as interchangeable with a forward slash for special schemes, so the two parsers extract different hosts from the same input. Applications that use fast-uri to enforce host based policy such as allowlists, SSRF filtering, or redirect validation before passing the same URL into Node's URL or fetch consumers can be steered to an unintended host. Upgrade to fast-uri 4.1.2, 3.1.5, or 2.4.4.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fast-uri/security/advisories/GHSA-7p8r-x3mc-p8w7",
-      "source": "NVD",
-      "time": "2026-08-01 00:30:37"
-    },
-    {
-      "cve_id": "CVE-2026-10685",
-      "title": "高危漏洞: CVE-2026-10685 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-07-31 23:16:27",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
-      "description": "The Zephyr Bluetooth GATT client CCC-write response handler gatt_write_ccc_rsp() in subsys/bluetooth/host/gatt.c invoked the application's params->subscribe() callback after it had already called params->notify(conn, params, NULL, 0).\n\nPer the public GATT API, a notify callback with NULL data is the documented signal that the subscription has terminated and the bt_gatt_subscribe_params struct may be freed or reused by the application; calling subscribe() on the struct afterwards is a use-after-free, including an indirect call through the freed params->subscribe function pointer.\n\nThe error branch is remotely (adjacent) reachable: a Zephyr device acting as a GATT client that calls bt_gatt_subscribe() can be driven into this ordering when a connected GATT server peer answers the CCC write with an ATT Error Response (the peer-supplied error code flows through att_error_rsp -> att_handle_rsp into gatt_write_ccc_rsp).\n\nFor applications that free or recycle subscription parameters in their notification-termination handler, this results in memory corruption, a crash (denial of service), or potentially attacker-influenced control flow. The fix reorders the handler so the subscribe() callback runs before the terminating notify(NULL) in both the error and unsubscribe paths.",
-      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/c7292f20223637232b6f962141725611a38f6a52\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-29xh-jm2m-4qvx",
-      "source": "NVD",
-      "time": "2026-08-01 00:30:33"
     }
   ]
 }
