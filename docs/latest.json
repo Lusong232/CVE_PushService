@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-21555",
+      "title": "高危漏洞: CVE-2026-21555 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:50"
+    },
+    {
+      "cve_id": "CVE-2026-21554",
+      "title": "高危漏洞: CVE-2026-21554 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:45"
+    },
+    {
+      "cve_id": "CVE-2026-21553",
+      "title": "高危漏洞: CVE-2026-21553 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:40"
+    },
+    {
+      "cve_id": "CVE-2026-21552",
+      "title": "高危漏洞: CVE-2026-21552 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:36"
+    },
+    {
+      "cve_id": "CVE-2026-21551",
+      "title": "高危漏洞: CVE-2026-21551 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:30"
+    },
+    {
+      "cve_id": "CVE-2026-21550",
+      "title": "高危漏洞: CVE-2026-21550 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:22"
+    },
+    {
+      "cve_id": "CVE-2026-21549",
+      "title": "高危漏洞: CVE-2026-21549 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:18"
+    },
+    {
+      "cve_id": "CVE-2026-21548",
+      "title": "高危漏洞: CVE-2026-21548 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 16:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In nr modem, there is a possible improper input validation. This could lead to remote denial of service with System execution privileges needed.",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:13"
+    },
+    {
+      "cve_id": "CVE-2026-4793",
+      "title": "高危漏洞: CVE-2026-4793 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-03 15:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An incorrect default permissions vulnerability in Synology Assistant before 7.0.7-50095 allows local users to read or write arbitrary files and conduct denial-of-service during installation.",
+      "refs": "https://www.synology.com/en-global/security/advisory/Synology_SA_26_12",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:08"
+    },
+    {
+      "cve_id": "CVE-2026-18589",
+      "title": "高危漏洞: CVE-2026-18589 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-03 15:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Wavlink WL-NU516U1 708c073-mt7628. This impacts the function change_password of the file nas.cgi. The manipulation of the argument User1Passwd results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used. The affected component should be upgraded. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin\nhttps://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md\nhttps://vuldb.com/cve/CVE-2026-18589",
+      "source": "NVD",
+      "time": "2026-08-03 20:12:02"
+    },
+    {
+      "cve_id": "CVE-2026-18588",
+      "title": "高危漏洞: CVE-2026-18588 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-03 15:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Wavlink WL-NU516U1 708c073-mt7628. This affects the function fgets of the file nas.cgi. The manipulation of the argument CONTENT_LENGTH leads to stack-based buffer overflow. Remote exploitation of the attack is possible. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin\nhttps://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md\nhttps://vuldb.com/cve/CVE-2026-18588",
+      "source": "NVD",
+      "time": "2026-08-03 20:11:56"
+    },
+    {
+      "cve_id": "CVE-2026-18587",
+      "title": "高危漏洞: CVE-2026-18587 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-03 15:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Wavlink WL-NU516U1 708c073-mt7628. The impacted element is an unknown function of the component Config Import. Executing a manipulation of the argument Password can lead to os command injection. The attack may be launched remotely. This attack is characterized by high complexity. The exploitability is regarded as difficult. The exploit has been published and may be used. It is advisable to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+      "refs": "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin\nhttps://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report.md\nhttps://vuldb.com/cve/CVE-2026-18587",
+      "source": "NVD",
+      "time": "2026-08-03 20:11:50"
+    },
+    {
       "cve_id": "CVE-2026-65875",
       "title": "高危漏洞: CVE-2026-65875 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/pgadmin-org/pgadmin4/commit/1496fabe28c9f825f6bac0f0d000d9d3276322c3\nhttps://github.com/pgadmin-org/pgadmin4/issues/10213",
       "source": "NVD",
       "time": "2026-08-01 03:08:32"
-    },
-    {
-      "cve_id": "CVE-2026-17351",
-      "title": "高危漏洞: CVE-2026-17351 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-08-01 00:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "The fix for CVE-2026-12045 in pgAdmin 4 9.16 required the LLM-supplied query passed to the AI Assistant's execute_sql_query tool to parse, via sqlparse, as exactly one non-transaction-control statement before running it inside a BEGIN TRANSACTION READ ONLY wrapper. sqlparse's string-literal lexing can disagree with PostgreSQL's own parser: under standard_conforming_strings = on (PostgreSQL's default since 9.1), a backslash immediately before a quote is an ordinary character to PostgreSQL, but sqlparse treats it as escaping the quote. A payload such as SELECT '\\';COMMIT;CREATE TABLE pwn(x int);SELECT 1 --' therefore parses as a single SELECT to sqlparse's validator, while PostgreSQL executes it as four statements: the smuggled COMMIT ends the wrapping read-only transaction, and the trailing ROLLBACK becomes a no-op. This reintroduces the same write/RCE bypass CVE-2026-12045 was meant to close, reachable via the same indirect prompt-injection delivery (an attacker plants the payload in any object the AI Assistant may read; the LLM emits it as a tool call).\n\nAn initial candidate fix ran the query with psycopg's execute(..., prepare=True), intending to force PostgreSQL's own Parse step (extended query protocol) to reject multi-statement text regardless of sqlparse's classification. This candidate fix does not work as submitted: psycopg3's PrepareManager silently ignores the prepare argument whenever the connection's prepare_threshold is None, which is pgAdmin's default for every server connection (the per-server \"Prepare threshold\" field is blank unless an administrator explicitly sets it) -- psycopg3 falls back to the simple query protocol, the same multi-statement-capable path the bypass exploits, so the candidate fix closes nothing on any real-world default configuration.\n\nThe corrected fix sets conn.prepare_threshold = 0 directly on the dedicated, single-use read-only connection the AI Assistant tool opens, structurally forcing the extended query protocol independent of any server-level configuration. Verified against a live PostgreSQL 18 instance: the payload executes successfully under the prepare_threshold=None (default) behavior, and is rejected with \"cannot insert multiple commands into a prepared statement\" once prepare_threshold=0 is set on that connection.\n\nThis issue affects pgAdmin 4: from 9.13 before 9.17.",
-      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/bf4792444446f0e7ab721d23cbd6bfe6afaa7a8b\nhttps://github.com/pgadmin-org/pgadmin4/commit/ef76102bcd1cdb544eb9b4ef18d3382f22b76752\nhttps://github.com/pgadmin-org/pgadmin4/issues/10192",
-      "source": "NVD",
-      "time": "2026-08-01 03:08:25"
-    },
-    {
-      "cve_id": "CVE-2026-17349",
-      "title": "高危漏洞: CVE-2026-17349 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-01 00:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "/misc/workspace/adhoc_connect_server, part of the Workspaces feature introduced in pgAdmin 4 9.0, when passed the id of an existing server, clones that server via Server.clone(), which copies every column from the source row, including user_id, shared, shared_username, and the stored credential fields password, save_password, and tunnel_password. When a non-owner triggered an adhoc connect against another user's (in practice, typically an administrator's) shared server, the clone inherited that user's ownership, shared flag, and stored database credentials verbatim. pgAdmin persisted this cross-tenant, credential-bearing server row before the connection was even attempted, so it survived even when the connection subsequently failed. The non-owner could then open the newly-owned clone and pgAdmin would connect using the source user's stored database password on the non-owner's behalf, granting the non-owner use of database credentials -- and whatever database privileges they confer -- that were never their own.\n\nFix forces the cloned adhoc record's ownership fields (user_id, shared, shared_username) and stored credential fields (password, save_password, tunnel_password) to belong to the calling user and be cleared/private before committing, regardless of the source server's ownership, sharing state, or stored credentials. A regression test asserts that an adhoc connect triggered by a non-owner against another user's shared server persists a row owned by the caller, not shared, and without the source's stored credentials.\n\nThis issue affects pgAdmin 4: from 9.0 before 9.17.",
-      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/64a9cdbd6a240a962144f84418beaf9e66419779\nhttps://github.com/pgadmin-org/pgadmin4/commit/a7e74a6ed685bc34e1f77a8b6a94d00fa3dff815\nhttps://github.com/pgadmin-org/pgadmin4/issues/10200",
-      "source": "NVD",
-      "time": "2026-08-01 03:08:16"
-    },
-    {
-      "cve_id": "CVE-2026-17347",
-      "title": "高危漏洞: CVE-2026-17347 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 00:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The MASTER_PASSWORD_HOOK setting, introduced in pgAdmin 4 7.2, lets an administrator configure an external command that returns a per-user encryption key, with %u in the configured string replaced by the current user's name. The previous implementation substituted the username directly into the command string and executed the result with subprocess.Popen(..., shell=True). Because the username can originate from an external authentication source (OAuth/OIDC claims, Kerberos, webserver auth) rather than a value pgAdmin fully controls, a username containing shell metacharacters (';', '$()', backticks, pipes, '&&', newlines) allowed an authenticated user to execute arbitrary commands as the pgAdmin service account in any deployment where the configured hook string uses %u.\n\nFix tokenises the trusted, administrator-configured hook string into an argument vector first (using shlex in POSIX-quoting mode, with backslash-escaping disabled so Windows-style paths are not mis-parsed), substitutes the untrusted username into the individual argv elements, and executes with shell=False. The username is therefore always confined to a single argv element; any shell metacharacters it contains are inert. Administrators whose MASTER_PASSWORD_HOOK previously relied on shell features (pipes, redirection, environment-variable expansion, globbing) within the hook string itself must move that logic into the invoked script, since it is no longer interpreted by a shell.\n\nThis issue affects pgAdmin 4: from 7.2 before 9.17.",
-      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/e7a85767314e7b0fe0b35fe80b9c1af38f48dff6\nhttps://github.com/pgadmin-org/pgadmin4/commit/ea7e798aac27174d2bacee1d6e136bed76a95e23\nhttps://github.com/pgadmin-org/pgadmin4/issues/10191",
-      "source": "NVD",
-      "time": "2026-08-01 03:08:09"
-    },
-    {
-      "cve_id": "CVE-2026-17346",
-      "title": "高危漏洞: CVE-2026-17346 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-01 00:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The fix for CVE-2026-12044 in pgAdmin 4 9.16 hardened qtLiteral and switched sixteen COMMENT ON / pgstattuple / pgstatindex templates to it, but missed several sinks that had been placed in test_sql_string_literal_lint.py's ALLOWLIST on the incorrect assumption that schema, table, publication, and subscription names sourced from pg_catalog via the browser tree could never contain an apostrophe. PostgreSQL permits arbitrary characters in quoted identifiers, so a low-privileged user able to CREATE TABLE, CREATE PUBLICATION, or CREATE SUBSCRIPTION can plant an apostrophe'd object name that breaks out of the unescaped '{{ name }}' template interpolation the moment any user (including a higher-privileged one) opens that object's Statistics or Dependencies tab, allowing arbitrary SQL statement injection in the viewing user's database session.\n\nAffected sinks: the Index Statistics query for all-indexes listing (coll_stats.sql, both the 16_plus and default PostgreSQL-version template variants -- distinct from the single-index stats.sql path already fixed in CVE-2026-12044), and the publication and subscription dependencies.sql / get_position.sql templates (both the pg and ppas/EPAS dialect variants for publications).\n\nFix switches all of these templates to qtLiteral(conn) for name interpolation, and updates publications/__init__.py and subscriptions/__init__.py to pass conn=self.conn into the dependencies.sql render_template call so the qtLiteral filter has a connection to quote against. The corresponding ALLOWLIST entries in test_sql_string_literal_lint.py are removed now that these sinks are properly escaped rather than merely assumed safe. A behavioral regression test renders each fixed template with a stacked-statement apostrophe payload and asserts both that the object name appears exactly as qtLiteral-escaped and that the rendered SQL parses as exactly one statement, verifying the assertion genuinely fails against the pre-patch raw-interpolation form.\n\nThis issue affects pgAdmin 4: the Index Statistics sink from 1.0, and the Publications/Subscriptions sinks from 5.0, both before 9.17.",
-      "refs": "https://github.com/pgadmin-org/pgadmin4/commit/73b3218992cc37af6e10b7e54eaeed6ec293c6b2\nhttps://github.com/pgadmin-org/pgadmin4/commit/f75452bfd0f786d0c071638919d48fc1d76f987d\nhttps://github.com/pgadmin-org/pgadmin4/issues/10193",
-      "source": "NVD",
-      "time": "2026-08-01 03:08:02"
-    },
-    {
-      "cve_id": "CVE-2026-62391",
-      "title": "高危漏洞: CVE-2026-62391 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-07-31 19:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The security fix for CVE-2025-66518 is incomplete. Any client who can access to Apache Kyuubi Server via Kyuubi frontend protocols can bypass server-side config kyuubi.session.local.dir.allowlist via unprefixed Spark config aliases.\n\nThis issue affects Apache Kyuubi: from 1.6.0 before 1.12.0.\n\nUsers are recommended to upgrade to version 1.12.0, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/vo4k4nxz23kfzrpp120nsojb0vrkx4w1",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:55"
-    },
-    {
-      "cve_id": "CVE-2026-14919",
-      "title": "高危漏洞: CVE-2026-14919 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The ShopMonitor.io  WordPress plugin before 1.2.0 does not properly restrict its email-rerouting test mode, gating it behind a trusted-source check that is satisfiable with client-supplied request headers, allowing unauthenticated attackers to redirect outgoing emails, including the WordPress administrator password-reset email, to an address they control and take over the administrator account.",
-      "refs": "https://wpscan.com/vulnerability/6d929535-9757-44ae-8c58-682f1eb89785/",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:51"
-    },
-    {
-      "cve_id": "CVE-2026-13609",
-      "title": "高危漏洞: CVE-2026-13609 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-07-31 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Frontend Admin by DynamiApps WordPress plugin before 3.29.9 decodes HTML entities in a submitted form field value after sanitizing it, which restores HTML tags that the sanitizer had neutralized. A double-encoded payload submitted by an unauthenticated visitor is therefore stored as a live tag and later output without escaping on the Frontend Admin by DynamiApps WordPress plugin before 3.29.9's front-end display surfaces, resulting in stored cross-site scripting that executes in the browser of any user, including an administrator, who views a page displaying the submitted value.",
-      "refs": "https://wpscan.com/vulnerability/836bc6cd-42f0-4cd9-bb4c-ce5b0ff0d84b/",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:46"
-    },
-    {
-      "cve_id": "CVE-2026-13392",
-      "title": "高危漏洞: CVE-2026-13392 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-07-31 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The ElementsKit Elementor Addons  WordPress plugin before 3.10.01 does not prevent a custom-widget definition saved by a user with administrative capabilities from being written verbatim into a generated PHP file that the ElementsKit Elementor Addons  WordPress plugin before 3.10.01 subsequently executes, allowing arbitrary PHP code to run on the server; on a multisite network this lets a non-super subsite Administrator, who is otherwise denied code/file editing, reach host-level code execution beyond the privileges the network grants them.",
-      "refs": "https://wpscan.com/vulnerability/955cbef5-51c3-4d10-86d2-e2882bbb56a4/",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:42"
-    },
-    {
-      "cve_id": "CVE-2026-12721",
-      "title": "高危漏洞: CVE-2026-12721 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-07-31 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The Kirki  WordPress plugin before 6.0.13 does not properly sanitise and escape a value taken from the request before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection attacks.",
-      "refs": "https://wpscan.com/vulnerability/4cba3900-9f29-4928-811c-163827358052/",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:36"
-    },
-    {
-      "cve_id": "CVE-2025-69947",
-      "title": "高危漏洞: CVE-2025-69947 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 05:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SourceCodester Tailor Management System 1.0 is vulnerable to SQL Injection in customeredit.php?id=1.",
-      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-customeredit.php-id-sqli/20250811-tailor-ms-customeredit.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-customeredit.php-id-sqli/20250811-tailor-ms-customeredit.php-id-sqli.md",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:32"
-    },
-    {
-      "cve_id": "CVE-2025-69941",
-      "title": "高危漏洞: CVE-2025-69941 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 05:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SourceCodester Tailor Management System 1.0 is vulnerable to SQL Injection in addmeasurement.php?id=1.",
-      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-addmeasurement.php-id-sqli/20250811-tailor-ms-addmeasurement.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-addmeasurement.php-id-sqli/20250811-tailor-ms-addmeasurement.php-id-sqli.md",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:27"
-    },
-    {
-      "cve_id": "CVE-2025-69937",
-      "title": "高危漏洞: CVE-2025-69937 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-07-31 05:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in the edit_type.php endpoint via the Parameter id.",
-      "refs": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_type.php-id-sqli/20250811-membership-management-system-edit_type.php-id-sqli.md\nhttps://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_type.php-id-sqli/20250811-membership-management-system-edit_type.php-id-sqli.md",
-      "source": "NVD",
-      "time": "2026-08-01 03:07:20"
     }
   ]
 }
