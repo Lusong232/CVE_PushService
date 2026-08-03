@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-59913",
+      "title": "高危漏洞: CVE-2026-59913 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-04 03:16:48",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain a Missing Authentication for Critical Function vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000490035/dsa-2026-319",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:53"
+    },
+    {
+      "cve_id": "CVE-2026-59912",
+      "title": "高危漏洞: CVE-2026-59912 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-04 03:16:48",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain an Improper Access Control vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges and arbitrary code execution.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000490035/dsa-2026-319",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:49"
+    },
+    {
+      "cve_id": "CVE-2026-18616",
+      "title": "高危漏洞: CVE-2026-18616 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-04 03:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in GL-iNet GL-MT3000 up to 4.4.5. The impacted element is the function server.set_peer of the file /cgi-bin/glc of the component wg-server.so Native Plugin. The manipulation of the argument public_key leads to command injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_set_peer_rce/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18616\nhttps://vuldb.com/submit/851580",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:44"
+    },
+    {
+      "cve_id": "CVE-2026-18615",
+      "title": "高危漏洞: CVE-2026-18615 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-04 03:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in GL-iNet GL-MT3000 up to 4.4.5. The affected element is the function wg-server.generate_publickey of the file /cgi-bin/glc of the component wg-server.so Native Plugin. Executing a manipulation of the argument private_key can lead to command injection. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_generate_publickey_glc/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18615\nhttps://vuldb.com/submit/851566",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:38"
+    },
+    {
+      "cve_id": "CVE-2026-18614",
+      "title": "高危漏洞: CVE-2026-18614 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-04 03:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in GL-iNet GL-MT3000 up to 4.4.5. Impacted is the function s2s.enable_echo_server of the file /cgi-bin/glc of the component s2s.so Native Plugin. Performing a manipulation of the argument port results in command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/s2s_enable_echo_server_glc_rce/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18614\nhttps://vuldb.com/submit/851558",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:33"
+    },
+    {
+      "cve_id": "CVE-2026-61524",
+      "title": "高危漏洞: CVE-2026-61524 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-04 02:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WebsiteBaker CMS before 2.13.10 contains an unrestricted file upload vulnerability in the module installation feature that allows authenticated administrators to achieve remote code execution by uploading a crafted ZIP archive containing a PHP webshell alongside a valid info.php metadata file. Attackers can place the malicious archive through the module installation interface, causing the application to extract the webshell into a web-accessible modules/ subdirectory where it becomes immediately executable by any unauthenticated user via direct HTTP request.",
+      "refs": "https://addon.websitebaker.org/en/browse-add-ons/?type=5&cid=997\nhttps://medium.com/@benjaminasareagyapong2006/two-rce-vulnerabilities-i-found-on-my-birthday-evening-4563006a615a\nhttps://www.vulncheck.com/advisories/websitebaker-cms-file-upload-rce-via-module-installation",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:27"
+    },
+    {
+      "cve_id": "CVE-2026-61523",
+      "title": "高危漏洞: CVE-2026-61523 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-04 02:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WebsiteBaker CMS before 2.13.10 contains a code injection vulnerability in the Droplets editor that allows authenticated administrators to inject arbitrary PHP code by submitting malicious content through the droplet Code field, which is written verbatim to a publicly accessible PHP file with no content sanitization. Attackers can save a PHP webshell via the save_droplet handler to a predictable path inside the modules directory, enabling unauthenticated users to achieve remote code execution by making direct HTTP requests to the written file.",
+      "refs": "https://addon.websitebaker.org/en/browse-add-ons/?type=5&cid=997\nhttps://medium.com/@benjaminasareagyapong2006/two-rce-vulnerabilities-i-found-on-my-birthday-evening-4563006a615a\nhttps://www.vulncheck.com/advisories/websitebaker-cms-code-injection-via-droplets-editor",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:22"
+    },
+    {
+      "cve_id": "CVE-2026-18613",
+      "title": "高危漏洞: CVE-2026-18613 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-04 02:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in GL-iNet GL-MT3000 up to 4.4.5. This issue affects the function plugins.set_config of the file /cgi-bin/glc of the component plugins.so Native Plugin. Such manipulation leads to injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/plugins_set_config_glc_write/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18613\nhttps://vuldb.com/submit/851557",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:18"
+    },
+    {
+      "cve_id": "CVE-2026-18612",
+      "title": "高危漏洞: CVE-2026-18612 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-04 02:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in GL-iNet GL-MT3000 up to 4.4.5. This vulnerability affects the function plugins.remove_package/plugins.install_package of the file /cgi-bin/glc of the component plugins.so Native Plugin. This manipulation causes command injection. The attack can be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/plugins_package_name_glc_rce/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18612\nhttps://vuldb.com/submit/851553",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:13"
+    },
+    {
+      "cve_id": "CVE-2026-16539",
+      "title": "高危漏洞: CVE-2026-16539 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-03 15:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The sm page duplicator WordPress plugin through 1.0.0 does not sanitise and escape a stored value before using it in a SQL statement when duplicating a page, allowing users with the Editor role and above to perform SQL Injection attacks.",
+      "refs": "https://wpscan.com/vulnerability/8e2c97d8-5392-4464-94e5-3fc353302f1f/",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:08"
+    },
+    {
+      "cve_id": "CVE-2026-15930",
+      "title": "高危漏洞: CVE-2026-15930 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-08-03 15:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "description": "The Simple Membership WordPress plugin before 4.7.8 does not verify whether user creation failed during registration before using the returned value as a user ID to update an account, allowing unauthenticated attackers to overwrite the primary administrator's account data (including the email address) and take over that account through the password reset flow.",
+      "refs": "https://wpscan.com/vulnerability/e46948f1-0e06-4e76-8fc8-df661eb786a5/",
+      "source": "NVD",
+      "time": "2026-08-04 05:58:02"
+    },
+    {
       "cve_id": "CVE-2026-69152",
       "title": "高危漏洞: CVE-2026-69152 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/FreeRDP/FreeRDP/commit/5370fb26fbf034ecd11d3026b6ad639b5fff493f\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-33gg-h66j-3697\nhttps://www.vulncheck.com/advisories/freerdp-before-use-after-free-via-async-message-proxy",
       "source": "NVD",
       "time": "2026-08-01 23:53:04"
-    },
-    {
-      "cve_id": "CVE-2026-67299",
-      "title": "高危漏洞: CVE-2026-67299 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP before 3.29.0 contains a client-side heap use-after-free in the async update message proxy for WINDOW_ICON_ORDER when AsyncUpdate is enabled (e.g. xfreerdp /async-update). In update_message_WindowIcon() a shallow CopyMemory() overwrites a freshly allocated lParam->iconInfo with the parser-owned windowIcon->iconInfo pointer. After the parser callback returns, update_recv_window_info_order() frees window_icon.iconInfo, but the queued async message still retains and later dispatches that stale pointer. A malicious or compromised RDP server sending a crafted RAIL Window Alternate Secondary Order with WINDOW_ORDER_ICON can trigger use-after-free, leading to memory corruption and client crash.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/5370fb26fbf034ecd11d3026b6ad639b5fff493f\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-34hq-hwjw-q8v3\nhttps://www.vulncheck.com/advisories/freerdp-before-use-after-free-via-windowicon-async-message",
-      "source": "NVD",
-      "time": "2026-08-01 23:53:00"
-    },
-    {
-      "cve_id": "CVE-2026-67298",
-      "title": "高危漏洞: CVE-2026-67298 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP versions 3.28.0 and earlier contain a heap buffer overflow in the server-side RAIL channel handler (rail_server_handle_messages() in channels/rail/server/rail_main.c). When processing a RAIL PDU header, the code subtracts RAIL_PDU_HEADER_LENGTH from the peer-controlled orderLength field without first verifying orderLength is at least the header length. For orderLength values 0..3 this causes an unsigned integer underflow to a very large size, which bypasses the Stream_EnsureRemainingCapacity() capacity check (due to pointer arithmetic wraparound) and is then passed to WTSVirtualChannelRead(), resulting in an out-of-bounds heap write. A malicious or compromised RDP client can exploit this to corrupt the heap and crash the server. Fixed in FreeRDP 3.29.0.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/46848765f2a1134f8652f8760eefb5e85d64a9b8\nhttps://github.com/FreeRDP/FreeRDP/commit/5370fb26fbf034ecd11d3026b6ad639b5fff493f\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-qmvw-52ph-q5pv",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:55"
-    },
-    {
-      "cve_id": "CVE-2026-67297",
-      "title": "高危漏洞: CVE-2026-67297 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP before 3.29.0 fails to enforce the RESPONSE_SIZE_LIMIT when processing Transfer-Encoding: chunked HTTP responses in http_response_recv_body(). Attackers controlling a malicious RD Gateway endpoint can send oversized chunked response bodies to exhaust client memory resources without triggering the configured size limit.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-2c6r-4pr4-9x8m\nhttps://www.vulncheck.com/advisories/freerdp-before-resource-exhaustion-via-chunked-http-response",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:48"
-    },
-    {
-      "cve_id": "CVE-2026-67296",
-      "title": "高危漏洞: CVE-2026-67296 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP before 3.29.0 contains a denial of service vulnerability in the RDPEI server channel handler that fails to validate maximum PDU body length before stream allocation. A malicious RDP client can send a header-only RDPEI message with a large declared body length to force excessive memory allocation on the server.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-jm8r-22j6-4m4v\nhttps://www.vulncheck.com/advisories/freerdp-before-denial-of-service-via-rdpei-pdu",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:44"
-    },
-    {
-      "cve_id": "CVE-2026-67291",
-      "title": "高危漏洞: CVE-2026-67291 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP before 3.29.0 (affected versions <= 3.28.0) contains a heap out-of-bounds read in update_process_glyph_fragments()/glyph_cache_fragment_put() in libfreerdp/cache/glyph.c. When handling a GLYPH_FRAGMENT_ADD update, the code reads a one-byte server-controlled declared fragment size but does not verify it fits within the remaining received buffer before allocating and copying that many bytes. A malicious RDP server can send a short fragment with an oversized declared size, causing the client to read beyond the allocated buffer, resulting in an out-of-bounds read and client crash.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/f3b4347105114fe7453828736bea069999af319f\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-hgj8-g595-wfc6\nhttps://www.vulncheck.com/advisories/freerdp-before-heap-out-of-bounds-read-via-glyph-fragment-add",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:39"
-    },
-    {
-      "cve_id": "CVE-2026-67290",
-      "title": "高危漏洞: CVE-2026-67290 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP before 3.29.0 contains a heap out-of-bounds read vulnerability in the TSMF FFmpeg decoder when parsing AVC1 MPEG2VIDEOINFO media types with insufficient ExtraData. Attackers can send malformed media format data from a server to trigger a crash by reading fixed offsets without validating source buffer length.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/8d3b86022f0d71aefa7bd2e466d2d391693a41b3\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-whq8-c3v3-p8v8\nhttps://www.vulncheck.com/advisories/freerdp-before-heap-out-of-bounds-read-via-tsmf",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:32"
-    },
-    {
-      "cve_id": "CVE-2026-67289",
-      "title": "高危漏洞: CVE-2026-67289 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-01 21:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "FreeRDP before 3.29.0 (affected versions <= 3.28.0) does not validate CRLF and control characters in the server-controlled RDP redirection TargetNetAddress field. This value is copied into the client's ServerHostname and, when the client connects through an HTTP proxy, is written directly into the proxy CONNECT request line and Host header by http_proxy_connect() without filtering. A malicious or compromised RDP server can send a crafted redirection PDU containing embedded control characters to inject arbitrary headers/requests into the HTTP proxy CONNECT request.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/f3b4347105114fe7453828736bea069999af319f\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mwwh-mhp9-q7vm\nhttps://www.vulncheck.com/advisories/freerdp-before-http-proxy-request-injection-via-redirection",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:26"
-    },
-    {
-      "cve_id": "CVE-2026-67288",
-      "title": "高危漏洞: CVE-2026-67288 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-01 21:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "FreeRDP before 3.29.0 contains a null pointer dereference vulnerability in smartcard cache request decoders that accept NULL NDR pointers for LookupName in SCARD_IOCTL_READCACHEA and SCARD_IOCTL_WRITECACHEA operations. When smartcard emulation is enabled, attackers can send crafted smartcard cache requests with NULL lookup-name pointers to trigger strlen() on a null pointer, causing client process termination.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/5370fb26fbf034ecd11d3026b6ad639b5fff493f\nhttps://github.com/FreeRDP/FreeRDP/commit/f3b4347105114fe7453828736bea069999af319f\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-ph3q-f9w8-7jf3",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:21"
-    },
-    {
-      "cve_id": "CVE-2026-66402",
-      "title": "高危漏洞: CVE-2026-66402 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-01 21:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "FreeRDP before 3.29.0 (affected versions <= 3.28.0) contains multiple TLS certificate identity validation weaknesses in tls_verify_certificate(), tls_match_hostname(), and x509_utils_get_dns_names(). Because FreeRDP performs custom Common Name and DNS SAN string matching instead of using OpenSSL's length-aware identity validation APIs, it (1) truncates DNS SAN values at embedded NUL bytes (accepting e.g. 'victim.example\\0.attacker.example' as 'victim.example'), (2) accepts a matching Common Name even when non-matching DNS SAN entries are present, and (3) accepts IP-literal targets via DNS/CN matching without comparing iPAddress SANs. Under a trusted or misissued certificate chain, an attacker positioned to present such a certificate can bypass server identity verification, weakening TLS server authentication.",
-      "refs": "https://github.com/FreeRDP/FreeRDP/commit/b9533f07f98c25ed01c5f543b4d0ce73e120f5fd\nhttps://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-43hh-p3vw-hfx3\nhttps://www.vulncheck.com/advisories/freerdp-before-tls-certificate-identity-validation-bypass",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:16"
-    },
-    {
-      "cve_id": "CVE-2025-71403",
-      "title": "高危漏洞: CVE-2025-71403 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-08-01 21:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N",
-      "description": "better-auth versions before 1.1.20 contain a bypass vulnerability in trustedOrigins validation logic affecting absolute URLs and wildcard domains. Attackers can construct malicious callbackURL parameters that pass origin checks and trigger open redirects to steal sensitive tokens for account takeover.",
-      "refs": "https://github.com/better-auth/better-auth/security/advisories/GHSA-vp58-j275-797x\nhttps://www.vulncheck.com/advisories/better-auth-before-open-redirect-via-trustedorigins-bypass",
-      "source": "NVD",
-      "time": "2026-08-01 23:52:11"
-    },
-    {
-      "cve_id": "CVE-2026-16635",
-      "title": "高危漏洞: CVE-2026-16635 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-01 17:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Pronamic Pay plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 10.1.0 This is due to the `maybe_update_user_role()` function passing an attacker-controlled Gravity Forms field value (`$lead[$feed->user_role_field_id]`) directly into `WP_User::set_role()` without any allowlist validation, capability comparison, or permission check to constrain which roles can be assigned. This makes it possible for authenticated attackers, with Subscriber-level access and above, to escalate their own WordPress account to Administrator by tampering with the role field value in a form submission. Exploitation requires that an administrator has already configured a Pronamic Pay payment feed in Gravity Forms with the **Update User Role** option enabled and mapped to a form field; once that configuration is in place, no further preconditions exist to prevent an authenticated attacker from exploiting this vulnerability.",
-      "refs": "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L144\nhttps://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L376\nhttps://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L379",
-      "source": "NVD",
-      "time": "2026-08-01 18:26:34"
     }
   ]
 }
