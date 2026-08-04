@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-67243",
+      "title": "高危漏洞: CVE-2026-67243 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-04 16:16:35",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "freo2 provided by refirio contains an unrestricted upload of file with dangerous type vulnerability. A user with the highest-level administrative privileges for the product may upload an executable file and execute arbitrary OS commands.",
+      "refs": "https://github.com/refirio/freo2/commits/main/\nhttps://jvn.jp/en/jp/JVN52865575/",
+      "source": "NVD",
+      "time": "2026-08-04 19:15:14"
+    },
+    {
+      "cve_id": "CVE-2026-18755",
+      "title": "高危漏洞: CVE-2026-18755 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-04 16:16:34",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A DLL hijacking vulnerability in GeoVision GV-ASManager allows a local attacker with write access to an unsafe search directory to execute arbitrary code. By placing a crafted dynamic-link library (DLL) file into the application search path prior to the legitimate library, the malicious code is loaded and executed under the security privileges of the GV-ASManager process.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-08-04 19:15:10"
+    },
+    {
+      "cve_id": "CVE-2026-18754",
+      "title": "高危漏洞: CVE-2026-18754 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-04 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The\nproduct firmware contains an embedded, static RSA private key utilized by the\nLighttpd web server for TLS termination. Exposure of this private key allows\nmalicious actors to breach the confidentiality and integrity of HTTPS\ncommunications, enabling traffic decryption and server spoofing.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-08-04 19:15:05"
+    },
+    {
+      "cve_id": "CVE-2026-18753",
+      "title": "高危漏洞: CVE-2026-18753 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-04 16:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The\nproduct firmware contains an embedded, static RSA private key utilized by the\nLighttpd web server for TLS termination. Exposure of this private key allows\nmalicious actors to breach the confidentiality and integrity of HTTPS\ncommunications, enabling traffic decryption and server spoofing.",
+      "refs": "https://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-08-04 19:15:01"
+    },
+    {
       "cve_id": "CVE-2026-42169",
       "title": "高危漏洞: CVE-2026-42169 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/logread_get_system_log_rpc_rce/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18598\nhttps://vuldb.com/submit/851535",
       "source": "NVD",
       "time": "2026-08-04 01:04:18"
-    },
-    {
-      "cve_id": "CVE-2026-21555",
-      "title": "高危漏洞: CVE-2026-21555 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 16:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
-      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
-      "source": "NVD",
-      "time": "2026-08-03 20:12:50"
-    },
-    {
-      "cve_id": "CVE-2026-21554",
-      "title": "高危漏洞: CVE-2026-21554 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 16:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
-      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
-      "source": "NVD",
-      "time": "2026-08-03 20:12:45"
-    },
-    {
-      "cve_id": "CVE-2026-21553",
-      "title": "高危漏洞: CVE-2026-21553 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 16:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
-      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
-      "source": "NVD",
-      "time": "2026-08-03 20:12:40"
-    },
-    {
-      "cve_id": "CVE-2026-21552",
-      "title": "高危漏洞: CVE-2026-21552 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 16:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed",
-      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801",
-      "source": "NVD",
-      "time": "2026-08-03 20:12:36"
     }
   ]
 }
