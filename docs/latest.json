@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-63456",
+      "title": "高危漏洞: CVE-2026-63456 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-05 01:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Multiple vulnerabilities in the REST API interface of HPE Networking SD-WAN Orchestrator could allow an unauthenticated remote attacker to bypass web authentication mechanisms and access system functions. Successful exploitation could allow an attacker to view and modify potentially sensitive information on the target system.",
+      "refs": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05100en_us&docLocale=en_US",
+      "source": "NVD",
+      "time": "2026-08-05 03:19:08"
+    },
+    {
+      "cve_id": "CVE-2026-63455",
+      "title": "高危漏洞: CVE-2026-63455 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-05 01:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Multiple vulnerabilities in the REST API interface of HPE Networking SD-WAN Orchestrator could allow an unauthenticated remote attacker to bypass web authentication mechanisms and access system functions. Successful exploitation could allow an attacker to view and modify potentially sensitive information on the target system.",
+      "refs": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05100en_us&docLocale=en_US",
+      "source": "NVD",
+      "time": "2026-08-05 03:19:04"
+    },
+    {
+      "cve_id": "CVE-2026-56848",
+      "title": "高危漏洞: CVE-2026-56848 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-05 01:16:56",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw in Node.js HTTP/2 handling allows `nghttp2_session_mem_send()` to be called re-entrantly while `nghttp2_session_mem_recv()` is executing, resulting in a heap-use-after-free.\r\n\r\nThis vulnerability affects Node.js **26.x**, **24.x**, and **22.x**.",
+      "refs": "https://nodejs.org/en/blog/vulnerability/july-2026-security-releases",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:59"
+    },
+    {
+      "cve_id": "CVE-2026-18787",
+      "title": "高危漏洞: CVE-2026-18787 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-05 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in GL.iNet AX1800 up to 4.8.3. The affected element is the function remove_rule of the file /usr/share/gl-ngx/oui-rpc.lua of the component RPC Endpoint. The manipulation of the argument args.id leads to command injection. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure.",
+      "refs": "https://github.com/xxianxiayubanmian/iot/blob/main/GL-link%20AX1800.md\nhttps://vuldb.com/cve/CVE-2026-18787\nhttps://vuldb.com/submit/857346",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:52"
+    },
+    {
+      "cve_id": "CVE-2026-15307",
+      "title": "高危漏洞: CVE-2026-15307 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-05 01:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An issue was discovered in Django 5.2 before 5.2.17 and 6.0 before 6.0.8.\nGeoDjango spatial lookups optimistically parse the right-hand-side value as a raster by passing it to the `django.contrib.gis.gdal.GDALRaster` constructor. Any value used in a spatial lookup against a `GeometryField` or `RasterField` reaches this constructor, including untrusted input, for example a spatial-field filter submitted through the Django admin changelist query string by a staff user with view permission. A `dict`, or a `str` holding its JSON representation, is opened in write mode regardless of the constructor's `write=False` default, allowing a file with an attacker-chosen name and contents to be written through a file-backed GDAL driver. Any other `str` is treated as a datasource, allowing an outbound network request through a GDAL virtual filesystem handler. Writing a file to a location later imported by the application can result in remote code execution.\nEarlier, unsupported Django series (such as 5.1.x, 5.0.x, and 4.2.x) were not evaluated and may also be affected.\nDjango would like to thank Bence Nagy, localhost-detect, and kimchunbok_ for reporting this issue.",
+      "refs": "https://docs.djangoproject.com/en/dev/releases/security/\nhttps://github.com/django/django/commit/115ffd0463a765ab1cc93de18e94b5459b8a300e\nhttps://github.com/django/django/commit/208f80cb682868b584ed0a78f23e4ba6304212aa",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:48"
+    },
+    {
+      "cve_id": "CVE-2026-69110",
+      "title": "高危漏洞: CVE-2026-69110 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-05 00:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "OpenCode Studio before 2.4.4 contains a missing authentication vulnerability that allows unauthenticated remote attackers to read arbitrary files within the temp and static/music directories by directly accessing the GET /api/tmp/:tmpFile and GET /api/music/:fileName endpoints. Attackers can retrieve intermediate audio, video artifacts, and subtitles belonging to other users' jobs, and additionally delete any video by ID through the unauthenticated DELETE /api/short-video/:videoId endpoint.",
+      "refs": "https://github.com/Microck/opencode-studio/commit/1f4d7a7f52beb43105d345b26fd0c0ffc2bf0004\nhttps://github.com/Microck/opencode-studio/issues/54\nhttps://github.com/Microck/opencode-studio/pull/55",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:41"
+    },
+    {
+      "cve_id": "CVE-2026-69100",
+      "title": "高危漏洞: CVE-2026-69100 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-05 00:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "LAMP Rapid Development Platform through 5.6.2, fixed in commit 84b0c27, contains a remote code execution vulnerability in GlueFactory that executes unsandboxed Groovy scripts from database template fields without compilation restrictions or whitelisting. Attackers can write or influence the script field via message template endpoints to execute arbitrary Groovy code and OS commands on the backend server.",
+      "refs": "https://github.com/dromara/lamp-cloud/commit/84b0c27d3693e468c2c690d9fbc8ea9c22cd34e3\nhttps://github.com/dromara/lamp-cloud/issues/408\nhttps://www.vulncheck.com/advisories/lamp-gluefactory-unsandboxed-groovy-script-remote-code-execution",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:37"
+    },
+    {
+      "cve_id": "CVE-2026-69098",
+      "title": "高危漏洞: CVE-2026-69098 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-05 00:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "kotaemon through 0.12.0 contains an insecure deserialization vulnerability in the check_connection endpoint that allows unauthenticated attackers to instantiate arbitrary Python classes by supplying crafted YAML/JSON input with a __type__ field. Attackers can exploit this to override the __type__ field with subprocess.check_output and arbitrary arguments, achieving remote code execution with application process privileges.",
+      "refs": "https://github.com/Cinnamon/kotaemon/issues/844\nhttps://www.vulncheck.com/advisories/kotaemon-unauthenticated-remote-code-execution-via-insecure-deserialization",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:33"
+    },
+    {
+      "cve_id": "CVE-2026-25292",
+      "title": "高危漏洞: CVE-2026-25292 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-08-05 00:16:25",
+      "vector_string": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Memory Corruption when processing untrusted user input in the fastboot command handler for audio framework configuration.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:29"
+    },
+    {
+      "cve_id": "CVE-2026-25289",
+      "title": "高危漏洞: CVE-2026-25289 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-05 00:16:24",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Memory Corruption when processing Device Capability Extended attributes in certain NAN Service Discovery Frames with invalid length values.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:25"
+    },
+    {
+      "cve_id": "CVE-2026-25288",
+      "title": "高危漏洞: CVE-2026-25288 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-05 00:16:24",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+      "description": "Transient DOS when processing a short target wake time channel usage response frame with insufficient packet size.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:18"
+    },
+    {
+      "cve_id": "CVE-2026-24084",
+      "title": "高危漏洞: CVE-2026-24084 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-05 00:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Weak configuration when UE does not verify the consistency of its additional security capabilities with the replayed capabilities.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:14"
+    },
+    {
+      "cve_id": "CVE-2026-24083",
+      "title": "高危漏洞: CVE-2026-24083 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-05 00:16:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Memory Corruption while processing IOCTL device driver requests with invalid arguments.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:10"
+    },
+    {
+      "cve_id": "CVE-2026-24080",
+      "title": "高危漏洞: CVE-2026-24080 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-05 00:16:23",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Memory Corruption when handling malformed request parameters in the fingerprint TA.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:06"
+    },
+    {
+      "cve_id": "CVE-2026-24079",
+      "title": "高危漏洞: CVE-2026-24079 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-05 00:16:23",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Cryptographic Issue while processing registration requests with malformed or missing authentication parameters.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:18:01"
+    },
+    {
+      "cve_id": "CVE-2026-21366",
+      "title": "高危漏洞: CVE-2026-21366 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-05 00:16:22",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Memory corruption while processing a packet with a size close to the maximum allowed value.",
+      "refs": "https://docs.qualcomm.com/product/publicresources/securitybulletin/august-2026-bulletin.html",
+      "source": "NVD",
+      "time": "2026-08-05 03:17:57"
+    },
+    {
       "cve_id": "CVE-2026-67200",
       "title": "高危漏洞: CVE-2026-67200 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -923,182 +1099,6 @@
       "refs": "https://app.notion.com/p/Conditional-Arbitrary-Code-Execution-via-Swift-Demangler-Analyzer-ACE-GHIDRA-3a650723849f80679876df165fe4368b\nhttps://github.com/NationalSecurityAgency/ghidra\nhttps://github.com/NationalSecurityAgency/ghidra/commit/c03a70d",
       "source": "NVD",
       "time": "2026-08-04 03:18:51"
-    },
-    {
-      "cve_id": "CVE-2026-18607",
-      "title": "高危漏洞: CVE-2026-18607 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-04 01:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in Wavlink WN572, WN570H, WN573, WN529, WN530, WN531, WN535, etc. WN529, WN530, WN531, WN535, WN536, WN551, WN557 and NU516 up to 20260609. Affected by this issue is the function strcpy of the file upload.cgi of the component lighttpd. The manipulation of the argument HTTP_COOKIE leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/0xcc12138/WAVLINK-vul\nhttps://vuldb.com/cve/CVE-2026-18607\nhttps://vuldb.com/submit/852637",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:47"
-    },
-    {
-      "cve_id": "CVE-2026-18606",
-      "title": "高危漏洞: CVE-2026-18606 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-04 01:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in Razer RzUpdateService 1.10.14.0. Affected by this vulnerability is an unknown functionality of the file C:\\Program Files (x86)\\Razer\\RzUpdateEngineService\\RzUpdateService.exe of the component Named Pipe Handler. Executing a manipulation of the argument lpThreadParameter can lead to improper privilege management. The attack requires local access. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure.",
-      "refs": "https://opcodic.notion.site/Privilege-Escalation-via-Insecure-Named-Pipe-in-RzUpdateService-2d88e7fec518803fa5decf10fb0e1e27\nhttps://vuldb.com/cve/CVE-2026-18606\nhttps://vuldb.com/submit/852045",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:43"
-    },
-    {
-      "cve_id": "CVE-2026-18605",
-      "title": "高危漏洞: CVE-2026-18605 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-08-04 01:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in CheckMAL AppCheck Pro 3.1.43.10. Affected is an unknown function in the library AppCheckD.sys of the component Kernel Mini-Filter Driver. Performing a manipulation results in uncontrolled search path. The attack requires a local approach. The complexity of an attack is rather high. The exploitability is told to be difficult. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://opcodic.notion.site/AppCheck-Pro-Vulnerability-Analysis-Report-2f48e7fec518803e8e7fe18e71d77dac?pvs=74\nhttps://vuldb.com/cve/CVE-2026-18605\nhttps://vuldb.com/submit/852044",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:39"
-    },
-    {
-      "cve_id": "CVE-2026-18602",
-      "title": "高危漏洞: CVE-2026-18602 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-04 01:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function ovpn-client.get_recommend_config of the file /cgi-bin/glc of the component ovpn-client.so Native Plugin. Executing a manipulation of the argument Hostname can lead to command injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
-      "refs": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_get_recommend_config_glc_rce/CVE.md\nhttps://vuldb.com/cve/CVE-2026-18602\nhttps://vuldb.com/submit/851542",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:34"
-    },
-    {
-      "cve_id": "CVE-2026-18248",
-      "title": "高危漏洞: CVE-2026-18248 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-04 00:16:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "@fastify/aws-lambda version 6.4.0 decorates each Fastify request with request.awsLambda.event and request.awsLambda.context, values that applications are documented to use for authorization decisions such as reading API Gateway authorizer claims. In the default configuration, the getter that populates this decoration reads the client-controlled x-apigateway-event and x-apigateway-context HTTP headers before falling back to the trusted internal request token, and those reserved headers are not stripped from the incoming event. An unauthenticated attacker who can set a single HTTP header can therefore forge the entire Lambda proxy event, including the authorizer context, and override the genuine one. This results in a full authentication and authorization bypass and privilege escalation for any application that trusts request.awsLambda.event for identity or access control. Only version 6.4.0 is affected. Patches: upgrade to @fastify/aws-lambda 6.4.1, which resolves the decoration only through the internal per-invocation token and strips the reserved headers before the request is processed.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/aws-lambda-fastify/security/advisories/GHSA-m93c-jj3f-68ph",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:27"
-    },
-    {
-      "cve_id": "CVE-2026-16572",
-      "title": "高危漏洞: CVE-2026-16572 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-08-03 15:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The LogMyTrip WordPress plugin through 1.9 does not sanitize and escape a value taken from a cookie before using it in a SQL query, allowing unauthenticated users to perform SQL injection attacks on any page that renders one of the LogMyTrip WordPress plugin through 1.9's shortcodes.",
-      "refs": "https://wpscan.com/vulnerability/2d9b816c-25b3-427f-ad72-f9812d9aa86d/",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:20"
-    },
-    {
-      "cve_id": "CVE-2026-16534",
-      "title": "高危漏洞: CVE-2026-16534 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-03 15:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Import and export users and customers WordPress plugin before 2.4.2 does not enforce WordPress's role-assignment and per-user edit permissions during CSV import, allowing a user holding only the user-creation capability to create an administrator account and to overwrite an existing administrator's password or email.",
-      "refs": "https://wpscan.com/vulnerability/0d1246a0-3cd1-4b6d-bd3e-6ed89745da26/",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:16"
-    },
-    {
-      "cve_id": "CVE-2026-16532",
-      "title": "高危漏洞: CVE-2026-16532 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-03 15:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Link Library WordPress plugin before 7.9.3 does not properly sanitise and escape a user-supplied value before using it in a SQL query, allowing unauthenticated users to perform SQL injection attacks.",
-      "refs": "https://wpscan.com/vulnerability/da3b8caa-ac99-4097-8286-f3c418ddb63d/",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:11"
-    },
-    {
-      "cve_id": "CVE-2026-16300",
-      "title": "高危漏洞: CVE-2026-16300 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-03 15:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The ChamaWP  WordPress plugin before 1.0.13 does not properly validate a password reset request, allowing unauthenticated attackers to reset the password of arbitrary users, including administrators, which could lead to a full site takeover.",
-      "refs": "https://wpscan.com/vulnerability/0508f8c8-8ecc-4982-b14c-bf5f1c3d1c8f/",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:07"
-    },
-    {
-      "cve_id": "CVE-2026-12965",
-      "title": "高危漏洞: CVE-2026-12965 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-03 15:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Super Store Finder WordPress plugin through 7.8 does not sanitize a parameter of an unauthenticated AJAX action before using it in a SQL query, allowing unauthenticated attackers to perform SQL injection and extract data from the database.",
-      "refs": "https://wpscan.com/vulnerability/fd13bf8a-ce99-4e2b-ba36-e899df33cf98/",
-      "source": "NVD",
-      "time": "2026-08-04 03:18:03"
-    },
-    {
-      "cve_id": "CVE-2026-67609",
-      "title": "高危漏洞: CVE-2026-67609 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-03 23:16:20",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Telenia Software TVox 26.5.3 and prior 26.x versions, and 24.9.21 and prior 24.x versions, contain a privilege escalation vulnerability that allows attackers with access to the apache account to execute arbitrary commands as root by exploiting an insecure sudoers configuration in /etc/sudoers.d/telenia. The configuration grants the apache user NOPASSWD execution of /bin/nice, which can be leveraged to invoke arbitrary commands, enabling full root-level command execution without supplying a password.",
-      "refs": "https://karmainsecurity.com/KIS-2026-16\nhttps://www.teleniasoftware.com/",
-      "source": "NVD",
-      "time": "2026-08-04 01:06:13"
-    },
-    {
-      "cve_id": "CVE-2026-69097",
-      "title": "高危漏洞: CVE-2026-69097 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-08-03 22:16:30",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "GitPython before 3.1.53 fails to properly escape section names in git config files, allowing attackers to inject arbitrary configuration directives through malicious submodule names. Attackers can inject core.sshCommand or other dangerous config keys into the victim's .git/config via create_submodule or clone_from operations, achieving remote code execution when git performs ssh operations.",
-      "refs": "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3rp5-jjmw-4wv2\nhttps://www.vulncheck.com/advisories/gitpython-before-config-injection-via-submodule-names\nhttps://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3rp5-jjmw-4wv2",
-      "source": "NVD",
-      "time": "2026-08-04 01:06:08"
-    },
-    {
-      "cve_id": "CVE-2026-69096",
-      "title": "高危漏洞: CVE-2026-69096 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-03 22:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenWrt luci-app-dockerman (LuCI master and openwrt-25.12 snapshots containing the ucode docker_rpc.uc RPC backend after the JS/ucode conversion) contains an OS command injection vulnerability. The package's read ACL grants broad ubus access to docker.* / docker.container.*, which exposes the docker.container.ttyd_start method even though it performs mutating operations. The run_ttyd handler builds a shell command from the request-controlled id, cmd, and uid fields and passes it to system() without quoting or argv-style execution in the rpcd root context. An authenticated attacker holding only the luci-app-dockerman read ACL can inject shell metacharacters (e.g., in id) to execute arbitrary commands as root via an HTTP POST to /ubus. openwrt-24.10 and openwrt-23.05 do not contain this backend and are not affected; no patched version was known as of the advisory.",
-      "refs": "https://github.com/openwrt/luci/commit/44618b5b53d9bdad5cd489e82e29688b4d0862c1\nhttps://github.com/openwrt/luci/commit/f4d0a44950e42bcbb8eacf715a3493b276a4f3ac\nhttps://github.com/openwrt/luci/security/advisories/GHSA-cq4h-h8jr-3xqv",
-      "source": "NVD",
-      "time": "2026-08-04 01:06:04"
-    },
-    {
-      "cve_id": "CVE-2026-69095",
-      "title": "高危漏洞: CVE-2026-69095 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 22:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "OpenWrt luci-app-bmx7 before commit 5890760a454dad2cb00389dba2cdc5e779e0ffdd contains a path traversal vulnerability in the bmx7-info CGI script that allows unauthenticated attackers to read files outside the configured runtimeDir. Attackers can supply directory traversal sequences in the query string to escape the intended directory and read sensitive files accessible to the CGI process.",
-      "refs": "https://github.com/openwrt/luci/security/advisories/GHSA-8qcq-jgrj-gvmj\nhttps://www.vulncheck.com/advisories/openwrt-luci-app-bmx7-path-traversal-via-bmx7-info\nhttps://github.com/openwrt/luci/security/advisories/GHSA-8qcq-jgrj-gvmj",
-      "source": "NVD",
-      "time": "2026-08-04 01:06:00"
-    },
-    {
-      "cve_id": "CVE-2026-69091",
-      "title": "高危漏洞: CVE-2026-69091 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 22:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Admidio before 5.0.11 contains an authentication bypass vulnerability in the forum module when configured in login-only mode. The access control logic in modules/forum.php fails to validate the login-only configuration state, allowing unauthenticated attackers to read forum topics and posts by directly accessing the module with read-only parameters.",
-      "refs": "https://github.com/Admidio/admidio/security/advisories/GHSA-cf48-6jrq-gjcm\nhttps://www.vulncheck.com/advisories/admidio-before-authentication-bypass-via-forum-php",
-      "source": "NVD",
-      "time": "2026-08-04 01:05:55"
-    },
-    {
-      "cve_id": "CVE-2026-69089",
-      "title": "高危漏洞: CVE-2026-69089 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-03 22:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Grav CMS 2.0.10 contains a path traversal vulnerability in ImageMedium::watermark(), which passes its unsanitized $image argument to RocketTheme\\Toolbox\\ResourceLocator\\UniformResourceLocator::findResource(). Because the file:// scheme branch only lexically collapses '..' segments without a realpath/containment check, an editor authoring Markdown image syntax with traversal sequences can cause arbitrary image files outside Grav's media sandbox to be composited into a carrier image, which is then cached and served from a public, unauthenticated URL — disclosing those files to anonymous visitors.",
-      "refs": "https://github.com/getgrav/grav/commit/b282200a65ce979377963180629babd2335212ba\nhttps://github.com/getgrav/grav/commit/c569a53304cd7d95ff21bffa6fc590adcf0be83d\nhttps://github.com/getgrav/grav/commit/db8c1fcd63aaaf6d6b244bc6b4cfa5f7b96bbc7f",
-      "source": "NVD",
-      "time": "2026-08-04 01:05:49"
     }
   ]
 }
