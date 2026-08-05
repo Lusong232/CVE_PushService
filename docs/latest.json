@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-18898",
+      "title": "高危漏洞: CVE-2026-18898 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-05 12:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in UTT HiPER 1200GW up to v2.5.3-170306. This affects the function strcpy of the file /goform/ConfigAdvideo. The manipulation of the argument timestart results in stack-based buffer overflow. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/7wkajk/CVE-VUL/blob/main/103.md\nhttps://vuldb.com/cve/CVE-2026-18898\nhttps://vuldb.com/submit/858620",
+      "source": "NVD",
+      "time": "2026-08-05 13:36:42"
+    },
+    {
+      "cve_id": "CVE-2026-18897",
+      "title": "高危漏洞: CVE-2026-18897 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-05 10:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in UTT HiPER 1250GW up to v3.2.7-210907-180535. The impacted element is the function strcpy of the file /goform/getOneApConfTempEntry. The manipulation of the argument tempName leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/7wkajk/CVE-VUL/blob/main/102.md\nhttps://vuldb.com/cve/CVE-2026-18897\nhttps://vuldb.com/submit/858617",
+      "source": "NVD",
+      "time": "2026-08-05 13:36:36"
+    },
+    {
+      "cve_id": "CVE-2026-18895",
+      "title": "高危漏洞: CVE-2026-18895 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-05 10:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in UTT HiPER 1250GW up to 3.2.7-210907-180535. Impacted is the function strcpy of the file /goform/APSecurity_5g. Performing a manipulation of the argument cipher results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/7wkajk/CVE-VUL/blob/main/101.md\nhttps://vuldb.com/cve/CVE-2026-18895\nhttps://vuldb.com/submit/858607",
+      "source": "NVD",
+      "time": "2026-08-05 13:36:31"
+    },
+    {
+      "cve_id": "CVE-2026-18859",
+      "title": "高危漏洞: CVE-2026-18859 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-05 09:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in ESAFENET CDG up to 20260615. Affected is an unknown function of the file /CDGServer3/ukey/usbkey;logindojojs. Such manipulation of the argument keyid leads to sql injection. The attack may be performed from remote. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/docx/LHkddOv7Jo6quTxlJKZcf8gfnOe?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-18859\nhttps://vuldb.com/submit/858586",
+      "source": "NVD",
+      "time": "2026-08-05 13:36:25"
+    },
+    {
+      "cve_id": "CVE-2026-18854",
+      "title": "高危漏洞: CVE-2026-18854 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-05 08:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Shandong Hoteam PDM Product Data Management System up to 8.3.10. The impacted element is the function GetStoredClassByFilter of the file /Base/BaseService.asmx/DataService. The manipulation of the argument FilterString leads to sql injection. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/docx/NEAJdL0fgoCy2jxQwVBcR2mOn7e?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-18854\nhttps://vuldb.com/submit/858470",
+      "source": "NVD",
+      "time": "2026-08-05 13:36:19"
+    },
+    {
       "cve_id": "CVE-2026-45537",
       "title": "高危漏洞: CVE-2026-45537 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -1044,61 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65802",
       "source": "NVD",
       "time": "2026-08-04 13:39:07"
-    },
-    {
-      "cve_id": "CVE-2026-62870",
-      "title": "高危漏洞: CVE-2026-62870 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-04 08:17:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62870",
-      "source": "NVD",
-      "time": "2026-08-04 13:39:03"
-    },
-    {
-      "cve_id": "CVE-2026-18686",
-      "title": "高危漏洞: CVE-2026-18686 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-04 08:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in GL.iNet GL-MT3000 up to 4.4.5. The affected element is the function nas-web.add_user of the file /cgi-bin/glc of the component nas-web RPC Wrapper. Performing a manipulation results in command injection. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
-      "refs": "https://github.com/coconut652-7/IOT_Vul_Public/tree/main/Glinet/MT3000/nas-web/ADD_USER_ADD_SHARE\nhttps://vuldb.com/cve/CVE-2026-18686\nhttps://vuldb.com/submit/856139",
-      "source": "NVD",
-      "time": "2026-08-04 13:38:58"
-    },
-    {
-      "cve_id": "CVE-2026-18685",
-      "title": "高危漏洞: CVE-2026-18685 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-04 08:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in GL.iNet GL-MT3000 up to 4.4.5. Impacted is the function set_upgrade of the file /cgi-bin/glc of the component modem.so. Such manipulation leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
-      "refs": "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_set_upgrade_glc_rce\nhttps://vuldb.com/cve/CVE-2026-18685\nhttps://vuldb.com/submit/851593",
-      "source": "NVD",
-      "time": "2026-08-04 13:38:53"
-    },
-    {
-      "cve_id": "CVE-2026-48399",
-      "title": "高危漏洞: CVE-2026-48399 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-04 07:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Adobe Campaign Classic (ACC) is affected by a Violation of Secure Design Principles vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read access. Exploitation of this issue does not require user interaction.",
-      "refs": "https://helpx.adobe.com/security/products/campaign/apsb26-120.html",
-      "source": "NVD",
-      "time": "2026-08-04 09:28:39"
-    },
-    {
-      "cve_id": "CVE-2026-48333",
-      "title": "高危漏洞: CVE-2026-48333 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-04 07:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could exploit this vulnerability to gain elevated privileges. Exploitation of this issue does not require user interaction.",
-      "refs": "https://helpx.adobe.com/security/products/campaign/apsb26-120.html",
-      "source": "NVD",
-      "time": "2026-08-04 09:28:34"
     }
   ]
 }
