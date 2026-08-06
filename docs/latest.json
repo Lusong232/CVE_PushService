@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-5430",
+      "title": "高危漏洞: CVE-2026-5430 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-08-06 16:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The JWT authentication mechanism accepts tokens signed with algorithms other than those explicitly configured or supported. This allows an attacker to craft a JWT with an unsupported algorithm, which is then incorrectly validated, leading to unauthorized access.\n\nSuccessful exploitation of this vulnerability may result in unauthorized access to the system, including the potential compromise of administrative accounts and full account takeover. The CVSS score is adjusted to 9.8 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) in single-tenant deployments, reflecting that the impact is contained within a single security authority boundary.",
+      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:53"
+    },
+    {
+      "cve_id": "CVE-2026-1728",
+      "title": "高危漏洞: CVE-2026-1728 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-06 16:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Tokens issued to a low-privileged user are not sufficiently restricted, allowing them to be used to access product-level Admin REST APIs.\n\nExploitation of this vulnerability allows a low-privileged user to invoke the Admin REST APIs of WSO2 products, potentially leading to full administrative account takeover. This requires the attacker to already possess a low-privileged user account and be able to obtain a valid token for it.",
+      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5077/",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:45"
+    },
+    {
+      "cve_id": "CVE-2026-19021",
+      "title": "高危漏洞: CVE-2026-19021 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 16:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SourceCodester Computer Repair Shop Management System 1.0. Affected by this issue is some unknown functionality of the file /classes/Master.php?f=delete_product. Such manipulation of the argument ID leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/blue-pig-ops/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-19021\nhttps://vuldb.com/submit/862906",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:40"
+    },
+    {
+      "cve_id": "CVE-2026-19010",
+      "title": "高危漏洞: CVE-2026-19010 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 16:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in TinyAGI 0.0.20. Impacted is the function processMessage of the file packages/main/src/index.ts of the component Message API Endpoint. Such manipulation leads to missing authorization. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/TinyAGI/tinyagi/\nhttps://github.com/TinyAGI/tinyagi/issues/284\nhttps://vuldb.com/cve/CVE-2026-19010",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:35"
+    },
+    {
+      "cve_id": "CVE-2026-19009",
+      "title": "高危漏洞: CVE-2026-19009 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 16:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in TinyAGI 0.0.20. This issue affects the function collectFiles of the file packages/core/src/response.ts of the component Message API Endpoint. This manipulation causes file inclusion. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/TinyAGI/tinyagi/\nhttps://github.com/TinyAGI/tinyagi/issues/282\nhttps://vuldb.com/cve/CVE-2026-19009",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:31"
+    },
+    {
+      "cve_id": "CVE-2026-18649",
+      "title": "高危漏洞: CVE-2026-18649 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-06 16:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in the GStreamer gst-plugins-good package. The rtph264depay and rtph265depay RTP depayloader elements do not enforce a maximum size limit on the reassembly buffer used during fragmented RTP packet processing. A remote, unauthenticated attacker can send a continuous stream of RTP fragments without ever transmitting an end-of-fragment marker, causing the reassembly buffer to grow without bound until process memory is exhausted. This results in a denial of service through process termination.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-18649\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2510614\nhttps://gitlab.freedesktop.org/gstreamer/gstreamer-security/-/merge_requests/113",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:27"
+    },
+    {
+      "cve_id": "CVE-2026-18597",
+      "title": "高危漏洞: CVE-2026-18597 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-08-06 16:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "The PDF creation feature of Foxit PDF Services API supports referencing external files. Although local file access is restricted, an attacker could trigger an SSRF vulnerability by using URL redirection to bypass validation, leading to information disclosure.",
+      "refs": "https://www.foxit.com/support/security-bulletins.html",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:22"
+    },
+    {
+      "cve_id": "CVE-2025-15039",
+      "title": "高危漏洞: CVE-2025-15039 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-08-06 16:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "The Conditional Authentication (Adaptive Authentication) script does not correctly enforce the completion of all required authentication steps when a specific multi-step pattern involving certain authenticators is configured. This allows an attacker to bypass intermediate authentication challenges by exploiting how the script handles callbacks and re-execution of authentication steps.\n\nSuccessful exploitation allows a malicious actor to gain unauthorized access to a targeted user account. This vulnerability can only be exploited when all of the following conditions are met: the application login flow contains a specific secondary authenticator, the Conditional Authentication script is configured with particular event callbacks and re-executes an authentication step, the targeted user has one of the impacted authenticators enrolled, and the attacker successfully completes any preceding authentication steps.",
+      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2025-4973/",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:16"
+    },
+    {
+      "cve_id": "CVE-2026-18510",
+      "title": "高危漏洞: CVE-2026-18510 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-06 15:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content (URL-encoded gettext markers) in all versions up to, and including, 3.2.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Comment moderation may delay exploitation for first-time commenters, but does not prevent it, as the payload uses only WordPress-permitted tags and attributes with percent-encoded characters that pass wp_kses URL validation unmodified.",
+      "refs": "https://plugins.trac.wordpress.org/browser/translatepress-multilingual/tags/3.2.6/includes/class-translation-render.php#L1232\nhttps://plugins.trac.wordpress.org/browser/translatepress-multilingual/tags/3.2.6/includes/class-translation-render.php#L1314\nhttps://plugins.trac.wordpress.org/browser/translatepress-multilingual/tags/3.2.6/includes/class-translation-render.php#L1575",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:08"
+    },
+    {
+      "cve_id": "CVE-2026-19000",
+      "title": "高危漏洞: CVE-2026-19000 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 14:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in JeecgBoot up to 3.9.2. The affected element is an unknown function of the file /airag/chat/send of the component Anonymous Chat Attachment Parser. The manipulation leads to server-side request forgery. The attack can be initiated remotely. The exploit is publicly available and might be used. A fix is planned for the upcoming release.",
+      "refs": "https://github.com/jeecgboot/JeecgBoot/\nhttps://github.com/jeecgboot/JeecgBoot/issues/9672\nhttps://github.com/jeecgboot/JeecgBoot/issues/9672#issuecomment-4739323732",
+      "source": "NVD",
+      "time": "2026-08-06 19:12:04"
+    },
+    {
+      "cve_id": "CVE-2026-15459",
+      "title": "高危漏洞: CVE-2026-15459 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-06 14:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WPMU DEV Dashboard plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.0.0. On sites not yet connected to the WPMU DEV Hub — the default state after installation — the site API key that keys the WDP-AUTH request signature is empty, making the signature verified by validate_hash() trivially forgeable; version 5.0.0 additionally removed the replay check in validate_nonce(), and the remote handler is bound to the public init hook with no capability check. This makes it possible for unauthenticated attackers to invoke privileged Hub actions — including installing and activating a plugin from an attacker-supplied URL (resulting in remote code execution), deleting plugins and themes, upgrading WordPress core, or logging in as an administrator via SSO. Sites connected to a WPMU DEV account, which have a non-empty 64-character API key, are not affected.",
+      "refs": "https://wpmudev.com/project/wpmu-dev-dashboard/#changelog_all\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/75c2b82e-cf1c-4db2-811c-82d05c6a1212?source=cve",
+      "source": "NVD",
+      "time": "2026-08-06 19:11:59"
+    },
+    {
+      "cve_id": "CVE-2026-18325",
+      "title": "高危漏洞: CVE-2026-18325 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-06 13:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Forminator Forms – Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Forged Upload Record via Select Field in all versions up to, and including, 1.56.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit is possible because Forminator_Core::sanitize_array() skips all filtering for keys prefixed with 'select-', and set_field_data() treats a submitted 'return' member as a trusted internal flag — allowing an unauthenticated attacker to forge and persist a complete upload field record with an arbitrary file_url value without any sanitization or validation.",
+      "refs": "https://plugins.trac.wordpress.org/browser/forminator/tags/1.55.1/library/abstracts/abstract-class-front-action.php#L127\nhttps://plugins.trac.wordpress.org/browser/forminator/tags/1.55.1/library/class-core.php#L616\nhttps://plugins.trac.wordpress.org/browser/forminator/tags/1.55.1/library/model/class-form-entry-model.php#L1569",
+      "source": "NVD",
+      "time": "2026-08-06 19:11:53"
+    },
+    {
+      "cve_id": "CVE-2026-16636",
+      "title": "高危漏洞: CVE-2026-16636 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-06 13:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The FluentSMTP – WP SMTP Plugin with Amazon SES, SendGrid, MailGun, Postmark, Google and Any SMTP Provider plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Recipient Display Name (to.name) in Email Logs in all versions up to, and including, 2.2.95 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload is delivered via an attacker-controlled recipient display name (to.name) in a wp_mail() call and does not fire in the log list view — only in the detail view when an administrator uses the Prev/Next navigation controls, as that path bypasses the escapeHtml pipeline used by the list view.",
+      "refs": "https://plugins.trac.wordpress.org/browser/fluent-smtp/tags/2.2.95/app/Models/Logger.php#L165\nhttps://plugins.trac.wordpress.org/browser/fluent-smtp/tags/2.2.95/app/Models/Logger.php#L310\nhttps://plugins.trac.wordpress.org/browser/fluent-smtp/tags/2.2.95/app/Services/Mailer/BaseHandler.php#L290",
+      "source": "NVD",
+      "time": "2026-08-06 19:11:48"
+    },
+    {
+      "cve_id": "CVE-2026-15991",
+      "title": "高危漏洞: CVE-2026-15991 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-06 13:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The File Manager plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the connector function in all versions from 6.0 - 6.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to read and delete arbitrary files on the server, which can lead to remote code execution when the right file is deleted (such as wp-config.php). The bypass is triggered by passing cmd=rm or cmf=file in the URL query string of a POST request: elFinder's bind registration reads the command exclusively from $_POST and therefore never registers the rm.pre permission handler, while the dispatcher reads from the merged $_GET+$_POST superglobal and executes the rm or file command unchecked against a volume that defaults to ABSPATH.",
+      "refs": "https://plugins.trac.wordpress.org/browser/file-manager/tags/6.9/backend/app/Http/Controllers/FileManagerController.php#L32\nhttps://plugins.trac.wordpress.org/browser/file-manager/tags/6.9/backend/app/Http/Controllers/FileManagerController.php#L34\nhttps://plugins.trac.wordpress.org/browser/file-manager/tags/6.9/backend/app/Providers/AccessControlProvider.php#L121",
+      "source": "NVD",
+      "time": "2026-08-06 19:11:44"
+    },
+    {
       "cve_id": "CVE-2026-18991",
       "title": "高危漏洞: CVE-2026-18991 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -945,160 +1099,6 @@
       "refs": "https://github.com/electron/electron/security/advisories/GHSA-h7rp-cf8h-j98x",
       "source": "NVD",
       "time": "2026-08-06 03:15:11"
-    },
-    {
-      "cve_id": "CVE-2026-39923",
-      "title": "高危漏洞: CVE-2026-39923 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-06 00:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Flarum before 1.8.16 contains a password reset token expiry bypass vulnerability that allows unauthenticated attackers to reuse expired password reset tokens by submitting them directly to the reset processing endpoint. The SavePasswordController::handle() method calls PasswordToken::findOrFail() without performing any expiry validation, allowing attackers to bypass the 24-hour token lifetime enforced only during form rendering and change any account's password to gain an authenticated session.",
-      "refs": "https://github.com/flarum/framework/commit/2803058d0f9dc38252326070b46d4484fe5a857d\nhttps://github.com/flarum/framework/pull/4545\nhttps://github.com/flarum/framework/releases/tag/v1.8.16",
-      "source": "NVD",
-      "time": "2026-08-06 03:15:04"
-    },
-    {
-      "cve_id": "CVE-2026-16442",
-      "title": "高危漏洞: CVE-2026-16442 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-08-06 00:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A flaw was found in the SAML broker component of Keycloak, which is used to manage identity federation and user authentication. The issue occurs because the IdP-initiated Single Sign-On endpoint fails to check if a provider is restricted to account linking only. This allows an attacker with control over a linked upstream identity to bypass login restrictions and gain full access to a local user account.",
-      "refs": "https://access.redhat.com/errata/RHSA-2026:50846\nhttps://access.redhat.com/errata/RHSA-2026:50847\nhttps://access.redhat.com/errata/RHSA-2026:50848",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:59"
-    },
-    {
-      "cve_id": "CVE-2026-15572",
-      "title": "高危漏洞: CVE-2026-15572 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-06 00:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in Keycloak's Dynamic Client Registration (DCR) security policy management. The \"Allowed Protocol Mapper Types\" policy, which restricts which types of data mappers a client can use, fails to re-validate the mapper type during a client update if the mapper's configuration remains unchanged. An attacker with client registration privileges can exploit this by first registering an allowed mapper type with a malicious configuration and then swapping it for a restricted, high-privilege mapper type (such as one that hardcodes administrative roles). This allows the attacker to gain full administrative access to the Keycloak realm.",
-      "refs": "https://access.redhat.com/errata/RHSA-2026:50846\nhttps://access.redhat.com/errata/RHSA-2026:50847\nhttps://access.redhat.com/errata/RHSA-2026:50848",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:55"
-    },
-    {
-      "cve_id": "CVE-2026-10025",
-      "title": "高危漏洞: CVE-2026-10025 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-08-06 00:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
-      "description": "IBM QRadar 7.6.0.0 through 7.6.0.1, and 7.5.0 through 7.5.0 UP 15 Interim Fix 005 has an XML External Entity (XXE) injection vulnerability. The vulnerability resides in the parseXmlPayload() function within the event processing pipeline ( q1labs_core.jar ). When at least one log source type is configured to use XML-format property autodetection, the system processes XML-formatted syslog events sent to port 514 (UDP/TCP) without authentication.",
-      "refs": "https://www.ibm.com/support/pages/node/7282394",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:50"
-    },
-    {
-      "cve_id": "CVE-2026-17613",
-      "title": "高危漏洞: CVE-2026-17613 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Penpot’s ::import-binfile RPC command lacks authorization on the optional file-id parameter, allowing any authenticated user to overwrite any files on the target server and subscribe to WebSocket events, enabling full data exfiltration and data poisoning.",
-      "refs": "https://github.com/penpot/penpot/releases/tag/2.17.0\nhttps://penpot.app/\nhttps://vokecyber.com/blog/cve-2026-17613-penpot-cross-team-file-takeover",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:46"
-    },
-    {
-      "cve_id": "CVE-2026-46581",
-      "title": "高危漏洞: CVE-2026-46581 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 20:18:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "In Eclipse Mojarra versions 2.3 and following, URL handing in `DefaultFaceletFactory` does not properly sanitize and/or block remote URLs, allowing an attacker to specify a URL to a remote Facelet which will be included and processed as part of the normal request, with the privileges of the target server. This could allow access to restricted files such as `WEB-INF/web.xml` or `/etc/passwd`.",
-      "refs": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/160\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/544\nhttps://gitlab.eclipse.org/security/vulnerability-reports/-/work_items/544",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:42"
-    },
-    {
-      "cve_id": "CVE-2026-67592",
-      "title": "高危漏洞: CVE-2026-67592 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "It was not possible to govern the maximum number of transfer frames per incoming delivery, enabling an authenticated attacker to cause excessive resource usage and potential denial of service.\n\nThis issue affects Apache Qpid ProtonJ2: through 1.1.0.\n\nUsers are recommended to upgrade to version 1.2.0, which fixes the issue",
-      "refs": "https://lists.apache.org/thread/b4pv9hfdk7ox78pss77sb4nzwjrvqhhz\nhttp://www.openwall.com/lists/oss-security/2026/08/04/31",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:35"
-    },
-    {
-      "cve_id": "CVE-2026-16736",
-      "title": "高危漏洞: CVE-2026-16736 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The User Registration & Membership  WordPress plugin before 5.2.6 does not enforce the site's registration-disabled setting when processing registration-form submissions, allowing unauthenticated users to create new accounts even when the administrator has turned off open registration.",
-      "refs": "https://wpscan.com/vulnerability/dc0d63d6-bcd9-4f14-865a-49d254a831a2/",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:29"
-    },
-    {
-      "cve_id": "CVE-2026-16604",
-      "title": "高危漏洞: CVE-2026-16604 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Passster  WordPress plugin before 4.3.6 outputs password-protected block content in the public page response before verifying the password, allowing unauthenticated users to recover the protected content without knowing the password.",
-      "refs": "https://wpscan.com/vulnerability/6a3222e3-352f-4fe8-b17f-b2980c3528e4/",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:25"
-    },
-    {
-      "cve_id": "CVE-2026-16603",
-      "title": "高危漏洞: CVE-2026-16603 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Passster  WordPress plugin before 4.3.6 does not enforce its category-based content protection on the WordPress REST API, allowing unauthenticated users to read the full content, title, and excerpt of category-locked posts through the core REST API.",
-      "refs": "https://wpscan.com/vulnerability/ec56a66e-e98a-4260-a0af-3ef6905ce839/",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:18"
-    },
-    {
-      "cve_id": "CVE-2026-16602",
-      "title": "高危漏洞: CVE-2026-16602 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Passster  WordPress plugin before 4.3.6 does not perform a post-status check before returning post content from an unauthenticated REST endpoint, allowing unauthenticated users to disclose the content of non-public (draft, private, and pending) posts on sites that have a captcha provider configured.",
-      "refs": "https://wpscan.com/vulnerability/fcca0d1c-1a5b-4515-8182-d68f0759b978/",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:14"
-    },
-    {
-      "cve_id": "CVE-2026-16561",
-      "title": "高危漏洞: CVE-2026-16561 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The Sunshine Photo Cart  WordPress plugin before 3.6.12 does not perform access control checks in one of its AJAX actions, allowing unauthenticated users to retrieve the comments of images belonging to private, password-protected or otherwise access-restricted galleries.",
-      "refs": "https://wpscan.com/vulnerability/25bbf054-3b3f-4d88-899e-03d48055cbcd/",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:09"
-    },
-    {
-      "cve_id": "CVE-2026-16036",
-      "title": "高危漏洞: CVE-2026-16036 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The miniOrange 2FA  WordPress plugin before 6.2.7 does not bind the second factor being configured during the pre-login two-factor challenge to the target account's existing factor, allowing an attacker who knows a user's password to rebind that user's second factor to an attacker-controlled destination, complete the challenge, and take over the account, including administrator accounts.",
-      "refs": "https://wpscan.com/vulnerability/cffa0566-7fcc-40f0-9e4c-f1c3abaa5eb0/",
-      "source": "NVD",
-      "time": "2026-08-06 03:14:05"
-    },
-    {
-      "cve_id": "CVE-2026-15372",
-      "title": "高危漏洞: CVE-2026-15372 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-05 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "The WP 2FA  WordPress plugin before 4.1.0 does not validate the second authentication factor when one of its supported methods is selected at login, allowing an attacker who already knows a user's password to bypass two-factor authentication and fully access the account, including administrator accounts.",
-      "refs": "https://wpscan.com/vulnerability/a8d697c9-6de4-4a28-be9e-7d42abcb6c7e/",
-      "source": "NVD",
-      "time": "2026-08-06 03:13:58"
     }
   ]
 }
