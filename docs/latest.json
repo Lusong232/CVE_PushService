@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-18991",
+      "title": "高危漏洞: CVE-2026-18991 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 11:16:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in nanocoai NanoClaw up to 2.0.64. This affects an unknown part of the file container/agent-runner/src/mcp-tools/core.ts of the component send_file. Such manipulation leads to path traversal. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/nanocoai/nanoclaw/\nhttps://github.com/nanocoai/nanoclaw/issues/2760\nhttps://vuldb.com/cve/CVE-2026-18991",
+      "source": "NVD",
+      "time": "2026-08-06 13:39:22"
+    },
+    {
+      "cve_id": "CVE-2026-18990",
+      "title": "高危漏洞: CVE-2026-18990 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 11:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in letta-ai LettaBot 0.2.0. Impacted is an unknown function of the file src/api/server.ts of the component API Status Route. The manipulation results in missing authentication. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/2ba2e586f3d16cb368c8dcd6ef680178\nhttps://vuldb.com/cve/CVE-2026-18990\nhttps://vuldb.com/submit/862562",
+      "source": "NVD",
+      "time": "2026-08-06 13:39:18"
+    },
+    {
+      "cve_id": "CVE-2026-18973",
+      "title": "高危漏洞: CVE-2026-18973 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 09:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in heshengtao super-agent-party up to 0.4.1. The impacted element is the function sanitize_proxy_url of the file server.py of the component extension_proxy Route. The manipulation of the argument url leads to server-side request forgery. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/YLChen-007/2f12ffb785d975b46b73896c0fb8cb5d\nhttps://vuldb.com/cve/CVE-2026-18973\nhttps://vuldb.com/submit/862456",
+      "source": "NVD",
+      "time": "2026-08-06 13:39:13"
+    },
+    {
+      "cve_id": "CVE-2026-67869",
+      "title": "高危漏洞: CVE-2026-67869 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-06 08:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Buffer Overflow vulnerability in open62541 v1.5.5 allows a remote attacker to cause a denial of service via the Service_Call validates input arguments against runtime-resolved InputArguments metadata",
+      "refs": "https://github.com/open62541/open62541/blob/v1.5.5/examples/tutorial_server_alarms_conditions.c\nhttps://github.com/open62541/open62541/blob/v1.5.5/src/server/ua_services_method.c\nhttps://github.com/open62541/open62541/blob/v1.5.5/src/server/ua_subscription_alarms_conditions.c",
+      "source": "NVD",
+      "time": "2026-08-06 13:39:08"
+    },
+    {
+      "cve_id": "CVE-2026-18970",
+      "title": "高危漏洞: CVE-2026-18970 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 08:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in Rongzhitong Visual Integrated Command and Dispatch Platform up to 20260617. The affected element is an unknown function of the file /dm/dispatch/user/findAll. Executing a manipulation of the argument Name can lead to sql injection. It is possible to launch the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/UfgVwvpW5iRtLFkZs4icV6LfnGb?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-18970\nhttps://vuldb.com/submit/860573",
+      "source": "NVD",
+      "time": "2026-08-06 13:39:03"
+    },
+    {
+      "cve_id": "CVE-2026-18969",
+      "title": "高危漏洞: CVE-2026-18969 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-06 08:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Rongzhitong Visual Integrated Command and Dispatch Platform up to 20260617. Impacted is an unknown function of the file /dm/dispatch/userinfo/upload. Performing a manipulation of the argument File results in unrestricted upload. It is possible to initiate the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://ucn9h68n9289.feishu.cn/wiki/CVIpwknSYiQXejkvw7McPrs1n2g?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-18969\nhttps://vuldb.com/submit/860572",
+      "source": "NVD",
+      "time": "2026-08-06 13:38:58"
+    },
+    {
       "cve_id": "CVE-2026-67863",
       "title": "高危漏洞: CVE-2026-67863 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1033,72 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/a8d697c9-6de4-4a28-be9e-7d42abcb6c7e/",
       "source": "NVD",
       "time": "2026-08-06 03:13:58"
-    },
-    {
-      "cve_id": "CVE-2026-15360",
-      "title": "高危漏洞: CVE-2026-15360 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-05 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The Ajax Load More  WordPress plugin before 8.0.1 does not properly sanitise and escape a parameter before using it in a SQL query, allowing unauthenticated attackers to perform time-based blind SQL injection and extract sensitive data from the database.",
-      "refs": "https://wpscan.com/vulnerability/0b5c1dd6-8bb9-45f7-8237-84a43ef53ec4/",
-      "source": "NVD",
-      "time": "2026-08-06 03:13:53"
-    },
-    {
-      "cve_id": "CVE-2026-15230",
-      "title": "高危漏洞: CVE-2026-15230 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-05 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The YayPricing  WordPress plugin before 3.5.7 does not perform capability checks on several of its REST API routes, relying only on a shared nonce, allowing any authenticated user such as a subscriber to overwrite the store's pricing configuration and to disclose private coupon codes.",
-      "refs": "https://wpscan.com/vulnerability/c2346f90-130c-45da-92ca-31acaa2f4605/",
-      "source": "NVD",
-      "time": "2026-08-06 03:13:49"
-    },
-    {
-      "cve_id": "CVE-2026-15210",
-      "title": "高危漏洞: CVE-2026-15210 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-05 15:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The OTP Login With Phone Number, OTP Verification WordPress plugin before 1.8.71 does not limit the number of OTP verification attempts or invalidate a one-time login code after a wrong guess, and an unauthenticated user can request a login code for any account. Because the code is a short numeric OTP, an attacker can brute-force it and take over any account, including an administrator's.",
-      "refs": "https://wpscan.com/vulnerability/96101127-8b13-4770-9204-f540fb044040/",
-      "source": "NVD",
-      "time": "2026-08-06 03:13:43"
-    },
-    {
-      "cve_id": "CVE-2026-14553",
-      "title": "高危漏洞: CVE-2026-14553 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-05 15:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The zportals WordPress plugin before 6.3.4 does not properly validate uploaded files, trusting the client-supplied content type and preserving the original file extension, allowing any authenticated user (Subscriber or higher) to upload arbitrary PHP files and achieve remote code execution.",
-      "refs": "https://wpscan.com/vulnerability/02c83708-8f2f-48f8-b73e-df37a42ab360/",
-      "source": "NVD",
-      "time": "2026-08-06 03:13:37"
-    },
-    {
-      "cve_id": "CVE-2026-16102",
-      "title": "高危漏洞: CVE-2026-16102 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-05 23:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A flaw was found in the Dynamic Client Registration (DCR) component of Keycloak, an identity and access management solution. The default DCR policy fails to properly validate the claim path for User Property mappers, allowing them to write values to sensitive internal claim locations. An attacker with a standard user account and a limited Initial Access Token can exploit this to forge administrative roles in their access token. This allows the attacker to take over other clients, steal confidential secrets, and potentially gain full administrative control over the realm.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-16102\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2501735",
-      "source": "NVD",
-      "time": "2026-08-06 00:32:22"
-    },
-    {
-      "cve_id": "CVE-2026-15573",
-      "title": "高危漏洞: CVE-2026-15573 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-05 23:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A flaw was found in Keycloak's Authorization Services. The component responsible for matching request paths to security policies (PathMatcher) does not properly normalize URIs before comparison. By adding extra characters like a trailing slash or matrix parameters to a URL, an attacker can trick the system into applying a less restrictive security policy than intended. This allows an authenticated user to access administrative or restricted areas they should not have permission to see.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-15573\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2499593",
-      "source": "NVD",
-      "time": "2026-08-06 00:32:17"
     }
   ]
 }
