@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15816",
+      "title": "高危漏洞: CVE-2026-15816 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-07 19:17:05",
+      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in dracut. The die() error-handling function writes its message into a shell script under the initramfs emergency-hook directory without properly shell-quoting it. When the message contains data derived from the DHCP ROOT_PATH option, an attacker on the adjacent network who controls a rogue DHCP server can inject a command-substitution sequence that executes as root the next time dracut sources its emergency hook scripts during standard boot-failure handling.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-15816\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2459963\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2500889",
+      "source": "NVD",
+      "time": "2026-08-07 20:40:09"
+    },
+    {
+      "cve_id": "CVE-2026-9169",
+      "title": "高危漏洞: CVE-2026-9169 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-07 17:16:59",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "DLL Search Order Hijacking in LUCID Vision Labs Arena SDK 1.0.80.49 on Windows allows a local attacker to execute arbitrary code with the privileges of the application by placing a malicious DLL in a user-controlled directory listed in the PATH environment variable, which the SDK traverses when a required dependency is not found locally.",
+      "refs": "https://arenasdk.s3.us-west-2.amazonaws.com/ArenaSDK_ReleaseNotes_v1.0.85.11.txt\nhttps://thinklucid.com/downloads-hub/",
+      "source": "NVD",
+      "time": "2026-08-07 20:40:05"
+    },
+    {
+      "cve_id": "CVE-2026-49007",
+      "title": "高危漏洞: CVE-2026-49007 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-07 16:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "By accessing unencrypted information in the device firmware, an attacker can obtain the initial login credentials for the device's web interface.",
+      "refs": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/460174866982035232",
+      "source": "NVD",
+      "time": "2026-08-07 20:40:00"
+    },
+    {
+      "cve_id": "CVE-2026-19196",
+      "title": "高危漏洞: CVE-2026-19196 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-07 14:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Photo Share Website 1.0. The impacted element is an unknown function of the file /social/ajax.php?action=login. The manipulation of the argument email results in sql injection. The attack can be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/CYSB123456789/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-19196\nhttps://vuldb.com/submit/864655",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:55"
+    },
+    {
+      "cve_id": "CVE-2026-19195",
+      "title": "高危漏洞: CVE-2026-19195 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-07 13:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in V-Secure Jingyun Antivirus 2.4.2.39. The affected element is an unknown function in the library ZyArk.sys of the component Kernel Driver. The manipulation leads to improper access controls. The attack needs to be performed locally. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/patrickt2017/research/issues/2\nhttps://vuldb.com/cve/CVE-2026-19195\nhttps://vuldb.com/submit/864561",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:50"
+    },
+    {
+      "cve_id": "CVE-2026-19193",
+      "title": "高危漏洞: CVE-2026-19193 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-07 13:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw has been found in Jiangmin Antivirus 21. Impacted is the function MessageNotifyCallback in the library kvcore.sys of the component Minifilter Port. Executing a manipulation can lead to improper access controls. The attack needs to be launched locally. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/patrickt2017/research/issues/1\nhttps://vuldb.com/cve/CVE-2026-19193\nhttps://vuldb.com/submit/864551",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:44"
+    },
+    {
+      "cve_id": "CVE-2026-19192",
+      "title": "高危漏洞: CVE-2026-19192 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-07 13:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in DeepCool DisplayService 1.2.12. This issue affects some unknown processing of the file C:\\DeepCool\\resources\\service\\x64\\DeepCoolDisplayService.exe. Performing a manipulation results in improper access controls. The attack must be initiated from a local position. The exploit is now public and may be used.",
+      "refs": "https://vuldb.com/cve/CVE-2026-19192\nhttps://vuldb.com/submit/864540\nhttps://vuldb.com/vuln/386710",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:38"
+    },
+    {
+      "cve_id": "CVE-2026-19191",
+      "title": "高危漏洞: CVE-2026-19191 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-07 13:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in StableBit DrivePool 2.3.13.1687. This vulnerability affects unknown code of the file C:\\Program Files\\StableBit\\DrivePool\\DrivePool.Service.exe of the component DrivePoolService. Such manipulation leads to permission issues. The attack must be carried out locally. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://vuldb.com/cve/CVE-2026-19191\nhttps://vuldb.com/submit/864539\nhttps://vuldb.com/vuln/386709",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:32"
+    },
+    {
+      "cve_id": "CVE-2026-14365",
+      "title": "高危漏洞: CVE-2026-14365 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-07 13:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.2.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to change the password of arbitrary user accounts, including administrators, which can be leveraged to gain access to those accounts.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3595807/truebooker-appointment-booking\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/afe10c10-cace-4ce4-a813-6fda04c8d3dd?source=cve",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:25"
+    },
+    {
+      "cve_id": "CVE-2026-14364",
+      "title": "高危漏洞: CVE-2026-14364 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-07 13:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to account takeover via improper password reset validation in all versions up to, and including, 1.2.3. This is due to the plugin not properly validating a user's identity before resetting their password. This makes it possible for unauthenticated attackers to reset the password of arbitrary user accounts, including administrators, and gain access to those accounts.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3595807/truebooker-appointment-booking\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f441477e-35b8-42ae-b71c-3fdba126021b?source=cve",
+      "source": "NVD",
+      "time": "2026-08-07 20:39:18"
+    },
+    {
       "cve_id": "CVE-2026-19190",
       "title": "高危漏洞: CVE-2026-19190 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -989,116 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/0115a640-7139-4ef9-81be-6ee5c755a601/",
       "source": "NVD",
       "time": "2026-08-07 10:07:06"
-    },
-    {
-      "cve_id": "CVE-2026-13399",
-      "title": "高危漏洞: CVE-2026-13399 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Payment Plugins for PayPal WooCommerce WordPress plugin before 2.0.20 does not have proper authorization checks on a REST endpoint, allowing unauthenticated users to bypass payments",
-      "refs": "https://wpscan.com/vulnerability/6ae19ba0-26ba-4ffa-94e3-3fe32cedcae1/",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:59"
-    },
-    {
-      "cve_id": "CVE-2026-12584",
-      "title": "高危漏洞: CVE-2026-12584 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Payment Gateway for Redsys & WooCommerce Lite WordPress plugin before 7.0.2 does not verify the authenticity of incoming payment-provider notifications for one of its payment methods before marking orders as paid, allowing unauthenticated attackers to forge a payment-confirmation callback and complete their own orders without paying.",
-      "refs": "https://wpscan.com/vulnerability/1ff08062-8f2c-4542-b795-fe82bfa6040c/",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:54"
-    },
-    {
-      "cve_id": "CVE-2026-11976",
-      "title": "高危漏洞: CVE-2026-11976 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-07 06:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "The official MonsterInsights Pro update distribution bucket (`monster-insights.s3.amazonaws.com`) was compromised. Both the current release (10.2.2) and the version MonsterInsights rolled back to (10.2.0) contain a malicious file, `class-system-check.php`. Three distinct variants were observed on 2026-06-11, all sharing the same AES-256-GCM key, confirming a single threat actor. The attacker retains write access to the S3 bucket and has been actively iterating on the payload throughout the day.",
-      "refs": "https://wpscan.com/vulnerability/d1250410-b919-4a90-8cf2-04031f9e5e2b/",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:50"
-    },
-    {
-      "cve_id": "CVE-2026-11803",
-      "title": "高危漏洞: CVE-2026-11803 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 06:16:44",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Read vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.",
-      "refs": "https://www.autodesk.com/products/autodesk-access/overview\nhttps://www.autodesk.com/trust/security-advisories/adsk-sa-2026-0011",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:45"
-    },
-    {
-      "cve_id": "CVE-2026-10599",
-      "title": "高危漏洞: CVE-2026-10599 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 06:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Integrate PhonePe with WooCommerce WordPress plugin through 1.2.1 does not validate that a verified payment transaction belongs to the order being marked as paid, nor does it verify the authenticity of its payment-completion request, allowing unauthenticated attackers to reuse a single valid transaction to mark arbitrary orders as paid and bypass payment.",
-      "refs": "https://wpscan.com/vulnerability/a1aae05d-63d0-4cde-8a9c-996f58f58e48/",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:41"
-    },
-    {
-      "cve_id": "CVE-2026-10524",
-      "title": "高危漏洞: CVE-2026-10524 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 06:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The CoCart WordPress plugin before 4.9.0 does not validate a user-supplied price value against the actual product price when items are added to the cart through one of its public REST API endpoints, allowing unauthenticated users to set arbitrary product prices and complete WooCommerce orders at manipulated totals.",
-      "refs": "https://wpscan.com/vulnerability/99986e13-d38d-4890-b935-9f6fd238ec61/",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:36"
-    },
-    {
-      "cve_id": "CVE-2025-14561",
-      "title": "高危漏洞: CVE-2025-14561 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-08-07 06:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:L",
-      "description": "In multi-tenant deployments, the Publisher REST APIs fail to enforce tenant isolation correctly. This allows a user in one tenant, possessing sufficient privileges to invoke these APIs, to perform operations that impact other tenants.\n\nThe vulnerability allows a privileged user to perform publisher operations such as exposing or modifying API Metadata in another tenant environment. This impact is only realized in multi-tenant deployments.",
-      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2025-4918/",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:31"
-    },
-    {
-      "cve_id": "CVE-2026-34502",
-      "title": "高危漏洞: CVE-2026-34502 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-06 23:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Heap-based Buffer Overflow vulnerability in Apache Portable Runtime Utility memcached client\n\nThis issue affects Apache Portable Runtime Utility: from 1.3.0 through 1.6.3.",
-      "refs": "https://lists.apache.org/thread/spk5643m4vq0mb8h5b9hz9gkp57ombl8\nhttp://www.openwall.com/lists/oss-security/2026/08/06/12",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:24"
-    },
-    {
-      "cve_id": "CVE-2026-34501",
-      "title": "高危漏洞: CVE-2026-34501 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-06 23:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Heap-based Buffer Overflow vulnerability in Apache Portable Runtime Utility redis client.\n\nThis issue affects Apache Portable Runtime Utility: from 1.6.0 through 1.6.3.\n\nUsers are recommended to upgrade to version 1.6.4, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/o8h6c7cq86fplxlnry6c3rn9x0ovq8mv\nhttp://www.openwall.com/lists/oss-security/2026/08/06/11",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:20"
-    },
-    {
-      "cve_id": "CVE-2026-34191",
-      "title": "高危漏洞: CVE-2026-34191 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-06 23:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Apache Portable Runtime Utility via apr_dbd_oracle provider.\n\nThis issue affects Apache Portable Runtime Utility: from 1.6.0 through 1.6.3",
-      "refs": "https://lists.apache.org/thread/8xch90zogywwpo5wnsf4o088mkxy4qtf\nhttp://www.openwall.com/lists/oss-security/2026/08/06/10",
-      "source": "NVD",
-      "time": "2026-08-07 10:06:14"
     }
   ]
 }
