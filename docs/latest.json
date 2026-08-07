@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-56793",
+      "title": "高危漏洞: CVE-2026-56793 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-08-07 21:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Dell OpenManage Server Administrator, versions prior to 11.1.0.2, contains an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+      "refs": "https://www.dell.com/support/kbdoc/en-us/000494958/dsa-2026-326-security-update-for-dell-openmanage-server-administrator-omsa-network-access-vulnerabilities",
+      "source": "NVD",
+      "time": "2026-08-07 23:44:17"
+    },
+    {
+      "cve_id": "CVE-2026-19173",
+      "title": "高危漏洞: CVE-2026-19173 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-07 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Out of bounds write in Skia in Google Chrome prior to 151.0.7922.109 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/538332338",
+      "source": "NVD",
+      "time": "2026-08-07 23:44:12"
+    },
+    {
+      "cve_id": "CVE-2026-19171",
+      "title": "高危漏洞: CVE-2026-19171 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-07 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Use after free in Media in Google Chrome on Windows prior to 151.0.7922.109 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/537832446",
+      "source": "NVD",
+      "time": "2026-08-07 23:44:06"
+    },
+    {
+      "cve_id": "CVE-2026-19166",
+      "title": "高危漏洞: CVE-2026-19166 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-07 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Use after free in Web Authentication in Google Chrome prior to 151.0.7922.109 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/536584251",
+      "source": "NVD",
+      "time": "2026-08-07 23:44:00"
+    },
+    {
+      "cve_id": "CVE-2026-19164",
+      "title": "高危漏洞: CVE-2026-19164 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-07 06:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient validation of untrusted input in Codecs in Google Chrome prior to 151.0.7922.109 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/536470854",
+      "source": "NVD",
+      "time": "2026-08-07 23:43:55"
+    },
+    {
+      "cve_id": "CVE-2026-19157",
+      "title": "高危漏洞: CVE-2026-19157 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-07 06:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Out of bounds write in ANGLE in Google Chrome on Android prior to 151.0.7922.109 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/534903095",
+      "source": "NVD",
+      "time": "2026-08-07 23:43:47"
+    },
+    {
+      "cve_id": "CVE-2026-19152",
+      "title": "高危漏洞: CVE-2026-19152 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-07 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient policy enforcement in Navigation in Google Chrome prior to 151.0.7922.109 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/531165110",
+      "source": "NVD",
+      "time": "2026-08-07 23:43:41"
+    },
+    {
+      "cve_id": "CVE-2026-19148",
+      "title": "高危漏洞: CVE-2026-19148 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-07 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Out of bounds write in GPU in Google Chrome on Linux prior to 151.0.7922.109 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/524460000",
+      "source": "NVD",
+      "time": "2026-08-07 23:43:33"
+    },
+    {
+      "cve_id": "CVE-2026-19143",
+      "title": "高危漏洞: CVE-2026-19143 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-08-07 06:16:56",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Insufficient validation of untrusted input in WebAPKs in Google Chrome on Android prior to 151.0.7922.109 allowed a local attacker to potentially perform a sandbox escape via a malicious file. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/517772612",
+      "source": "NVD",
+      "time": "2026-08-07 23:43:27"
+    },
+    {
+      "cve_id": "CVE-2026-19141",
+      "title": "高危漏洞: CVE-2026-19141 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-07 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Use after free in Resources in Google Chrome on Android prior to 151.0.7922.109 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/513602949",
+      "source": "NVD",
+      "time": "2026-08-07 23:43:20"
+    },
+    {
       "cve_id": "CVE-2026-15816",
       "title": "高危漏洞: CVE-2026-15816 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/Vladimir-tokarev-cyera/llama-cpp-security-patches",
       "source": "NVD",
       "time": "2026-08-07 10:07:57"
-    },
-    {
-      "cve_id": "CVE-2026-3418",
-      "title": "高危漏洞: CVE-2026-3418 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-07 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "The System REST API accepts user-supplied file uploads without enforcing sufficient validation on the file type or destination, allowing files to be written to arbitrary server-accessible locations. Exploitation requires authenticated administrative access with publisher privileges.\n\nSuccessful exploitation permits an authenticated publisher to upload files to server-accessible locations. Depending on the deployment environment and how uploaded files are handled, this could lead to the execution of uploaded content, potentially resulting in remote code execution.",
-      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5146/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:52"
-    },
-    {
-      "cve_id": "CVE-2026-3415",
-      "title": "高危漏洞: CVE-2026-3415 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-08-07 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:H",
-      "description": "The XML and schema validation functionalities within the SchemaValidator Mediator process XML input as part of validation flows. Under certain conditions, the XML parser allows the resolution of external entities when handling user-supplied XML content during validation operations. This behavior can occur when an attacker supplies crafted XML payloads to the relevant mediator flows with sufficient privileges.\n\nSuccessful exploitation may allow a highly privileged actor to read files accessible within the server hosting the affected product. Additionally, it may be possible to trigger outbound requests to unintended internal or external locations, depending on the server environment and network configuration. Specially crafted XML payloads can also lead to excessive resource consumption during parsing, impacting the availability of the product.",
-      "refs": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5001/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:48"
-    },
-    {
-      "cve_id": "CVE-2026-1289",
-      "title": "高危漏洞: CVE-2026-1289 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 06:17:00",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a Use-After-Free vulnerability. A malicious actor can leverage this vulnerability to cause a crash, disclose sensitive data, or execute arbitrary code in the context of the current process.",
-      "refs": "https://www.autodesk.com/products/autodesk-access/overview\nhttps://www.autodesk.com/trust/security-advisories/adsk-sa-2026-0011",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:43"
-    },
-    {
-      "cve_id": "CVE-2026-19111",
-      "title": "高危漏洞: CVE-2026-19111 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-07 06:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Insecure direct object reference in the mongodb_memory, elasticsearch_memory, and mem0_memory tools in Amazon Strands Agents Tools before 0.8.3 might allow remote authenticated users to access, modify, or delete memories belonging to other tenants by influencing the LLM to emit tool calls with a forged namespace parameter.\n\n\n\nTo remediate this issue, users should upgrade to version 0.8.3.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-077-aws/\nhttps://github.com/strands-agents/tools/security/advisories/GHSA-mpxq-953j-42m4\nhttps://pypi.org/project/strands-agents-tools/0.8.3/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:35"
-    },
-    {
-      "cve_id": "CVE-2026-19062",
-      "title": "高危漏洞: CVE-2026-19062 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-07 06:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in chiuwingyan house up to dea6bcceaebe2b364a5a209747f48ecc2b2dc670. This affects an unknown part of the file /paid/selectall.action. The manipulation of the argument zuname leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://fanatical-brain-9ba.notion.site/house-383f1a573df4808a87dbe70b85afce52\nhttps://vuldb.com/cve/CVE-2026-19062\nhttps://vuldb.com/submit/864345",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:31"
-    },
-    {
-      "cve_id": "CVE-2026-18367",
-      "title": "高危漏洞: CVE-2026-18367 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-08-07 06:16:50",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A privilege escalation vulnerability allows local users to execute arbitrary code as root via Sophos Endpoint for macOS older than version 2026.1.1 and Sophos Home for macOS older than version 10.11.6.",
-      "refs": "https://www.sophos.com/security-advisories/sophos-sa-20260806-ep-macos-lpe",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:25"
-    },
-    {
-      "cve_id": "CVE-2026-17032",
-      "title": "高危漏洞: CVE-2026-17032 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 06:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple Supsystic Pro plugins were distributed with malicious code through the vendor's compromised update server, allowing unauthenticated attackers to deploy a second-stage payload that exfiltrates credentials and other sensitive data and grants full control of affected sites.",
-      "refs": "https://wpscan.com/vulnerability/7ca5ad30-1792-4014-bfad-88911cd64713/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:20"
-    },
-    {
-      "cve_id": "CVE-2026-16620",
-      "title": "高危漏洞: CVE-2026-16620 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 06:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The WPC Name Your Price for WooCommerce WordPress plugin before 2.2.5 does not enforce its server-side price allowlist for products configured in \"Select\" price mode, allowing an unauthenticated visitor to add such a product to the cart at an arbitrary value below the merchant-defined allowed prices and commit a real order at that price (revenue loss / underpriced orders). This is a distinct, unfixed vector from CVE-2025-12115, whose 2.2.0 fix only addressed applying a custom price to products where Name Your Price is disabled and left the Select-mode allowlist unenforced through 2.2.4.",
-      "refs": "https://wpscan.com/vulnerability/71e6ccc0-5626-4cce-986e-5591f5df92bd/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:15"
-    },
-    {
-      "cve_id": "CVE-2026-16619",
-      "title": "高危漏洞: CVE-2026-16619 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 06:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The miniOrange 2FA WordPress plugin before 6.2.8 does not correctly limit the number of second-factor verification attempts, tracking them against a client-supplied identifier that is reissued on every login, allowing an attacker who already knows a user's password to guess the one-time code without limit and take over the account.",
-      "refs": "https://wpscan.com/vulnerability/54fc1229-3e68-4d21-baec-59a44cf12a65/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:11"
-    },
-    {
-      "cve_id": "CVE-2026-14812",
-      "title": "高危漏洞: CVE-2026-14812 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-07 06:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "The Premium SEO WordPress plugin is malicious: it ships an unauthenticated backdoor that creates a hidden administrator account and, in some builds, also enables remote code execution, server-side request forgery and arbitrary front-end script/content injection, giving an unauthenticated attacker full control of the affected site.",
-      "refs": "https://wpscan.com/vulnerability/0115a640-7139-4ef9-81be-6ee5c755a601/",
-      "source": "NVD",
-      "time": "2026-08-07 10:07:06"
     }
   ]
 }
