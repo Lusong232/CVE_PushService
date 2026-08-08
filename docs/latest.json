@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-71955",
+      "title": "高危漏洞: CVE-2026-71955 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formWsc interface. A remote attacker can inject arbitrary malicious commands into the localPin field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:51"
+    },
+    {
+      "cve_id": "CVE-2026-71954",
+      "title": "高危漏洞: CVE-2026-71954 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formL2tpv3ConfigSetup interface. A remote attacker can inject arbitrary malicious commands into the tunnelid and sessionid fields, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:47"
+    },
+    {
+      "cve_id": "CVE-2026-71953",
+      "title": "高危漏洞: CVE-2026-71953 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formNtp interface. A remote attacker can inject arbitrary malicious commands into the ntpServerIp1 field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:39"
+    },
+    {
+      "cve_id": "CVE-2026-71952",
+      "title": "高危漏洞: CVE-2026-71952 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formPinManageSetup interface. A remote attacker can inject arbitrary malicious commands into the oldPIn field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:35"
+    },
+    {
+      "cve_id": "CVE-2026-71951",
+      "title": "高危漏洞: CVE-2026-71951 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formIMEISetup interface. A remote attacker can inject arbitrary malicious commands into the IMEI_value field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:31"
+    },
+    {
+      "cve_id": "CVE-2026-71950",
+      "title": "高危漏洞: CVE-2026-71950 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formSmsManage interface. A remote attacker can inject arbitrary malicious commands into the action_value field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:27"
+    },
+    {
+      "cve_id": "CVE-2026-71949",
+      "title": "高危漏洞: CVE-2026-71949 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formUSSDSetup interface. A remote attacker can inject arbitrary malicious commands into the ussdValue and selectMenuValue fields, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:23"
+    },
+    {
+      "cve_id": "CVE-2026-71948",
+      "title": "高危漏洞: CVE-2026-71948 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formDebugDiagnosticRun interface. A remote attacker can inject arbitrary malicious commands into the host field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:16"
+    },
+    {
+      "cve_id": "CVE-2026-71947",
+      "title": "高危漏洞: CVE-2026-71947 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formTracerouteDiagnosticRun interface. A remote attacker can inject arbitrary malicious commands into the host and ipVer fields, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:12"
+    },
+    {
+      "cve_id": "CVE-2026-71946",
+      "title": "高危漏洞: CVE-2026-71946 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formPingDiagnosticRun interface. A remote attacker can inject arbitrary malicious commands into the host field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:08"
+    },
+    {
+      "cve_id": "CVE-2026-71945",
+      "title": "高危漏洞: CVE-2026-71945 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formLtefotaUpgradeFibocom interface. A remote attacker can inject arbitrary malicious commands into the fota_url field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router",
+      "source": "NVD",
+      "time": "2026-08-09 02:22:04"
+    },
+    {
+      "cve_id": "CVE-2026-71944",
+      "title": "高危漏洞: CVE-2026-71944 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 01:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and firmware version before 1.1.5_C1_202607071108 contain a command injection vulnerability in the /boafrm/formLtefotaUpgradeQuectel interface. A remote attacker can inject arbitrary malicious commands into the fota_url field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router\nhttps://www.vulncheck.com/advisories/d-link-dwr-m961-command-injection-via-boafrm-formltefotaupgradequectel",
+      "source": "NVD",
+      "time": "2026-08-09 02:21:59"
+    },
+    {
+      "cve_id": "CVE-2026-67620",
+      "title": "高危漏洞: CVE-2026-67620 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-08-09 00:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Flowise through 3.1.4 contains a server-side request forgery vulnerability in the SSRF guard implemented in httpSecurity.ts, where the DEFAULT_DENY_LIST omits the Oracle Cloud Infrastructure metadata endpoint 192.0.0.192 and the Alibaba Cloud metadata endpoint 100.100.100.200, allowing authenticated attackers to force the server to issue arbitrary GET requests to cloud instance metadata services. Attackers can send requests to the fetch-links API endpoint with a crafted URL parameter, bypassing deny-list validation including redirect-based bypasses, to reach instance metadata services and expose instance identity data and role credentials on Oracle Cloud Infrastructure or Alibaba Cloud deployments, with unauthenticated access possible when URL-fetching nodes exist in public chatflows.",
+      "refs": "https://flowiseai.com/sunset\nhttps://github.com/abdugafforov-bobur/CVE-2026-67620-poc\nhttps://www.vulncheck.com/advisories/flowise-ssrf-via-fetch-links-endpoint-incomplete-deny-list",
+      "source": "NVD",
+      "time": "2026-08-09 02:21:52"
+    },
+    {
+      "cve_id": "CVE-2026-42170",
+      "title": "高危漏洞: CVE-2026-42170 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-09 00:16:49",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A heap-based buffer overflow vulnerability exists in the GIMP DDS (DirectDraw Surface) file parser. When a crafted DDS file declares a D3D9 pixel format but sets a lower bits-per-pixel (bpp) value in the header, the loader allocates an undersized heap buffer. Subsequent pixel data consumption at the real format's stride causes a write past the heap buffer boundary, leading to heap metadata corruption and potential code execution.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-42170\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2461726",
+      "source": "NVD",
+      "time": "2026-08-09 02:21:46"
+    },
+    {
       "cve_id": "CVE-2026-19263",
       "title": "高危漏洞: CVE-2026-19263 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -945,160 +1099,6 @@
       "refs": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/460174866982035232",
       "source": "NVD",
       "time": "2026-08-07 20:40:00"
-    },
-    {
-      "cve_id": "CVE-2026-19196",
-      "title": "高危漏洞: CVE-2026-19196 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-07 14:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in SourceCodester Photo Share Website 1.0. The impacted element is an unknown function of the file /social/ajax.php?action=login. The manipulation of the argument email results in sql injection. The attack can be launched remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/CYSB123456789/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-19196\nhttps://vuldb.com/submit/864655",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:55"
-    },
-    {
-      "cve_id": "CVE-2026-19195",
-      "title": "高危漏洞: CVE-2026-19195 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 13:17:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in V-Secure Jingyun Antivirus 2.4.2.39. The affected element is an unknown function in the library ZyArk.sys of the component Kernel Driver. The manipulation leads to improper access controls. The attack needs to be performed locally. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/patrickt2017/research/issues/2\nhttps://vuldb.com/cve/CVE-2026-19195\nhttps://vuldb.com/submit/864561",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:50"
-    },
-    {
-      "cve_id": "CVE-2026-19193",
-      "title": "高危漏洞: CVE-2026-19193 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 13:17:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in Jiangmin Antivirus 21. Impacted is the function MessageNotifyCallback in the library kvcore.sys of the component Minifilter Port. Executing a manipulation can lead to improper access controls. The attack needs to be launched locally. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/patrickt2017/research/issues/1\nhttps://vuldb.com/cve/CVE-2026-19193\nhttps://vuldb.com/submit/864551",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:44"
-    },
-    {
-      "cve_id": "CVE-2026-19192",
-      "title": "高危漏洞: CVE-2026-19192 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 13:17:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in DeepCool DisplayService 1.2.12. This issue affects some unknown processing of the file C:\\DeepCool\\resources\\service\\x64\\DeepCoolDisplayService.exe. Performing a manipulation results in improper access controls. The attack must be initiated from a local position. The exploit is now public and may be used.",
-      "refs": "https://vuldb.com/cve/CVE-2026-19192\nhttps://vuldb.com/submit/864540\nhttps://vuldb.com/vuln/386710",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:38"
-    },
-    {
-      "cve_id": "CVE-2026-19191",
-      "title": "高危漏洞: CVE-2026-19191 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 13:17:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in StableBit DrivePool 2.3.13.1687. This vulnerability affects unknown code of the file C:\\Program Files\\StableBit\\DrivePool\\DrivePool.Service.exe of the component DrivePoolService. Such manipulation leads to permission issues. The attack must be carried out locally. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://vuldb.com/cve/CVE-2026-19191\nhttps://vuldb.com/submit/864539\nhttps://vuldb.com/vuln/386709",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:32"
-    },
-    {
-      "cve_id": "CVE-2026-14365",
-      "title": "高危漏洞: CVE-2026-14365 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 13:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.2.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to change the password of arbitrary user accounts, including administrators, which can be leveraged to gain access to those accounts.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3595807/truebooker-appointment-booking\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/afe10c10-cace-4ce4-a813-6fda04c8d3dd?source=cve",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:25"
-    },
-    {
-      "cve_id": "CVE-2026-14364",
-      "title": "高危漏洞: CVE-2026-14364 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 13:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to account takeover via improper password reset validation in all versions up to, and including, 1.2.3. This is due to the plugin not properly validating a user's identity before resetting their password. This makes it possible for unauthenticated attackers to reset the password of arbitrary user accounts, including administrators, and gain access to those accounts.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3595807/truebooker-appointment-booking\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f441477e-35b8-42ae-b71c-3fdba126021b?source=cve",
-      "source": "NVD",
-      "time": "2026-08-07 20:39:18"
-    },
-    {
-      "cve_id": "CVE-2026-19190",
-      "title": "高危漏洞: CVE-2026-19190 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 12:17:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in StableBit Scanner 2.6.13.4088. This affects an unknown part of the file C:\\Program Files (x86)\\StableBit\\Scanner\\Service\\Scanner.Service.exe of the component ScannerService. This manipulation causes permission issues. The attack is restricted to local execution. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://vuldb.com/cve/CVE-2026-19190\nhttps://vuldb.com/submit/864538\nhttps://vuldb.com/vuln/386708",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:50"
-    },
-    {
-      "cve_id": "CVE-2026-19189",
-      "title": "高危漏洞: CVE-2026-19189 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-07 11:16:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in Power Sofware PowerISO 9.3.0.0. Affected by this issue is some unknown functionality in the library C:\\Windows\\System32\\drivers\\scdemu.sys of the component Kernel Driver. The manipulation results in improper privilege management. The attack is only possible with local access. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://vuldb.com/cve/CVE-2026-19189\nhttps://vuldb.com/submit/864536\nhttps://vuldb.com/vuln/386707",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:46"
-    },
-    {
-      "cve_id": "CVE-2026-70332",
-      "title": "高危漏洞: CVE-2026-70332 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-07 08:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Server-side request forgery (ssrf) in Microsoft Office SharePoint allows an unauthorized attacker to perform spoofing over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70332",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:42"
-    },
-    {
-      "cve_id": "CVE-2026-68823",
-      "title": "高危漏洞: CVE-2026-68823 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-07 08:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Exposed dangerous method or function in Azure Confidential Ledger allows an authorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68823",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:38"
-    },
-    {
-      "cve_id": "CVE-2026-65668",
-      "title": "高危漏洞: CVE-2026-65668 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-07 08:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper access control in Microsoft Purview eDiscovery allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65668",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:33"
-    },
-    {
-      "cve_id": "CVE-2026-65667",
-      "title": "高危漏洞: CVE-2026-65667 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-07 08:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Missing authorization in Microsoft Teams allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65667",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:28"
-    },
-    {
-      "cve_id": "CVE-2026-63508",
-      "title": "高危漏洞: CVE-2026-63508 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-07 08:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Missing authentication for critical function in Microsoft Planetary Computer Pro allows an unauthorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63508",
-      "source": "NVD",
-      "time": "2026-08-07 15:02:20"
     }
   ]
 }
