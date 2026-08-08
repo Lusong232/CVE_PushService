@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-71958",
+      "title": "高危漏洞: CVE-2026-71958 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 02:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a buffer overflow vulnerability in the quicksetup.cgi interface. A remote attacker can write overly long strings to the test4, ssid2, and username fields and execute arbitrary commands by crafting a specific payload, or cause the device to crash.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router\nhttps://www.vulncheck.com/advisories/d-link-dwr-m961-buffer-overflow-via-quicksetup-cgi",
+      "source": "NVD",
+      "time": "2026-08-09 05:19:39"
+    },
+    {
+      "cve_id": "CVE-2026-71957",
+      "title": "高危漏洞: CVE-2026-71957 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 02:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a buffer overflow vulnerability in the app.cgi interface. A remote attacker can write an overly long string to the netAcc.addlist[].name field and execute arbitrary commands by crafting a specific payload, or cause the device to crash.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router\nhttps://www.vulncheck.com/advisories/d-link-dwr-m961-buffer-overflow-via-app-cgi",
+      "source": "NVD",
+      "time": "2026-08-09 05:19:35"
+    },
+    {
+      "cve_id": "CVE-2026-71956",
+      "title": "高危漏洞: CVE-2026-71956 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-09 02:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a command injection vulnerability in the app.cgi interface. A remote attacker can inject arbitrary malicious commands into the netDig.ping.dst field, resulting in command execution with root privileges.",
+      "refs": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10512\nhttps://www.dlink.com/middle-east/en/products/dwr-m961-4g-ac1200-lte-router\nhttps://www.vulncheck.com/advisories/d-link-dwr-m961-command-injection-via-app-cgi",
+      "source": "NVD",
+      "time": "2026-08-09 05:19:30"
+    },
+    {
       "cve_id": "CVE-2026-71955",
       "title": "高危漏洞: CVE-2026-71955 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1066,39 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/08/stable-channel-update-for-desktop_01193673229.html\nhttps://issues.chromium.org/issues/513602949",
       "source": "NVD",
       "time": "2026-08-07 23:43:20"
-    },
-    {
-      "cve_id": "CVE-2026-15816",
-      "title": "高危漏洞: CVE-2026-15816 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 19:17:05",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in dracut. The die() error-handling function writes its message into a shell script under the initramfs emergency-hook directory without properly shell-quoting it. When the message contains data derived from the DHCP ROOT_PATH option, an attacker on the adjacent network who controls a rogue DHCP server can inject a command-substitution sequence that executes as root the next time dracut sources its emergency hook scripts during standard boot-failure handling.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-15816\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2459963\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2500889",
-      "source": "NVD",
-      "time": "2026-08-07 20:40:09"
-    },
-    {
-      "cve_id": "CVE-2026-9169",
-      "title": "高危漏洞: CVE-2026-9169 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-07 17:16:59",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "DLL Search Order Hijacking in LUCID Vision Labs Arena SDK 1.0.80.49 on Windows allows a local attacker to execute arbitrary code with the privileges of the application by placing a malicious DLL in a user-controlled directory listed in the PATH environment variable, which the SDK traverses when a required dependency is not found locally.",
-      "refs": "https://arenasdk.s3.us-west-2.amazonaws.com/ArenaSDK_ReleaseNotes_v1.0.85.11.txt\nhttps://thinklucid.com/downloads-hub/",
-      "source": "NVD",
-      "time": "2026-08-07 20:40:05"
-    },
-    {
-      "cve_id": "CVE-2026-49007",
-      "title": "高危漏洞: CVE-2026-49007 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-07 16:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "By accessing unencrypted information in the device firmware, an attacker can obtain the initial login credentials for the device's web interface.",
-      "refs": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/460174866982035232",
-      "source": "NVD",
-      "time": "2026-08-07 20:40:00"
     }
   ]
 }
