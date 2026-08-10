@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19389",
+      "title": "高危漏洞: CVE-2026-19389 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-10 11:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+      "description": "Multiple integer overflow and underflow vulnerabilities were found in the GStreamer gst-plugins-ugly ASF demuxer (asfdemux) when parsing header objects from crafted ASF, WMV, or WMA files. Insufficient validation of attacker-controlled length and size values can bypass bounds checks and cause out-of-bounds heap reads. This can result in application crash, denial of service, or limited information disclosure when untrusted media is processed.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-19389\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2513016\nhttps://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/12233",
+      "source": "NVD",
+      "time": "2026-08-10 15:09:46"
+    },
+    {
+      "cve_id": "CVE-2026-19387",
+      "title": "高危漏洞: CVE-2026-19387 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-08-10 11:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+      "description": "A heap out-of-bounds write vulnerability was found in the GStreamer gst-plugins-bad adpcmdec element when decoding IMA/DVI ADPCM audio. Insufficient validation of the per-block sample count for multi-channel streams allows a crafted WAV file to cause writes beyond the allocated output buffer. This can lead to application crash, denial of service, memory corruption, or potentially arbitrary code execution when untrusted media is processed.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-19387\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2513015\nhttps://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/12235",
+      "source": "NVD",
+      "time": "2026-08-10 15:09:40"
+    },
+    {
+      "cve_id": "CVE-2026-19384",
+      "title": "高危漏洞: CVE-2026-19384 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-10 11:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in SourceCodester Simple Doctors Appointment System 1.0. The affected element is an unknown function of the file /admin/ajax.php?action=set_appointment. This manipulation of the argument ID causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/HZFW2026/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-19384\nhttps://vuldb.com/submit/867120",
+      "source": "NVD",
+      "time": "2026-08-10 15:09:34"
+    },
+    {
+      "cve_id": "CVE-2026-19381",
+      "title": "高危漏洞: CVE-2026-19381 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-10 09:16:48",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Kingston FURY CTRL RGB Control Software 2.0.65.0. The impacted element is an unknown function in the library NTIOLib_KSFX.sys of the component Driver. Performing a manipulation results in improper privilege management. The attack needs to be approached locally. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://drive.google.com/file/d/19a8Qix5YVMNy8TH5k4PWiu0FQLtPRsJp/view?usp=sharing;https://drive.google.com/file/d/1Vqw9d9jkKbl4r2dC1Ry5m_1uzL5JV25H/view?usp=sharing\nhttps://vuldb.com/cve/CVE-2026-19381\nhttps://vuldb.com/submit/866727",
+      "source": "NVD",
+      "time": "2026-08-10 15:09:30"
+    },
+    {
+      "cve_id": "CVE-2026-19379",
+      "title": "高危漏洞: CVE-2026-19379 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-10 09:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in EFM ipTIME AX8004M 15.09.0. Impacted is the function popen of the file /cgi/d.cgi of the component CGI Endpoint. This manipulation of the argument fname causes os command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/seting-and-break/vulnerability-reports/blob/main/ipTIME_AX8004M_Vulnerability_Report.md\nhttps://vuldb.com/cve/CVE-2026-19379\nhttps://vuldb.com/submit/866635",
+      "source": "NVD",
+      "time": "2026-08-10 15:09:26"
+    },
+    {
+      "cve_id": "CVE-2026-19376",
+      "title": "高危漏洞: CVE-2026-19376 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-10 08:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Uasoft Badaso 3.0.0-alpha. This vulnerability affects the function ApiRequest::class of the file src/Routes/api.php of the component File API. The manipulation leads to permission issues. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/uasoft-indonesia/badaso/issues/1100\nhttps://vuldb.com/cve/CVE-2026-19376\nhttps://vuldb.com/submit/866302",
+      "source": "NVD",
+      "time": "2026-08-10 15:09:18"
+    },
+    {
       "cve_id": "CVE-2026-19374",
       "title": "高危漏洞: CVE-2026-19374 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1033,72 +1099,6 @@
       "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-clamav-WuuvVd26",
       "source": "NVD",
       "time": "2026-08-08 02:40:29"
-    },
-    {
-      "cve_id": "CVE-2026-20337",
-      "title": "高危漏洞: CVE-2026-20337 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-08 01:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A vulnerability in the zip archive parser of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device.\r\n\r\nThis vulnerability is due to improper boundary checks for content in zip files during scanning, which may result in an out-of-bounds write condition. An attacker could exploit this vulnerability by submitting a crafted zip file for scanning. A successful exploit could allow the attacker to cause the ClamAV scanning process to terminate, resulting in a DoS condition on the affected software.",
-      "refs": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-clamav-WuuvVd26",
-      "source": "NVD",
-      "time": "2026-08-08 02:40:24"
-    },
-    {
-      "cve_id": "CVE-2026-19211",
-      "title": "高危漏洞: CVE-2026-19211 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-08 01:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in SourceCodester Photo Share Website 1.0. This affects an unknown function of the file /social/ajax.php?action=signup. Performing a manipulation of the argument email results in sql injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
-      "refs": "https://github.com/gensnext/cve/issues/3\nhttps://vuldb.com/cve/CVE-2026-19211\nhttps://vuldb.com/submit/864869",
-      "source": "NVD",
-      "time": "2026-08-08 02:40:20"
-    },
-    {
-      "cve_id": "CVE-2026-19264",
-      "title": "高危漏洞: CVE-2026-19264 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 23:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Postiz is an open-source social media scheduling tool. The route that serves locally stored media joins URL-supplied path segments onto the upload directory and streams the file without normalising the path or confining it to that directory, and the route requires no authentication. Raw dot-segments are collapsed before routing, but URL-encoded separators survive route matching and are decoded only once they reach the handler, restoring the traversal at the filesystem call. An unauthenticated remote attacker can therefore read any file readable by the application process, including the process environment, which exposes the JWT signing secret, the database connection string, and connected provider and billing secrets. Because session tokens are signed with that secret and carry no expiry, this allows forging a non-expiring session as any user, including an administrator, without a password.",
-      "refs": "https://gadvisory.org/advisories/PSA-2026-TH12B7\nhttps://github.com/gitroomhq/postiz-app/commit/7936062\nhttps://github.com/gitroomhq/postiz-app/releases/tag/v2.22.1",
-      "source": "NVD",
-      "time": "2026-08-08 02:40:15"
-    },
-    {
-      "cve_id": "CVE-2022-4995",
-      "title": "高危漏洞: CVE-2022-4995 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 23:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Weaver (Fanwei) E-cology 9.0 versions prior to 10.52 contain a file upload vulnerability that allows a remote, unauthenticated attacker to upload arbitrary files, including JSP webshells, by submitting a multipart/form-data POST request to /workrelate/plan/util/uploaderOperate.jsp with arbitrary secId and plandetailid field values. Successful exploitation results in remote code execution under the privileges of the application server process. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14 (UTC).",
-      "refs": "https://ch0x01e.github.io/post/ecology9-wen-jian-shang-chuan-fen-xi/\nhttps://cn-sec.com/archives/1208148.html\nhttps://github.com/gmh5225/CVE-2022-HW-POC/blob/main/%E6%B3%9B%E5%BE%AEOA%20uploaderOperate.jsp%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.md",
-      "source": "NVD",
-      "time": "2026-08-08 02:40:10"
-    },
-    {
-      "cve_id": "CVE-2026-67689",
-      "title": "高危漏洞: CVE-2026-67689 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 06:18:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SQL Injection vulnerability in FineAdmin V1.0 allows a remote attacker to execute arbitrary code via the `field` and `order` parameters in paginated list endpoints",
-      "refs": "https://github.com/qflksheep/CVE-2026-67689-FineAdmin.Mvc-vulnerability/blob/main/CVE-2026-67689-ORDER%20BY%20Clause%20SQL%20Injection\nhttps://github.com/qflksheep/FineAdmin.Mvc-ORDER-BY-Clause-SQL-Injection/blob/main/README.md\nhttps://github.com/qflksheep/FineAdmin.Mvc-ORDER-BY-Clause-SQL-Injection/blob/main/README.md",
-      "source": "NVD",
-      "time": "2026-08-08 02:40:03"
-    },
-    {
-      "cve_id": "CVE-2026-67688",
-      "title": "高危漏洞: CVE-2026-67688 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-07 06:18:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "ICS-Park Smart Park Management System v2.0 contains an unrestricted file upload vulnerability in the file upload module. This allows a remote attacker to execute arbitrary code.",
-      "refs": "https://github.com/qflksheep/CVE-2026-67687-ICS-Park-Smart-Park-Management-System-v2.0/blob/main/CVE-2026-67688\nhttps://github.com/qflksheep/ICS-Park-Smart-Park-Management-System-v2.0-POC/blob/main/xsspoc\nhttps://github.com/qflksheep/ICS-Park-Smart-Park-Management-System-v2.0-POC/blob/main/xsspoc",
-      "source": "NVD",
-      "time": "2026-08-08 02:39:58"
     }
   ]
 }
