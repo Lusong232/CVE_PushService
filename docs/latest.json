@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-72731",
+      "title": "高危漏洞: CVE-2026-72731 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-11 01:17:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Discourse is an open-source discussion platform. From 2026.1.0-latest until 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1, anyone able to run a parameterized Data Explorer query, including non-staff members of a group a query is shared with, could craft parameter values that escaped the intended query and executed arbitrary SQL through plugins/discourse-data-explorer/lib/discourse_data_explorer/data_explorer.rb and plugins/discourse-data-explorer/lib/discourse_data_explorer/workflows/sql_action/v1.rb. Recursive parameter interpolation allowed one parameter value to introduce another parameter, and parameter declarations in SQL comments could be used to inject a statement. Queries run in a read-only transaction, so data could not be modified, but any table could be read. This issue is fixed in versions 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0-latest.1.",
+      "refs": "https://github.com/discourse/discourse/commit/2bdab888cef561348470dee204a4879d83fbb5c3\nhttps://github.com/discourse/discourse/commit/3dc7f0da7aa18548281152e285244efb1cc8ad0d\nhttps://github.com/discourse/discourse/commit/674ba6fc64184fd7d8e21183c5d8cb22367faa6e",
+      "source": "NVD",
+      "time": "2026-08-11 02:42:30"
+    },
+    {
+      "cve_id": "CVE-2026-72730",
+      "title": "高危漏洞: CVE-2026-72730 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-08-11 01:17:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the Rich Text Editor rendered a chat-transcript username as HTML, allowing stored cross-site scripting. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
+      "refs": "https://github.com/discourse/discourse/commit/32920affe4ad97b461ca2ae2f664c5fefc374baf\nhttps://github.com/discourse/discourse/commit/3fb1e8ead0d4f48d2cf55c8110825c7e8a6a45f5\nhttps://github.com/discourse/discourse/commit/7eb35d076ab9b6a612e86182336ce9787ce402ea",
+      "source": "NVD",
+      "time": "2026-08-11 02:42:23"
+    },
+    {
+      "cve_id": "CVE-2026-71576",
+      "title": "高危漏洞: CVE-2026-71576 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-08-11 01:17:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:L",
+      "description": "A flaw was found in multicluster-global-hub. The manager component improperly validates the source identity of incoming CloudEvents on Kafka status topics. A remote attacker, after compromising a managed hub and obtaining its Kafka client certificate, can manipulate the self-asserted source identity. This allows the attacker to falsify or delete critical data, such as compliance, inventory, and cluster health information, belonging to other hubs in the database.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-71576\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2512513",
+      "source": "NVD",
+      "time": "2026-08-11 02:42:19"
+    },
+    {
+      "cve_id": "CVE-2026-66738",
+      "title": "高危漏洞: CVE-2026-66738 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-11 00:19:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SPIP before 4.4.18 contains a code injection vulnerability in SQLite-backed installations. The navigation menu endpoint improperly handles array-typed user input, which bypasses input sanitization and allows the value to break out of an internal quoted string context when evaluated as PHP. An authenticated attacker with at minimum editor (redacteur) privileges can submit a single crafted GET request to /ecrire/?exec=navigation to execute arbitrary OS commands in the web server process. MySQL-backed installations are not affected.",
+      "refs": "https://blog.spip.net/Mise-a-jour-critique-de-securite-sortie-de-SPIP-4-4-18.html\nhttps://www.vulncheck.com/advisories/spip-code-injection-via-navigation-endpoint-on-sqlite",
+      "source": "NVD",
+      "time": "2026-08-11 02:42:15"
+    },
+    {
+      "cve_id": "CVE-2026-48048",
+      "title": "高危漏洞: CVE-2026-48048 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-11 00:19:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "XWiki Platform is a generic wiki platform. XWiki discovered that the patch for GHSA-5cf8-vrr8-8hjm was insufficient. Starting with version 6.2.1 and prior to versions 18.0.0RC1, 17.10.13, 17.4.9 and 16.10.17, with slightly modified parameters to the `LiveTableResults`, it is still possible to discover password hashes one bit at a time, so with 768 requests, the full password salt and hash can be retrieved of a user. The check for password (and email properties) has been adjusted in XWiki 18.0.0RC1, 17.10.13, 17.4.9 and 16.10.17. As a workaround, the patch can be applied manually to the wiki page `XWiki.LiveTableResultsMacros`.",
+      "refs": "https://github.com/xwiki/xwiki-platform/commit/c4442716b02ffcdaa9d5e703b1db6203e36456fa\nhttps://github.com/xwiki/xwiki-platform/security/advisories/GHSA-rh28-mqj4-8x59\nhttps://jira.xwiki.org/browse/XWIKI-23875",
+      "source": "NVD",
+      "time": "2026-08-11 02:42:11"
+    },
+    {
+      "cve_id": "CVE-2026-47754",
+      "title": "高危漏洞: CVE-2026-47754 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-08-11 00:19:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Metacat is data repository software that helps researchers preserve, share, and discover data. Versions 2.x through 2.19.1 and all 1.x versions contain an unauthenticated path traversal in the `archiveEntryName` parameter of the `action=read` endpoint that is part of the original 1.x Metacat API. `ArchiveHandler.readArchiveEntry()` concatenates the user-supplied parameter into a filesystem path without validation, and the surrounding `hasReadPermission()` check is commented out. An unauthenticated remote attacker can read any file accessible to the Tomcat process by sending a single GET request. Proof-of-concept exploits have been demonstrated and verified against this vulnerability, and it should be considered easily exploitable for any Metacat deployment < 3.0.0 by any user with access to the 1.x API. Through this vulnerability, production 2.x deployments are exposed to credential theft, client certificate and private key exfiltration enabling member node impersonation within the federation, embargoed research data disclosure, and broad system reconnaissance. Given Metacat's deployment footprint across the DataONE network of repositories and federally funded research programs, the population of exposed 2.x instances is non-trivial. The vulnerability was eliminated in Metacat version 3.0.0 and after by eliminating the entire Metacat 1.x API that exposed this vulnerability. The vulnerability was remediated in April 2024 with the release of Metacat 3.0.0, which removed the legacy Metacat API including ArchiveHandler.java. The commit message and issue reference architectural cleanup, not a security fix, and no advisory or CVE was issued. The 2.x branch was not and will not be backported, as is standard practice in Metacat, which only supports the most current release. 2.19.1 remains vulnerable with identical code and is beyond its supported lifetime. As a workaround, disable or restrict 1.x API servlets. Because the vulnerable 1.x API is no longer used or necessary in most Metacat deployments, restricting access to the old API endpoints can reduce or eliminate exposure for 2.19.x deployments.  After removing those features, restart Tomcat or whichever software is hosting the servlets.",
+      "refs": "https://github.com/NCEAS/metacat/commit/07e034b2bbf7029e28af32f472f4d70ea6b5ab1b\nhttps://github.com/NCEAS/metacat/issues/1365\nhttps://github.com/NCEAS/metacat/pull/1713",
+      "source": "NVD",
+      "time": "2026-08-11 02:42:07"
+    },
+    {
+      "cve_id": "CVE-2026-63106",
+      "title": "高危漏洞: CVE-2026-63106 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-10 22:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "ReadyEcommerce before 4.5.2 contains an unauthenticated SQL injection vulnerability in the product listing API where the rating parameter from the products endpoint is concatenated directly into a MySQL HAVING clause without parameterization in ProductController.php. Attackers can perform time-based blind SQL injection through the unsanitized rating parameter to extract the full database contents, including user credentials and administrator password hashes, with potential additional file system access due to the database connection running as root.",
+      "refs": "https://codecanyon.net/item/ready-ecommerce-complete-multi-vendor-ecommerce-mobile-app-website-rider-app-with-seller-app/52519302\nhttps://www.vulncheck.com/advisories/readyecommerce-unauthenticated-sql-injection-via-productcontroller-php",
+      "source": "NVD",
+      "time": "2026-08-11 02:41:59"
+    },
+    {
       "cve_id": "CVE-2026-72692",
       "title": "高危漏洞: CVE-2026-72692 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-gv23-xrm3-8c62\nhttps://github.com/pypa/advisory-database/tree/main/vulns/praisonai-platform/PYSEC-2026-2935.yaml",
       "source": "NVD",
       "time": "2026-08-08 08:53:15"
-    },
-    {
-      "cve_id": "CVE-2026-66061",
-      "title": "高危漏洞: CVE-2026-66061 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-08-08 05:17:29",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-      "description": "Home Assistant is open source home automation software focused on local control and privacy.  Prior to 2026.5.0, the iOS Companion app treats tag links (NFC or QR) delivered through an OS-level routing mechanism such as iOS universal links as if they were physically scanned, without validating the calling app or prompting the user. As a result, any untrusted app on the device can forward an arbitrary tag to Home Assistant, causing it to execute the associated automation as though a legitimate user had scanned an authorized tag. This allows silent, unattended automation execution by untrusted local callers. This issue has been fixed in version 2026.5.0.",
-      "refs": "https://github.com/home-assistant/core/security/advisories/GHSA-j23v-9672-677j\nhttps://github.com/home-assistant/iOS/commit/45e05e6666c74fdbea44cc4d6fb103043fff6fd9",
-      "source": "NVD",
-      "time": "2026-08-08 08:53:08"
-    },
-    {
-      "cve_id": "CVE-2026-66060",
-      "title": "高危漏洞: CVE-2026-66060 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-08-08 05:17:29",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-      "description": "Home Assistant is open source home automation software focused on local control and privacy.  Prior to 2026.5.3,  the Companion app treats tag links (NFC or QR) delivered through an OS-level routing mechanism as if they were physically scanned, without validating the calling app or prompting the user. As a result, any untrusted app on the device can forward an arbitrary tag to Home Assistant, causing it to execute the associated automation as though a legitimate user had scanned an authorized tag. This allows silent, unattended automation execution by untrusted local callers. This issue is fixed in version 2026.8.1.",
-      "refs": "https://github.com/home-assistant/android/commit/968b49c58e4eba4d06371a3f6e73198ec6c8d4a7\nhttps://github.com/home-assistant/core/security/advisories/GHSA-2xqv-hwrf-983f",
-      "source": "NVD",
-      "time": "2026-08-08 08:53:03"
-    },
-    {
-      "cve_id": "CVE-2026-50540",
-      "title": "高危漏洞: CVE-2026-50540 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-08 05:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Prior to version 4.0.0, kata-runtime is vulnerable to host code execution via an unvalidated configuration path annotation. The runtime accepts an arbitrary io.katacontainers.config_path pod annotation and loads the referenced host TOML file without restriction. As a result, a pod user who can place a file at a host-visible path can supply a configuration that selects an attacker-controlled hypervisor or virtio-fs daemon binary, executing code as root on the host. This issue is fixed in version 4.0.0.",
-      "refs": "https://github.com/kata-containers/kata-containers/commit/03cc670076099530f4e1e9cb22849afdafb20f65\nhttps://github.com/kata-containers/kata-containers/security/advisories/GHSA-mp2j-xm59-qfgw",
-      "source": "NVD",
-      "time": "2026-08-08 08:52:59"
-    },
-    {
-      "cve_id": "CVE-2026-65819",
-      "title": "高危漏洞: CVE-2026-65819 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-08 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "gopacket provides packet processing capabilities for Go. Through version 1.7.0, multiple layer decoders use attacker-controlled lengths, counts, or offsets before validating them against packet buffers, allowing a crafted packet decoded through DecodingLayerParser or DecodeFromBytes to trigger an unrecovered panic and remotely deny service.  A patch commit is available at 210f25f.",
-      "refs": "https://github.com/gopacket/gopacket/commit/210f25fb9b3ca1af2eb649936f78ad6991b6c9c5\nhttps://github.com/gopacket/gopacket/releases/tag/v1.7.0\nhttps://github.com/gopacket/gopacket/security/advisories/GHSA-8mcr-459q-5mx2",
-      "source": "NVD",
-      "time": "2026-08-08 08:52:55"
-    },
-    {
-      "cve_id": "CVE-2026-62296",
-      "title": "高危漏洞: CVE-2026-62296 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-08 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.11, XhtmlParser.java imposes no maximum element nesting depth, so a deeply nested text.div narrative triggers unbounded recursion between parseElementInner() and parseElement(), raising a StackOverflowError. An attacker who can submit FHIR resources containing such narratives can thus crash a parsing or validation worker thread, affecting validator services and any application that parses attacker-supplied FHIR JSON or XML. This issue is fixed in version 6.9.11.",
-      "refs": "https://github.com/hapifhir/org.hl7.fhir.core/commit/396f447500407693d6ae1e64db59782862ca7506\nhttps://github.com/hapifhir/org.hl7.fhir.core/security/advisories/GHSA-5v24-q6x8-hc38",
-      "source": "NVD",
-      "time": "2026-08-08 08:52:48"
-    },
-    {
-      "cve_id": "CVE-2026-62295",
-      "title": "高危漏洞: CVE-2026-62295 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-08 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.11, the JSON utility parser in org.hl7.fhir.utilities.json.parser.JsonParser enforces no maximum nesting depth for arrays or objects. As a result, a small but deeply nested, syntactically valid FHIR JSON document can trigger unbounded readArray() or readObject() recursion, raising a StackOverflowError before structural validation runs. An attacker who can submit JSON resources for validation can thus crash the request thread, and services that do not isolate StackOverflowError safely may experience worker loss or process instability — a denial-of-service condition. This issue is fixed in version 6.9.11.",
-      "refs": "https://github.com/hapifhir/org.hl7.fhir.core/commit/396f447500407693d6ae1e64db59782862ca7506\nhttps://github.com/hapifhir/org.hl7.fhir.core/security/advisories/GHSA-2cq7-hg49-56gc",
-      "source": "NVD",
-      "time": "2026-08-08 08:52:43"
-    },
-    {
-      "cve_id": "CVE-2026-61808",
-      "title": "高危漏洞: CVE-2026-61808 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-08 04:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LightRAG provides simple and fast retrieval-augmented generation. Through version 1.5.4, the LightRAG API server binds to all network interfaces with authentication disabled by default, allowing an unauthenticated network attacker to read indexed document content, upload or delete documents, modify the knowledge graph, cancel pipelines, clear caches, and consume LLM resources. This issue is mitigated in version 1.5.5rc1.",
-      "refs": "https://github.com/HKUDS/LightRAG/commit/0bd102401b4b28a02664e5b6af476bf7a4470292\nhttps://github.com/HKUDS/LightRAG/security/advisories/GHSA-mmg5-8x8q-v934",
-      "source": "NVD",
-      "time": "2026-08-08 08:52:38"
     }
   ]
 }
