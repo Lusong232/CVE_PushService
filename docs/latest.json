@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19424",
+      "title": "高危漏洞: CVE-2026-19424 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-11 11:17:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Chiline Cloud developed by Inventec Appliances has a Insecure Direct Object Reference vulnerability. Unauthenticated remote attackers can modify a specific parameter to read other users' sensitive data.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11097-ee412-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11096-0f578-1.html",
+      "source": "NVD",
+      "time": "2026-08-11 14:48:15"
+    },
+    {
+      "cve_id": "CVE-2026-66763",
+      "title": "高危漏洞: CVE-2026-66763 (CVSS 7.9)",
+      "cvss_score": 7.9,
+      "published_date": "2026-08-11 09:17:23",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "description": "SAP BusinessObjects Business Intelligence Platform stores certain sensitive credentials associated with user objects using a hard-coded cryptographic key. An attacker with high privileges and local access to the server could retrieve these objects and decrypt the stored credentials. Successful exploitation could allow the attacker to obtain sensitive authentication data and modify protected information, resulting in a high impact on confidentiality and integrity. There is no impact on availability.",
+      "refs": "https://me.sap.com/notes/3756565\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:48:10"
+    },
+    {
+      "cve_id": "CVE-2026-58243",
+      "title": "高危漏洞: CVE-2026-58243 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-11 09:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SAP ABAP Development Tools does not perform necessary authorization checks for certain functionality, allowing an attacker with low privileges to execute unauthorized database operations against SAP NetWeaver AS ABAP. Successful exploitation could allow the attacker to read sensitive data, modify application data, and disrupt access for legitimate users, resulting in high impact on confidentiality, integrity, and availability.",
+      "refs": "https://me.sap.com/notes/3772411\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:48:06"
+    },
+    {
+      "cve_id": "CVE-2026-58230",
+      "title": "高危漏洞: CVE-2026-58230 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-08-11 09:17:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
+      "description": "SAP Approuter does not sufficiently validate certain token content under specific configurations. An unauthenticated attacker could send a specially crafted token to cause sensitive credential material to be sent to an attacker-controlled destination. The attack complexity is high due to non-default preconditions required in the target environment. This results in a high impact on confidentiality and a low impact on integrity and availability.",
+      "refs": "https://me.sap.com/notes/3786038\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:47:58"
+    },
+    {
+      "cve_id": "CVE-2026-44765",
+      "title": "高危漏洞: CVE-2026-44765 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-11 09:17:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Due to a Missing Authorization Check vulnerability in SAP Manufacturing Integration and Intelligence, an unauthenticated remote attacker could access scheduling-related application functions without proper authorization validation. Successful exploitation could allow the attacker to retrieve, create, modify, or delete application-managed scheduling data, causing a low impact on confidentiality, integrity, and availability.",
+      "refs": "https://me.sap.com/notes/3758657\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:47:51"
+    },
+    {
+      "cve_id": "CVE-2026-44764",
+      "title": "高危漏洞: CVE-2026-44764 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-11 09:17:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Due to a Missing Authorization Check vulnerability in SAP Manufacturing Integration and Intelligence, an unauthenticated attacker could send crafted requests to the Cost Servlet using specific parameter values. If processed by the application, these requests enable access to backend operations. Successful exploitation could allow the attacker to read, create, modify, or delete application-managed business data, resulting in a limited impact on the confidentiality, integrity, and availability of the affected system.",
+      "refs": "https://me.sap.com/notes/3758910\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:47:44"
+    },
+    {
+      "cve_id": "CVE-2026-44763",
+      "title": "高危漏洞: CVE-2026-44763 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-08-11 09:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SAP Manufacturing Integration and Intelligence allows a privileged attacker to exploit insufficient file path validation in certain functions using specially crafted input. Exploitation also requires a legitimate user to subsequently access the attacker-influenced content and depends on conditions outside the attacker�s control. Successful exploitation could allow files to be written outside the intended directory and affect other components, resulting in a high impact on confidentiality, integrity, and availability.",
+      "refs": "https://me.sap.com/notes/3759854\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:47:36"
+    },
+    {
+      "cve_id": "CVE-2026-44758",
+      "title": "高危漏洞: CVE-2026-44758 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-11 09:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SAP Manufacturing Integration and Intelligence (MII) allows an attacker with high privileges to submit specially crafted input to certain affected functionality, which is processed without sufficient validation. Successful exploitation could allow the attacker to execute arbitrary commands on the underlying operating system, resulting in high impact on confidentiality, integrity, and availability of the application.",
+      "refs": "https://me.sap.com/notes/3758900\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:47:28"
+    },
+    {
+      "cve_id": "CVE-2026-34265",
+      "title": "高危漏洞: CVE-2026-34265 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-11 09:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SAP NetWeaver Application Server ABAP allows an unauthenticated attacker to exploit logical errors in DIAG protocol parsing, resulting in memory corruption. This vulnerability could potentially disclose sensitive system information or crash the system, leading to a high impact on the confidentiality, integrity, and availability of the application.",
+      "refs": "https://me.sap.com/notes/3714806\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-08-11 14:47:22"
+    },
+    {
       "cve_id": "CVE-2026-8718",
       "title": "高危漏洞: CVE-2026-8718 (CVSS 8.4)",
       "cvss_score": 8.4,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/dulldusk/phpfm\nhttps://github.com/dulldusk/phpfm/blob/master/index.php",
       "source": "NVD",
       "time": "2026-08-10 23:52:20"
-    },
-    {
-      "cve_id": "CVE-2026-72592",
-      "title": "高危漏洞: CVE-2026-72592 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-10 19:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An unrestricted file upload vulnerability in dulldusk/phpfm through 1.8.0 allows an unauthenticated remote attacker to execute arbitrary PHP code on the server. The application ships with an empty upload extension filter ( = array) and no authentication enabled by default (auth_pass is empty string), allowing an unauthenticated attacker to upload a PHP webshell and execute it by browsing to the uploaded path.",
-      "refs": "https://github.com/dulldusk/phpfm\nhttps://github.com/dulldusk/phpfm/blob/master/index.php",
-      "source": "NVD",
-      "time": "2026-08-10 23:52:12"
-    },
-    {
-      "cve_id": "CVE-2026-72591",
-      "title": "高危漏洞: CVE-2026-72591 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-08-10 19:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "A server-side request forgery (SSRF) vulnerability in gabehf/Koito through v0.3.2 allows an authenticated user to make the server perform HTTP requests to arbitrary internal or external hosts by supplying a crafted image_url value in the PATCH /apis/web/v1/album/{id}/image endpoint.",
-      "refs": "https://github.com/gabehf/Koito",
-      "source": "NVD",
-      "time": "2026-08-10 23:52:07"
-    },
-    {
-      "cve_id": "CVE-2026-72590",
-      "title": "高危漏洞: CVE-2026-72590 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-10 19:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An OS command injection vulnerability in alseambusher/crontab-ui through 0.4.2 allows an unauthenticated remote attacker to inject arbitrary cron job entries by sending a crafted GET request to /crontab with URL-encoded newlines in the env_vars parameter.",
-      "refs": "https://github.com/alseambusher/crontab-ui\nhttps://github.com/alseambusher/crontab-ui/blob/master/app.js",
-      "source": "NVD",
-      "time": "2026-08-10 23:52:01"
-    },
-    {
-      "cve_id": "CVE-2026-72589",
-      "title": "高危漏洞: CVE-2026-72589 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-10 19:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An OS command injection vulnerability in alseambusher/crontab-ui through 0.4.2 allows an unauthenticated remote attacker to execute arbitrary system commands by importing a crafted crontab database file. The POST /import endpoint accepts arbitrary .db files and overwrites the application database without validation.",
-      "refs": "https://github.com/alseambusher/crontab-ui\nhttps://github.com/alseambusher/crontab-ui/blob/master/crontab.js",
-      "source": "NVD",
-      "time": "2026-08-10 23:51:56"
-    },
-    {
-      "cve_id": "CVE-2026-72586",
-      "title": "高危漏洞: CVE-2026-72586 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-10 19:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "A missing authentication vulnerability in frangoteam/FUXA through 1.3.3 allows an unauthenticated remote attacker to query all historical sensor data via the DAQ_QUERY Socket.IO event. When secureEnabled=true, all other sensitive Socket.IO events (DEVICE_BROWSE, HOST_INTERFACES, DEVICE_TAGS_REQUEST, etc.) call isSocketAdminAuthorized to verify the connection token, but the DAQ_QUERY handler in server/runtime/index.js lacks this check entirely.",
-      "refs": "https://github.com/frangoteam/FUXA\nhttps://github.com/frangoteam/FUXA/blob/master/server/runtime/index.js",
-      "source": "NVD",
-      "time": "2026-08-10 23:51:51"
-    },
-    {
-      "cve_id": "CVE-2026-72584",
-      "title": "高危漏洞: CVE-2026-72584 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-08-10 19:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A time-of-check/time-of-use (TOCTOU) race condition in fastschema through v0.15.1 allows an unauthenticated remote attacker to bypass the OTP attempt limit on the account recovery flow, enabling brute-force attacks on 6-digit OTP codes.",
-      "refs": "https://github.com/fastschema/fastschema\nhttps://github.com/fastschema/fastschema/blob/main/pkg/auth/local.go",
-      "source": "NVD",
-      "time": "2026-08-10 23:51:46"
-    },
-    {
-      "cve_id": "CVE-2026-72582",
-      "title": "高危漏洞: CVE-2026-72582 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-10 19:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A NULL pointer dereference vulnerability in fastschema through v0.15.1 allows an unauthenticated remote attacker to crash the server process with a single HTTP request. The sendOTPEmail function in pkg/auth/local.go dereferences a pointer obtained from an unchecked error path without validating it is non-nil, causing a fatal panic that terminates the entire server when a recovery request is sent to the /api/auth/local/recover endpoint.",
-      "refs": "https://github.com/fastschema/fastschema\nhttps://github.com/fastschema/fastschema/blob/main/pkg/auth/local.go",
-      "source": "NVD",
-      "time": "2026-08-10 23:51:42"
-    },
-    {
-      "cve_id": "CVE-2026-72581",
-      "title": "高危漏洞: CVE-2026-72581 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-08-10 19:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "A server-side request forgery (SSRF) vulnerability in duhow/xiaoai-patch through commit fb07049 allows a remote attacker to make the Xiaomi smart speaker perform HTTP requests to arbitrary internal or external URLs. The /auth endpoint in api/main.py uses the user-supplied url POST parameter to redirect to a Home Assistant instance without validating the destination URL, enabling internal network scanning and access to internal services.",
-      "refs": "https://github.com/duhow/xiaoai-patch\nhttps://github.com/duhow/xiaoai-patch/blob/main/api/main.py",
-      "source": "NVD",
-      "time": "2026-08-10 23:51:35"
-    },
-    {
-      "cve_id": "CVE-2026-72580",
-      "title": "高危漏洞: CVE-2026-72580 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-10 19:17:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An OS command injection vulnerability in duhow/xiaoai-patch through commit fb07049 allows a remote attacker to execute arbitrary system commands on Xiaomi smart speakers running the patch. The /mute and /unmute endpoint handlers in api/main.py pass the user-supplied silent query parameter directly to os.system() without sanitization, enabling command injection via shell metacharacters.",
-      "refs": "https://github.com/duhow/xiaoai-patch\nhttps://github.com/duhow/xiaoai-patch/blob/main/api/main.py",
-      "source": "NVD",
-      "time": "2026-08-10 23:51:29"
     }
   ]
 }
