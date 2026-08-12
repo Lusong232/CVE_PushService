@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19426",
+      "title": "高危漏洞: CVE-2026-19426 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-08-12 16:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "POS System developed by FitSoft has a Missing Authentication vulnerability. Unauthenticated remote attackers can directly access and operate the system.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11101-4f85c-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11100-407c5-1.html",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:57"
+    },
+    {
+      "cve_id": "CVE-2025-41770",
+      "title": "高危漏洞: CVE-2025-41770 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-12 16:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "An unauthenticated denial-of-service vulnerability in the device's PLCnext Engineer communication interface allow an remote attacker to interrupt access via the client application. Successful exploitation prevents communication until the PLCnext service is manually restarted.",
+      "refs": "https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:50"
+    },
+    {
+      "cve_id": "CVE-2025-41769",
+      "title": "高危漏洞: CVE-2025-41769 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-12 16:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The device's PROFINET service is affected by a buffer overflow vulnerability that exists in the default configuration. An unauthenticated remote attacker could exploit this vulnerability to reboot the device or execute arbitrary code.",
+      "refs": "https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:44"
+    },
+    {
+      "cve_id": "CVE-2026-66659",
+      "title": "高危漏洞: CVE-2026-66659 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-08-12 14:22:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Essekia Tablesome Table allows Blind SQL Injection.\n\nThis issue affects Tablesome Table: from n/a through 1.2.9.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/tablesome/vulnerability/wordpress-tablesome-plugin-1-2-9-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:38"
+    },
+    {
+      "cve_id": "CVE-2026-19594",
+      "title": "高危漏洞: CVE-2026-19594 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-12 14:21:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Insufficient input sanitization in Snowflake Python API (`snowflake.core`) versions prior to 1.13.0 allowed confused-deputy privilege escalation through two related weaknesses: path traversal (CWE-22) via unencoded `..` identifier path segments, and HTTP parameter pollution (CWE-141) via unencoded `&`/`#`/`=` characters in query string values. An attacker with access to a downstream application built on snowflake.core could exploit the path traversal by supplying `..` as an object name, causing `snowflake.core` to issue REST requests against a parent resource or exploit the parameter pollution by injecting `&`/`#`/`=` into a free-form name field to override constraints on swap, clone, or rename operations — all executed under the application's privileged session. Successful exploitation requires the attacker to control an identifier or object-name string in an application built on snowflake.core that passes it to `snowflake.core` under a higher-privileged Snowflake session (e.g., an EXECUTE AS OWNER stored procedure, Streamlit app, or Native App). The fix is available in Snowflake Python API version 1.13.0, which also addresses several additional security findings. Users must manually upgrade.",
+      "refs": "https://pypi.org/project/snowflake.core/1.13.0/",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:34"
+    },
+    {
+      "cve_id": "CVE-2026-64954",
+      "title": "高危漏洞: CVE-2026-64954 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-08-12 13:19:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "Velociraptor allows scheduling new collections via VQL queries in notebooks. For a user to schedule a new collection, they require the COLLECT_CLIENT permission. However, this is not enforced when the user can run a VQL query which resets the authorization provider.\n\nThis allows a user who can run arbitrary VQL (usually with the \"analyst\" role) to launch new collections (usually requires the \"investigator\" role). This vulnerability is an escalation from an analyst to investigator role.",
+      "refs": "http://docs.velociraptor.app/announcements/advisories/cve-2026-64954/\nhttps://github.com/Velocidex/velociraptor/commit/d7de958e846d3742a7a3a8538fd463e4f12fc528",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:22"
+    },
+    {
+      "cve_id": "CVE-2026-12234",
+      "title": "高危漏洞: CVE-2026-12234 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-12 13:17:42",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The userspace syscall verifiers z_vrfy_zsock_sendmsg() and z_vrfy_zsock_recvmsg() in subsys/net/lib/sockets/sockets.c snapshot the caller-supplied struct net_msghdr into a kernel-side copy with k_usermode_from_copy(), but then re-read the still-live user struct for subsequent decisions. The kernel iovec shadow buffer is sized from one read of msg->msg_iovlen, while the population loop is bounded by a second, live read of the same field.\n\nBecause msg points into ordinary user memory, a cooperating second thread in the same memory domain can inflate msg->msg_iovlen in the window between the sizing read and the loop test (a classic double-fetch / TOCTOU). The population loop then iterates past the number of net_iovec slots actually allocated, writing attacker-influenced iov_base/iov_len values beyond the end of the kernel-heap shadow buffer. The recvmsg verifier has the same defect on both its inbound and result write-back loops.\n\nThe code is reachable from an unprivileged user thread whenever CONFIG_USERSPACE is enabled and the zsock_sendmsg/zsock_recvmsg syscalls are available. A successful race corrupts kernel-managed heap memory across the user-to-kernel privilege boundary, yielding a local privilege-escalation primitive or, at minimum, a kernel-fault denial of service. The fix copies the header once and derives every size, bound, and gate from the snapshot, copying each iovec entry atomically so its base and length can no longer be raced apart.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/2e0f9cf05be61056ed1a94dab51b832fbad27e2c\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-fcp3-vrr2-xfjv",
+      "source": "NVD",
+      "time": "2026-08-12 20:43:16"
+    },
+    {
       "cve_id": "CVE-2026-18961",
       "title": "高危漏洞: CVE-2026-18961 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1022,83 +1099,6 @@
       "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-90.html",
       "source": "NVD",
       "time": "2026-08-12 03:16:39"
-    },
-    {
-      "cve_id": "CVE-2026-71384",
-      "title": "高危漏洞: CVE-2026-71384 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-12 01:19:13",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "is affected by an Incorrect Authorization vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access, potentially resulting in an application denial-of-service condition. The vulnerable component is restricted to an administrative network zone by default. Exploitation of this issue does not require user interaction. Scope is changed.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-90.html",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:32"
-    },
-    {
-      "cve_id": "CVE-2026-71383",
-      "title": "高危漏洞: CVE-2026-71383 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-12 01:19:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "is affected by an Incorrect Authorization vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain limited unauthorized read and write access, causing a limited disruption to availability. Exploitation of this issue does not require user interaction.",
-      "refs": "https://helpx.adobe.com/security/products/coldfusion/apsb26-90.html",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:27"
-    },
-    {
-      "cve_id": "CVE-2026-71331",
-      "title": "高危漏洞: CVE-2026-71331 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-12 01:19:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Integer overflow or wraparound in Microsoft Azure Attestation service and Device Health Attestation Service allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71331",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:23"
-    },
-    {
-      "cve_id": "CVE-2026-70355",
-      "title": "高危漏洞: CVE-2026-70355 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-12 01:19:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70355",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:18"
-    },
-    {
-      "cve_id": "CVE-2026-70354",
-      "title": "高危漏洞: CVE-2026-70354 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-12 01:19:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Out-of-bounds write in .NET allows an unauthorized attacker to execute code locally.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70354",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:14"
-    },
-    {
-      "cve_id": "CVE-2026-70347",
-      "title": "高危漏洞: CVE-2026-70347 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-12 01:19:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Heap-based buffer overflow in Windows Installer allows an authorized attacker to elevate privileges locally.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70347",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:10"
-    },
-    {
-      "cve_id": "CVE-2026-70346",
-      "title": "高危漏洞: CVE-2026-70346 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-12 01:19:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Stack-based buffer overflow in Windows Installer allows an authorized attacker to elevate privileges locally.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70346",
-      "source": "NVD",
-      "time": "2026-08-12 03:16:06"
     }
   ]
 }
