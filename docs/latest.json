@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-49819",
+      "title": "高危漏洞: CVE-2026-49819 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-13 08:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "UpSnap is a wake on lan web app. Versions 4.4.1 through 5.3.5 are vulnerable to a missing-authentication / privilege-escalation chain in `pb.HandlerInitSuperuser` (`backend/pb/handlers.go:249`), reachable as `POST /api/upsnap/init-superuser`. The vulnerable code lacks any authentication, setup token, IP allow-list, or rate limit and is gated only by a `totalSuperusers > 0` count check — a condition that is false on every fresh install — allowing an unauthenticated network-adjacent attacker to register the initial superuser account, receive a long-lived JWT, and pivot to root remote code execution at `backend/networking/wake.go:43` (`exec.CommandContext(ctx, \"/bin/sh\", \"-c\", wake_cmd)`). Version 5.4.0 fixes the issue.",
+      "refs": "https://github.com/seriousm4x/UpSnap/releases/tag/5.4.0\nhttps://github.com/seriousm4x/UpSnap/security/advisories/GHSA-w4jr-728f-5jhq",
+      "source": "NVD",
+      "time": "2026-08-13 15:11:34"
+    },
+    {
+      "cve_id": "CVE-2026-49473",
+      "title": "高危漏洞: CVE-2026-49473 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-13 08:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "@cedar-policy/authorization-for-expressjs is an open-source Express.js middleware that integrates Cedar authorization into Express applications by mapping HTTP requests to Cedar actions and evaluating authorization policies before allowing requests to proceed. Versions prior to 0.3.0 have an issue where, under certain circumstances, the middleware matches incoming requests against Cedar action mappings using req.originalUrl, which includes the query string, while Express routes requests using only the path component. The middleware uses req.originalUrl to match incoming requests against Cedar action mappings. In Express, req.originalUrl includes the query string, while route matching uses only the path. This creates a divergence between what Cedar authorizes and what Express executes. When an application defines separate actions for overlapping path prefixes with different authorization requirements (for example, GET /users for listing all users with admin-only access, and GET /users/{id} for retrieving a single user with any authenticated user access), an actor can append a query string to bypass the more restrictive policy. Sending GET /users/?x=1 causes the middleware to match against /users/{id} (with id parameter set to ?x=1) and evaluate the less restrictive action, while Express routes the request to the /users list handler. This allows inappropriate access to the more restrictive endpoint. This issue has been addressed in version 0.30. Some workarounds are available. Validate and sanitize incoming request paths before they reach the authorization middleware. Ensure that applications do not rely solely on the middleware for authorization when defining multiple actions on overlapping path prefixes with different permission levels.",
+      "refs": "https://github.com/cedar-policy/authorization-for-expressjs/releases/tag/v0.3.0\nhttps://github.com/cedar-policy/authorization-for-expressjs/security/advisories/GHSA-g4w6-vmgf-xqvx",
+      "source": "NVD",
+      "time": "2026-08-13 15:11:28"
+    },
+    {
       "cve_id": "CVE-2026-71193",
       "title": "高危漏洞: CVE-2026-71193 (CVSS 9.6)",
       "cvss_score": 9.6,
@@ -1077,28 +1099,6 @@
       "refs": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\nhttps://docs.jfrog.com/releases/docs/jfrog-security-advisories",
       "source": "NVD",
       "time": "2026-08-13 05:36:25"
-    },
-    {
-      "cve_id": "CVE-2026-49467",
-      "title": "高危漏洞: CVE-2026-49467 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-13 02:17:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pingvin Share X is a secure and easy self-hosted file sharing platform. A vulnerability in versions 1.5.0 through 1.18.0 allow an attacker to bypass password verification when managing Time-based One-Time Password (TOTP) settings. The root cause is a missing `await` keyword on calls to the asynchronous `verifyPassword` method in `authTotp.service.ts` and the `authenticateUser` method in `auth.service.ts`. In JavaScript, an unawaited `Promise` is always truthy. So the logic intended to throw a `ForbiddenException` when a password is incorrect. It never executes because the expression evaluates the existence of the `Promise` object rather than its resolved boolean result. The vulnerability is fixed in version 1.18.1 by ensuring all asynchronous authentication calls are properly awaited. There are no official workarounds. If a user is locked out, an administrator must manually reset the user's TOTP status in the database.",
-      "refs": "https://github.com/smp46/pingvin-share-x/security/advisories/GHSA-59q6-jvp6-w282",
-      "source": "NVD",
-      "time": "2026-08-13 05:36:20"
-    },
-    {
-      "cve_id": "CVE-2026-44741",
-      "title": "高危漏洞: CVE-2026-44741 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-13 02:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pimcore's Admin Classic Bundle provides a Backend UI for Pimcore. Versions prior to 2.3.6 and 1.7.18 have a SQL injection vulnerability in Pimcore's translation grid date filter — the user-supplied `property` field from the filter JSON is interpolated directly into a `UNIX_TIMESTAMP(DATE(FROM_UNIXTIME(...)))` SQL expression without parameterization or allowlist validation. Versiosn 2.3.6 and 1.7.18 fix the issue.",
-      "refs": "https://github.com/pimcore/admin-ui-classic-bundle/commit/80e57a23d9e19574eddfe9b08e8f26785b2b0d90\nhttps://github.com/pimcore/admin-ui-classic-bundle/pull/1111\nhttps://github.com/pimcore/admin-ui-classic-bundle/releases/tag/v2.3.6",
-      "source": "NVD",
-      "time": "2026-08-13 05:36:15"
     }
   ]
 }
