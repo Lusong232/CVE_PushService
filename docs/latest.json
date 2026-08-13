@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19481",
+      "title": "高危漏洞: CVE-2026-19481 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-13 17:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "@fastify/busboy is a multipart form-data parser. In versions 1.0.0 through 3.2.0, an attacker who can submit multipart form-data can crash the parser by sending a part header whose name is a prototype-inherited property such as __proto__ or constructor. The internal header parser stores headers in a plain JavaScript object and assumes each value is an array, so an inherited property name resolves to a truthy non-array value and triggers a TypeError. In the common pipe integration the failure surfaces as an error event, but in direct write or end usage the exception is thrown synchronously and can terminate the Node.js process, causing an unauthenticated denial of service. The issue is fixed in @fastify/busboy 3.2.1, which creates the header object with a null prototype. Users should upgrade to 3.2.1.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/busboy/security/advisories/GHSA-x8mw-p69m-v3mx",
+      "source": "NVD",
+      "time": "2026-08-13 20:44:43"
+    },
+    {
+      "cve_id": "CVE-2026-15413",
+      "title": "高危漏洞: CVE-2026-15413 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-08-13 17:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The Link Factory WordPress plugin is a backdoor. Distributed as a \"homepage sentence publisher\", it exposes an operator-controlled REST API under /wp-json/link-factory/v1/ - authenticated by a detached Ed25519 signature verified against a hardcoded operator public key (except for the health check).",
+      "refs": "https://wpscan.com/vulnerability/4cad269d-0146-4ca9-a1ae-55f02c8e5433/",
+      "source": "NVD",
+      "time": "2026-08-13 20:44:37"
+    },
+    {
+      "cve_id": "CVE-2026-11840",
+      "title": "高危漏洞: CVE-2026-11840 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-13 16:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Zohocorp ManageEngine Password Manager Pro versions before 13232 and ManageEngine PAM360 versions before 8552 are vulnerable to authenticated SQL injection.",
+      "refs": "https://www.manageengine.com/products/passwordmanagerpro/advisory/cve-2026-11840.html",
+      "source": "NVD",
+      "time": "2026-08-13 20:44:31"
+    },
+    {
+      "cve_id": "CVE-2026-18146",
+      "title": "高危漏洞: CVE-2026-18146 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-13 15:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Notification Smartcode Values in all versions up to, and including, 6.2.11 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in the browser of an administrator (or any user with the Fluent Forms entry-viewing capability) when they view the form's entry Submission Logs in the WordPress admin dashboard. Exploitation requires that a site administrator or Fluent Forms manager has configured an email notification whose subject or static (direct) Send To value references an attacker-influenced Smartcode such as an input_password field value, a cookie value, or submission.response.",
+      "refs": "https://plugins.trac.wordpress.org/browser/fluentform/tags/6.2.8/app/Services/FormBuilder/Notifications/EmailNotification.php#L196\nhttps://plugins.trac.wordpress.org/browser/fluentform/tags/6.2.8/app/Services/FormBuilder/ShortCodeParser.php#L142\nhttps://plugins.trac.wordpress.org/browser/fluentform/tags/6.2.8/app/Services/FormBuilder/ShortCodeParser.php#L145",
+      "source": "NVD",
+      "time": "2026-08-13 20:44:24"
+    },
+    {
       "cve_id": "CVE-2026-49819",
       "title": "高危漏洞: CVE-2026-49819 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://aws.amazon.com/security/security-bulletins/2026-079-aws/\nhttps://docs.aws.amazon.com/opensearch-service/latest/developerguide/service-software.html",
       "source": "NVD",
       "time": "2026-08-13 05:36:46"
-    },
-    {
-      "cve_id": "CVE-2026-73327",
-      "title": "高危漏洞: CVE-2026-73327 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-08-13 02:18:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Joomla 6.1.1 contains a path traversal vulnerability in the com_joomlaupdate extension that allows a Super User to be induced into extracting a crafted archive containing directory traversal sequences or absolute paths in ZIP entry filenames. Attackers can supply malicious ZIP entry names with parent-directory segments or absolute paths to the extract.php extraction routine, causing files to be written outside the intended destination root and enabling persistent remote code execution via planted PHP files.",
-      "refs": "https://github.com/joomla/joomla-cms\nhttps://github.com/joomla/joomla-cms/commit/9678a171d37e1e10ca75c9124bdafe20fe14fa5b\nhttps://github.com/joomla/joomla-cms/pull/48057",
-      "source": "NVD",
-      "time": "2026-08-13 05:36:42"
-    },
-    {
-      "cve_id": "CVE-2026-73300",
-      "title": "高危漏洞: CVE-2026-73300 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-13 02:18:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Budibase is an open-source low-code platform. Prior to 3.40.0, the MySQL integration component in Budibase is configured with multipleStatements: true, enabling execution of multiple SQL statements in a single query. Attackers can inject malicious SQL commands through user input fields, leading to complete database compromise. This vulnerability is fixed in 3.40.0.",
-      "refs": "https://github.com/Budibase/budibase/releases/tag/3.40.0\nhttps://github.com/Budibase/budibase/security/advisories/GHSA-q6x4-v3qx-85qw",
-      "source": "NVD",
-      "time": "2026-08-13 05:36:34"
-    },
-    {
-      "cve_id": "CVE-2026-73299",
-      "title": "高危漏洞: CVE-2026-73299 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-13 02:18:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Prompty is a markdown file format (.prompty) for LLM prompts. Prior to 0.1.5 and 2.0.0-beta.5, the TypeScript Nunjucks renderer evaluated untrusted .prompty template bodies with unrestricted JavaScript member access. An attacker-controlled template could traverse constructor and prototype properties to execute JavaScript in the host Node.js process. This issue is fixed in versions 0.1.5 and 2.0.0-beta.5.",
-      "refs": "https://github.com/microsoft/prompty/commit/e4a0ebf49e3a78d5d7796c8480bf9a4f0c54d19e\nhttps://github.com/microsoft/prompty/commit/f5c57c94a0990cca79d095c3daab661b4b1fb89f\nhttps://github.com/microsoft/prompty/pull/404",
-      "source": "NVD",
-      "time": "2026-08-13 05:36:30"
-    },
-    {
-      "cve_id": "CVE-2026-69106",
-      "title": "高危漏洞: CVE-2026-69106 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-13 02:18:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A low-privileged user may poison cached artifact metadata under specific conditions, potentially causing consumers to retrieve untrusted content.",
-      "refs": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\nhttps://docs.jfrog.com/releases/docs/jfrog-security-advisories",
-      "source": "NVD",
-      "time": "2026-08-13 05:36:25"
     }
   ]
 }
