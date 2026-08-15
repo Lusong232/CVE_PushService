@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19905",
+      "title": "高危漏洞: CVE-2026-19905 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-16 03:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Jinher OA 1.0. Impacted is an unknown function of the file /C6/JHSoft.Web.HrmAttendance/attendance_out_approve.aspx. This manipulation of the argument httpOID causes sql injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/pangdudu24/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-19905\nhttps://vuldb.com/submit/870787",
+      "source": "NVD",
+      "time": "2026-08-16 05:11:46"
+    },
+    {
+      "cve_id": "CVE-2026-18855",
+      "title": "高危漏洞: CVE-2026-18855 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-16 03:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Link Library plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ll_delete_link_fields function in all versions up to, and including, 7.9.4 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires the administrator to have enabled the 'Delete local file on link deletion' plugin option (disabled by default) and to subsequently permanently delete the attacker-submitted link, which is a routine moderation action.",
+      "refs": "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7865\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7874\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library.php#L2288",
+      "source": "NVD",
+      "time": "2026-08-16 05:11:42"
+    },
+    {
+      "cve_id": "CVE-2026-19901",
+      "title": "高危漏洞: CVE-2026-19901 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-16 02:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in LB-LINK X-PRO 1.0.22-20231206. This affects an unknown function of the file /etc/config/easycwmp. The manipulation results in hard-coded credentials. It is possible to launch the attack remotely. Attacks of this nature are highly complex. The exploitability is reported as difficult. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/DavCloudz/cve/blob/main/B-Link/Hardcoded%20TR-069%20(easycwmp)%20Remote%20Management%20Credentials.md\nhttps://vuldb.com/cve/CVE-2026-19901\nhttps://vuldb.com/submit/870763",
+      "source": "NVD",
+      "time": "2026-08-16 05:11:37"
+    },
+    {
+      "cve_id": "CVE-2026-19598",
+      "title": "高危漏洞: CVE-2026-19598 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-16 02:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to Privilege Escalation via Authorization Bypass in all versions up to, and including, 3.3.9. The vulnerability exists because the pods_admin AJAX router funnels every access check — including the method allowlist, nonce verification, login enforcement, and capability gate — through pods_error(), which under the JSON meta-box-loader compatibility path only writes failures to the PHP error log and returns false instead of terminating the request, rendering all guards ineffective.  This makes it possible for unauthenticated attackers to escalate their privileges to Administrator or overwrite the password of any user account, including the site owner's, enabling complete site takeover, or perform another administrator action.",
+      "refs": "https://plugins.trac.wordpress.org/browser/pods/tags/3.3.9/includes/general.php#L400\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/3628032a-3121-45a7-8a78-cfcd8ba6af2f?source=cve",
+      "source": "NVD",
+      "time": "2026-08-16 05:11:32"
+    },
+    {
       "cve_id": "CVE-2026-19900",
       "title": "高危漏洞: CVE-2026-19900 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/AC12/4.md\nhttps://vuldb.com/cve/CVE-2026-19821\nhttps://vuldb.com/submit/868922",
       "source": "NVD",
       "time": "2026-08-15 02:42:27"
-    },
-    {
-      "cve_id": "CVE-2026-19815",
-      "title": "高危漏洞: CVE-2026-19815 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 17:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw has been found in TOTOLINK A800R 4.1.2cu.5137_B20200730. Affected by this vulnerability is the function setParentalRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. Executing a manipulation of the argument urlKeyword can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/setParentalRules.md\nhttps://vuldb.com/cve/CVE-2026-19815\nhttps://vuldb.com/submit/869442",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:20"
-    },
-    {
-      "cve_id": "CVE-2026-19814",
-      "title": "高危漏洞: CVE-2026-19814 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 17:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was detected in TOTOLINK A800R 4.1.2cu.5137_B20200730. Affected is the function setMacQos of the file /cgi-bin/cstecgi.cgi of the component firewall.so. Performing a manipulation of the argument macAddress results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/setMacQos.md\nhttps://vuldb.com/cve/CVE-2026-19814\nhttps://vuldb.com/submit/869431",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:14"
-    },
-    {
-      "cve_id": "CVE-2026-19813",
-      "title": "高危漏洞: CVE-2026-19813 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 16:17:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security vulnerability has been detected in TOTOLINK A800R 4.1.2cu.5137_B20200730. This impacts the function setMacFilterRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. Such manipulation of the argument Comment leads to stack-based buffer overflow. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/setMacFilterRules.md\nhttps://vuldb.com/cve/CVE-2026-19813\nhttps://vuldb.com/submit/869430",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:08"
-    },
-    {
-      "cve_id": "CVE-2026-19812",
-      "title": "高危漏洞: CVE-2026-19812 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 16:17:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in TOTOLINK A800R 4.1.2cu.5137_B20200730. This affects the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi of the component product.so. This manipulation of the argument File causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/UploadCustomModule.md\nhttps://vuldb.com/cve/CVE-2026-19812\nhttps://vuldb.com/submit/869428",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:04"
     }
   ]
 }
