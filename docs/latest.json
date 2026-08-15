@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19900",
+      "title": "高危漏洞: CVE-2026-19900 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-16 01:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in LB-LINK X-PRO 1.0.22-20231206. The impacted element is an unknown function of the file /etc/shadow. The manipulation leads to hard-coded credentials. It is possible to initiate the attack remotely. A high degree of complexity is needed for the attack. The exploitability is regarded as difficult. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/DavCloudz/cve/blob/main/B-Link/B-Link%20AC1200%20X-PRO(AC6)%20Hardcoded%20Credentials%20Vulnerability.md\nhttps://vuldb.com/cve/CVE-2026-19900\nhttps://vuldb.com/submit/870712",
+      "source": "NVD",
+      "time": "2026-08-16 02:14:11"
+    },
+    {
+      "cve_id": "CVE-2026-19899",
+      "title": "高危漏洞: CVE-2026-19899 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-16 01:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0. The affected element is an unknown function of the file /edit_teacher.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/endingstory/e/issues/1\nhttps://vuldb.com/cve/CVE-2026-19899\nhttps://vuldb.com/submit/870682",
+      "source": "NVD",
+      "time": "2026-08-16 02:14:06"
+    },
+    {
+      "cve_id": "CVE-2026-19474",
+      "title": "高危漏洞: CVE-2026-19474 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-15 22:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "@fastify/multipart is a multipart form-data parser for Fastify. In versions from 3.0.0 up to but not including 10.1.1, request.saveRequestFiles() can leave completed temporary files on disk when a client disconnects while the parser is advancing between multipart parts. The iterator rejection that occurs between parts falls outside the per-file cleanup path, so an earlier completed file is never removed. An unauthenticated client can repeat this to cause persistent, linear disk consumption, leading to denial of service. This is an incomplete-fix variant of CVE-2025-24033. The issue is fixed in @fastify/multipart 10.1.1. Users should upgrade to 10.1.1.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-multipart/security/advisories/GHSA-62qx-hpj5-j6hc",
+      "source": "NVD",
+      "time": "2026-08-16 02:14:01"
+    },
+    {
+      "cve_id": "CVE-2026-18549",
+      "title": "高危漏洞: CVE-2026-18549 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-15 22:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "@fastify/multipart is a multipart form-data parser for Fastify. In versions from 5.3.0 up to but not including 10.1.1, when the busboy fileSize limit truncates a file part, the plugin clears its internal current-file reference while the underlying stream is still open. If the client then aborts the connection before sending the terminating boundary, the abort cleanup finds no stream to destroy, so saveRequestFiles() never settles, the request handler hangs, and the temporary file already written to disk is never cleaned up. An unauthenticated client can repeat this to permanently leak temporary files and suspended handler executions, leading to disk and event-loop exhaustion. The issue is fixed in @fastify/multipart 10.1.1. Users should upgrade to 10.1.1.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-multipart/security/advisories/GHSA-vmph-573x-85f6",
+      "source": "NVD",
+      "time": "2026-08-16 02:13:56"
+    },
+    {
+      "cve_id": "CVE-2026-18500",
+      "title": "高危漏洞: CVE-2026-18500 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-15 22:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "@fastify/jwt is a JSON Web Token plugin for Fastify. In versions before 10.2.2, a per-request verification key passed to request.jwtVerify({ key }) is silently overridden by the plugin's globally configured secret, because the option merge applies the global key last. Applications that use different keys for different authorization domains, for example separate user and admin keys, therefore accept a token signed with the global key on a route that explicitly requires another key. This lets an ordinary authenticated user cross a key-based trust boundary without knowing either secret. The issue is fixed in @fastify/jwt 10.2.2, where an explicit per-call key takes precedence over the global secret. Users should upgrade to 10.2.2.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/fastify/fastify-jwt/security/advisories/GHSA-j4cx-787j-xjqg",
+      "source": "NVD",
+      "time": "2026-08-16 02:13:50"
+    },
+    {
       "cve_id": "CVE-2026-18438",
       "title": "高危漏洞: CVE-2026-18438 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/UploadCustomModule.md\nhttps://vuldb.com/cve/CVE-2026-19812\nhttps://vuldb.com/submit/869428",
       "source": "NVD",
       "time": "2026-08-15 02:42:04"
-    },
-    {
-      "cve_id": "CVE-2026-19794",
-      "title": "高危漏洞: CVE-2026-19794 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-14 16:17:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The WP-Stats plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 2.56 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wp-stats/vulnerability/wordpress-wp-stats-plugin-2-56-cross-site-scripting-xss-vulnerability\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/37471ecc-ee8f-4246-a126-b7b7013b5ceb?source=cve",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:00"
-    },
-    {
-      "cve_id": "CVE-2026-19811",
-      "title": "高危漏洞: CVE-2026-19811 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 15:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in TOTOLINK A800R 4.1.2cu.5137_B20200730. The impacted element is the function setIpQosRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. The manipulation of the argument Comment results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/setIpQosRules.md\nhttps://vuldb.com/cve/CVE-2026-19811\nhttps://vuldb.com/submit/869425",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:55"
-    },
-    {
-      "cve_id": "CVE-2026-18039",
-      "title": "高危漏洞: CVE-2026-18039 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-14 14:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Essential Addons for Elementor  WordPress plugin before 6.7.2 does not prevent user-supplied registration fields from overwriting reserved account attributes, allowing unauthenticated attackers to register an account with an arbitrary role, including administrator, on sites where a custom profile field with a particular label has been configured.",
-      "refs": "https://wpscan.com/vulnerability/2982ee81-3a85-435b-8347-a7848e99f373/",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:50"
-    },
-    {
-      "cve_id": "CVE-2026-15205",
-      "title": "高危漏洞: CVE-2026-15205 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-08-14 14:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "The Paymob for WooCommerce WordPress plugin before 4.1.9 does not properly sanitise a client-supplied identifier before using it in a SQL query within its public, unauthenticated payment callback, and performs this query before verifying the payment provider's HMAC signature. This allows unauthenticated attackers to perform SQL injection and read arbitrary data from the database — including user credentials and other secrets — through both in-band (reflected) and time-based blind extraction.",
-      "refs": "https://wpscan.com/vulnerability/cbde48bb-5aa4-4f69-8101-095132239923/",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:46"
-    },
-    {
-      "cve_id": "CVE-2026-12949",
-      "title": "高危漏洞: CVE-2026-12949 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-14 14:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Wishlist Member plugin for WordPress is vulnerable to Account Takeover via Insufficient Verification of Data Authenticity in versions up to and including 3.34.1. This is due to the wpm_register() function validating the registration cookie only against the GET reg parameter while accepting the POST mergewith and POST wpm_id parameters without verifying that the mergewith user ID references a temporary or incomplete registrant that is bound to the current registration transaction. This makes it possible for unauthenticated attackers to take over any existing WordPress account — including administrator accounts — by supplying an arbitrary user's numeric ID as the mergewith value, which causes wp_update_user() to overwrite the target account's username (additionally written via a direct $wpdb UPDATE), password, email address, first name, and last name with attacker-controlled values, while WordPress password and email change notification emails are explicitly suppressed. When wpm_id references a non-existent membership level, no role key is added to the update payload, causing wp_update_user() to preserve the target user's existing role — including administrator — making full privilege escalation a direct consequence of the takeover.",
-      "refs": "https://wishlistmember.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/84afe5a7-1bf4-4b83-bf77-efbb003a30cd?source=cve",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:40"
     }
   ]
 }
