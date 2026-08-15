@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-18438",
+      "title": "高危漏洞: CVE-2026-18438 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-15 18:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Templately – Elementor & Gutenberg Template Library: 6500+ Free & Pro Ready Templates And Cloud! plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.7.1 via the fetch_remote_file function. This is due to a filename validation/destination mismatch in fetch_remote_file, where file type validation is performed against the attacker-controlled Content-Disposition filename rather than the URL-path-derived destination filename. This makes it possible for authenticated attackers, with contributor-level access and above, to execute code on the server. A GIF+PHP polyglot file passes wp_check_filetype_and_ext validation as image/gif via the Content-Disposition filename, while the actual destination path is written with a .php extension derived from the URL path, bypassing the unfiltered_upload capability gate entirely. The affected endpoints are reachable at this privilege level because Templately's entire REST API — including the cloud import endpoints used in this attack (/templately/v1/clouds/upload and /templately/v1/insert) — is authorized only by a current_user_can('delete_posts') check, with no administrator or manage_options capability requirement. The same permission gate also allows a contributor to overwrite the site's global Templately cloud connection via the /templately/v1/login endpoint with global_signin set to true. A complete remediation should both correct fetch_remote_file to validate the file type against the actual destination filename rather than the Content-Disposition header (and avoid deriving the write path from the request URL), and restrict state-changing Templately REST routes to an appropriate administrator-level capability.",
+      "refs": "https://plugins.trac.wordpress.org/browser/templately/tags/3.6.5/includes/API/API.php#L128\nhttps://plugins.trac.wordpress.org/browser/templately/tags/3.6.5/includes/API/Import.php#L78\nhttps://plugins.trac.wordpress.org/browser/templately/tags/3.6.5/includes/API/MyClouds.php#L103",
+      "source": "NVD",
+      "time": "2026-08-15 20:17:10"
+    },
+    {
+      "cve_id": "CVE-2026-16142",
+      "title": "高危漏洞: CVE-2026-16142 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-15 17:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The TrueBooker plugin for WordPress is vulnerable to Account Takeover in all versions up to, and including, 1.2.6. This is due to the add_front_user_update() AJAX handler being registered for unauthenticated users and accepting an arbitrary truebooker_wp_user_id value, which is passed directly to wp_update_user() without verifying authentication or ownership. This makes it possible for unauthenticated attackers to change any WordPress user account email address, including an administrator, by submitting the target user ID and an attacker-controlled email address. An attacker can then use the native WordPress password reset flow to receive the reset link at the attacker-controlled email address and take over the account.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3640018/truebooker-appointment-booking\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f0d3f7cb-4974-4b0f-9658-1895e5966276?source=cve",
+      "source": "NVD",
+      "time": "2026-08-15 20:17:03"
+    },
+    {
+      "cve_id": "CVE-2026-15142",
+      "title": "高危漏洞: CVE-2026-15142 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-15 17:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Real Estate Manager Pro plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 12.8.6. This is due to improper capability handling in the allow_attachment_actions() function, which can treat a target user ID as a media attachment ID during user capability checks. This makes it possible for authenticated attackers, with Subscriber-level access and above, to edit an administrator account and escalate their privileges to Administrator when the targeted user ID matches the ID of an existing media attachment.",
+      "refs": "https://wp-rem.com/changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/71e9ff91-4137-4c66-959b-f4ffb8d3ba32?source=cve",
+      "source": "NVD",
+      "time": "2026-08-15 20:16:57"
+    },
+    {
+      "cve_id": "CVE-2026-15826",
+      "title": "高危漏洞: CVE-2026-15826 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-15 15:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The User Profile Builder plugin for WordPress is vulnerable to Authentication Bypass via Type Confusion in versions up to, and including, 3.16.4. This is due to the wppb_log_in_user() function calling absint() on the return value of wp_insert_user() before performing an is_wp_error() check — when a registration is submitted with a 61–70 character username, WordPress core rejects it with a WP_Error object, but absint() coerces that object to the integer 1 before the error check can short-circuit execution, causing the plugin to bind and return a transient-backed autologin nonce tied to user ID 1. This makes it possible for unauthenticated attackers to log in as the site's Administrator account (user ID 1), resulting in full administrative takeover of the site.",
+      "refs": "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/features/functions.php#L1481\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L262\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L364",
+      "source": "NVD",
+      "time": "2026-08-15 20:16:52"
+    },
+    {
+      "cve_id": "CVE-2026-14279",
+      "title": "高危漏洞: CVE-2026-14279 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-15 15:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Wholesale Market plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 2.2.2 via the ced_wholesale_request_send AJAX action. The ced_wholesale_request_send_callback() handler only verifies a nonce (which is exposed to any authenticated user through wp_localize_script on the frontend) and that the caller has a positive user ID, then calls WP_User::add_role() with the client-supplied role_required POST parameter without restricting the value to an allowlist of wholesale roles. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator when the site administrator has enabled the 'Assigning requested role directly' option.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L141\nhttps://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L153\nhttps://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L276",
+      "source": "NVD",
+      "time": "2026-08-15 20:16:47"
+    },
+    {
       "cve_id": "CVE-2026-16145",
       "title": "高危漏洞: CVE-2026-16145 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1044,61 +1099,6 @@
       "refs": "https://wishlistmember.com/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/84afe5a7-1bf4-4b83-bf77-efbb003a30cd?source=cve",
       "source": "NVD",
       "time": "2026-08-15 02:41:40"
-    },
-    {
-      "cve_id": "CVE-2026-19792",
-      "title": "高危漏洞: CVE-2026-19792 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 13:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in Tenda G0 up to 20260625. Impacted is the function setPortMapping of the file /goform/module of the component httpd web management interface. Performing a manipulation of the argument portMappingServer/porMappingtInternal/portMappingExternal results in buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/G0/3.md\nhttps://vuldb.com/cve/CVE-2026-19792\nhttps://vuldb.com/submit/868929",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:32"
-    },
-    {
-      "cve_id": "CVE-2026-19791",
-      "title": "高危漏洞: CVE-2026-19791 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 13:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A weakness has been identified in Tenda G0 up to 20260625. The affected element is the function addStaticRoute of the file /goform/module of the component httpd web management interface. Executing a manipulation of the argument staticRouteNet can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
-      "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/G0/2.md\nhttps://vuldb.com/cve/CVE-2026-19791\nhttps://vuldb.com/submit/868927",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:27"
-    },
-    {
-      "cve_id": "CVE-2026-19790",
-      "title": "高危漏洞: CVE-2026-19790 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 12:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Tenda G0 up to 20260625. This issue affects the function formSetPortMirror of the file /goform/module of the component httpd Web Management Interface. Such manipulation of the argument portMirrorMirroredPorts leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/G0/1.md\nhttps://vuldb.com/cve/CVE-2026-19790\nhttps://vuldb.com/submit/868924",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:22"
-    },
-    {
-      "cve_id": "CVE-2026-19789",
-      "title": "高危漏洞: CVE-2026-19789 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 12:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Tenda AC1206 15.03.06.23_multi_TD01. This vulnerability affects the function set_wl_guest_iplist of the file /goform/WifiGuestSet of the component httpd web management interface. This manipulation of the argument shareSpeed causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/AC12/2.md\nhttps://vuldb.com/cve/CVE-2026-19789\nhttps://vuldb.com/submit/868921",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:16"
-    },
-    {
-      "cve_id": "CVE-2026-19788",
-      "title": "高危漏洞: CVE-2026-19788 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 12:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Tenda AC1206 15.03.06.23_multi_TD01. This affects the function set_device_name of the file /goform/SetOnlineDevName of the component httpd web management interface. The manipulation of the argument devName results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/AC12/1.md\nhttps://vuldb.com/cve/CVE-2026-19788\nhttps://vuldb.com/submit/868913",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:10"
     }
   ]
 }
