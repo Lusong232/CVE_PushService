@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-16145",
+      "title": "高危漏洞: CVE-2026-16145 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-15 12:18:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Invisible Anti-Spam & CAPTCHA — reCAPTCHA Alternative for All Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'action' parameter in all versions up to, and including, 5.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The stored payload is written by any unauthenticated admin-ajax.php request whose action value matches an entry in the plugin's explicit-actions list, which is auto-populated for common form builders at activation and requires no authentication gate to reach the save path.",
+      "refs": "https://plugins.trac.wordpress.org/browser/gdpr-compliant-recaptcha-for-all-forms/tags/5.0/includes/class-message-page.php#L621\nhttps://plugins.trac.wordpress.org/browser/gdpr-compliant-recaptcha-for-all-forms/tags/5.0/includes/class-stamp.php#L136\nhttps://plugins.trac.wordpress.org/browser/gdpr-compliant-recaptcha-for-all-forms/tags/5.0/includes/class-stamp.php#L771",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:44"
+    },
+    {
+      "cve_id": "CVE-2026-13360",
+      "title": "高危漏洞: CVE-2026-13360 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-15 12:18:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Cookie Banner for GDPR / CCPA – WPLP Cookie Consent plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'regionArray' parameter in all versions up to, and including, 4.3.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires that the site administrator has enabled the 'Support Google Consent Mode (GCM)' setting, which is disabled by default. Additionally, the AJAX handler performs no nonce or capability check, allowing any authenticated user including those with Subscriber-level access to overwrite the affected plugin setting.",
+      "refs": "https://plugins.trac.wordpress.org/browser/gdpr-cookie-consent/tags/4.2.7/admin/class-gdpr-cookie-consent-admin.php#L4961\nhttps://plugins.trac.wordpress.org/browser/gdpr-cookie-consent/tags/4.2.7/includes/class-gdpr-cookie-consent.php#L245\nhttps://plugins.trac.wordpress.org/browser/gdpr-cookie-consent/tags/4.2.7/public/class-gdpr-cookie-consent-public.php#L209",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:39"
+    },
+    {
+      "cve_id": "CVE-2026-15965",
+      "title": "高危漏洞: CVE-2026-15965 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-15 11:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MaxUpload – Big File Uploads – Increase Maximum File Upload Size plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.4.0 via the handle_upload function. This is due to a filename-validation mismatch in the handle_upload function where extension and MIME checks are applied to the uploaded chunk's filename but not to the final assembled filename derived from the resumableFilename parameter. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L121\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L174\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L19",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:33"
+    },
+    {
+      "cve_id": "CVE-2026-15341",
+      "title": "高危漏洞: CVE-2026-15341 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The User Session Synchronizer plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 1.4.0. The `synchronize_session()` function, hooked on `init` and therefore executed on every request, performs no nonce, capability, or shared-secret validation against the attacker-supplied `ussync-key`, `ussync-token`, and `ussync-ref` parameters; when `ussync-key` references an unregistered slot, `get_option()` returns `false` for both the secret key and the domain list, causing the AES-256-CBC encryption key to degrade to the fully predictable `md5('')` and the referer allowlist to collapse to an empty-string match, while the AES IV is unconditionally hard-coded as `md5('another-secret')`. This makes it possible for unauthenticated attackers to supply a crafted request encrypting any known or guessable user email address in the `ussync-ref` parameter, causing the handler to call `wp_set_auth_cookie()` for the matched user and granting full authentication as that user — including administrators — with no prior knowledge of site secrets.",
+      "refs": "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L117\nhttps://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L286\nhttps://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L310",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:29"
+    },
+    {
+      "cve_id": "CVE-2026-15312",
+      "title": "高危漏洞: CVE-2026-15312 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Propovoice: All-in-One Client Management System plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.7.8. This is due to the `create()` function's REST endpoint failing to validate the user-supplied `role` parameter against an allowlist of permitted WordPress roles and omitting any `promote_users` capability check before passing the sanitized value directly to `WP_User::set_role()`. This makes it possible for authenticated attackers with `ndpv_manager`-level access and above to create a new WordPress user account with the `administrator` role assigned, achieving full vertical privilege escalation. The `ndpv_manager` capability is a sub-administrator CRM team role granted by Propovoice itself, meaning the attack surface extends beyond site administrators to any user the plugin has elevated to a manager position.",
+      "refs": "https://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L169\nhttps://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L219\nhttps://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L38",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:21"
+    },
+    {
+      "cve_id": "CVE-2026-15303",
+      "title": "高危漏洞: CVE-2026-15303 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The 6Storage Rentals plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.27.0. This is due to the six_storage_create_wp_user() AJAX handler being registered on wp_ajax_nopriv_six_storage_create_wp_user without any nonce, capability, credential, or ownership verification, while calling wp_set_current_user() and wp_set_auth_cookie() for any WordPress user resolved by the attacker-supplied email address. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including administrators, by submitting that user's email address.",
+      "refs": "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L14\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3834\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3905",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:17"
+    },
+    {
+      "cve_id": "CVE-2026-15162",
+      "title": "高危漏洞: CVE-2026-15162 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Object Sync for Salesforce plugin is vulnerable to unauthenticated SQL Injection via the wordpress_object_type parameter of its /wp-json/object-sync-for-salesforce/push/ REST route. The route's permission callback (can_process()) checks only the HTTP method for the push class — no capability or nonce — so it is reachable by unauthenticated users. The wordpress_object_type value is concatenated directly into a SQL query (post_type = \"$object_type\", class-object-sync-sf-wordpress.php:328) and executed via $wpdb->get_results() with no $wpdb->prepare() (:578). Because REST body parameters are not magic-quoted, an attacker can break out of the quoted string and inject arbitrary SQL. This makes it possible for unauthenticated attackers to append additional SQL queries (time-based blind), enabling extraction of sensitive information such as password hashes from the database. Only a valid wordpress_id (e.g. 1) is required — no authentication or Salesforce connection.",
+      "refs": "https://plugins.trac.wordpress.org/browser/object-sync-for-salesforce/trunk/classes/class-object-sync-sf-rest.php#L224\nhttps://plugins.trac.wordpress.org/browser/object-sync-for-salesforce/trunk/classes/class-object-sync-sf-salesforce-push.php#L210\nhttps://plugins.trac.wordpress.org/browser/object-sync-for-salesforce/trunk/classes/class-object-sync-sf-wordpress.php#L328",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:12"
+    },
+    {
+      "cve_id": "CVE-2026-15001",
+      "title": "高危漏洞: CVE-2026-15001 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The bLoyal: Loyalty & Promotions by bLoyal plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 3.1.611.78. This is due to the AJAX actions `save_bloyal_configuration_data` and `save_bloyal_accesskeyverification_data` being registered without any capability or nonce checks, and the `bloyal_customer_auto_login` function unconditionally trusting the `Customer.ExternalId` value returned by whichever API URL is stored in the plugin's options. This makes it possible for authenticated attackers, with Subscriber-level access and above, to overwrite the plugin's bLoyal Loyalty Engine API URL (`bloyal_custom_loyaltyengine_api_url`) and the `is_bloyal_custom_api_url` flag via the unprotected AJAX actions, then trigger the unauthenticated `/cart` REST route to cause `bloyal_customer_auto_login` to fetch customer data from an attacker-controlled endpoint and call `wp_set_auth_cookie()` with an attacker-supplied `Customer.ExternalId`, thereby authenticating as any WordPress user including the site Administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2429\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2470\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2512",
+      "source": "NVD",
+      "time": "2026-08-15 14:20:08"
+    },
+    {
+      "cve_id": "CVE-2026-14484",
+      "title": "高危漏洞: CVE-2026-14484 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The RapiSafe – Secure Multi File Upload for Contact Form 7 plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the handleAjaxRemoveUpload function in all versions up to, and including, 1.0.4. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The nonce required to invoke the removal handler is exposed in public-facing JavaScript as RSMFCF7Vars.nonce on every Contact Form 7 page rendering a RapiSafe upload field, making it obtainable by any unauthenticated visitor.",
+      "refs": "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L201\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L235\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L237",
+      "source": "NVD",
+      "time": "2026-08-15 14:19:58"
+    },
+    {
+      "cve_id": "CVE-2026-14433",
+      "title": "高危漏洞: CVE-2026-14433 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-15 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Online Booking & Scheduling Calendar for WordPress by vcita plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'business_id' parameter in all versions up to, and including, 4.6.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/meeting-scheduler-by-vcita/tags/4.6.0/vcita-api-functions.php#L17\nhttps://plugins.trac.wordpress.org/browser/meeting-scheduler-by-vcita/tags/4.6.0/vcita-api-functions.php#L83\nhttps://plugins.trac.wordpress.org/browser/meeting-scheduler-by-vcita/tags/4.6.0/vcita-scheduler.php#L379",
+      "source": "NVD",
+      "time": "2026-08-15 14:19:51"
+    },
+    {
       "cve_id": "CVE-2026-73683",
       "title": "高危漏洞: CVE-2026-73683 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/AC12/1.md\nhttps://vuldb.com/cve/CVE-2026-19788\nhttps://vuldb.com/submit/868913",
       "source": "NVD",
       "time": "2026-08-15 02:41:10"
-    },
-    {
-      "cve_id": "CVE-2026-18109",
-      "title": "高危漏洞: CVE-2026-18109 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-14 11:16:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The W3 Total Cache plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Author Name in all versions up to, and including, 2.10.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This vulnerability is only exploitable when the Lazy Load Images feature of W3 Total Cache is enabled, as the unsafe re-emission occurs exclusively within the LazyLoad mutator's img tag rewriting step.",
-      "refs": "https://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.10.2/UserExperience_LazyLoad_Mutator.php#L162\nhttps://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.10.2/UserExperience_LazyLoad_Mutator.php#L403\nhttps://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.10.2/UserExperience_LazyLoad_Mutator.php#L85",
-      "source": "NVD",
-      "time": "2026-08-15 02:41:03"
-    },
-    {
-      "cve_id": "CVE-2026-19771",
-      "title": "高危漏洞: CVE-2026-19771 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-14 10:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Baicells EG3661M BaiCE_BQ6_2.0.5.3_NA. This impacts an unknown function of the file /cgi-bin/luci of the component LuCI Web Interface. Such manipulation of the argument MaxHops/Timeout/Size leads to os command injection. The attack may be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/actuator/cve/blob/main/Baicells/EG3661M.md\nhttps://vuldb.com/cve/CVE-2026-19771\nhttps://vuldb.com/submit/869362",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:58"
-    },
-    {
-      "cve_id": "CVE-2026-19764",
-      "title": "高危漏洞: CVE-2026-19764 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-14 09:18:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was identified in Raisecom Communication Command and Dispatch Management Platform up to 7.6.5. This affects an unknown part of the file /app/users/getpwd.php. Such manipulation of the argument sip leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://my.feishu.cn/docx/S80ddLulfolH8WxDbUJcdrGAnbg?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-19764\nhttps://vuldb.com/submit/868986",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:54"
-    },
-    {
-      "cve_id": "CVE-2026-19762",
-      "title": "高危漏洞: CVE-2026-19762 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-14 09:18:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in DTStack Taier 1.4.0. Affected by this vulnerability is the function Paths.ge of the file FileChunkController.java of the component Chunk-Check Endpoint. The manipulation of the argument Name results in path traversal. The attack may be launched remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/DTStack/Taier/\nhttps://github.com/DTStack/Taier/issues/1203\nhttps://vuldb.com/cve/CVE-2026-19762",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:49"
-    },
-    {
-      "cve_id": "CVE-2026-19758",
-      "title": "高危漏洞: CVE-2026-19758 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-14 09:18:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in dromara lamp-cloud up to 5.10.0. This issue affects some unknown processing of the file FileChunkController.java of the component chunk-check endpoint. Executing a manipulation of the argument Name can lead to path traversal. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/dromara/lamp-cloud/\nhttps://github.com/dromara/lamp-cloud/issues/413\nhttps://vuldb.com/cve/CVE-2026-19758",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:44"
-    },
-    {
-      "cve_id": "CVE-2026-19757",
-      "title": "高危漏洞: CVE-2026-19757 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-14 09:18:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in Dromara lamp-cloud up to 5.10.0. This vulnerability affects unknown code of the file FileAnyoneController.java of the component File-Upload Controller. Performing a manipulation of the argument bucket/bizType results in path traversal. The attack can be initiated remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/dromara/lamp-cloud/\nhttps://github.com/dromara/lamp-cloud/issues/412\nhttps://vuldb.com/cve/CVE-2026-19757",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:40"
-    },
-    {
-      "cve_id": "CVE-2026-56865",
-      "title": "高危漏洞: CVE-2026-56865 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-08-14 06:17:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A malicious GOPROXY was previously capable of forging up to two sumdb tiles that allow for a requested module to bypass the GOSUMDB check and persist attacker-controlled module content to a local Go module cache. This attack allows for a malicious GOPROXY to serve malicious module content that cannot be detected by evaluating the transparency log. All tiles are now correctly verified against their parents. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy",
-      "refs": "https://go.dev/cl/814960\nhttps://go.dev/cl/815020\nhttps://go.dev/issue/80744",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:35"
-    },
-    {
-      "cve_id": "CVE-2026-56864",
-      "title": "高危漏洞: CVE-2026-56864 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-14 06:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "A malicious GOSUMDB was capable of serving arbitrary module content not contained within the transparency log. This attack allows for a coordinating GOPROXY and GOSUMDB to serve a client malicious module content that cannot be detected by evaluating the transparency log. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy",
-      "refs": "https://go.dev/cl/815000\nhttps://go.dev/cl/815020\nhttps://go.dev/issue/80745",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:29"
-    },
-    {
-      "cve_id": "CVE-2026-56862",
-      "title": "高危漏洞: CVE-2026-56862 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-14 06:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Handshake messages, such as KeyUpdate, are always considered as state-advancing, regardless of whether a handshake has been completed or not. As a result, a malicious client can keep sending KeyUpdate messages to force the server to keep performing key derivation operations indefinitely.",
-      "refs": "https://go.dev/cl/804261\nhttps://go.dev/issue/80528\nhttps://groups.google.com/g/golang-announce/c/94pEornpRlI",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:23"
-    },
-    {
-      "cve_id": "CVE-2026-56859",
-      "title": "高危漏洞: CVE-2026-56859 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-14 06:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Previously, DecodeElement would reset the depth counter causing it to never fire; this could lead to stack exhaustion.",
-      "refs": "https://go.dev/cl/803320\nhttps://go.dev/issue/80481\nhttps://groups.google.com/g/golang-announce/c/94pEornpRlI",
-      "source": "NVD",
-      "time": "2026-08-15 02:40:18"
     }
   ]
 }
