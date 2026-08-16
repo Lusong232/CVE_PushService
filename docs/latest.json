@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-73054",
+      "title": "高危漏洞: CVE-2026-73054 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 06:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "SiYuan versions before v3.7.4 contain an authentication bypass vulnerability in the WebSocket endpoint caused by differential parsing of query parameters between authentication exemption and session quarantine checks. Unauthenticated attackers can craft a malicious WebSocket URI with duplicated query parameters to bypass access auth code validation and receive the live kernel event stream including document identifiers, titles, and operation logs.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-c8w8-3pqp-wr83\nhttps://www.vulncheck.com/advisories/siyuan-before-authentication-bypass-via-websocket",
+      "source": "NVD",
+      "time": "2026-08-16 08:41:08"
+    },
+    {
+      "cve_id": "CVE-2026-73053",
+      "title": "高危漏洞: CVE-2026-73053 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan versions before v3.7.4 contain a cross-site scripting vulnerability in the unicode2Emoji function that fails to sanitize codepoint branch output. Attackers can craft document icons with hex-encoded markup that executes in the renderer with Node integration enabled, achieving arbitrary code execution on the host system.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vx5w-qrvp-mmcq\nhttps://www.vulncheck.com/advisories/siyuan-before-cross-site-scripting-via-unicode2emoji",
+      "source": "NVD",
+      "time": "2026-08-16 08:41:04"
+    },
+    {
+      "cve_id": "CVE-2026-73052",
+      "title": "高危漏洞: CVE-2026-73052 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan before v3.7.4 stores attribute-view field names without HTML escaping and interpolates them directly into option elements via innerHTML in the sort menu. Attackers can inject markup by renaming a database field to execute arbitrary JavaScript when users open the sort menu, with Node integration enabled in the desktop client enabling code execution.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-g3jx-227v-x2x4\nhttps://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-attribute-view-field-names",
+      "source": "NVD",
+      "time": "2026-08-16 08:41:00"
+    },
+    {
+      "cve_id": "CVE-2026-73050",
+      "title": "高危漏洞: CVE-2026-73050 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan versions before v3.7.4 fail to validate or escape the color field in attribute-view select options, allowing stored cross-site scripting through eight unescaped render sites. Attackers can inject event-handler attributes by including quotation marks in the color value, executing arbitrary JavaScript when viewing databases containing the malicious select field.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m7cc-jh9q-wxg8\nhttps://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-select-option-color",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:56"
+    },
+    {
+      "cve_id": "CVE-2026-73046",
+      "title": "高危漏洞: CVE-2026-73046 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-16 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SiYuan before v3.7.4 improperly restricts excessive authentication attempts in the CheckAuth() middleware. The HTTP Basic Authentication branch, which guards nearly the entire /api/* surface, accepts the workspace access code (Conf.AccessAuthCode) as the Basic Auth password but never consults the CAPTCHA/lockout gate or increments the failure counter used by the cookie/session login path. This allows unauthenticated remote attackers to brute-force the admin access code with unlimited automated requests and obtain full RoleAdministrator access to the kernel. A secondary weakness exists because the access code is compared using a non-constant-time string comparison.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w3xh-mmmh-r54v\nhttps://www.vulncheck.com/advisories/siyuan-before-authentication-bypass-via-http-basic-auth",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:49"
+    },
+    {
+      "cve_id": "CVE-2026-73045",
+      "title": "高危漏洞: CVE-2026-73045 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "SiYuan before 3.7.4 contains an improper restriction of excessive authentication attempts vulnerability in the authFilePublishAccess endpoint that allows unauthenticated attackers to brute-force per-notebook publish passwords. Attackers can submit unbounded password guesses without rate limiting or CAPTCHA to gain access to password-protected published notebooks.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-v362-968x-gp2v\nhttps://www.vulncheck.com/advisories/siyuan-before-brute-force-via-authfilepublishaccess",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:45"
+    },
+    {
+      "cve_id": "CVE-2026-73044",
+      "title": "高危漏洞: CVE-2026-73044 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan versions before v3.7.4 fail to validate or escape table column width values, allowing stored cross-site scripting injection into style attributes. Attackers can inject malicious payloads through the setAttrViewColWidth API that break out of style attributes and inject event handlers on every table cell, executing arbitrary code in the Electron renderer with Node integration enabled.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rj55-w3xr-gj62\nhttps://www.vulncheck.com/advisories/siyuan-before-stored-cross-site-scripting-via-column-width",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:40"
+    },
+    {
+      "cve_id": "CVE-2026-73043",
+      "title": "高危漏洞: CVE-2026-73043 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan versions before v3.7.4 contain a remote code execution vulnerability in the Template calculation operator, which renders user-authored Go templates and stores output verbatim without sanitization. Attackers can inject malicious HTML and JavaScript into template calculations that execute in the desktop client renderer with Node integration enabled, allowing arbitrary code execution when the database is opened.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rwh7-gm74-67h6\nhttps://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-template-calculation",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:36"
+    },
+    {
+      "cve_id": "CVE-2026-73042",
+      "title": "高危漏洞: CVE-2026-73042 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan before v3.7.4 fails to properly escape database menu metadata in HTML interpolation, allowing stored values to execute script when users open group, view, or field-edit menus. Attackers can inject markup through field descriptions or names that close containing elements and execute arbitrary code via event handlers, reaching Node built-ins due to Electron's insecure configuration.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-gcm3-qcq3-72rv\nhttps://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-menu-metadata",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:32"
+    },
+    {
+      "cve_id": "CVE-2026-73041",
+      "title": "高危漏洞: CVE-2026-73041 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-08-16 06:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SiYuan versions before v3.7.4 fail to validate or escape annotation fields written to disk by the setFileAnnotation endpoint. Attackers can inject malicious markup into annotation fields that execute as script in the PDF renderer with full Node.js access when a user opens an annotated PDF.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fqpw-c3pj-w8g9\nhttps://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-pdf-annotations",
+      "source": "NVD",
+      "time": "2026-08-16 08:40:28"
+    },
+    {
       "cve_id": "CVE-2026-19905",
       "title": "高危漏洞: CVE-2026-19905 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-wvpj-fg8h-843q\nhttps://www.vulncheck.com/advisories/grav-before-api-key-scope-bypass-via-invitationscontroller",
       "source": "NVD",
       "time": "2026-08-15 02:43:17"
-    },
-    {
-      "cve_id": "CVE-2026-72827",
-      "title": "高危漏洞: CVE-2026-72827 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 20:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Grav CMS before 2.0.13 contains a server-side template injection vulnerability in email-action parameters that allows low-privileged page editors to execute arbitrary operating-system commands. Attackers can inject Twig payloads using the unsandboxed find filter in email subject, body, to, or from fields to achieve remote code execution when forms are submitted.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-xx48-97m4-h7qm\nhttps://www.vulncheck.com/advisories/grav-cms-before-remote-code-execution-via-twig\nhttps://github.com/getgrav/grav/security/advisories/GHSA-xx48-97m4-h7qm",
-      "source": "NVD",
-      "time": "2026-08-15 02:43:12"
-    },
-    {
-      "cve_id": "CVE-2026-72826",
-      "title": "高危漏洞: CVE-2026-72826 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-14 20:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The getgrav/grav-plugin-api plugin before 1.0.13 fails to validate that the scopes of a newly created API key are a subset of the caller's scopes in createApiKey. The self-target path of requireApiKeyPermission() requires only the baseline api.access scope, and the new key's scopes are read directly from the request body with no subset check. An attacker holding a minimal-scope API key on a super account can submit an empty scopes array to mint an unscoped, full-access super key, bypassing scope restrictions (and enabling further chains such as configuration write to RCE).",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-95v9-4fcj-96gh\nhttps://www.vulncheck.com/advisories/grav-before-scope-bypass-via-createapikey",
-      "source": "NVD",
-      "time": "2026-08-15 02:43:06"
-    },
-    {
-      "cve_id": "CVE-2026-72825",
-      "title": "高危漏洞: CVE-2026-72825 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-08-14 20:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
-      "description": "The getgrav/grav-plugin-api plugin before 1.0.13 contains an API-key scope cap bypass in the POST /reports/twig-content/allowlist endpoint (ReportsController). The endpoint enforces requirePermission('api.config.write') followed by a bare isSuperAdmin() check instead of requireSuper(). Because isSuperAdmin() reads access.api.super directly and never consults api_key_scopes, a least-privilege API key scoped to api.config.write minted on a super account passes the gate, allowing an attacker to append attacker-chosen tokens to the security.twig_sandbox allowlist (persisted to user/config/security.yaml). Widening the allowlist turns any subsequent Twig-in-content render into an SSTI/RCE sink.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-v5ph-7v92-wqm6\nhttps://www.vulncheck.com/advisories/grav-before-api-key-scope-cap-bypass-via-reportscontroller",
-      "source": "NVD",
-      "time": "2026-08-15 02:43:02"
-    },
-    {
-      "cve_id": "CVE-2026-72824",
-      "title": "高危漏洞: CVE-2026-72824 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-14 20:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.13 contains an API key scope-cap bypass in PagesController::guardTwigContent(). The Twig-toggle check uses a bare isSuperAdmin() gate that does not consult api_key_scopes, so a least-privilege API key scoped only to api.pages.write and minted on a super account can enable process.twig on a page save even though admin.pages_twig is intentionally outside the api.pages scope. When security.twig_content.process_enabled=true and editor_enabled=false, this allows Twig-in-content to execute server-side, resulting in server-side template injection (SSTI) and remote code execution.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-96xv-p87j-58mx\nhttps://www.vulncheck.com/advisories/grav-before-api-key-scope-bypass-via-pagescontroller\nhttps://github.com/getgrav/grav/security/advisories/GHSA-96xv-p87j-58mx",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:57"
-    },
-    {
-      "cve_id": "CVE-2026-72822",
-      "title": "高危漏洞: CVE-2026-72822 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-14 20:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The getgrav/grav-plugin-api Composer package before 1.0.13 (affected <= 1.0.12) fails to enforce API key scope caps on the disable2fa endpoint. Unlike the sibling generate2fa endpoint, disable2fa authorizes the admin (non-self) path solely via ACL reads (isSuperAdmin/hasPermission) and never invokes requirePermission(), so the api_key_scopes cap is never applied. As a result, a holder of a narrow-scope API key on a super account, or a non-super account whose ACL includes api.users.write, can force-disable two-factor authentication on any non-super target account via POST /api/v1/users/{user}/2fa/disable without providing a TOTP code, facilitating account takeover.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-22p9-6fh4-mmf2\nhttps://www.vulncheck.com/advisories/grav-before-authentication-bypass-via-disable2fa\nhttps://github.com/getgrav/grav/security/advisories/GHSA-22p9-6fh4-mmf2",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:52"
-    },
-    {
-      "cve_id": "CVE-2026-72819",
-      "title": "高危漏洞: CVE-2026-72819 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 20:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Grav CMS before 2.0.13 contains a remote code execution vulnerability in the Flex Objects plugin settings validation that allows authenticated users to execute arbitrary code by uploading a ZIP file containing PHP code. Attackers can bypass routine name validation by using array notation instead of string notation, call the unZip routine with a malicious archive, and write PHP files to the web root for execution.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-r94f-hx44-8jqf\nhttps://www.vulncheck.com/advisories/grav-cms-before-remote-code-execution-via-zip-upload\nhttps://github.com/getgrav/grav/security/advisories/GHSA-r94f-hx44-8jqf",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:45"
-    },
-    {
-      "cve_id": "CVE-2026-72811",
-      "title": "高危漏洞: CVE-2026-72811 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-14 20:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "SiYuan versions <= v3.7.2 contain a SQL injection vulnerability in the backlink/mention search query (kernel/model/backlink.go), which concatenates stored block metadata (title, name, alias, anchor text) and the client-supplied keyword into a SQL MATCH/search statement while escaping only the double-quote character and not the single quote. A single quote in the client keyword (first-order, reachable by an anonymous or RoleReader user on the publish surface) or in stored document metadata (second-order) breaks out of the string literal. Because the query runs on the main read-write siyuan.db handle via a statement-stacking-capable driver, an attacker can execute arbitrary SQL, enabling cross-notebook read and write. Fixed in v3.7.4.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-q2vg-7qgx-x5fc\nhttps://www.vulncheck.com/advisories/siyuan-before-sql-injection-via-backlink-search",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:40"
-    },
-    {
-      "cve_id": "CVE-2026-72810",
-      "title": "高危漏洞: CVE-2026-72810 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-08-14 20:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "SiYuan versions before v3.7.4 contain a publish-boundary bypass vulnerability in WebSocket broadcast sessions that allows anonymous readers to receive unfiltered edits. Attackers can establish a WebSocket connection to the publish surface and passively receive real-time content events including password-protected and forbidden documents without authentication.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-mw8r-mw84-88v2\nhttps://www.vulncheck.com/advisories/siyuan-before-publish-boundary-bypass-via-websocket",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:35"
-    },
-    {
-      "cve_id": "CVE-2026-19822",
-      "title": "高危漏洞: CVE-2026-19822 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 20:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Tenda W20E 15.11.0.6(1068_1546_841)_CN_TDC. This issue affects the function lstAdd of the file /goform/editQos of the component QoS Edit. Such manipulation of the argument qosListConnecttedNum leads to stack-based buffer overflow. The attack may be launched remotely. The exploit is publicly available and might be used.",
-      "refs": "https://github.com/paueger/mycve/blob/main/Tenda_W20E/3.md\nhttps://vuldb.com/cve/CVE-2026-19822\nhttps://vuldb.com/submit/869006",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:31"
-    },
-    {
-      "cve_id": "CVE-2026-19821",
-      "title": "高危漏洞: CVE-2026-19821 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-14 19:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Tenda AC12 15.03.06.23_multi_TD01. This vulnerability affects the function formSetRebootTimer of the file /goform/SetSysAutoRebbotCfg of the component httpd web management interface. This manipulation of the argument rebootTime causes buffer overflow. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/AC12/4.md\nhttps://vuldb.com/cve/CVE-2026-19821\nhttps://vuldb.com/submit/868922",
-      "source": "NVD",
-      "time": "2026-08-15 02:42:27"
     }
   ]
 }
