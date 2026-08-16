@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19926",
+      "title": "高危漏洞: CVE-2026-19926 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-16 10:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Evergreen up to 3.14.11/3.15.11/3.16.5/3.17-beta1. The affected element is an unknown function of the file /osrf-gateway-v1 of the component open-ils.fielder OpenSRF Service. Such manipulation leads to sql injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.14.12, 3.15.12, 3.16.6 and 3.17-beta2 is sufficient to fix this issue. The affected component should be upgraded.",
+      "refs": "https://bugs.launchpad.net/evergreen/+bug/2147196\nhttps://bugs.launchpad.net/evergreen/+bug/2147196/+attachment/5958185/+files/2.png\nhttps://evergreen-ils.org/Evergreen-security-release-3-14-12-3-15-12-3-16-6-3-17-beta2",
+      "source": "NVD",
+      "time": "2026-08-16 14:21:57"
+    },
+    {
+      "cve_id": "CVE-2026-19924",
+      "title": "高危漏洞: CVE-2026-19924 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-16 10:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security vulnerability has been detected in Tenda AC10 16.03.10.09_multi_TDE01. This vulnerability affects the function R7WebsSecurityHandler of the component httpd. The manipulation leads to improper authentication. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/teiwiet/tenda-ac10-vulnerabilities/blob/main/authen-bypass-tenda-ac10.md\nhttps://vuldb.com/cve/CVE-2026-19924\nhttps://vuldb.com/submit/871957",
+      "source": "NVD",
+      "time": "2026-08-16 14:21:52"
+    },
+    {
+      "cve_id": "CVE-2026-19919",
+      "title": "高危漏洞: CVE-2026-19919 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-16 08:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in code-projects Online Shopping System 1.0. This impacts an unknown function of the file /login.php of the component Login. The manipulation of the argument email results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/zzzxc643/CVE1/blob/main/online-shopping-system/vul1.md\nhttps://vuldb.com/cve/CVE-2026-19919",
+      "source": "NVD",
+      "time": "2026-08-16 14:21:47"
+    },
+    {
       "cve_id": "CVE-2026-73054",
       "title": "高危漏洞: CVE-2026-73054 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/getgrav/grav/commit/0b384f5b0e73b1ad9dd29c70185407895ea3b09f\nhttps://github.com/getgrav/grav/commit/8071c10bc3a4743a4b8cf003dfb1644d6680c2ea\nhttps://github.com/getgrav/grav/commit/a0bf26f7e5d7a98894b7cd2b8c5afe419b264e53",
       "source": "NVD",
       "time": "2026-08-15 02:43:34"
-    },
-    {
-      "cve_id": "CVE-2026-72830",
-      "title": "高危漏洞: CVE-2026-72830 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-14 20:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Grav API plugin versions before 1.0.13 fail to enforce API key scope caps in ConfigController super-scope gates, allowing scoped keys to write scheduler configuration. Attackers with a scoped api.config.write key can inject arbitrary commands into scheduler.custom_jobs that execute via Symfony Process for remote code execution.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-2x29-3mjq-2pvx\nhttps://www.vulncheck.com/advisories/grav-api-plugin-before-rce-via-configcontroller-scope-bypass",
-      "source": "NVD",
-      "time": "2026-08-15 02:43:30"
-    },
-    {
-      "cve_id": "CVE-2026-72829",
-      "title": "高危漏洞: CVE-2026-72829 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-14 20:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.13 contains an API-key scope-cap bypass in UsersController's create() and update() methods. These methods enforce the scope cap only for api.users.write, but gate super-privilege grants on a bare isSuperAdmin() check that reads access.api.super directly without consulting the key's scopes. As a result, an api.users.write-scoped key minted on a super account can set access.api.super or assign a super-granting group to mint or promote a full super account, then authenticate as that account for uncapped administrative privileges.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-jrm3-jpp7-3gmx\nhttps://www.vulncheck.com/advisories/grav-before-api-key-scope-bypass-via-userscontroller\nhttps://github.com/getgrav/grav/security/advisories/GHSA-jrm3-jpp7-3gmx",
-      "source": "NVD",
-      "time": "2026-08-15 02:43:22"
-    },
-    {
-      "cve_id": "CVE-2026-72828",
-      "title": "高危漏洞: CVE-2026-72828 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-14 20:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Grav Plugin API (getgrav/grav-plugin-api) before 1.0.13 fails to enforce API-key scope caps in InvitationsController. The strip-super and accept-groups decisions are gated on a bare isSuperAdmin() check rather than a scope-aware permission check, so a least-privilege API key (scoped to api.users.write) minted on a super account can create an invitation record containing super-admin access flags. When the invitation is accepted, those flags are written verbatim to the new account, resulting in privilege escalation to a fully controlled super account.",
-      "refs": "https://github.com/getgrav/grav/security/advisories/GHSA-wvpj-fg8h-843q\nhttps://www.vulncheck.com/advisories/grav-before-api-key-scope-bypass-via-invitationscontroller",
-      "source": "NVD",
-      "time": "2026-08-15 02:43:17"
     }
   ]
 }
