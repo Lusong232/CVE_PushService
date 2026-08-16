@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-74795",
+      "title": "高危漏洞: CVE-2026-74795 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban before 6.6.0 contains an uncontrolled recursion vulnerability in its recursive-descent parser. The parser does not enforce a default expression depth limit (the ExpressionDepthLimit property in ParserOptions defaults to null/disabled), so an attacker who controls template input can supply a deeply nested template (e.g., thousands of nested parentheses or blocks) that exhausts thread stack space and raises a StackOverflowException. Because a StackOverflowException cannot be caught in .NET, this causes immediate, unrecoverable termination of the hosting process, resulting in a denial of service. Applications that process untrusted or user-supplied templates can be exploited remotely without authentication.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-wgh7-7m3c-fx25\nhttps://www.vulncheck.com/advisories/scriban-before-denial-of-service-via-uncontrolled-recursion",
+      "source": "NVD",
+      "time": "2026-08-17 02:15:06"
+    },
+    {
+      "cve_id": "CVE-2026-74794",
+      "title": "高危漏洞: CVE-2026-74794 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban before 6.6.0 contains an infinite recursion vulnerability in object rendering when the ObjectRecursionLimit property defaults to unlimited. Attackers can supply circular reference objects to the template context, exhausting stack space and triggering an uncatchable StackOverflowException that terminates the hosting process.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-grr9-747v-xvcp\nhttps://www.vulncheck.com/advisories/scriban-before-denial-of-service-via-infinite-recursion",
+      "source": "NVD",
+      "time": "2026-08-17 02:15:01"
+    },
+    {
+      "cve_id": "CVE-2026-74792",
+      "title": "高危漏洞: CVE-2026-74792 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban before 7.0.0 (affected versions <= 6.6.0) contains a stack overflow vulnerability in nested array initializer parsing. Deeply nested array initializers recurse through a path (ParseArrayInitializer → ParseExpression → ParseArrayInitializer) that is not covered by the ExpressionDepthLimit counter added in the fix for GHSA-wgh7-7m3c-fx25. An attacker who can supply untrusted input to Template.Parse can trigger an uncatchable StackOverflowException that immediately terminates the process, even with the default ExpressionDepthLimit enabled.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-p6q4-fgr8-vx4p\nhttps://www.vulncheck.com/advisories/scriban-before-stack-overflow-via-nested-array-initializers",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:57"
+    },
+    {
+      "cve_id": "CVE-2026-74791",
+      "title": "高危漏洞: CVE-2026-74791 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-08-16 22:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Scriban before 7.0.0 fails to clear the CachedTemplates dictionary when TemplateContext.Reset() is called, allowing cached templates to persist across reused contexts. Attackers can exploit request-dependent ITemplateLoader implementations to access previously authorized template content from earlier renders without triggering TemplateLoader.Load() again.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-x6m9-38vm-2xhf\nhttps://www.vulncheck.com/advisories/scriban-before-authorization-bypass-via-stale-include-cache",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:49"
+    },
+    {
+      "cve_id": "CVE-2026-74790",
+      "title": "高危漏洞: CVE-2026-74790 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-16 22:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Scriban before 7.0.0 caches TypedObjectAccessor by Type only without considering MemberFilter changes, allowing reused TemplateContext instances to expose members that should be hidden. Attackers can access filtered properties and fields by reusing a TemplateContext after tightening its MemberFilter, bypassing sandbox policies across requests or tenants.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-5wr9-m6jw-xx44\nhttps://www.vulncheck.com/advisories/scriban-before-memberfilter-bypass-via-templatecontext-cache",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:45"
+    },
+    {
+      "cve_id": "CVE-2026-74789",
+      "title": "高危漏洞: CVE-2026-74789 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban before 7.0.0 (affected <= 6.6.0) applies its LoopLimit constraint only to script loop statements and not to expensive iteration performed inside built-in operators and functions. As a result, a single expression such as {{ 1..1000000 | array.size }} — or a memory-amplification expression such as {{ 'A' * 200000000 }} — can force large CPU or memory consumption even when LoopLimit is configured to a very small value, resulting in denial of service. Applications that render attacker-controlled templates and rely on LoopLimit for safe execution are affected.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-c875-h985-hvrc\nhttps://www.vulncheck.com/advisories/scriban-before-looplimit-bypass-via-built-in-operations",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:41"
+    },
+    {
+      "cve_id": "CVE-2026-74788",
+      "title": "高危漏洞: CVE-2026-74788 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban before 7.0.0 (affected versions <= 6.6.0) contains an uncontrolled memory allocation vulnerability in the string.pad_left and string.pad_right template functions, which perform no validation on the width parameter before delegating to .NET's String.PadLeft/PadRight. When an application exposes Scriban to untrusted template input, an attacker can supply an arbitrarily large width value (e.g., 500,000,000) to trigger ~1GB memory allocations in a single call, resulting in OutOfMemoryException and denial of service. The TemplateContext.LimitToString limit does not prevent this because it is only enforced after the string has been fully allocated.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-v66j-x4hw-fv9g\nhttps://www.vulncheck.com/advisories/scriban-before-denial-of-service-via-string-pad-left-pad-right",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:36"
+    },
+    {
+      "cve_id": "CVE-2026-74787",
+      "title": "高危漏洞: CVE-2026-74787 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban before 7.0.0 contains an uncontrolled recursion vulnerability in the object.to_json builtin function that lacks depth limits and circular reference detection. Attackers can craft templates with self-referencing objects to trigger unbounded recursion, causing a StackOverflowException that fatally terminates the hosting .NET process.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-xcx6-vp38-8hr5\nhttps://www.vulncheck.com/advisories/scriban-before-uncontrolled-recursion-via-object-to-json",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:31"
+    },
+    {
+      "cve_id": "CVE-2026-74783",
+      "title": "高危漏洞: CVE-2026-74783 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban versions 6.6.0 through 7.2.0 contain a non-enforcing ExpressionDepthLimit guard that fails to stop recursive descent parsing of deeply nested expressions. Attackers can supply templates with deeply nested parentheses, array initializers, object initializers, or unary operators to trigger an uncatchable StackOverflowException that immediately terminates the host process.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-6q7j-xr26-3h2c\nhttps://www.vulncheck.com/advisories/scriban-through-parser-recursion-denial-of-service",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:27"
+    },
+    {
+      "cve_id": "CVE-2026-73062",
+      "title": "高危漏洞: CVE-2026-73062 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban versions 3.0.0 through 7.2.0 contain a denial of service vulnerability in the array multiplication operator that allocates memory without enforcing LoopLimit or overflow-safe arithmetic checks. Attackers can supply a large integer multiplier in a template to force multi-gigabyte memory allocations, causing resource exhaustion and availability degradation.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-q6rr-fm2g-g5x8\nhttps://www.vulncheck.com/advisories/scriban-through-denial-of-service-via-array-multiplication",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:22"
+    },
+    {
+      "cve_id": "CVE-2026-73061",
+      "title": "高危漏洞: CVE-2026-73061 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-16 22:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Scriban before 7.2.2 contains an access-modifier bypass vulnerability in TypedObjectAccessor that allows template code to write CLR object properties without setter-visibility checks. Attackers can modify properties with private, internal, or init-only setters, and perform mass assignment on public-setter properties, permanently altering live host objects after template rendering.",
+      "refs": "https://github.com/scriban/scriban/security/advisories/GHSA-7jvp-hj45-2f2m\nhttps://www.vulncheck.com/advisories/scriban-before-arbitrary-property-write-via-typedobjectaccessor",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:17"
+    },
+    {
+      "cve_id": "CVE-2026-73060",
+      "title": "高危漏洞: CVE-2026-73060 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Scriban versions from 3.0.0 through 7.2.5 contain a denial of service vulnerability in the ScriptRange.Multiply operator that bypasses LoopLimit when the left operand is a lazy sequence. Attackers can supply templates with array multiplication on lazy sequences to execute billions of uncharged iterations, pinning CPU cores and exhausting garbage collection resources even when LoopLimit is set to 1.",
+      "refs": "https://github.com/scriban/scriban/commit/205ca6a7c2349d3d388bd5f1f7729ee198c0d5e5\nhttps://github.com/scriban/scriban/commit/c3f03bfc912e14b306a01a03e611f606b05f9c33\nhttps://github.com/scriban/scriban/security/advisories/GHSA-89cf-6hmv-8rxm",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:12"
+    },
+    {
+      "cve_id": "CVE-2026-73057",
+      "title": "高危漏洞: CVE-2026-73057 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "stoatchat before 0.15.0 fails to validate SVG viewBox dimensions in the proxy endpoint, allowing attackers to cause denial of service by memory exhaustion. Attackers can host malicious SVGs with extremely large width and height values and trigger concurrent requests to exhaust available memory across proxy replicas.",
+      "refs": "https://github.com/stoatchat/stoatchat/security/advisories/GHSA-x87r-h3mq-7mgr\nhttps://www.vulncheck.com/advisories/stoatchat-before-uncapped-svg-rendering-denial-of-service",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:08"
+    },
+    {
+      "cve_id": "CVE-2026-73056",
+      "title": "高危漏洞: CVE-2026-73056 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-16 22:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m6w6-p7pc-fpg2\nhttps://www.vulncheck.com/advisories/siyuan-kernel-before-unthrottled-brute-force-via-api-token",
+      "source": "NVD",
+      "time": "2026-08-17 02:14:03"
+    },
+    {
+      "cve_id": "CVE-2024-58375",
+      "title": "高危漏洞: CVE-2024-58375 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-16 22:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "OpenTofu versions 1.8.0 through 1.8.2 do not properly restrict sensitive variables and locals when users have opted into static evaluation of module sources, versions, and backend configurations. As a result, values marked as sensitive may be exposed through these configuration elements instead of producing an error. This is fixed in OpenTofu 1.8.3, which adds explicit errors to prevent the use of sensitive values in these contexts.",
+      "refs": "https://github.com/opentofu/opentofu/security/advisories/GHSA-wpr2-j6gr-pjw9\nhttps://www.vulncheck.com/advisories/opentofu-before-secret-variable-leaking-via-static-evaluation",
+      "source": "NVD",
+      "time": "2026-08-17 02:13:56"
+    },
+    {
       "cve_id": "CVE-2024-13784",
       "title": "高危漏洞: CVE-2024-13784 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -934,171 +1099,6 @@
       "refs": "https://www.tenable.com/security/tns-2026-22",
       "source": "NVD",
       "time": "2026-08-15 05:16:27"
-    },
-    {
-      "cve_id": "CVE-2026-19681",
-      "title": "高危漏洞: CVE-2026-19681 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-15 02:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "An authenticated command injection vulnerability exists in Security Center related to file upload processing. An attacker could exploit this issue by uploading a specially crafted file, potentially resulting in arbitrary command execution on the underlying operating system.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:22"
-    },
-    {
-      "cve_id": "CVE-2026-19680",
-      "title": "高危漏洞: CVE-2026-19680 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-08-15 02:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "A SQL injection vulnerability exists in Security Center that could allow an attacker to access unauthorized data from the application's database.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:18"
-    },
-    {
-      "cve_id": "CVE-2026-19679",
-      "title": "高危漏洞: CVE-2026-19679 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-15 02:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An input validation vulnerability exists in Security Center's file upload handling, where insufficient sanitization of uploaded filenames could contribute to a downstream command injection issue.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:14"
-    },
-    {
-      "cve_id": "CVE-2026-19635",
-      "title": "高危漏洞: CVE-2026-19635 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-15 02:17:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A local privilege escalation vulnerability exists in Security Center. An attacker with write access to a specific configuration file could achieve arbitrary code execution with elevated privileges, without requiring further user or victim interaction.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:10"
-    },
-    {
-      "cve_id": "CVE-2026-19629",
-      "title": "高危漏洞: CVE-2026-19629 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-15 02:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A privilege escalation vulnerability exists in Tenable Security Center that allows a user with \"Security Manager\" role and \"manage user\" permission on a single group to modify users belonging to other groups. This bypasses the intended access control restrictions and enables unauthorized cross-group user management.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:06"
-    },
-    {
-      "cve_id": "CVE-2026-12366",
-      "title": "高危漏洞: CVE-2026-12366 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-15 02:17:22",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Zephyr's dynamic kernel-object disposal path unref_check() in kernel/userspace/userspace.c frees an object's storage (k_free(dyn->data)) once its reference count reaches zero, after running a per-object-type cleanup. The cleanup switch handled only K_OBJ_MSGQ and K_OBJ_STACK; there was no K_OBJ_TIMER case. A dynamically-allocated, initialized, and armed k_timer keeps its embedded struct _timeout dnode linked in the global timeout queue (_timeout_q), so freeing the timer storage without cancelling the timeout leaves a dangling node in that queue.\n\nWhen the timer next expires, the timeout machinery walks _timeout_q and invokes z_timer_expiration_handler() on the freed node, dereferencing and writing freed (and reusable) kernel heap in kernel/ISR context. This is a deterministic use-after-free that does not depend on SMP: the queued node is simply never unlinked at free time.\n\nThe disposal is reachable from an unprivileged user thread under CONFIG_USERSPACE + CONFIG_DYNAMIC_OBJECTS: a thread that holds the last permission on such a timer drops it via the k_object_release() syscall (or by exiting, through k_thread_perms_all_clear()), and can arm the timer itself via the k_timer_start() syscall. The free and the expiration handler run at kernel privilege while the actor is a user thread, so the bug is a sandbox-escape memory-corruption primitive usable for privilege escalation. The fix adds k_timer_cleanup() (cancel the timeout and wait for any in-flight handler) and calls it for K_OBJ_TIMER before freeing.",
-      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/1e68351a2572f9ae480be71da4aca9aa90db3fb2\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-x96g-542c-gccq",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:01"
-    },
-    {
-      "cve_id": "CVE-2026-12364",
-      "title": "高危漏洞: CVE-2026-12364 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-08-15 02:17:21",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:H",
-      "description": "The user-space system-call verifier z_vrfy_z_log_msg_static_create() in subsys/logging/log_msg.c was a pure pass-through: it forwarded the caller-supplied source, desc, package, and data arguments directly to the kernel-mode implementation z_impl_z_log_msg_static_create() without performing any of the mandatory K_SYSCALL_* checks. Because z_log_msg_static_create() is declared __syscall, under CONFIG_USERSPACE any unprivileged user-mode thread can invoke it directly with fully attacker-controlled arguments.\n\nThe kernel-mode handler dereferences each of these untrusted values: frontend_runtime_filtering() reads through the source pointer as a struct log_source_dynamic_data, cbprintf_package_copy() reads desc.package_len bytes from the package pointer, and z_log_msg_finalize() performs a memcpy() of desc.data_len bytes from the data pointer. With no verification, a user thread can supply arbitrary kernel addresses and arbitrary lengths, and the kernel will read from them.\n\nThe impact is a kernel-mode denial of service (the kernel faults dereferencing an attacker-chosen pointer) and, where a log backend output is observable to the attacker, disclosure of arbitrary kernel memory copied into the emitted log message — a confidentiality breach across the user/kernel boundary that the userspace sandbox is meant to enforce. The reads do not corrupt kernel memory, so there is no out-of-bounds write primitive.\n\nThe fix adds the required validation to the verifier: it bounds desc.package_len against Z_LOG_MSG_MAX_PACKAGE, rejects non-NULL/length mismatches, and applies K_SYSCALL_MEMORY_READ() to package, data, and (when runtime filtering with a frontend is enabled) source, so any out-of-bounds or kernel pointer now raises K_OOPS instead of being honored.",
-      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/77aa26d8b940f39778154f02563caf15d02efdac\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-h7rf-g9mg-g23f",
-      "source": "NVD",
-      "time": "2026-08-15 05:15:54"
-    },
-    {
-      "cve_id": "CVE-2026-46439",
-      "title": "高危漏洞: CVE-2026-46439 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-15 01:18:14",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "compliance-trestle is a tooling platform for managing compliance as code. Versions prior to 3.12.2 and 4.0.3 have a Server-Side Template Injection (SSTI) vulnerability exists in the `trestle author jinja` command. The command recursively evaluates rendered templates, allowing an attacker to achieve arbitrary command execution with privileges of the running process by injecting malicious payloads into data fields (such as SSP documents or Lookup Tables). The vulnerability does not require attacker control of the template itself. Only attacker-controlled input data rendered into a trusted template is required. This distinction is critical: the template author may only intend to render plain text (e.g., `Title: {{ ssp.metadata.title }}`), but because of the recursive parsing, the data field itself becomes executable. The vulnerability is caused by recursive re-compilation and re-rendering of already-rendered output. Versions 3.12.3 and 4.0.3 patch the issue.",
-      "refs": "https://github.com/oscal-compass/compliance-trestle/commit/247fcce289f60103f3d8e28d8ec51a6986b94fb6\nhttps://github.com/oscal-compass/compliance-trestle/commit/7d107b3ac53caca7bde97a6278b23cd739d94525\nhttps://github.com/oscal-compass/compliance-trestle/security/advisories/GHSA-gg2g-p7xc-qqmm",
-      "source": "NVD",
-      "time": "2026-08-15 02:45:24"
-    },
-    {
-      "cve_id": "CVE-2026-19845",
-      "title": "高危漏洞: CVE-2026-19845 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-15 01:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in TOTOLINK A800R 4.1.2cu.5137_B20200730. This affects the function setStaticDhcpConfig of the file /cgi-bin/cstecgi.cgi of the component lan.so. Executing a manipulation of the argument Comment can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/setStaticDhcpConfig.md\nhttps://vuldb.com/cve/CVE-2026-19845\nhttps://vuldb.com/submit/869454",
-      "source": "NVD",
-      "time": "2026-08-15 02:45:18"
-    },
-    {
-      "cve_id": "CVE-2026-19844",
-      "title": "高危漏洞: CVE-2026-19844 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-15 01:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A vulnerability was found in TOTOLINK A800R 4.1.2cu.5137_B20200730. The impacted element is the function setRadvdCfg of the file /cgi-bin/cstecgi.cgi of the component ipv6.so. Performing a manipulation of the argument radvdinterfacename results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/panda666-888/vuls/blob/main/totolink/a800r/setRadvdCfg.md\nhttps://vuldb.com/cve/CVE-2026-19844\nhttps://vuldb.com/submit/869443",
-      "source": "NVD",
-      "time": "2026-08-15 02:45:14"
-    },
-    {
-      "cve_id": "CVE-2026-19628",
-      "title": "高危漏洞: CVE-2026-19628 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-15 01:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A command injection vulnerability exists in Tenable Security Center. An authenticated administrator could modify application configuration values to achieve arbitrary command execution on the underlying operating system when specific backend operations are triggered.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 02:45:09"
-    },
-    {
-      "cve_id": "CVE-2026-19626",
-      "title": "高危漏洞: CVE-2026-19626 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-15 01:17:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A remote code execution vulnerability exists in Tenable Security Center's report generation functionality. An authenticated, non-administrative user could exploit this issue by supplying specially crafted input that is later processed unsafely during server-side report rendering, resulting in arbitrary code execution with the privileges of the service account.",
-      "refs": "https://www.tenable.com/security/tns-2026-22",
-      "source": "NVD",
-      "time": "2026-08-15 02:45:02"
-    },
-    {
-      "cve_id": "CVE-2026-66271",
-      "title": "高危漏洞: CVE-2026-66271 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-15 00:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell Wyse Management Suite (WMS), versions prior to 2605.0.2, contain an Unrestricted Upload of File with Dangerous Type vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Remote Code Execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000493271/dsa-2026-329-security-update-for-dell-wyse-management-suite-wms-for-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-08-15 02:44:57"
-    },
-    {
-      "cve_id": "CVE-2026-66270",
-      "title": "高危漏洞: CVE-2026-66270 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-15 00:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell Wyse Management Suite (WMS), versions prior to 2605.0.2, contain an Unrestricted Upload of File with Dangerous Type vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Remote Code Execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000493271/dsa-2026-329-security-update-for-dell-wyse-management-suite-wms-for-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-08-15 02:44:51"
-    },
-    {
-      "cve_id": "CVE-2026-63700",
-      "title": "高危漏洞: CVE-2026-63700 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-15 00:16:58",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Dell Wyse Management Suite (WMS), versions prior to 2605.0.2, contain an Incorrect Default Permission vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Privilege Escalation.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000493271/dsa-2026-329-security-update-for-dell-wyse-management-suite-wms-for-multiple-vulnerabilities",
-      "source": "NVD",
-      "time": "2026-08-15 02:44:46"
     }
   ]
 }
