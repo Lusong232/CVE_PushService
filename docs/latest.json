@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19983",
+      "title": "高危漏洞: CVE-2026-19983 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-17 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in GL.iNet A1300, AX1800, AXT1800, MT2500, MT3000, MT6000, X3000 and XE3000 4.8.x. This issue affects some unknown processing of the file /usr/bin/gl_nas_sys of the component NAS Command Service. The manipulation results in os command injection. The attack may be launched remotely. Upgrading to version 4.9.0 is capable of addressing this issue. It is suggested to upgrade the affected component. The vendor explains: \"After our investigation, we have confirmed that the vulnerability described (...) does indeed exist.\"",
+      "refs": "https://github.com/gl-inet/CVE-issues/blob/main/4.0.0/NAS%20Host-header%20bypass%20to%20unauthenticated%20root%20RCE.md\nhttps://vuldb.com/cve/CVE-2026-19983\nhttps://vuldb.com/submit/873919",
+      "source": "NVD",
+      "time": "2026-08-17 20:21:53"
+    },
+    {
+      "cve_id": "CVE-2026-19982",
+      "title": "高危漏洞: CVE-2026-19982 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-17 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in GL.iNet BE9300 and MT6000 4.8.x. This vulnerability affects unknown code of the component Firewall-management RPC. The manipulation of the argument dest_port/dest_ip leads to os command injection. The attack may be initiated remotely. Upgrading to version 4.9.0 is able to resolve this issue. The affected component should be upgraded. The vendor explains: \"After our investigation, we have confirmed that the vulnerability described (...) does indeed exist.\"",
+      "refs": "https://github.com/gl-inet/CVE-issues/blob/main/4.0.0/Firewall%20Cleanup%20RCE.md\nhttps://vuldb.com/cve/CVE-2026-19982\nhttps://vuldb.com/submit/873918",
+      "source": "NVD",
+      "time": "2026-08-17 20:21:47"
+    },
+    {
       "cve_id": "CVE-2026-19981",
       "title": "高危漏洞: CVE-2026-19981 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/DevVaibhav07/VULN-POC/blob/main/ImpressCMSRCCE.md\nhttps://github.com/ImpressCMS/impresscms\nhttps://www.vulncheck.com/advisories/impresscms-authenticated-rce-via-php-custom-tag-eval",
       "source": "NVD",
       "time": "2026-08-15 05:17:23"
-    },
-    {
-      "cve_id": "CVE-2026-73678",
-      "title": "高危漏洞: CVE-2026-73678 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-15 03:18:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "MindsDB Minds Platform version 26.1.0 and earlier contains an unauthenticated remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary OS commands by submitting crafted prompts to the unprotected POST /api/v1/responses/ endpoint, which reaches the Anton agent's scratchpad tool that calls exec() on attacker-influenced Python source without sandboxing. Attackers can first configure their own LLM API key through the unauthenticated PUT /api/v1/settings/ endpoint, then POST a prompt directing the agent to invoke the scratchpad tool with arbitrary Python code, achieving full OS command execution as the user running the desktop application and enabling access to SSH keys, stored credentials, and environment secrets.",
-      "refs": "https://github.com/mindsdb/minds-platform\nhttps://github.com/mindsdb/minds-platform/security/advisories/GHSA-jcxw-h8ph-pxpv\nhttps://www.vulncheck.com/advisories/mindsdb-minds-platform-unauthenticated-rce-via-scratchpad-exec",
-      "source": "NVD",
-      "time": "2026-08-15 05:17:19"
-    },
-    {
-      "cve_id": "CVE-2026-50027",
-      "title": "高危漏洞: CVE-2026-50027 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-15 03:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "mcp-memory-service is a semantic memory layer for AI applications. Prior to 10.67.1, all HTTP routes under /api/documents/* in mcp-memory-service are served without any authentication dependency, even when the server is configured with an API key (MCP_API_KEY) or OAuth. An unauthenticated remote attacker can upload arbitrary content into the memory store (write), retrieve stored document content (read), and permanently delete memories belonging to authenticated users (delete) — all without supplying any credentials. The /api/memories counterpart correctly enforces authentication, making this an inconsistent and exploitable authentication boundary. This vulnerability is fixed in 10.67.1.",
-      "refs": "https://github.com/advisories/GHSA-84hp-mqvj-3p8h\nhttps://pypi.org/project/mcp-memory-service\nhttps://web.archive.org/web/20260508112116/https://github.com/doobidoo/mcp-memory-service",
-      "source": "NVD",
-      "time": "2026-08-15 05:17:15"
     }
   ]
 }
