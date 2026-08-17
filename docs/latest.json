@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19981",
+      "title": "高危漏洞: CVE-2026-19981 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-17 12:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A weakness has been identified in GL.iNet A1300, AX1800, AXT1800, BE1400, BE3600, BE6500, BE9300, BE10000, E5800, MT2500, MT3000, MT3600BE, MT5000, MT6000, X2000, X3000 and XE3000 up to 4.8.x. This affects an unknown part of the component Wi-Fi Timer Power-Schedule Feature. Executing a manipulation of the argument switch_power/restore_power can lead to os command injection. The attack can be launched remotely. The vendor explains: \"After our investigation, we have confirmed that the vulnerability described (...) does indeed exist.\"",
+      "refs": "https://github.com/gl-inet/CVE-issues/blob/main/4.0.0/Wi-Fi%20Timer%20Power-Schedule%20Cron%20RCE.md\nhttps://vuldb.com/cve/CVE-2026-19981\nhttps://vuldb.com/submit/873917",
+      "source": "NVD",
+      "time": "2026-08-17 14:33:09"
+    },
+    {
+      "cve_id": "CVE-2026-19980",
+      "title": "高危漏洞: CVE-2026-19980 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-17 12:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in GL.iNet A1300, AX1800, AXT1800, BE1400, BE3600, BE6500, BE9300, BE10000, E5800, MT2500, MT3000, MT3600BE, MT5000, MT6000, X2000, X3000 and XE3000 up to 4.8.x. Affected by this issue is the function ui.update_langs of the component Language Update. Performing a manipulation of the argument hour/min/week results in code injection. The attack can be initiated remotely. The vendor explains: \"After our investigation, we have confirmed that the vulnerability described (...) does indeed exist.\"",
+      "refs": "https://github.com/gl-inet/CVE-issues/blob/main/4.0.0/Language%20Auto-Update%20Cron%20RCE.md\nhttps://vuldb.com/cve/CVE-2026-19980\nhttps://vuldb.com/submit/873916",
+      "source": "NVD",
+      "time": "2026-08-17 14:33:04"
+    },
+    {
+      "cve_id": "CVE-2026-19979",
+      "title": "高危漏洞: CVE-2026-19979 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-17 12:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in GL.iNet A1300, AX1800, AXT1800, BE1400, BE3600, BE6500, BE9300, BE10000, E5800, MT2500, MT3000, MT3600BE, MT5000, MT6000, X2000, X3000 and XE3000 up to 4.8.x. Affected by this vulnerability is the function COPY/MOVE of the component WebDAV Service. Such manipulation leads to authorization bypass. It is possible to launch the attack remotely. The vendor explains: \"After our investigation, we have confirmed that the vulnerability described (...) does indeed exist.\"",
+      "refs": "https://github.com/gl-inet/CVE-issues/blob/main/4.0.0/WebDAV%20Public-Share%20Destination%20Authorization%20Bypass.md\nhttps://vuldb.com/cve/CVE-2026-19979\nhttps://vuldb.com/submit/873915",
+      "source": "NVD",
+      "time": "2026-08-17 14:33:00"
+    },
+    {
+      "cve_id": "CVE-2026-19977",
+      "title": "高危漏洞: CVE-2026-19977 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-08-17 11:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in EFM ipTIME A3004T 14.19.0. The affected element is the function httpcon_check_session_url of the component Session Validation. Performing a manipulation results in improper authentication. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/AdminSafe/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-19977\nhttps://vuldb.com/submit/873848",
+      "source": "NVD",
+      "time": "2026-08-17 14:32:55"
+    },
+    {
+      "cve_id": "CVE-2026-19963",
+      "title": "高危漏洞: CVE-2026-19963 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-17 08:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Edimax EW-7478APC 1.04. Affected by this issue is the function stainfo of the file /goform/stainfo. The manipulation of the argument interface leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-stainfo-34b53a41781f80ed8e15c109f7a50844?source=copy_link\nhttps://vuldb.com/cve/CVE-2026-19963\nhttps://vuldb.com/submit/872877",
+      "source": "NVD",
+      "time": "2026-08-17 14:32:50"
+    },
+    {
+      "cve_id": "CVE-2026-19962",
+      "title": "高危漏洞: CVE-2026-19962 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-17 08:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A flaw has been found in Edimax EW-7478APC 1.04. Affected by this vulnerability is the function setWAN of the file /goform/setWAN. Executing a manipulation of the argument pppUserName/pptpUserName/L2TPUserName can lead to command injection. The attack may be performed from remote. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-setWAN-34b53a41781f808aaf2bc972cc6d38d3?source=copy_link\nhttps://vuldb.com/cve/CVE-2026-19962\nhttps://vuldb.com/submit/872876",
+      "source": "NVD",
+      "time": "2026-08-17 14:32:44"
+    },
+    {
       "cve_id": "CVE-2026-19961",
       "title": "高危漏洞: CVE-2026-19961 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/advisories/GHSA-84hp-mqvj-3p8h\nhttps://pypi.org/project/mcp-memory-service\nhttps://web.archive.org/web/20260508112116/https://github.com/doobidoo/mcp-memory-service",
       "source": "NVD",
       "time": "2026-08-15 05:17:15"
-    },
-    {
-      "cve_id": "CVE-2026-49457",
-      "title": "高危漏洞: CVE-2026-49457 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-15 03:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "erlang_quic is a pure Erlang QUIC implementation. Prior to version 1.4.4, the QUIC client did not authenticate the server during the TLS 1.3 handshake. The CertificateVerify signature was not checked, the certificate chain was not validated, and the hostname was not compared against the certificate, so `verify` was effectively a no-op on the client. A man-in-the-middle on the network path could present any certificate and impersonate any server, defeating the confidentiality and integrity of the connection. HTTP/3 uses the same client and was equally affected. Handshakes authenticated by a PSK (session resumption) are not affected, because the peer is authenticated by the PSK binder and no certificate is sent. This is fixed in 1.4.4. The client now verifies the CertificateVerify signature, validates the certificate chain against the trust store (`cacerts` option, the operating system store by default), and checks the hostname. Client `verify` now defaults to on; set `verify => false` to accept any certificate (for example a self-signed test server). No known workarounds are available before 1.4.4. `verify => true` had no effect, and inspecting the certificate after connecting does not help because without the signature check the peer is never proven to own the certificate it presents.",
-      "refs": "https://github.com/benoitc/erlang_quic/security/advisories/GHSA-2r8v-p65x-3663",
-      "source": "NVD",
-      "time": "2026-08-15 05:17:11"
-    },
-    {
-      "cve_id": "CVE-2026-45699",
-      "title": "高危漏洞: CVE-2026-45699 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-15 03:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Netatalk is a Free and Open Source file server suite for Unix-like operating systems. In versions 3.1.19 through 4.4.2, a  stack-based buffer overflow exists in the copydir() function of Netatalk's afpd daemon due to an integer underflow in the calculation of the remaining buffer size used for path construction. copydir() is a utility function called when a file operation crosses a device boundary inside an AFP shared volume, which the standard library's renameat() cannot handle. The function attempts to track available buffer space using srem and drem for source and destination paths. Incorrect arithmetic causes both srem and drem to underflow to SIZE_MAX. Consequently, boundary checks against strlen(de->d_name) always pass, allowing strcpy() to append filenames into nearly full stack buffers. Version 4.4.3 patches the issue. As a workaround, configure each AFP shared volume to be structured as a single file system, in other words no subdirectory of a shared volume should be a mount point for a different file system.",
-      "refs": "https://github.com/Netatalk/netatalk/releases/tag/netatalk-4-4-3\nhttps://github.com/Netatalk/netatalk/security/advisories/GHSA-fphv-pf29-p77m",
-      "source": "NVD",
-      "time": "2026-08-15 05:17:04"
-    },
-    {
-      "cve_id": "CVE-2026-19188",
-      "title": "高危漏洞: CVE-2026-19188 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-15 03:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A critical OS command injection vulnerability has been identified in the\n Haiwell IoT Cloud HMI Gateway product. The vulnerability exists in the \nNet Check feature accessible via the /setting endpoint. The cmdPing \nSocket.io event fails to properly sanitize user-supplied input before \npassing it to the underlying operating system, allowing an attacker to \ninject and execute arbitrary OS commands with root privileges.",
-      "refs": "https://en.haiwell.com/app/system/entrance.php?m=include&c=access&a=dodown&lang=en&id=361\nhttps://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-225-02.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:57"
-    },
-    {
-      "cve_id": "CVE-2026-73849",
-      "title": "高危漏洞: CVE-2026-73849 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-15 02:19:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Emlog is an open source website building system. In 2.6.26 and earlier, install.php accepts action=reinstall without authentication and deliberately skips the already-installed check because the guard runs only when $act != 'reinstall'. A remote attacker can submit hostname, dbuser, dbpasswd, dbname, dbprefix, username, password, and email values to cause file_put_contents('config.php', $config) to overwrite the configuration with attacker-controlled database settings and create a new administrator account. No fixed version is available as of this review.",
-      "refs": "https://github.com/emlog/emlog/security/advisories/GHSA-v5qq-p8mp-3gxm",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:53"
-    },
-    {
-      "cve_id": "CVE-2026-72970",
-      "title": "高危漏洞: CVE-2026-72970 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-08-15 02:19:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
-      "description": "Heap-based buffer overflow in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72970",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:46"
-    },
-    {
-      "cve_id": "CVE-2026-48528",
-      "title": "高危漏洞: CVE-2026-48528 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-15 02:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Metacat is data repository software that helps researchers preserve, share, and discover data. Metacat versions 2.0.0 through 3.4.0 contain an unauthenticated SQL injection vulnerability in the `/cn/v1/object` and `/cn/v2/object` REST API endpoints due to unsanitized user input that can be passed through to the backend SQL database. The `nodeId` parameter can be modified to inject SQL commands, and the results are returned in error messages. Metacat appends the user-supplied data into the sql query without sanitization or parameterization. This allows extraction of arbitrary data from the underlying PostgresQL database, fully exposing protected information to the attacker. This is accomplished by leveraging the error reporting mechanisms in Metacat, where SQL error responses are mirrored back to the caller in the XML error message returned by Metacat. One approach, for example, is to use the PostgreSQL `CAST` function to generate an error with the results of an arbitrary subquery, which is then injected into the XML error message returned by Metacat. Attackers do not need to be authenticated to execute the attack.  In addition, arbitrary SQL statements that insert, update, and delete data in the Metacat database can be executed, resulting in full compromise of all data in the database. Full proof of concept attacks have been developed and verified for these vulnerabilities. The impact of this vulnerability is critical for Metacat deployments in the DataONE network where information from the database can be exfiltrated, added, changed, or deleted. This includes management information about the data catalog, access log information about who accessed data, identifying information about individuals including their ORCID identifier and client IP address, access control information about who should be able to access and modify data, and other critical internals of the data system. This sql injection vulnerability was remediated fully in Metacat version 3.4.1. If upgrading to Metacat 3.4.1 isn't immediately possible, most deployments can mitigate the issue by disabling the `/cn` REST endpoints in the webapp deployment. This API is not needed or used by member repositories in the DataONE network, as it is only used by the DataONE Coordinating Node deployments. Consequently, this API can be disabled without reduction of functionality for most deployments. To disable the vulnerable endpoints, simply remove the servlet and servlet-mapping for the `/cn` endpoints in the servlet engine associated with the two servlets, `edu.ucsb.nceas.metacat.restservice.v1.CNRestServlet` and `edu.ucsb.nceas.metacat.restservice.v2.CNRestServlet`. For example, in Tomcat, remove the relevant `servlet-mapping` elements from the application web.xml file in Metacat.",
-      "refs": "https://github.com/NCEAS/metacat/security/advisories/GHSA-6g6j-wh5h-77h5",
-      "source": "NVD",
-      "time": "2026-08-15 05:16:42"
     }
   ]
 }
