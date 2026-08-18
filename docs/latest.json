@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-15371",
+      "title": "高危漏洞: CVE-2026-15371 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-18 15:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Velociraptor's web GUI allows specifying a custom type for columns in tables. The URL type takes the cell value and forms a URL which can be clicked in the GUI.The code does not limit the schemes allowed in this URL , allowing an attacker to specify a JavaScript scheme exposing the user to XSS.",
+      "refs": "http://docs.velociraptor.app/announcements/advisories/cve-2026-15371/",
+      "source": "NVD",
+      "time": "2026-08-18 20:23:07"
+    },
+    {
+      "cve_id": "CVE-2026-75091",
+      "title": "高危漏洞: CVE-2026-75091 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-18 14:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Quill Forms | Conversational Multi Step Forms, Surveys & quizzes plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 5.7.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/quillforms/vulnerability/wordpress-quill-forms-plugin-5-7-1-cross-site-scripting-xss-vulnerability\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/7ae927b1-401f-4227-9d50-4adde8e95f24?source=cve",
+      "source": "NVD",
+      "time": "2026-08-18 20:23:01"
+    },
+    {
+      "cve_id": "CVE-2026-15748",
+      "title": "高危漏洞: CVE-2026-15748 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-18 14:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Forminator Forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.56.1 via the handle_file_upload function. This is due to insufficient file type validation in handle_file_upload, where the dangerous-extension blocklist performs exact-key matching that is bypassed by pipe-alternative MIME type keys, combined with a public submission handler that trusts attacker-controlled upload field configuration injected via a forged Select field value. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/browser/forminator/tags/1.55.1/admin/classes/class-admin-ajax.php#L1196\nhttps://plugins.trac.wordpress.org/browser/forminator/tags/1.55.1/library/abstracts/abstract-class-field.php#L2308\nhttps://plugins.trac.wordpress.org/browser/forminator/tags/1.55.1/library/fields/upload.php#L552",
+      "source": "NVD",
+      "time": "2026-08-18 20:22:54"
+    },
+    {
       "cve_id": "CVE-2026-11801",
       "title": "高危漏洞: CVE-2026-11801 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-623h-chj7-hfx8\nhttps://www.vulncheck.com/advisories/openssl-encrypt-before-plugin-sandbox-bypass-via-process-isolation",
       "source": "NVD",
       "time": "2026-08-18 02:24:42"
-    },
-    {
-      "cve_id": "CVE-2026-74894",
-      "title": "高危漏洞: CVE-2026-74894 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-17 19:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "openssl_encrypt before 1.4.0 contains an authentication bypass vulnerability in the verify_api_token function that accepts any non-empty Bearer token string without validation. Attackers can upload arbitrary public keys, enumerate all keys, and revoke keys belonging to any user by providing any Bearer token in the Authorization header.",
-      "refs": "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-4g2c-wpgj-49w8\nhttps://www.vulncheck.com/advisories/openssl-encrypt-before-authentication-bypass-via-bearer-token",
-      "source": "NVD",
-      "time": "2026-08-18 02:24:35"
-    },
-    {
-      "cve_id": "CVE-2026-74893",
-      "title": "高危漏洞: CVE-2026-74893 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-17 19:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "openssl_encrypt versions before 1.4.0 contain hardcoded default JWT signing secrets in config.py that pass validation checks. Attackers with access to source code can forge valid JWT tokens for any client_id to gain authenticated access to keyserver and telemetry APIs.",
-      "refs": "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-qc6h-gfjh-7qqg\nhttps://www.vulncheck.com/advisories/openssl-encrypt-before-jwt-token-forgery-via-hardcoded-secrets",
-      "source": "NVD",
-      "time": "2026-08-18 02:24:30"
-    },
-    {
-      "cve_id": "CVE-2026-74892",
-      "title": "高危漏洞: CVE-2026-74892 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-17 19:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "openssl_encrypt versions before 1.4.0 contain a hardcoded default secret key in the standalone telemetry server configuration that is used for API key hashing. Attackers who know this default value can predict or forge API key hashes to compromise telemetry API authentication.",
-      "refs": "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-p926-6hjp-w9jw\nhttps://www.vulncheck.com/advisories/openssl-encrypt-before-hardcoded-secret-key",
-      "source": "NVD",
-      "time": "2026-08-18 02:24:26"
     }
   ]
 }
