@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-75981",
+      "title": "高危漏洞: CVE-2026-75981 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-19 15:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to unauthenticated Stored Cross-Site Scripting in versions up to and including 3.2.5. The special gettext markers '#!trpst#' and '#!trpen#' are unconditionally rewritten to '<' and '>' by translate_page() in includes/class-translation-render.php (lines 538-539). Because those markers are plain text with no HTML-special characters, an unauthenticated attacker can embed them in a comment; the markers survive wp_kses, and when the post is viewed in a secondary language the substitution turns the attacker's '#!trpst#img ... #!trpen#' into a real <img> tag. remove_tags_from_output() only strips <script>/<style>, so an <img onerror=...> executes in the visitor's browser.",
+      "refs": "https://plugins.trac.wordpress.org/browser/translatepress-multilingual/tags/3.2.5/includes/class-translation-render.php#L538\nhttps://plugins.trac.wordpress.org/browser/translatepress-multilingual/tags/3.2.5/includes/class-translation-render.php#L539\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/fec48853-afa5-4310-be2e-e86c01ece227?source=cve",
+      "source": "NVD",
+      "time": "2026-08-19 20:23:19"
+    },
+    {
+      "cve_id": "CVE-2026-15780",
+      "title": "高危漏洞: CVE-2026-15780 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-19 15:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The WP Statistics – Simple, privacy-friendly Google Analytics alternative plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'utm_campaign' parameter in all versions up to, and including, 14.16.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload can be planted without authentication via the public /wp-statistics/v2/hit REST endpoint, because the required signature is exposed on the public homepage and a base64-encoded page_uri POST parameter overrides the previously sanitized REQUEST_URI, allowing the malicious utm_campaign value to bypass sanitization and be stored in the database.",
+      "refs": "https://github.com/wp-statistics/wp-statistics/commit/6ab74427778b89c9e88471e9dd7407d9055a9b34\nhttps://plugins.trac.wordpress.org/browser/wp-statistics/tags/14.16.7/assets/dev/javascript/helper.js#L267\nhttps://plugins.trac.wordpress.org/browser/wp-statistics/tags/14.16.7/includes/api/v2/class-wp-statistics-api-hit.php#L78",
+      "source": "NVD",
+      "time": "2026-08-19 20:23:13"
+    },
+    {
+      "cve_id": "CVE-2026-70408",
+      "title": "高危漏洞: CVE-2026-70408 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-19 13:17:05",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An incorrect authorization vulnerability exists in acmailer, which may allow a user to create a sub-account that has administrative privileges.",
+      "refs": "https://jvn.jp/en/jp/JVN47716829/\nhttps://www.acmailer.jp/info/de.cgi?id=119",
+      "source": "NVD",
+      "time": "2026-08-19 20:23:06"
+    },
+    {
+      "cve_id": "CVE-2026-19942",
+      "title": "高危漏洞: CVE-2026-19942 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-19 13:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Atarim – AI Agency for WordPress: Edit Pages, Fix Code, Update Plugins, SEO & Client Feedback plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the AVCF_Abilities_Media::register (replace-media-file execute_callback) function in all versions up to, and including, 5.1.1. This makes it possible for authenticated attackers, with author-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This is exploitable by first using the atarim/update-post-field ability to overwrite the _wp_attached_file meta of an attacker-owned attachment with a directory-traversal path, then invoking atarim/replace-media-file to cause get_attached_file() to resolve and unlink the targeted file.",
+      "refs": "https://plugins.trac.wordpress.org/browser/atarim-visual-collaboration/tags/5.1.1/doit/abilities/class-avcf-abilities-media.php#L1212\nhttps://plugins.trac.wordpress.org/browser/atarim-visual-collaboration/tags/5.1.1/doit/abilities/class-avcf-abilities-metadata.php#L1279\nhttps://plugins.trac.wordpress.org/browser/atarim-visual-collaboration/tags/5.1.1/doit/class-avcf-mcp.php#L329",
+      "source": "NVD",
+      "time": "2026-08-19 20:23:00"
+    },
+    {
       "cve_id": "CVE-2026-76050",
       "title": "高危漏洞: CVE-2026-76050 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1055,50 +1099,6 @@
       "refs": "https://www.oracle.com/security-alerts/cspuaug2026.html",
       "source": "NVD",
       "time": "2026-08-19 09:26:35"
-    },
-    {
-      "cve_id": "CVE-2026-71096",
-      "title": "高危漏洞: CVE-2026-71096 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-08-19 05:18:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Vulnerability in the Oracle Business Intelligence Enterprise Edition product of Oracle Analytics (component: BI Platform Security).  Supported versions that are affected are 8.2.0.0.0, 12.2.1.4.0 and  26.01.0.0.0. Difficult to exploit vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Business Intelligence Enterprise Edition.  While the vulnerability is in Oracle Business Intelligence Enterprise Edition, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Business Intelligence Enterprise Edition accessible data as well as  unauthorized access to critical data or complete access to all Oracle Business Intelligence Enterprise Edition accessible data. CVSS 3.1 Base Score 8.2 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cspuaug2026.html",
-      "source": "NVD",
-      "time": "2026-08-19 09:26:31"
-    },
-    {
-      "cve_id": "CVE-2026-71095",
-      "title": "高危漏洞: CVE-2026-71095 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-08-19 05:18:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Vulnerability in the Oracle Business Intelligence Enterprise Edition product of Oracle Analytics (component: BI Platform Security).   The supported version that is affected is 12.2.1.4.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Business Intelligence Enterprise Edition.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Business Intelligence Enterprise Edition accessible data as well as  unauthorized access to critical data or complete access to all Oracle Business Intelligence Enterprise Edition accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Business Intelligence Enterprise Edition. CVSS 3.1 Base Score 8.3 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L).",
-      "refs": "https://www.oracle.com/security-alerts/cspuaug2026.html",
-      "source": "NVD",
-      "time": "2026-08-19 09:26:24"
-    },
-    {
-      "cve_id": "CVE-2026-71094",
-      "title": "高危漏洞: CVE-2026-71094 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-19 05:18:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Vulnerability in the Oracle Business Intelligence Enterprise Edition product of Oracle Analytics (component: Presentation Services).   The supported version that is affected is 12.2.1.4.0. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where Oracle Business Intelligence Enterprise Edition executes to compromise Oracle Business Intelligence Enterprise Edition.  Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in takeover of Oracle Business Intelligence Enterprise Edition. CVSS 3.1 Base Score 7.3 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H).",
-      "refs": "https://www.oracle.com/security-alerts/cspuaug2026.html",
-      "source": "NVD",
-      "time": "2026-08-19 09:26:20"
-    },
-    {
-      "cve_id": "CVE-2026-71092",
-      "title": "高危漏洞: CVE-2026-71092 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-19 05:18:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Vulnerability in the PeopleSoft Enterprise FIN Lease Administration product of Oracle PeopleSoft (component: Lease Administration).   The supported version that is affected is 9.2. Difficult to exploit vulnerability allows low privileged attacker with logon to the infrastructure where PeopleSoft Enterprise FIN Lease Administration executes to compromise PeopleSoft Enterprise FIN Lease Administration.  While the vulnerability is in PeopleSoft Enterprise FIN Lease Administration, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all PeopleSoft Enterprise FIN Lease Administration accessible data as well as  unauthorized access to critical data or complete access to all PeopleSoft Enterprise FIN Lease Administration accessible data. CVSS 3.1 Base Score 7.5 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N).",
-      "refs": "https://www.oracle.com/security-alerts/cspuaug2026.html",
-      "source": "NVD",
-      "time": "2026-08-19 09:26:16"
     }
   ]
 }
