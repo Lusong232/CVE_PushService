@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-73198",
+      "title": "高危漏洞: CVE-2026-73198 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-20 19:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in FreeIPA. A remote, unauthenticated attacker can exploit a vulnerability in the `/ipa/i18n_messages` endpoint by sending an arbitrarily large request body. This can cause the service to consume excessive memory, leading to memory exhaustion, degraded responsiveness, and a denial of service (DoS) condition.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-73198\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2472960",
+      "source": "NVD",
+      "time": "2026-08-20 20:27:05"
+    },
+    {
+      "cve_id": "CVE-2026-73197",
+      "title": "高危漏洞: CVE-2026-73197 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-20 19:16:21",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "A flaw was found in FreeIPA. A remote, unauthenticated attacker can exploit this vulnerability by sending oversized form POST requests to the `/ipa/migration/migration.py` endpoint. This can force the migration handler to read attacker-controlled request bodies fully into memory, leading to increased memory usage, slower request handling, and potential service disruption or denial of service.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-73197\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2474697",
+      "source": "NVD",
+      "time": "2026-08-20 20:27:00"
+    },
+    {
+      "cve_id": "CVE-2026-13097",
+      "title": "高危漏洞: CVE-2026-13097 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-20 19:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A privilege escalation flaw was found in FreeIPA. The uniqueness constraint enforced on Kerberos principal name attributes in the 389-ds directory server does not properly account for equivalent representations of the same principal name, allowing a user with sufficient LDAP write privileges to create a service principal that impersonates an existing privileged one. This can lead to unauthorized acquisition of Kerberos service tickets for sensitive services, potentially resulting in full domain compromise.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-13097\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2515974",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:56"
+    },
+    {
+      "cve_id": "CVE-2026-11861",
+      "title": "高危漏洞: CVE-2026-11861 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-08-20 19:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "A flaw was found in FreeIPA. When a trust relationship is configured between FreeIPA and Active Directory, Active Directory users can bypass authentication for FreeIPA services, including the portal, SMB server, and LDAP directory. This is possible by impersonating a client name in the Ticket Granting Service (TGS) due to FreeIPA services not verifying Privilege Attribute Certificate (PAC) certificates. This vulnerability could allow an authenticated Active Directory user to escalate their privileges within the FreeIPA domain.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-11861\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2487472",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:51"
+    },
+    {
+      "cve_id": "CVE-2026-18917",
+      "title": "高危漏洞: CVE-2026-18917 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-20 18:16:40",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in libvirt. An unprivileged local user could exploit an integer overflow vulnerability in the NodeGetFreePages RPC handler. This flaw allows crafted values to bypass a size check, leading to an undersized memory buffer. Subsequently, real NUMA node data can overwrite this buffer. This heap buffer overflow can corrupt the root libvirt daemon's memory, potentially leading to a denial of service or local privilege escalation.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-18917\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2520161",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:46"
+    },
+    {
+      "cve_id": "CVE-2026-14952",
+      "title": "高危漏洞: CVE-2026-14952 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-20 17:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "An unauthenticated remote attacker can retrieve sensible files from the FDS Web server, such as the backup archive at /FdsBackup.zip and additional files under /downloads/*, directly over HTTP without a valid session. These files disclose detailed railway signaling and track layout information that should not be available to unauthenticated users.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-078/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:42"
+    },
+    {
+      "cve_id": "CVE-2026-14951",
+      "title": "高危漏洞: CVE-2026-14951 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-08-20 17:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "An low privileged remote attacker can cause authenticated users to perform unintended actions in the FDS Web interface using malicious web pages.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-078/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:38"
+    },
+    {
+      "cve_id": "CVE-2026-14950",
+      "title": "高危漏洞: CVE-2026-14950 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-20 17:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated remote attacker in possession of a valid session identifier is able to continue using the session after it should have expired. This increases the risk associated with stolen, leaked, shared, or unattended sessions and may enable unauthorized continued access to the FDS web interface.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-078/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:31"
+    },
+    {
+      "cve_id": "CVE-2026-14948",
+      "title": "高危漏洞: CVE-2026-14948 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-20 17:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A low privileged remote attacker can hijack an active administrative session without needing to know the administrator password by extracting live plaintext session identifiers for authenticated users from downloadable error log archives.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-078/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:25"
+    },
+    {
+      "cve_id": "CVE-2026-14947",
+      "title": "高危漏洞: CVE-2026-14947 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-20 17:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A high-privileged remote attacker can upload malicious ZIP archive containing directory traversal sequences such as ../ can escape the intended extraction directory and write files to arbitrary locations on the server, potentially achieve arbitrary code execution due to improper validation of archive entry paths before writing files to disk which could result in full system compromise.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-078/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:20"
+    },
+    {
+      "cve_id": "CVE-2026-14946",
+      "title": "高危漏洞: CVE-2026-14946 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-20 17:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A high privileged remote attacker can upload a .php file and then request it directly from /uploads/<filename>.php to achieve arbitrary code execution due to improper file type validation which could result in full system compromise.",
+      "refs": "https://www.certvde.com/en/advisories/VDE-2026-078/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:16"
+    },
+    {
+      "cve_id": "CVE-2026-75963",
+      "title": "高危漏洞: CVE-2026-75963 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-20 14:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Events Made Easy plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 3.2.5 via the eme_single_event_page_template function. This makes it possible for authenticated attackers, with contributor-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. The stored traversal payload is triggered passively when any visitor loads the affected single-event page, meaning post-submission execution does not require additional attacker interaction.",
+      "refs": "https://plugins.trac.wordpress.org/browser/events-made-easy/tags/3.2.5/includes/eme-events.php#L1721\nhttps://plugins.trac.wordpress.org/browser/events-made-easy/tags/3.2.5/includes/eme-fs.php#L670\nhttps://plugins.trac.wordpress.org/browser/events-made-easy/tags/3.2.5/includes/eme-fs.php#L842",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:11"
+    },
+    {
+      "cve_id": "CVE-2026-75860",
+      "title": "高危漏洞: CVE-2026-75860 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-20 14:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The JSON Options WordPress plugin through 0.0.4 does not have any capability check or nonce verification on one of its actions, which runs on every request and is available to unauthenticated users, allowing them to update arbitrary WordPress options. This can be leveraged to enable user registration and set the default role to administrator, leading to privilege escalation and full site takeover.",
+      "refs": "https://wpscan.com/vulnerability/6c9bbd44-cd10-40e2-af6f-440e7ccabf9a/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:07"
+    },
+    {
+      "cve_id": "CVE-2026-15049",
+      "title": "高危漏洞: CVE-2026-15049 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-20 14:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Depicter — Popup & Slider Builder WordPress plugin before 4.8.0 does not validate the type of a file uploaded through its import feature and does not remove a malformed upload, allowing users with editor-level access to write an arbitrary file (including executable PHP) into a web-accessible directory, which can lead to remote code execution.",
+      "refs": "https://wpscan.com/vulnerability/c32e6a11-98f2-48e8-be64-f0c1966ddc18/",
+      "source": "NVD",
+      "time": "2026-08-20 20:26:02"
+    },
+    {
+      "cve_id": "CVE-2026-76956",
+      "title": "高危漏洞: CVE-2026-76956 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-20 13:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In libexpat 2.8.2 and 2.8.3 before 2.8.4, misinterpretation of getentropy's return code leads to insufficient entropy, which results in being vulnerable to hash flooding attacks, causing a denial of service via crafted XML content.",
+      "refs": "https://github.com/libexpat/libexpat/pull/1326",
+      "source": "NVD",
+      "time": "2026-08-20 20:25:57"
+    },
+    {
+      "cve_id": "CVE-2026-19582",
+      "title": "高危漏洞: CVE-2026-19582 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-20 13:16:27",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "In binutils 2.46.1 and prior versions, a victim who opens a crafted PE file using binutils could execute arbitrary code unknowningly via a stack buffer overflow out of bounds write.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-19582\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2513754",
+      "source": "NVD",
+      "time": "2026-08-20 20:25:48"
+    },
+    {
       "cve_id": "CVE-2026-76795",
       "title": "高危漏洞: CVE-2026-76795 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -923,182 +1099,6 @@
       "refs": "https://github.com/wekan/wekan/commit/dc135f6e7d59f9f56065cd5df83b1f123ea120bb\nhttps://github.com/wekan/wekan/releases/tag/v9.89\nhttps://github.com/wekan/wekan/security/advisories/GHSA-xm8x-c8wg-jhmf",
       "source": "NVD",
       "time": "2026-08-20 08:42:05"
-    },
-    {
-      "cve_id": "CVE-2026-68558",
-      "title": "高危漏洞: CVE-2026-68558 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-08-20 04:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Wekan is open source kanban built with Meteor. From 8.36 until 9.74, the outgoing webhook Integration URL validator in models/integrations.js checked only the literal URL.hostname against regular expressions, so DNS names such as 169-254-169-254.nip.io passed that first-line check. The delivery path's fetchSafe guard already blocked the reported IPv4 destination, but its separate IPv4-only resolver and duplicated blocklist created inconsistent all-address-family enforcement and drift risk between input-time and connection-time validation. Version 9.74 makes server/lib/ssrfGuard.js resolve all addresses with `dns.lookup({ all: true })`, validate every result through the shared isIpBlocked logic, pin the connection, and block redirects. This issue is fixed in version 9.74.",
-      "refs": "https://github.com/wekan/wekan/commit/ef845fe4a0adb82af436313310939cd48c0b1347\nhttps://github.com/wekan/wekan/releases/tag/v9.74\nhttps://github.com/wekan/wekan/security/advisories/GHSA-66m2-4wfr-c45p",
-      "source": "NVD",
-      "time": "2026-08-20 08:42:00"
-    },
-    {
-      "cve_id": "CVE-2026-63722",
-      "title": "高危漏洞: CVE-2026-63722 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-20 04:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "ICEcoder 8.1 contains an unauthenticated remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary OS commands by chaining an authentication bypass, CSRF validation bypass, and unsanitized command execution. Attackers can send a single HTTP POST request to the terminal endpoint with a password parameter to bypass authentication, a non-empty csrf parameter to skip CSRF validation, and an arbitrary command string passed directly to proc_open() to achieve remote code execution as the web-server user.",
-      "refs": "https://gist.github.com/axg11/fc2b86648d8f385b51f4576ff0f392d8\nhttps://github.com/icecoder/ICEcoder\nhttps://www.vulncheck.com/advisories/icecoder-unauthenticated-rce-via-terminal-xhr-php",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:56"
-    },
-    {
-      "cve_id": "CVE-2026-62317",
-      "title": "高危漏洞: CVE-2026-62317 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-20 04:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Logto is the modern, open-source auth infrastructure for SaaS and AI apps. Prior to 1.41.0, Logto's email subaddressing blocklist in packages/core/src/libraries/sign-in-experience/email-blocklist-policy.ts used the attacker-controlled domain from email input to construct subaddressingRegex when blockSubaddressing was enabled. The permissive emailRegEx accepted multiple at signs and regular expression metacharacters, and POST /api/experience/verification/verification-code could therefore cause catastrophic backtracking in subaddressingRegex.test(email). The resulting event-loop stall could make authentication, token issuance, SSO, and the administrative console unavailable. This issue is fixed in version 1.41.0.",
-      "refs": "https://github.com/logto-io/logto/commit/021381237511bc0d42f81d65df8b036b01f40547\nhttps://github.com/logto-io/logto/pull/9106\nhttps://github.com/logto-io/logto/releases/tag/v1.41.0",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:52"
-    },
-    {
-      "cve_id": "CVE-2026-55089",
-      "title": "高危漏洞: CVE-2026-55089 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-20 04:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
-      "description": "Etherpad is a real-time collaborative editor. From 2.1.0 until 3.1.0, Etherpad's src/node/handler/APIHandler.ts authorizes requests to /api/2/* in the authorization_code OAuth path by using requiredClaims with the admin claim. This check requires only that the claim exists, while src/node/security/OAuth2Provider.ts issues admin: false for configured non-admin users. A non-admin user with a valid signed token can therefore invoke administrative functions including setHTML, setText, appendText, deletePad, copyPad, movePad, restoreRevision, anonymizeAuthor, listAllPads, and listAuthorsOfPad, allowing disclosure, modification, or deletion of pads across the instance. This issue is fixed in version 3.1.0.",
-      "refs": "https://github.com/ether/etherpad/commit/8c6104c5d5daf41f0d454acc04d42dffa0e0d996\nhttps://github.com/ether/etherpad/pull/7784\nhttps://github.com/ether/etherpad/releases/tag/v3.1.0",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:48"
-    },
-    {
-      "cve_id": "CVE-2026-55085",
-      "title": "高危漏洞: CVE-2026-55085 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-20 04:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
-      "description": "Etherpad is a real-time collaborative editor. Prior to 3.3.1, result.appendSpan in src/static/js/domline.ts interpolates the start attribute of a numbered list directly into an unquoted ol start attribute before assigning the generated markup to node.innerHTML. ImportEtherpad.setPadRaw in src/node/utils/ImportEtherpad.ts accepts attacker-controlled attribute-pool values from a crafted .etherpad import, including list:number1 and a malicious start value. Any user with write access to a pad can store markup that executes as cross-site scripting when another user opens the pad or /timeslider, including when an administrator views the pad. This issue is fixed in version 3.3.1.",
-      "refs": "https://github.com/ether/etherpad/commit/d828185efcac9abc2e46e6da1c171393500fa319\nhttps://github.com/ether/etherpad/pull/7937\nhttps://github.com/ether/etherpad/releases/tag/v3.3.1",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:44"
-    },
-    {
-      "cve_id": "CVE-2026-22306",
-      "title": "高危漏洞: CVE-2026-22306 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-20 04:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Download of code without integrity check, inclusion of functionality from untrusted control sphere, and cleartext \ntransmission of sensitive information vulnerability in Ozols Grupa OZOLS\n on Windows caused by an abandoned auto-update domain. Affected\ncomponent: the automatic update channel - OzolsSQL client update path, the <db>_update SQL Server Agent job (@subsystem = N'ActiveScripting') and serv_update.vbs.\n\nThis issue affects OZOLS: before 1.1.1233.",
-      "refs": "https://offseq.com/en/research/ozols-cve-2026-22306",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:39"
-    },
-    {
-      "cve_id": "CVE-2026-18871",
-      "title": "高危漏洞: CVE-2026-18871 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-20 04:17:13",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:H",
-      "description": "IBM PowerVM Hypervisor FW1120.00, FW1110.00 through FW1110.30, and FW1060.00 through FW1060.80 is affected by a vulnerability in host firmware configuration parsing. An attacker with authenticated service-level access to the service processor can write specially crafted configuration data, causing the host firmware boot stack to crash with possible memory corruption during system initialisation, resulting in an integrity and availability impact to the managed system.",
-      "refs": "https://www.ibm.com/support/pages/node/7283238",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:32"
-    },
-    {
-      "cve_id": "CVE-2026-18821",
-      "title": "高危漏洞: CVE-2026-18821 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-20 04:17:13",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM PowerVM Hypervisor FW1120.00, FW1110.00 through FW1110.30, FW1060.00 through FW1060.80, and FW950.00 through FW950.H2 Power Systems Firmware is affected by a vulnerability in partition firmware during network boot. An unauthenticated attacker on the same network as a partition undergoing network boot can send a malformed packet, allowing arbitrary code to be executed in the partition firmware and compromising everything subsequently loaded by that partition. Other partitions and the managed system are not affected. Only partitions actively performing a network boot are affected, resulting in a confidentiality, integrity, and availability impact.",
-      "refs": "https://www.ibm.com/support/pages/node/7283232",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:28"
-    },
-    {
-      "cve_id": "CVE-2026-17414",
-      "title": "高危漏洞: CVE-2026-17414 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-20 04:17:12",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "IBM PowerVM Hypervisor FW1120.00, FW1110.00 through FW1110.30, FW1060.00 through FW1060.80, and FW950.00 through FW950.H2 Power Systems Firmware is affected by a vulnerability in partition firmware during network boot. An unauthenticated attacker with access to the same network as a partition performing a network boot can prevent that partition from completing its boot sequence. On partitions where OS secure boot is not enabled, which is the default configuration, the attacker can also substitute the boot image, compromising everything subsequently loaded by that partition. Other partitions and the managed system are not affected. Only partitions actively performing a network boot are affected, resulting in a confidentiality, integrity, and availability impact.",
-      "refs": "https://www.ibm.com/support/pages/node/7283234",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:24"
-    },
-    {
-      "cve_id": "CVE-2026-17097",
-      "title": "高危漏洞: CVE-2026-17097 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-20 04:17:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:H",
-      "description": "IBM PowerVM Hypervisor FW1120.00, FW1110.00 through FW1110.30, FW1060.00 through FW1060.80, and FW950.00 through FW950.H2 is affected by a vulnerability in the PowerVM hypervisor call interface. An attacker with root access to a guest partition can issue a specially crafted hypervisor call causing a virtual processor to become permanently unresponsive, requiring a full platform re-IPL to restore normal operation. In some cases this may also cause the guest to inject a small amount of data into hypervisor or partition memory with no attacker control over the target location. Successful exploitation results in an integrity and availability impact to the managed system.",
-      "refs": "https://www.ibm.com/support/pages/node/7283231",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:20"
-    },
-    {
-      "cve_id": "CVE-2026-17091",
-      "title": "高危漏洞: CVE-2026-17091 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-08-20 04:17:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-      "description": "IBM PowerVM Hypervisor FW1120.00, FW1110.00 through FW1110.30, FW1060.00 through FW1060.80, and FW950.00 through FW950.H2 is affected by a vulnerability in the PowerVM hypervisor call interface. An attacker with root access to a guest partition can issue a specially crafted hypervisor call to inject an arbitrary amount of data into hypervisor or partition memory, resulting in either a crash causing a full platform re-IPL and terminating all hosted partitions, or corruption of hypervisor or partition memory. The PowerVM hypervisor will restart automatically; however, repeated exploitation could result in a sustained availability impact. Successful exploitation results in an integrity and availability impact to the managed system.",
-      "refs": "https://www.ibm.com/support/pages/node/7283229",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:16"
-    },
-    {
-      "cve_id": "CVE-2026-17063",
-      "title": "高危漏洞: CVE-2026-17063 (CVSS 7.9)",
-      "cvss_score": 7.9,
-      "published_date": "2026-08-20 04:17:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:H",
-      "description": "IBM Power Systems Firmware FW1120.00, FW1110.00 through FW1110.30, and FW1060.00 through FW1060.80 is affected by a vulnerability in the interface between the BMC/FSP and the host system. An attacker with service account or root access to the BMC/FSP can access and disrupt host processor state, potentially affecting the managed system and all hosted partitions, resulting in an confidentiality, and availability impact.",
-      "refs": "https://www.ibm.com/support/pages/node/7283219",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:12"
-    },
-    {
-      "cve_id": "CVE-2026-17042",
-      "title": "高危漏洞: CVE-2026-17042 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-08-20 04:17:12",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:H",
-      "description": "IBM Power Systems Firmware FW950.00 through FW950.H2, OP940.00 through OP940.a1 (Power9), and OP940.00 - OP940.81 (Power HMC) is affected by a vulnerability in host firmware NVRAM parsing. An attacker with root access to a guest partition on an OpenPOWER system can write a specially crafted NVRAM image, causing the host firmware boot stage to crash with possible memory corruption. This condition persists until operator intervention — clearing NVRAM via the service processor — to restore normal operation. This vulnerability only affects OpenPOWER systems; systems running PowerVM are not affected. Successful exploitation results in an integrity and availability impact to the managed system.",
-      "refs": "https://www.ibm.com/support/pages/node/7283240",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:08"
-    },
-    {
-      "cve_id": "CVE-2026-16933",
-      "title": "高危漏洞: CVE-2026-16933 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-08-20 04:17:11",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "IBM Power Systems Firmware FW1120.00, FW1110.00 through FW1110.30, FW1060.00 through FW1060.80, FW950.00 through FW950.H2, OP940.00 through OP940.a1 (Power9), and OP940.00 through OP940.81 (Power HMC) is affected by a vulnerability in the interface between the BMC/FSP and the host system. An attacker with service account or root access to the BMC/FSP can read and write arbitrary regions of host system memory, giving full control over the host system and all hosted partitions, resulting in a confidentiality, integrity, and availability impact.",
-      "refs": "https://www.ibm.com/support/pages/node/7283216",
-      "source": "NVD",
-      "time": "2026-08-20 08:41:01"
-    },
-    {
-      "cve_id": "CVE-2026-16919",
-      "title": "高危漏洞: CVE-2026-16919 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-20 04:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to improper validation of network-supplied pointers.",
-      "refs": "https://www.ibm.com/support/pages/node/7283858",
-      "source": "NVD",
-      "time": "2026-08-20 08:40:57"
-    },
-    {
-      "cve_id": "CVE-2026-16917",
-      "title": "高危漏洞: CVE-2026-16917 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-20 04:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to an integer overflow.",
-      "refs": "https://www.ibm.com/support/pages/node/7283858",
-      "source": "NVD",
-      "time": "2026-08-20 08:40:53"
     }
   ]
 }
