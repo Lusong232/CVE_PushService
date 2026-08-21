@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-77767",
+      "title": "高危漏洞: CVE-2026-77767 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-21 19:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Reconmap's API applies a fallback authorization policy in apps/api/app/Program.cs that requires an authenticated user holding the administrator role, so controllers without their own attribute reject anonymous callers. The report preview action in apps/api/app/Controllers/ReportsController.cs carries [AllowAnonymous] and therefore opts out of that policy. PreviewReport loads the Project row named by the id path segment, loads the linked Organisation through the project's ClientId, and renders both into default-report-template.html, which prints the project name and description together with the client organisation's name, address and URL. No authentication, project membership or role check is performed. Because the id is the auto-increment primary key of the project table, an unauthenticated remote caller can walk sequential ids to retrieve the engagement details and client organisation of every project on the instance, and the 404 returned for a missing id reveals which project ids exist. Reconmap stores penetration-testing engagements, so the disclosed descriptions and client records are sensitive by nature.",
+      "refs": "https://github.com/reconmap/reconmap\nhttps://github.com/reconmap/reconmap/blob/56ca3748343a50c98185d53827172d8f13a6ad0f/apps/api/app/Controllers/ReportsController.cs\nhttps://github.com/reconmap/reconmap/blob/56ca3748343a50c98185d53827172d8f13a6ad0f/apps/api/app/Program.cs",
+      "source": "NVD",
+      "time": "2026-08-21 20:25:35"
+    },
+    {
+      "cve_id": "CVE-2026-77683",
+      "title": "高危漏洞: CVE-2026-77683 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-08-21 19:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Comfast CF-N1-S 2.6.0.1. Affected by this issue is the function system of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone. The manipulation of the argument timestr results in command injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/AdminSafe/CVE/issues/8\nhttps://vuldb.com/cve/CVE-2026-77683\nhttps://vuldb.com/submit/881058",
+      "source": "NVD",
+      "time": "2026-08-21 20:25:27"
+    },
+    {
+      "cve_id": "CVE-2026-77086",
+      "title": "高危漏洞: CVE-2026-77086 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-21 19:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "SiYuan before v3.7.4 fails to validate the packageName parameter in Bazaar install and uninstall endpoints, allowing authenticated administrators to perform path traversal via directory traversal sequences. Attackers with admin access can write arbitrary files to any location via install operations or recursively delete directories via uninstall operations by supplying crafted packageName values.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-wr4w-7vjm-mmx3\nhttps://www.vulncheck.com/advisories/siyuan-before-path-traversal-via-packagename",
+      "source": "NVD",
+      "time": "2026-08-21 20:25:21"
+    },
+    {
+      "cve_id": "CVE-2026-47827",
+      "title": "高危漏洞: CVE-2026-47827 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-21 18:16:38",
+      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Command Injection in BOSH CLI tool on windows in Cloud Foundry allows a remote attacker to execute arbitrary shell commands via command injection vulnerabilities",
+      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47827-bosh-cli-powershell-injection/",
+      "source": "NVD",
+      "time": "2026-08-21 20:25:15"
+    },
+    {
+      "cve_id": "CVE-2026-77264",
+      "title": "高危漏洞: CVE-2026-77264 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-21 16:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 4.8.6. This is due to the handle_email_otp_return() function returning the secret magic login token in the response to a publicly accessible OTP request, rather than only delivering it to the user's email address. This makes it possible for unauthenticated attackers to log in as any user on the site, including administrators, if they know that user's email address.",
+      "refs": "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-login.php#L1218\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/7e473896-d94c-4f6a-a96c-bb90902532cc?source=cve",
+      "source": "NVD",
+      "time": "2026-08-21 20:25:08"
+    },
+    {
+      "cve_id": "CVE-2026-16323",
+      "title": "高危漏洞: CVE-2026-16323 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-21 16:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Execution after redirect (EAR) vulnerability in FuyaWeb Internet and Informatics Services ArchitectPanel Web Admin Panel allows Authentication Bypass.\n\nThis issue affects ArchitectPanel Web Admin Panel: through 28072026.",
+      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0882",
+      "source": "NVD",
+      "time": "2026-08-21 20:25:00"
+    },
+    {
       "cve_id": "CVE-2026-18409",
       "title": "高危漏洞: CVE-2026-18409 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/AdminSafe/CVE/issues/7\nhttps://vuldb.com/cve/CVE-2026-77148\nhttps://vuldb.com/submit/880910",
       "source": "NVD",
       "time": "2026-08-21 05:19:09"
-    },
-    {
-      "cve_id": "CVE-2026-72852",
-      "title": "高危漏洞: CVE-2026-72852 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-08-21 03:17:00",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "hank-ai/darknet sizes a convolutional layer's weight and output heap buffers by multiplying configuration fields taken from a .cfg file in unchecked 32-bit int arithmetic. In src-lib/convolutional_layer.cpp, l.nweights is computed as (c / groups) * n * size * size and l.outputs as l.out_h * l.out_w * l.out_c, and both feed xcalloc directly. A .cfg whose true dimension product exceeds INT_MAX wraps to a small or zero value, so the allocation is undersized; for example width and height of 256 with filters of 65536 gives 2^32, which wraps to 0. forward_convolutional_layer then re-derives the GEMM dimensions with a different operand order, computing k as l.size*l.size*l.c / l.groups where the allocation divided before multiplying, and reads and writes through the undersized buffer. Loading the crafted .cfg for inference or training is sufficient and no valid .weights file is required. The reported proof of concept observed a heap buffer overflow read in gemm_nn_fast under AddressSanitizer and glibc allocator metadata corruption in a release build of the same input, indicating an out-of-bounds write.",
-      "refs": "https://github.com/hank-ai/darknet\nhttps://github.com/hank-ai/darknet/blob/v6.0/src-lib/convolutional_layer.cpp#L1457\nhttps://github.com/hank-ai/darknet/blob/v6.0/src-lib/convolutional_layer.cpp#L764",
-      "source": "NVD",
-      "time": "2026-08-21 05:19:02"
-    },
-    {
-      "cve_id": "CVE-2026-66788",
-      "title": "高危漏洞: CVE-2026-66788 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 03:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A flaw was found in Lighthouse. A remote attacker, by compromising a spoke cluster, can exploit a vulnerability where the destination namespace for resource injection is derived from an attacker-controlled label or annotation on the broker object. This allows the attacker to inject unauthorized EndpointSlices and ServiceImports into any namespace on peer clusters, including critical system namespaces like kube-system and openshift-*. This could lead to privilege escalation or other forms of system compromise within the cluster.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-66788\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2507533",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:55"
-    },
-    {
-      "cve_id": "CVE-2026-66787",
-      "title": "高危漏洞: CVE-2026-66787 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-08-21 03:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "A flaw was found in the lighthouse component of Red Hat Advanced Cluster Management for Kubernetes. This vulnerability stems from insufficient validation of advertised IP addresses within EndpointSlice objects. A compromised spoke cluster can exploit this by creating EndpointSlices with attacker-controlled IP addresses, causing other clusters' lighthouse DNS to redirect legitimate service traffic to malicious endpoints. This enables a remote attacker to conduct transparent Man-in-the-Middle (MITM) attacks on cross-cluster service communications, potentially leading to unauthorized information disclosure and data manipulation.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-66787\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2507532",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:50"
-    },
-    {
-      "cve_id": "CVE-2026-66785",
-      "title": "高危漏洞: CVE-2026-66785 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 03:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A flaw was found in Submariner. This vulnerability allows a malicious cluster (spoke) to redirect network traffic from other connected clusters (peer clusters) by publishing a specially crafted network endpoint. The system fails to properly validate the network subnets provided by the malicious cluster, enabling it to declare arbitrary network ranges. Consequently, all network traffic intended for these arbitrary ranges from peer clusters will be rerouted through the attacker's tunnel, potentially leading to unauthorized information disclosure or network disruption.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-66785\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2507530",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:46"
-    },
-    {
-      "cve_id": "CVE-2026-53587",
-      "title": "高危漏洞: CVE-2026-53587 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 03:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "libgit2 is a portable C implementation of the Git core methods provided as a linkable library with a solid API, allowing to build Git functionality into your application. Prior to 1.8.6 and 1.9.5, libgit2 performs a fixed-size strncmp in set_data in src/libgit2/transports/smart_pkt.c without first verifying that the smart-protocol pkt-line capability buffer contains 14 bytes. A malicious Git server can make bytes after the pkt-line complete object-format=, causing format_str to advance beyond the pkt-line and the following memchr length calculation to underflow. The resulting heap out-of-bounds walk can crash a client during the first refs-advertisement packet over HTTP, HTTPS, SSH, or the Git protocol. This issue is fixed in versions 1.8.6 and 1.9.5.",
-      "refs": "https://github.com/libgit2/libgit2/commit/2c0ce8c0132ac38ab0db28239462a671e2e5440e\nhttps://github.com/libgit2/libgit2/commit/affda60c10fcef16723451c0d7dc71b71dc20ad3\nhttps://github.com/libgit2/libgit2/commit/d7a9fb87f504434e9f45228678953c4fa56e7640",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:42"
-    },
-    {
-      "cve_id": "CVE-2026-77031",
-      "title": "高危漏洞: CVE-2026-77031 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-08-21 02:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "A vulnerability has been found in Tenda CH22 1.0.0.1. The affected element is the function formcreateFileName of the file /goform/formcreateFileName. The manipulation of the argument fileNameMit leads to command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.",
-      "refs": "https://candle-throne-f75.notion.site/Tenda-CH22-formcreateFileName-392df0aa118580c38c4ad15fb15cd30d\nhttps://vuldb.com/cve/CVE-2026-77031\nhttps://vuldb.com/submit/880667",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:38"
     }
   ]
 }
