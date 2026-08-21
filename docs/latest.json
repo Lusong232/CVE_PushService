@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-77776",
+      "title": "高危漏洞: CVE-2026-77776 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-21 20:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Headroom's LLM proxy derives the memory owner from the x-headroom-user-id request header. The header is read directly at several points in headroom/proxy/handlers/openai.py, including the chat completion and websocket paths, and nothing binds the value to the caller. A client can therefore name another user's identifier and read or write that user's stored LLM memory. The fix introduces a single resolve_memory_identity seam in headroom/proxy/identity.py that honors the header only for loopback or allowlisted callers and otherwise binds the identity to the proxy-token fingerprint or the operating system user. The pip console script binds 127.0.0.1 by default, but the reference docker-compose.yml ships --host 0.0.0.0 with published ports and no required HEADROOM_PROXY_TOKEN, which the server itself warns about at startup, so a deployment following the shipped compose exposes the affected data-plane routes to the network without authentication.",
+      "refs": "https://github.com/headroomlabs-ai/headroom\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.29.0/headroom/proxy/handlers/openai.py\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.36.1/headroom/proxy/identity.py",
+      "source": "NVD",
+      "time": "2026-08-21 23:23:33"
+    },
+    {
+      "cve_id": "CVE-2026-77775",
+      "title": "高危漏洞: CVE-2026-77775 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-08-21 20:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Headroom's LLM proxy lets a client choose the upstream destination with the x-headroom-base-url request header. _resolve_openai_upstream_base in headroom/proxy/handlers/openai.py accepts the header value, requires only that it parse with an http or https scheme and a hostname, and returns it for use as the upstream base; _select_passthrough_base_url in headroom/providers/proxy_routes.py reads the same header for the passthrough routes. No check rejects loopback, link-local, or RFC 1918 destinations, and because the component is a proxy the upstream response is returned to the caller, so the request reaches internal services and cloud metadata addresses and their responses are disclosed. The Authorization header accompanying the request is forwarded unchanged to the caller-designated host. The pip console script binds 127.0.0.1 by default, but the reference docker-compose.yml ships --host 0.0.0.0 with published ports and no required HEADROOM_PROXY_TOKEN, which the server itself warns about at startup, so a deployment following the shipped compose exposes the affected data-plane routes to the network without authentication.",
+      "refs": "https://github.com/headroomlabs-ai/headroom\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.29.0/headroom/proxy/handlers/openai.py\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.36.1/headroom/proxy/upstream_guard.py",
+      "source": "NVD",
+      "time": "2026-08-21 23:23:28"
+    },
+    {
+      "cve_id": "CVE-2026-59279",
+      "title": "高危漏洞: CVE-2026-59279 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-21 20:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The MCP Streamable HTTP server transport (WebFlux and WebMvc variants) does not place any limit on the number of sessions it retains, and by default does not require clients to be authenticated. As a result, a remote attacker can cause the server to accumulate an unbounded number of sessions over time, gradually exhausting available memory and ultimately causing a Denial of Service that affects all legitimate clients.\nAffected versions:\nSpring AI: 2.0.0",
+      "refs": "https://spring.io/security/cve-2026-59279",
+      "source": "NVD",
+      "time": "2026-08-21 23:23:21"
+    },
+    {
+      "cve_id": "CVE-2026-75796",
+      "title": "高危漏洞: CVE-2026-75796 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-21 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The AI Engine  WordPress plugin before 3.6.1 does not verify that the requesting user is authorized to act on the targeted account before performing privileged user management operations, allowing users with the Administrator role on a Multisite sub-site to take over any account on the network, including the Network Administrator's.",
+      "refs": "https://wpscan.com/vulnerability/919da0c7-7643-4903-9454-2fb66353f5cb/",
+      "source": "NVD",
+      "time": "2026-08-21 23:23:15"
+    },
+    {
+      "cve_id": "CVE-2026-18781",
+      "title": "高危漏洞: CVE-2026-18781 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-08-21 15:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Drag and Drop Multiple File Upload for Contact Form 7 WordPress plugin before 1.3.9.9 does not validate the final name of an uploaded file after stripping characters from it, allowing unauthenticated users to defeat its file type restrictions and execute arbitrary code on the server.",
+      "refs": "https://wpscan.com/vulnerability/fb59519b-80ae-48e4-a31a-71d24ded205b/",
+      "source": "NVD",
+      "time": "2026-08-21 23:23:07"
+    },
+    {
+      "cve_id": "CVE-2026-16576",
+      "title": "高危漏洞: CVE-2026-16576 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-21 15:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 does not correctly check user capabilities on some of its admin REST API routes, checking only for a WooCommerce management capability instead of the Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14-installation capability, allowing users such as Shop Managers to install and activate arbitrary Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 from WordPress.org.",
+      "refs": "https://wpscan.com/vulnerability/801e9008-e912-4606-8c21-3d31dc0bd2c7/",
+      "source": "NVD",
+      "time": "2026-08-21 23:22:59"
+    },
+    {
       "cve_id": "CVE-2026-77767",
       "title": "高危漏洞: CVE-2026-77767 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1033,72 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-73137\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2514223",
       "source": "NVD",
       "time": "2026-08-21 08:41:21"
-    },
-    {
-      "cve_id": "CVE-2026-73040",
-      "title": "高危漏洞: CVE-2026-73040 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-21 05:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dockge validates a stack name only on the write path. In backend/stack.ts the allow-list check in validate(), which requires the name to match ^[a-z0-9_-]+$, is reached from save() alone, while the path getter returns path.join(this.server.stacksDir, this.name) and Stack.getStack builds path.join(server.stacksDir, stackName) with no check. The socket handlers in backend/agent-socket-handlers/docker-socket-handler.ts confirm the caller is logged in and that the name is a string, then pass it straight to Stack.getStack, so a name containing traversal sequences resolves outside the managed stacks directory. An authenticated user can therefore read the composeENV and composeYAML values of any directory the server process can reach, which discloses the secrets in that directory's .env or Compose file, and can invoke delete(), which runs docker compose down and then fsAsync.rm on the traversed path with recursive and force set, removing that directory. Disclosure is limited to files named .env or an accepted Compose filename, and deletion requires the target directory to hold a valid Compose file so that docker compose down exits successfully. Dockge commonly runs as root with access to the Docker socket, so the reachable set includes unrelated applications on the host. Instances configured with disableAuth, a supported option that logs the caller in as admin automatically, expose both operations without authentication.",
-      "refs": "https://github.com/louislam/dockge\nhttps://github.com/louislam/dockge/blob/1.5.0/backend/agent-socket-handlers/docker-socket-handler.ts#L43-L78\nhttps://github.com/louislam/dockge/blob/1.5.0/backend/stack.ts#L155-L157",
-      "source": "NVD",
-      "time": "2026-08-21 08:41:17"
-    },
-    {
-      "cve_id": "CVE-2026-71485",
-      "title": "高危漏洞: CVE-2026-71485 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-21 05:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Centrifugo is an open-source scalable real-time messaging server. Prior to 6.9.0, Centrifugo copies the client-controlled protocol.ConnectRequest.headers map through OnClientConnecting in internal/client/handler.go, ConnectEvent.Headers, and SetEmulatedHeadersToContext. The requestHeaders path in internal/proxy/http.go, the requestMetadata path in internal/proxy/grpc.go, and the Consume path in internal/unigrpc/grpc.go can forward an allowlisted value as a trusted backend header or metadata value. A remote client can spoof a header such as x-trusted-user for connect, refresh, subscribe, publish, RPC, and related proxy calls when the backend relies on that header for authentication or authorization. The unidirectional gRPC transport has no transport-level HTTP header that can override the emulated value. This issue is fixed in version 6.9.0.",
-      "refs": "https://github.com/centrifugal/centrifugo/commit/84d38cea1dd2efa24375a148817a974c8727f4b0\nhttps://github.com/centrifugal/centrifugo/pull/1182\nhttps://github.com/centrifugal/centrifugo/releases/tag/v6.9.0",
-      "source": "NVD",
-      "time": "2026-08-21 08:41:09"
-    },
-    {
-      "cve_id": "CVE-2026-67567",
-      "title": "高危漏洞: CVE-2026-67567 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 05:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A flaw was found in the multicloud-operators-subscription component. This vulnerability allows a tenant, who has the ability to create HelmRelease custom resources (CRs), to bypass existing security controls. The system's HelmRelease controller processes Helm chart templates using its own elevated ServiceAccount privileges without proper validation. This enables the tenant to deploy arbitrary resources across the entire cluster, leading to a significant security compromise.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-67567\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2514224",
-      "source": "NVD",
-      "time": "2026-08-21 08:41:04"
-    },
-    {
-      "cve_id": "CVE-2026-53804",
-      "title": "高危漏洞: CVE-2026-53804 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-21 05:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OTRS Community Edition contains an authenticated OS command injection vulnerability in the PGP encryption module that allows administrators to execute arbitrary operating-system commands by supplying crafted values for the PGP binary path and command options. Administrator-supplied configuration values are concatenated without sanitization into a shell command, enabling arbitrary command execution as the web server process user during normal ticket operations after the malicious configuration is deployed.",
-      "refs": "https://h00die-gr3y.github.io/research/cve-2026-53804/\nhttps://www.vulncheck.com/advisories/otrs-community-edition-os-command-injection-via-pgp-configuration",
-      "source": "NVD",
-      "time": "2026-08-21 08:40:59"
-    },
-    {
-      "cve_id": "CVE-2026-18420",
-      "title": "高危漏洞: CVE-2026-18420 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-21 05:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper input validation in the Time Series Visual Builder (TSVB) plugin in OpenSearch Dashboards allows an authenticated remote user to execute arbitrary code on the server via a crafted JSON payload to the metrics visualization API endpoint. This issue is a form of prototype pollution that enables remote code execution. \n\n\n\nTo remediate this issue, users should upgrade to OpenSearch Dashboards 3.8 or later.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-085-aws/\nhttps://github.com/opensearch-project/OpenSearch-Dashboards/releases/tag/3.8.0\nhttps://github.com/opensearch-project/OpenSearch-Dashboards/security/advisories/GHSA-xmqx-xq2p-8jq2",
-      "source": "NVD",
-      "time": "2026-08-21 08:40:54"
-    },
-    {
-      "cve_id": "CVE-2026-77148",
-      "title": "高危漏洞: CVE-2026-77148 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 03:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was found in Comfast CF-N1-S 2.6.0.1. This impacts the function sub_44B50C of the file /cgi-bin/mbox-config?method=SET&section=ptest_channel of the component Web Management. The manipulation results in stack-based buffer overflow. The attack can be launched remotely. The exploit has been made public and could be used.",
-      "refs": "https://github.com/AdminSafe/CVE/issues/7\nhttps://vuldb.com/cve/CVE-2026-77148\nhttps://vuldb.com/submit/880910",
-      "source": "NVD",
-      "time": "2026-08-21 05:19:09"
     }
   ]
 }
