@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-18409",
+      "title": "高危漏洞: CVE-2026-18409 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-21 12:18:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The WPForms Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Single Line Text and Paragraph Text Field Values in all versions up to, and including, 2.0.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit relies on the plugin's own wp_kses_allowed_html filter widening the 'post' allowlist to permit iframe elements with a data-src attribute, which is not on WordPress's URI-attribute sanitization list, allowing a javascript: URI stored in data-src to survive kses processing and subsequently be promoted to a live src attribute by the bundled admin script view-entry.min.js.",
+      "refs": "https://wpforms.com/docs/how-to-view-recent-changes-to-the-wpforms-plugin-changelog/#Changelog\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f26cbc41-8ed9-4dc6-a8bc-9986ecab5e6e?source=cve",
+      "source": "NVD",
+      "time": "2026-08-21 14:28:11"
+    },
+    {
+      "cve_id": "CVE-2026-73267",
+      "title": "高危漏洞: CVE-2026-73267 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-08-21 11:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+      "description": "A flaw was found in the clusterclaims-controller component of multicluster engine (MCE). A tenant with standard permissions to create and delete ClusterClaim resources can exploit this by manipulating the `spec.namespace` field. This allows the tenant to specify and delete any ManagedCluster, including the hub's local-cluster or other tenants' clusters, due to a missing ownership check. This vulnerability can lead to a denial of service by enabling unauthorized deletion of ManagedClusters.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-73267\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2514218",
+      "source": "NVD",
+      "time": "2026-08-21 14:28:06"
+    },
+    {
+      "cve_id": "CVE-2026-77651",
+      "title": "高危漏洞: CVE-2026-77651 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-21 09:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The arrayref crate 0.3.10 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
+      "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0260.html",
+      "source": "NVD",
+      "time": "2026-08-21 14:28:02"
+    },
+    {
+      "cve_id": "CVE-2026-77650",
+      "title": "高危漏洞: CVE-2026-77650 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-21 09:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The append-only-vec crate 0.1.9 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
+      "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0262.html",
+      "source": "NVD",
+      "time": "2026-08-21 14:27:57"
+    },
+    {
+      "cve_id": "CVE-2026-77649",
+      "title": "高危漏洞: CVE-2026-77649 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-21 09:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The internment crate 0.8.7 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
+      "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0266.html",
+      "source": "NVD",
+      "time": "2026-08-21 14:27:52"
+    },
+    {
       "cve_id": "CVE-2026-77647",
       "title": "高危漏洞: CVE-2026-77647 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://candle-throne-f75.notion.site/Tenda-CH22-formcreateFileName-392df0aa118580c38c4ad15fb15cd30d\nhttps://vuldb.com/cve/CVE-2026-77031\nhttps://vuldb.com/submit/880667",
       "source": "NVD",
       "time": "2026-08-21 05:18:38"
-    },
-    {
-      "cve_id": "CVE-2026-76641",
-      "title": "高危漏洞: CVE-2026-76641 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 02:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Expat through 2.8.3 contains an out-of-bounds read vulnerability that allows attackers to trigger memory corruption by processing XML with external entity parsers created via XML_ExternalEntityParserCreate. A struct size mismatch between ELEMENT_TYPE members causes storeAtts to read the attIndex member past allocated memory boundaries, resulting in failure to normalize whitespace in non-CDATA attributes or a wild pointer dereference causing a segfault. This vulnerability was introduced by the fix for CVE-2026-66046.",
-      "refs": "https://github.com/libexpat/libexpat/commit/98599f6dcc2b460410881fe420f5f55d6bec63bf\nhttps://github.com/libexpat/libexpat/pull/1331\nhttps://www.vulncheck.com/advisories/expat-out-of-bounds-read-via-dtdcopy",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:34"
-    },
-    {
-      "cve_id": "CVE-2026-73257",
-      "title": "高危漏洞: CVE-2026-73257 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-21 02:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Mongoose is an embedded web server and network library. Priro to version 7.22, a remote unauthenticated attacker can send an HTTP request containing both Content-Length and Transfer-Encoding: chunked. The cl_count and te_count checks in the mg_http_parse() and http_cb() paths in src/http.c accept both headers and prioritize chunked encoding, while a Content-Length-preferring reverse proxy can use a different request boundary. This CL.TE desynchronization can inject requests that access or modify resources in another user context. This issue is fixed in version 7.22.",
-      "refs": "https://github.com/cesanta/mongoose/commit/a9df523f76f43a38bd53b4232b9cfd4c16869e71\nhttps://github.com/cesanta/mongoose/pull/3611\nhttps://github.com/cesanta/mongoose/releases/tag/7.22",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:27"
-    },
-    {
-      "cve_id": "CVE-2026-73256",
-      "title": "高危漏洞: CVE-2026-73256 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-21 02:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Mongoose is an embedded web server and network library. Prior to 7.22, a remote unauthenticated attacker can exploit an HTTP/1.0 reverse-proxy deployment by sending a request with Transfer-Encoding: chunked and conflicting framing. The http_cb() function in src/http.c tests hm.proto.len with an impossible greater-than-eight condition even though mg_http_parse() requires an eight-byte protocol string, so is_http_1_0 is never set. Mongoose consequently processes chunked encoding that an HTTP/1.0 proxy can ignore, enabling request smuggling and unauthorized access or state changes. This issue is fixed in version 7.22.",
-      "refs": "https://github.com/cesanta/mongoose/commit/a9df523f76f43a38bd53b4232b9cfd4c16869e71\nhttps://github.com/cesanta/mongoose/pull/3611\nhttps://github.com/cesanta/mongoose/releases/tag/7.22",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:23"
-    },
-    {
-      "cve_id": "CVE-2026-63495",
-      "title": "高危漏洞: CVE-2026-63495 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 02:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Libevent is an event notification library. From 2.2.0-alpha-dev until 2.2.2-alpha, the libevent WebSocket server in ws.c accumulates fragmented frames in evws->incomplete_frames without enforcing a total message-size limit. An unauthenticated remote client can repeatedly send fragmented WebSocket frames below WS_MAX_RECV_FRAME_SZ with FIN=0, causing the evbuffer to grow without bound until the process or host exhausts memory. This issue is fixed in version 2.2.2-alpha.",
-      "refs": "https://github.com/libevent/libevent/commit/291c4d1cd75695e898030ebd5c4ddf26c094077b\nhttps://github.com/libevent/libevent/releases/tag/release-2.2.2-alpha\nhttps://github.com/libevent/libevent/security/advisories/GHSA-qx89-wf2v-vgmx",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:19"
-    },
-    {
-      "cve_id": "CVE-2026-63388",
-      "title": "高危漏洞: CVE-2026-63388 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-08-21 02:16:36",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has a heap out-of-bounds write in bufferevent_sock.c when bufferevent_socket_set_conn_address_ copies a kernel-supplied AF_UNIX peer address into bufferevent_private.conn_address. Release builds compiled with NDEBUG disable the EVUTIL_ASSERT length guard, and the evhttp accept path can pass a 110-byte sockaddr from accept() into the 28-byte field. An unauthenticated local peer able to connect to an AF_UNIX listener can overwrite the adjacent dns_request pointer and heap data, causing memory corruption with confidentiality, integrity, and availability impact. This issue is fixed in versions 2.1.13 and 2.2.2-alpha.",
-      "refs": "https://github.com/libevent/libevent/commit/52057cb33d0c20c0a0453fbabe6c0c96854931b9\nhttps://github.com/libevent/libevent/commit/ef38f926e9cd1f082416c6fff13587bc1f431d72\nhttps://github.com/libevent/libevent/releases/tag/release-2.1.13-stable",
-      "source": "NVD",
-      "time": "2026-08-21 05:18:14"
     }
   ]
 }
