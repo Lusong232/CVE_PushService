@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-77946",
+      "title": "高危漏洞: CVE-2026-77946 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-08-22 19:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in TRENDnet TEW-821DAP 2.2.01b05. Affected by this vulnerability is the function uci_safe_get of the file /cgi-bin/apply_time.cgi of the component NTP Timezone Configuration Handler. Executing a manipulation of the argument system.ntp.server/system.ntp.enable_server/cameo.time.time_zone/cameo.cameo.syslog_server can lead to stack-based buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_NTP_Timezone_Config_Stack_Overflow.md\nhttps://vuldb.com/cve/CVE-2026-77946\nhttps://vuldb.com/submit/881252",
+      "source": "NVD",
+      "time": "2026-08-22 20:18:18"
+    },
+    {
+      "cve_id": "CVE-2026-77945",
+      "title": "高危漏洞: CVE-2026-77945 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-22 19:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was found in TRENDnet TEW-821DAP 2.2.01b05. Affected is an unknown function of the file /cgi-bin/upload.cgi of the component ssi. Performing a manipulation of the argument filename results in command injection. The attack may be initiated remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_Arbitrary_File_Command_Injection.md\nhttps://vuldb.com/cve/CVE-2026-77945\nhttps://vuldb.com/submit/881248",
+      "source": "NVD",
+      "time": "2026-08-22 20:18:13"
+    },
+    {
+      "cve_id": "CVE-2026-78003",
+      "title": "高危漏洞: CVE-2026-78003 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-22 17:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Mailgun for WordPress plugin for WordPress is vulnerable to Server-Side Request Forgery (SSRF) via path traversal in versions up to and including 2.2.0. This is due to insufficient input validation in the add_list() function, which accepts user-controlled array keys from $_POST['addresses'], passes them through sanitize_text_field(). This makes it possible for unauthenticated attackers to make authenticated POST requests to any Mailgun API endpoint using the WordPress site's API key, including creating inbound email-forwarding routes that can intercept password reset emails, leading to administrator account takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L259\nhttps://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L323\nhttps://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L331",
+      "source": "NVD",
+      "time": "2026-08-22 20:18:08"
+    },
+    {
       "cve_id": "CVE-2026-19883",
       "title": "高危漏洞: CVE-2026-19883 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1066,39 +1099,6 @@
       "refs": "https://wpforms.com/docs/how-to-view-recent-changes-to-the-wpforms-plugin-changelog/#Changelog\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f26cbc41-8ed9-4dc6-a8bc-9986ecab5e6e?source=cve",
       "source": "NVD",
       "time": "2026-08-21 14:28:11"
-    },
-    {
-      "cve_id": "CVE-2026-73267",
-      "title": "高危漏洞: CVE-2026-73267 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-08-21 11:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "A flaw was found in the clusterclaims-controller component of multicluster engine (MCE). A tenant with standard permissions to create and delete ClusterClaim resources can exploit this by manipulating the `spec.namespace` field. This allows the tenant to specify and delete any ManagedCluster, including the hub's local-cluster or other tenants' clusters, due to a missing ownership check. This vulnerability can lead to a denial of service by enabling unauthorized deletion of ManagedClusters.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-73267\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2514218",
-      "source": "NVD",
-      "time": "2026-08-21 14:28:06"
-    },
-    {
-      "cve_id": "CVE-2026-77651",
-      "title": "高危漏洞: CVE-2026-77651 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-21 09:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The arrayref crate 0.3.10 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
-      "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0260.html",
-      "source": "NVD",
-      "time": "2026-08-21 14:28:02"
-    },
-    {
-      "cve_id": "CVE-2026-77650",
-      "title": "高危漏洞: CVE-2026-77650 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-21 09:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The append-only-vec crate 0.1.9 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
-      "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0262.html",
-      "source": "NVD",
-      "time": "2026-08-21 14:27:57"
     }
   ]
 }
