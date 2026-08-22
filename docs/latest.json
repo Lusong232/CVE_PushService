@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19883",
+      "title": "高危漏洞: CVE-2026-19883 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-22 11:16:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WPeMatico RSS Feed Fetcher plugin for WordPress is vulnerable to unauthorized modification of data that can lead to privilege escalation due to a missing capability check on the wpematico_import_settings function in all versions up to, and including, 2.8.24. This makes it possible for authenticated attackers, with subscriber-level access and above, to update arbitrary options on the WordPress site. This can be leveraged to update the default role for registration to administrator and enable user registration for attackers to gain administrative user access.",
+      "refs": "https://github.com/etruel/wpematico/commit/e297f41b49c6ec76635b006dff8a964a99a1ed24\nhttps://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.23/app/tools_page.php#L224\nhttps://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.23/app/wpematico_functions.php#L2077",
+      "source": "NVD",
+      "time": "2026-08-22 14:21:20"
+    },
+    {
       "cve_id": "CVE-2026-53525",
       "title": "高危漏洞: CVE-2026-53525 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1088,17 +1099,6 @@
       "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0262.html",
       "source": "NVD",
       "time": "2026-08-21 14:27:57"
-    },
-    {
-      "cve_id": "CVE-2026-77649",
-      "title": "高危漏洞: CVE-2026-77649 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-21 09:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The internment crate 0.8.7 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution.",
-      "refs": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref\nhttps://github.com/rustsec/advisory-db/issues/3161\nhttps://rustsec.org/advisories/RUSTSEC-2026-0266.html",
-      "source": "NVD",
-      "time": "2026-08-21 14:27:52"
     }
   ]
 }
