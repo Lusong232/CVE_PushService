@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-4703",
+      "title": "高危漏洞: CVE-2026-4703 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-23 00:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WS Form LITE – Drag & Drop Contact Form Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.10.80 via deserialization of untrusted input from form submission meta values. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/class-ws-form-common.php#L7154\nhttps://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/core/class-ws-form-submit.php#L1061\nhttps://plugins.trac.wordpress.org/changeset/3489609/",
+      "source": "NVD",
+      "time": "2026-08-23 02:15:00"
+    },
+    {
+      "cve_id": "CVE-2026-68766",
+      "title": "高危漏洞: CVE-2026-68766 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-22 23:16:20",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "hashcat fails to restrict command-line options when parsing restore files, allowing attackers to inject output-redirecting options like --outfile and --potfile-path. Attackers can craft restore files with malicious options to append attacker-controlled content to arbitrary files, enabling code execution when targeting shell startup files.",
+      "refs": "https://github.com/hashcat/hashcat\nhttps://github.com/hashcat/hashcat/blob/v7.1.2/src/restore.c#L365-L369\nhttps://github.com/hashcat/hashcat/commit/fcae69f2438ff8eae0dc8e206b78067a1e465ed4",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:55"
+    },
+    {
+      "cve_id": "CVE-2026-66393",
+      "title": "高危漏洞: CVE-2026-66393 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 23:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "NLTK versions before 3.9.4 contain an unbounded recursion vulnerability in JSONTaggedDecoder.decode_obj() that allows attackers to cause denial of service by supplying deeply nested JSON structures. Attackers can craft JSON payloads exceeding the recursion limit to trigger an unhandled RecursionError that crashes the Python process.",
+      "refs": "https://github.com/nltk/nltk/security/advisories/GHSA-rf74-v2fm-23pw\nhttps://www.vulncheck.com/advisories/nltk-before-denial-of-service-via-jsontaggeddecoder",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:50"
+    },
+    {
+      "cve_id": "CVE-2026-63312",
+      "title": "高危漏洞: CVE-2026-63312 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 23:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "NLTK before 3.10.0 contains an arbitrary local file read vulnerability in StreamBackedCorpusView that bypasses pathsec.ENFORCE by calling builtins.open() directly instead of pathsec.open(). Attackers who control the fileid argument can read arbitrary local files regardless of the ENFORCE setting, including sensitive system files and application credentials.",
+      "refs": "https://github.com/nltk/nltk/security/advisories/GHSA-x5ph-mj9p-rfr8\nhttps://www.vulncheck.com/advisories/nltk-streambackedcorpusview-bypasses-pathsec-enforce-arbitrary-file-read",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:46"
+    },
+    {
+      "cve_id": "CVE-2026-63310",
+      "title": "高危漏洞: CVE-2026-63310 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-22 23:16:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:H",
+      "description": "NLTK before 3.9.3 fails to verify file integrity after downloading packages and before extraction in the downloader module. Attackers can perform man-in-the-middle attacks or DNS poisoning to inject malicious package contents that are extracted without validation.",
+      "refs": "https://github.com/nltk/nltk/security/advisories/GHSA-5wp5-5229-5g6q\nhttps://www.vulncheck.com/advisories/nltk-before-missing-post-download-integrity-verification",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:41"
+    },
+    {
+      "cve_id": "CVE-2026-62388",
+      "title": "高危漏洞: CVE-2026-62388 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 23:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "NLTK versions before 3.10.0 default to ENFORCE=False in pathsec.py, causing all security validation functions to emit warnings instead of raising exceptions. Attackers can bypass path traversal and pickle deserialization protections by exploiting the disabled security controls that are only active when manually enabled.",
+      "refs": "https://github.com/nltk/nltk/security/advisories/GHSA-p3m8-78j2-g5p3\nhttps://www.vulncheck.com/advisories/nltk-before-insecure-default-configuration-pathsec",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:36"
+    },
+    {
+      "cve_id": "CVE-2026-62384",
+      "title": "高危漏洞: CVE-2026-62384 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 23:16:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "NLTK versions before 3.10.2 contain a symlink-based sandbox bypass in FramenetCorpusReader that allows attackers to read arbitrary XML files outside the corpus root. Attackers can place symlinks with names containing no path separators inside the corpus subdirectory, which pass the path validation guard and are resolved to files outside the intended corpus root when accessed via frame_by_name(), _lu_file(), or doc() methods.",
+      "refs": "https://github.com/nltk/nltk/security/advisories/GHSA-f833-7jw8-xwrv\nhttps://www.vulncheck.com/advisories/nltk-framenetcorpusreader-symlink-sandbox-bypass-before",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:31"
+    },
+    {
+      "cve_id": "CVE-2026-71513",
+      "title": "高危漏洞: CVE-2026-71513 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-22 22:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "NLTK before 3.10.3 contains a remote code execution vulnerability in AllowlistUnpickler that validates only the pickle module string and not the global name, allowing attackers to resolve dotted names by attribute traversal to callables outside the allowlisted namespace. Attackers can craft untrusted transition-parser models that execute arbitrary commands when TransitionParser.parse loads the model through allowlisted_pickle_load.",
+      "refs": "https://github.com/nltk/nltk\nhttps://github.com/nltk/nltk/blob/v3.10.2/nltk/picklesec.py#L119-L124\nhttps://github.com/nltk/nltk/commit/c3e37113742a1ebeeb4f2ca58941f320f98805ea",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:24"
+    },
+    {
+      "cve_id": "CVE-2026-2996",
+      "title": "高危漏洞: CVE-2026-2996 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 22:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The Advanced Product Fields (Product Addons) for WooCommerce plugin for WordPress is vulnerable to Improper Input Validation in all versions up to, and including, 1.6.21. This is due to a logic flaw in the 'validate_cart_data' function. This makes it possible for unauthenticated attackers to bypass required paid addons and complete purchases at the base product price only, effectively stealing products by paying a fraction of the intended total. The vulnerability was partially patched in version 1.6.19.",
+      "refs": "https://plugins.trac.wordpress.org/browser/advanced-product-fields-for-woocommerce/trunk/includes/controllers/class-product-controller.php#L130\nhttps://plugins.trac.wordpress.org/changeset/3477476/\nhttps://plugins.trac.wordpress.org/changeset/3483410/",
+      "source": "NVD",
+      "time": "2026-08-23 02:14:19"
+    },
+    {
       "cve_id": "CVE-2026-62243",
       "title": "高危漏洞: CVE-2026-62243 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/lxc/incus/security/advisories/GHSA-2q3f-q5pq-g8wv\nhttps://github.com/lxc/incus/security/advisories/GHSA-2q3f-q5pq-g8wv",
       "source": "NVD",
       "time": "2026-08-22 02:21:54"
-    },
-    {
-      "cve_id": "CVE-2026-77806",
-      "title": "高危漏洞: CVE-2026-77806 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-21 22:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SPIP before 4.4.21 allows unauthenticated remote attackers to execute arbitrary code, as exploited in the wild in August 2026. This is related to code injection via an X-Spip-Filtre HTTP request header that is mishandled by analyse_resultat_skel.",
-      "refs": "https://blog.spip.net/Mise-a-jour-critique-de-securite-sortie-de-SPIP-4-4-21.html\nhttps://github.com/rapid7/metasploit-framework/pull/21790\nhttps://github.com/rapid7/metasploit-framework/pull/21790#issuecomment-5368038123",
-      "source": "NVD",
-      "time": "2026-08-22 02:21:49"
-    },
-    {
-      "cve_id": "CVE-2026-50112",
-      "title": "高危漏洞: CVE-2026-50112 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-21 17:16:38",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SSRF via Metalink Mirror URL Resolution:\n\nAn authenticated tenant can register a template pointing to an attacker-controlled metalink file containing internal targets. The Secondary Storage VM will retrieve the data and persist it as a template file, which can later be downloaded through normal APIs.\n\nRCE on KVM hypervisor via NFS, Metalink files with/without Direct Downloads:\n\nAn authenticated CloudStack tenant holding the default User role can execute arbitrary shell commands as root on the KVM hypervisor host that runs other tenants' VMs. This is cross-tenant root on the underlying compute, reachable via the public CloudStack API.\n\n\nWhen a User registers a VM template with directDownload=true and a URL pointing to a .metalink file, the management server fetches the metalink XML and dispatches download to the KVM agent. Inner URLs inside the metalink XML are never re-validated against the scheme allowlist.\n\n\nThese issues affect Apache CloudStack: from 4.14.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0.\n\nUsers are recommended to upgrade to version 4.20.3.1 or 4.22.1.1 or later, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/g6cwddtjrwbh1d56wjz4cfp3fzfm4kbc",
-      "source": "NVD",
-      "time": "2026-08-22 02:21:44"
-    },
-    {
-      "cve_id": "CVE-2026-77776",
-      "title": "高危漏洞: CVE-2026-77776 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-21 20:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Headroom's LLM proxy derives the memory owner from the x-headroom-user-id request header. The header is read directly at several points in headroom/proxy/handlers/openai.py, including the chat completion and websocket paths, and nothing binds the value to the caller. A client can therefore name another user's identifier and read or write that user's stored LLM memory. The fix introduces a single resolve_memory_identity seam in headroom/proxy/identity.py that honors the header only for loopback or allowlisted callers and otherwise binds the identity to the proxy-token fingerprint or the operating system user. The pip console script binds 127.0.0.1 by default, but the reference docker-compose.yml ships --host 0.0.0.0 with published ports and no required HEADROOM_PROXY_TOKEN, which the server itself warns about at startup, so a deployment following the shipped compose exposes the affected data-plane routes to the network without authentication.",
-      "refs": "https://github.com/headroomlabs-ai/headroom\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.29.0/headroom/proxy/handlers/openai.py\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.36.1/headroom/proxy/identity.py",
-      "source": "NVD",
-      "time": "2026-08-21 23:23:33"
-    },
-    {
-      "cve_id": "CVE-2026-77775",
-      "title": "高危漏洞: CVE-2026-77775 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-08-21 20:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Headroom's LLM proxy lets a client choose the upstream destination with the x-headroom-base-url request header. _resolve_openai_upstream_base in headroom/proxy/handlers/openai.py accepts the header value, requires only that it parse with an http or https scheme and a hostname, and returns it for use as the upstream base; _select_passthrough_base_url in headroom/providers/proxy_routes.py reads the same header for the passthrough routes. No check rejects loopback, link-local, or RFC 1918 destinations, and because the component is a proxy the upstream response is returned to the caller, so the request reaches internal services and cloud metadata addresses and their responses are disclosed. The Authorization header accompanying the request is forwarded unchanged to the caller-designated host. The pip console script binds 127.0.0.1 by default, but the reference docker-compose.yml ships --host 0.0.0.0 with published ports and no required HEADROOM_PROXY_TOKEN, which the server itself warns about at startup, so a deployment following the shipped compose exposes the affected data-plane routes to the network without authentication.",
-      "refs": "https://github.com/headroomlabs-ai/headroom\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.29.0/headroom/proxy/handlers/openai.py\nhttps://github.com/headroomlabs-ai/headroom/blob/v0.36.1/headroom/proxy/upstream_guard.py",
-      "source": "NVD",
-      "time": "2026-08-21 23:23:28"
-    },
-    {
-      "cve_id": "CVE-2026-59279",
-      "title": "高危漏洞: CVE-2026-59279 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 20:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The MCP Streamable HTTP server transport (WebFlux and WebMvc variants) does not place any limit on the number of sessions it retains, and by default does not require clients to be authenticated. As a result, a remote attacker can cause the server to accumulate an unbounded number of sessions over time, gradually exhausting available memory and ultimately causing a Denial of Service that affects all legitimate clients.\nAffected versions:\nSpring AI: 2.0.0",
-      "refs": "https://spring.io/security/cve-2026-59279",
-      "source": "NVD",
-      "time": "2026-08-21 23:23:21"
-    },
-    {
-      "cve_id": "CVE-2026-75796",
-      "title": "高危漏洞: CVE-2026-75796 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-21 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The AI Engine  WordPress plugin before 3.6.1 does not verify that the requesting user is authorized to act on the targeted account before performing privileged user management operations, allowing users with the Administrator role on a Multisite sub-site to take over any account on the network, including the Network Administrator's.",
-      "refs": "https://wpscan.com/vulnerability/919da0c7-7643-4903-9454-2fb66353f5cb/",
-      "source": "NVD",
-      "time": "2026-08-21 23:23:15"
-    },
-    {
-      "cve_id": "CVE-2026-18781",
-      "title": "高危漏洞: CVE-2026-18781 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-21 15:16:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Drag and Drop Multiple File Upload for Contact Form 7 WordPress plugin before 1.3.9.9 does not validate the final name of an uploaded file after stripping characters from it, allowing unauthenticated users to defeat its file type restrictions and execute arbitrary code on the server.",
-      "refs": "https://wpscan.com/vulnerability/fb59519b-80ae-48e4-a31a-71d24ded205b/",
-      "source": "NVD",
-      "time": "2026-08-21 23:23:07"
-    },
-    {
-      "cve_id": "CVE-2026-16576",
-      "title": "高危漏洞: CVE-2026-16576 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-21 15:16:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 does not correctly check user capabilities on some of its admin REST API routes, checking only for a WooCommerce management capability instead of the Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14-installation capability, allowing users such as Shop Managers to install and activate arbitrary Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 from WordPress.org.",
-      "refs": "https://wpscan.com/vulnerability/801e9008-e912-4606-8c21-3d31dc0bd2c7/",
-      "source": "NVD",
-      "time": "2026-08-21 23:22:59"
-    },
-    {
-      "cve_id": "CVE-2026-77767",
-      "title": "高危漏洞: CVE-2026-77767 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 19:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Reconmap's API applies a fallback authorization policy in apps/api/app/Program.cs that requires an authenticated user holding the administrator role, so controllers without their own attribute reject anonymous callers. The report preview action in apps/api/app/Controllers/ReportsController.cs carries [AllowAnonymous] and therefore opts out of that policy. PreviewReport loads the Project row named by the id path segment, loads the linked Organisation through the project's ClientId, and renders both into default-report-template.html, which prints the project name and description together with the client organisation's name, address and URL. No authentication, project membership or role check is performed. Because the id is the auto-increment primary key of the project table, an unauthenticated remote caller can walk sequential ids to retrieve the engagement details and client organisation of every project on the instance, and the 404 returned for a missing id reveals which project ids exist. Reconmap stores penetration-testing engagements, so the disclosed descriptions and client records are sensitive by nature.",
-      "refs": "https://github.com/reconmap/reconmap\nhttps://github.com/reconmap/reconmap/blob/56ca3748343a50c98185d53827172d8f13a6ad0f/apps/api/app/Controllers/ReportsController.cs\nhttps://github.com/reconmap/reconmap/blob/56ca3748343a50c98185d53827172d8f13a6ad0f/apps/api/app/Program.cs",
-      "source": "NVD",
-      "time": "2026-08-21 20:25:35"
     }
   ]
 }
