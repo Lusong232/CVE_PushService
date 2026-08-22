@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-62243",
+      "title": "高危漏洞: CVE-2026-62243 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 21:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Netty (io.netty:netty-handler) versions from 4.2.0.Final through 4.2.16.Final and versions through 4.1.136.Final disable TLS hostname verification on the SslProvider.OPENSSL client path when a plain (non-extended) X509TrustManager is used and Unsafe-based trust-manager wrapping is unavailable (Java 25+). In this configuration the OpenSSL client does not perform hostname verification, allowing a man-in-the-middle attacker to present a certificate issued for a different hostname that is accepted without validation. Fixed in 4.2.17.Final and 4.1.137.Final.",
+      "refs": "https://github.com/netty/netty/security/advisories/GHSA-p85m-gvr3-788c\nhttps://www.vulncheck.com/advisories/netty-through-tls-hostname-verification-bypass",
+      "source": "NVD",
+      "time": "2026-08-22 23:11:17"
+    },
+    {
+      "cve_id": "CVE-2026-60084",
+      "title": "高危漏洞: CVE-2026-60084 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-08-22 21:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:H",
+      "description": "SiYuan versions before v3.7.4 contain an arbitrary file deletion vulnerability in the /api/search/removeTemplate endpoint that accepts an unvalidated path parameter passed directly to os.RemoveAll. Authenticated admin attackers can supply absolute filesystem paths to recursively delete any file or directory the kernel process has permission to remove, anywhere on the host filesystem.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w938-w7m4-qrj8\nhttps://www.vulncheck.com/advisories/siyuan-before-arbitrary-file-deletion-via-removetemplate",
+      "source": "NVD",
+      "time": "2026-08-22 23:11:13"
+    },
+    {
+      "cve_id": "CVE-2026-59808",
+      "title": "高危漏洞: CVE-2026-59808 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-22 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "AVideo through commit 9c39d8c8 contains an authentication bypass vulnerability where deduplicateByEncoderQueueId() returns video_id_hash credentials for any video by encoder_queue_id without ownership verification, and useVideoHashOrLogin() converts this hash into passwordless login as the video owner. Attackers with upload permission can retrieve an administrator's video_id_hash by omitting the videos_id parameter, then use that hash in an unauthenticated request to gain administrative session access and modify system configuration.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-q32p-rw3q-8x3r\nhttps://www.vulncheck.com/advisories/avideo-authentication-bypass-via-unkeyed-video-hash-disclosure",
+      "source": "NVD",
+      "time": "2026-08-22 23:11:08"
+    },
+    {
+      "cve_id": "CVE-2026-59256",
+      "title": "高危漏洞: CVE-2026-59256 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-22 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "WWBN AVideo through commit 9c39d8c8 contains an authorization bypass vulnerability where getToken() creates tokens without binding to user identity or purpose, and plugin/Gallery/view/sections.php issues valid tokens to unauthenticated visitors. Attackers can retrieve a token from the Gallery endpoint and use it to bypass authorization checks in other subsystems like view/hls.php to access restricted video content.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-wq57-wxcr-rx6v\nhttps://www.vulncheck.com/advisories/wwbn-avideo-unbound-token-authorization-bypass-via-gallery",
+      "source": "NVD",
+      "time": "2026-08-22 23:11:01"
+    },
+    {
+      "cve_id": "CVE-2026-58003",
+      "title": "高危漏洞: CVE-2026-58003 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-22 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+      "description": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in the releaseVideoNow.json.php endpoint that lacks authenticity checks and accepts GET requests. Attackers can craft a malicious cross-site GET request carrying an administrator's session cookie to permanently publish any embargoed video by manipulating the videos_id parameter.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-q8cg-7x7q-c4g2\nhttps://www.vulncheck.com/advisories/wwbn-avideo-cross-site-request-forgery-via-releasevideonow-json-php",
+      "source": "NVD",
+      "time": "2026-08-22 23:10:56"
+    },
+    {
+      "cve_id": "CVE-2026-57998",
+      "title": "高危漏洞: CVE-2026-57998 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-22 21:16:38",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "better-npm-audit through 3.11.0, and the 4.0.0-rc.2 prerelease, builds its npm audit command by interpolating the user-supplied --registry option into a command string in src/handlers/handleInput.ts without validation or quoting, then passes that string to child_process.exec() in index.ts, which spawns a shell. A registry value containing shell metacharacters such as a semicolon, pipe, or command substitution executes arbitrary operating system commands with the privileges of the process running the audit.",
+      "refs": "https://github.com/jeemok/better-npm-audit\nhttps://github.com/jeemok/better-npm-audit/blob/fd99a0f41ff4342b8a0a6fdbe5a17261de3d0544/index.ts#L34\nhttps://github.com/jeemok/better-npm-audit/blob/fd99a0f41ff4342b8a0a6fdbe5a17261de3d0544/src/handlers/handleInput.ts#L30-L37",
+      "source": "NVD",
+      "time": "2026-08-22 23:10:50"
+    },
+    {
       "cve_id": "CVE-2026-77946",
       "title": "高危漏洞: CVE-2026-77946 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/reconmap/reconmap\nhttps://github.com/reconmap/reconmap/blob/56ca3748343a50c98185d53827172d8f13a6ad0f/apps/api/app/Controllers/ReportsController.cs\nhttps://github.com/reconmap/reconmap/blob/56ca3748343a50c98185d53827172d8f13a6ad0f/apps/api/app/Program.cs",
       "source": "NVD",
       "time": "2026-08-21 20:25:35"
-    },
-    {
-      "cve_id": "CVE-2026-77683",
-      "title": "高危漏洞: CVE-2026-77683 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 19:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in Comfast CF-N1-S 2.6.0.1. Affected by this issue is the function system of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone. The manipulation of the argument timestr results in command injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
-      "refs": "https://github.com/AdminSafe/CVE/issues/8\nhttps://vuldb.com/cve/CVE-2026-77683\nhttps://vuldb.com/submit/881058",
-      "source": "NVD",
-      "time": "2026-08-21 20:25:27"
-    },
-    {
-      "cve_id": "CVE-2026-77086",
-      "title": "高危漏洞: CVE-2026-77086 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-21 19:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "SiYuan before v3.7.4 fails to validate the packageName parameter in Bazaar install and uninstall endpoints, allowing authenticated administrators to perform path traversal via directory traversal sequences. Attackers with admin access can write arbitrary files to any location via install operations or recursively delete directories via uninstall operations by supplying crafted packageName values.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-wr4w-7vjm-mmx3\nhttps://www.vulncheck.com/advisories/siyuan-before-path-traversal-via-packagename",
-      "source": "NVD",
-      "time": "2026-08-21 20:25:21"
-    },
-    {
-      "cve_id": "CVE-2026-47827",
-      "title": "高危漏洞: CVE-2026-47827 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 18:16:38",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Command Injection in BOSH CLI tool on windows in Cloud Foundry allows a remote attacker to execute arbitrary shell commands via command injection vulnerabilities",
-      "refs": "https://www.cloudfoundry.org/blog/cve-2026-47827-bosh-cli-powershell-injection/",
-      "source": "NVD",
-      "time": "2026-08-21 20:25:15"
-    },
-    {
-      "cve_id": "CVE-2026-77264",
-      "title": "高危漏洞: CVE-2026-77264 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-21 16:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 4.8.6. This is due to the handle_email_otp_return() function returning the secret magic login token in the response to a publicly accessible OTP request, rather than only delivering it to the user's email address. This makes it possible for unauthenticated attackers to log in as any user on the site, including administrators, if they know that user's email address.",
-      "refs": "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-login.php#L1218\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/7e473896-d94c-4f6a-a96c-bb90902532cc?source=cve",
-      "source": "NVD",
-      "time": "2026-08-21 20:25:08"
-    },
-    {
-      "cve_id": "CVE-2026-16323",
-      "title": "高危漏洞: CVE-2026-16323 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 16:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Execution after redirect (EAR) vulnerability in FuyaWeb Internet and Informatics Services ArchitectPanel Web Admin Panel allows Authentication Bypass.\n\nThis issue affects ArchitectPanel Web Admin Panel: through 28072026.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0882",
-      "source": "NVD",
-      "time": "2026-08-21 20:25:00"
-    },
-    {
-      "cve_id": "CVE-2026-18409",
-      "title": "高危漏洞: CVE-2026-18409 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-21 12:18:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The WPForms Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Single Line Text and Paragraph Text Field Values in all versions up to, and including, 2.0.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit relies on the plugin's own wp_kses_allowed_html filter widening the 'post' allowlist to permit iframe elements with a data-src attribute, which is not on WordPress's URI-attribute sanitization list, allowing a javascript: URI stored in data-src to survive kses processing and subsequently be promoted to a live src attribute by the bundled admin script view-entry.min.js.",
-      "refs": "https://wpforms.com/docs/how-to-view-recent-changes-to-the-wpforms-plugin-changelog/#Changelog\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f26cbc41-8ed9-4dc6-a8bc-9986ecab5e6e?source=cve",
-      "source": "NVD",
-      "time": "2026-08-21 14:28:11"
     }
   ]
 }
