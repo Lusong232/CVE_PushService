@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-78136",
+      "title": "高危漏洞: CVE-2026-78136 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-08-23 09:17:20",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "chirpmyradio CHIRP before 39178db allows eval injection via crafted CSV data. This occurs in _clean_tmode in drivers/kenwood_itm.py.",
+      "refs": "https://github.com/cduram/CHIRP-CodeExecution_via_Malicious_ImageFile\nhttps://github.com/kk7ds/chirp/commit/39178dbfc4fece083ab9ed20286d6ae3a91a718e",
+      "source": "NVD",
+      "time": "2026-08-23 14:23:13"
+    },
+    {
+      "cve_id": "CVE-2026-78050",
+      "title": "高危漏洞: CVE-2026-78050 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-08-23 08:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Comfast CF-N1-S 2.6.0.1. The affected element is the function sub_41AD7C of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone of the component Web Management. The manipulation of the argument timestr/ntp_client_enabled results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/AdminSafe/CVE/issues/9\nhttps://vuldb.com/cve/CVE-2026-78050\nhttps://vuldb.com/submit/881293",
+      "source": "NVD",
+      "time": "2026-08-23 14:23:03"
+    },
+    {
+      "cve_id": "CVE-2026-16149",
+      "title": "高危漏洞: CVE-2026-16149 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-23 08:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Security Hardener plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 2.4.4. The vulnerability exists because the plugin's user-enumeration protection, which is enabled by default, hooks the rest_endpoints filter via secure_user_endpoints() and overwrites every registered handler's permission_callback on both the /wp/v2/users and /wp/v2/users/(?P<id>[\\d]+) routes — including POST, PUT, PATCH, and DELETE handlers — with a bare closure that returns only is_user_logged_in(), completely stripping WordPress Core's original capability checks such as create_users, promote_user, edit_users, and delete_users that WP_REST_Users_Controller normally enforces. This makes it possible for authenticated attackers with Subscriber-level access and above to create new Administrator accounts by sending POST request to /wp/v2/users with administrator role, or to reset an existing Administrator's password by issuing a PUT/POST request to /wp/v2/users/<id>. Because the block_user_enum option defaults to enabled, no special plugin configuration is required — the overwrite is active on every request as soon as the plugin is installed.",
+      "refs": "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L107\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L204",
+      "source": "NVD",
+      "time": "2026-08-23 14:22:59"
+    },
+    {
+      "cve_id": "CVE-2026-0551",
+      "title": "高危漏洞: CVE-2026-0551 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-23 08:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The PPWP – Password Protect Pages plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.9.18 via deserialization of untrusted input from the 'post_protection_roles' vulnerable parameter. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+      "refs": "https://plugins.trac.wordpress.org/browser/password-protect-page/trunk/includes/services/class-ppw-passwords.php#L699\nhttps://plugins.trac.wordpress.org/changeset/3567221/password-protect-page\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve",
+      "source": "NVD",
+      "time": "2026-08-23 14:22:48"
+    },
+    {
       "cve_id": "CVE-2026-78122",
       "title": "高危漏洞: CVE-2026-78122 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/lxc/incus/security/advisories/GHSA-f6m5-xw2g-xc4x\nhttps://github.com/lxc/incus/security/advisories/GHSA-f6m5-xw2g-xc4x",
       "source": "NVD",
       "time": "2026-08-22 02:22:22"
-    },
-    {
-      "cve_id": "CVE-2026-48755",
-      "title": "高危漏洞: CVE-2026-48755 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, improper validation of user-provided backup compression algorithm leads to argument injection in the constructed command line. This leads to an arbitrary file write on the host, possibly leading to arbitrary command execution. Version 7.1.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-v6mj-8pf4-hhw4",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:17"
-    },
-    {
-      "cve_id": "CVE-2026-48753",
-      "title": "高危漏洞: CVE-2026-48753 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.1.0, the S3 protocol upload endpoint is vulnerable to path traversal and allows creation of arbitrary files on the host. This behavior could lead to arbitrary command execution. Version 7.1.0 fixes the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-ccjc-4qc3-jxqc\nhttps://github.com/lxc/incus/security/advisories/GHSA-ccjc-4qc3-jxqc",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:13"
-    },
-    {
-      "cve_id": "CVE-2026-48752",
-      "title": "高危漏洞: CVE-2026-48752 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image or instance backup can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-vxp5-584q-c479\nhttps://github.com/lxc/incus/security/advisories/GHSA-vxp5-584q-c479",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:07"
-    },
-    {
-      "cve_id": "CVE-2026-48751",
-      "title": "高危漏洞: CVE-2026-48751 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, instance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by abusing lowlevel hooks such as `raw.lxc` and `raw.qemu`. Version 7.2.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-48q5-w887-33wv\nhttps://github.com/lxc/incus/security/advisories/GHSA-48q5-w887-33wv",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:02"
     }
   ]
 }
