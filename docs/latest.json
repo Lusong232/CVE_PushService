@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-9769",
+      "title": "高危漏洞: CVE-2026-9769 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-23 22:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "justhtml through 1.9.1 (fixed in 1.10.0) is vulnerable to uncontrolled recursion leading to denial of service. During JustHTML() construction, TreeBuilder.finish() unconditionally calls _populate_selectedcontent(), which recursively traverses the DOM tree via _find_elements()/_find_element() without a depth bound. An attacker who can supply HTML for parsing can provide deeply nested elements (e.g., ~1000 nested <div> tags, roughly 11 KB) to exceed CPython's default recursion limit and trigger an unhandled RecursionError, which may abort parsing, fail requests, or terminate a worker/process depending on the host application's exception handling.",
+      "refs": "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-v7cf-c9rm-wm3j\nhttps://www.vulncheck.com/advisories/justhtml-before-denial-of-service-via-deeply-nested-html",
+      "source": "NVD",
+      "time": "2026-08-24 02:14:35"
+    },
+    {
+      "cve_id": "CVE-2026-8445",
+      "title": "高危漏洞: CVE-2026-8445 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-23 22:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "justhtml versions <= 1.11.0 (fixed in 1.12.0) do not sufficiently escape HTML-significant characters (angle brackets) in text nodes when converting a parsed document to Markdown via to_markdown(). While a small set of Markdown metacharacters are escaped, characters such as < and > are preserved, so untrusted input that is safe in to_html() — including entity-decoded text (e.g. &lt;script&gt;) or text from RCDATA/RAWTEXT-parsed elements like <title>, <textarea>, <noscript>, and <plaintext> — can be emitted as raw HTML in the Markdown output, enabling a sanitizer bypass and potential cross-site scripting when that output is rendered.",
+      "refs": "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j\nhttps://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown",
+      "source": "NVD",
+      "time": "2026-08-24 02:14:30"
+    },
+    {
+      "cve_id": "CVE-2026-7808",
+      "title": "高危漏洞: CVE-2026-7808 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-23 22:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "justhtml before 1.16.0 contains multiple HTML sanitization bypass issues that can allow active/dangerous content (e.g., script or style) to survive sanitization, potentially leading to cross-site scripting. The issues primarily affect advanced usage rather than the default JustHTML(..., sanitize=True) path for ordinary parsed HTML: mutating or reusing sanitization policy objects (including exported defaults) could weaken later sanitization; programmatic DOM input to sanitize()/sanitize_dom() could miss mixed-case tag names (e.g., ScRiPt, StYlE); crafted programmatic doctype names could serialize into active markup; and custom policies preserving SVG or MathML could allow animation elements, presentation attributes with external url(...) references, or DOM trees mislabeled as namespace=\"html\" to bypass foreign-content checks. Fixed in 1.16.0.",
+      "refs": "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-4p64-v8f5-r2gx\nhttps://www.vulncheck.com/advisories/justhtml-before-multiple-security-issues-via-sanitization",
+      "source": "NVD",
+      "time": "2026-08-24 02:14:26"
+    },
+    {
+      "cve_id": "CVE-2026-5388",
+      "title": "高危漏洞: CVE-2026-5388 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-23 22:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "justhtml before 1.15.0 contains multiple security issues in URL sanitization helpers (clean_url_value/clean_url_in_js_string), HTML serialization, Markdown passthrough (html_passthrough=True), and several custom sanitization-policy edge cases. Depending on configuration, an attacker can bypass sanitization to inject active HTML and JavaScript — for example via encoded javascript: URLs, backslash-based relative URLs resolved as remote hosts, markup-breaking programmatic element/attribute names or HTML comments, raw </textarea> reintroduction through Markdown passthrough, or preserved <style>/<meta http-equiv=refresh>/<base href> tags in custom policies. Most custom-policy issues do not affect the default sanitize=True configuration; they primarily affect helper APIs, programmatic DOM construction, html_passthrough=True, and custom policies/transform pipelines.",
+      "refs": "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-c9vm-hv86-f23r\nhttps://www.vulncheck.com/advisories/justhtml-before-multiple-security-issues",
+      "source": "NVD",
+      "time": "2026-08-24 02:14:22"
+    },
+    {
+      "cve_id": "CVE-2026-4671",
+      "title": "高危漏洞: CVE-2026-4671 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-23 22:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "justhtml before 1.18.0 contains multiple low-severity denial-of-service issues in CSS selector handling and linkification. Applications that evaluate attacker-controlled selector strings (via query(), matches(), or selector-based transforms), run selector matching over very large untrusted documents, construct DOM trees from untrusted structure, or enable linkification over attacker-controlled text may consume disproportionate CPU or memory. Triggers include oversized selectors, large selector lists, oversized compound selectors, long combinator chains, deeply nested functional pseudo-classes, repeated token/positional matching, cyclic DOM graphs causing non-terminating traversal, and punctuation-heavy or trailing-bracket linkification input. These are availability-only concerns and do not by themselves allow script execution, data disclosure, or sanitizer bypass. Default JustHTML(sanitize=True) usage is not expected to be exposed, since selectors are normally supplied by application code.",
+      "refs": "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-r8cj-3554-33mr\nhttps://www.vulncheck.com/advisories/justhtml-before-denial-of-service-via-css-selector",
+      "source": "NVD",
+      "time": "2026-08-24 02:14:17"
+    },
+    {
+      "cve_id": "CVE-2026-77115",
+      "title": "高危漏洞: CVE-2026-77115 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-23 14:17:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Brave Popup Builder (brave-popup-builder) up to version 0.8.5 reflects UTM query parameters into popup form HTML without escaping them.",
+      "refs": "https://wpscan.com/vulnerability/d4a760c0-8e71-4261-a08b-9b6a296c631a/",
+      "source": "NVD",
+      "time": "2026-08-24 02:14:10"
+    },
+    {
       "cve_id": "CVE-2026-78155",
       "title": "高危漏洞: CVE-2026-78155 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/zanllp/infinite-image-browsing\nhttps://github.com/zanllp/infinite-image-browsing/blob/v1.8.0/scripts/iib/api.py#L329-L344\nhttps://github.com/zanllp/infinite-image-browsing/blob/v1.8.0/scripts/iib/tool.py#L172-L175",
       "source": "NVD",
       "time": "2026-08-22 02:23:16"
-    },
-    {
-      "cve_id": "CVE-2026-77814",
-      "title": "高危漏洞: CVE-2026-77814 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 23:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "is_path_trusted in scripts/iib/api.py compares the requested path against each allowed parent directory with path.startswith(parent_path), without appending a path separator. A directory whose name merely begins with an allowed path therefore satisfies the comparison, so where /data/images is allowed a request for /data/images_private/secret.txt is treated as trusted and served by FileResponse, disclosing files the confinement was meant to exclude. Whether the check applies depends on get_enable_access_control in scripts/iib/tool.py: it returns true when IIB_ACCESS_CONTROL is set to enable, false when set to disable, and otherwise true when the host Stable Diffusion WebUI was started with share, ngrok, listen or server_name, falling back to false. Confinement is therefore active in the network-exposed WebUI deployments that rely on it, while a standalone run with no such option serves every readable file regardless of this flaw. The fix compares against parent_path joined with os.sep.",
-      "refs": "https://github.com/zanllp/infinite-image-browsing\nhttps://github.com/zanllp/infinite-image-browsing/blob/v1.8.0/scripts/iib/api.py#L329-L344\nhttps://github.com/zanllp/infinite-image-browsing/commit/4057a624c7a23a36f0b4dc6a545b40767d602450",
-      "source": "NVD",
-      "time": "2026-08-22 02:23:08"
-    },
-    {
-      "cve_id": "CVE-2026-77087",
-      "title": "高危漏洞: CVE-2026-77087 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-21 23:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Paperclip before 0.3.1 in default local_trusted mode fails to validate Host headers, allowing attackers to execute arbitrary commands via DNS rebinding. An attacker can craft a malicious webpage that, when visited by a developer running Paperclip locally, uses DNS rebinding to make authenticated API requests and execute commands through the process adapter.",
-      "refs": "https://github.com/paperclipai/paperclip/security/advisories/GHSA-x8hx-rhr2-9rf7\nhttps://www.vulncheck.com/advisories/paperclip-before-remote-code-execution-via-dns-rebinding\nhttps://github.com/paperclipai/paperclip/security/advisories/GHSA-x8hx-rhr2-9rf7",
-      "source": "NVD",
-      "time": "2026-08-22 02:23:04"
-    },
-    {
-      "cve_id": "CVE-2026-63343",
-      "title": "高危漏洞: CVE-2026-63343 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, a malicious image containing a `metadata.yaml` symlink pointing to an arbitrary host path allows an authenticated Incus user to read or overwrite any file on the host as root via the instance metadata API. The `exec-output` and `templates/` paths were patched in a prior release using `Lstat` rejection and `os.OpenRoot` confinement; `metadata.yaml` was not included in either patch and remains exploitable. Version 7.3.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-fmjx-5j3g-997p",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:59"
-    },
-    {
-      "cve_id": "CVE-2026-63125",
-      "title": "高危漏洞: CVE-2026-63125 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, an unprivileged, project-confined Incus user (a non-admin TLS/RBAC identity with `can_create_images` and `can_create_instances`) can execute arbitrary code as root on the host. A crafted image ships `backup.yaml` as a symlink to a host file. When the root daemon writes the instance's backup file, it follows the symlink. Version 7.3.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-6rqx-22hc-qm36\nhttps://github.com/lxc/incus/security/advisories/GHSA-6rqx-22hc-qm36",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:54"
-    },
-    {
-      "cve_id": "CVE-2026-62941",
-      "title": "高危漏洞: CVE-2026-62941 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when copying an instance across projects, the project restriction check (`AllowInstanceCreation`) runs BEFORE the source instance's configuration is merged into the request. Dangerous configuration keys (including `security.privileged`, `raw.lxc`, `raw.apparmor`) from the source instance are merged AFTER the check passes, bypassing all project restrictions on the target project. Version 7.3.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-mq9x-prm8-3vpw\nhttps://github.com/lxc/incus/security/advisories/GHSA-mq9x-prm8-3vpw",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:47"
-    },
-    {
-      "cve_id": "CVE-2026-62940",
-      "title": "高危漏洞: CVE-2026-62940 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when migrating an instance to another cluster member, user-supplied configuration overrides (including security-critical keys like `security.privileged` and `raw.lxc`) are applied without any project restriction enforcement, allowing a restricted project user to escalate to a privileged container and escape to the host. Version 7.3.0 patches the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-qw5c-v953-38gw",
-      "source": "NVD",
-      "time": "2026-08-22 02:22:43"
     }
   ]
 }
