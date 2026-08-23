@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-78122",
+      "title": "高危漏洞: CVE-2026-78122 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-23 07:16:22",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "docker-socket-proxy fails to properly gate read endpoints in the /containers Docker API namespace when the CONTAINERS environment variable is set. Attackers can use GET requests to /containers/{id}/archive, /containers/{id}/export, /containers/{id}/logs, and /containers/{id}/top to read arbitrary files and download entire container filesystems as tar archives.",
+      "refs": "https://gist.github.com/nedlir/e4f52f88a757f02c67db1fd5dd70d732\nhttps://github.com/Tecnativa/docker-socket-proxy\nhttps://github.com/Tecnativa/docker-socket-proxy/blob/v0.5.0/haproxy.cfg#L49-L61",
+      "source": "NVD",
+      "time": "2026-08-23 08:41:09"
+    },
+    {
+      "cve_id": "CVE-2026-47895",
+      "title": "高危漏洞: CVE-2026-47895 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-23 06:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In strongSwan before 6.0.7, identity parsing/cloning is mishandled. Parsed EAP-Identities that result in an empty but non-NULL encoding are not correctly cloned and trigger a double-free once the duplicates are destroyed.",
+      "refs": "https://github.com/strongswan/strongswan/releases/tag/6.0.7\nhttps://www.strongswan.org/download.html",
+      "source": "NVD",
+      "time": "2026-08-23 08:41:04"
+    },
+    {
       "cve_id": "CVE-2026-4703",
       "title": "高危漏洞: CVE-2026-4703 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/lxc/incus/security/advisories/GHSA-48q5-w887-33wv\nhttps://github.com/lxc/incus/security/advisories/GHSA-48q5-w887-33wv",
       "source": "NVD",
       "time": "2026-08-22 02:22:02"
-    },
-    {
-      "cve_id": "CVE-2026-48750",
-      "title": "高危漏洞: CVE-2026-48750 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, the `record-output` parameter of the `/instances/$name/exec` endpoint stores the output of the command in the `exec-output` directory of the instance. If `exec-output` is a symlink, file named `exec_UUID.stdout` and `exec_UUID.stderr` can be written to an arbitrary location where the `.stdout` file will contain arbitrary content. This behavior can be abused for arbitrary command execution. Version 7.2.0 contains a patch.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-73hr-m85f-64v9",
-      "source": "NVD",
-      "time": "2026-08-22 02:21:58"
-    },
-    {
-      "cve_id": "CVE-2026-48749",
-      "title": "高危漏洞: CVE-2026-48749 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-21 23:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, a specially crafted image can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution. Version 7.2.0 fixes the issue.",
-      "refs": "https://github.com/lxc/incus/security/advisories/GHSA-2q3f-q5pq-g8wv\nhttps://github.com/lxc/incus/security/advisories/GHSA-2q3f-q5pq-g8wv",
-      "source": "NVD",
-      "time": "2026-08-22 02:21:54"
     }
   ]
 }
