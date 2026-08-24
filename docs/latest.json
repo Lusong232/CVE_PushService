@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-78147",
+      "title": "高危漏洞: CVE-2026-78147 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-24 07:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in ggml-org llama.cpp bec4772f6. The impacted element is the function deserialize_tensor of the file ggml/src/ggml-rpc/ggml-rpc.cpp of the component ggml-RPC Server. Performing a manipulation of the argument op/op_params results in deserialization. The attack may be initiated remotely. This vulnerability is distinct from CVE-2026-34159 (GHSA-j8rj-fmpv-wcxw, PR #20908), which only added a buffer==nullptr rejection in create_node() and does not validate op or op_params. The reported GitHub issue was closed automatically due to inactivity.",
+      "refs": "https://github.com/ggml-org/llama.cpp/\nhttps://github.com/ggml-org/llama.cpp/issues/25289\nhttps://vuldb.com/cve/CVE-2026-78147",
+      "source": "NVD",
+      "time": "2026-08-24 08:40:15"
+    },
+    {
+      "cve_id": "CVE-2026-78143",
+      "title": "高危漏洞: CVE-2026-78143 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-24 07:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in code-projects Barangay Resident Profiling Management System 1.0. Affected is an unknown function of the file residents.php of the component Resident Search Functionality. This manipulation of the argument Search causes sql injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://code-projects.org/\nhttps://gist.github.com/c4ttr4ck/504e89cacf12c7d6a87490f3859dfded\nhttps://vuldb.com/cve/CVE-2026-78143",
+      "source": "NVD",
+      "time": "2026-08-24 08:40:10"
+    },
+    {
+      "cve_id": "CVE-2026-78141",
+      "title": "高危漏洞: CVE-2026-78141 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-24 06:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Tenda CH22 1.0.0.1. This affects the function formexeCommand of the file /goform/exeCommand. The manipulation of the argument cmdinput leads to command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://candle-throne-f75.notion.site/Tenda-CH22-formexeCommand-396df0aa11858036b0cdf7a7562d4a67\nhttps://vuldb.com/cve/CVE-2026-78141\nhttps://vuldb.com/submit/882284",
+      "source": "NVD",
+      "time": "2026-08-24 08:40:04"
+    },
+    {
       "cve_id": "CVE-2026-9769",
       "title": "高危漏洞: CVE-2026-9769 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/OpenIDC/mod_auth_openidc/commit/8017478471cc071c49aa073c5c9be652a73a8630\nhttps://github.com/OpenIDC/mod_auth_openidc/security/advisories/GHSA-vgr5-qcpp-x2pr",
       "source": "NVD",
       "time": "2026-08-22 02:23:29"
-    },
-    {
-      "cve_id": "CVE-2026-49114",
-      "title": "高危漏洞: CVE-2026-49114 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-08-22 00:17:17",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "In ONNX before 1.21.0, the 'save_external_data' function builds the external-data file path from the model's external_data location field and opens it for writing without 'O_NOFOLLOW/O_EXCL', after a non-atomic 'os.path.isfile()' check. A local attacker with write access to the directory where a victim serializes external data can deterministically pre-plant a symlink that is being followed, causing the victim's write to append to any file the victim can write, e.g. ~/.ssh/authorized_keys, cron files, or application configs. Fixed in 1.21.0.",
-      "refs": "https://github.com/onnx/onnx/security/advisories/GHSA-q56x-g2fj-4rj6\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-233-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-49114",
-      "source": "NVD",
-      "time": "2026-08-22 02:23:25"
-    },
-    {
-      "cve_id": "CVE-2026-22681",
-      "title": "高危漏洞: CVE-2026-22681 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-08-22 00:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "OpenViking before 0.3.4 contains a server-side request forgery vulnerability that allows authenticated low-privilege attackers to access internal network services by submitting arbitrary URLs to the resources API endpoint. Attackers can POST a crafted URL to /api/v1/resources, causing the server to issue outbound HEAD and GET requests with redirects enabled to loopback, RFC 1918, link-local, or cloud metadata addresses, then read back responses through normal content APIs to enumerate and interact with internal services.",
-      "refs": "https://github.com/volcengine/OpenViking/commit/41e345896d247e43ab78bbcb38b4a5b1b38ef62c\nhttps://github.com/volcengine/OpenViking/pull/1133\nhttps://github.com/volcengine/OpenViking/releases/tag/v0.3.4",
-      "source": "NVD",
-      "time": "2026-08-22 02:23:20"
-    },
-    {
-      "cve_id": "CVE-2026-77815",
-      "title": "高危漏洞: CVE-2026-77815 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-21 23:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "to_abs_path in scripts/iib/tool.py normalised the requested path with os.path.normpath, which collapses dot segments but does not resolve symbolic links. A symlink placed inside a scanned directory therefore satisfies the containment comparison performed by is_path_trusted in scripts/iib/api.py while pointing outside that directory, and FileResponse follows the link when serving the response, so a link created in an image directory and targeting a file such as /etc/passwd discloses that file. Whether the check applies depends on get_enable_access_control in scripts/iib/tool.py: it returns true when IIB_ACCESS_CONTROL is set to enable, false when set to disable, and otherwise true when the host Stable Diffusion WebUI was started with share, ngrok, listen or server_name, falling back to false. Confinement is therefore active in the network-exposed WebUI deployments that rely on it, while a standalone run with no such option serves every readable file regardless of this flaw. The fix resolves the path with os.path.realpath.",
-      "refs": "https://github.com/zanllp/infinite-image-browsing\nhttps://github.com/zanllp/infinite-image-browsing/blob/v1.8.0/scripts/iib/api.py#L329-L344\nhttps://github.com/zanllp/infinite-image-browsing/blob/v1.8.0/scripts/iib/tool.py#L172-L175",
-      "source": "NVD",
-      "time": "2026-08-22 02:23:16"
     }
   ]
 }
