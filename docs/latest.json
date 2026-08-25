@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-57863",
+      "title": "高危漏洞: CVE-2026-57863 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-25 21:19:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Crater Invoice through 6.0.6 contains a path traversal vulnerability in the self-update API that allows authenticated company owners to write arbitrary files outside the intended extraction directory by supplying crafted ZIP archives with ../ sequences to the unzip endpoint. Attackers can exploit unsanitized ZIP entry names passed to PHP's ZipArchive::extractTo() to write arbitrary PHP files into the web-accessible public directory and achieve remote code execution on the server.",
+      "refs": "https://gist.github.com/sermikr0/cc58727e6a777b6ea1104e923803a0ba\nhttps://www.vulncheck.com/advisories/crater-invoice-path-traversal-rce-via-update-unzip-endpoint",
+      "source": "NVD",
+      "time": "2026-08-25 23:34:01"
+    },
+    {
+      "cve_id": "CVE-2026-79667",
+      "title": "高危漏洞: CVE-2026-79667 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-08-25 20:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+      "description": "Ech0 version 4.3.4 and earlier fails to reliably enforce scoped access token (least-privilege) restrictions on several privileged admin routes. Multiple privileged endpoints (e.g., /api/inbox, /api/panel/comments, /api/backup/export) omit scope checks and authorize based only on the user's admin role, and the backup export handler discards token scope metadata entirely. An attacker holding a deliberately limited (low-scope) admin access token can reach broader privileged functionality than intended, including reading the inbox and exporting a full database backup ZIP archive. Fixed in 4.4.3.",
+      "refs": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-4h9q-p5j4-xvvh\nhttps://www.vulncheck.com/advisories/ech0-before-authentication-bypass-via-scope-enforcement",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:57"
+    },
+    {
+      "cve_id": "CVE-2026-79665",
+      "title": "高危漏洞: CVE-2026-79665 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-25 20:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Ech0 before 4.5.1 contains an authorization bypass vulnerability where session tokens skip scope validation in RequireScopes middleware, allowing logged-in non-admin users to access admin endpoints. Attackers can read system logs, visitor statistics, user emails, and subscribe to live WebSocket logs by sending authenticated session tokens to unprotected endpoints.",
+      "refs": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-hmmq-qh6g-6wgh\nhttps://www.vulncheck.com/advisories/ech0-before-authorization-bypass-via-session-tokens",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:53"
+    },
+    {
+      "cve_id": "CVE-2026-79664",
+      "title": "高危漏洞: CVE-2026-79664 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-25 20:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Ech0 before 4.7.3 fails to properly revoke access tokens created with never-expire option, allowing attackers to maintain perpetual authenticated access after token theft. Three independent revocation mechanisms fail: logout panics on nil ExpiresAt field, RevokeToken skips when remainTTL is zero, and admin delete does not blacklist the JTI, leaving stolen tokens cryptographically valid until JWT secret rotation.",
+      "refs": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-fpw6-hrg5-q5x5\nhttps://www.vulncheck.com/advisories/ech0-before-access-token-revocation-bypass\nhttps://github.com/lin-snow/Ech0/security/advisories/GHSA-fpw6-hrg5-q5x5",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:48"
+    },
+    {
+      "cve_id": "CVE-2026-79662",
+      "title": "高危漏洞: CVE-2026-79662 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-08-25 20:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Ech0 through 4.5.6 contains an OAuth redirect URI validation vulnerability in parseAndValidateClientRedirect (internal/service/auth/auth.go) that compares only the scheme and host of the client-supplied redirect_uri against the admin-configured allowlist, ignoring path, query, and fragment components. The redirect_uri is embedded into the signed state JWT at login time without validation. An attacker can craft a redirect_uri whose host matches an allowed origin but whose path is attacker-influenced; after the OAuth exchange the victim is redirected to that path with a one-time exchange code in the query string. If the code leaks (e.g., via Referer, analytics, or an open redirect on that host), the attacker can trade it at the public POST /api/auth/exchange endpoint for the victim's access and refresh tokens. Fixed in 4.7.3.",
+      "refs": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-p64j-f4x9-wq66\nhttps://www.vulncheck.com/advisories/ech0-before-oauth-redirect-uri-validation-bypass",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:41"
+    },
+    {
+      "cve_id": "CVE-2026-79659",
+      "title": "高危漏洞: CVE-2026-79659 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-08-25 20:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Ech0 before 4.7.3 contains a server-side request forgery vulnerability in the fetchPeerConnectInfo function that uses unvalidated HTTP requests instead of safe request methods with URL validation. Authenticated attackers can supply arbitrary URLs to access internal services and cloud metadata endpoints by triggering connection health checks or peer connection operations.",
+      "refs": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-8mc6-xjpr-h98x\nhttps://www.vulncheck.com/advisories/ech0-before-server-side-request-forgery-via-fetchpeerconnectinfo\nhttps://github.com/lin-snow/Ech0/security/advisories/GHSA-8mc6-xjpr-h98x",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:36"
+    },
+    {
+      "cve_id": "CVE-2026-79658",
+      "title": "高危漏洞: CVE-2026-79658 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-25 20:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Ech0 before 5.0.1 does not impose any size or shape limit on the Accept-Language header processed by its i18n middleware, which runs on every HTTP request. The header is passed unfiltered to go-i18n's NewLocalizer, which internally calls golang.org/x/text/language.ParseAcceptLanguage. The CVE-2022-32149 mitigation in x/text caps '-' characters but not '_' characters, which the parser aliases to '-', allowing quadratic-time parsing to be triggered with a large header (up to Go's default 1 MiB) built from underscore separators. An unauthenticated attacker can send such requests to consume roughly 1.5 seconds of CPU each, and concurrent requests can saturate a multi-core server (denial of service).",
+      "refs": "https://github.com/lin-snow/Ech0/security/advisories/GHSA-mqxv-9rm6-w8qc\nhttps://www.vulncheck.com/advisories/ech0-before-denial-of-service-via-accept-language",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:31"
+    },
+    {
+      "cve_id": "CVE-2026-79657",
+      "title": "高危漏洞: CVE-2026-79657 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-25 20:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NLTK versions before 3.10.3 contain a remote code execution vulnerability in allowlisted pickle loaders that trust entire module namespaces instead of specific safe callables. Attackers can craft malicious pickle payloads invoking dangerous in-namespace functions like ReppTokenizer._execute and numpy.f2py.crackfortran.myeval through pickle REDUCE to execute arbitrary commands during model or tokenizer artifact loading.",
+      "refs": "https://github.com/nltk/nltk/security/advisories/GHSA-x99w-6fgc-pmfw\nhttps://www.vulncheck.com/advisories/nltk-before-3.10.3-remote-code-execution-via-unsafe-pickle-deserialization",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:27"
+    },
+    {
+      "cve_id": "CVE-2026-75971",
+      "title": "高危漏洞: CVE-2026-75971 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-08-25 20:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ShopEngine Elementor WooCommerce Builder Addon – All in One WooCommerce Solution plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.9.4. This is due to the `rum_importer()` function being registered on the WordPress core `import_start` action hook with no plugin-owned capability check and no allowlist filtering, causing arbitrary `<wp_option>` name/value pairs parsed from an attacker-supplied WXR import file to be passed directly to `update_option()`. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to write arbitrary WordPress options — most critically setting `users_can_register` to `1` and `default_role` to `administrator` — enabling open self-registration of Administrator accounts and full site takeover. This is exploitable by Shop Manager-level users because WooCommerce grants that role the `import` capability, allowing it to reach the WordPress Importer flow that fires the `import_start` hook on which `rum_importer()` is registered, contrary to the assumption that the hook is restricted to Administrators.",
+      "refs": "https://plugins.trac.wordpress.org/browser/shopengine/tags/4.9.4/core/builders/base.php#L57\nhttps://plugins.trac.wordpress.org/browser/shopengine/tags/4.9.4/core/export-import/import.php#L19\nhttps://plugins.trac.wordpress.org/browser/shopengine/tags/4.9.4/core/export-import/import.php#L45",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:23"
+    },
+    {
+      "cve_id": "CVE-2026-19949",
+      "title": "高危漏洞: CVE-2026-19949 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-25 20:16:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The All-in-One WP Migration and Backup plugin for WordPress is vulnerable to SQL Injection via archive restore functionality in all versions up to, and including, 7.109 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. This can be leveraged to obtain the ai1wm_secret_key when a site administrator performs an archive restore and achieve remote code execution once able to leverage the ai1wm_secret_key value.",
+      "refs": "https://plugins.trac.wordpress.org/browser/all-in-one-wp-migration/tags/7.109/lib/controller/class-ai1wm-import-controller.php#L68\nhttps://plugins.trac.wordpress.org/browser/all-in-one-wp-migration/tags/7.109/lib/controller/class-ai1wm-main-controller.php#L1336\nhttps://plugins.trac.wordpress.org/browser/all-in-one-wp-migration/tags/7.109/lib/model/import/class-ai1wm-import-database.php#L1065",
+      "source": "NVD",
+      "time": "2026-08-25 23:33:16"
+    },
+    {
       "cve_id": "CVE-2026-59335",
       "title": "高危漏洞: CVE-2026-59335 (CVSS 8.7)",
       "cvss_score": 8.7,
@@ -989,116 +1099,6 @@
       "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-buffer-overflow-via-switch-lan-gvrp",
       "source": "NVD",
       "time": "2026-08-25 05:21:51"
-    },
-    {
-      "cve_id": "CVE-2026-71937",
-      "title": "高危漏洞: CVE-2026-71937 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the poe_schedule_profile function. The vulnerability is caused by repeated concatenation of the start_date, start_time, duration_time, how_often, weekdays, monthly_date, and cycle_duration fields into small fixed-size buffers without proper length checks. A remote attacker can trigger this vulnerability via crafted input, causing a denial of service or potentially executing arbitrary commands. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-buffer-overflow-via-poe-schedule-profile",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:43"
-    },
-    {
-      "cve_id": "CVE-2026-71936",
-      "title": "高危漏洞: CVE-2026-71936 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the sysreboot function. The vulnerability is caused by unsafe concatenation of split valueN data into a fixed-size buffer. A remote attacker can trigger this vulnerability via crafted input, causing a denial of service or potentially executing arbitrary commands. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-buffer-overflow-via-sysreboot",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:39"
-    },
-    {
-      "cve_id": "CVE-2026-71935",
-      "title": "高危漏洞: CVE-2026-71935 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the webBackupAction function. The vulnerability is caused by repeated string concatenation of the pathN, valueN, key, and option fields into fixed-size stack buffers without total length checks. A remote attacker can trigger this vulnerability via crafted input, causing a denial of service or potentially executing arbitrary commands. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-buffer-overflow-via-webbackupaction",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:35"
-    },
-    {
-      "cve_id": "CVE-2026-71934",
-      "title": "高危漏洞: CVE-2026-71934 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a buffer overflow vulnerability in the pingtrace function. The vulnerability is caused by missing length checks when the host, count, and interval fields are concatenated into a fixed-size buffer. A remote attacker can trigger this vulnerability via crafted input, causing a denial of service or potentially executing arbitrary commands. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-buffer-overflow-via-pingtrace",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:30"
-    },
-    {
-      "cve_id": "CVE-2026-71933",
-      "title": "高危漏洞: CVE-2026-71933 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-25 02:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain unauthorized operation vulnerabilities in multiple syslog functions. The vulnerability is caused by missing authorization checks. A remote attacker can trigger these vulnerabilities via crafted requests to modify configuration, restart services, save startup configuration, or clear logs.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-missing-authorization-in-syslog-functions",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:26"
-    },
-    {
-      "cve_id": "CVE-2026-71931",
-      "title": "高危漏洞: CVE-2026-71931 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a command injection vulnerability in the tftp_upgrade function. The vulnerability is caused by insufficient filtering before the filename field is concatenated into a command. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-os-command-injection-via-tftp-upgrade",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:22"
-    },
-    {
-      "cve_id": "CVE-2026-71930",
-      "title": "高危漏洞: CVE-2026-71930 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a command injection vulnerability in the setTime function. The vulnerability is caused by insufficient filtering of the username and password fields before command execution. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-os-command-injection-via-settime",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:17"
-    },
-    {
-      "cve_id": "CVE-2026-71929",
-      "title": "高危漏洞: CVE-2026-71929 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a command injection vulnerability in the setDevProto function. The vulnerability is caused by insufficient filtering of the username and password fields before command execution. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-os-command-injection-via-setdevproto",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:07"
-    },
-    {
-      "cve_id": "CVE-2026-71928",
-      "title": "高危漏洞: CVE-2026-71928 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a command injection vulnerability in the fdftDevice function. The vulnerability is caused by insufficient filtering of the username and password fields before command execution. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-os-command-injection-via-fdftdevice",
-      "source": "NVD",
-      "time": "2026-08-25 05:21:03"
-    },
-    {
-      "cve_id": "CVE-2026-71927",
-      "title": "高危漏洞: CVE-2026-71927 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-25 02:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Multiple DrayTek VigorSwitch models contain a command injection vulnerability in the rebDevice function. The vulnerability is caused by insufficient filtering of the username and password fields before command execution. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges. Exploitation requires valid administrative credentials for the device's web management interface.",
-      "refs": "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/\nhttps://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-os-command-injection-via-rebdevice",
-      "source": "NVD",
-      "time": "2026-08-25 05:20:59"
     }
   ]
 }
