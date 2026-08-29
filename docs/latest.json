@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-82448",
+      "title": "高危漏洞: CVE-2026-82448 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-29 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Shinobi before commit 5a76c74f contains a hardcoded connection key in the child node service that allows unauthenticated attackers to execute arbitrary database queries. Attackers reaching the child node port can present the hardcoded key during WebSocket handshake, then dispatch SQL queries through the onWebSocketDataFromChildNode handler to read and modify user records and camera configuration.",
+      "refs": "https://gitlab.com/Shinobi-Systems/Shinobi\nhttps://gitlab.com/Shinobi-Systems/Shinobi/-/blob/f04e685b8bd4c6190fcd62993131b86a76c2b806/libs/childNode/utils.js\nhttps://gitlab.com/Shinobi-Systems/Shinobi/-/commit/5a76c74f3977661ff3f9fd55a260db352c0b19c0",
+      "source": "NVD",
+      "time": "2026-08-30 00:03:49"
+    },
+    {
+      "cve_id": "CVE-2026-82447",
+      "title": "高危漏洞: CVE-2026-82447 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-29 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Skyvern before 1.0.45 contains a sandbox escape vulnerability in TextPromptBlock that renders prompts twice, first through a sandboxed Jinja environment and then through an unsandboxed environment. Attackers can inject malicious Jinja template syntax through workflow parameters or upstream block output to execute arbitrary code with server process privileges.",
+      "refs": "https://github.com/Skyvern-AI/skyvern\nhttps://github.com/Skyvern-AI/skyvern/blob/v1.0.44/skyvern/forge/sdk/prompting.py\nhttps://github.com/Skyvern-AI/skyvern/blob/v1.0.44/skyvern/forge/sdk/workflow/models/block.py",
+      "source": "NVD",
+      "time": "2026-08-30 00:03:42"
+    },
+    {
+      "cve_id": "CVE-2026-14494",
+      "title": "高危漏洞: CVE-2026-14494 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-29 20:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Sigma Forms Pro plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.4.5 via the handle_form_submission function. This is due to the plugin dynamically granting the unfiltered_upload capability to all users during form submissions and bypassing MIME type validation when allowed_file_types is not configured. This makes it possible for unauthenticated attackers to execute code on the server. Several default pre-built templates including Job Application, Support Ticket, and Wholesale Application have file upload fields with no file type restrictions configured by design, making this vulnerability immediately exploitable upon installation.",
+      "refs": "https://feedback.bdthemes.com/announcements\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/44d63454-87f0-49e3-ac04-2fa83882500d?source=cve",
+      "source": "NVD",
+      "time": "2026-08-30 00:03:36"
+    },
+    {
       "cve_id": "CVE-2026-41012",
       "title": "高危漏洞: CVE-2026-41012 (CVSS 7.7)",
       "cvss_score": 7.7,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/fangtang7/CVE/blob/main/yu-ai/YU_AI_4.3_TRAVERSAL_POC.md\nhttps://github.com/fangtang7/CVE/blob/main/yu-ai/YU_AI_4.3_TRAVERSAL_POC.md",
       "source": "NVD",
       "time": "2026-08-29 07:46:15"
-    },
-    {
-      "cve_id": "CVE-2026-38350",
-      "title": "高危漏洞: CVE-2026-38350 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-28 08:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer overflow in the target_sws_fuzzer() function (libswscale/output.c) of FFmpeg N-122528-gdd2976b9e1 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input.",
-      "refs": "https://trac.ffmpeg.org/ticket/11686",
-      "source": "NVD",
-      "time": "2026-08-29 07:46:10"
-    },
-    {
-      "cve_id": "CVE-2026-38349",
-      "title": "高危漏洞: CVE-2026-38349 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-28 08:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer overflow in the hScale16To19_c() function (libswscale/output.c) of FFmpeg N-122528-gdd2976b9e1 allows attackers to cause a Denial of Service (DoS) via supplying a crafted image file.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/21592",
-      "source": "NVD",
-      "time": "2026-08-29 07:46:05"
-    },
-    {
-      "cve_id": "CVE-2026-38348",
-      "title": "高危漏洞: CVE-2026-38348 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-28 08:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An integer overflow in the libswscale/utils.c component of FFmpeg N-122528-gdd2976b9e1 allows attackers to cause a Denial of Service (DoS) via supplying a crafted image file.",
-      "refs": "https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/21588",
-      "source": "NVD",
-      "time": "2026-08-29 07:46:01"
     }
   ]
 }
