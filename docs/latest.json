@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-56718",
+      "title": "高危漏洞: CVE-2026-56718 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-31 05:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "AJCloud AJY IPC firmware prior to version 01.10715.11.37 contains a path traversal vulnerability in the jdbhttpd web service that allows unauthenticated remote attackers to read arbitrary files with root privileges by supplying path traversal sequences in the HTTP request URI. Attackers can send crafted HTTP requests to port 80 without authentication to access sensitive files including cleartext RTSP credentials, Wi-Fi SSID and pre-shared key, device serial number, and cloud binding parameters.",
+      "refs": "https://www.ajcloud.net/\nhttps://www.vulncheck.com/advisories/ajcloud-ajy-ipc-firmware-path-traversal-via-jdbhttpd",
+      "source": "NVD",
+      "time": "2026-08-31 07:00:44"
+    },
+    {
       "cve_id": "CVE-2026-82549",
       "title": "高危漏洞: CVE-2026-82549 (CVSS 8.3)",
       "cvss_score": 8.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://gist.github.com/sud0why/e73405057dd7414a8c221ef17e0d0059#file-cve-2026-56100-springblade-authbypass-en-md\nhttps://github.com/chillzhuang/SpringBlade\nhttps://github.com/chillzhuang/SpringBlade/commit/c69b9547c942c697da2f3ee6a9265b6004abd645",
       "source": "NVD",
       "time": "2026-08-29 07:49:21"
-    },
-    {
-      "cve_id": "CVE-2026-55634",
-      "title": "高危漏洞: CVE-2026-55634 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-29 04:18:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.19, 12.3.10, and 2026.1.6, the class-definition import endpoint /pimcore-studio/api/class/definition/configuration-view/detail/{id}/import accepts a DataObject field name that is emitted without an identifier allowlist by lib/DataObject/ClassBuilder/FieldDefinitionPropertiesBuilder.php into generated PHP properties and by models/DataObject/ClassDefinition/Helper/Dao.php into ALTER TABLE identifiers. An authenticated user with the objects permission can inject PHP syntax into the generated DataObject class, causing attacker-controlled code in generated var/classes/DataObject/.php files to run when an object of that class is instantiated, and can also inject SQL identifier content into schema-changing statements. The central models/DataObject/ClassDefinition/Data.php::setName() validation did not reject semicolons, braces, backticks, spaces, or other non-identifier characters. This issue is fixed in versions 11.5.19, 12.3.10, and 2026.1.6.",
-      "refs": "https://github.com/advisories/GHSA-r2f4-ff2p-xc64\nhttps://github.com/pimcore/pimcore/commit/a4f8c3cfee58b7d5fe4873d67782eff58dae9b9d\nhttps://github.com/pimcore/pimcore/pull/19183",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:16"
     }
   ]
 }
