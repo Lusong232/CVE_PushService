@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-82549",
+      "title": "高危漏洞: CVE-2026-82549 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-08-31 00:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Linux Foundation Magma 1.9.0. This affects an unknown function of the component SecurityModeComplete Handler. Such manipulation leads to improper validation of integrity check value. The attack may be launched remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/magma/magma/issues/16024\nhttps://vuldb.com/cve/CVE-2026-82549\nhttps://vuldb.com/submit/891574",
+      "source": "NVD",
+      "time": "2026-08-31 02:16:05"
+    },
+    {
+      "cve_id": "CVE-2026-82657",
+      "title": "高危漏洞: CVE-2026-82657 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-30 23:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Admidio before 5.0.12 fails to enforce login-only module restrictions in RSS feed endpoints for forum and announcements modules. Unauthenticated attackers can retrieve forum topics and announcements by sending GET requests to rss/forum.php or rss/announcements.php, disclosing titles, full post text, author names, and timestamps.",
+      "refs": "https://github.com/Admidio/admidio/security/advisories/GHSA-mg9h-42f8-2pmm\nhttps://www.vulncheck.com/advisories/admidio-before-5.0.12-authentication-bypass-via-rss-feeds",
+      "source": "NVD",
+      "time": "2026-08-31 02:16:00"
+    },
+    {
+      "cve_id": "CVE-2026-82655",
+      "title": "高危漏洞: CVE-2026-82655 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-30 23:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Admidio before 5.0.12 contains a blind SQL injection vulnerability in the relation_type_list parameter of lists_show.php that allows unauthenticated attackers to execute arbitrary SQL queries. Attackers can bypass authentication by providing a dummy UUID in role_list and inject SQL through relation_type_list to extract database contents including password hashes and user credentials.",
+      "refs": "https://github.com/Admidio/admidio/security/advisories/GHSA-p5cp-mhvx-w392\nhttps://www.vulncheck.com/advisories/admidio-before-5.0.12-sql-injection-via-relation-type-list",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:55"
+    },
+    {
+      "cve_id": "CVE-2026-82654",
+      "title": "高危漏洞: CVE-2026-82654 (CVSS 8.9)",
+      "cvss_score": 8.9,
+      "published_date": "2026-08-30 23:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L",
+      "description": "SiYuan before v3.8.1 fails to properly escape block name, alias, and memo fields in hint, backlink, and breadcrumb rendering functions. Attackers can set a block's name to contain HTML/script tags that execute when another user views documents referencing or displaying that block.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hf87-qh3j-3p88\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.1-stored-xss-via-block-name",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:51"
+    },
+    {
+      "cve_id": "CVE-2026-82653",
+      "title": "高危漏洞: CVE-2026-82653 (CVSS 8.9)",
+      "cvss_score": 8.9,
+      "published_date": "2026-08-30 23:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L",
+      "description": "SiYuan before v3.8.1 contains a stored cross-site scripting vulnerability in confirmDialog() where unescaped package names and notebook names are interpolated directly into innerHTML assignments. Attackers can submit malicious bazaar packages with HTML/script payloads in the name field that execute in users' browsers when uninstalling packages or unlocking encrypted notebooks.",
+      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hvwp-43j9-4xgf\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.1-stored-xss-via-confirmdialog",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:46"
+    },
+    {
+      "cve_id": "CVE-2026-82648",
+      "title": "高危漏洞: CVE-2026-82648 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-08-30 23:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "WWBN AVideo contains a server-side request forgery filter bypass vulnerability in the isSSRFSafeURL function that fails to normalize NAT64 addresses written in hexadecimal form. Attackers can bypass SSRF protections by supplying hex-encoded NAT64 addresses like 64:ff9b::a9fe:a9fe to reach cloud metadata services and loopback interfaces.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-88jm-rxg9-3v5r\nhttps://www.vulncheck.com/advisories/wwbn-avideo-ssrf-filter-bypass-via-nat64-hex-address",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:42"
+    },
+    {
+      "cve_id": "CVE-2026-82645",
+      "title": "高危漏洞: CVE-2026-82645 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-08-30 23:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "AVideo (current commit e01e41ecc and earlier) exposes stream credentials through the plugin/Live/view/Live_restreams/getLiveKey.json.php endpoint. Supplying a 'token' request parameter waives both the Live::canRestream() access gate and the restream ownership check, causing the endpoint to return any restream's stream_key and stream_url (credentials for external platforms such as YouTube, Facebook, and Twitch) without authentication. The token is merely encryptString() of an integer id with no user binding, expiry, or authentication tag. Because encryption uses AES-256-CBC with a deterministic IV and no MAC, and because intval() accepts any string beginning with a digit, an unauthenticated attacker can forge valid tokens using the public encryption oracle in view/url2Embed.json.php, disclosing arbitrary users' stream credentials.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-c4w3-h888-7ccv\nhttps://www.vulncheck.com/advisories/avideo-unauthenticated-stream-credential-disclosure-via-forgeable-token",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:38"
+    },
+    {
+      "cve_id": "CVE-2026-82644",
+      "title": "高危漏洞: CVE-2026-82644 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-30 23:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "WWBN AVideo (current e01e41ecc and earlier) contains a brute-force rate limiting bypass in enforceRateLimit(), which protects login.json.php and 13 other endpoints. The function stores its attempt counter via a cache layer (ObjectYPT::setCacheGlobal) that silently discards writes for any client identified as a bot by isBot(). Because isBot() treats a missing User-Agent header as a bot by default — and also matches common bot identifiers such as 'curl', 'bot', 'crawler', and 'spider' — the counter never increments for such clients, so the rate limit never fires. An unauthenticated attacker can therefore submit unlimited login attempts (e.g., by omitting the User-Agent header or using curl's default User-Agent), enabling unrestricted password-guessing attacks.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-6893-mcgv-9p2x\nhttps://www.vulncheck.com/advisories/wwbn-avideo-brute-force-rate-limiting-bypass-via-missing-user-agent",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:33"
+    },
+    {
+      "cve_id": "CVE-2026-82642",
+      "title": "高危漏洞: CVE-2026-82642 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-30 22:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Readest is an open-source e-book reader built on Tauri. In versions prior to 0.11.16, EPUB chapter HTML is sanitized with DOMPurify using a configuration that forbade only the <script> tag (FORBID_TAGS: ['script']) in apps/readest-app/src/services/transformers/sanitizer.ts. DOMPurify does not parse the contents of the srcdoc attribute on <iframe> elements, treating it as an opaque string attribute, so an attacker who can get an <iframe> element to survive sanitization can embed a complete HTML document containing a <script> tag inside srcdoc and have it execute when the browser renders the iframe. The content iframe is configured with sandbox=\"allow-same-origin allow-scripts\", so script executing inside it shares the parent origin and can reach parent.parent.__TAURI_INTERNALS__.invoke(...), giving access to every Tauri IPC command the application is permitted to use, which escalates to arbitrary code execution. The payload can be made invisible (zero-size, transparent iframe) so the reader sees only normal book text. Version 0.11.16 hardened the sanitizer configuration by adding 'iframe', 'object' and 'embed' to FORBID_TAGS and adding 'srcdoc' to FORBID_ATTR.",
+      "refs": "https://github.com/readest/readest/commit/005aa2d6157a34049bf45641c06861d606a85edb\nhttps://github.com/readest/readest/pull/4762\nhttps://github.com/readest/readest/releases/tag/v0.11.16",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:29"
+    },
+    {
+      "cve_id": "CVE-2026-82641",
+      "title": "高危漏洞: CVE-2026-82641 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-08-30 22:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+      "description": "keploy versions 3.1.0 through 3.6.25 bind the agent control-plane HTTP server to all interfaces without authentication, exposing endpoints that stream TLS session keys and traffic data. Attackers can access the /agent/pcap/keylog endpoint to retrieve NSS keylog lines and decrypt recorded TLS traffic, or invoke /agent/stop and /agent/storemocks to manipulate recording sessions.",
+      "refs": "https://github.com/keploy/keploy\nhttps://github.com/keploy/keploy/blob/v3.6.25/pkg/agent/routes/server.go\nhttps://github.com/keploy/keploy/commit/a6257d2b3184b85eb30edad345464aa292297b83",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:22"
+    },
+    {
+      "cve_id": "CVE-2026-82639",
+      "title": "高危漏洞: CVE-2026-82639 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-30 22:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "NextChat versions from 2.15.8 through 2.16.1 contain an improper URL validation vulnerability in the proxy endpoint that allows attackers to obtain the server's OpenAI API key. The x-base-url header is validated using substring matching instead of hostname parsing, allowing any URL containing 'api.openai.com' to pass validation and receive the server's credentials in the Authorization header.",
+      "refs": "https://github.com/ChatGPTNextWeb/NextChat\nhttps://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/api/proxy.ts\nhttps://github.com/ChatGPTNextWeb/NextChat/issues/6814",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:16"
+    },
+    {
+      "cve_id": "CVE-2026-82638",
+      "title": "高危漏洞: CVE-2026-82638 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-08-30 22:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "jina-ai reader disables its private-address guard outside Google Cloud deployments, allowing unauthenticated attackers to perform server-side request forgery. Attackers can supply publicly resolvable hostnames mapping to private addresses to retrieve cloud metadata and internal service content.",
+      "refs": "https://github.com/jina-ai/reader\nhttps://github.com/jina-ai/reader/blob/1574bfd380d249c86c82db4dace0d9c8fe17e2b1/src/services/misc.ts\nhttps://github.com/jina-ai/reader/issues/1253",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:11"
+    },
+    {
+      "cve_id": "CVE-2026-82636",
+      "title": "高危漏洞: CVE-2026-82636 (CVSS 7.9)",
+      "cvss_score": 7.9,
+      "published_date": "2026-08-30 22:17:03",
+      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "Qubes OS before qubes-core-dom0-linux 4.3.22 allows OS command injection during a qvm-copy-to-vm call from dom0 to an attacker-controlled qube, because the \"system\" library function is used to process an error message that may have shell metacharacters. This occurs in core-admin-linux/file-copy-vm/qfile-dom0-agent.c.",
+      "refs": "https://news.ycombinator.com/item?id=49496918\nhttps://www.qubes-os.org/news/2026/08/29/qsb-118/",
+      "source": "NVD",
+      "time": "2026-08-31 02:15:04"
+    },
+    {
+      "cve_id": "CVE-2026-82635",
+      "title": "高危漏洞: CVE-2026-82635 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-08-30 21:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Pake before 3.13.1 joins the JavaScript-supplied filename for the download_file Tauri command onto the user's Downloads directory with no sanitization. A filename containing path traversal sequences (for example ../Library/LaunchAgents/com.evil.plist) or an absolute path resolves outside ~/Downloads. The command then fetches attacker-controlled content from the supplied URL (via Rust HTTP, not the browser) and writes it to that path. A script that can invoke the command can overwrite user-writable files and install persistence (macOS LaunchAgents, Linux autostart, Windows Startup), leading to code execution in the user account. All desktop apps generated from an affected Pake tree expose the same command.",
+      "refs": "https://github.com/tw93/Pake\nhttps://github.com/tw93/Pake/commit/a5463a84d6e36705ee0dd1886cf0e4b5a75b0ab4\nhttps://github.com/tw93/Pake/releases/tag/V3.13.1",
+      "source": "NVD",
+      "time": "2026-08-31 02:14:58"
+    },
+    {
+      "cve_id": "CVE-2026-82543",
+      "title": "高危漏洞: CVE-2026-82543 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-30 21:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in vastsa FileCodeBox up to 2.3. This vulnerability affects the function update_file_usage of the file apps/base/views.py of the component Pickup Limit Handler. Performing a manipulation results in race condition. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 2.5.0 is able to resolve this issue. The patch is named 8d7d856c62d73badd0797eb4daec8d2ff10a403a. Upgrading the affected component is recommended.",
+      "refs": "https://github.com/vastsa/FileCodeBox/\nhttps://github.com/vastsa/FileCodeBox/commit/8d7d856c62d73badd0797eb4daec8d2ff10a403a\nhttps://github.com/vastsa/FileCodeBox/issues/482",
+      "source": "NVD",
+      "time": "2026-08-31 02:14:50"
+    },
+    {
+      "cve_id": "CVE-2026-82542",
+      "title": "高危漏洞: CVE-2026-82542 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-08-30 21:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Tenda HG10 300001138. Affected by this issue is the function formIPv6Routing of the file /boaform/admin/formIPv6Routing of the component Boa Web Server. This manipulation of the argument destNet causes buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formIPv6Route-destNt.md\nhttps://vuldb.com/cve/CVE-2026-82542\nhttps://vuldb.com/submit/888876",
+      "source": "NVD",
+      "time": "2026-08-31 02:14:45"
+    },
+    {
       "cve_id": "CVE-2026-82539",
       "title": "高危漏洞: CVE-2026-82539 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -923,182 +1099,6 @@
       "refs": "https://github.com/advisories/GHSA-r2f4-ff2p-xc64\nhttps://github.com/pimcore/pimcore/commit/a4f8c3cfee58b7d5fe4873d67782eff58dae9b9d\nhttps://github.com/pimcore/pimcore/pull/19183",
       "source": "NVD",
       "time": "2026-08-29 07:49:16"
-    },
-    {
-      "cve_id": "CVE-2026-55584",
-      "title": "高危漏洞: CVE-2026-55584 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:18:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "phpSysInfo is a customizable PHP script that displays system information. Prior to 3.4.6, the PSI_ALLOWED access-control check in read_config.php trusts attacker-controlled X-Forwarded-For and Client-IP HTTP headers before REMOTE_ADDR. A remote unauthenticated attacker can supply an allowed address in one of these headers to impersonate a trusted client and access exposed hostname, kernel, CPU, memory, filesystem, and network-interface information. This issue is fixed in version 3.4.6.",
-      "refs": "https://github.com/phpsysinfo/phpsysinfo/commit/019fa2d7e568ea11461adb4bd33da5dc87c4b9ab\nhttps://github.com/phpsysinfo/phpsysinfo/releases/tag/v3.4.6\nhttps://github.com/phpsysinfo/phpsysinfo/security/advisories/GHSA-786w-p5pm-cvgh",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:09"
-    },
-    {
-      "cve_id": "CVE-2026-55565",
-      "title": "高危漏洞: CVE-2026-55565 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-08-29 04:18:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Yamcs is a mission control framework. Prior to 5.12.8 and 5.13.2, Yamcs LikeExpression.fillCode_getValueReturn in yamcs-core/src/main/java/org/yamcs/yarch/streamsql/LikeExpression.java inserts an unescaped LIKE pattern into Java source compiled by Expression.getCompiledExpression through SimpleCompiler.cook instead of applying ValueExpression.escapeJavaString. The pattern can originate from POST /api/archive/{instance}:executeSql, POST /api/archive/{instance}:streamSql, POST /api/archive/{instance}/tables/{table}:readRows, GET /api/archive/{instance}/events, or activity searches, including paths available with ReadTables, ReadEvents, or ReadActivities. A quote in the pattern can inject Java that runs as the Yamcs server process. This issue is fixed in versions 5.12.8 and 5.13.2.",
-      "refs": "https://github.com/yamcs/yamcs/commit/640e1598b7097b521692e89dd47a39b6cb1fc663\nhttps://github.com/yamcs/yamcs/commit/a8fb4a0693fa62a6eb729b26016d1090dd8b289c\nhttps://github.com/yamcs/yamcs/releases/tag/yamcs-5.12.8",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:05"
-    },
-    {
-      "cve_id": "CVE-2026-55559",
-      "title": "高危漏洞: CVE-2026-55559 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-29 04:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Yamcs is a mission control framework. Prior to 5.12.8 and 5.13.2, Yamcs inserts templateArgs from POST /api/instances and PATCH /api/instances/{instance} into YAML through VarStatement.append in yamcs-core/src/main/java/org/yamcs/templating/VarStatement.java without YAML-context escaping. The rendered configuration is parsed by YamcsServer.createInstance and loaded by YamcsServerInstance, allowing an attacker to inject a services entry for org.yamcs.ProcessRunner. Deployments without security.yaml expose the operation through the guest superuser, while secured deployments require SystemPrivilege.CreateInstances. Successful exploitation executes commands as the Yamcs service account. This issue is fixed in versions 5.12.8 and 5.13.2.",
-      "refs": "https://github.com/yamcs/yamcs/commit/549f295cf8c5496a5e799d6bec2432ef976c82aa\nhttps://github.com/yamcs/yamcs/commit/7192da1c49bdf5ab1d72e579a47766a7c43e87c8\nhttps://github.com/yamcs/yamcs/releases/tag/yamcs-5.12.8",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:00"
-    },
-    {
-      "cve_id": "CVE-2026-55552",
-      "title": "高危漏洞: CVE-2026-55552 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Yamcs is a mission control framework. Prior to 5.11.13, Yamcs StaticFileHandler.locateFile resolves an unauthenticated request path without using Path.normalize and Path.toAbsolutePath to confirm that the absolute path remains within the configured staticRoots. A path containing traversal segments can escape the intended web root and return an arbitrary readable host file. The flaw is in yamcs-core/src/main/java/org/yamcs/http/StaticFileHandler.java and can disclose sensitive operating-system and application data. This issue is fixed in version 5.11.13, and the 5.12 line is fixed from version 5.12.0.",
-      "refs": "https://github.com/yamcs/yamcs/commit/c7dfd24e469ae1086c23e0fe04401cb1ce4260d4\nhttps://github.com/yamcs/yamcs/commit/f4bc588880c166849e983aa8f65b9c8107d06091\nhttps://github.com/yamcs/yamcs/releases/tag/yamcs-5.11.13",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:56"
-    },
-    {
-      "cve_id": "CVE-2026-55521",
-      "title": "高危漏洞: CVE-2026-55521 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-29 04:18:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Yamcs is a mission control framework. Prior to 5.12.8 and 5.13.2, Yamcs omits authorization checks in IndexesApi.listPacketIndex, IndexesApi.listEventIndex, Cop1Api.disable, Cop1Api.resume, Cop1Api.initialize, Cop1Api.updateConfig, and TimeApi.setTime. An authenticated low-privilege user can read packet and event index metadata without ObjectPrivilegeType.ReadPacket, alter COP-1 link state without SystemPrivilege.ControlLinks, and manipulate simulation time. These operations can disclose telemetry metadata, disrupt telecommand handling, and affect system integrity and availability. This issue is fixed in versions 5.12.8 and 5.13.2.",
-      "refs": "https://github.com/yamcs/yamcs/commit/405139afa6094dfaf63ac17f32df1f808846c950\nhttps://github.com/yamcs/yamcs/commit/493563679f838b86f3cdc5da9451d4a050ff6bd9\nhttps://github.com/yamcs/yamcs/releases/tag/yamcs-5.12.8",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:52"
-    },
-    {
-      "cve_id": "CVE-2026-55511",
-      "title": "高危漏洞: CVE-2026-55511 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-29 04:18:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Yamcs is a mission control framework. Prior to 5.12.8 and 5.13.2, Yamcs allows a user with SystemPrivilege.ControlArchiving to create a double-quoted StreamSQL column name that is interpolated into generated Java source by Expression.fillCode_InputDefVars and Expression.sanitizeName. A sum aggregate reaches yamcs-core/src/main/java/org/yamcs/yarch/streamsql/CompilableAggregateExpression.java and yamcs-core/src/main/java/org/yamcs/yarch/streamsql/funct/SumExpression.java through SelectExpression.compile, where Janino SimpleCompiler.cook compiles the injected source. POST /api/archive/{instance}:executeSql can therefore execute arbitrary Java in the Yamcs server process, exposing mission data and credentials and permitting telemetry tampering or denial of service. This issue is fixed in versions 5.12.8 and 5.13.2.",
-      "refs": "https://github.com/yamcs/yamcs/commit/8c1070b12c0a6c003903325cb2a1013347e2dbde\nhttps://github.com/yamcs/yamcs/commit/b65a3d78178ba99a58b753feda6ecc3b5a694f13\nhttps://github.com/yamcs/yamcs/releases/tag/yamcs-5.12.8",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:48"
-    },
-    {
-      "cve_id": "CVE-2026-55485",
-      "title": "高危漏洞: CVE-2026-55485 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-29 04:18:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Piccolo Admin is an admin interface and content management system for Python, built on top of Piccolo. Prior to 1.14.0, piccolo_admin/endpoints.py uses superuser_validators to block PUT, PATCH, DELETE, and POST requests by non-superusers but permits GET requests to configured user and session tables, while piccolo_api/session_auth/tables.py exposes SessionsBase.token because the token column is not secret. In deployments that add the Sessions and User tables to create_admin, a non-superuser administrator can call GET /api/tables/sessions/, obtain another user's live session token, replay it as the Cookie id value to impersonate a superuser, and permanently set superuser to true on the attacker's own row. This issue is fixed in version 1.14.0.",
-      "refs": "https://github.com/piccolo-orm/piccolo_admin/commit/96ddae12baf12288056cbb0cda6f9e8d7e22c86d\nhttps://github.com/piccolo-orm/piccolo_admin/releases/tag/1.14.0\nhttps://github.com/piccolo-orm/piccolo_admin/security/advisories/GHSA-2gh4-jmwq-rr8w",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:43"
-    },
-    {
-      "cve_id": "CVE-2026-55484",
-      "title": "高危漏洞: CVE-2026-55484 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:18:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "ALOS HTTP is a Linux-first Go web framework and application server built around a custom networking stack. Prior to 0.0.0-20260617230736-314b6783e196, core/utils.go::sanitizeRequestPath calls splitPathQuery on a request path beginning with a question mark and then performs the unchecked p[0] access without checking whether the resulting path is empty. An unauthenticated client can send a malformed request such as a question-mark-only path through h1_plain.go::ParseH1RequestHead, hpack.go::decodeSimpleGetPathHTTPSRequest, hpack.go::observeHeader, or h3_conn.go::handleRequestStream, causing an out-of-bounds panic before core.Recovery() middleware runs and terminating the server process. This issue is fixed in pseudo-version 0.0.0-20260617230736-314b6783e196.",
-      "refs": "https://github.com/guno1928/alos-http/commit/314b6783e19698c85ea9d9b197ff52f7f6a3a374\nhttps://github.com/guno1928/alos-http/security/advisories/GHSA-hr6j-w4mw-g9mj",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:36"
-    },
-    {
-      "cve_id": "CVE-2026-55248",
-      "title": "高危漏洞: CVE-2026-55248 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-29 04:18:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H",
-      "description": "plone.app.portlets provides portlets and a Plone-specific user interface for plone.portlets. Prior to 5.0.8, 6.0.4, and 7.0.2, a member who can add an RSS portlet can set its feed URL to a very large response, causing src/plone/app/portlets/portlets/rss.py to download and retain excessive data in memory and deny service. The same RSS URL handling accepts internal hosts, IP addresses, single-word domains, and explicit ports, allowing server-side requests that can probe internal network services and open ports. A malicious feed item can also supply a JavaScript URL that is retained as the item link and can execute script when used by a victim. The affected logic includes _rss_feed_url_validator, _normal_url_validator, RSSFeed._retrieveFeed, RSSFeed._buildItemDict, and the FEED_DATA in-memory cache. This issue is fixed in versions 5.0.8, 6.0.4, and 7.0.2.",
-      "refs": "https://github.com/plone/plone.app.portlets/commit/09da52ef7b297daa8e0cfd2361e47c37d9b073ad\nhttps://github.com/plone/plone.app.portlets/commit/9f16b6fb10211916686c6c346ea174bf517e3fbd\nhttps://github.com/plone/plone.app.portlets/commit/a3b2c2887165b308cd915cbb87b8276f90a76680",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:31"
-    },
-    {
-      "cve_id": "CVE-2026-55247",
-      "title": "高危漏洞: CVE-2026-55247 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-08-29 04:18:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H",
-      "description": "plone.app.event provides the event content type for Plone. Prior to versions 5.2.4 and 6.0.1, the iCalendar import in src/plone/app/event/ical/importer.py accepts insufficiently restricted calendar and event URLs, does not adequately bound downloaded bytes or imported events, and commits work per event. A logged-in editor can make the server request internal network resources or local calendar files, exhaust resources and take the site offline, and store a malicious event URL that executes script in another user's browser. The fix restricts accepted URLs, applies MAXIMUM_ICAL_IMPORT_SIZE_BYTES and MAXIMUM_ICAL_IMPORT_EVENTS limits, uses transaction savepoints, and validates event URLs. This issue is fixed in versions 5.2.4 and 6.0.1.",
-      "refs": "https://github.com/plone/plone.app.event/commit/1e3c83c15a24d1a789cdb012593505bc5620e28e\nhttps://github.com/plone/plone.app.event/commit/4de5eb3ea9e4f7f1781622e6d64fc086629d1437\nhttps://github.com/plone/plone.app.event/releases/tag/5.2.4",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:27"
-    },
-    {
-      "cve_id": "CVE-2026-55215",
-      "title": "高危漏洞: CVE-2026-55215 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:18:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "MariaDB Connector/Node.js is used to connect applications developed on Node.js to MariaDB and MySQL databases. Prior to versions 3.3.3, 3.4.6, and 3.5.3, when ssl is enabled without a pinned CA or server certificate, MariaDB Connector/Node.js sends credentials before completing certificate fingerprint validation. In lib/cmd/handshake/auth/handshake.js, a server that selects mysql_clear_password as the initial authentication plugin can receive the password before the post-TLS identity check. In lib/cmd/handshake/authentication.js, an authentication switch can evaluate the previous plugin instead of the requested target plugin, allowing mysql_clear_password to send the credential first. An active man-in-the-middle can present a self-signed certificate, capture the database password, and use it to authenticate directly even though the connector later rejects the server and closes the connection. This issue is fixed in versions 3.3.3, 3.4.6, and 3.5.3.",
-      "refs": "https://github.com/mariadb-corporation/mariadb-connector-nodejs/commit/514576a5a1fab3ea8498613e259a0b7a764e7302\nhttps://github.com/mariadb-corporation/mariadb-connector-nodejs/commit/c47d7275835c78c7eb8186cd23e9d57c045c128b\nhttps://github.com/mariadb-corporation/mariadb-connector-nodejs/commit/ecd36958e6e3bf0e0fa8389546f50c0ed6dbb2ac",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:23"
-    },
-    {
-      "cve_id": "CVE-2026-55108",
-      "title": "高危漏洞: CVE-2026-55108 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-08-29 04:18:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:H",
-      "description": "KubeVela is an open source application delivery platform. Prior to 1.9.14, from 1.10.0-alpha.1 until 1.10.9, and from 1.11.0-alpha.1 until 1.11.0-alpha.4, the Terraform remote configuration loader in pkg/controller/utils/capability.go, GetTerraformConfigurationFromRemote, clones a repository supplied through a core.oam.dev/v1beta1 ComponentDefinition and follows repository-controlled variables.tf or main.tf symlinks. A user with permission to create or update ComponentDefinition objects can point variables.tf to /dev/zero through terraform.path, after which os.Stat and os.ReadFile follow the link and read an unbounded stream before ParseTerraformVariables or HCL parsing can reject the content. The read can exhaust memory, OOM-kill the cluster-wide vela-core controller, cause repeated Pod restarts, and pressure node memory when no effective container limit is configured. This issue is fixed in versions 1.9.14, 1.10.9, and 1.11.0-alpha.4.",
-      "refs": "https://github.com/kubevela/kubevela/commit/65dedda40a69cc1eccf4072a4c835e5b9f13334e\nhttps://github.com/kubevela/kubevela/commit/7a4e59b2958ce1cf031fafbc188d6fafe8fe4d2e\nhttps://github.com/kubevela/kubevela/commit/f6a64398b5e0065c57c3a0fb6765dd3dc48c749d",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:18"
-    },
-    {
-      "cve_id": "CVE-2026-55066",
-      "title": "高危漏洞: CVE-2026-55066 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-08-29 04:18:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Vikunja is an open-source self-hosted task management platform. Prior to 2.4.0, POST /api/v1/projects/{project}/views/{view}/buckets/{bucket}/tasks accepts a body supplied task_id but TaskBucket.CanUpdate in pkg/models/kanban_task_bucket.go authorizes only the project, view, and bucket from the URL. updateTaskBucket then calls Task.ReadOne without a separate task permission check, returns the victim task contents, and can update the task done state when the attacker chooses a done bucket. Because task identifiers are global sequential values, an authenticated user can enumerate cross-tenant tasks and modify their completion metadata through both the v1 and v2 routes that share this model. This issue is fixed in version 2.4.0.",
-      "refs": "https://github.com/go-vikunja/vikunja/commit/36cdc2ce2be0b8ccc74227d178b92047d59cd65f\nhttps://github.com/go-vikunja/vikunja/pull/3239\nhttps://github.com/go-vikunja/vikunja/releases/tag/v2.4.0",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:14"
-    },
-    {
-      "cve_id": "CVE-2026-55065",
-      "title": "高危漏洞: CVE-2026-55065 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-29 04:18:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Vikunja is an open-source self-hosted task management platform. From 0.24.6 until 2.4.0, DELETE /api/v1/projects/:project/views/:view permits an authenticated user to supply a view identifier from another project while authorizing only against an attacker-controlled project identifier. ProjectView.CanDelete in pkg/models/project_view_permissions.go does not establish that the view belongs to the path project, and ProjectView.Delete in pkg/models/project_view.go continues after the scoped project_views delete affects no rows. Its subsequent deletes select task_buckets and task_positions only by project_view_id, allowing cross-tenant destruction of Kanban assignments and ordering while leaving the victim view and tasks intact. This issue is fixed in version 2.4.0.",
-      "refs": "https://github.com/go-vikunja/vikunja/commit/6895a7765ef1667be4b79df29549d33b9e1ca9ca\nhttps://github.com/go-vikunja/vikunja/pull/3239\nhttps://github.com/go-vikunja/vikunja/releases/tag/v2.4.0",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:10"
-    },
-    {
-      "cve_id": "CVE-2026-54788",
-      "title": "高危漏洞: CVE-2026-54788 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:18:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "dd-trace-rs provides Datadog application performance monitoring for Rust. From 0.1.0 until 0.3.3, datadog-opentelemetry/src/propagation/tracecontext.rs parses the W3C tracestate header and collects every semicolon-separated key and value pair in the Datadog dd=... vendor entry into a HashMap without enforcing a pair count or entry size limit. Because tracecontext extraction is enabled by default, a remote unauthenticated attacker can send an arbitrarily large dd=... entry and force excessive CPU and memory consumption for each request, causing denial of service in an instrumented network service. This vulnerability is fixed in 0.3.3.",
-      "refs": "https://github.com/DataDog/dd-trace-rs/commit/77c5d185c71d0ea8103da0e6cf4cd50677ffacd2\nhttps://github.com/DataDog/dd-trace-rs/pull/218\nhttps://github.com/DataDog/dd-trace-rs/releases/tag/datadog-opentelemetry-v0.3.3",
-      "source": "NVD",
-      "time": "2026-08-29 07:48:02"
-    },
-    {
-      "cve_id": "CVE-2026-54755",
-      "title": "高危漏洞: CVE-2026-54755 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-29 04:18:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-      "description": "Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.19, split-royalty fields decoded in core/kapp/builtInFunctions/utils.go can contain values greater than core.HundredPercent, and core/kapp/kda/create.go and core/kapp/kda/trigger.go sum those values in uint32 accumulators. Crafted values such as two 0x80000000 entries wrap the validation sum to zero and pass CheckValid100Params. Royalty payout paths in core/kapp/accounts/accounts.go, core/kapp/market/market.go, and core/kapp/ito/ito.go then credit each oversized split amount and silently discard a negative remainder, allowing ordinary asset transfers, marketplace purchases, or ITO purchases to create unbacked KLV or other assets. This issue is fixed in version 1.7.19.",
-      "refs": "https://github.com/klever-io/klever-go/commit/8bcc600b0ac88070740c63c7ce1c8a968dd85251\nhttps://github.com/klever-io/klever-go/releases/tag/v1.7.19\nhttps://github.com/klever-io/klever-go/security/advisories/GHSA-cgc5-v3f2-8m2v",
-      "source": "NVD",
-      "time": "2026-08-29 07:47:58"
     }
   ]
 }
