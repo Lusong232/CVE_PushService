@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-82539",
+      "title": "高危漏洞: CVE-2026-82539 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-08-30 19:17:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in TOTOLINK A720R 4.1.5cu.630_B20250509. This impacts the function setMacFilterRules of the file cstecgi.cgi of the component MAC Filtering. Executing a manipulation of the argument desc can lead to memory corruption. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/Xernary/CVE-2026-82539\nhttps://vuldb.com/cve/CVE-2026-82539\nhttps://vuldb.com/submit/888696",
+      "source": "NVD",
+      "time": "2026-08-30 22:04:51"
+    },
+    {
+      "cve_id": "CVE-2026-82480",
+      "title": "高危漏洞: CVE-2026-82480 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-30 14:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in NASA cFS up to 7.0.1. The affected element is the function CFE_SB_GetUserDataLength of the file src/cFS/cfe/modules/sb/fsw/src/cfe_sb_util.c of the component cFE Software Bus. Performing a manipulation of the argument TotalMsgSize/HdrSize results in integer underflow. It is possible to initiate the attack remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-82480\nhttps://vuldb.com/submit/888018\nhttps://vuldb.com/vuln/397030",
+      "source": "NVD",
+      "time": "2026-08-30 22:04:47"
+    },
+    {
+      "cve_id": "CVE-2026-82478",
+      "title": "高危漏洞: CVE-2026-82478 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-30 13:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in NASA Trick 19.6.0. This issue affects the function JSONVariableServerThread::parse_request of the file trick_source/sim_services/JSONVariableServer/JSONVariableServerThread.cpp of the component TCP Socket Handler. This manipulation causes stack-based buffer overflow. The attack is possible to be carried out remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://app.notion.com/p/Stack-based-Buffer-Overflow-in-NASA-Trick-JSONVariableServer-via-Unbounded-sscanf-on-Network-Receive-39cbd773e51180e1917cd717b90b8bc8?source=copy_link\nhttps://vuldb.com/cve/CVE-2026-82478\nhttps://vuldb.com/submit/888016",
+      "source": "NVD",
+      "time": "2026-08-30 22:04:41"
+    },
+    {
+      "cve_id": "CVE-2026-15980",
+      "title": "高危漏洞: CVE-2026-15980 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-08-30 13:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MyHome Core plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 4.4.5. This is due to missing authorization in the send_link() AJAX handler and improper token validation in the activate() function. This makes it possible for unauthenticated attackers to generate an activation token for an unconfirmed user account and obtain a valid authentication cookie for that account, including administrators. Successful exploitation requires the MyHome theme to be configured in legacy/WPBakery mode with frontend registration and confirmation email enabled, and the target account must not already have the myhome_agent_confirmed user meta set.",
+      "refs": "https://themeforest.net/item/myhome-real-estate-wordpress-theme/19508653\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/c458e018-5901-4917-9847-35f07646e068?source=cve",
+      "source": "NVD",
+      "time": "2026-08-30 22:04:34"
+    },
+    {
       "cve_id": "CVE-2026-15369",
       "title": "高危漏洞: CVE-2026-15369 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/klever-io/klever-go/commit/8bcc600b0ac88070740c63c7ce1c8a968dd85251\nhttps://github.com/klever-io/klever-go/releases/tag/v1.7.19\nhttps://github.com/klever-io/klever-go/security/advisories/GHSA-cgc5-v3f2-8m2v",
       "source": "NVD",
       "time": "2026-08-29 07:47:58"
-    },
-    {
-      "cve_id": "CVE-2026-54754",
-      "title": "高危漏洞: CVE-2026-54754 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-08-29 04:18:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-      "description": "Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.19, marketplace settlement in core/kapp/market/market.go reads MarketOrderData.ReferralPercentage from the listing while reading asset.Royalties.MarketPercentage live at purchase time. An asset owner can create a valid listing and then use AssetTrigger UpdateRoyalties to make the combined referral and royalty percentages exceed the bid. executeBuyMarket pays referral and royalty amounts unconditionally while computeMarketOwnerAmount silently skips a nonpositive seller remainder, allowing MarketBuy, BuyItNow, or auction Claim settlement to credit more KLV or sale currency than the buyer paid. This can create unbacked currency and corrupt token supply integrity. This issue is fixed in version 1.7.19.",
-      "refs": "https://github.com/klever-io/klever-go/commit/8bcc600b0ac88070740c63c7ce1c8a968dd85251\nhttps://github.com/klever-io/klever-go/releases/tag/v1.7.19\nhttps://github.com/klever-io/klever-go/security/advisories/GHSA-p7gw-2pcp-5pf8",
-      "source": "NVD",
-      "time": "2026-08-29 07:47:54"
-    },
-    {
-      "cve_id": "CVE-2026-54745",
-      "title": "高危漏洞: CVE-2026-54745 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-08-29 04:18:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.17.0, the Kubeflow Pipelines frontend exposes an unauthenticated server-side request forgery vulnerability through the /_proxy/ route in frontend/server/proxy-middleware.ts. The _routePathWithReferer() function accepts an arbitrary attacker-controlled HTTP or HTTPS target and passes its origin to createProxyMiddleware without a host allowlist or filtering for loopback, link-local, RFC1918, or cluster-local addresses. The route remains outside the authorization middleware when ENABLE_AUTHZ=true and is reachable through /apis/v1beta1/_proxy/, /apis/v2beta1/_proxy/, /pipeline/apis/v1beta1/_proxy/, and /pipeline/apis/v2beta1/_proxy/, including through a crafted Referer header. Requests can forward attacker-controlled methods, headers such as Authorization, Cookie, and X-Forwarded-For, and POST bodies to reachable internal services, while returning the upstream response to the unauthenticated client. This can expose cloud metadata credentials, Kubernetes or service APIs, and other cluster-internal endpoints to unauthorized read or modification. This issue is fixed in version 2.17.0.",
-      "refs": "https://github.com/kubeflow/pipelines/commit/a35f97aa4c17b25572369e5022546ab4421bdbdd\nhttps://github.com/kubeflow/pipelines/pull/13511\nhttps://github.com/kubeflow/pipelines/releases/tag/2.17.0",
-      "source": "NVD",
-      "time": "2026-08-29 07:47:49"
-    },
-    {
-      "cve_id": "CVE-2026-82227",
-      "title": "高危漏洞: CVE-2026-82227 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-08-29 00:18:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Contributor SQL Injection in WPBulky <= 1.2.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/wpbulky-wp-bulk-edit-post-types/vulnerability/wordpress-wpbulky-plugin-1-2-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-08-29 07:47:42"
-    },
-    {
-      "cve_id": "CVE-2026-81767",
-      "title": "高危漏洞: CVE-2026-81767 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 00:18:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Unauthenticated Broken Access Control in Simple Payment <= 2.5.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/simple-payment/vulnerability/wordpress-simple-payment-plugin-2-5-2-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-08-29 07:47:37"
     }
   ]
 }
