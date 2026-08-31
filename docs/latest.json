@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-82613",
+      "title": "高危漏洞: CVE-2026-82613 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 12:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in itsourcecode Online Medicine Delivery System 1.0. This affects the function loadResultList of the file /index.php?q=product of the component Product Search Interface. Performing a manipulation of the argument Search results in sql injection. The attack may be initiated remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/boyslikesports/202607_vul_dir/blob/main/C-04-SQLi-Product-Search-LIKE_en.md\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-82613",
+      "source": "NVD",
+      "time": "2026-08-31 17:04:04"
+    },
+    {
+      "cve_id": "CVE-2026-82612",
+      "title": "高危漏洞: CVE-2026-82612 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 12:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in itsourcecode Online Medicine Delivery System 1.0. Affected by this issue is the function loadResultList of the file /index.php?q=single-item of the component Product Detail Page. Such manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/boyslikesports/202607_vul_dir/blob/main/C-03-SQLi-Single-Item-ID_en.md\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-82612",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:58"
+    },
+    {
+      "cve_id": "CVE-2026-82611",
+      "title": "高危漏洞: CVE-2026-82611 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 12:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in itsourcecode Online Medicine Delivery System 1.0. Affected by this vulnerability is the function Customer::cusAuthentication of the file /login.php of the component Customer Login Interface. This manipulation of the argument U_USERNAME causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/boyslikesports/202607_vul_dir/blob/main/C-02-SQLi-Customer-Auth-Bypass_en.md\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-82611",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:53"
+    },
+    {
+      "cve_id": "CVE-2026-82610",
+      "title": "高危漏洞: CVE-2026-82610 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 12:17:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in itsourcecode Online Medicine Delivery System 1.0. Affected is the function Employee::employeeAuthentication of the file /rider/login.php of the component Login Interface. The manipulation of the argument emp_email results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/boyslikesports/202607_vul_dir/blob/main/C-01-SQLi-Employee-Auth-Bypass_en.md\nhttps://itsourcecode.com/\nhttps://vuldb.com/cve/CVE-2026-82610",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:48"
+    },
+    {
+      "cve_id": "CVE-2026-82608",
+      "title": "高危漏洞: CVE-2026-82608 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-31 11:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Kamailio up to 5.5.0/6.0.7. This affects the function get_4bytes of the file src/modules/ims_registrar_scscf/cxdx_avp.c of the component AVP Handler. Executing a manipulation can lead to out-of-bounds read. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. This patch is called abb5d60af6eefbd367bf6588c5589566b090e272. It is advisable to implement a patch to correct this issue. The vendor points out, that \"[v]ersion 5.5.0 is old and not maintained anymore.\"",
+      "refs": "https://github.com/Kamailio/Kamailio/commit/abb5d60af6eefbd367bf6588c5589566b090e272\nhttps://github.com/Kamailio/Kamailio/pull/4823\nhttps://github.com/kamailio/kamailio/",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:43"
+    },
+    {
+      "cve_id": "CVE-2026-82607",
+      "title": "高危漏洞: CVE-2026-82607 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 11:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Cozmoslabs Profile Builder Plugin up to 3.16.1 on WordPress. The impacted element is the function wppb_ajax_simple_avatar of the file /wp-admin/admin-ajax.php of the component Avatar Simple Upload AJAX Handler. Performing a manipulation results in unrestricted upload. The attack is possible to be carried out remotely. The exploit has been made public and could be used. Upgrading to version 3.16.2 is sufficient to resolve this issue. It is suggested to upgrade the affected component.",
+      "refs": "https://ciphersecuritylabs.com/research/articles/when-the-browser-is-the-only-bouncer-unauthenticated-media-upload-in-profile-builder\nhttps://vuldb.com/cve/CVE-2026-82607\nhttps://vuldb.com/submit/892841",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:38"
+    },
+    {
+      "cve_id": "CVE-2026-82600",
+      "title": "高危漏洞: CVE-2026-82600 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 10:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in SeaCMS up to 13.6. Affected by this issue is some unknown functionality of the file /zyapi.php?ac=videolist. Performing a manipulation of the argument ids results in sql injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/T-Chachamaru/seacms-13.6-security-advisories/blob/a084a3e573240d54860153321df271280daec262/c-004-zyapi-ids-sql-injection.md\nhttps://vuldb.com/cve/CVE-2026-82600\nhttps://vuldb.com/submit/892781",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:33"
+    },
+    {
+      "cve_id": "CVE-2026-82598",
+      "title": "高危漏洞: CVE-2026-82598 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-08-31 09:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SeaCMS up to 13.6. Affected is the function parseIf of the file search.php of the component Template Engine. This manipulation of the argument searchtype causes code injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/T-Chachamaru/seacms-13.6-security-advisories/blob/a084a3e573240d54860153321df271280daec262/c-009-search-cascade-template-rce.md\nhttps://vuldb.com/cve/CVE-2026-82598\nhttps://vuldb.com/submit/892763",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:28"
+    },
+    {
+      "cve_id": "CVE-2026-82597",
+      "title": "高危漏洞: CVE-2026-82597 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-31 09:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in TOTOLINK NR1800X 9.1.0u.6681_B20230703. This affects the function setUssd of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument ussd leads to command injection. The attack can be initiated remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/lxiansheng488-bit/-/blob/main/TOTOlink/totolink%20setuuid%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5.pdf\nhttps://vuldb.com/cve/CVE-2026-82597\nhttps://vuldb.com/submit/892696",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:22"
+    },
+    {
+      "cve_id": "CVE-2026-82595",
+      "title": "高危漏洞: CVE-2026-82595 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-08-31 08:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was found in D-Link DIR-825M 1.1.8. Affected by this vulnerability is the function sub_456CF4 of the file /boafrm/formSysCmd of the component System Command Execution. Performing a manipulation of the argument sysCmd results in command injection. It is possible to initiate the attack remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formSysCmd/formSysCmd.md\nhttps://vuldb.com/cve/CVE-2026-82595\nhttps://vuldb.com/submit/892630",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:15"
+    },
+    {
+      "cve_id": "CVE-2026-82593",
+      "title": "高危漏洞: CVE-2026-82593 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-08-31 08:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw has been found in D-Link DIR-825M 1.1.8. This impacts the function sub_41802C of the file /boafrm/formLtefotaUpgradeFibocom of the component LTE Module Firmware Upgrade. This manipulation of the argument fota_url causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formLtefotaUpgradeFibocom/formLtefotaUpgradeFibocom.md\nhttps://vuldb.com/cve/CVE-2026-82593\nhttps://vuldb.com/submit/892516",
+      "source": "NVD",
+      "time": "2026-08-31 17:03:10"
+    },
+    {
       "cve_id": "CVE-2026-82592",
       "title": "高危漏洞: CVE-2026-82592 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -978,127 +1099,6 @@
       "refs": "https://github.com/gophish/gophish\nhttps://github.com/gophish/gophish/blob/95618469799295e2c0fec980805a2dfbb818816b/middleware/middleware.go\nhttps://github.com/gophish/gophish/issues/9440",
       "source": "NVD",
       "time": "2026-08-29 07:50:17"
-    },
-    {
-      "cve_id": "CVE-2026-82268",
-      "title": "高危漏洞: CVE-2026-82268 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:20:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Qwen-Agent through 0.0.34 contains a server-side request forgery vulnerability in the document parsing path that treats caller-supplied paths as URLs without scheme restriction or host validation. Attackers can reach the unauthenticated Gradio interface to make the server issue HTTP requests to arbitrary internal addresses including metadata services and read retrieved content through parsed document output.",
-      "refs": "https://github.com/QwenLM/Qwen-Agent\nhttps://github.com/QwenLM/Qwen-Agent/blob/31a4d36d123688581a9e9744427272b33ce940e0/qwen_agent/tools/simple_doc_parser.py\nhttps://github.com/QwenLM/Qwen-Agent/issues/913",
-      "source": "NVD",
-      "time": "2026-08-29 07:50:12"
-    },
-    {
-      "cve_id": "CVE-2026-82266",
-      "title": "高危漏洞: CVE-2026-82266 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-29 04:20:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Redpanda through 26.2.2 binds the Admin API to 0.0.0.0:9644 with admin_api_require_auth defaulting to false, treating unauthenticated requests as superusers. Attackers can reach port 9644 without credentials to create and delete broker accounts, modify cluster configuration, and disrupt partition replication.",
-      "refs": "https://github.com/redpanda-data/redpanda\nhttps://github.com/redpanda-data/redpanda/blob/3cfce474a872090e7c74d14181885f5838c54cf2/conf/redpanda.yaml\nhttps://github.com/redpanda-data/redpanda/blob/3cfce474a872090e7c74d14181885f5838c54cf2/src/v/security/request_auth.cc",
-      "source": "NVD",
-      "time": "2026-08-29 07:50:08"
-    },
-    {
-      "cve_id": "CVE-2026-82021",
-      "title": "高危漏洞: CVE-2026-82021 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-08-29 04:20:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Hermes Agent 0.18.2 prior to 0.19.0 contains a supply chain vulnerability in its bundled MCP catalog that allows a remote attacker to execute arbitrary code by compromising a third-party upstream repository referenced via a mutable branch rather than a pinned commit SHA. An attacker who compromises the upstream repository can propagate malicious code to every host that installs the affected catalog entry, with no further action required by the operator.",
-      "refs": "https://github.com/NousResearch/hermes-agent/commit/9df5f879b4a5925c0f8f947e7e16ed8e845932c3\nhttps://github.com/NousResearch/hermes-agent/pull/64463\nhttps://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20",
-      "source": "NVD",
-      "time": "2026-08-29 07:50:03"
-    },
-    {
-      "cve_id": "CVE-2026-81849",
-      "title": "高危漏洞: CVE-2026-81849 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-29 04:20:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper limitation of a pathname to a restricted directory in the aws:downloadContent plugin in amazon-ssm-agent before 3.3.4515.0 might allow an authenticated remote user whose ssm:SendCommand permission is restricted to the AWS-DownloadContent document, to write arbitrary files outside the intended download directory with root privileges, via crafted object keys in the S3 source the document is directed to retrieve. This issue may lead to arbitrary code execution as root if specific sensitive files are overwritten.\n\n\n\nTo remediate this issue, customers should upgrade amazon-ssm-agent to version 3.3.4515.0 or later.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-091-aws/\nhttps://github.com/aws/amazon-ssm-agent/releases/tag/3.3.4515.0",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:59"
-    },
-    {
-      "cve_id": "CVE-2026-77586",
-      "title": "高危漏洞: CVE-2026-77586 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-08-29 04:19:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "In MongoDB Connector for BI, MongoDB object names such as collection, field, and index names are placed into the quoted identifiers of the DDL text returned by SHOW CREATE statements without escaping the identifier delimiter. A user with permission to write to a sampled MongoDB collection can choose a name that closes the quoted identifier early, so that additional SQL text becomes part of the generated output. If an operator or automated tool later replays that generated statement against a SQL server, the additional text is executed with the privileges of that session.",
-      "refs": "https://www.mongodb.com/docs/bi-connector/current/release-notes/",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:54"
-    },
-    {
-      "cve_id": "CVE-2026-75486",
-      "title": "高危漏洞: CVE-2026-75486 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-08-29 04:19:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Synk Sweater Comb before 3.8.8 contains a command injection vulnerability that allows an attacker who controls the .vervet.yaml configuration file to execute arbitrary OS commands by injecting malicious input into the linters.<key>.optic-ci.original branch name field. The expectGitBranch() function in src/lint.ts passes the unsanitized branch name directly into child_process.exec() via an unescaped template literal, enabling arbitrary command execution when the lint command is run against the repository.",
-      "refs": "https://github.com/snyk/sweater-comb/commit/05a0eec4f2acb9ce6d4814016b475504fc64eab2\nhttps://github.com/snyk/sweater-comb/pull/743\nhttps://github.com/snyk/sweater-comb/releases/tag/v3.8.8",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:50"
-    },
-    {
-      "cve_id": "CVE-2026-75124",
-      "title": "高危漏洞: CVE-2026-75124 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-29 04:19:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "PLANET GS-4210-16P2S firmware before 3.441b260626 contains a pre-authentication memory corruption vulnerability in the web management interface where the _readHttpParam function copies an oversized HTTP query string without guaranteeing NUL termination, allowing parse_query_string to process attacker-controlled data into a fixed-size stack buffer. An unauthenticated remote attacker can send an oversized GET request to dispatcher.cgi to cause denial of service of the web management interface and potentially trigger memory corruption.",
-      "refs": "https://www.planet.com.tw/en/support/security-advisory/10\nhttps://www.vulncheck.com/advisories/planet-gs-4210-16p2s-memory-corruption-via-dispatcher-cgi-readhttpparam",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:43"
-    },
-    {
-      "cve_id": "CVE-2026-75123",
-      "title": "高危漏洞: CVE-2026-75123 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-29 04:19:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PLANET GS-4210-16P2S firmware before 3.441b260626 contains an authenticated OS command injection vulnerability in /cgi-bin/dispatcher.cgi. The web_smtp_test_post handler incorporates a caller-supplied SMTP server value directly into a shell command without sanitization. A remote attacker with administrator web credentials can send a crafted SMTP server value to execute arbitrary operating-system commands on the device.",
-      "refs": "https://www.planet.com.tw/en/support/security-advisory/10\nhttps://www.vulncheck.com/advisories/planet-gs-4210-16p2s-command-injection-via-dispatcher-cgi-web-smtp-test-post",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:38"
-    },
-    {
-      "cve_id": "CVE-2026-75122",
-      "title": "高危漏洞: CVE-2026-75122 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-29 04:19:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PLANET GS-4210-16P2S firmware before 3.441b260626 contains an authenticated OS command injection vulnerability in /cgi-bin/httpuploadcert.cgi. The certificate password field in a certificate upload request is incorporated into a shell command without sanitization of shell metacharacters. A remote attacker with administrator web credentials can submit a crafted certificate upload request to execute arbitrary operating-system commands on the device.",
-      "refs": "https://www.planet.com.tw/en/support/security-advisory/10\nhttps://www.vulncheck.com/advisories/planet-gs-4210-16p2s-command-injection-via-httpuploadcert-cgi",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:33"
-    },
-    {
-      "cve_id": "CVE-2026-75121",
-      "title": "高危漏洞: CVE-2026-75121 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-08-29 04:19:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PLANET GS-4210-16P2S firmware before 3.441b260626 contains an authenticated OS command injection vulnerability in /cgi-bin/dispatcher.cgi. The web_vlan_membership_edit_dialog_post handler incorporates the memberTags POST parameter into a shell command without sanitization. A remote authenticated attacker can send a crafted memberTags value to execute arbitrary operating-system commands on the device.",
-      "refs": "https://www.planet.com.tw/en/support/security-advisory/10\nhttps://www.vulncheck.com/advisories/planet-gs-4210-16p2s-command-injection-via-dispatcher-cgi-web-vlan-membership-edit-dialog-post",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:29"
-    },
-    {
-      "cve_id": "CVE-2026-72984",
-      "title": "高危漏洞: CVE-2026-72984 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-08-29 04:19:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72984",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:25"
     }
   ]
 }
