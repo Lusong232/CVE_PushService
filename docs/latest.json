@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-82592",
+      "title": "高危漏洞: CVE-2026-82592 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-08-31 07:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in D-Link DIR-825M 1.1.8. This affects the function sub_46725C of the file /boafrm/formDiskFormat of the component Disk Formatting Handler Endpoint. The manipulation of the argument partition results in stack-based buffer overflow. The attack can be executed remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formDiskFormat/formDiskFormat.md\nhttps://vuldb.com/cve/CVE-2026-82592\nhttps://vuldb.com/submit/892514",
+      "source": "NVD",
+      "time": "2026-08-31 10:17:44"
+    },
+    {
       "cve_id": "CVE-2026-56718",
       "title": "高危漏洞: CVE-2026-56718 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72984",
       "source": "NVD",
       "time": "2026-08-29 07:49:25"
-    },
-    {
-      "cve_id": "CVE-2026-56100",
-      "title": "高危漏洞: CVE-2026-56100 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-08-29 04:18:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "SpringBlade versions 2.7.3 through 3.5.0 contain a privilege escalation vulnerability that allows authenticated attackers to create system administrator accounts by sending crafted POST requests to an unprotected internal Feign user-creation endpoint exposed via @RestController without authorization checks. Attackers can exploit the gateway's authentication filter, which only validates JWT parsing without verifying user roles or caller identity, and leverage a hardcoded JWT signing key embedded in publicly available JARs to forge tokens and escalate privileges from a low-privilege user to administrator, enabling cross-tenant data pollution and persistent backdoor access.",
-      "refs": "https://gist.github.com/sud0why/e73405057dd7414a8c221ef17e0d0059#file-cve-2026-56100-springblade-authbypass-en-md\nhttps://github.com/chillzhuang/SpringBlade\nhttps://github.com/chillzhuang/SpringBlade/commit/c69b9547c942c697da2f3ee6a9265b6004abd645",
-      "source": "NVD",
-      "time": "2026-08-29 07:49:21"
     }
   ]
 }
