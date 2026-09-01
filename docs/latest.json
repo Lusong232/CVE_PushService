@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-83772",
+      "title": "高危漏洞: CVE-2026-83772 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-01 14:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Cobham SATCOM VSAT7090 Maritime Satellite Router up to 20260704. This issue affects the function c_set_reports_decode of the file mail-report.sh of the component JSON Parsing. The manipulation of the argument sender/recipients results in command injection. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://uvxbywu62qm.feishu.cn/wiki/ERgywyUVfiUM2lkfVLwc1swknXg?from=from_copylink\nhttps://vuldb.com/cve/CVE-2026-83772\nhttps://vuldb.com/submit/880057",
+      "source": "NVD",
+      "time": "2026-09-01 21:48:06"
+    },
+    {
+      "cve_id": "CVE-2026-75921",
+      "title": "高危漏洞: CVE-2026-75921 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-01 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Master Addons for Elementor – Elementor Addons, Widgets, Mega Menu Builder, Popup Builder, Widget Builder & Template Kits plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.1.9 via the upload_template_kit function. This is due to incorrect authorization on the upload_template_kit() AJAX handler, which requires only upload_files capability instead of the manage_options required by all sibling handlers, combined with missing per-entry file type filtering after ZIP extraction. This makes it possible for authenticated attackers, with editor-level access and above, to upload files that may be executable, which makes remote code execution possible. Editors can satisfy the nonce requirement because the required nonces are localized on the standard Pages list screen, which is accessible to any user with the edit_pages capability.",
+      "refs": "https://plugins.trac.wordpress.org/browser/master-addons/tags/3.1.8/inc/admin/page-importer.php#L84\nhttps://plugins.trac.wordpress.org/browser/master-addons/tags/3.1.8/inc/admin/templates/kits/class-importer.php#L2124\nhttps://plugins.trac.wordpress.org/browser/master-addons/tags/3.1.8/inc/admin/templates/kits/class-importer.php#L2198",
+      "source": "NVD",
+      "time": "2026-09-01 21:48:01"
+    },
+    {
+      "cve_id": "CVE-2026-19952",
+      "title": "高危漏洞: CVE-2026-19952 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-01 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the move_folders function in all versions up to, and including, 3.29.12. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This is exploitable without authentication when a form is configured with public visibility (who_can_see='all'), as the required nonce is publicly obtainable from the rendered form.",
+      "refs": "https://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.29.10/main/frontend/fields/general/class-upload-file.php#L1014\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.29.10/main/frontend/fields/general/class-upload-file.php#L1044\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.29.10/main/frontend/fields/general/class-upload-file.php#L1047",
+      "source": "NVD",
+      "time": "2026-09-01 21:47:57"
+    },
+    {
+      "cve_id": "CVE-2026-19806",
+      "title": "高危漏洞: CVE-2026-19806 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-01 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Support Genix – Helpdesk, AI Chatbot, Knowledge Base & Customer Support Ticketing System plugin for WordPress is vulnerable to Authentication Bypass leading to Administrator Account Takeover in all versions up to, and including, 1.4.52 via the `guest_ticket_login()` function and its `p` parameter. This is due to the site-wide AES-256-CBC encryption key being derived from only three two-digit `wp_rand(10, 99)` values and a Unix timestamp via `md5()` — yielding approximately 19.5 bits of entropy — combined with a deterministic IV derived from the password, no authentication tag on the ciphertext, and no capability check, nonce, or session validation on the publicly reachable `/sgnix/?p=<token>` endpoint. This makes it possible for authenticated attackers, with subscriber-level access and above, who can obtain a single legitimate guest ticket token as a known-plaintext oracle and bound the plugin activation timestamp, to exhaust the ~729,000-candidate keyspace entirely offline, recover the site-wide encryption key, and forge a self-consistent `{ticket_id, ticket_user}` token targeting any administrator-owned ticket. Submitting the forged token to the unprotected endpoint causes `wp_set_auth_cookie()` to be called for that administrator, granting the attacker full administrative access to the WordPress site.",
+      "refs": "https://plugins.trac.wordpress.org/browser/support-genix-lite/tags/1.4.50/core/secondary_helper.php#L754\nhttps://plugins.trac.wordpress.org/browser/support-genix-lite/tags/1.4.50/libs/Apbd_Wps_EncryptionLib.php#L27\nhttps://plugins.trac.wordpress.org/browser/support-genix-lite/tags/1.4.50/models/database/Mapbd_wps_ticket.php#L457",
+      "source": "NVD",
+      "time": "2026-09-01 21:47:51"
+    },
+    {
+      "cve_id": "CVE-2026-19796",
+      "title": "高危漏洞: CVE-2026-19796 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-01 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Listdom: AI-powered Business Directory with Classifieds Ads Listings plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'lsd[displ][style]' Parameter in all versions up to, and including, 5.8.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the Listdom Pro add-on to be active and the 'Display Options Per Listing' displ setting to be enabled, both of which are non-default configurations.",
+      "refs": "https://plugins.trac.wordpress.org/browser/listdom/tags/5.8.1/app/includes/entity/listing.php#L196\nhttps://plugins.trac.wordpress.org/browser/listdom/tags/5.8.1/app/includes/ptypes/listing/single.php#L560\nhttps://plugins.trac.wordpress.org/browser/listdom/tags/5.8.1/app/includes/ptypes/listing/single.php#L82",
+      "source": "NVD",
+      "time": "2026-09-01 21:47:42"
+    },
+    {
+      "cve_id": "CVE-2026-19573",
+      "title": "高危漏洞: CVE-2026-19573 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-01 13:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Affiliate Super Assistent plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘doCommentShortcode’ function in all versions up to, and including, 1.10.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/browser/amazonsimpleadmin/tags/1.9.0/AsaCore.php#L3296\nhttps://plugins.trac.wordpress.org/browser/amazonsimpleadmin/tags/1.9.0/AsaCore.php#L3301\nhttps://plugins.trac.wordpress.org/browser/amazonsimpleadmin/tags/1.9.0/AsaCore.php#L4043",
+      "source": "NVD",
+      "time": "2026-09-01 21:47:34"
+    },
+    {
       "cve_id": "CVE-2026-75865",
       "title": "高危漏洞: CVE-2026-75865 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/ToolJet/ToolJet/security/advisories/GHSA-xr3w-r926-xfmm\nhttps://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-tenant-database-manipulation\nhttps://github.com/ToolJet/ToolJet/security/advisories/GHSA-xr3w-r926-xfmm",
       "source": "NVD",
       "time": "2026-09-01 02:26:50"
-    },
-    {
-      "cve_id": "CVE-2026-82869",
-      "title": "高危漏洞: CVE-2026-82869 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-08-31 17:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "ToolJet Database versions before v3.16.44 contain a privilege escalation vulnerability in the join_tables endpoint that grants JOIN_TABLES ability to all authenticated users without role or workspace membership validation. Attackers can read arbitrary ToolJet Database tables from any workspace by supplying victim workspace identifiers in the request path while authenticating with their own workspace credentials.",
-      "refs": "https://github.com/ToolJet/ToolJet/security/advisories/GHSA-7vj5-wxfm-gmfq\nhttps://www.vulncheck.com/advisories/tooljet-database-before-3.16.44-privilege-escalation-via-join-tables",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:46"
-    },
-    {
-      "cve_id": "CVE-2026-82862",
-      "title": "高危漏洞: CVE-2026-82862 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-08-31 17:17:06",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Hulumi versions before v1.3.2 resolve the threat-model helper script from an unsafe root, allowing workspace files to shadow the intended helper script. Attackers can place malicious files in the workspace to execute arbitrary code during local skill execution.",
-      "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-mjcg-x5mr-27ww\nhttps://www.vulncheck.com/advisories/hulumi-before-1.3.2-helper-script-shadowing-via-workspace-files",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:39"
-    },
-    {
-      "cve_id": "CVE-2026-82861",
-      "title": "高危漏洞: CVE-2026-82861 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-08-31 17:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "@hulumi/policies versions before 1.3.2 contain a parent spoof bypass vulnerability that allows attackers to submit spoofed SecureBucket parent evidence during policy evaluation. Attackers can bypass security policy checks by providing falsified evidence, causing the validator to miss unsafe bucket configurations.",
-      "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-g43v-9x7q-83pq\nhttps://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-securebucket-parent-spoof-bypass",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:35"
-    },
-    {
-      "cve_id": "CVE-2026-82860",
-      "title": "高危漏洞: CVE-2026-82860 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-31 17:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "@hulumi/policies versions before 1.3.2 fail to fully inspect inline and attached IAM policy evidence for the administrator-policy guardrail. Attackers can craft admin-equivalent policy paths that bypass policy evaluation controls.",
-      "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-4xrh-5m3m-328w\nhttps://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-admin-policy-bypass",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:31"
-    },
-    {
-      "cve_id": "CVE-2026-82859",
-      "title": "高危漏洞: CVE-2026-82859 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-31 17:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "hulumi versions before v1.3.2 contain a deployment SCP template that allows tag-on-create bypasses for hulumi:iac-role protections. Attackers can bypass intended IAM boundary restrictions by exploiting the weakened SCP template in downstream deployments.",
-      "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-86q4-r5j3-ff5c\nhttps://www.vulncheck.com/advisories/hulumi-before-1.3.2-scp-template-tag-on-create-bypass",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:27"
-    },
-    {
-      "cve_id": "CVE-2026-82858",
-      "title": "高危漏洞: CVE-2026-82858 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-31 17:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "@hulumi/drift versions before 1.3.2 accept externally supplied execute plans without sufficient provenance validation, allowing untrusted reconciliation input to be treated as trusted. Attackers can supply malicious execute plans that bypass security checks to perform unsafe reconciliation operations.",
-      "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-2ffm-hxrq-qqmm\nhttps://www.vulncheck.com/advisories/hulumi-drift-before-1.3.2-unsafe-execute-plan-acceptance",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:23"
     }
   ]
 }
