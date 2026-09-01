@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-75865",
+      "title": "高危漏洞: CVE-2026-75865 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-01 11:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WPLP Cookie Consent – Cookie Banner & Consent Management for GDPR, CCPA & Google Consent Mode plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the saas_upload_logo() function combined with an authorization bypass on the WPLP connector REST endpoints in all versions up to, and including, 4.4.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3674117/gdpr-cookie-consent\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/96a2a552-e73f-4b27-88de-50eb63a8d131?source=cve",
+      "source": "NVD",
+      "time": "2026-09-01 16:05:45"
+    },
+    {
       "cve_id": "CVE-2026-83524",
       "title": "高危漏洞: CVE-2026-83524 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-2ffm-hxrq-qqmm\nhttps://www.vulncheck.com/advisories/hulumi-drift-before-1.3.2-unsafe-execute-plan-acceptance",
       "source": "NVD",
       "time": "2026-09-01 02:26:23"
-    },
-    {
-      "cve_id": "CVE-2026-82857",
-      "title": "高危漏洞: CVE-2026-82857 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-08-31 17:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "hulumi versions before v1.3.2 contain a privilege escalation vulnerability in the weekly integration IAM policy that allows role lifecycle operations on af-e2e-* roles without sufficient boundary restrictions. Attackers with the documented principal can create persistent higher-privilege roles in the sandbox account.",
-      "refs": "https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-35qr-vx94-m5x3\nhttps://www.vulncheck.com/advisories/hulumi-before-1.3.2-privilege-escalation-via-iam-policy",
-      "source": "NVD",
-      "time": "2026-09-01 02:26:19"
     }
   ]
 }
