@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-84441",
+      "title": "高危漏洞: CVE-2026-84441 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-02 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in Piwigo up to 16.3.0. Affected by this issue is some unknown functionality of the file i.php of the component Image Derivative Handler. The manipulation leads to path traversal. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/Leousum/VulnPoC/blob/main/Piwigo%2016.3.0/unauthenticated_derivative_path_traversal.md\nhttps://vuldb.com/cve/CVE-2026-84441\nhttps://vuldb.com/submit/885229",
+      "source": "NVD",
+      "time": "2026-09-02 15:26:22"
+    },
+    {
+      "cve_id": "CVE-2026-14982",
+      "title": "高危漏洞: CVE-2026-14982 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-02 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The WP File Download plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the delete function in all versions. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The two-stage exploit requires a first request to the file.save task to persist the path-traversal string into file metadata, followed by a second request to the file.delete task to trigger the unlink call — both endpoints lack capability checks and nonce enforcement.",
+      "refs": "https://www.joomunited.com/changelog/wp-file-download-changelog\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e0ae30a4-dbd6-4c1f-8786-786b46d64a65?source=cve",
+      "source": "NVD",
+      "time": "2026-09-02 15:26:18"
+    },
+    {
+      "cve_id": "CVE-2026-14957",
+      "title": "高危漏洞: CVE-2026-14957 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-02 11:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "In FIPS mode, Libreswan's add_decoded_cert() function calls CERT_ExtractPublicKey() and asserts that the result is not NULL. However, CERT_ExtractPublicKey() returns NULL when public key extraction fails, for example if the RSA exponent is set to 0. A remote attacker can send a malformed X.509 certificate in a CERT payload to trigger the assertion, causing the pluto daemon to abort and restart. Continued exploitation causes a denial of service. No remote code execution is possible. Both IKEv1 and IKEv2 are affected. The vulnerability is only exploitable when both the OS and libreswan are running in FIPS mode and at least one CA certificate is loaded. The CERT payload is processed before peer authentication, so no credentials are needed to exploit this. Configurations using only PreSharedKey (PSK) authentication with no CA certificates loaded in the NSS database are not vulnerable.",
+      "refs": "https://libreswan.org/security/CVE-2026-14957/\nhttps://libreswan.org/security/CVE-2026-14957/CVE-2026-14957.txt",
+      "source": "NVD",
+      "time": "2026-09-02 15:26:13"
+    },
+    {
+      "cve_id": "CVE-2026-84715",
+      "title": "高危漏洞: CVE-2026-84715 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-02 10:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "FeatherPanel versions before 1.3.7.10 fail to validate permissions in the SubuserController updateSubuser handler, allowing authenticated subusers to modify their own permission records. A subuser with minimal permissions can send a crafted request to grant themselves full server control, enabling unauthorized access to sensitive data, backups, and server configuration.",
+      "refs": "https://github.com/MythicalLTD/FeatherPanel\nhttps://github.com/MythicalLTD/FeatherPanel/blob/376b003aa9685b74153d239d2b3f64a752cdc0f0/backend/app/Controllers/User/Server/SubuserController.php#L454\nhttps://github.com/MythicalLTD/FeatherPanel/blob/376b003aa9685b74153d239d2b3f64a752cdc0f0/backend/app/Helpers/ServerGateway.php",
+      "source": "NVD",
+      "time": "2026-09-02 15:26:09"
+    },
+    {
+      "cve_id": "CVE-2026-84485",
+      "title": "高危漏洞: CVE-2026-84485 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-02 10:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "APITable through 1.13.0-beta.1 exposes the internal organization loadOrSearch endpoint without authentication, allowing unauthenticated attackers to retrieve member names, email addresses, and team hierarchy. Attackers can query the endpoint with space identifiers obtained from shared links or public templates to enumerate the complete member directory of any workspace.",
+      "refs": "https://github.com/apitable/apitable\nhttps://github.com/apitable/apitable/blob/88b24ce9f359cc434778be75d03603182882dc76/backend-server/application/src/main/java/com/apitable/internal/controller/InternalOrganizationController.java#L58\nhttps://github.com/apitable/apitable/blob/88b24ce9f359cc434778be75d03603182882dc76/backend-server/application/src/main/java/com/apitable/shared/context/LoginContext.java",
+      "source": "NVD",
+      "time": "2026-09-02 15:26:05"
+    },
+    {
+      "cve_id": "CVE-2026-84484",
+      "title": "高危漏洞: CVE-2026-84484 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-02 10:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "ION-DTN versions before 4.2.0 contain an out-of-bounds read vulnerability in the decodeSdnv function that allows unauthenticated remote attackers to read memory by sending truncated SDNV values. Attackers can send a UDP datagram to the LTP link service input port with a truncated SDNV to trigger reads up to nine bytes past buffer boundaries and underflow byte counters.",
+      "refs": "https://github.com/nasa-jpl/ION-DTN\nhttps://github.com/nasa-jpl/ION-DTN/blob/ion-open-source-4.1.4/ici/library/ion.c#L1693\nhttps://github.com/nasa-jpl/ION-DTN/blob/ion-open-source-4.1.4/ici/library/platform.c#L1982",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:59"
+    },
+    {
+      "cve_id": "CVE-2026-84702",
+      "title": "高危漏洞: CVE-2026-84702 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-02 09:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "facefusion through 3.6.1 fails to normalize job identifiers in get_job_file_name, allowing attackers to write files outside the jobs directory. Attackers can supply traversal sequences in the job identifier parameter through the unauthenticated HTTP API to create files at arbitrary locations.",
+      "refs": "https://github.com/facefusion/facefusion\nhttps://github.com/facefusion/facefusion/blob/3.6.1/facefusion/jobs/job_manager.py\nhttps://github.com/facefusion/facefusion/commit/a2cbfd73b10191e51ed2eb1e83c19121153e0a22",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:55"
+    },
+    {
+      "cve_id": "CVE-2026-84700",
+      "title": "高危漏洞: CVE-2026-84700 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-09-02 09:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+      "description": "PikiwiDB (Pika) v3.5.7 exposes an internal protobuf replication server on a port derived from the client port plus 2000 (e.g. 11221 when the default client port 9221 is used) that does not authenticate incoming requests. Although requirepass is intended to gate replication — a slave presents it as masterauth inside its MetaSync request — only the MetaSync handler (HandleMetaSyncRequest) validates it; the frame dispatcher (DealMessage) does not require a completed or attempted MetaSync before routing other message types to their handlers. As a result, an unauthenticated remote attacker can connect directly to the replication port and issue TrySync, DBSync, BinlogSync, and RemoveSlaveNode requests, obtaining the full-sync snapshot and live write stream and removing replica nodes, even when requirepass is configured.",
+      "refs": "https://github.com/OpenAtomFoundation/pikiwidb\nhttps://github.com/OpenAtomFoundation/pikiwidb/blob/v3.5.7/src/pika_repl_server_conn.cc\nhttps://github.com/OpenAtomFoundation/pikiwidb/issues/3270",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:48"
+    },
+    {
+      "cve_id": "CVE-2026-84699",
+      "title": "高危漏洞: CVE-2026-84699 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-02 09:17:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Team Password Manager before 14.184.308 fails to enforce authentication requirements in the local account password reset flow. Unauthenticated attackers can reset local account passwords and authenticate as those users to gain unauthorized access.",
+      "refs": "https://teampasswordmanager.com/\nhttps://teampasswordmanager.com/blog/chrome-extension-6.42.27-tpm-14.184.308/\nhttps://teampasswordmanager.com/docs/changelog/",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:44"
+    },
+    {
+      "cve_id": "CVE-2026-84696",
+      "title": "高危漏洞: CVE-2026-84696 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-02 09:17:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Phison PS3111-S11 controller firmware versions through SBFQT1.3 expose privileged vendor unique commands over the ATA interface with absent or defeatable authentication mechanisms. Attackers can bypass the weak CRC-16 based unlock handshake or exploit builds with no VUC lock to read and write controller memory and raw flash, persisting implants across power cycles.",
+      "refs": "https://github.com/trulycrisp/disksec\nhttps://github.com/trulycrisp/psychite\nhttps://trulycrisp.github.io/drivefirmware/phison_s11/",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:40"
+    },
+    {
+      "cve_id": "CVE-2026-84695",
+      "title": "高危漏洞: CVE-2026-84695 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-09-02 09:17:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "BookStack before 26.05.4 contains a stored cross-site scripting vulnerability in the drawing upload endpoint that accepts unvalidated base64 content and stores it without content inspection. Attackers with editor permissions can upload SVG files containing scripts that execute in administrator browsers when accessed through the image gallery API without content-type validation or CSP headers.",
+      "refs": "https://github.com/BookStackApp/BookStack\nhttps://github.com/BookStackApp/BookStack/blob/v26.05.3/app/Uploads/ImageService.php\nhttps://github.com/BookStackApp/BookStack/commit/ac0348a79f3ddd004ca87703948cb9c7d19a420a",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:34"
+    },
+    {
+      "cve_id": "CVE-2026-84694",
+      "title": "高危漏洞: CVE-2026-84694 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-02 09:17:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Coolify before 4.2.0 fails to properly escape environment variable key names in Docker commands executed over SSH on managed servers. Authenticated attackers can inject shell metacharacters into environment variable keys to execute arbitrary commands on the server host outside containers.",
+      "refs": "https://github.com/coollabsio/coolify\nhttps://github.com/coollabsio/coolify/blob/v4.1.2/app/Policies/ApplicationPolicy.php\nhttps://github.com/coollabsio/coolify/blob/v4.1.2/app/Support/ValidationPatterns.php",
+      "source": "NVD",
+      "time": "2026-09-02 15:25:29"
+    },
+    {
       "cve_id": "CVE-2026-84482",
       "title": "高危漏洞: CVE-2026-84482 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61774\nhttps://www.cve.org/CVERecord?id=CVE-2026-61774",
       "source": "NVD",
       "time": "2026-09-02 06:56:21"
-    },
-    {
-      "cve_id": "CVE-2026-61773",
-      "title": "高危漏洞: CVE-2026-61773 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:11",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61773\nhttps://www.cve.org/CVERecord?id=CVE-2026-61773",
-      "source": "NVD",
-      "time": "2026-09-02 06:56:17"
-    },
-    {
-      "cve_id": "CVE-2026-61772",
-      "title": "高危漏洞: CVE-2026-61772 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:10",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61772\nhttps://www.cve.org/CVERecord?id=CVE-2026-61772",
-      "source": "NVD",
-      "time": "2026-09-02 06:56:13"
-    },
-    {
-      "cve_id": "CVE-2026-61771",
-      "title": "高危漏洞: CVE-2026-61771 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:10",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61771\nhttps://www.cve.org/CVERecord?id=CVE-2026-61771",
-      "source": "NVD",
-      "time": "2026-09-02 06:56:08"
-    },
-    {
-      "cve_id": "CVE-2026-61770",
-      "title": "高危漏洞: CVE-2026-61770 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:10",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61770\nhttps://www.cve.org/CVERecord?id=CVE-2026-61770",
-      "source": "NVD",
-      "time": "2026-09-02 06:56:00"
-    },
-    {
-      "cve_id": "CVE-2026-61769",
-      "title": "高危漏洞: CVE-2026-61769 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:10",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61769\nhttps://www.cve.org/CVERecord?id=CVE-2026-61769",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:56"
-    },
-    {
-      "cve_id": "CVE-2026-61768",
-      "title": "高危漏洞: CVE-2026-61768 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61768\nhttps://www.cve.org/CVERecord?id=CVE-2026-61768",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:52"
-    },
-    {
-      "cve_id": "CVE-2026-61767",
-      "title": "高危漏洞: CVE-2026-61767 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61767\nhttps://www.cve.org/CVERecord?id=CVE-2026-61767",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:47"
-    },
-    {
-      "cve_id": "CVE-2026-61766",
-      "title": "高危漏洞: CVE-2026-61766 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61766\nhttps://www.cve.org/CVERecord?id=CVE-2026-61766",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:43"
-    },
-    {
-      "cve_id": "CVE-2026-61765",
-      "title": "高危漏洞: CVE-2026-61765 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61765\nhttps://www.cve.org/CVERecord?id=CVE-2026-61765",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:39"
-    },
-    {
-      "cve_id": "CVE-2026-61764",
-      "title": "高危漏洞: CVE-2026-61764 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61764\nhttps://www.cve.org/CVERecord?id=CVE-2026-61764",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:34"
-    },
-    {
-      "cve_id": "CVE-2026-61763",
-      "title": "高危漏洞: CVE-2026-61763 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61763\nhttps://www.cve.org/CVERecord?id=CVE-2026-61763",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:27"
-    },
-    {
-      "cve_id": "CVE-2026-61762",
-      "title": "高危漏洞: CVE-2026-61762 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-02 00:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NVIDIA Megatron Bridge contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
-      "refs": "https://github.com/NVIDIA/product-security/tree/main/2026/5868\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-61762\nhttps://www.cve.org/CVERecord?id=CVE-2026-61762",
-      "source": "NVD",
-      "time": "2026-09-02 06:55:23"
     }
   ]
 }
