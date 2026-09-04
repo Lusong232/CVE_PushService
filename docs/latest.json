@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-85403",
+      "title": "高危漏洞: CVE-2026-85403 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 12:18:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in code-projects Doctor Appointment System 1.0. This issue affects some unknown processing of the file /contactus.php. This manipulation of the argument firstname causes sql injection. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lccc-t/CVE/issues/6\nhttps://vuldb.com/cve/CVE-2026-85403",
+      "source": "NVD",
+      "time": "2026-09-04 15:32:12"
+    },
+    {
+      "cve_id": "CVE-2026-85402",
+      "title": "高危漏洞: CVE-2026-85402 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 11:17:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in code-projects Doctor Appointment System 1.0. This vulnerability affects unknown code of the file /patient/booking.php. The manipulation of the argument doc_id results in sql injection. The attack may be launched remotely. The exploit is now public and may be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lccc-t/CVE/issues/5\nhttps://vuldb.com/cve/CVE-2026-85402",
+      "source": "NVD",
+      "time": "2026-09-04 15:32:07"
+    },
+    {
+      "cve_id": "CVE-2026-85399",
+      "title": "高危漏洞: CVE-2026-85399 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 11:17:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in code-projects Hospital Information System 1.0. Affected by this vulnerability is the function getSinglePresp of the file includes/presp/PrespController.php. Performing a manipulation of the argument ID results in sql injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lccc-t/CVE/issues/4\nhttps://vuldb.com/cve/CVE-2026-85399",
+      "source": "NVD",
+      "time": "2026-09-04 15:32:01"
+    },
+    {
+      "cve_id": "CVE-2026-85398",
+      "title": "高危漏洞: CVE-2026-85398 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 11:17:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in code-projects Hospital Information System 1.0. Affected is the function viewReq of the file viewReq.php. Such manipulation of the argument ID leads to sql injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lccc-t/CVE/issues/3\nhttps://vuldb.com/cve/CVE-2026-85398",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:56"
+    },
+    {
+      "cve_id": "CVE-2026-85148",
+      "title": "高危漏洞: CVE-2026-85148 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-04 11:17:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SmartIT Desktop Manager developed by Lightstar has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can exploit a fixed password to remotely access user hosts.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:49"
+    },
+    {
+      "cve_id": "CVE-2026-85147",
+      "title": "高危漏洞: CVE-2026-85147 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-04 11:17:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "SmartIT Desktop Manager developed by Lightstar has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can obtain a specific password from the source code, which can be used to retrieve the AES encryption key used for communication.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:43"
+    },
+    {
+      "cve_id": "CVE-2026-85146",
+      "title": "高危漏洞: CVE-2026-85146 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-04 11:17:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SmartIT Desktop Manager developed by Lightstar has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can obtain the SSH service account credentials and passwords for the SmartIT Agent directly from the application source code.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:39"
+    },
+    {
+      "cve_id": "CVE-2026-85397",
+      "title": "高危漏洞: CVE-2026-85397 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 10:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in code-projects Hospital Information System 1.0. This impacts the function findBySearch of the file addReq.php. This manipulation of the argument Search causes sql injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://code-projects.org/\nhttps://github.com/lccc-t/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-85397",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:35"
+    },
+    {
+      "cve_id": "CVE-2026-85380",
+      "title": "高危漏洞: CVE-2026-85380 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 09:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in light0011 cms c774dce31c6df0055568a8d5c53d964d99be199d/f72cf46f601efb2a0618c3814cc2f61380b38930. This vulnerability affects the function catchimage of the file Public/ueditor/php/controller.php of the component UEditor. This manipulation of the argument source[] causes server-side request forgery. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/light0011/cms/\nhttps://github.com/light0011/cms/issues/6\nhttps://vuldb.com/cve/CVE-2026-85380",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:30"
+    },
+    {
+      "cve_id": "CVE-2026-85379",
+      "title": "高危漏洞: CVE-2026-85379 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-04 09:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in light0011 cms c774dce31c6df0055568a8d5c53d964d99be199d/f72cf46f601efb2a0618c3814cc2f61380b38930. This affects the function ChapterModel::searchChapter of the file App/Home/Controller/ChapterController.class.php of the component Query Builder. The manipulation of the argument content results in sql injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/light0011/cms/\nhttps://github.com/light0011/cms/issues/7\nhttps://vuldb.com/cve/CVE-2026-85379",
+      "source": "NVD",
+      "time": "2026-09-04 15:31:24"
+    },
+    {
       "cve_id": "CVE-2026-85455",
       "title": "高危漏洞: CVE-2026-85455 (CVSS 8.2)",
       "cvss_score": 8.2,
@@ -989,116 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/geodirectory/vulnerability/wordpress-geodirectory-plugin-2-8-174-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-09-04 02:18:58"
-    },
-    {
-      "cve_id": "CVE-2026-84812",
-      "title": "高危漏洞: CVE-2026-84812 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-04 01:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in BP Better Messages <= 2.15.27 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/bp-better-messages/vulnerability/wordpress-bp-better-messages-plugin-2-15-27-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:53"
-    },
-    {
-      "cve_id": "CVE-2026-84779",
-      "title": "高危漏洞: CVE-2026-84779 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-04 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Subscriber Broken Access Control in Agentimus – AI SEO, llms.txt &amp; MCP for AI Agents <= 1.51.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/agentimus/vulnerability/wordpress-agentimus-ai-seo-llms-txt-mcp-for-ai-agents-plugin-1-51-0-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:48"
-    },
-    {
-      "cve_id": "CVE-2026-84778",
-      "title": "高危漏洞: CVE-2026-84778 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Unauthenticated Denial of Service Attack in Migrate Guru – Site Migration &amp; Cloning <= 6.65 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/migrate-guru/vulnerability/wordpress-migrate-guru-site-migration-cloning-plugin-6-65-denial-of-service-attack-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:43"
-    },
-    {
-      "cve_id": "CVE-2026-84777",
-      "title": "高危漏洞: CVE-2026-84777 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-04 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Unauthenticated Broken Authentication in Really Simple SSL <= 9.8.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/really-simple-ssl/vulnerability/wordpress-really-simple-ssl-plugin-9-8-0-2fa-bypass-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:39"
-    },
-    {
-      "cve_id": "CVE-2026-84776",
-      "title": "高危漏洞: CVE-2026-84776 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Unauthenticated Denial of Service Attack in MalCare Security <= 6.69 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/malcare-security/vulnerability/wordpress-malcare-security-plugin-6-69-denial-of-service-attack-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:34"
-    },
-    {
-      "cve_id": "CVE-2026-84773",
-      "title": "高危漏洞: CVE-2026-84773 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-04 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in EWWW Image Optimizer <= 8.7.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/ewww-image-optimizer/vulnerability/wordpress-ewww-image-optimizer-plugin-8-7-6-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:29"
-    },
-    {
-      "cve_id": "CVE-2026-84768",
-      "title": "高危漏洞: CVE-2026-84768 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-09-04 01:17:28",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Unauthenticated SQL Injection in VikAppointments Services Booking Calendar <= 1.2.20 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/vikappointments/vulnerability/wordpress-vikappointments-services-booking-calendar-plugin-1-2-20-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:21"
-    },
-    {
-      "cve_id": "CVE-2026-84765",
-      "title": "高危漏洞: CVE-2026-84765 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-04 01:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Breadcrumb NavXT <= 7.5.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/breadcrumb-navxt/vulnerability/wordpress-breadcrumb-navxt-plugin-7-5-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:16"
-    },
-    {
-      "cve_id": "CVE-2026-84763",
-      "title": "高危漏洞: CVE-2026-84763 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-04 01:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in RTMKit <= 2.1.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/rometheme-for-elementor/vulnerability/wordpress-rtmkit-plugin-2-1-5-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:11"
-    },
-    {
-      "cve_id": "CVE-2026-84761",
-      "title": "高危漏洞: CVE-2026-84761 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-04 01:17:27",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "Unauthenticated Server Side Request Forgery (SSRF) in LiteSpeed Cache <= 7.9 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/litespeed-cache/vulnerability/wordpress-litespeed-cache-plugin-7-9-server-side-request-forgery-ssrf-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-04 02:18:07"
     }
   ]
 }
