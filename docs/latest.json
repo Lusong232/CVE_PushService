@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-52775",
+      "title": "高危漏洞: CVE-2026-52775 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-05 08:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki through the latest development branch contains a SQL injection vulnerability in ReactionManager::deleteUserReaction() that allows any authenticated user to inject arbitrary SQL via the {idreaction} and {id} URL path parameters. The parameters are concatenated directly into a SQL LIKE clause without escaping or parameterization. This issue has been patched in version 4.6.6.",
+      "refs": "https://github.com/YesWiki/yeswiki/commit/90ca54fb518e1c43a1ead6e4f5bf9f0389789841\nhttps://github.com/YesWiki/yeswiki/releases/tag/v4.6.6\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-4pf7-cc4r-g63h",
+      "source": "NVD",
+      "time": "2026-09-05 15:12:50"
+    },
+    {
+      "cve_id": "CVE-2026-52771",
+      "title": "高危漏洞: CVE-2026-52771 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-09-05 08:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "description": "YesWiki is a wiki system written in PHP. From version 4.2.0 to before version 4.6.6, ApiController::deletePage() interpolates a page tag retrieved from the database into a DELETE FROM …_links WHERE to_tag = '$tag' query without escaping. The page tag is attacker-controlled — the POST /api/pages/{tag} API accepts arbitrary URL-encoded values, including single quotes, and stores them. A low-privilege authenticated user can therefore create a page whose tag is a SQL fragment, make the page non-orphaned via the standard {{include page=\"…\"}} link mechanism, and then invoke the delete endpoint to execute arbitrary SQL inside the wiki database - including time-based blind data exfiltration from any table. This issue has been patched in version 4.6.6.",
+      "refs": "https://github.com/YesWiki/yeswiki/commit/23d3cc124613b9428ab963b31807c08879a9c631\nhttps://github.com/YesWiki/yeswiki/releases/tag/v4.6.6\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-8f2v-2qhj-gfwg",
+      "source": "NVD",
+      "time": "2026-09-05 15:12:45"
+    },
+    {
+      "cve_id": "CVE-2026-52770",
+      "title": "高危漏洞: CVE-2026-52770 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-05 08:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki’s public Bazar entry-listing APIs are vulnerable to unauthenticated SQL injection in numeric query / queries filters. For Bazar fields whose value structure is numeric, YesWiki escapes the attacker-controlled filter value but inserts it into SQL without quotes or numeric validation. An unauthenticated attacker can inject boolean SQL expressions and infer database contents from whether entries are returned. This issue has been patched in version 4.6.6.",
+      "refs": "https://github.com/YesWiki/yeswiki/commit/f3b0dd093a7ace47dc29a515faeb02635baceae2\nhttps://github.com/YesWiki/yeswiki/releases/tag/v4.6.6\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-qg78-vmvc-fhjw",
+      "source": "NVD",
+      "time": "2026-09-05 15:12:40"
+    },
+    {
+      "cve_id": "CVE-2026-52769",
+      "title": "高危漏洞: CVE-2026-52769 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-09-05 08:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "YesWiki is a wiki system written in PHP. From version 4.6.2 to before version 4.6.6, the POST /api/forms/{formId}/actor/inbox route - exposed publicly with acl:\"public\" - accepts an HTTP Signature header whose keyId parameter is a URL. HttpSignatureService::verifySignature() parses the header and immediately makes a server-side HTTP GET to that URL, before any cryptographic verification or URL validation. An unauthenticated remote attacker can therefore make YesWiki issue arbitrary outbound HTTP requests to any host the server can reach - internal services, cloud-metadata endpoints (169.254.169.254), intranet-only admin panels, etc. - and read enough back via timing and error-message oracles to scan ports, enumerate services, and (on a real cloud instance) reach IAM metadata. The only deployment-side precondition is that ActivityPub be enabled on at least one Bazar form. This issue has been patched in version 4.6.6.",
+      "refs": "http://github.com/YesWiki/yeswiki/commit/87e627f33e79879827a3669fee2aa1244612c487\nhttps://github.com/YesWiki/yeswiki/releases/tag/v4.6.6\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-vw42-752g-5mrp",
+      "source": "NVD",
+      "time": "2026-09-05 15:12:35"
+    },
+    {
+      "cve_id": "CVE-2026-52767",
+      "title": "高危漏洞: CVE-2026-52767 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-05 08:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+      "description": "YesWiki is a wiki system written in PHP. From version 4.6.2 to before version 4.6.6, HttpSignatureService::verifySignature() checks the result of PHP's openssl_verify() with a loose boolean negation - if (!openssl_verify(...)) { throw ... }. PHP's openssl_verify has four possible return values: 1, 0, -1, and \"false\". The -1 row is the bypass: PHP's truthiness rules make -1 a truthy value, so !(-1) === false, the throw is skipped, and the controller proceeds to processActivity(). Any condition that makes OpenSSL's EVP_VerifyFinal() return -1 triggers the bypass. The reachable consequence is the controller silently treats a failed verification as success and processes the attacker's payload. This issue has been patched in version 4.6.6.",
+      "refs": "https://github.com/YesWiki/yeswiki/commit/d1795e0301e1a1078f17b4b98f56fff70de2029e\nhttps://github.com/YesWiki/yeswiki/releases/tag/v4.6.6\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-mv28-wj57-f57g",
+      "source": "NVD",
+      "time": "2026-09-05 15:12:30"
+    },
+    {
+      "cve_id": "CVE-2026-52766",
+      "title": "高危漏洞: CVE-2026-52766 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-05 08:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, the {{erasespamedcomments}} wiki action (actions/EraseSpamedCommentsAction.php) accepts a suppr[] array from POST and deletes every wiki page whose tag appears in that array, with no authorization check anywhere in the action body or in the page-deletion path it invokes. Combined with YesWiki's allow-by-default action ACL model, any user who has page write access, which is the default for everyone (default_write_acl='*') on a fresh install can permanently delete arbitrary wiki pages, including the front page, admin pages, and pages owned by other users. This issue has been patched in version 4.6.6.",
+      "refs": "https://github.com/YesWiki/yeswiki/commit/ed5b548a705c8091ba0282aaaba73ddda976abef\nhttps://github.com/YesWiki/yeswiki/releases/tag/v4.6.6\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-6x7x-gcmf-7r8x",
+      "source": "NVD",
+      "time": "2026-09-05 15:12:23"
+    },
+    {
       "cve_id": "CVE-2026-86098",
       "title": "高危漏洞: CVE-2026-86098 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1033,72 +1099,6 @@
       "refs": "https://doi.org/10.5281/zenodo.22169659\nhttps://github.com/ChewKeanHo/software-actualizer/blob/v1.2.0/Shell/debian-minbase-install.sh#L788\nhttps://github.com/ChewKeanHo/software-actualizer/commit/50a0932ac705635d9af62955c353e7c6df003a61.patch",
       "source": "NVD",
       "time": "2026-09-05 01:55:18"
-    },
-    {
-      "cve_id": "CVE-2026-85516",
-      "title": "高危漏洞: CVE-2026-85516 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-04 21:20:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in code-projects Vehicle Management System 1.0. The affected element is an unknown function of the file /busprofile.php. Performing a manipulation of the argument busid results in sql injection. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
-      "refs": "https://code-projects.org/\nhttps://github.com/ahmadmarz10-hub/CVEsMarz/blob/main/SQL%20Injection%20Vulnerability%20in%20Vehicle%20Management%20System%20%60busid%60%20Parameter.md\nhttps://vuldb.com/cve/CVE-2026-85516",
-      "source": "NVD",
-      "time": "2026-09-05 01:55:13"
-    },
-    {
-      "cve_id": "CVE-2026-18198",
-      "title": "高危漏洞: CVE-2026-18198 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-04 21:18:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in TAC Information Services Internal and External Trade Inc. GOLDENHORN ONEIT allows Blind SQL Injection.\n\nThis issue affects GOLDENHORN ONEIT: before Göbeklitepe.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0990",
-      "source": "NVD",
-      "time": "2026-09-05 01:55:08"
-    },
-    {
-      "cve_id": "CVE-2026-85617",
-      "title": "高危漏洞: CVE-2026-85617 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-04 20:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "snipe-it versions before 8.6.3 contain an authorization bypass vulnerability in the bulk delete functionality that allows restricted users to soft-delete users outside their authorized scope. Attackers can include unauthorized user IDs in bulk delete requests to bypass instance-level restrictions and modify or disable accounts they should not access.",
-      "refs": "https://github.com/grokability/snipe-it/security/advisories/GHSA-mx3g-8v84-j6gg\nhttps://www.vulncheck.com/advisories/snipe-it-before-8.6.3-authorization-bypass-via-bulk-delete",
-      "source": "NVD",
-      "time": "2026-09-05 01:55:03"
-    },
-    {
-      "cve_id": "CVE-2026-85616",
-      "title": "高危漏洞: CVE-2026-85616 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-09-04 20:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:L",
-      "description": "Snipe-IT versions before 8.6.2 contain an authorization bypass vulnerability in checkout-acceptance report actions when Full Multiple Company Support is enabled. Authenticated users with reports.view permission can enumerate sequential acceptance IDs and soft-delete or trigger reminder emails for acceptances belonging to other companies by exploiting a null check on the legacy users.company_id column.",
-      "refs": "https://github.com/grokability/snipe-it/security/advisories/GHSA-jqgw-vpjc-86fc\nhttps://www.vulncheck.com/advisories/snipe-it-before-8.6.2-authorization-bypass-via-checkout-acceptance",
-      "source": "NVD",
-      "time": "2026-09-05 01:54:58"
-    },
-    {
-      "cve_id": "CVE-2026-85614",
-      "title": "高危漏洞: CVE-2026-85614 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-04 20:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "OpenPanel before 2.3.0 contains an unauthenticated server-side request forgery vulnerability in the GET /tools/site-checker endpoint that accepts a fully client-controlled URL parameter with no private IP filtering or DNS-rebinding protection. Attackers can make the OpenPanel server issue requests to internal services, localhost, and cloud metadata endpoints, reading internal HTTP response titles, headers, status codes, and SSL certificate information.",
-      "refs": "https://github.com/Openpanel-dev/openpanel/security/advisories/GHSA-gqcr-xgfj-pq29\nhttps://www.vulncheck.com/advisories/openpanel-api-before-2.3.0-unauthenticated-ssrf-via-site-checker",
-      "source": "NVD",
-      "time": "2026-09-05 01:54:52"
-    },
-    {
-      "cve_id": "CVE-2026-85613",
-      "title": "高危漏洞: CVE-2026-85613 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-04 20:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "OpenPanel before 2.3.0 contains a cross-site scripting vulnerability in the unauthenticated favicon proxy endpoint GET /misc/favicon that allows remote attackers to execute scripts by supplying an SVG file URL. Attackers can host malicious SVG files with embedded scripts that execute in the victim's browser on the API origin, enabling same-origin credentialed requests to authenticated endpoints.",
-      "refs": "https://github.com/Openpanel-dev/openpanel/security/advisories/GHSA-r7hx-q6f4-vj6h\nhttps://www.vulncheck.com/advisories/openpanel-unauthenticated-xss-via-svg-favicon-proxy",
-      "source": "NVD",
-      "time": "2026-09-05 01:54:47"
     }
   ]
 }
