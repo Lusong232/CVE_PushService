@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86190",
+      "title": "高危漏洞: CVE-2026-86190 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-05 21:18:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "WWBN AVideo contains a broken access control vulnerability in videoViewsInfo endpoints that returns complete user records including password hashes, recovery tokens, and live session identifiers to unauthenticated callers when a hash parameter is provided. Attackers can use the disclosed session identifier to hijack viewer sessions, including administrator accounts, and obtain sensitive personal data for all video viewers.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-82q2-88mq-p44q\nhttps://www.vulncheck.com/advisories/wwbn-avideo-broken-access-control-via-videoviewsinfo-hash-parameter",
+      "source": "NVD",
+      "time": "2026-09-06 01:01:17"
+    },
+    {
+      "cve_id": "CVE-2026-86189",
+      "title": "高危漏洞: CVE-2026-86189 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-05 21:18:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "WWBN AVideo contains a path traversal vulnerability in notify.ffmpeg.json.php that allows unauthenticated attackers to write files to arbitrary locations by supplying a caller-chosen path in the avideoRelativePath parameter. Attackers can replay any previously issued ciphertext as a notifyCode token, which is decrypted but never validated, to bypass authentication and write files to the application root and subdirectories.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-cprx-fggj-7vpq\nhttps://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-path-traversal-via-notify-ffmpeg-json-php",
+      "source": "NVD",
+      "time": "2026-09-06 01:01:10"
+    },
+    {
+      "cve_id": "CVE-2026-86188",
+      "title": "高危漏洞: CVE-2026-86188 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-05 21:18:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "AVideo with YPTSocket plugin enabled contains a cross-site scripting vulnerability allowing unauthenticated attackers to execute arbitrary JavaScript in other users' browsers via the websocket callback mechanism. Attackers can send crafted socket messages with callback names resolving to global functions like avideoConfirmHTML that accept untrusted data and assign it to innerHTML, achieving script execution in the victim's origin without authentication or user interaction.",
+      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-xpx7-h2x7-59qq\nhttps://www.vulncheck.com/advisories/avideo-yptsocket-plugin-unauthenticated-cross-site-scripting",
+      "source": "NVD",
+      "time": "2026-09-06 01:01:04"
+    },
+    {
+      "cve_id": "CVE-2026-86185",
+      "title": "高危漏洞: CVE-2026-86185 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-09-05 20:16:49",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Bilibili Desktop through 1.18.0 disables TLS certificate verification process-wide and executes unsigned remote JavaScript configuration without integrity checks. An attacker in an on-path network position can intercept configuration fetches, inject arbitrary JavaScript executed in the renderer with access to the privileged IPC bridge, and execute system commands or steal login credentials.",
+      "refs": "https://app.bilibili.com/\nhttps://github.com/LeoWSY-hashblue/bilibili-desktop-tls-disabled-rce\nhttps://github.com/LeoWSY-hashblue/bilibili-desktop-tls-disabled-rce/blob/main/advisory.md",
+      "source": "NVD",
+      "time": "2026-09-06 01:01:00"
+    },
+    {
+      "cve_id": "CVE-2026-86184",
+      "title": "高危漏洞: CVE-2026-86184 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-05 20:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Lara Dashboard before 1.3.0 contains an authentication bypass vulnerability in the screenshot-login route that allows unauthenticated attackers to authenticate as any user by email when APP_ENV is not production. Attackers can request the GET /screenshot-login/{email} endpoint with a registered email address to receive a fully authenticated session, enabling access to user administration, settings, database contents, and arbitrary code execution through the module installer.",
+      "refs": "https://github.com/laradashboard/laradashboard\nhttps://github.com/laradashboard/laradashboard/blob/v1.2.2/app/Http/Controllers/Backend/Auth/ScreenshotGeneratorLoginController.php\nhttps://github.com/laradashboard/laradashboard/commit/50986e4ac58c883dd8f064cf32be3e2a87c11b24",
+      "source": "NVD",
+      "time": "2026-09-06 01:00:55"
+    },
+    {
+      "cve_id": "CVE-2026-10196",
+      "title": "高危漏洞: CVE-2026-10196 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-05 20:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Mail Mint – Email Marketing, Newsletter, Email Automation & WooCommerce Emails plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.31.0 via deserialization of untrusted input in the 'handle_form_submission' function. This makes it possible for unauthenticated attackers to inject a PHP Object. The additional presence of a POP chain allows attackers to execute code on the server. The vulnerability was partially patched in version 1.23.1.",
+      "refs": "https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/app/API/Actions/Frontend/FormAction.php#L59\nhttps://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/app/Database/models/ContactModel.php#L460\nhttps://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/vendor/posthog/posthog-php/lib/Consumer/ForkCurl.php#L96",
+      "source": "NVD",
+      "time": "2026-09-06 01:00:51"
+    },
+    {
+      "cve_id": "CVE-2025-9049",
+      "title": "高危漏洞: CVE-2025-9049 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-05 20:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Nokri – Job Board WordPress Theme theme for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'nokri_account_member_permissions' function in all versions up to, and including, 1.6.4. This makes it possible for authenticated attackers, with Subscriber-level access and above, to add new Subscriber users with employer account member permissions, who in turn can escalate privileges by updating the email address of any user, including Administrator users.",
+      "refs": "https://themeforest.net/item/nokri-job-board-wordpress-theme/22677241#item-description__nokri-theme-change-logs\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e079e886-70a5-4188-ad99-96fc37651ed0?source=cve",
+      "source": "NVD",
+      "time": "2026-09-06 01:00:47"
+    },
+    {
       "cve_id": "CVE-2026-86177",
       "title": "高危漏洞: CVE-2026-86177 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/plandex-ai/plandex\nhttps://github.com/plandex-ai/plandex/blob/cli/v2.2.1/app/cli/lib/apply.go\nhttps://github.com/plandex-ai/plandex/issues/352",
       "source": "NVD",
       "time": "2026-09-05 01:57:48"
-    },
-    {
-      "cve_id": "CVE-2026-85688",
-      "title": "高危漏洞: CVE-2026-85688 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-04 23:17:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "TEN Framework 0.11.71 contains unauthenticated arbitrary file read and write vulnerabilities in the TMAN Designer file-content API endpoints. Attackers can submit POST and PUT requests to the /api/designer/v1/file-content endpoints to read arbitrary files or write malicious content to system paths, enabling code execution through authorized_keys, cron files, or executable graph files.",
-      "refs": "https://github.com/TEN-framework/ten-framework\nhttps://github.com/TEN-framework/ten-framework/blob/0.11.71/core/src/ten_manager/src/designer/file_content/mod.rs\nhttps://github.com/TEN-framework/ten-framework/issues/2187",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:44"
-    },
-    {
-      "cve_id": "CVE-2026-85687",
-      "title": "高危漏洞: CVE-2026-85687 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 23:17:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "surya 0.22.1 screenshot server contains an unauthenticated arbitrary file read vulnerability in the /info, /page, and /process routes that accept raw file_path parameters. Attackers can read any image or PDF file on the host by supplying arbitrary file paths to Image.open or pypdfium2.PdfDocument, obtaining rendered contents as base64 and using /info as an existence oracle.",
-      "refs": "https://github.com/datalab-to/surya\nhttps://github.com/datalab-to/surya/blob/v0.22.1/surya/scripts/screenshot_app.py\nhttps://github.com/datalab-to/surya/issues/518",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:39"
-    },
-    {
-      "cve_id": "CVE-2026-85686",
-      "title": "高危漏洞: CVE-2026-85686 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 23:17:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "ms-swift 4.5.2 contains a server-side request forgery vulnerability in the swift deploy OpenAI-compatible API that fetches multimodal media URLs without validation or redirect filtering. Unauthenticated attackers can supply arbitrary image_url, audio_url, or video_url parameters to make the server issue requests to internal services and cloud metadata endpoints.",
-      "refs": "https://github.com/modelscope/ms-swift\nhttps://github.com/modelscope/ms-swift/blob/v4.5.2/swift/template/vision_utils.py\nhttps://github.com/modelscope/ms-swift/issues/9740",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:35"
-    },
-    {
-      "cve_id": "CVE-2026-85685",
-      "title": "高危漏洞: CVE-2026-85685 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 23:17:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "AgentScope through 2.0.7.post1 contains a path traversal vulnerability in LocalWorkspace.add_skill that copies arbitrary server directories into the agent workspace via an unconfined source path parameter. Attackers can supply any directory path in the skill_path request parameter to copy files into the skills directory, making them accessible through the workspace skill listing.",
-      "refs": "https://github.com/agentscope-ai/agentscope\nhttps://github.com/agentscope-ai/agentscope/blob/v2.0.7.post1/src/agentscope/workspace/_local_workspace.py\nhttps://github.com/agentscope-ai/agentscope/issues/2069",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:27"
-    },
-    {
-      "cve_id": "CVE-2026-85684",
-      "title": "高危漏洞: CVE-2026-85684 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-04 23:17:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "marker through 2.0.0 contains a path traversal vulnerability in the FastAPI /marker/upload handler that fails to sanitize the file.filename parameter. Unauthenticated attackers can supply filenames containing directory traversal sequences to write arbitrary files to any location or delete existing files on the system.",
-      "refs": "https://github.com/datalab-to/marker\nhttps://github.com/datalab-to/marker/blob/v2.0.0/marker/scripts/server.py\nhttps://github.com/datalab-to/marker/issues/1047",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:22"
-    },
-    {
-      "cve_id": "CVE-2026-85675",
-      "title": "高危漏洞: CVE-2026-85675 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 23:17:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "OWL's DocumentProcessingToolkit contains a server-side request forgery vulnerability in the extract_document_content tool that fetches caller-supplied URLs with no scheme, host, or IP filtering. Attackers can inject malicious URLs through prompt injection to make the server fetch internal resources, with responses returned to the agent context.",
-      "refs": "https://github.com/camel-ai/owl\nhttps://github.com/camel-ai/owl/blob/fba1dd5b3a9e8cc15f16221bb002cca7e3de2d9d/owl/utils/document_toolkit.py\nhttps://github.com/camel-ai/owl/issues/615",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:18"
-    },
-    {
-      "cve_id": "CVE-2026-85674",
-      "title": "高危漏洞: CVE-2026-85674 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-04 23:17:45",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "aider (aider-chat) automatically loads a .aider.conf.yml configuration file from the root of the git repository it is launched in. A crafted repository can set test-cmd (executed at startup) or lint-cmd (executed on the first file edit), which aider runs through a shell (subprocess with shell=True) without any user confirmation, LLM interaction, or API key. Consequently, a user who clones and runs aider inside an attacker-supplied repository achieves arbitrary command execution on their machine. The behavior is long-standing and was confirmed on 0.86.3.dev (current main).",
-      "refs": "https://github.com/Aider-AI/aider\nhttps://github.com/Aider-AI/aider/blob/v0.86.2/aider/main.py\nhttps://github.com/Aider-AI/aider/issues/5254",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:14"
     }
   ]
 }
