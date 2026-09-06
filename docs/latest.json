@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86166",
+      "title": "高危漏洞: CVE-2026-86166 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-06 12:18:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Tenda HG10 300001138. This issue affects the function formWanRedirect of the file /boaform/formWanRedirect of the component Boa Web Server. Executing a manipulation of the argument if can lead to buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formWanRedirect-if.md\nhttps://vuldb.com/cve/CVE-2026-86166\nhttps://vuldb.com/submit/895595",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:31"
+    },
+    {
+      "cve_id": "CVE-2026-86165",
+      "title": "高危漏洞: CVE-2026-86165 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-06 12:18:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Tenda HG10 300001138. This vulnerability affects the function formURL of the file /boaform/admin/formURL. Performing a manipulation of the argument Keywd/urlFQDN results in buffer overflow. The attack may be initiated remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formURL-keywd.md\nhttps://vuldb.com/cve/CVE-2026-86165\nhttps://vuldb.com/submit/895583",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:27"
+    },
+    {
+      "cve_id": "CVE-2026-86162",
+      "title": "高危漏洞: CVE-2026-86162 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-06 11:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Online Voting System 1.0. This affects an unknown function of the file /ajax.php?action=login. Executing a manipulation of the argument Username can lead to sql injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/Aurora-Song/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-86162\nhttps://vuldb.com/submit/895450",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:23"
+    },
+    {
+      "cve_id": "CVE-2026-86161",
+      "title": "高危漏洞: CVE-2026-86161 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-06 11:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Online Voting System 1.0. The impacted element is an unknown function of the file /ajax.php?action=delete_category. Performing a manipulation of the argument ID results in sql injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
+      "refs": "https://github.com/lwcc223/CVE/issues/3\nhttps://vuldb.com/cve/CVE-2026-86161\nhttps://vuldb.com/submit/895416",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:18"
+    },
+    {
+      "cve_id": "CVE-2026-86160",
+      "title": "高危漏洞: CVE-2026-86160 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-06 11:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in SourceCodester Online Voting System 1.0. The affected element is an unknown function of the file /ajax.php?action=delete_voting. Such manipulation of the argument ID leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/lwcc223/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-86160\nhttps://vuldb.com/submit/895415",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:13"
+    },
+    {
+      "cve_id": "CVE-2026-86159",
+      "title": "高危漏洞: CVE-2026-86159 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-06 11:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in SourceCodester Online Voting System 1.0. Impacted is an unknown function of the file /ajax.php?action=save_user. This manipulation of the argument ID causes sql injection. The attack may be initiated remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/lwcc223/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-86159\nhttps://vuldb.com/submit/895412",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:09"
+    },
+    {
+      "cve_id": "CVE-2026-75816",
+      "title": "高危漏洞: CVE-2026-75816 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-06 11:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to Authentication Bypass to Account Takeover in all versions up to, and including, 3.29.12. This is due to the pre_update_value function lacking any capability or ownership check, and ActionPost::conditions_logic() short-circuiting its current_user_can('edit_post') authorization gate whenever the post ID is non-numeric — such as the string user_1 — allowing unauthenticated form submissions to be routed to arbitrary user records without restriction. This makes it possible for unauthenticated attackers to overwrite any user's registered email address, including an administrator's, and then leverage WordPress's native password-reset flow to fully take over the targeted account.",
+      "refs": "https://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.29.10/main/frontend/fields/user/class-user-email.php#L127\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.29.10/main/frontend/forms/actions/post.php#L1001\nhttps://plugins.trac.wordpress.org/browser/acf-frontend-form-element/tags/3.29.10/main/frontend/forms/actions/post.php#L1224",
+      "source": "NVD",
+      "time": "2026-09-06 15:25:01"
+    },
+    {
+      "cve_id": "CVE-2026-18056",
+      "title": "高危漏洞: CVE-2026-18056 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-06 11:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The HivePress Authentication plugin for WordPress is vulnerable to Authentication Bypass via the access_token parameter in all versions up to, and including, 1.1.4. This is due to the authenticate_user function's Facebook authenticator resolving third-party identity by forwarding the attacker-supplied access_token to the Facebook Graph API and trusting the returned email and ID verbatim, without performing any application ID or audience validation — specifically, no /debug_token verification and no comparison of the token's app_id against the configured hp_facebook_app_id. This makes it possible for unauthenticated attackers to authenticate as any existing WordPress user, including administrators, whose email address is associated with a Facebook account for which the attacker can obtain any valid access token. Important Note: To exploit the vulnerability, the attacker must obtain the victim's access token.",
+      "refs": "https://developers.facebook.com/docs/facebook-login/guides/advanced/manual-flow/#confirm\nhttps://github.com/hivepress/hivepress-authentication/commit/f97d9109002905cf57597d15c535d1155dc64657\nhttps://plugins.trac.wordpress.org/browser/hivepress-authentication/tags/1.1.4/includes/components/class-facebook-authentication.php#L59",
+      "source": "NVD",
+      "time": "2026-09-06 15:24:56"
+    },
+    {
+      "cve_id": "CVE-2026-16310",
+      "title": "高危漏洞: CVE-2026-16310 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-06 11:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The MemberDash plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.8.5 via the 'id' parameter due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to change the password of any WordPress user, including administrators, by supplying an arbitrary user ID during registration, and take over their account without any notification sent to the victim.",
+      "refs": "https://www.memberdashwp.com\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/222e0f27-f269-4751-9544-1a6cb03ab3a7?source=cve",
+      "source": "NVD",
+      "time": "2026-09-06 15:24:51"
+    },
+    {
+      "cve_id": "CVE-2026-86153",
+      "title": "高危漏洞: CVE-2026-86153 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-06 10:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Tenda CP3 27.5.57.101. This affects the function CRedirServer::SetRedirectEnable of the file Functions/Redirect.cpp. The manipulation leads to improper privilege management. Remote exploitation of the attack is possible.",
+      "refs": "https://vuldb.com/cve/CVE-2026-86153\nhttps://vuldb.com/submit/895354\nhttps://vuldb.com/vuln/399276",
+      "source": "NVD",
+      "time": "2026-09-06 15:24:47"
+    },
+    {
+      "cve_id": "CVE-2026-86152",
+      "title": "高危漏洞: CVE-2026-86152 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-06 10:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw has been found in Tenda CP3 27.5.57.101. The impacted element is the function CAutoAddWifi::ThreadProc of the file Functions/AutoAddWifi.cpp of the component Kylin. Executing a manipulation can lead to os command injection. The attack may be launched remotely.",
+      "refs": "https://vuldb.com/cve/CVE-2026-86152\nhttps://vuldb.com/submit/895353\nhttps://vuldb.com/vuln/399275",
+      "source": "NVD",
+      "time": "2026-09-06 15:24:42"
+    },
+    {
+      "cve_id": "CVE-2026-86151",
+      "title": "高危漏洞: CVE-2026-86151 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-06 08:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tenda CP3 27.5.57.101. The affected element is the function sub_2F77E8 of the file Apis/system.c of the component Network Configuration Management. Performing a manipulation results in os command injection. The attack may be initiated remotely.",
+      "refs": "https://vuldb.com/cve/CVE-2026-86151\nhttps://vuldb.com/submit/895352\nhttps://vuldb.com/vuln/399274",
+      "source": "NVD",
+      "time": "2026-09-06 15:24:37"
+    },
+    {
       "cve_id": "CVE-2026-86149",
       "title": "高危漏洞: CVE-2026-86149 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -967,138 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7285641",
       "source": "NVD",
       "time": "2026-09-05 04:01:51"
-    },
-    {
-      "cve_id": "CVE-2026-19305",
-      "title": "高危漏洞: CVE-2026-19305 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-05 00:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery.",
-      "refs": "https://www.ibm.com/support/pages/node/7285639",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:45"
-    },
-    {
-      "cve_id": "CVE-2026-19304",
-      "title": "高危漏洞: CVE-2026-19304 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-09-05 00:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.2 could allow a remote authenticated attacker to obtain sensitive information from internal services due to a URL parser discrepancy.",
-      "refs": "https://www.ibm.com/support/pages/node/7285639",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:41"
-    },
-    {
-      "cve_id": "CVE-2026-19303",
-      "title": "高危漏洞: CVE-2026-19303 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-05 00:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.2 could allow a remote authenticated attacker to delete arbitrary local files or directories due to improper limitation of a pathname to a restricted directory.",
-      "refs": "https://www.ibm.com/support/pages/node/7285643",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:37"
-    },
-    {
-      "cve_id": "CVE-2026-19300",
-      "title": "高危漏洞: CVE-2026-19300 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-05 00:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.2 could allow a remote attacker to obtain sensitive information due to incomplete scrubbing of sensitive credential fields.",
-      "refs": "https://www.ibm.com/support/pages/node/7285642",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:33"
-    },
-    {
-      "cve_id": "CVE-2026-19298",
-      "title": "高危漏洞: CVE-2026-19298 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-05 00:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.2 could allow a remote authenticated attacker to execute arbitrary code due to an authorization bypass in the flow build process.",
-      "refs": "https://www.ibm.com/support/pages/node/7285640",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:26"
-    },
-    {
-      "cve_id": "CVE-2026-19283",
-      "title": "高危漏洞: CVE-2026-19283 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-09-05 00:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "IBM Observability with Instana (Agent) Build 1.0.303 through 1.0.323 IBM Instana Agent Operator could allow an authenticated remote attacker to obtain sensitive information, caused by missing destination namespace validation when copying etcd mTLS client credentials from the openshift-etcd system namespace into an attacker-controlled namespace.",
-      "refs": "https://www.ibm.com/support/pages/node/7286070",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:22"
-    },
-    {
-      "cve_id": "CVE-2026-19274",
-      "title": "高危漏洞: CVE-2026-19274 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-09-05 00:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-      "description": "IBM Observability with Instana (Agent) Build 1.0.303 through 1.0.323 IBM Instana Agent Operator could allow an authenticated Kubernetes tenant to hijack or permanently destroy another tenant's cluster-level RBAC permissions, caused by cluster-scoped RBAC objects being keyed solely by the bare CR name with no namespace disambiguation, allowing a same-named `InstanaAgent` CR in an attacker-controlled namespace to silently overwrite the shared `ClusterRoleBinding` or delete it outright and revoke the victim agent's cluster monitoring access.",
-      "refs": "https://www.ibm.com/support/pages/node/7286070",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:16"
-    },
-    {
-      "cve_id": "CVE-2026-18905",
-      "title": "高危漏洞: CVE-2026-18905 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-09-05 00:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "IBM ContextForge MCP Gateway (`mcp-contextforge-gateway`) <= v1.0.6 MCP Context Forge could allow a remote authenticated attacker to obtain sensitive information due to a DNS rebinding vulnerability during tool invocation.",
-      "refs": "https://www.ibm.com/support/pages/node/7286053",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:10"
-    },
-    {
-      "cve_id": "CVE-2026-18658",
-      "title": "高危漏洞: CVE-2026-18658 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-05 00:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Operational Decision Manager 9.6.0.0, 9.5.0.0, 8.11.1.0, 8.11.0.1, 8.12.0.1, 9.5.0.1, and 9.0.0.1 is vulnerable to SQL injection. An unauthenticated attacker can execute arbitrary SQL statements and leverage database functionality to write a web shell to the application web root, resulting in remote code execution.",
-      "refs": "https://www.ibm.com/support/pages/node/7286196",
-      "source": "NVD",
-      "time": "2026-09-05 04:01:05"
-    },
-    {
-      "cve_id": "CVE-2026-85699",
-      "title": "高危漏洞: CVE-2026-85699 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 23:17:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "jina-ai reader contains a server-side request forgery vulnerability where URL validation is performed only on the initial request but not re-applied to subsequent redirect hops. Attackers can craft a public URL that redirects to internal network addresses or cloud metadata endpoints, allowing the server to fetch and return the target's response body to the attacker.",
-      "refs": "https://github.com/jina-ai/reader\nhttps://github.com/jina-ai/reader/blob/1574bfd380d249c86c82db4dace0d9c8fe17e2b1/src/services/curl.ts\nhttps://github.com/jina-ai/reader/blob/1574bfd380d249c86c82db4dace0d9c8fe17e2b1/src/services/puppeteer.ts",
-      "source": "NVD",
-      "time": "2026-09-05 01:58:14"
-    },
-    {
-      "cve_id": "CVE-2026-85696",
-      "title": "高危漏洞: CVE-2026-85696 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-04 23:17:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SadTalker contains an OS command injection vulnerability in the video muxing process where uploaded audio filenames are interpolated into ffmpeg commands without proper escaping. Attackers can upload audio files with shell metacharacters in the filename to break out of quoted arguments and execute arbitrary system commands when video generation occurs.",
-      "refs": "https://github.com/OpenTalker/SadTalker\nhttps://github.com/OpenTalker/SadTalker/blob/v0.0.2/src/utils/videoio.py\nhttps://github.com/OpenTalker/SadTalker/issues/1043",
-      "source": "NVD",
-      "time": "2026-09-05 01:58:10"
-    },
-    {
-      "cve_id": "CVE-2026-85695",
-      "title": "高危漏洞: CVE-2026-85695 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-09-04 23:17:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "FastChat contains an authentication bypass vulnerability in the /register_worker endpoint that allows unauthenticated attackers to register arbitrary worker addresses and perform server-side request forgery. Attackers can register malicious workers under victim model names to intercept user prompts, images, and responses, or probe internal network ports across the worker mesh.",
-      "refs": "https://github.com/lm-sys/FastChat\nhttps://github.com/lm-sys/FastChat/blob/v0.2.36/fastchat/serve/controller.py\nhttps://github.com/lm-sys/FastChat/issues/3886",
-      "source": "NVD",
-      "time": "2026-09-05 01:58:02"
     }
   ]
 }
