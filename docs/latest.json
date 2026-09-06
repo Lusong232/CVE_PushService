@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86259",
+      "title": "高危漏洞: CVE-2026-86259 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-06 21:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "description": "OpenMAIC before 1.0.1 skips server-side request forgery validation in non-production builds, allowing unauthenticated attackers to reach cloud instance metadata services. Attackers can supply arbitrary provider URLs via the x-base-url header or baseUrl parameter to access sensitive cloud credentials and metadata.",
+      "refs": "https://github.com/THU-MAIC/OpenMAIC\nhttps://github.com/THU-MAIC/OpenMAIC/blob/v1.0.0/app/api/generate/image/route.ts#L73-L78\nhttps://github.com/THU-MAIC/OpenMAIC/blob/v1.0.0/middleware.ts#L60-L63",
+      "source": "NVD",
+      "time": "2026-09-07 01:24:58"
+    },
+    {
+      "cve_id": "CVE-2026-86214",
+      "title": "高危漏洞: CVE-2026-86214 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-06 21:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Mstfakts College-Management-System. Impacted is an unknown function of the file Front-end/login.php. This manipulation of the argument email causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Mstfakts/College-Management-System/issues/6\nhttps://vuldb.com/cve/CVE-2026-86214\nhttps://vuldb.com/submit/897250",
+      "source": "NVD",
+      "time": "2026-09-07 01:24:51"
+    },
+    {
+      "cve_id": "CVE-2026-86213",
+      "title": "高危漏洞: CVE-2026-86213 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-06 21:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Mstfakts/College-Management-System/\nhttps://github.com/Mstfakts/College-Management-System/issues/5\nhttps://vuldb.com/cve/CVE-2026-86213",
+      "source": "NVD",
+      "time": "2026-09-07 01:24:46"
+    },
+    {
+      "cve_id": "CVE-2026-86250",
+      "title": "高危漏洞: CVE-2026-86250 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-06 20:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "h3 versions before 2.0.1-rc.18 fail to validate the chunk count parsed from user-controlled cookie values in setChunkedCookie() and deleteChunkedCookie() functions. Attackers can send a crafted cookie header with an extremely large chunk count to trigger an O(n²) cleanup loop that hangs the server process.",
+      "refs": "https://github.com/h3js/h3/security/advisories/GHSA-q5pr-72pq-83v3\nhttps://www.vulncheck.com/advisories/h3-before-2.0.1-rc.18-denial-of-service-via-unbounded-chunked-cookie",
+      "source": "NVD",
+      "time": "2026-09-07 01:24:40"
+    },
+    {
+      "cve_id": "CVE-2026-86242",
+      "title": "高危漏洞: CVE-2026-86242 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-06 20:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Bifrost HTTP transport before 2.0.0 accepts an enabled custom plugin whose path is an HTTP URL through unauthenticated POST /api/plugins when management authentication is disabled (the default, governance.auth_config.is_enabled=false). The shared-object loader treats an http-prefixed path as a download URL, writes the body to a temporary .so, and passes it to Go's plugin.Open. After a successful open, optional Init runs immediately with the supplied config as the Bifrost process user. On documented dynamically linked builds (DYNAMIC=1 / no static-link flags), which the vendor requires for custom Go plugins, plugin.Open is expected to succeed and this is unauthenticated remote code execution. On the published statically linked Docker image, plugin.Open fails with Dynamic loading not supported, so that build class is only server-side request forgery. Attack complexity is High because the attacker cannot force RCE on the default static image and a loadable plugin must match the host Go version, OS, architecture, and linkage. The 1.6.x HTTP transport line through 1.6.11 does not contain the fix.",
+      "refs": "https://github.com/maximhq/bifrost\nhttps://github.com/maximhq/bifrost/commit/e0057ff355f831c251eabe9d0e44f3a3748532c6\nhttps://github.com/maximhq/bifrost/pull/5763",
+      "source": "NVD",
+      "time": "2026-09-07 01:24:35"
+    },
+    {
+      "cve_id": "CVE-2022-51009",
+      "title": "高危漏洞: CVE-2022-51009 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-06 20:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "PocketMine-MP before 4.7.2 fails to properly handle exceptions from the adhocore/json-comment library when parsing skin geometry data. Attackers can send login or skin packets with invalid geometry JSON to trigger an unhandled RuntimeException, causing server crash.",
+      "refs": "https://github.com/pmmp/PocketMine-MP/commit/c9626c610b8f6810c8c987559c9197b2a291f0bb\nhttps://github.com/pmmp/PocketMine-MP/security/advisories/GHSA-8cwq-4cmf-px73\nhttps://www.vulncheck.com/advisories/pocketmine-mp-before-4.7.2-denial-of-service-via-skin-geometry",
+      "source": "NVD",
+      "time": "2026-09-07 01:24:25"
+    },
+    {
       "cve_id": "CVE-2026-86211",
       "title": "高危漏洞: CVE-2026-86211 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/gubertoli/cve/tree/main/CVE-2021-44320\nhttps://www.researchgate.net/publication/257681090_ARDrone_corruption\nhttps://www.researchgate.net/publication/313177418_The_Impact_of_DoS_Attacks_on_the_ARDrone_20",
       "source": "NVD",
       "time": "2026-09-05 06:38:18"
-    },
-    {
-      "cve_id": "CVE-2026-31020",
-      "title": "高危漏洞: CVE-2026-31020 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-05 01:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In DocsGPT 0.15.0 and below, the application provides a custom prompt feature that allows users to define prompt content used during chatbot interactions. This functionality renders user-supplied prompt data using Jinja templates without input sanitization or sandboxing. An unauthenticated attacker can inject malicious template expressions, leading to a server-side template injection (SSTI) vulnerability that can be exploited to achieve full remote code execution (RCE).",
-      "refs": "http://arc53.com\nhttps://github.com/PhDg1410/CVE/tree/main/CVE-2026-31020",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:13"
-    },
-    {
-      "cve_id": "CVE-2026-75160",
-      "title": "高危漏洞: CVE-2026-75160 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-05 00:17:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "An issue in X-Serie Gateway Firmware V6_00_05 allows a remote attacker to escalate privileges via the endpoints /cgi-bin/wwwugw.cgi and /cgi-bin/ugwdownload.cgi.",
-      "refs": "https://en.mbs-solutions.de/mbs\nhttps://en.mbs-solutions.de/xserie\nhttps://github.com/SilviaMun/vulnerability-research/tree/main/CVE-2026-75160",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:07"
-    },
-    {
-      "cve_id": "CVE-2022-35499",
-      "title": "高危漏洞: CVE-2022-35499 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-05 00:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "In Trimble TM4WEB 21.4.0.4, the external bill viewer endpoint is vulnerable to reflected cross-site scripting via injection in a arbitrary parameter appended to the URL.",
-      "refs": "http://tm4web.com\nhttp://trimble.com\nhttps://github.com/PN-Tester/CVE-2022-35499",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:01"
-    },
-    {
-      "cve_id": "CVE-2026-81270",
-      "title": "高危漏洞: CVE-2026-81270 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 15:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Apache Allura: exposure of non-public information via search.\n\n\n\nThis issue affects Apache Allura: through 1.20.0.\n\n\n\nUsers are recommended to upgrade to version 1.21.0, which fixes the issue.",
-      "refs": "https://lists.apache.org/thread/xvg5m12k3nngcomfrgvkvdy54srjmtyg\nhttp://www.openwall.com/lists/oss-security/2026/09/03/6",
-      "source": "NVD",
-      "time": "2026-09-05 06:37:53"
-    },
-    {
-      "cve_id": "CVE-2026-85152",
-      "title": "高危漏洞: CVE-2026-85152 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-05 01:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "undici 8.10.0 omits the destination origin from the cache and request-deduplication keys when the cache or deduplicate interceptor is composed directly onto a Client or Pool. Because the internal cache key falls back to an empty origin string, a cacheable or in-flight response from one upstream origin is returned for a request to a different, trusted origin whenever the method, path, and relevant headers match, which permits cross-origin information disclosure and persistent cache poisoning. The reporter demonstrated a full authentication bypass in which a JWT signed with an attacker-controlled key was accepted as belonging to a trusted issuer, and the trusted origin was never contacted. This is a regression introduced in 8.10.0 and affects undici versions from 8.10.0 up to 8.10.2. Applications using an Agent, which carries the origin in its dispatch options, are not affected. Users should upgrade to undici 8.10.2.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/nodejs/undici/security/advisories/GHSA-vp8m-p9jh-q5pm",
-      "source": "NVD",
-      "time": "2026-09-05 04:02:42"
-    },
-    {
-      "cve_id": "CVE-2026-84961",
-      "title": "高危漏洞: CVE-2026-84961 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-05 01:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "undici's BalancedPool constructor passes its entire options object through an internal deep-clone that serializes and reparses the value as JSON. Because JSON cannot represent functions, any function-valued TLS option, such as a caller-supplied checkServerIdentity callback or a custom connector inside the connect option, is silently discarded before it reaches the TLS layer. As a result a peer whose certificate the application's custom checkServerIdentity was written to reject, but which still passes Node's default hostname and chain checks, is accepted when reached through BalancedPool. The Client, Pool, and Agent dispatchers are not affected because they extract the connect and tls options before cloning. This affects undici versions from 7.24.1 up to 7.29.1 and from 8.0.0 up to 8.10.2, and only when the application supplies a function-valued connect or tls option to BalancedPool. Users should upgrade to undici 7.29.1 or 8.10.2.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/nodejs/undici/security/advisories/GHSA-w293-vg96-wgc3",
-      "source": "NVD",
-      "time": "2026-09-05 04:02:34"
     }
   ]
 }
