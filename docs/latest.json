@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86224",
+      "title": "高危漏洞: CVE-2026-86224 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-07 05:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Class and Exam Timetabling System 1.0. Affected is the function mysqli_query of the file /admin/modal_add_product.php. Executing a manipulation of the argument fname can lead to sql injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/justconter/_CVE/issues/5\nhttps://vuldb.com/cve/CVE-2026-86224\nhttps://vuldb.com/submit/897750",
+      "source": "NVD",
+      "time": "2026-09-07 06:33:22"
+    },
+    {
+      "cve_id": "CVE-2026-86223",
+      "title": "高危漏洞: CVE-2026-86223 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-07 04:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester Class and Exam Timetabling System 1.0. This impacts the function mysqli_query of the file /admin/modal_add_coursea.php. Performing a manipulation of the argument course results in sql injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
+      "refs": "https://github.com/justconter/_CVE/issues/4\nhttps://vuldb.com/cve/CVE-2026-86223\nhttps://vuldb.com/submit/897749",
+      "source": "NVD",
+      "time": "2026-09-07 06:33:18"
+    },
+    {
+      "cve_id": "CVE-2026-86222",
+      "title": "高危漏洞: CVE-2026-86222 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-07 04:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in SourceCodester Class and Exam Timetabling System 1.0. This affects the function mysqli_query of the file /admin/modal_add_course2.php. Such manipulation of the argument course leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/justconter/_CVE/issues/3\nhttps://vuldb.com/cve/CVE-2026-86222\nhttps://vuldb.com/submit/897748",
+      "source": "NVD",
+      "time": "2026-09-07 06:33:14"
+    },
+    {
+      "cve_id": "CVE-2026-86221",
+      "title": "高危漏洞: CVE-2026-86221 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-07 03:17:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in SourceCodester Class and Exam Timetabling System 1.0. The impacted element is the function mysqli_query of the file /admin/modal_add_course1.php. This manipulation of the argument course causes sql injection. The attack may be initiated remotely. The exploit has been published and may be used.",
+      "refs": "https://github.com/justconter/_CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-86221\nhttps://vuldb.com/submit/897747",
+      "source": "NVD",
+      "time": "2026-09-07 06:33:10"
+    },
+    {
+      "cve_id": "CVE-2026-86220",
+      "title": "高危漏洞: CVE-2026-86220 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-07 02:17:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. The affected element is the function mysqli_query of the file /admin/modal_add_course.php. The manipulation of the argument course results in sql injection. The attack can be launched remotely. The exploit is now public and may be used.",
+      "refs": "https://github.com/justconter/_CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-86220\nhttps://vuldb.com/submit/897734",
+      "source": "NVD",
+      "time": "2026-09-07 06:33:05"
+    },
+    {
       "cve_id": "CVE-2026-19633",
       "title": "高危漏洞: CVE-2026-19633 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/NangoHQ/nango/commit/ed3030a9a0f8e4f3810fd10cb3a1905a2f5f87d2\nhttps://github.com/NangoHQ/nango/pull/7288\nhttps://github.com/NangoHQ/nango/releases/tag/v0.71.6",
       "source": "NVD",
       "time": "2026-09-05 06:38:48"
-    },
-    {
-      "cve_id": "CVE-2026-85656",
-      "title": "高危漏洞: CVE-2026-85656 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-05 02:18:06",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An OS command injection issue in the log4j-cve-2021-44228-hotpatch package in Amazon Linux before 1.3-9 might allow a local user to execute arbitrary commands with root privileges via a Java process whose executable path contains embedded newline characters.",
-      "refs": "https://alas.aws.amazon.com/AL2/ALAS2-2026-3784.html\nhttps://aws.amazon.com/security/security-bulletins/2026-098-aws/",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:44"
-    },
-    {
-      "cve_id": "CVE-2026-85654",
-      "title": "高危漏洞: CVE-2026-85654 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-05 02:18:05",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in a template engine in the CDK generator in Amazon awslabs.dynamodb-mcp-server before 2.1.6 might allow a context-dependent actor to execute arbitrary code on the host that deploys the generated application via crafted table, index, or attribute names in a data model file.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-097-aws/\nhttps://pypi.org/project/awslabs.dynamodb-mcp-server/2.1.6/",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:39"
-    },
-    {
-      "cve_id": "CVE-2026-82538",
-      "title": "高危漏洞: CVE-2026-82538 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-05 02:18:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "ILIAS before versions 9.22, 10.10, and 11.3 contains a SQL injection vulnerability in the repository trash table where the table navigation sort field from HTTP requests is passed directly into the ORDER BY clause of a SQL query without validation against declared sortable columns. Authenticated users with write permission on any container can inject arbitrary SQL through the sort parameter, and because multi-statement execution is enabled in the database layer, stacked queries enable full database read and write access as well as administrator account takeover.",
-      "refs": "https://docu.ilias.de/ilias.php?baseClass=illmpresentationgui&obj_id=225630&ref_id=35\nhttps://docu.ilias.de/ilias.php?baseClass=illmpresentationgui&obj_id=225631&ref_id=35\nhttps://docu.ilias.de/ilias.php?baseClass=illmpresentationgui&obj_id=225632&ref_id=35",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:34"
-    },
-    {
-      "cve_id": "CVE-2026-61686",
-      "title": "高危漏洞: CVE-2026-61686 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-05 02:17:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SolidInvoice is an open-source invoicing platform. Prior to version 3.0.1, the `DataGrid` LiveComponent deserializes a `context` prop value using PHP's `unserialize()` after receiving it from the client. Because the prop is marked `writable: true`, an authenticated attacker can supply an arbitrary PHP serialized payload. Version 3.0.1 fixes the issue.",
-      "refs": "https://github.com/SolidInvoice/SolidInvoice/releases/tag/3.0.1\nhttps://github.com/SolidInvoice/SolidInvoice/security/advisories/GHSA-4gj8-frx2-gmp6\nhttps://github.com/SolidInvoice/SolidInvoice/security/advisories/GHSA-4gj8-frx2-gmp6",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:30"
-    },
-    {
-      "cve_id": "CVE-2026-19534",
-      "title": "高危漏洞: CVE-2026-19534 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-05 02:17:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "undici's WebSocket client crashes the whole Node.js process during the opening handshake when a server responds with a subprotocol that the client never requested. A default WebSocket connection sends no subprotocol, but if the server's 101 response includes a Sec-WebSocket-Protocol header, undici dereferences a null value while checking it against the requested list and throws an uncaught TypeError. Because that code runs inside a microtask with no surrounding error handling, the exception propagates and terminates the process under Node's default behavior, instead of gracefully failing the connection as required by the WebSocket protocol. Any application that opens a WebSocket to an attacker-controlled or compromised server, or over a plaintext connection subject to a machine-in-the-middle, can be crashed remotely without authentication in the default configuration. This affects undici versions from 6.7.0 up to 6.28.1, from 7.0.0 up to 7.29.1, and from 8.0.0 up to 8.10.2. Users should upgrade to undici 6.28.1, 7.29.1, or 8.10.2.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/nodejs/undici/security/advisories/GHSA-rfgv-xxqx-mfg5",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:25"
     }
   ]
 }
