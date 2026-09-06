@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-19633",
+      "title": "高危漏洞: CVE-2026-19633 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-07 00:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "PostgreSQL Anonymizer contains a vulnerability that allows unprivileged masked users to execute arbitrary code by abusing operators, domain casts, or view subqueries that carry untrusted expressions. When these objects are evaluated in the context of the extension’s masking mechanisms, the malicious code can run with elevated privileges. The issue is fixed in PostgreSQL Anonymizer 3.1.4 and later versions",
+      "refs": "https://gitlab.com/dalibo/postgresql_anonymizer/-/issues/665",
+      "source": "NVD",
+      "time": "2026-09-07 03:44:40"
+    },
+    {
       "cve_id": "CVE-2026-86259",
       "title": "高危漏洞: CVE-2026-86259 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/nodejs/undici/security/advisories/GHSA-rfgv-xxqx-mfg5",
       "source": "NVD",
       "time": "2026-09-05 06:38:25"
-    },
-    {
-      "cve_id": "CVE-2021-44320",
-      "title": "高危漏洞: CVE-2021-44320 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-05 02:17:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Parrot AR.Drone version 1 and 2 does not employ a suitable mechanism to prevent denial-of-service (DoS) attacks. An attacker can harm the device availability (i.e., video streaming and control) by using tool to perform an IPv4 flood attack. Verified attacks includes SYN flooding and UDP flooding.",
-      "refs": "https://github.com/gubertoli/cve/tree/main/CVE-2021-44320\nhttps://www.researchgate.net/publication/257681090_ARDrone_corruption\nhttps://www.researchgate.net/publication/313177418_The_Impact_of_DoS_Attacks_on_the_ARDrone_20",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:18"
     }
   ]
 }
