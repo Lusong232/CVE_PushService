@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86149",
+      "title": "高危漏洞: CVE-2026-86149 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-06 06:17:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Tenda CP3 27.5.57.101. This issue affects some unknown processing of the file Net/NetCheckPing.cpp. This manipulation of the argument interface_name/host causes os command injection. The attack can be initiated remotely.",
+      "refs": "https://vuldb.com/cve/CVE-2026-86149\nhttps://vuldb.com/submit/895350\nhttps://vuldb.com/vuln/399272",
+      "source": "NVD",
+      "time": "2026-09-06 09:53:14"
+    },
+    {
+      "cve_id": "CVE-2026-86148",
+      "title": "高危漏洞: CVE-2026-86148 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-06 06:17:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Tenda CP3 27.5.57.101. This vulnerability affects the function SystemAsh of the file Apis/system.c of the component Kylin. The manipulation of the argument AlarmVoiceURL results in os command injection. It is possible to launch the attack remotely.",
+      "refs": "https://vuldb.com/cve/CVE-2026-86148\nhttps://vuldb.com/submit/895348\nhttps://vuldb.com/vuln/399271",
+      "source": "NVD",
+      "time": "2026-09-06 09:53:09"
+    },
+    {
       "cve_id": "CVE-2026-0799",
       "title": "高危漏洞: CVE-2026-0799 (CVSS 8.7)",
       "cvss_score": 8.7,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/lm-sys/FastChat\nhttps://github.com/lm-sys/FastChat/blob/v0.2.36/fastchat/serve/controller.py\nhttps://github.com/lm-sys/FastChat/issues/3886",
       "source": "NVD",
       "time": "2026-09-05 01:58:02"
-    },
-    {
-      "cve_id": "CVE-2026-85694",
-      "title": "高危漏洞: CVE-2026-85694 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-04 23:17:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LaVague 0.2.35 contains a remote code execution vulnerability in PythonFromMarkdownExtractor.extract_as_object that evaluates untrusted language model output derived from web page content. Attackers can inject malicious Python code through web pages using indirect prompt injection to execute arbitrary code on the operator's host without review.",
-      "refs": "https://github.com/lavague-ai/LaVague\nhttps://github.com/lavague-ai/LaVague/blob/9024bb83/lavague-core/lavague/core/extractors.py\nhttps://github.com/lavague-ai/LaVague/issues/650",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:58"
-    },
-    {
-      "cve_id": "CVE-2026-85691",
-      "title": "高危漏洞: CVE-2026-85691 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-04 23:17:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "MegaParse 0.0.55 contains an unauthenticated server-side request forgery vulnerability in the POST /v1/url endpoint that fetches caller-supplied URLs server-side. Attackers can supply internal service URLs or metadata endpoints without authentication to read their responses directly from the JSON response.",
-      "refs": "https://github.com/The-Vibe-Company/megaparse\nhttps://github.com/The-Vibe-Company/megaparse/blob/megaparse-v0.0.55/libs/megaparse/src/megaparse/api/app.py\nhttps://github.com/The-Vibe-Company/megaparse/issues/259",
-      "source": "NVD",
-      "time": "2026-09-05 01:57:53"
     }
   ]
 }
