@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86225",
+      "title": "高危漏洞: CVE-2026-86225 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-07 06:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in SourceCodester Class and Exam Timetabling System 1.0. Affected by this vulnerability is the function mysqli_query of the file /admin/modal_add_room.php. The manipulation of the argument room_name leads to sql injection. The attack is possible to be carried out remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/justconter/_CVE/issues/6\nhttps://vuldb.com/cve/CVE-2026-86225\nhttps://vuldb.com/submit/897751",
+      "source": "NVD",
+      "time": "2026-09-07 09:50:28"
+    },
+    {
       "cve_id": "CVE-2026-86224",
       "title": "高危漏洞: CVE-2026-86224 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1088,17 +1099,6 @@
       "refs": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0015",
       "source": "NVD",
       "time": "2026-09-05 06:38:53"
-    },
-    {
-      "cve_id": "CVE-2026-9317",
-      "title": "高危漏洞: CVE-2026-9317 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-05 02:18:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Nango before 0.71.6 contains a missing authentication vulnerability in the runner tRPC server that allows unauthenticated attackers to execute arbitrary JavaScript code by invoking the exposed start procedure without credentials. Attackers with network access to the runner port can send requests to the unauthenticated start procedure, bypassing the unenforced RUNNER_SECRET_KEY environment variable, to achieve remote code execution within the runner process.",
-      "refs": "https://github.com/NangoHQ/nango/commit/ed3030a9a0f8e4f3810fd10cb3a1905a2f5f87d2\nhttps://github.com/NangoHQ/nango/pull/7288\nhttps://github.com/NangoHQ/nango/releases/tag/v0.71.6",
-      "source": "NVD",
-      "time": "2026-09-05 06:38:48"
     }
   ]
 }
