@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-75650",
+      "title": "高危漏洞: CVE-2026-75650 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-08 05:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Adobe Commerce is affected by an Improper Neutralization of Special Elements Used in a Template Engine vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+      "refs": "https://helpx.adobe.com/security/products/magento/apsb26-146.html",
+      "source": "NVD",
+      "time": "2026-09-08 07:09:39"
+    },
+    {
       "cve_id": "CVE-2026-86504",
       "title": "高危漏洞: CVE-2026-86504 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formURL-keywd.md\nhttps://vuldb.com/cve/CVE-2026-86165\nhttps://vuldb.com/submit/895583",
       "source": "NVD",
       "time": "2026-09-06 15:25:27"
-    },
-    {
-      "cve_id": "CVE-2026-86162",
-      "title": "高危漏洞: CVE-2026-86162 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-06 11:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in SourceCodester Online Voting System 1.0. This affects an unknown function of the file /ajax.php?action=login. Executing a manipulation of the argument Username can lead to sql injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized.",
-      "refs": "https://github.com/Aurora-Song/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-86162\nhttps://vuldb.com/submit/895450",
-      "source": "NVD",
-      "time": "2026-09-06 15:25:23"
     }
   ]
 }
