@@ -1,6 +1,105 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86510",
+      "title": "高危漏洞: CVE-2026-86510 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-08 10:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in D-Link DIR-822A A_101. Affected is the function tunnel_set_params of the component L2TP Control Message Parser. Such manipulation leads to out-of-bounds write. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://tzh00203.notion.site/D-Link-DIR-822A-L2TP-Host-Name-AVP-Out-of-Bounds-Write-33cb5c52018a80a7af5fdc1af3d5aa73\nhttps://vuldb.com/cve/CVE-2026-86510\nhttps://vuldb.com/submit/906300",
+      "source": "NVD",
+      "time": "2026-09-08 15:33:14"
+    },
+    {
+      "cve_id": "CVE-2026-86509",
+      "title": "高危漏洞: CVE-2026-86509 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-09-08 09:17:55",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw has been found in D-Link DIR-895L A1_102b07. This impacts the function sendOffer/sendACK of the file udhcpcd/serverpacket.c of the component udhcpcd. This manipulation causes stack-based buffer overflow. The attack can only be done within the local network. The exploit has been published and may be used.",
+      "refs": "https://tzh00203.notion.site/D-Link-DIR-895L-Stack-Overflow-in-udhcpd-TR-111-Option-125-Parsing-33cb5c52018a80dc8140e1502e4814d0\nhttps://vuldb.com/cve/CVE-2026-86509\nhttps://vuldb.com/submit/906298",
+      "source": "NVD",
+      "time": "2026-09-08 15:33:09"
+    },
+    {
+      "cve_id": "CVE-2026-76969",
+      "title": "高危漏洞: CVE-2026-76969 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-09-08 09:17:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "description": "@sap/cds-mtxs NPM library does not perform sufficient checks on certain functionality used in multitenant CAP applications with extensibility enabled. An unauthenticated attacker could send specially crafted requests to obtain sensitive credentials and abuse them to replace or delete tenant data. Successful exploitation can result in a high impact on availability and integrity of the application. There may also be partial impact to the confidentiality of business data.",
+      "refs": "https://me.sap.com/notes/3798315\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:33:02"
+    },
+    {
+      "cve_id": "CVE-2026-76967",
+      "title": "高危漏洞: CVE-2026-76967 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-08 09:17:55",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SAP NetWeaver Business Client does not perform sufficient validation when processing certain locally stored data during application startup. An attacker with low privileges on the local system could replace this data with specially crafted content. When the application is next launched, the crafted content is processed and could lead to arbitrary code execution in the context of the user. This results in a high impact on confidentiality, integrity and availability of the application.",
+      "refs": "https://me.sap.com/notes/3784138\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:32:55"
+    },
+    {
+      "cve_id": "CVE-2026-76958",
+      "title": "高危漏洞: CVE-2026-76958 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-09-08 09:17:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
+      "description": "SAP Integration Suite does not sufficiently validate XML documents accepted from untrusted sources in certain internal components. An attacker with low privileges could submit specially crafted XML payloads containing malicious external entity declarations. Successful exploitation could allow the attacker to read sensitive file contents from the server and expose them through monitoring or logging output, resulting in a high impact on confidentiality. It could also lead to resource exhaustion, causing a low impact on availability. There is no impact on integrity.",
+      "refs": "https://me.sap.com/notes/3792978\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:32:51"
+    },
+    {
+      "cve_id": "CVE-2026-66768",
+      "title": "高危漏洞: CVE-2026-66768 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-09-08 09:17:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "description": "SAP GUI for Java does not correctly enforce the trust level policy for certain functions invoked from a connected backend system. A low-privileged attacker could exploit this weakness by manipulating a connected backend system to trigger affected functionality. This could allow arbitrary command execution on the victim's machine, leading to a high impact on the confidentiality, integrity, and availability of the affected system.",
+      "refs": "https://me.sap.com/notes/3781729\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:32:46"
+    },
+    {
+      "cve_id": "CVE-2026-66767",
+      "title": "高危漏洞: CVE-2026-66767 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-08 09:17:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "SAP NetWeaver Application Server for ABAP and ABAP Platform allows an unauthenticated user to send a specially crafted packet that triggers reprocessing of a previously buffered user request, potentially hijacking another user's session under narrow timing conditions. Successful exploitation could result in high impact on confidentiality and integrity, with low impact on availability of the application.",
+      "refs": "https://me.sap.com/notes/3757002\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:32:42"
+    },
+    {
+      "cve_id": "CVE-2026-58240",
+      "title": "高危漏洞: CVE-2026-58240 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-08 09:17:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SAP NetWeaver Message Server does not sufficiently validate the authenticity of internal application server components during registration. An unauthenticated attacker with network access to the affected service could exploit this weakness to register an unauthorized component and potentially perform unauthorized actions within the application environment, resulting in a high impact on the confidentiality, integrity, and availability of the affected system.",
+      "refs": "https://me.sap.com/notes/3759472\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:32:36"
+    },
+    {
+      "cve_id": "CVE-2026-44756",
+      "title": "高危漏洞: CVE-2026-44756 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-08 09:17:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A memory safety vulnerability exists in the Extended Passport Protocol (EPP) processing library. Under specific conditions, an unauthenticated attacker could exploit a crafted network request containing a malformed EPP header, potentially resulting in undefined behavior and abnormal program termination. Successful exploitation may have a high impact on the confidentiality, integrity, and availability of the application.",
+      "refs": "https://me.sap.com/notes/3747649\nhttps://url.sap/sapsecuritypatchday",
+      "source": "NVD",
+      "time": "2026-09-08 15:32:31"
+    },
+    {
       "cve_id": "CVE-2026-86544",
       "title": "高危漏洞: CVE-2026-86544 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1000,105 +1099,6 @@
       "refs": "https://github.com/justconter/_CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-86221\nhttps://vuldb.com/submit/897747",
       "source": "NVD",
       "time": "2026-09-07 06:33:10"
-    },
-    {
-      "cve_id": "CVE-2026-86220",
-      "title": "高危漏洞: CVE-2026-86220 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-07 02:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in SourceCodester Class and Exam Timetabling System 1.0. The affected element is the function mysqli_query of the file /admin/modal_add_course.php. The manipulation of the argument course results in sql injection. The attack can be launched remotely. The exploit is now public and may be used.",
-      "refs": "https://github.com/justconter/_CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-86220\nhttps://vuldb.com/submit/897734",
-      "source": "NVD",
-      "time": "2026-09-07 06:33:05"
-    },
-    {
-      "cve_id": "CVE-2026-19633",
-      "title": "高危漏洞: CVE-2026-19633 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-07 00:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "PostgreSQL Anonymizer contains a vulnerability that allows unprivileged masked users to execute arbitrary code by abusing operators, domain casts, or view subqueries that carry untrusted expressions. When these objects are evaluated in the context of the extension’s masking mechanisms, the malicious code can run with elevated privileges. The issue is fixed in PostgreSQL Anonymizer 3.1.4 and later versions",
-      "refs": "https://gitlab.com/dalibo/postgresql_anonymizer/-/issues/665",
-      "source": "NVD",
-      "time": "2026-09-07 03:44:40"
-    },
-    {
-      "cve_id": "CVE-2026-86259",
-      "title": "高危漏洞: CVE-2026-86259 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-06 21:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
-      "description": "OpenMAIC before 1.0.1 skips server-side request forgery validation in non-production builds, allowing unauthenticated attackers to reach cloud instance metadata services. Attackers can supply arbitrary provider URLs via the x-base-url header or baseUrl parameter to access sensitive cloud credentials and metadata.",
-      "refs": "https://github.com/THU-MAIC/OpenMAIC\nhttps://github.com/THU-MAIC/OpenMAIC/blob/v1.0.0/app/api/generate/image/route.ts#L73-L78\nhttps://github.com/THU-MAIC/OpenMAIC/blob/v1.0.0/middleware.ts#L60-L63",
-      "source": "NVD",
-      "time": "2026-09-07 01:24:58"
-    },
-    {
-      "cve_id": "CVE-2026-86214",
-      "title": "高危漏洞: CVE-2026-86214 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-06 21:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was determined in Mstfakts College-Management-System. Impacted is an unknown function of the file Front-end/login.php. This manipulation of the argument email causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/Mstfakts/College-Management-System/issues/6\nhttps://vuldb.com/cve/CVE-2026-86214\nhttps://vuldb.com/submit/897250",
-      "source": "NVD",
-      "time": "2026-09-07 01:24:51"
-    },
-    {
-      "cve_id": "CVE-2026-86213",
-      "title": "高危漏洞: CVE-2026-86213 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-06 21:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
-      "refs": "https://github.com/Mstfakts/College-Management-System/\nhttps://github.com/Mstfakts/College-Management-System/issues/5\nhttps://vuldb.com/cve/CVE-2026-86213",
-      "source": "NVD",
-      "time": "2026-09-07 01:24:46"
-    },
-    {
-      "cve_id": "CVE-2026-86250",
-      "title": "高危漏洞: CVE-2026-86250 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-06 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "h3 versions before 2.0.1-rc.18 fail to validate the chunk count parsed from user-controlled cookie values in setChunkedCookie() and deleteChunkedCookie() functions. Attackers can send a crafted cookie header with an extremely large chunk count to trigger an O(n²) cleanup loop that hangs the server process.",
-      "refs": "https://github.com/h3js/h3/security/advisories/GHSA-q5pr-72pq-83v3\nhttps://www.vulncheck.com/advisories/h3-before-2.0.1-rc.18-denial-of-service-via-unbounded-chunked-cookie",
-      "source": "NVD",
-      "time": "2026-09-07 01:24:40"
-    },
-    {
-      "cve_id": "CVE-2026-86242",
-      "title": "高危漏洞: CVE-2026-86242 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-06 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Bifrost HTTP transport before 2.0.0 accepts an enabled custom plugin whose path is an HTTP URL through unauthenticated POST /api/plugins when management authentication is disabled (the default, governance.auth_config.is_enabled=false). The shared-object loader treats an http-prefixed path as a download URL, writes the body to a temporary .so, and passes it to Go's plugin.Open. After a successful open, optional Init runs immediately with the supplied config as the Bifrost process user. On documented dynamically linked builds (DYNAMIC=1 / no static-link flags), which the vendor requires for custom Go plugins, plugin.Open is expected to succeed and this is unauthenticated remote code execution. On the published statically linked Docker image, plugin.Open fails with Dynamic loading not supported, so that build class is only server-side request forgery. Attack complexity is High because the attacker cannot force RCE on the default static image and a loadable plugin must match the host Go version, OS, architecture, and linkage. The 1.6.x HTTP transport line through 1.6.11 does not contain the fix.",
-      "refs": "https://github.com/maximhq/bifrost\nhttps://github.com/maximhq/bifrost/commit/e0057ff355f831c251eabe9d0e44f3a3748532c6\nhttps://github.com/maximhq/bifrost/pull/5763",
-      "source": "NVD",
-      "time": "2026-09-07 01:24:35"
-    },
-    {
-      "cve_id": "CVE-2022-51009",
-      "title": "高危漏洞: CVE-2022-51009 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-06 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "PocketMine-MP before 4.7.2 fails to properly handle exceptions from the adhocore/json-comment library when parsing skin geometry data. Attackers can send login or skin packets with invalid geometry JSON to trigger an unhandled RuntimeException, causing server crash.",
-      "refs": "https://github.com/pmmp/PocketMine-MP/commit/c9626c610b8f6810c8c987559c9197b2a291f0bb\nhttps://github.com/pmmp/PocketMine-MP/security/advisories/GHSA-8cwq-4cmf-px73\nhttps://www.vulncheck.com/advisories/pocketmine-mp-before-4.7.2-denial-of-service-via-skin-geometry",
-      "source": "NVD",
-      "time": "2026-09-07 01:24:25"
-    },
-    {
-      "cve_id": "CVE-2026-86211",
-      "title": "高危漏洞: CVE-2026-86211 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-06 19:18:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A flaw has been found in rabindralamsal inventory-management-system 1.0.0. This affects an unknown part of the file index.php of the component Login. Executing a manipulation of the argument username/password can lead to sql injection. The attack can be executed remotely. The exploit has been published and may be used.",
-      "refs": "https://github.com/yingxiujie/cve/issues/8\nhttps://vuldb.com/cve/CVE-2026-86211\nhttps://vuldb.com/submit/897074",
-      "source": "NVD",
-      "time": "2026-09-06 20:28:19"
     }
   ]
 }
