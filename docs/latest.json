@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-53581",
+      "title": "高危漏洞: CVE-2026-53581 (CVSS 9.0)",
+      "cvss_score": 9.0,
+      "published_date": "2026-09-09 07:17:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:H",
+      "description": "OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.9 of opnsense/core and version 26.4_20 of BE/opnsense/core, a path traversal vulnerability in the NTP configuration module allows an attacker to overwrite arbitrary files on the system as the root user. By manipulating the GPS or PPS serial port parameter, an attacker with access to the NTP configuration can escape the intended directory and force the system to write user-controlled data to any file on the filesystem. Version 26.1.9 of opnsense/core and version 26.4_20 of BE/opnsense/core patch the issue.",
+      "refs": "https://github.com/opnsense/core/security/advisories/GHSA-872g-g543-j37m",
+      "source": "NVD",
+      "time": "2026-09-09 10:06:47"
+    },
+    {
       "cve_id": "CVE-2026-86819",
       "title": "高危漏洞: CVE-2026-86819 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1088,17 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83992",
       "source": "NVD",
       "time": "2026-09-09 07:57:07"
-    },
-    {
-      "cve_id": "CVE-2026-83990",
-      "title": "高危漏洞: CVE-2026-83990 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-09 02:21:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Stack-based buffer overflow in Microsoft Graphics Component allows an authorized attacker to elevate privileges locally.",
-      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83990",
-      "source": "NVD",
-      "time": "2026-09-09 07:57:03"
     }
   ]
 }
