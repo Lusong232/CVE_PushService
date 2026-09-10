@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-89094",
+      "title": "高危漏洞: CVE-2026-89094 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-11 05:17:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Forgejo before 16.0.4 allows remote code execution via a crafted template repository because template expansion on files in .forgejo/template is mishandled.",
+      "refs": "https://codeberg.org/forgejo/forgejo/milestone/139655\nhttps://news.ycombinator.com/item?id=49645907",
+      "source": "NVD",
+      "time": "2026-09-11 06:52:01"
+    },
+    {
+      "cve_id": "CVE-2026-85025",
+      "title": "高危漏洞: CVE-2026-85025 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-11 05:17:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM Langflow OSS 1.0.0 through 1.11.5 Langflow could allow an unauthenticated attacker to execute arbitrary code and access or modify chat sessions through publicly shared MCP project endpoints due to improper enforcement of public-flow security restrictions and session isolation controls.",
+      "refs": "https://www.ibm.com/support/pages/node/7286666",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:56"
+    },
+    {
+      "cve_id": "CVE-2026-75940",
+      "title": "高危漏洞: CVE-2026-75940 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-11 05:17:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "A vulnerability was reported in Lenovo Health Android Application, distributed exclusively in the Chinese market, that could allow an attacker to access sensitive health-related information.",
+      "refs": "https://iknow.lenovo.com.cn/detail/442248",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:52"
+    },
+    {
+      "cve_id": "CVE-2026-63427",
+      "title": "高危漏洞: CVE-2026-63427 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-11 05:17:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An authentication bypass vulnerability was discovered in Lenovo Software Fix that could allow a local authenticated user to perform arbitrary code execution with elevated privileges.",
+      "refs": "https://support.lenovo.com/us/en/downloads/ds101291-rescue-and-smart-assistant-lmsa\nhttps://support.lenovo.com/us/en/product_security/LEN-217409",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:48"
+    },
+    {
+      "cve_id": "CVE-2026-45759",
+      "title": "高危漏洞: CVE-2026-45759 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-11 05:17:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Suricata is a network Intrusion Detection System, Intrusion Prevention System and Network Security Monitoring engine. Prior to versions 7.0.16 and 8.0.5, Suricata could repeatedly perform expensive parsing of large HTTP `Content-Disposition` headers during HTTP response body processing. Crafted HTTP traffic could cause excessive CPU usage and denial of service. Versions 7.0.16 and 8.0.5 contain a fix. As a workaround, use a rule like `alert http1 any any -> any any (sid: 1; http.request_header; content: \"Content-Disposition:\"; startswith; bsize: > 8192; bypass;)`.",
+      "refs": "https://forum.suricata.io/t/suricata-8-0-5-and-7-0-16-released/6315\nhttps://github.com/OISF/suricata/security/advisories/GHSA-cfq5-g2v5-6652\nhttps://redmine.openinfosecfoundation.org/issues/8529",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:44"
+    },
+    {
+      "cve_id": "CVE-2026-19136",
+      "title": "高危漏洞: CVE-2026-19136 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-11 05:17:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A potential command injection vulnerability was reported in the Tianxi AI Agent PC Application, distributed exclusively in the Chinese market, that could allow operating system commands to be executed if a local user opens a specially crafted link that is handled by the application.",
+      "refs": "https://iknow.lenovo.com.cn/detail/442249",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:39"
+    },
+    {
+      "cve_id": "CVE-2026-18994",
+      "title": "高危漏洞: CVE-2026-18994 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-11 05:17:24",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "A potential improper authorization vulnerability was reported in the Lenovo File Manager Android Application, distributed exclusively in the Chinese market, that could allow a local authenticated user to read or modify protected files within the application.",
+      "refs": "https://iknow.lenovo.com.cn/detail/442247",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:32"
+    },
+    {
+      "cve_id": "CVE-2026-11813",
+      "title": "高危漏洞: CVE-2026-11813 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-11 05:17:18",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A potential improper permissions vulnerability was reported in the Lenovo Filez Client application that could allow a local authenticated user to escalate privileges.",
+      "refs": "https://www.filez.com/en/securityPolicy/5.html?1788882250",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:28"
+    },
+    {
+      "cve_id": "CVE-2026-89087",
+      "title": "高危漏洞: CVE-2026-89087 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-11 04:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "The cstruct package before 6.3.0 for OCaml mishandles indexes.",
+      "refs": "https://osv.dev/vulnerability/OSEC-2026-20",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:23"
+    },
+    {
+      "cve_id": "CVE-2026-89086",
+      "title": "高危漏洞: CVE-2026-89086 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-11 04:17:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "In the jose package before 0.11.0 for OCaml, library calls to validate an RSA signature only confirm that PKCS #1 decoding succeeds, and proceed to declare the signature valid without the required steps that involve the public key.",
+      "refs": "https://github.com/ulrikstrid/ocaml-jose/commit/cf17d991ec6a0d1997956b6c7799890f9c28879e\nhttps://osv.dev/vulnerability/OSEC-2026-19",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:19"
+    },
+    {
+      "cve_id": "CVE-2026-89054",
+      "title": "高危漏洞: CVE-2026-89054 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-11 04:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+      "description": "A missing authorization vulnerability in OpenNMS Horizon allows configuration changes without authentication. The Spring Security policy for the /api/v2 REST API defines authorization rules for every HTTP method except PATCH, so the shipped @PATCH configuration endpoints for event configuration and SNMP data collection (which enable and disable event definitions and data-collection sources) are reachable with no authorization enforced. An unauthenticated attacker able to reach the web UI can disable event definitions and SNMP data collection, suppressing event and alarm generation and stopping metric collection - silently degrading monitoring and detection - with the change persisted and reloaded into the running system.\n\n\n\nThe solution is to upgrade to Horizon 36.0.4 or newer. Meridian and Horizon installation instructions state that they are intended for installation within an organization's private networks and should not be directly accessible from the Internet.",
+      "refs": "https://github.com/OpenNMS/opennms/pull/8833",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:14"
+    },
+    {
+      "cve_id": "CVE-2026-89011",
+      "title": "高危漏洞: CVE-2026-89011 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-11 04:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+      "description": "isomorphic-git before 1.42.0 contains a prototype pollution vulnerability in the getRemoteInfo function that allows a malicious Git server operator to pollute Object.prototype by advertising crafted ref names containing '__proto__' path segments during ref negotiation. Attackers controlling a Git server can advertise a specially crafted ref such as '__proto__/corsProxy' to reroute all subsequent network operations through an attacker-controlled proxy, causing isomorphic-git to invoke the victim's onAuth callback and transmit credentials to the attacker when the victim calls getRemoteInfo with an attacker-supplied URL.",
+      "refs": "https://github.com/isomorphic-git/isomorphic-git/commit/b3db111885230bac9a648e0a2312c65ca66f76eb\nhttps://github.com/isomorphic-git/isomorphic-git/pull/2426\nhttps://github.com/isomorphic-git/isomorphic-git/releases/tag/v1.42.0",
+      "source": "NVD",
+      "time": "2026-09-11 06:51:10"
+    },
+    {
       "cve_id": "CVE-2026-89049",
       "title": "高危漏洞: CVE-2026-89049 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/renovatebot/renovate/security/advisories/GHSA-9hmg-9h89-jhmx\nhttps://www.vulncheck.com/advisories/renovate-before-44.11.3-credential-exfiltration-via-link-header",
       "source": "NVD",
       "time": "2026-09-11 02:00:06"
-    },
-    {
-      "cve_id": "CVE-2026-88877",
-      "title": "高危漏洞: CVE-2026-88877 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-10 22:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Traefik is a HTTP reverse proxy and load balancer. In versions >= v3.7.0 and <= v3.7.11, the Kubernetes ingress-nginx provider mishandles Ingresses that carry both an authentication annotation and the nginx.ingress.kubernetes.io/from-to-www-redirect annotation. For such Ingresses the provider creates an additional 'sibling' router that matches on the host alone, carries only the RedirectRegex middleware, and still points at the parent router's protected backend service. Because RedirectRegex is not a terminal handler, a request its pattern does not match is forwarded to the backend, and because the redirect pattern only accepts a numeric port while Traefik's host matcher canonicalizes the authority via net.SplitHostPort, a request with a non-numeric or empty port (for example 'Host: www.example.com:x') selects the sibling router, misses the redirect, and is proxied to the protected backend with none of the Ingress's annotation-derived middlewares applied. This discards not only authentication (e.g. BasicAuth) but every annotation-derived middleware, including source-IP allowlisting. Traefik v2 and v3 releases before v3.7.0 are not affected. The issue is fixed in v3.7.12.",
-      "refs": "https://github.com/traefik/traefik/security/advisories/GHSA-cjr6-pf59-jq29\nhttps://www.vulncheck.com/advisories/traefik-3.7.0-authentication-bypass-via-from-to-www-redirect",
-      "source": "NVD",
-      "time": "2026-09-11 02:00:02"
-    },
-    {
-      "cve_id": "CVE-2026-88876",
-      "title": "高危漏洞: CVE-2026-88876 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-10 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "AVideo through revision c3edcc274c389816d434acadac07ee78eaf330c1 contains a missing authorization vulnerability in plugin/PlayerSkins/seo.php that allows unauthenticated attackers to access password-protected video sources by calling getSources() without password validation. Attackers can request the seo.php endpoint with a video ID to obtain the direct MP4 URL and read protected media bytes without supplying the configured password.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-wq9m-cfw6-4gh5\nhttps://www.vulncheck.com/advisories/avideo-playerskins-seo-php-missing-authorization-password-protected-vod",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:54"
-    },
-    {
-      "cve_id": "CVE-2026-88874",
-      "title": "高危漏洞: CVE-2026-88874 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-10 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "AVideo through revision c3edcc274c389816d434acadac07ee78eaf330c1 (master, 2026-08-23) does not enforce the Live stream password check on the stats endpoint or on the HLS origin. Live::_getStats() (plugin/Live/Live.php) returns a password-protected transmission's RTMP stream key, its isPasswordProtected flag, and its HLS (m3u8) URL to unauthenticated callers, in both the public applications list and the hidden_applications branch used when canSeeLiveFromLiveKey() fails. Separately, the shipped NGINX configuration (deploy/nginx/nginx.conf) serves the .m3u8 playlist, the AES-128 key, and the transport-stream segments from the /live location without any auth_request (the auth_key_check directive in the .key location is commented out). A remote, unauthenticated attacker can therefore retrieve the stream key and decryption key and watch a password-protected live transmission without supplying the configured password. No patched version was available at the time of the advisory.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-7h6j-2gh9-h9rw\nhttps://www.vulncheck.com/advisories/avideo-through-c3edcc274c389816d434acadac07ee78eaf330c1-authentication-bypass",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:49"
-    },
-    {
-      "cve_id": "CVE-2026-88873",
-      "title": "高危漏洞: CVE-2026-88873 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-10 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:L",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a cross-site request forgery vulnerability in view/logArchive.json.php that allows unauthenticated attackers to archive application logs by making GET requests without CSRF token validation. Attackers can craft malicious pages that trigger administrators' browsers to request the endpoint, copying sensitive application logs to a publicly accessible zip file and truncating the live log to remove forensic evidence.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-66vx-xf88-hpw8\nhttps://www.vulncheck.com/advisories/wwbn-avideo-cross-site-request-forgery-via-logarchive-json-php",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:42"
-    },
-    {
-      "cve_id": "CVE-2026-88872",
-      "title": "高危漏洞: CVE-2026-88872 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-10 22:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a cross-site request forgery vulnerability in the setPassword.json.php endpoint that allows unauthenticated attackers to modify any user's channel password by sending a GET request. Attackers can craft a malicious webpage that, when visited by an authenticated administrator, sets or clears any user's channel password without CSRF token validation.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-h8vg-wg8w-4r6v\nhttps://www.vulncheck.com/advisories/avideo-customizeuser-setpassword-json-php-csrf\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-h8vg-wg8w-4r6v",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:37"
-    },
-    {
-      "cve_id": "CVE-2026-88870",
-      "title": "高危漏洞: CVE-2026-88870 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-10 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a cross-site request forgery vulnerability in the LoginControl plugin PGP key endpoints that lack CSRF token validation. Attackers can craft malicious pages with image tags pointing to savePublicKey.json.php to replace a logged-in victim's PGP 2FA public key, causing lockout or enabling account takeover if the attacker knows the password.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-g4x9-vh2j-h7rj\nhttps://www.vulncheck.com/advisories/wwbn-avideo-logincontrol-pgp-key-csrf-via-get-request",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:33"
-    },
-    {
-      "cve_id": "CVE-2026-88869",
-      "title": "高危漏洞: CVE-2026-88869 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-09-10 22:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the AD_Server plugin's log.php endpoint that fails to escape the label parameter before storage. An unauthenticated attacker can inject malicious HTML through the label parameter, which is later rendered unsanitized in the admin Ad Types report using jQuery .html(), allowing execution of arbitrary JavaScript in an administrator's browser session.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-h68w-3r38-wmm8\nhttps://www.vulncheck.com/advisories/avideo-ad-server-stored-xss-via-log-php-label-parameter",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:29"
-    },
-    {
-      "cve_id": "CVE-2026-88868",
-      "title": "高危漏洞: CVE-2026-88868 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-10 22:17:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the LiveLinks plugin where title and description fields are stored without sanitization. A user with canStream permission can inject malicious scripts that execute in the browser of every visitor viewing the live-link page, including administrators, within the site origin.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-jwmw-j657-28fq\nhttps://www.vulncheck.com/advisories/avideo-livelinks-stored-xss-via-title-and-description-fields",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:24"
-    },
-    {
-      "cve_id": "CVE-2026-88867",
-      "title": "高危漏洞: CVE-2026-88867 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-10 22:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "WWBN AVideo, in versions up to and including commit c3edcc274c389816d434acadac07ee78eaf330c1, contains a stored cross-site scripting vulnerability. objects/categoryAddNew.json.php passes the POST parameters `name` and `iconClass` to Category::setName() and Category::setIconClass(), which store the values without sanitization (setName only truncates to 45 characters). The category name is later echoed as HTML text and iconClass is echoed into a class attribute in view/modeYoutubeBottom.php and in Gallery cards (plugin/Gallery/functions.php). When the CustomizeUser option usersCanCreateNewCategories is enabled, any authenticated user with canUpload permission (granted by default via self-registration) can create a category containing a JavaScript payload; the payload then executes in the browser of any visitor, including administrators, who views a watch page or gallery entry for a video assigned to that category, allowing actions such as authenticated requests with the victim's session. The issue was unpatched at the time of reporting.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-283q-fq8j-mhv8\nhttps://www.vulncheck.com/advisories/wwbn-avideo-stored-xss-via-category-name-and-icon-class\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-283q-fq8j-mhv8",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:20"
-    },
-    {
-      "cve_id": "CVE-2026-88866",
-      "title": "高危漏洞: CVE-2026-88866 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-10 22:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the LoginControl plugin that fails to encode the User-Agent header before storing it in login history. Attackers with any valid login account can inject malicious scripts in the User-Agent header that execute in administrator browsers when viewing the Login History page, allowing script execution within the administrator session.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-wg67-62q3-2m33\nhttps://www.vulncheck.com/advisories/wwbn-avideo-logincontrol-stored-xss-via-user-agent-header",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:11"
-    },
-    {
-      "cve_id": "CVE-2026-88865",
-      "title": "高危漏洞: CVE-2026-88865 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-10 22:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 fails to validate restream ownership in getRestream.json.php, allowing authenticated users with canStream permission to mint tokens for arbitrary restreams. Attackers can exchange the token to retrieve other users' stream keys from getLiveKey.json.php and publish to their YouTube, Twitch, or RTMP destinations.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-7jf4-mmqm-7p7x\nhttps://www.vulncheck.com/advisories/avideo-missing-authorization-via-getrestream-json-php",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:06"
-    },
-    {
-      "cve_id": "CVE-2026-88864",
-      "title": "高危漏洞: CVE-2026-88864 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-10 22:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:L",
-      "description": "Capgo (capgo.app) fails to restrict direct write access to the public.sso_providers table exposed through Supabase PostgREST. A holder of an ordinary Capgo full API key can insert a row with status='active' and enforce_sso=true, bypassing the intended backend SSO provisioning route (supabase/functions/_backend/private/sso/providers.ts) and its controls: the Enterprise plan requirement, SSO provider creation via the Supabase Management API, DNS TXT domain-ownership verification, the pending_verification → verified → active status transition, and issuance of a trusted provider ID by Supabase Auth. The forged row is trusted by SSO discovery and enforcement logic, including the unauthenticated login preflight endpoint /private/sso/check-domain, which then reports {\"has_sso\": true, \"enforce_sso\": true} for domains that were never verified, allowing attacker-controlled SSO enforcement to be asserted for arbitrary domains and disrupting normal login. All versions are affected; at the time of the advisory no patch was available.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-xg7v-83qv-qfff\nhttps://www.vulncheck.com/advisories/capgo-sso-provider-authentication-bypass-via-postgrest-direct-write\nhttps://github.com/Cap-go/capgo.app/security/advisories/GHSA-xg7v-83qv-qfff",
-      "source": "NVD",
-      "time": "2026-09-11 01:59:00"
     }
   ]
 }
