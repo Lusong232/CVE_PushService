@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-87999",
+      "title": "高危漏洞: CVE-2026-87999 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-10 06:18:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. Prior to 0.11.1, POST /api/v1/retrieval/process/web and POST /api/v1/retrieval/process/web/search in backend/open_webui/retrieval/web/utils.py treated Python's globally routable address classification as proof that a destination was external. An authenticated user could make an Azure-hosted instance fetch and return content from 168.63.129.16, the Azure platform channel, as well as other reserved ranges that the standard classification did not reject. This issue is fixed in version 0.11.1.",
+      "refs": "https://github.com/open-webui/open-webui/commit/e3e4bd87df6fc629e7e22081d980d55a7632b8b7\nhttps://github.com/open-webui/open-webui/pull/27823\nhttps://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+      "source": "NVD",
+      "time": "2026-09-10 10:04:23"
+    },
+    {
+      "cve_id": "CVE-2026-87998",
+      "title": "高危漏洞: CVE-2026-87998 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-10 06:18:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.10.0 until 0.11.1, DELETE /api/v1/knowledge/{id}/delete in backend/open_webui/routers/knowledge.py authorized deletion against the knowledge base but then removed its administrator-owned external connection without a separate administrator check or a check for other dependent knowledge bases. A non-administrator with write access to one external knowledge base could delete shared instance configuration and make every other knowledge base using that connection unavailable. This issue is fixed in version 0.11.1.",
+      "refs": "https://github.com/open-webui/open-webui/commit/dc03e7e595d61be97b25a1dd7bb99ad264f73199\nhttps://github.com/open-webui/open-webui/pull/28113\nhttps://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+      "source": "NVD",
+      "time": "2026-09-10 10:04:19"
+    },
+    {
+      "cve_id": "CVE-2026-87996",
+      "title": "高危漏洞: CVE-2026-87996 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-10 06:18:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.6 until 0.11.1, SafePlaywrightURLLoader in backend/open_webui/retrieval/web/utils.py validated a user-controlled hostname in Python and then let the Playwright browser resolve it again in the sync and async request interceptors. An authenticated user controlling authoritative DNS could return a public address to validation and an internal address to the browser, exposing responses from internal services or cloud metadata through web search or URL ingestion. This issue is fixed in version 0.11.1.",
+      "refs": "https://github.com/open-webui/open-webui/commit/27402ff210bfa253445720920dfb86b15a00327b\nhttps://github.com/open-webui/open-webui/pull/28634\nhttps://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+      "source": "NVD",
+      "time": "2026-09-10 10:04:12"
+    },
+    {
+      "cve_id": "CVE-2026-87995",
+      "title": "高危漏洞: CVE-2026-87995 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-09-10 06:18:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.8.11 until 0.11.1, src/lib/components/chat/FileNav/PortPreview.svelte rendered terminal port content in an iframe sandbox containing both allow-scripts and allow-same-origin. Because the terminal proxy serves that content from the Open WebUI origin, an authenticated user with access to a shared terminal server could host script on a previewed port and take over a victim's account when the victim opened the preview. This issue is fixed in version 0.11.1.",
+      "refs": "https://github.com/open-webui/open-webui/commit/54d7a223707f03172efbb9e754db6e69709956d0\nhttps://github.com/open-webui/open-webui/releases/tag/v0.11.1\nhttps://github.com/open-webui/open-webui/security/advisories/GHSA-jmc6-2wr8-h3wj",
+      "source": "NVD",
+      "time": "2026-09-10 10:04:08"
+    },
+    {
+      "cve_id": "CVE-2026-87922",
+      "title": "高危漏洞: CVE-2026-87922 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-10 06:18:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in Rizwan17 inventory-management-system up to bfe78a330d01bb26b9daec5dc9ecd5c77900e03f. Affected by this vulnerability is the function DBOperation.addCategory of the file includes/process.php of the component AJAX Backend. The manipulation of the argument userid results in missing authentication. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Rizwan17/inventory-management-system/\nhttps://github.com/Rizwan17/inventory-management-system/issues/10\nhttps://vuldb.com/cve/CVE-2026-87922",
+      "source": "NVD",
+      "time": "2026-09-10 10:04:02"
+    },
+    {
+      "cve_id": "CVE-2026-87921",
+      "title": "高危漏洞: CVE-2026-87921 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-10 06:18:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Rizwan17 inventory-management-system up to bfe78a330d01bb26b9daec5dc9ecd5c77900e03f. Affected is the function update_record of the file includes/manage.php. The manipulation of the argument update_category/cid/update_brand/update_product leads to sql injection. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Rizwan17/inventory-management-system/\nhttps://github.com/Rizwan17/inventory-management-system/issues/9\nhttps://vuldb.com/cve/CVE-2026-87921",
+      "source": "NVD",
+      "time": "2026-09-10 10:03:57"
+    },
+    {
+      "cve_id": "CVE-2026-87016",
+      "title": "高危漏洞: CVE-2026-87016 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-10 06:18:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.41 until 0.11.1, get_user_by_oauth_sub and get_user_by_scim_external_id in backend/open_webui/models/users.py used JSON contains matching that compiled to SQL LIKE substring matching on SQLite. An OAuth subject containing percent or underscore wildcard characters could resolve to a different stored identity, potentially selecting an administrator account and issuing the attacker that account's session; PostgreSQL deployments were not affected. This issue is fixed in version 0.11.1.",
+      "refs": "https://github.com/open-webui/open-webui/commit/73c1f5806aeb6345dad5de8f5aa26d1f3d0bef80\nhttps://github.com/open-webui/open-webui/pull/28624\nhttps://github.com/open-webui/open-webui/releases/tag/v0.11.1",
+      "source": "NVD",
+      "time": "2026-09-10 10:03:52"
+    },
+    {
+      "cve_id": "CVE-2026-15913",
+      "title": "高危漏洞: CVE-2026-15913 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-10 06:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "In versions prior to 7.10.2 a path traversal vulnerability in the /attachRemoteFiles endpoint of Fortra's GoAnywhere MFT allows Web Users with both Secure Folders and Secure Mail permissions to escape their sandboxed home directory, achieving arbitrary file read.",
+      "refs": "https://www.fortra.com/security/advisories/product-security/fi-2026-011",
+      "source": "NVD",
+      "time": "2026-09-10 10:03:46"
+    },
+    {
       "cve_id": "CVE-2026-87011",
       "title": "高危漏洞: CVE-2026-87011 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1011,94 +1099,6 @@
       "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/532921336",
       "source": "NVD",
       "time": "2026-09-10 02:14:44"
-    },
-    {
-      "cve_id": "CVE-2026-87621",
-      "title": "高危漏洞: CVE-2026-87621 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-09-09 09:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 153.0.8010.36 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/536664909",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:36"
-    },
-    {
-      "cve_id": "CVE-2026-87618",
-      "title": "高危漏洞: CVE-2026-87618 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-09-09 09:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Incorrect reference resolution in Storage in Google Chrome on on Windows prior to 153.0.8010.36 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/497203958",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:31"
-    },
-    {
-      "cve_id": "CVE-2026-87617",
-      "title": "高危漏洞: CVE-2026-87617 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-09 09:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Use after free in DevTools in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Low)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/523442920",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:26"
-    },
-    {
-      "cve_id": "CVE-2026-87616",
-      "title": "高危漏洞: CVE-2026-87616 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-09-09 09:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Improper initialization in Views in Google Chrome on on Windows prior to 153.0.8010.36 allowed a remote attacker who had compromised the renderer process and leveraged social engineering to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/520469117",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:21"
-    },
-    {
-      "cve_id": "CVE-2026-87613",
-      "title": "高危漏洞: CVE-2026-87613 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-09-09 09:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incorrect reference resolution in Extensions in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via crafted network traffic. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/501889544",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:16"
-    },
-    {
-      "cve_id": "CVE-2026-87612",
-      "title": "高危漏洞: CVE-2026-87612 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-09 09:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Type confusion in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/554236352",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:11"
-    },
-    {
-      "cve_id": "CVE-2026-87609",
-      "title": "高危漏洞: CVE-2026-87609 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-09-09 09:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Sharing in Google Chrome on on iOS prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code outside the sandbox via crafted network traffic. (Chromium security severity: Medium)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/547322272",
-      "source": "NVD",
-      "time": "2026-09-10 02:14:07"
-    },
-    {
-      "cve_id": "CVE-2026-87607",
-      "title": "高危漏洞: CVE-2026-87607 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-09-09 09:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Use after free in Device in Google Chrome on on Mac prior to 153.0.8010.36 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "refs": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/553122131",
-      "source": "NVD",
-      "time": "2026-09-10 02:13:59"
     }
   ]
 }
