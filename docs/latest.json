@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-54174",
+      "title": "高危漏洞: CVE-2026-54174 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-09-12 05:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "melange allows users to build apk packages using declarative pipelines. Apko prior to version 1.2.9, corresponding to melange prior to version 0.50.4, verified the control section hash (`.PKGINFO` etc.) against the signed `APKINDEX`, but never verified the data section hash (the actual package files that get installed). An attacker who could compromise a mirror, poison a cache, or MITM a package fetch could substitute arbitrary file contents while the control hash check still passed. Apko version 1.2.9 and melange version 0.50.4 contain a fix.",
+      "refs": "https://github.com/chainguard-dev/melange/security/advisories/GHSA-fpg8-7664-jc5q",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:39"
+    },
+    {
+      "cve_id": "CVE-2026-54166",
+      "title": "高危漏洞: CVE-2026-54166 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-12 05:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+      "description": "Shelf is a platform for tracking physical assets. Prior to version 1.20.3, authenticated users with the `asset:import` permission can trigger server-side HTTP requests to attacker-controlled URLs through the Asset CSV Content Import feature. The `imageUrl` validation logic can be bypassed through multiple techniques, including image-extension suffixes, image-related path keywords, domain substring matching, and redirect chains. After validation, the server performs an unrestricted `fetch()` request to the supplied URL. This results in a Server-Side Request Forgery (SSRF) vulnerability that allows attackers to reach internal network services, cloud metadata endpoints, and arbitrary external hosts from the application's network context. Additionally, response bodies are fully buffered before size validation, creating a potential memory exhaustion vector. Version 1.20.3 patches the issue.",
+      "refs": "https://github.com/Shelf-nu/shelf.nu/security/advisories/GHSA-xgrm-8w6v-mvjg",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:35"
+    },
+    {
+      "cve_id": "CVE-2026-49464",
+      "title": "高危漏洞: CVE-2026-49464 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-12 05:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "NL Portal Backend Libraries provide backend components for Dutch government portals that interact with residents, customers, suppliers, and partner organizations. The `nl.nl-portal:taak` package from version 1.5.0 through 3.0.0 fails to verify ownership when processing the `submitTaakV2` GraphQL mutation, allowing an authenticated user who knows or guesses another user’s task ID to read its form data, overwrite its submitted data, and mark the task as completed. Version 3.0.1 contains a patch. As a workaround, block the `submitTaakV2` mutation at the API gateway or restrict the `/graphql` endpoint to trusted networks",
+      "refs": "https://github.com/nl-portal/nl-portal-backend-libraries/security/advisories/GHSA-6h3c-r723-7fx3",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:31"
+    },
+    {
+      "cve_id": "CVE-2026-54135",
+      "title": "高危漏洞: CVE-2026-54135 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-12 04:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "AirSane is a SANE frontend, and a scanner server that supports Apple's AirScan protocol. Versions prior to 0.4.12 have a vulnerability in the custom HTTP server implementation of AirSane that allows a remote unauthenticated attacker to cause a Denial of Service (DoS) via memory exhaustion (OOM). In httpserver.cpp, the HttpServer::Request::content function reads the Content-Length header and directly passes this value to std::string::resize() without any upper-bound validation or safe parsing. An attacker can send an HTTP POST request with an artificially large Content-Length value. This forces the daemon to attempt allocating gigabytes of memory, resulting in a std::bad_alloc exception and immediately crashing the AirSane process. Additionally, providing non-numeric characters in the Content-Length header leads to undefined behavior (NaN to integer conversion) due to the lack of error handling during header parsing. Version 0.4.12 patches the issue.",
+      "refs": "https://github.com/SimulPiscator/AirSane/commit/129cc3bf7258251a0a694dee7741285b59d88f9f\nhttps://github.com/SimulPiscator/AirSane/releases/tag/v0.4.12\nhttps://github.com/SimulPiscator/AirSane/security/advisories/GHSA-p5hv-3m79-452q",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:24"
+    },
+    {
+      "cve_id": "CVE-2026-53952",
+      "title": "高危漏洞: CVE-2026-53952 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-12 04:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GetSimple CMS is a content management system (CMS), and GetSimple CMS CE is the community edition of that CMS. A logic flaw in GetSimple CMS (v3.4.0a and below) and GetSimpleCMS-CE (v3.3.22 and below) allows unauthenticated attackers to create a new administrator account. The application features an automated security control designed to delete the sensitive `admin/setup.php` file post-installation. However, this control is neutralized by a self-exclusion bug within the deletion logic, leaving the setup script accessible for unauthorized account creation even after a legitimate installation is completed. As of time of publication, no known patched versions are available.",
+      "refs": "https://github.com/GetSimpleCMS-CE/GetSimpleCMS-CE/security/advisories/GHSA-rw2c-w4mg-46g4",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:20"
+    },
+    {
+      "cve_id": "CVE-2026-79395",
+      "title": "高危漏洞: CVE-2026-79395 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-12 03:17:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An improper authentication vulnerability in the WS-Security (wsse:UsernameToken) verification routine within the Sofia IPC daemon in Xiongmai IP Camera XM530 firmware HMT.CM2005-v220608.1837 and earlier allows remote attackers to bypass authentication and execute privileged ONVIF actions (including PTZ control, stream URL retrieval, and system reboot) via a crafted SOAP request supplying the admin username with any arbitrary password when the account's stored password is empty.",
+      "refs": "https://github.com/ShiroiBoushi/vulnerability-research/tree/main/CVE-2026-79395",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:15"
+    },
+    {
+      "cve_id": "CVE-2026-78807",
+      "title": "高危漏洞: CVE-2026-78807 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-12 02:16:58",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "An issue in wpa_supplicant all versions before v.2.12 allows a local attacker to bypass proper network context and AKMP matching for PMKSA caching via missing validation in the driver based PMKSA selection path in wpa.c",
+      "refs": "https://w1.fi/security/2026-2/missing-network-context-validation-for-pmksa-caching.txt",
+      "source": "NVD",
+      "time": "2026-09-12 06:53:09"
+    },
+    {
       "cve_id": "CVE-2026-79393",
       "title": "高危漏洞: CVE-2026-79393 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1022,83 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7286666",
       "source": "NVD",
       "time": "2026-09-11 10:04:11"
-    },
-    {
-      "cve_id": "CVE-2026-81554",
-      "title": "高危漏洞: CVE-2026-81554 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to an absolute-path traversal vulnerability.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:06"
-    },
-    {
-      "cve_id": "CVE-2026-81551",
-      "title": "高危漏洞: CVE-2026-81551 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to arbitrarily write to or delete files on shared storage due to a path traversal vulnerability.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:03:59"
-    },
-    {
-      "cve_id": "CVE-2026-81550",
-      "title": "高危漏洞: CVE-2026-81550 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in an OS command.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:03:55"
-    },
-    {
-      "cve_id": "CVE-2026-81540",
-      "title": "高危漏洞: CVE-2026-81540 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:L",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to overwrite ruleset files belonging to other tenants due to a path traversal vulnerability.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:03:50"
-    },
-    {
-      "cve_id": "CVE-2026-81268",
-      "title": "高危漏洞: CVE-2026-81268 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacker to execute flows and obtain sensitive information due to insufficient session expiration of API keys after user deactivation.",
-      "refs": "https://www.ibm.com/support/pages/node/7286662",
-      "source": "NVD",
-      "time": "2026-09-11 10:03:46"
-    },
-    {
-      "cve_id": "CVE-2026-81265",
-      "title": "高危漏洞: CVE-2026-81265 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.5.",
-      "refs": "https://www.ibm.com/support/pages/node/7286665",
-      "source": "NVD",
-      "time": "2026-09-11 10:03:41"
-    },
-    {
-      "cve_id": "CVE-2026-81213",
-      "title": "高危漏洞: CVE-2026-81213 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-11 06:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to obtain sensitive information from internal network resources due to improper validation of user-supplied URLs.",
-      "refs": "https://www.ibm.com/support/pages/node/7286665",
-      "source": "NVD",
-      "time": "2026-09-11 10:03:36"
     }
   ]
 }
