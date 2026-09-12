@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-54241",
+      "title": "高危漏洞: CVE-2026-54241 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-12 06:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "description": "libde265 is an open source implementation of the h.265 video codec. Versions prior to 1.1.1 use signed 32-bit arithmetic to calculate the sample adaptive offset input-buffer size, allowing a crafted HEVC stream with large dimensions and 16-bit luma samples to cause an integer overflow, an undersized allocation, and an out-of-bounds heap read that may expose heap data in decoded output or crash the decoder. Version 1.1.1 contains a patch.",
+      "refs": "https://github.com/strukturag/libde265/security/advisories/GHSA-j2qq-x2xq-g9wr",
+      "source": "NVD",
+      "time": "2026-09-12 10:06:45"
+    },
+    {
+      "cve_id": "CVE-2026-54240",
+      "title": "高危漏洞: CVE-2026-54240 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-12 06:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "description": "libde265 is an open source implementation of the h.265 video codec. Versions prior to 1.1.1 use signed 32-bit arithmetic to calculate pixel offsets, allowing a crafted HEVC stream with large image dimensions to trigger an integer overflow and cause out-of-bounds heap reads or writes, potentially disclosing data, corrupting memory, or crashing the decoder. Version 1.1.1 contains a patch.",
+      "refs": "https://github.com/strukturag/libde265/security/advisories/GHSA-ccfw-29x7-rrx3",
+      "source": "NVD",
+      "time": "2026-09-12 10:06:40"
+    },
+    {
+      "cve_id": "CVE-2026-50013",
+      "title": "高危漏洞: CVE-2026-50013 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-12 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Hoverfly is an open source API simulation tool. Prior to version 1.12.8, when Hoverfly is running in Diff mode, the `AddDiff()` function writes to the shared `responsesDiff` map without any synchronization (no mutex). When multiple proxy requests are processed concurrently (the normal case for any proxy), the concurrent map writes trigger Go's built-in race detector which causes a `fatal error: concurrent map read and map write`, immediately killing the entire Hoverfly process. This is trivially exploitable by sending multiple simultaneous requests. Version 1.12.8 patches the issue.",
+      "refs": "https://github.com/SpectoLabs/hoverfly/pull/1227\nhttps://github.com/SpectoLabs/hoverfly/releases/tag/v1.12.8\nhttps://github.com/SpectoLabs/hoverfly/security/advisories/GHSA-qrh4-p6v4-mrfg",
+      "source": "NVD",
+      "time": "2026-09-12 10:06:33"
+    },
+    {
+      "cve_id": "CVE-2026-49846",
+      "title": "高危漏洞: CVE-2026-49846 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-12 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "libks provides foundational support for signalwire C products. Prior to version 2.0.11, `clean_uri()` in libks's HTTP request parser fails to reject URIs whose path has more segments than its internal canonicalization buffer can hold. The canonicalization step silently passes such URIs through with embedded \"..\" sequences intact, enabling path traversal in any consumer that later joins the URI with a filesystem path. Version 2.0.11 patches the issue.",
+      "refs": "https://github.com/signalwire/libks/security/advisories/GHSA-684h-wjm9-2p6j",
+      "source": "NVD",
+      "time": "2026-09-12 10:06:28"
+    },
+    {
       "cve_id": "CVE-2026-54174",
       "title": "高危漏洞: CVE-2026-54174 (CVSS 8.3)",
       "cvss_score": 8.3,
@@ -1055,50 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7286562",
       "source": "NVD",
       "time": "2026-09-11 10:04:29"
-    },
-    {
-      "cve_id": "CVE-2026-82095",
-      "title": "高危漏洞: CVE-2026-82095 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in an OS command.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:24"
-    },
-    {
-      "cve_id": "CVE-2026-82092",
-      "title": "高危漏洞: CVE-2026-82092 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to an absolute-path traversal vulnerability.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:19"
-    },
-    {
-      "cve_id": "CVE-2026-81941",
-      "title": "高危漏洞: CVE-2026-81941 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.5 allows an authenticated non-administrative user could execute arbitrary operating system commands on the server at the privilege level of the application process by constructing a flow with an MCP Tools component configured to use a local stdio subprocess transport. This bypasses both the LANGFLOW_CUSTOM_COMPONENT_ADMIN_ONLY and LANGFLOW_BLOCK_CODE_INTERPRETER_COMPONENTS server-side controls intended to prevent exactly this class of access. Successful exploitation could lead to arbitrary command execution, sensitive data exposure (including credentials from the process environment), file system modification, and lateral movement to services reachable from the server.",
-      "refs": "https://www.ibm.com/support/pages/node/7286666",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:15"
-    },
-    {
-      "cve_id": "CVE-2026-81940",
-      "title": "高危漏洞: CVE-2026-81940 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special characters in flow display names.",
-      "refs": "https://www.ibm.com/support/pages/node/7286666",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:11"
     }
   ]
 }
