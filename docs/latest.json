@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90616",
+      "title": "高危漏洞: CVE-2026-90616 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-13 04:16:30",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Flatpak before 1.18.1, a malicious sandboxed app can obtain arbitrary read and write access to files on the host, which can be escalated to arbitrary code execution on the host, a different vulnerability than CVE-2026-76925. Flatpak creates a few app data directories (e.g., /var/cache, /var/data, /var/config, and /var/tmp) in every sandbox on every app launch where, in some cases, components of the path are attacker-controlled. Missing symlink protection can redirect the directories. Some of these directories are bind-mounted by Flatpak by passing the path (e.g., /home/user/.var/app/APP_ID/cache/tmp), which contains attacker-controlled directories (tmp) to bwrap --bind SRC DST. bwrap passes the path on to the kernel, which then follows symlinks. A malicious symlink can point to arbitrary locations on the host and it will become mounted inside the sandbox.",
+      "refs": "https://github.com/flatpak/flatpak/security/advisories/GHSA-8688-9x26-hhxj\nhttps://www.openwall.com/lists/oss-security/2026/08/11/9",
+      "source": "NVD",
+      "time": "2026-09-13 06:42:53"
+    },
+    {
+      "cve_id": "CVE-2026-90560",
+      "title": "高危漏洞: CVE-2026-90560 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-13 02:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+      "description": "zstd-jni versions 1.2.0 through 1.5.7-13 contain an out-of-bounds read vulnerability in the ZstdDictDecompress constructor because offset and length arguments are never validated against the dictionary array bounds. Attackers can supply arbitrary offset or length values to read memory past the end of the supplied array, potentially causing JVM termination.",
+      "refs": "https://github.com/luben/zstd-jni\nhttps://github.com/luben/zstd-jni/blob/v1.2.0/src/main/java/com/github/luben/zstd/ZstdDictDecompress.java#L37\nhttps://github.com/luben/zstd-jni/blob/v1.5.7-13/src/main/java/com/github/luben/zstd/ZstdDictDecompress.java#L49",
+      "source": "NVD",
+      "time": "2026-09-13 06:42:47"
+    },
+    {
+      "cve_id": "CVE-2026-90559",
+      "title": "高危漏洞: CVE-2026-90559 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 02:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "snappy-java through 1.1.10.8 contains an out-of-bounds write vulnerability in Snappy.uncompress(ByteBuffer, ByteBuffer) because destination buffer capacity is never validated against decompressed size. Attackers can supply valid compressed data that decompresses larger than the destination buffer, causing writes past buffer boundaries and JVM termination.",
+      "refs": "https://github.com/xerial/snappy-java\nhttps://github.com/xerial/snappy-java/blob/v1.1.10.8/src/main/java/org/xerial/snappy/Snappy.java#L561\nhttps://github.com/xerial/snappy-java/issues/728",
+      "source": "NVD",
+      "time": "2026-09-13 06:42:43"
+    },
+    {
+      "cve_id": "CVE-2026-90558",
+      "title": "高危漏洞: CVE-2026-90558 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-13 02:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "sngrep through 1.8.4 contains stack buffer overflow vulnerabilities in SIP attribute formatting routines when header values exceed the 255-byte buffer limit. Attackers can craft malicious SIP packets with oversized Call-ID, X-Call-ID, or other header fields to overflow stack buffers and cause crashes or execute arbitrary code during packet parsing and rendering.",
+      "refs": "https://github.com/irontec/sngrep\nhttps://github.com/irontec/sngrep/blob/v1.8.4/src/sip_call.c#L260\nhttps://github.com/irontec/sngrep/blob/v1.8.4/src/sip_msg.c#L150",
+      "source": "NVD",
+      "time": "2026-09-13 06:42:36"
+    },
+    {
+      "cve_id": "CVE-2026-90556",
+      "title": "高危漏洞: CVE-2026-90556 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-13 02:16:44",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Freeciv versions before 3.2.6 contain a heap buffer overflow in worklist_load() when processing savegame files with declared worklist lengths exceeding the fixed array bound of 64 elements. Attackers can craft malicious savegame files that write past the entries array into adjacent heap-allocated struct fields, potentially corrupting memory when a user or server operator loads the file.",
+      "refs": "https://github.com/freeciv/freeciv\nhttps://github.com/freeciv/freeciv/blob/R3_2_5/server/savegame/savegame2.c#L788\nhttps://github.com/freeciv/freeciv/blob/R3_2_5/server/savegame/savegame3.c#L964",
+      "source": "NVD",
+      "time": "2026-09-13 06:42:31"
+    },
+    {
       "cve_id": "CVE-2026-87888",
       "title": "高危漏洞: CVE-2026-87888 (CVSS 8.0)",
       "cvss_score": 8.0,
@@ -1044,61 +1099,6 @@
       "refs": "https://www.twcert.org.tw/en/cp-139-11200-ffc3c-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11201-658c0-1.html",
       "source": "NVD",
       "time": "2026-09-12 02:00:43"
-    },
-    {
-      "cve_id": "CVE-2026-89177",
-      "title": "高危漏洞: CVE-2026-89177 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 16:16:48",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WeenyGenius, a computer lab management system by Howyar Technologies, has a Use of Insecure Protocol vulnerability. Due to the reliance on ZMTP Null mode, unauthenticated attackers on the same network can capture packets to leak transmitted data, or perform replay attacks with forged commands to disrupt classroom operations.",
-      "refs": "https://www.twcert.org.tw/en/cp-139-11200-ffc3c-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11201-658c0-1.html",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:38"
-    },
-    {
-      "cve_id": "CVE-2026-89176",
-      "title": "高危漏洞: CVE-2026-89176 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 16:16:48",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WeenyGenius, a computer lab management system developed by Howyar Technologies, has a Missing Authentication vulnerability. Unauthenticated attackers on the same network can easily spoof student or teacher endpoints. Impersonating a student can disrupt normal classroom operations, whereas impersonating a teacher can induce student computers to initiate connections, thereby gaining remote control over the student endpoints.",
-      "refs": "https://www.twcert.org.tw/en/cp-139-11200-ffc3c-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11201-658c0-1.html",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:30"
-    },
-    {
-      "cve_id": "CVE-2026-89174",
-      "title": "高危漏洞: CVE-2026-89174 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 16:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Smart Video Intercom System developed by Kingdom Communication Associated has a Missing Brute-force Protection vulnerability. Unauthenticated remote attackers can gain access to valid accounts through a large number of login attempts.",
-      "refs": "https://www.twcert.org.tw/en/cp-139-11199-38e1e-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11198-b8bba-1.html",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:26"
-    },
-    {
-      "cve_id": "CVE-2026-87908",
-      "title": "高危漏洞: CVE-2026-87908 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 15:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "multiparty is a Node.js library for parsing multipart/form-data request bodies. In versions from 2.1.0 up to but not including 4.3.1, the parser does not bound the amount of memory used while accumulating the headers of a single multipart part. An unauthenticated attacker can send a single request whose part carries a very large volume of header bytes, forcing the parser to buffer all of them and exhausting the process memory, which crashes the server. This is a denial of service with no confidentiality or integrity impact. The issue is fixed in multiparty 4.3.1, which caps the size of the accumulated part headers. Users should upgrade to multiparty 4.3.1 or later.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/pillarjs/multiparty/security/advisories/GHSA-5h46-2939-q3wh",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:22"
-    },
-    {
-      "cve_id": "CVE-2026-85677",
-      "title": "高危漏洞: CVE-2026-85677 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 15:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The Gutenverse News  WordPress plugin before 3.3.3 does not restrict the extra HTML it adds to WordPress's allowed elements to the context it is meant for, applying the same relaxed list to every sanitisation context including untrusted comments, allowing unauthenticated users to store JavaScript that will execute in the browser of any administrator who reviews the comment queue, and of any visitor to the post once the comment is approved.",
-      "refs": "https://wpscan.com/vulnerability/80a2cc9f-4242-4ffb-a781-cffdceb84ab3/",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:17"
     }
   ]
 }
