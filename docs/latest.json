@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-87719",
+      "title": "高危漏洞: CVE-2026-87719 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-12 11:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.3 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that under certain conditions could allow an authenticated user with Duo Chat access to obtain Advanced Search instance configurations and sensitive credentials using a specially crafted GraphQL subscription argument to bypass serialization and perform server object lookup.",
+      "refs": "https://gitlab.com/gitlab-org/gitlab/-/work_items/628160\nhttps://hackerone.com/reports/4012289",
+      "source": "NVD",
+      "time": "2026-09-12 15:26:37"
+    },
+    {
+      "cve_id": "CVE-2026-85706",
+      "title": "高危漏洞: CVE-2026-85706 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-12 11:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API.",
+      "refs": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748\nhttps://hackerone.com/reports/3909881",
+      "source": "NVD",
+      "time": "2026-09-12 15:26:31"
+    },
+    {
+      "cve_id": "CVE-2026-89266",
+      "title": "高危漏洞: CVE-2026-89266 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-12 08:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+      "description": "stb_vorbis through 1.22 contains a heap buffer overflow in start_decoder() where the codebook multiplicands allocation size is truncated from size_t to int. Attackers can craft a malicious Ogg Vorbis file with large entries and dimensions values to trigger out-of-bounds writes, causing process crashes or heap corruption.",
+      "refs": "https://github.com/nothings/stb\nhttps://github.com/nothings/stb/blob/2c980bb59875b0d32144a71867fbdebb2f77cd20/stb_vorbis.c#L3878-L3880\nhttps://github.com/nothings/stb/blob/2c980bb59875b0d32144a71867fbdebb2f77cd20/stb_vorbis.c#L950",
+      "source": "NVD",
+      "time": "2026-09-12 15:26:22"
+    },
+    {
       "cve_id": "CVE-2026-54241",
       "title": "高危漏洞: CVE-2026-54241 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1066,39 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7286562",
       "source": "NVD",
       "time": "2026-09-11 10:04:45"
-    },
-    {
-      "cve_id": "CVE-2026-82099",
-      "title": "高危漏洞: CVE-2026-82099 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in an OS command.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:41"
-    },
-    {
-      "cve_id": "CVE-2026-82098",
-      "title": "高危漏洞: CVE-2026-82098 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary commands due to improper neutralization of special elements used in an OS command.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:33"
-    },
-    {
-      "cve_id": "CVE-2026-82097",
-      "title": "高危漏洞: CVE-2026-82097 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 06:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary code due to a Server-Side Request Forgery (SSRF) vulnerability.",
-      "refs": "https://www.ibm.com/support/pages/node/7286562",
-      "source": "NVD",
-      "time": "2026-09-11 10:04:29"
     }
   ]
 }
