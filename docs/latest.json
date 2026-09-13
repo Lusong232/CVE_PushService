@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90647",
+      "title": "高危漏洞: CVE-2026-90647 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-13 07:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "ASE/Kalkitech ASE2000 V2 Communication Test Set 2.35 through 2.37 on Windows contains an improper certificate validation vulnerability in the IEC 60870-5-104 TLS client (Task Mode). This allows a network-positioned attacker to bypass certificate validation via a certificate with multiple simultaneous faults, enabling a Man-in-the-Middle attack on protected communications.",
+      "refs": "https://www.ase-systems.com/wp-content/uploads/2026/07/CYB_2026_86278_Advisory_v1.0.pdf",
+      "source": "NVD",
+      "time": "2026-09-13 10:02:07"
+    },
+    {
       "cve_id": "CVE-2026-90616",
       "title": "高危漏洞: CVE-2026-90616 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1088,17 +1099,6 @@
       "refs": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices\nhttps://www.first.org/cvss/calculator/3.1\nhttps://www.sick.com/.well-known/csaf/white/2026/sca-2026-0012.json",
       "source": "NVD",
       "time": "2026-09-12 02:00:47"
-    },
-    {
-      "cve_id": "CVE-2026-89178",
-      "title": "高危漏洞: CVE-2026-89178 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 16:16:48",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WeenyGenius, a computer lab management system by Howyar Technologies, has an Origin Validation Error vulnerability. Unauthenticated attackers on the same network can spoof the teacher workstation and send broadcast packets, causing student computers to attempt to establish a connection with the attacker.",
-      "refs": "https://www.twcert.org.tw/en/cp-139-11200-ffc3c-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11201-658c0-1.html",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:43"
     }
   ]
 }
