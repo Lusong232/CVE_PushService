@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90774",
+      "title": "高危漏洞: CVE-2026-90774 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 19:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "rustypaste before 0.18.1 validates the destination path before applying the optional custom filename HTTP header, allowing attackers to bypass directory-escape checks. Attackers can supply path traversal sequences in the filename header to write files outside the configured upload directory to arbitrary locations.",
+      "refs": "https://github.com/orhun/rustypaste\nhttps://github.com/orhun/rustypaste/blob/v0.18.0/src/paste.rs\nhttps://github.com/orhun/rustypaste/commit/ac05d552596af4a8429d80f30d11f67117ce02c8",
+      "source": "NVD",
+      "time": "2026-09-13 21:33:19"
+    },
+    {
+      "cve_id": "CVE-2026-90772",
+      "title": "高危漏洞: CVE-2026-90772 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-09-13 19:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+      "description": "Amundsen frontend through 4.3.0 renders table, dashboard, and feature descriptions with dangerouslySetInnerHTML without HTML sanitization in ResourceListItem components. Attackers can inject malicious markup like img elements with onerror handlers into descriptions via the metadata service or Elasticsearch, executing JavaScript in every user's browser that views search results.",
+      "refs": "https://github.com/amundsen-io/amundsen\nhttps://github.com/amundsen-io/amundsen/blob/frontend-4.3.0/frontend/amundsen_application/static/js/components/ResourceListItem/TableListItem/index.tsx\nhttps://github.com/amundsen-io/amundsen/issues/2362",
+      "source": "NVD",
+      "time": "2026-09-13 21:33:14"
+    },
+    {
+      "cve_id": "CVE-2026-90770",
+      "title": "高危漏洞: CVE-2026-90770 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-13 19:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Spug through 3.4.0 contains a remote code execution vulnerability in the ping_check function that interpolates user-supplied monitor addresses directly into shell commands without validation. Authenticated users with monitor permissions can inject shell metacharacters via the /monitor/run_test/ endpoint to execute arbitrary commands as the Spug process user.",
+      "refs": "https://github.com/openspug/spug\nhttps://github.com/openspug/spug/blob/v3.4.0/spug_api/apps/monitor/executors.py\nhttps://github.com/openspug/spug/blob/v3.4.0/spug_api/apps/monitor/views.py",
+      "source": "NVD",
+      "time": "2026-09-13 21:33:09"
+    },
+    {
+      "cve_id": "CVE-2026-90769",
+      "title": "高危漏洞: CVE-2026-90769 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-13 19:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Open Notebook before 1.11.0 fails to validate the URL parameter in POST /api/sources endpoint, allowing authenticated users to perform server-side requests to internal services. Attackers can supply arbitrary URLs to read cloud metadata, internal network services, and localhost-bound services through the application server's direct HTTP requests.",
+      "refs": "https://github.com/lfnovo/open-notebook\nhttps://github.com/lfnovo/open-notebook/blob/8889087e317177d7b6e286342ab34e0c9c01d43e/api/routers/sources.py\nhttps://github.com/lfnovo/open-notebook/commit/9045ea50196927eac7de647bb5b7009349236fb4",
+      "source": "NVD",
+      "time": "2026-09-13 21:33:04"
+    },
+    {
+      "cve_id": "CVE-2026-90768",
+      "title": "高危漏洞: CVE-2026-90768 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-13 19:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "CAPEv2 through commit 471ee4b fails to validate task ownership in REST API endpoints, allowing authenticated users to read and delete analyses submitted by other users. Attackers can enumerate all tasks in the system and delete arbitrary analyses by sending requests to task view and delete endpoints without ownership verification.",
+      "refs": "https://github.com/kevoreilly/CAPEv2\nhttps://github.com/kevoreilly/CAPEv2/blob/1255b18/web/apiv2/views.py\nhttps://github.com/kevoreilly/CAPEv2/issues/3162",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:57"
+    },
+    {
+      "cve_id": "CVE-2026-90562",
+      "title": "高危漏洞: CVE-2026-90562 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-13 19:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "LangBot before 4.10.11 generates password recovery keys with only 24 bits of entropy and applies no rate limiting to the unauthenticated reset-password endpoint. Remote attackers knowing the administrator email can exhaust the keyspace through concurrent requests to reset the admin password and gain account access.",
+      "refs": "https://github.com/langbot-app/LangBot\nhttps://github.com/langbot-app/LangBot/blob/v4.10.2/src/langbot/pkg/api/http/controller/groups/user.py\nhttps://github.com/langbot-app/LangBot/blob/v4.10.2/src/langbot/pkg/core/stages/genkeys.py",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:51"
+    },
+    {
+      "cve_id": "CVE-2026-90561",
+      "title": "高危漏洞: CVE-2026-90561 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-09-13 19:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Strapi versions 4.x through 4.26.2 and 5.x before 5.48.1 contain a stored cross-site scripting vulnerability in the content manager WYSIWYG preview component that fails to strip script tags from rich text. An Author-role user can store malicious script tags in rich text fields that execute in an Editor or Super Admin's session when the preview pane is expanded, enabling account takeover.",
+      "refs": "https://github.com/strapi/strapi\nhttps://github.com/strapi/strapi/blob/v5.46.0/packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/Wysiwyg/PreviewWysiwyg.tsx\nhttps://github.com/strapi/strapi/commit/875752612c30f951546904a29469e51e17e0ac37",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:46"
+    },
+    {
+      "cve_id": "CVE-2026-90514",
+      "title": "高危漏洞: CVE-2026-90514 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 19:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in SourceCodester School Registration and Fee System 1.0. Impacted is an unknown function of the file /bilal/normal/save_stud.php. Such manipulation of the argument Status leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/zuojiu567/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-90514\nhttps://vuldb.com/submit/912050",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:41"
+    },
+    {
+      "cve_id": "CVE-2026-90510",
+      "title": "高危漏洞: CVE-2026-90510 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-09-13 19:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in dromara orion-visor up to 2.5.7. This affects the function HostKeyServiceImpl.encryptKey of the file orion-visor-modules/orion-visor-module-asset/orion-visor-module-asset-service/src/main/java/org/dromara/visor/module/asset/service/impl/HostKeyServiceImpl.java. The manipulation leads to use of hard-coded cryptographic key\r . The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/dromara/orion-visor/\nhttps://github.com/dromara/orion-visor/issues/171\nhttps://github.com/sumo166/CVE-apply/blob/main/dromara-orion-visor/Hardcoded%20AES%20Encryption%20Key%20Enables%20Decryption%20of%20SSH%20Private%20Keys%20and%20Host%20Passwords%20(CWE-321)_en.md",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:37"
+    },
+    {
+      "cve_id": "CVE-2026-90509",
+      "title": "高危漏洞: CVE-2026-90509 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 18:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in dromara orion-visor up to 2.5.7. Affected by this issue is the function ExposeApiAspect.beforeExposeApi of the file ExposeApiAspect.java. Executing a manipulation can lead to hard-coded credentials. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/dromara/orion-visor/\nhttps://github.com/dromara/orion-visor/issues/170\nhttps://github.com/sumo166/CVE-apply/blob/main/dromara-orion-visor/ExposeApi%20Hardcoded%20Default%20Token%20Authentication%20Bypass%20(CWE-798)_en.md",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:32"
+    },
+    {
+      "cve_id": "CVE-2026-90504",
+      "title": "高危漏洞: CVE-2026-90504 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 18:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in vvbbnn00 WARP-Clash-API up to c7bf2360073959861219b422e51ae86411051b46. The impacted element is the function authorized. The manipulation of the argument SECRET_KEY leads to missing authentication. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://gist.github.com/Galaxync/b90734d80bf32e8145e46fbc326d6729\nhttps://vuldb.com/cve/CVE-2026-90504\nhttps://vuldb.com/submit/895263",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:24"
+    },
+    {
+      "cve_id": "CVE-2026-90498",
+      "title": "高危漏洞: CVE-2026-90498 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 15:17:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in lenve vhr 1.0-SNAPSHOT. Affected by this issue is some unknown functionality of the file vhr.sql. The manipulation leads to use of default credentials. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/ArrestX/vhr-advisories/blob/main/advisories/VHR-VULN-008-default-credentials.md\nhttps://vuldb.com/cve/CVE-2026-90498\nhttps://vuldb.com/submit/892896",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:19"
+    },
+    {
+      "cve_id": "CVE-2026-89080",
+      "title": "高危漏洞: CVE-2026-89080 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 14:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Really Simple Security  WordPress plugin before 9.8.1 does not prevent an unauthenticated request from resetting an account's completed email two-factor enrolment, allowing an attacker who already knows the account's password to bypass the second factor and obtain that user's session, up to administrator.",
+      "refs": "https://wpscan.com/vulnerability/49546064-5663-40f8-be7c-4f3faa31fa9a/",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:11"
+    },
+    {
+      "cve_id": "CVE-2026-86406",
+      "title": "高危漏洞: CVE-2026-86406 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 14:16:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The User Registration & Membership  WordPress plugin before 5.2.8 does not check the capability of the user making a membership purchase, and does not validate the payment method or the plan submitted with it, allowing any authenticated user such as a subscriber to be granted the WordPress role attached to a paid plan without paying for it. Where the site owner has mapped a plan to a privileged role, this leads to privilege escalation up to administrator.",
+      "refs": "https://wpscan.com/vulnerability/0fb4ec40-3f92-4c7e-8877-8898b355d78d/",
+      "source": "NVD",
+      "time": "2026-09-13 21:32:03"
+    },
+    {
+      "cve_id": "CVE-2026-80071",
+      "title": "高危漏洞: CVE-2026-80071 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-13 14:16:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The User Registration & Membership  WordPress plugin before 5.2.8 does not properly restrict who may author a membership plan or validate the plan a user attaches to their own account, allowing authenticated users with Author-level access and above to assign themselves an arbitrary role and escalate their privileges to Administrator.",
+      "refs": "https://wpscan.com/vulnerability/a4fbdeea-0d3b-466b-b4b6-4c4db277cd1d/",
+      "source": "NVD",
+      "time": "2026-09-13 21:31:56"
+    },
+    {
       "cve_id": "CVE-2026-90678",
       "title": "高危漏洞: CVE-2026-90678 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -934,171 +1099,6 @@
       "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-01.json\nhttps://support.idirect.net\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
       "source": "NVD",
       "time": "2026-09-12 02:02:27"
-    },
-    {
-      "cve_id": "CVE-2026-38056",
-      "title": "高危漏洞: CVE-2026-38056 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 23:17:01",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A local privilege escalation vulnerability exists in the iDirect iQ200 VSAT terminal running firmware 23.0.1.0. The iQ200 is a rackmount satellite modem deployed across oil and gas, maritime, defense, and remote infrastructure as the primary, and often sole communications link for offshore rigs, vessels, and remote sites. Important context: the device ships from the factory with a pre-configured low-privilege local user account. This account is intended for field technicians who need shell access for maintenance and diagnostics but should not have full administrative control over the device. This built-in account provides the initial access required to exploit this vulnerability. No additional credentials need to be obtained or brute-forced.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-01.json\nhttps://support.idirect.net\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:23"
-    },
-    {
-      "cve_id": "CVE-2026-89212",
-      "title": "高危漏洞: CVE-2026-89212 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-11 22:17:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "A flaw resulting in XML external entity (XXE) was found in Akana API Platform in which references were improperly restricted during XML-to-JSON processing. The issue affects Akana versions 2026.1, 2025.1.1, and all versions before 2024.1.6 (including older unsupported versions of Akana) and has been fixed as a security patch in the latest release of supported versions.",
-      "refs": "https://portal.perforce.com/s/cve/a91Qi000003CxPBIA0/xml-external-entity-in-akana-api-platform",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:16"
-    },
-    {
-      "cve_id": "CVE-2026-71416",
-      "title": "高危漏洞: CVE-2026-71416 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-11 22:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Headroom compresses data before the data reaches a large language model. Prior to version 0.35.0, the Headroom WebSocket server does not validate the `Origin` header of incoming client WebSocket requests before forwarding the request to the upstream server, allowing malicious WebSocket clients to perform arbitrary LLM requests without authentication. This can be exploited by a malicious WebSocket client executed in a traditional or headless browser such as lightpanda, if the browser has access to the Headroom proxy and the OpenAI API key is stored in the `OPENAI_API_KEY` environment variable. Version 0.35.0 fixes the issue.",
-      "refs": "https://github.com/headroomlabs-ai/headroom/releases/tag/v0.35.0\nhttps://github.com/headroomlabs-ai/headroom/security/advisories/GHSA-h46j-26q3-rggf\nhttps://github.com/headroomlabs-ai/headroom/security/advisories/GHSA-h46j-26q3-rggf",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:11"
-    },
-    {
-      "cve_id": "CVE-2026-57842",
-      "title": "高危漏洞: CVE-2026-57842 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-09-11 22:17:27",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "NetBSD contains a use-after-free and double-free vulnerability in msg_recv_copyin() within the COMPAT_NETBSD32 compatibility layer due to a missing return statement before the cleanup label on the success path. Any local user able to execute a 32-bit binary on a 64-bit NetBSD system can trigger a kernel panic or memory corruption by calling recvmsg() with msg_iovlen between 9 and IOV_MAX, causing the kernel to access a freed iovec buffer and subsequently free the same allocation a second time.",
-      "refs": "https://gnats.netbsd.org/60373\nhttps://www.vulncheck.com/advisories/netbsd-compat-netbsd32-double-free-use-after-free-via-recvmsg-msg-iovlen",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:07"
-    },
-    {
-      "cve_id": "CVE-2026-84390",
-      "title": "高危漏洞: CVE-2026-84390 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-11 21:18:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A inclusion of sensitive information in source code vulnerability in Fortinet FortiMonitorOnSight 7.2.4 through 7.2.7, FortiMonitorOnSight 7.2.0 through 7.2.2 may allow attacker to improper access control via <insert attack vector here>",
-      "refs": "https://fortiguard.fortinet.com/psirt/FG-IR-26-170",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:03"
-    },
-    {
-      "cve_id": "CVE-2026-80462",
-      "title": "高危漏洞: CVE-2026-80462 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-09-11 21:18:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability in the Chef Automate API gateway and identity validation path may allow an unauthenticated actor to gain elevated access to protected Chef Automate functionality under specific conditions.",
-      "refs": "https://community.progress.com/s/article/Critical-Security-Bulletin---August-2026---Chef-Automate-Security-Vulnerability",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:58"
-    },
-    {
-      "cve_id": "CVE-2026-89259",
-      "title": "高危漏洞: CVE-2026-89259 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-11 20:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Hugo is a static site generator. From v0.161.0, Hugo executes Node tools under Node's permission model, but TailwindCSS — included in the default security.exec.allow list — requires a highly permissive configuration (--allow-addons, --allow-child-process, --allow-worker). As a result, the restrictions intended by the fix for GHSA-x597-9fr4-5857 could still be bypassed, allowing a Node tool invoked during a build to read and write files outside the project's working directory. Affected versions are those after v0.43; the issue was fixed in v0.165.0 by removing tailwindcss from the default security.exec.allow list. Users who do not use TailwindCSS, or who only build trusted sites, are not affected. As a workaround, users can define a restrictive security.exec.allow list in hugo.toml.",
-      "refs": "https://github.com/gohugoio/hugo/security/advisories/GHSA-vrm6-x8vp-mv2r\nhttps://www.vulncheck.com/advisories/hugo-before-0.165.0-insufficient-permission-restriction-via-tailwindcss",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:54"
-    },
-    {
-      "cve_id": "CVE-2026-89256",
-      "title": "高危漏洞: CVE-2026-89256 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-11 20:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the Bookmark plugin where chapter names are not encoded before being concatenated into public watch-page HTML. A video owner can inject malicious scripts via the bookmark name parameter, and every visitor of that video executes the payload in the AVideo origin.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-jggq-mm5m-r5wv\nhttps://www.vulncheck.com/advisories/avideo-bookmark-plugin-stored-xss-via-chapter-names",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:49"
-    },
-    {
-      "cve_id": "CVE-2026-89255",
-      "title": "高危漏洞: CVE-2026-89255 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-11 20:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the LoginControl plugin that fails to HTML-encode PGP public keys echoed into a textarea element. An authenticated attacker can inject malicious JavaScript by submitting a crafted public key, which executes in an administrator's session when viewing the user's profile tab.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-gq4h-vw2w-9rx3\nhttps://www.vulncheck.com/advisories/avideo-logincontrol-stored-xss-via-pgp-public-key\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-gq4h-vw2w-9rx3",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:42"
-    },
-    {
-      "cve_id": "CVE-2026-89254",
-      "title": "高危漏洞: CVE-2026-89254 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-11 20:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the CustomizeUser plugin where the field_name parameter is stored raw without sanitization. Administrators can inject malicious scripts via the add.json.php endpoint that execute when viewing extra info pages or profile forms that render the typeToHTML function.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-7hj4-f9x4-gg7p\nhttps://www.vulncheck.com/advisories/avideo-customizeuser-stored-xss-via-field-name-parameter",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:38"
-    },
-    {
-      "cve_id": "CVE-2026-89253",
-      "title": "高危漏洞: CVE-2026-89253 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-11 20:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the user 'donationLink' profile field. User::setDonationLink() (objects/user.php) stores the value and save() validates it only with filter_var(..., FILTER_VALIDATE_URL), which accepts strings such as http://evil.example/\"onmouseover=alert(document.domain)//, while getDonationLink() applies only strip_tags() and does not encode double quotes. plugin/CustomizeUser/actionButton.php echoes the value unencoded into an <a href=\"...\"> attribute, and that button is included from view/modeYoutubeBottom.php on the watch page when the CustomizeUser option allowDonationLink is enabled. An authenticated user who updates their own profile via objects/userUpdate.json.php can therefore break out of the href attribute and inject an event handler that executes JavaScript in the browser of any visitor—including an administrator—who views the attacker's videos and interacts with (for example, hovers over) the donation button. The issue was unfixed at the time of reporting.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-34jx-r3p9-7pp2\nhttps://www.vulncheck.com/advisories/avideo-stored-xss-via-donationlink-in-watch-page-button\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-34jx-r3p9-7pp2",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:34"
-    },
-    {
-      "cve_id": "CVE-2026-89250",
-      "title": "高危漏洞: CVE-2026-89250 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 20:16:55",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains an unauthenticated file read vulnerability in the getRecordedFile.php endpoint that streams recorded FLV files from the temporary directory. Attackers can request the endpoint with a known or guessed stream key to download recorded live video files without authentication or authorization checks.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-crcx-7mx7-jqfr\nhttps://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-file-read-via-getrecordedfile-php\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-crcx-7mx7-jqfr",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:26"
-    },
-    {
-      "cve_id": "CVE-2026-89249",
-      "title": "高危漏洞: CVE-2026-89249 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-11 20:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in the YPTWallet plugin where user-supplied CryptoWallet values are base64-encoded but not HTML-escaped before storage in wallet_log.information. Administrators viewing pending withdrawal requests in pendingRequests.php execute the stored markup in their session, allowing attackers to perform administrative actions via same-origin fetch requests.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-fvp5-q9jp-29mx\nhttps://www.vulncheck.com/advisories/avideo-yptwallet-stored-xss-via-cryptowallet-configuration",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:22"
-    },
-    {
-      "cve_id": "CVE-2026-89243",
-      "title": "高危漏洞: CVE-2026-89243 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-11 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a stored cross-site scripting vulnerability in UserGroups::setGroup_name() that fails to sanitize group_name input. Administrators with canAdminUserGroups permission can inject malicious HTML and JavaScript that executes in the browser when other administrators access the user manager interface.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-qm3h-2jrx-xmg6\nhttps://www.vulncheck.com/advisories/wwbn-avideo-stored-xss-via-usergroups-setgroup-name\nhttps://github.com/WWBN/AVideo/security/advisories/GHSA-qm3h-2jrx-xmg6",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:17"
-    },
-    {
-      "cve_id": "CVE-2026-89242",
-      "title": "高危漏洞: CVE-2026-89242 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-11 20:16:53",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains a server-side request forgery vulnerability in the _json_decode function that fetches remote URLs and local file paths without SSRF validation. Unauthenticated attackers can POST file paths or HTTP URLs to login.json.php to read local files or access internal services, with results parsed as login credentials.",
-      "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-wqwf-wmvx-53jh\nhttps://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-ssrf-via-login-json-php",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:12"
     }
   ]
 }
