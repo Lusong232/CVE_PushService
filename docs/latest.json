@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90593",
+      "title": "高危漏洞: CVE-2026-90593 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-14 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in embedded-graphics up to 0.8.2. This affects the function ImageRaw::draw_sub_image of the file src/image/image_raw.rs. Executing a manipulation of the argument width can lead to integer overflow. The attack may be launched remotely. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/embedded-graphics/embedded-graphics/\nhttps://github.com/embedded-graphics/embedded-graphics/issues/821\nhttps://vuldb.com/cve/CVE-2026-90593",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:53"
+    },
+    {
+      "cve_id": "CVE-2026-88802",
+      "title": "高危漏洞: CVE-2026-88802 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-14 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The MDJM Event Management WordPress plugin before 1.7.8.5 and the Mobile Events Manager WordPress plugin through 1.4.8.3 do not check a capability, a nonce or the type of the record before permanently deleting the post identified in a request to their playlist entry removal, allowing unauthenticated attackers to destroy arbitrary posts, pages and media attachments, bypassing the trash.",
+      "refs": "https://wpscan.com/vulnerability/cac1846c-bbf4-4ad2-8dfb-d7025034a9a7/",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:48"
+    },
+    {
+      "cve_id": "CVE-2026-88793",
+      "title": "高危漏洞: CVE-2026-88793 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-14 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The YouTube Embed WordPress plugin from 10.0 to 10.3 does not perform any authorisation check on one of its AJAX actions, relying only on a nonce it prints on every front-end page, and does not escape the stored data before rendering it, allowing unauthenticated attackers to store arbitrary web scripts which will execute in the session of any user viewing the affected content, including an administrator.",
+      "refs": "https://wpscan.com/vulnerability/7f695b0c-5dbc-4f3e-9b3f-c3558b1729ad/",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:42"
+    },
+    {
+      "cve_id": "CVE-2026-85129",
+      "title": "高危漏洞: CVE-2026-85129 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-14 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Hoo Companion WordPress plugin 1.0.2 does not have any authorisation or validation checks in one of its import features, and does not sanitise the data submitted to it before storing it as the active theme's settings, allowing unauthenticated attackers to inject arbitrary web scripts which will execute for anyone viewing the site, including administrators. The same request destroys the site's existing theme settings.",
+      "refs": "https://wpscan.com/vulnerability/a50f6ec1-4297-453e-b45f-6fd889b6b0d2/",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:38"
+    },
+    {
+      "cve_id": "CVE-2026-81648",
+      "title": "高危漏洞: CVE-2026-81648 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-14 05:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The CryptoPayment Gateway WordPress plugin from 1.2.1 to 1.2.2 does not apply an authorization check on one of its AJAX endpoints, allowing unauthenticated users to invoke administrative operations, including deleting arbitrary files on the server, overwriting the payment gateway configuration and recovering stored wallet credentials in cleartext.",
+      "refs": "https://wpscan.com/vulnerability/9b1490a0-1381-4d22-8086-f75aade4e898/",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:29"
+    },
+    {
+      "cve_id": "CVE-2026-74933",
+      "title": "高危漏洞: CVE-2026-74933 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-14 05:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The GenieWords WordPress plugin from 1.5.27 to 1.5.34 does not have authorisation checks on some of its REST API and AJAX actions, and decodes stored values before printing them, allowing unauthenticated users to overwrite its configuration and inject arbitrary web scripts that execute on every front-end page.",
+      "refs": "https://wpscan.com/vulnerability/23dc45bb-e7b6-4cae-81ce-2c6394afb454/",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:24"
+    },
+    {
+      "cve_id": "CVE-2026-37008",
+      "title": "高危漏洞: CVE-2026-37008 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-14 05:17:01",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "description": "CrewAI before fb2323b offers a Python blocklist approach that operates at the wrong level of abstraction, a different vulnerability than CVE-2026-2275. Import-time blocking of module names does not address the availability of Python's complete object graph. For example, calling ctypes.CDLL(None) loads the C library without relying in any import statements. In other words, a within-process sandbox cannot merely account for the import system and instead must account for the complete runtime of the Python interpreter.",
+      "refs": "https://docs.python.org/3/library/ctypes.html\nhttps://github.com/crewAIInc/crewAI/commit/fb2323b3deb3ec62b3965526857e77a2264e4cd0\nhttps://yerangamage.com/cves/detail/?slug=crewai-sandbox-escape",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:20"
+    },
+    {
+      "cve_id": "CVE-2026-36453",
+      "title": "高危漏洞: CVE-2026-36453 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-14 05:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "Rhymix before 2.1.31 allows insecure direct object reference, aka RVE-2026-1. Arbitrary files can be accessed via extra variables.",
+      "refs": "https://github.com/rhymix/rhymix/commit/f131a616eb990e2b070a8381c3106ae979d40989\nhttps://rhymix.org/community/1932364",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:16"
+    },
+    {
+      "cve_id": "CVE-2026-29811",
+      "title": "高危漏洞: CVE-2026-29811 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-14 04:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+      "description": "CyberPanel before 2.4.4 attempts to detect an \"alais\" domain (i.e., a second domain that serves the same content as a primary domain; normally spelled \"alias\") via an ORM query filter rather than a Python \"if\" statement.",
+      "refs": "https://github.com/usmannasir/cyberpanel/commit/0a099b1b193946555fbdd387a28486b1521f9961",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:12"
+    },
+    {
+      "cve_id": "CVE-2026-90579",
+      "title": "高危漏洞: CVE-2026-90579 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-14 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in cheshire-cat-ai Cheshire Cat AI up to 1.9.2. This affects the function _authorize_http_key of the file core/cat/factory/custom_auth_handler.py. The manipulation of the argument user_id leads to missing authentication. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/cheshire-cat-ai/core/issues/1137\nhttps://vuldb.com/cve/CVE-2026-90579\nhttps://vuldb.com/submit/913219",
+      "source": "NVD",
+      "time": "2026-09-14 06:43:07"
+    },
+    {
       "cve_id": "CVE-2026-90566",
       "title": "高危漏洞: CVE-2026-90566 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/authorizerdev/authorizer/security/advisories/GHSA-h29v-hj44-q8cv",
       "source": "NVD",
       "time": "2026-09-12 04:37:23"
-    },
-    {
-      "cve_id": "CVE-2026-89099",
-      "title": "高危漏洞: CVE-2026-89099 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-12 02:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A race condition in the document value layer of MongoDB Server can allow concurrent server threads to operate on the same internal memory without synchronization, leading to memory corruption. An authenticated user holding ordinary read-write privileges on a database may be able to trigger this condition over the normal client protocol, resulting in server termination and potential corruption of process memory with user-influenced content. Successful use of this issue may impact the confidentiality, integrity, and availability of the affected server process.",
-      "refs": "https://jira.mongodb.org/browse/SERVER-134063",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:19"
-    },
-    {
-      "cve_id": "CVE-2026-72710",
-      "title": "高危漏洞: CVE-2026-72710 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-12 01:18:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SPIP before 4.4.18 contains a remote code execution vulnerability in the editer_objet action where the arg parameter resolves SQL table names without enforcing an editable columns allowlist, allowing attackers with a valid nonce to inject attacker-controlled rows into the spip_jobs table. Attackers can supply arg=job/0 with crafted fonction and args values, which are later unserialized and executed when the cron job queue is drained, resulting in arbitrary PHP function execution on the underlying system.",
-      "refs": "https://blog.lexfo.fr/casse-spip-sqli-to-rce.html\nhttps://blog.spip.net/Mise-a-jour-critique-de-securite-sortie-de-SPIP-4-4-18.html\nhttps://www.vulncheck.com/advisories/spip-remote-code-execution-via-editer-objet-php-job-queue-injection",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:12"
-    },
-    {
-      "cve_id": "CVE-2026-72709",
-      "title": "高危漏洞: CVE-2026-72709 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-12 01:18:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SPIP before 4.4.18 contains a missing authorization vulnerability in the administrative action endpoints under ecrire/action/ that allows unauthenticated attackers to perform privileged actions by supplying a valid HMAC-SHA256 nonce without any server-side permission check via autoriser(). Attackers can obtain a valid nonce, compute it for any action as the anonymous user, and invoke the editer_auteur action directly over HTTP to reset the password of any user account, including the administrator.",
-      "refs": "https://blog.lexfo.fr/casse-spip-sqli-to-rce.html\nhttps://blog.spip.net/Mise-a-jour-critique-de-securite-sortie-de-SPIP-4-4-18.html\nhttps://www.vulncheck.com/advisories/spip-missing-authorization-via-ecrire-action-editer-auteur",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:08"
-    },
-    {
-      "cve_id": "CVE-2026-72708",
-      "title": "高危漏洞: CVE-2026-72708 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-12 01:18:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "SPIP before 4.4.18 contains an unauthenticated blind SQL injection vulnerability in the public sitemap endpoint where the MySQL escaper spip_mysql_cite() in ecrire/req/mysql.php returns values unescaped when the target column is a date type and the supplied value matches the pattern of a word character followed by an open parenthesis. Attackers can supply a crafted value such as a time-based payload through the annee parameter in squelettes-dist/sitemap.xml.html to embed arbitrary SQL directly into the generated query, enabling time-based and boolean-based blind SQL injection that can expose arbitrary database content including the alea_ephemere secret used to sign action nonces.",
-      "refs": "https://blog.lexfo.fr/casse-spip-sqli-to-rce.html\nhttps://blog.spip.net/Mise-a-jour-critique-de-securite-sortie-de-SPIP-4-4-18.html\nhttps://www.vulncheck.com/advisories/spip-unauthenticated-sql-injection-via-sitemap-annee-parameter",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:04"
-    },
-    {
-      "cve_id": "CVE-2026-89262",
-      "title": "高危漏洞: CVE-2026-89262 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-12 00:17:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "MoguBlog through 6.2 contains an authorization bypass vulnerability in the comment deletion endpoint that performs ownership checks against request-body fields instead of the authenticated principal. Attackers can delete arbitrary comments and their replies by supplying comment UIDs and author UIDs obtained from unauthenticated listing endpoints.",
-      "refs": "https://gitee.com/moxi159753/mogu_blog_v2/releases\nhttps://github.com/LinYuanyi1/cve-request-poc/blob/master/mogublog-poc/C04_comment_delete_idor.py\nhttps://github.com/moxi624/mogu_blog_v2",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:00"
-    },
-    {
-      "cve_id": "CVE-2026-89260",
-      "title": "高危漏洞: CVE-2026-89260 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-12 00:17:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "MoguBlog through 6.2 contains an XML external entity injection vulnerability in the WeChat callback handler at POST /wechat/wechatCheck. The WechatRestApi.index() method passes the raw request body to SignUtil.xmlToMap(), which uses an unhardened dom4j SAXReader without DTD or external-entity restrictions. Unauthenticated remote attackers can submit DOCTYPE declarations with external parameter entities to read arbitrary local files or trigger outbound HTTP requests, with resolved entities reflected in error responses.",
-      "refs": "https://gitee.com/moxi159753/mogu_blog_v2/releases\nhttps://github.com/LinYuanyi1/cve-request-poc/blob/master/mogublog-poc/C10_wechat_callback_unsigned.py\nhttps://github.com/moxi624/mogu_blog_v2",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:56"
-    },
-    {
-      "cve_id": "CVE-2026-89066",
-      "title": "高危漏洞: CVE-2026-89066 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-12 00:17:49",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an OS command in the task synthesis component in projen before 0.103.0 might allow context-dependent attackers to execute arbitrary commands on a developer workstation or continuous integration runner via shell metacharacters in project configuration values and repository file names that are interpolated into generated task definitions.\n\n\n\nTo remediate this issue, users should upgrade to version 0.103.0 and then re-synthesize the project so that .projen/tasks.json is regenerated with the corrected task definitions. Upgrading alone is not sufficient because the generated task definition file is committed to the repository.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-108-aws/\nhttps://github.com/projen/projen/releases/tag/v0.103.0\nhttps://github.com/projen/projen/security/advisories/GHSA-q6g4-h6vc-vqm8",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:52"
-    },
-    {
-      "cve_id": "CVE-2026-89065",
-      "title": "高危漏洞: CVE-2026-89065 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-12 00:17:49",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "Relative path traversal in the generated file manifest cleanup component in projen before 0.101.37 might allow context-dependent attackers to recursively delete files and directories outside the project directory that are writable by the environment running projen, via crafted entries in the version-controlled generated file manifest that is consumed during project synthesis.\n\n\n\nTo remediate this issue, users should upgrade to version 0.101.37. The corrected containment check is automatically applied by the projen runtime next time you run it.",
-      "refs": "https://aws.amazon.com/security/security-bulletins/2026-108-aws/\nhttps://github.com/projen/projen/releases/tag/v0.101.37\nhttps://github.com/projen/projen/security/advisories/GHSA-7p65-6x86-v7f3",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:48"
-    },
-    {
-      "cve_id": "CVE-2026-89013",
-      "title": "高危漏洞: CVE-2026-89013 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-12 00:17:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Dolibarr 23.0.4 before 24.0.1 ontains an authorization bypass vulnerability that allows unauthenticated attackers to read arbitrary files through the document storage endpoints by supplying a crafted hashp parameter value. Attackers can send a request with hashp=shared to skip token validation while satisfying the authorization condition in htdocs/document.php and htdocs/viewimage.php, gaining access to application logs, uploaded business documents, database backups containing password hashes, and files belonging to other multicompany entities.",
-      "refs": "https://github.com/Dolibarr/dolibarr/commit/cd05688dbed8a4af6eef32faf4fc1e823a37bce9\nhttps://github.com/Dolibarr/dolibarr/releases/tag/24.0.1\nhttps://www.vulncheck.com/advisories/dolibarr-authorization-bypass-via-hashp-parameter-in-document-php",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:40"
-    },
-    {
-      "cve_id": "CVE-2026-7863",
-      "title": "高危漏洞: CVE-2026-7863 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-09-12 00:17:47",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus Software allows OS Command Injection.\n\nThis issue affects Pardus Software: before 1.0.5.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1080",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:36"
     }
   ]
 }
