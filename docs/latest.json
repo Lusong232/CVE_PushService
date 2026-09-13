@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90526",
+      "title": "高危漏洞: CVE-2026-90526 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 22:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in SourceCodester School Registration and Fee System 1.0. This impacts an unknown function of the file /bilal/save_class.php. The manipulation of the argument Category leads to sql injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used.",
+      "refs": "https://github.com/pangdudu24/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-90526\nhttps://vuldb.com/submit/912528",
+      "source": "NVD",
+      "time": "2026-09-14 01:48:13"
+    },
+    {
+      "cve_id": "CVE-2026-90524",
+      "title": "高危漏洞: CVE-2026-90524 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 22:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in jaychouchannel Tourism-Management-System up to 229956e20dbd4a80eeff14535e44d3099502af09. The impacted element is an unknown function of the component Update Endpoint. Performing a manipulation results in missing authentication. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The patch is named 84d8ec384f669df3985293dab293bb7b477efa64. It is suggested to install a patch to address this issue.",
+      "refs": "https://github.com/jaychouchannel/Tourism-Management-System/\nhttps://github.com/jaychouchannel/Tourism-Management-System/commit/84d8ec384f669df3985293dab293bb7b477efa64\nhttps://github.com/jaychouchannel/Tourism-Management-System/issues/11",
+      "source": "NVD",
+      "time": "2026-09-14 01:48:05"
+    },
+    {
+      "cve_id": "CVE-2026-90523",
+      "title": "高危漏洞: CVE-2026-90523 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 22:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in jaychouchannel Tourism-Management-System up to 229956e20dbd4a80eeff14535e44d3099502af09. The affected element is an unknown function of the file travel/src/main/java/com/controller/UsersController.java of the component User Register Endpoint. Such manipulation of the argument UsersEntity leads to improper privilege management. The attack can be launched remotely. The exploit is publicly available and might be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The name of the patch is 84d8ec384f669df3985293dab293bb7b477efa64. Applying a patch is advised to resolve this issue.",
+      "refs": "https://github.com/jaychouchannel/Tourism-Management-System/\nhttps://github.com/jaychouchannel/Tourism-Management-System/commit/84d8ec384f669df3985293dab293bb7b477efa64\nhttps://github.com/jaychouchannel/Tourism-Management-System/issues/10",
+      "source": "NVD",
+      "time": "2026-09-14 01:48:00"
+    },
+    {
+      "cve_id": "CVE-2026-90783",
+      "title": "高危漏洞: CVE-2026-90783 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-13 21:16:29",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "MKVToolNix through 101.0 contains a heap buffer overflow in the bundled avilib library's ODML superindex parser due to integer wraparound in 32-bit arithmetic. Attackers can craft a malicious AVI file with oversized entry counts that cause an undersized heap allocation, allowing a heap buffer overflow when the file is parsed with mkvmerge.",
+      "refs": "https://codeberg.org/mbunkus/mkvtoolnix\nhttps://codeberg.org/mbunkus/mkvtoolnix/commit/1495126138e086080f0163bee27fafbdf956a1d0\nhttps://codeberg.org/mbunkus/mkvtoolnix/src/tag/release-101.0/lib/avilib-0.6.10/avilib.c#L2552-L2570",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:55"
+    },
+    {
+      "cve_id": "CVE-2026-90522",
+      "title": "高危漏洞: CVE-2026-90522 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 21:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in jaychouchannel Tourism-Management-System up to d984d172dceca907f8b447efbdb06dc233f7938d. Impacted is the function resetPass of the file UsersController.java of the component Password Recovery. This manipulation causes weak password recovery. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. Patch name: 9cb6215ac871f99a90cde763cf003e95ff282283. It is recommended to apply a patch to fix this issue.",
+      "refs": "https://github.com/jaychouchannel/Tourism-Management-System/\nhttps://github.com/jaychouchannel/Tourism-Management-System/commit/9cb6215ac871f99a90cde763cf003e95ff282283\nhttps://github.com/jaychouchannel/Tourism-Management-System/issues/13",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:51"
+    },
+    {
+      "cve_id": "CVE-2026-90780",
+      "title": "高危漏洞: CVE-2026-90780 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 20:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "SIPp through 3.7.7 contains a buffer overflow vulnerability in the get_header() function in src/sip_parser.cpp when processing SIP messages with header content exceeding 20,490 bytes. Unauthenticated remote attackers can send crafted SIP messages with oversized headers to overflow the static buffer and crash the process.",
+      "refs": "https://github.com/SIPp/sipp\nhttps://github.com/SIPp/sipp/blob/v3.7.7/src/sip_parser.cpp#L164-L227\nhttps://github.com/SIPp/sipp/commit/8ddfb43359703e665041a955543e07f504f80232",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:46"
+    },
+    {
+      "cve_id": "CVE-2026-90779",
+      "title": "高危漏洞: CVE-2026-90779 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 20:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "SIPp through 3.7.7 contains a stack buffer overflow vulnerability in createAuthHeader() when processing SIP authentication challenges with oversized algorithm parameters. A malicious SIP server can send a crafted 401 or 407 challenge to corrupt the stack and crash the client process.",
+      "refs": "https://github.com/SIPp/sipp\nhttps://github.com/SIPp/sipp/blob/v3.7.7/src/auth.cpp#L183-L192\nhttps://github.com/SIPp/sipp/commit/1d4a5622bea34d0b5cdff333e6b5734608e30af7",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:41"
+    },
+    {
+      "cve_id": "CVE-2026-90778",
+      "title": "高危漏洞: CVE-2026-90778 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 20:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "SIPp through 3.7.7 contains a buffer overflow vulnerability in get_peer_tag() function when processing SIP To headers with tag parameters of 2049 bytes or more. Unauthenticated remote attackers can send crafted SIP messages with oversized tag parameters to overflow the static buffer and crash the process.",
+      "refs": "https://github.com/SIPp/sipp\nhttps://github.com/SIPp/sipp/blob/v3.7.7/src/sip_parser.cpp#L76-L113\nhttps://github.com/SIPp/sipp/commit/ddf22d1a54e0396b2e18ebaf4cf5a3fa860e5da4",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:32"
+    },
+    {
+      "cve_id": "CVE-2026-90777",
+      "title": "高危漏洞: CVE-2026-90777 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-13 20:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "ESPnet before 202609 deserializes pretrained model checkpoints using torch.load with weights_only=False, allowing arbitrary code execution from attacker-supplied files. Attackers can craft malicious checkpoint files that execute code during deserialization when loaded through the initialization or fine-tuning path.",
+      "refs": "https://github.com/espnet/espnet\nhttps://github.com/espnet/espnet/blob/v.202511/espnet2/torch_utils/load_pretrained_model.py#L99\nhttps://github.com/espnet/espnet/commit/91ca045fc179f29bc7b7fe05cd852aea65310003",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:27"
+    },
+    {
+      "cve_id": "CVE-2026-90776",
+      "title": "高危漏洞: CVE-2026-90776 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 20:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Nodemailer versions 9.1.0 through 10.0.4 contain a quadratic time complexity vulnerability in the addressparser component when parsing email addresses with RFC 5322 comments. Attackers can craft malicious email headers with comment-separated atoms to consume excessive CPU and block the Node.js event loop for several seconds, causing denial of service.",
+      "refs": "https://github.com/nodemailer/nodemailer\nhttps://github.com/nodemailer/nodemailer/blob/v10.0.4/src/addressparser/index.ts#L251\nhttps://github.com/nodemailer/nodemailer/commit/c07f17518d25aca8ab2ad66968dcbca538c24b89",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:22"
+    },
+    {
+      "cve_id": "CVE-2026-90516",
+      "title": "高危漏洞: CVE-2026-90516 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 20:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in SourceCodester School Registration and Fee System 1.0. The affected element is an unknown function of the file /bilal/normal/pay_report.php. Performing a manipulation of the argument period results in sql injection. The attack can be initiated remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/zuojiu567/cve/issues/3\nhttps://vuldb.com/cve/CVE-2026-90516\nhttps://vuldb.com/submit/912055",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:15"
+    },
+    {
+      "cve_id": "CVE-2026-90515",
+      "title": "高危漏洞: CVE-2026-90515 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 20:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester School Registration and Fee System 1.0. The impacted element is an unknown function of the file /bilal/normal/delete_stud.php. Executing a manipulation of the argument selector[] can lead to sql injection. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/zuojiu567/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-90515\nhttps://vuldb.com/submit/912054",
+      "source": "NVD",
+      "time": "2026-09-14 01:47:07"
+    },
+    {
       "cve_id": "CVE-2026-90774",
       "title": "高危漏洞: CVE-2026-90774 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -967,138 +1099,6 @@
       "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70341",
       "source": "NVD",
       "time": "2026-09-12 04:36:32"
-    },
-    {
-      "cve_id": "CVE-2026-68497",
-      "title": "高危漏洞: CVE-2026-68497 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-12 00:17:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "jackson-databind binds a JSON string to a javax.xml.datatype.Duration or javax.xml.datatype.XMLGregorianCalendar field by passing the raw string verbatim to DatatypeFactory.newDuration(value) or newXMLGregorianCalendar(value) in CoreXMLDeserializers.Std._deserialize. These deserializers are registered by default with no opt-in, so a plain ObjectMapper or JsonMapper with no polymorphic typing and no special configuration reaches this path. The XML Schema lexical grammar permits numeric components of arbitrary length, which the JDK materializes through the native BigInteger(String) and BigDecimal(String) constructors, both quadratic in digit count. Because the digits sit inside a JSON string token rather than a JSON number token, jackson-core's StreamReadConstraints.maxNumberLength guard never applies; jackson's own NumberDeserializers call validateIntegerLength or validateFPLength before parsing a stringified number, but the XML datatype deserializer omits that pre-check. An unauthenticated attacker can therefore submit a single request of a few megabytes, such as a Duration value consisting of the letter P followed by several million digits and the letter Y, and force tens of seconds to several minutes of single-threaded CPU work; a handful of concurrent requests can saturate a server's worker threads. This affects com.fasterxml.jackson.core:jackson-databind from 2.0.0 before 2.18.10, from 2.19.0 before 2.21.6, and from 2.22.0 before 2.22.2, and tools.jackson.core:jackson-databind from 3.0.0 before 3.1.6 and from 3.2.0 before 3.2.2. Users should upgrade to 2.18.10, 2.21.6, 2.22.2, 3.1.6, or 3.2.2.",
-      "refs": "https://github.com/FasterXML/jackson-databind/commit/a99b7e74c8928f43f6975773a8c862c8316178bd\nhttps://github.com/FasterXML/jackson-databind/pull/6127\nhttps://github.com/FasterXML/jackson-databind/security/advisories/GHSA-q4xh-88c3-wmh7",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:28"
-    },
-    {
-      "cve_id": "CVE-2026-71644",
-      "title": "高危漏洞: CVE-2026-71644 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-11 22:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An issue in Robotics-STAR-Lab (SYSU STAR Group) RACER Tested affected version: commit abcdef1234567890 allows an attacker to cause unsafe trajectory planning and potential UAV collisions via a missing default case in the FSM that stops publishing swarm trajectories when the drone enters IDLE",
-      "refs": "https://gist.github.com/DongJiaxin0422/6c39c3c59236bc2c8ec4b4182284fa7e\nhttps://github.com/Robotics-STAR-Lab/RACER\nhttps://github.com/Robotics-STAR-Lab/RACER/issues/50",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:21"
-    },
-    {
-      "cve_id": "CVE-2025-57231",
-      "title": "高危漏洞: CVE-2025-57231 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 06:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Path Traversal in avatar attachments in Docmost v0.21.0 allows an unauthenticated malicious actor to disclose local files via a POST Request in a public url.",
-      "refs": "https://github.com/docmost/docmost/blob/0bd7ecb9b03a74e9a5e3f97b6457b82371c5ceb2/apps/server/src/core/attachment/attachment.controller.ts#L345\nhttps://www.artresilia.com/docmost-v0-21-0-cve-2025-57231-unauthenticated-file-path-traversal/\nhttps://www.artresilia.com/docmost-v0-21-0-cve-2025-57231-unauthenticated-file-path-traversal/",
-      "source": "NVD",
-      "time": "2026-09-12 04:36:16"
-    },
-    {
-      "cve_id": "CVE-2026-8303",
-      "title": "高危漏洞: CVE-2026-8303 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-11 23:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect privilege assignment vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus-software allows Privilege Escalation.\n\nThis issue affects Pardus-software: before 1.0.5.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1080",
-      "source": "NVD",
-      "time": "2026-09-12 02:03:05"
-    },
-    {
-      "cve_id": "CVE-2026-8301",
-      "title": "高危漏洞: CVE-2026-8301 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-11 23:17:09",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus Boot Repair allows OS Command Injection.\n\nThis issue affects Pardus Boot Repair: before 1.0.8.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1081",
-      "source": "NVD",
-      "time": "2026-09-12 02:03:01"
-    },
-    {
-      "cve_id": "CVE-2026-89010",
-      "title": "高危漏洞: CVE-2026-89010 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-11 23:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "WAVLINK WN535M1 and WN535M3 routers running firmware prior to M35M1_V250922 contain an unauthenticated OS command injection vulnerability that allows remote attackers to execute arbitrary commands as root by sending crafted filenames to the sync_server daemon on TCP port 13136. The daemon interpolates attacker-controlled filename input containing shell metacharacters into a shell command string via sprintf() and passes it to system() without sanitization, enabling root-level command execution on the device.",
-      "refs": "https://docs.wavlink.xyz/\nhttps://github.com/camdsmith/wavlink-sync_server-rce/blob/main/README.md\nhttps://www.vulncheck.com/advisories/wavlink-wn535m1-wn535m3-unauthenticated-os-command-injection-via-sync-server",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:57"
-    },
-    {
-      "cve_id": "CVE-2026-89009",
-      "title": "高危漏洞: CVE-2026-89009 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-11 23:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "WAVLINK WN535M1 and WN535M3 routers running firmware prior to M35M1_V250922 contain an unauthenticated arbitrary file write vulnerability that allows remote attackers to overwrite any file on the device by sending a crafted payload to the sync_server daemon on TCP port 13136. The daemon, which runs as root and requires no authentication, accepts a 100-byte filename field in its protocol header without path canonicalization, allowing attackers to supply an absolute path and write arbitrary content to overwrite startup scripts or credential stores to achieve persistent system compromise.",
-      "refs": "https://docs.wavlink.xyz/\nhttps://github.com/camdsmith/wavlink-sync_server-rce/blob/main/README.md\nhttps://www.vulncheck.com/advisories/wavlink-wn535m1-wn535m3-unauthenticated-arbitrary-file-write-via-sync-server",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:50"
-    },
-    {
-      "cve_id": "CVE-2026-87020",
-      "title": "高危漏洞: CVE-2026-87020 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-11 23:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "An integer overflow in a specified pitch and buffer-size computation leads to a heap out-of-bounds write when Orthanc DICOM Server decodes an attacker-supplied PNG.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsma-26-253-02.json\nhttps://orthanc.uclouvain.be/downloads/index.html\nhttps://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-02",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:45"
-    },
-    {
-      "cve_id": "CVE-2026-82583",
-      "title": "高危漏洞: CVE-2026-82583 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-09-11 23:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
-      "description": "NextGen Connect (Mirth Connect) versions 4.7.1 and earlier allow an authenticated user to execute arbitrary SQL through a Database Connector API, which could result in disclosure of stored credentials for connected systems, arbitrary file write, and a denial-of-service condition.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsma-26-253-01.json\nhttps://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-01",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:41"
-    },
-    {
-      "cve_id": "CVE-2026-82578",
-      "title": "高危漏洞: CVE-2026-82578 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 23:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "When XML batch processing is turned on and the XPath option is selected, the raw batch input goes through a default XPath/JAXP setup with no entity restrictions, so XXE injection can allow data exfiltration and denial-of-service attacks.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsma-26-253-01.json\nhttps://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-01",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:37"
-    },
-    {
-      "cve_id": "CVE-2026-78224",
-      "title": "高危漏洞: CVE-2026-78224 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-11 23:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
-      "description": "The XSLT Transformer Step builds a bare TransformerFactory without the proper security options set, so XXE injection can allow data exfiltration and denial-of-service attacks.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsma-26-253-01.json\nhttps://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-01",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:32"
-    },
-    {
-      "cve_id": "CVE-2026-38058",
-      "title": "高危漏洞: CVE-2026-38058 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-11 23:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "The endpoint on the iDirect iQ200 VSAT terminal returns the complete device configuration as JSON, including the SECURITY section which contains MD5-crypt password hashes for the root SSH and web administration accounts. Any user with valid web credentials can extract these hashes and crack them offline using commodity hardware.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-183-01.json\nhttps://support.idirect.net\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-183-01",
-      "source": "NVD",
-      "time": "2026-09-12 02:02:27"
     }
   ]
 }
