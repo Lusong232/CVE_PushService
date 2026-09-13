@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90678",
+      "title": "高危漏洞: CVE-2026-90678 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 12:17:25",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:L",
+      "description": "An issue was discovered in HAProxy 3.3.0 through 3.4.4 and in 3.5-dev1 through 3.5-dev5. Exploitation requires an HTTP/3 frontend: HAProxy must be built with QUIC support and configured with a QUIC bind listener, and the affected traffic must reach a backend over HTTP/1.1 using chunked transfer coding on a reused connection. Under those conditions, when an HTTP/3 request carries no Content-Length header, the HTTP/3 multiplexer credits the length declared in a DATA frame header to the stream endpoint's known-input-payload estimate at the moment the frame header is decoded, before the payload has been received, and that declared length is emitted verbatim as the HTTP/1.1 chunk size. A remote unauthenticated client that declares more payload than it delivers and then ends the stream causes HAProxy to announce a chunk larger than the bytes it writes and to return the connection to the idle pool in a desynchronized state. The result is potential HTTP request smuggling on reused backend connections: an attacker can place a request past a frontend rule such as a path-based http-request deny, so that the smuggled request is never seen by HAProxy's HTTP analysis, and can cause concurrent clients' requests, including their request lines and Authorization headers, to be consumed as the attacker's request body and lost. Exploitation is not deterministic; it depends on a race with backend connection pooling, succeeding in a majority of but not all trials during testing, and can be retried freely. The mechanism was introduced in 3.3-dev10; releases 3.2.x and earlier are unaffected.",
+      "refs": "http://git.haproxy.org/?p=haproxy.git;a=commit;h=86a4ebc761a278838e8cb06f3a292282ba704c65\nhttps://github.com/haproxy/haproxy/commit/86a4ebc761a278838e8cb06f3a292282ba704c65\nhttps://www.haproxy.org/download/3.5/src/CHANGELOG",
+      "source": "NVD",
+      "time": "2026-09-13 15:46:07"
+    },
+    {
+      "cve_id": "CVE-2026-90495",
+      "title": "高危漏洞: CVE-2026-90495 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-13 12:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Fengoffice Feng Office up to 3.11.13.11. This impacts the function Contacts::instance->findAll of the file application/models/CompanyWebsite.class.php of the component Legacy API. Such manipulation of the argument auth leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://drive.google.com/file/d/1Pc3Xn0funYMa-N-1ihZjSWrpS-zhqbna/view?usp=sharing\nhttps://vuldb.com/cve/CVE-2026-90495\nhttps://vuldb.com/submit/892871",
+      "source": "NVD",
+      "time": "2026-09-13 15:46:00"
+    },
+    {
+      "cve_id": "CVE-2026-90493",
+      "title": "高危漏洞: CVE-2026-90493 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-13 11:16:27",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Tonec Internet Download Manager up to 6.42 Build 63 on Windows. The impacted element is an unknown function of the file idmwfp.sys of the component Kernel Driver. The manipulation results in improper access controls. Attacking locally is a requirement. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/KnCRJVirX/IDM_LPE_PoC/tree/main/poc\nhttps://vuldb.com/cve/CVE-2026-90493\nhttps://vuldb.com/submit/891910",
+      "source": "NVD",
+      "time": "2026-09-13 15:45:55"
+    },
+    {
+      "cve_id": "CVE-2026-90668",
+      "title": "高危漏洞: CVE-2026-90668 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-13 10:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The webserver in UnrealIRCd 6.0.5 through 6.2.6 before 6.2.7 does not limit the number of HTTP request headers, which allows remote attackers to cause a denial of service (memory consumption and unresponsive server) via an HTTP request with an unlimited number of headers, if a websocket or JSON-RPC listener is enabled (disabled by default).",
+      "refs": "https://forums.unrealircd.org/viewtopic.php?t=9483\nhttps://www.unrealircd.org/",
+      "source": "NVD",
+      "time": "2026-09-13 15:45:48"
+    },
+    {
+      "cve_id": "CVE-2026-90651",
+      "title": "高危漏洞: CVE-2026-90651 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-13 08:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
+      "description": "Socket Firewall (socketdev/socket-registry-firewall) in registry mode before 2.0.0 does not verify upstream TLS certificates by default. When the api_ssl_verify and upstream_ssl_verify configuration keys are omitted from socket.yml, the generated configuration sets SOCKET_API_SSL_VERIFY='false' and UPSTREAM_SSL_VERIFY='false', and the OpenResty/Lua HTTP client used for outbound requests accepts any certificate, including self-signed and otherwise untrusted certificates, without validating the chain. An attacker positioned to intercept traffic between Socket Firewall and the Socket API or an upstream package registry can present a crafted certificate and modify responses in transit, including substituting malicious package content or altering the allow/block decisions the firewall enforces. Setting api_ssl_verify: true and upstream_ssl_verify: true enables verification; however, in versions before 1.1.334, the generated nginx configuration did not emit lua_ssl_trusted_certificate, and thus verification could not be used successfully without manually patching the generated configuration. Version 2.0.0 changes the default for both settings to true.",
+      "refs": "https://docs.socket.dev/docs/registry-mode-configuration-reference\nhttps://github.com/SocketDev/socket-registry-firewall/releases/tag/v2.0.0",
+      "source": "NVD",
+      "time": "2026-09-13 15:45:42"
+    },
+    {
       "cve_id": "CVE-2026-90647",
       "title": "高危漏洞: CVE-2026-90647 (CVSS 7.4)",
       "cvss_score": 7.4,
@@ -1044,61 +1099,6 @@
       "refs": "https://github.com/WWBN/AVideo/security/advisories/GHSA-wqwf-wmvx-53jh\nhttps://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-ssrf-via-login-json-php",
       "source": "NVD",
       "time": "2026-09-12 02:01:12"
-    },
-    {
-      "cve_id": "CVE-2026-87776",
-      "title": "高危漏洞: CVE-2026-87776 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 20:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "compression is a Node.js and Express compression middleware. In versions before 1.8.2, when a client aborts the connection while a compressed response is still being sent, the zlib stream created to compress that response is never destroyed, so each aborted compressed response leaks its native zlib memory. A remote unauthenticated attacker can repeatedly open requests and disconnect early, exhausting the available memory and crashing the server. All applications using compression are affected. The issue is fixed in compression 1.8.2, and users should upgrade to 1.8.2 or later.",
-      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/expressjs/compression/security/advisories/GHSA-vc2v-76pw-4v95",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:04"
-    },
-    {
-      "cve_id": "CVE-2026-89147",
-      "title": "高危漏洞: CVE-2026-89147 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 19:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Net-SNMP through 5.9.5.2 contains a denial of service vulnerability in the SMUX module where smux_accept() performs an unauthenticated blocking read without timeout on newly accepted connections. An unauthenticated remote client can connect to the SMUX listener and send no data, causing the single-threaded snmpd main loop to block indefinitely and suspend all SNMP processing.",
-      "refs": "https://gist.github.com/thesmartshadow/001cea595e75fed6aaea7389666dc9eb\nhttps://github.com/net-snmp/net-snmp\nhttps://github.com/net-snmp/net-snmp/blob/v5.9.5.2/agent/mibgroup/smux/smux.c",
-      "source": "NVD",
-      "time": "2026-09-12 02:01:00"
-    },
-    {
-      "cve_id": "CVE-2026-89146",
-      "title": "高危漏洞: CVE-2026-89146 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-11 19:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "libp2p-rendezvous through 0.17.1 fails to validate registration TTL values in discovery responses, allowing attackers to trigger timer arithmetic overflow. A malicious rendezvous server can send a discovery response with an unbounded TTL value that causes the client node process to panic when computing the expiry timer.",
-      "refs": "https://docs.rs/crate/libp2p-rendezvous/0.17.1/source/src/client.rs\nhttps://gist.github.com/thesmartshadow/25ef03f7ebbd12118a9d27695c885989\nhttps://github.com/libp2p/rust-libp2p",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:56"
-    },
-    {
-      "cve_id": "CVE-2026-17037",
-      "title": "高危漏洞: CVE-2026-17037 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-11 18:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘comment’ parameter in all versions up to, and including, 6.2.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3636487/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e578af07-90ec-4bd4-91ec-b793bbccf977?source=cve",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:51"
-    },
-    {
-      "cve_id": "CVE-2026-80469",
-      "title": "高危漏洞: CVE-2026-80469 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-09-11 17:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "An attacker may achieve arbitrary code execution on a target system by uploading a malicious device driver package, bypassing driver verification mechanisms, and triggering the execution of\nattacker-controlled code. User interaction is required.",
-      "refs": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices\nhttps://www.first.org/cvss/calculator/3.1\nhttps://www.sick.com/.well-known/csaf/white/2026/sca-2026-0012.json",
-      "source": "NVD",
-      "time": "2026-09-12 02:00:47"
     }
   ]
 }
