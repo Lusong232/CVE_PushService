@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-90603",
+      "title": "高危漏洞: CVE-2026-90603 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-14 07:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Anil-matcha Open-Generative-AI up to 1.0.11/2.0.0. Affected by this issue is some unknown functionality of the file /api/upload-binary of the component S3 Upload. Such manipulation of the argument x-proxy-target-url leads to unrestricted upload. The attack may be launched remotely. The name of the patch is f013270957f75e439eaf97eb2a93decb32a4543e. Applying a patch is advised to resolve this issue.",
+      "refs": "https://github.com/Anil-matcha/Open-Generative-AI/\nhttps://github.com/Anil-matcha/Open-Generative-AI/commit/f013270957f75e439eaf97eb2a93decb32a4543e\nhttps://github.com/Anil-matcha/Open-Generative-AI/issues/310",
+      "source": "NVD",
+      "time": "2026-09-14 10:20:11"
+    },
+    {
+      "cve_id": "CVE-2026-90601",
+      "title": "高危漏洞: CVE-2026-90601 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-14 07:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in getzep graphiti up to 0.30.2. Affected is an unknown function of the file server/graph_service/main.py of the component REST API. The manipulation results in improper authentication. The attack can be launched remotely. The pull request to fix this issue awaits acceptance.",
+      "refs": "https://github.com/getzep/graphiti/\nhttps://github.com/getzep/graphiti/issues/1716\nhttps://github.com/getzep/graphiti/pull/1739",
+      "source": "NVD",
+      "time": "2026-09-14 10:20:06"
+    },
+    {
+      "cve_id": "CVE-2026-15891",
+      "title": "高危漏洞: CVE-2026-15891 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-14 07:16:27",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The MQTT-SN client keepalive handler process_ping() in subsys/net/lib/mqtt_sn/mqtt_sn.c removes the gateway record after PINGREQ retries are exhausted. It invoked SYS_SLIST_PEEK_HEAD_CONTAINER(&client->gateways, gw, next) but discarded the result. That macro is a pure expression that does not assign to gw, so gw retained its NULL initializer regardless of the list contents.\n\nThe code then dereferences the NULL gw (gw->gw_id) and passes it to mqtt_sn_gw_destroy(), reaching k_mem_slab_free(&gateways, NULL). With CONFIG_MEM_SLAB_POINTER_VALIDATE enabled this triggers k_panic(); in the default configuration it performs a write through the NULL pointer ((char )mem = slab->free_list;) and corrupts the slab free list. The outcome is a crash/kernel panic or, on targets where address 0 is writable, silent memory-allocator corruption.\n\nThe vulnerable branch runs whenever the connected MQTT-SN gateway fails to answer keepalive PINGREQs for the configured number of retries. This condition is controlled by the remote peer: a malicious or compromised gateway, or an on-path/adjacent attacker that advertises itself as a gateway and then stops responding (or blackholes the real gateway's PINGRESPs), forces the client into the defect. MQTT-SN runs over UDP and no authentication is required.\n\nThe impact is a remotely triggerable denial of service (availability) of the affected MQTT-SN client; there is no attacker-controlled data written. The sibling remover process_advertise() uses SYS_SLIST_FOR_EACH_CONTAINER_SAFE and is not affected. The fix assigns the macro's return value to gw.",
+      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/bd21e954c36be105a374bbc090623810f1a17ee3\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-c4g8-4f9p-4746",
+      "source": "NVD",
+      "time": "2026-09-14 10:20:00"
+    },
+    {
       "cve_id": "CVE-2026-90593",
       "title": "高危漏洞: CVE-2026-90593 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/everest-forms/vulnerability/wordpress-everest-forms-plugin-3-6-0-php-object-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-09-12 04:37:35"
-    },
-    {
-      "cve_id": "CVE-2026-62102",
-      "title": "高危漏洞: CVE-2026-62102 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-12 03:17:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Subscriber Privilege Escalation in Gato GraphQL <= 19.2.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/gatographql/vulnerability/wordpress-gato-graphql-plugin-19-2-3-privilege-escalation-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:31"
-    },
-    {
-      "cve_id": "CVE-2026-62089",
-      "title": "高危漏洞: CVE-2026-62089 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-12 03:17:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
-      "description": "Missing Authorization vulnerability in Pixar Labs Master Addons for Elementor allows Privilege Abuse.\n\nThis issue affects Master Addons for Elementor: from n/a through 3.2.2.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/master-addons/vulnerability/wordpress-master-addons-for-elementor-plugin-3-2-2-broken-access-control-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:27"
-    },
-    {
-      "cve_id": "CVE-2026-54072",
-      "title": "高危漏洞: CVE-2026-54072 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-09-12 03:17:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Authorizer is an open-source, self-hostable authentication and authorization server. Prior to version 2.2.1, the `/authorize` endpoint accepts any `redirect_uri` without validating it against `AllowedOrigins`. When `response_type=token` or `response_type=id_token`, the server appends `access_token`, `id_token`, and `refresh_token` as query parameters and issues a 302 redirect to the attacker-supplied URL. An unauthenticated attacker can obtain the required `client_id` from the public `/graphql?query={meta{client_id}}` endpoint. A partial fix was applied in v2.0.1 to other handlers (`oauth_login`, `verify_email`, `magic_link_login`, `forgot_password`, `invite_members`, `oauth_callback`) but `/authorize` was not included. Version 2.2.1 contains a more complete fix.",
-      "refs": "https://github.com/authorizerdev/authorizer/security/advisories/GHSA-h29v-hj44-q8cv",
-      "source": "NVD",
-      "time": "2026-09-12 04:37:23"
     }
   ]
 }
