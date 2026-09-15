@@ -1,6 +1,127 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-80217",
+      "title": "高危漏洞: CVE-2026-80217 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-15 17:16:44",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Hidden functionality issue exists in FF-RFI079I4 and FF-RFI078I4, which may allow a user who can log in via SSH and access the enable mode on the product to execute arbitrary OS commands.",
+      "refs": "https://5g.liteon.com/security/flexfi/\nhttps://jvn.jp/en/jp/JVN02049764/",
+      "source": "NVD",
+      "time": "2026-09-15 21:59:39"
+    },
+    {
+      "cve_id": "CVE-2026-77853",
+      "title": "高危漏洞: CVE-2026-77853 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-15 17:16:44",
+      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper neutralization of special elements used in an OS command ('OS Command Injection') issue exists in FF-RFI079I4 and FF-RFI078I4. A user who can log in to the product's M-Plane (NETCONF) may execute arbitrary OS commands.",
+      "refs": "https://5g.liteon.com/security/flexfi/\nhttps://jvn.jp/en/jp/JVN02049764/",
+      "source": "NVD",
+      "time": "2026-09-15 21:59:35"
+    },
+    {
+      "cve_id": "CVE-2026-75092",
+      "title": "高危漏洞: CVE-2026-75092 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-15 17:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A privilege escalation flaw was found in the scan_mysql actor of leapp-upgrade-el9toel10 (provided by leapp-repository). During RHEL 9 to RHEL 10 upgrades, the actor runs:\nmysqld --validate-config --log-error-verbosity=2 directly as root in the Leapp actor context, bypassing the packaged MySQL systemd unit that normally starts the daemon as User=mysql.\n\nA process compromised as the mysql OS identity can write a version-2 persisted configuration (mysqld-auto.cnf) and a malicious shared object into /var/lib/mysql (a directory owned by mysql). That persisted map can set plugin_dir to /var/lib/mysql and early_plugin_load (or related loader options such as plugin_load / plugin_load_add) so MySQL loads the attacker-controlled object during configuration validation. Plugin loading can reach dlopen() before MySQL’s runtime-user check and before plugin-symbol validation.\n\nWhen an administrator subsequently runs the documented Leapp preupgrade or upgrade workflow, attacker-controlled code can execute as UID 0 with a full capability set in an unconfined SELinux domain (unconfined_t). The attack does not require write access to the default system plugin path under /usr; redirecting plugin_dir via mysql-owned persisted state is sufficient. Ordinary SQL privileges alone (including highly privileged SQL accounts) are not a sufficient startpoint — OS-level execution as the mysql service identity is required, plus later administrator invocation of Leapp.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-75092\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2517499\nhttps://github.com/oamg/leapp-repository",
+      "source": "NVD",
+      "time": "2026-09-15 21:59:27"
+    },
+    {
+      "cve_id": "CVE-2026-91087",
+      "title": "高危漏洞: CVE-2026-91087 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-15 15:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in GPAC up to f1219cde. This vulnerability affects the function gf_mo_get_od_id of the file compositor/media_object.c of the component Compositor. Executing a manipulation can lead to use after free. The attack may be performed from remote. The exploit has been published and may be used. Upgrading to version abi-16.24 is able to resolve this issue. This patch is called e34f4ba349d55cd1849f0bcf4cf46552732e2db7. Upgrading the affected component is advised.",
+      "refs": "https://github.com/gpac/gpac/\nhttps://github.com/gpac/gpac/commit/e34f4ba349d55cd1849f0bcf4cf46552732e2db7\nhttps://github.com/gpac/gpac/issues/3807",
+      "source": "NVD",
+      "time": "2026-09-15 21:59:16"
+    },
+    {
+      "cve_id": "CVE-2026-90711",
+      "title": "高危漏洞: CVE-2026-90711 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-15 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "proxy-addr is a Node.js module that determines a request's client address behind trusted reverse proxies, and it backs Express req.ip and req.ips. In versions 1.1.0 through 2.0.7, a trust subnet written in IPv4-mapped IPv6 notation with an IPv4-sized prefix, such as ::ffff:10.0.0.0/8 instead of the correct ::ffff:10.0.0.0/104, is accepted without error but trusts every IPv4 address on the internet rather than the block it names. Because the socket peer then becomes trusted at hop 0, any unauthenticated client can supply an arbitrary X-Forwarded-For header and control the address the application reads, which defeats IP-based access control, rate limiting, geolocation, and audit logging. This is a fail-open regression introduced in version 1.1.0. The issue is fixed in proxy-addr 2.0.8, and users should upgrade to 2.0.8 or later. As a workaround, ensure any IPv4-mapped IPv6 trust subnet uses a prefix length of at least 97, or express the range in plain IPv4 notation.",
+      "refs": "https://cna.openjsf.org/security-advisories.html\nhttps://github.com/jshttp/proxy-addr/security/advisories/GHSA-jqcg-44mw-7w3h",
+      "source": "NVD",
+      "time": "2026-09-15 21:59:05"
+    },
+    {
+      "cve_id": "CVE-2026-75983",
+      "title": "高危漏洞: CVE-2026-75983 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-15 15:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Eventin – Event Calendar, Tickets, Registration, Booking & WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.1.23. This is due to the `PermissionManager::manage_permissions()` function being registered as a callback on WordPress core's `map_meta_cap` filter and unconditionally returning the always-true `'exist'` primitive for every capability check whenever the evaluated user ID is 1, without scoping this behavior to plugin-specific capabilities. This makes it possible for authenticated attackers whose account is user ID 1, even subscribers, to pass every WordPress capability check, including `manage_options`, `edit_plugins`, `edit_themes`, `promote_users`, and `update_core`, thereby elevating their privileges to administrator-equivalent power and achieving full site takeover, including remote code execution via the plugin and theme editors. Exploitation is only impactful when user ID 1 has been deliberately demoted to a lower-privilege role as a common administrator-account hardening practice; on default installations where user ID 1 retains the administrator role, no incremental privilege gain occurs.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-event-solution/tags/4.1.21/core/AccessControl/PermissionManager.php#L24\nhttps://plugins.trac.wordpress.org/browser/wp-event-solution/tags/4.1.21/core/AccessControl/PermissionManager.php#L52\nhttps://plugins.trac.wordpress.org/browser/wp-event-solution/tags/4.1.21/core/Admin/AdminProvider.php#L32",
+      "source": "NVD",
+      "time": "2026-09-15 21:59:00"
+    },
+    {
+      "cve_id": "CVE-2026-91004",
+      "title": "高危漏洞: CVE-2026-91004 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-15 14:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in SourceCodester Online Faculty Clearance System 1.0. The impacted element is an unknown function of the file /delete_faculty1.php. Such manipulation of the argument ID leads to sql injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/zzjzzzj389/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-91004\nhttps://vuldb.com/submit/932333",
+      "source": "NVD",
+      "time": "2026-09-15 21:58:51"
+    },
+    {
+      "cve_id": "CVE-2026-91003",
+      "title": "高危漏洞: CVE-2026-91003 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-15 14:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw has been found in D-Link DI-8300 16.07. The affected element is the function rzgl_asp of the file /rzgl.asp of the component CGI Service. This manipulation of the argument redirct_url causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+      "refs": "https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.md\nhttps://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.py\nhttps://vuldb.com/cve/CVE-2026-91003",
+      "source": "NVD",
+      "time": "2026-09-15 21:58:47"
+    },
+    {
+      "cve_id": "CVE-2026-91001",
+      "title": "高危漏洞: CVE-2026-91001 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-15 14:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in D-Link DI-8400 16.07. This affects the function ddns_asp of the file /ddns.asp of the component DDNS Configuration. Performing a manipulation of the argument serv/user/host/wild/mx/bmx/cust/ip results in stack-based buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/ddns_asp/ddns_asp.py\nhttps://github.com/Vivi-Xray/Xray-s-cve-/tree/main/ddns_asp\nhttps://vuldb.com/cve/CVE-2026-91001",
+      "source": "NVD",
+      "time": "2026-09-15 21:58:36"
+    },
+    {
+      "cve_id": "CVE-2026-90880",
+      "title": "高危漏洞: CVE-2026-90880 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-15 13:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in D-Link DSL-3782 2016-07-28. This issue affects the function system of the file /cgi-bin/New_GUI/Set/Diagnostics.asp of the component Diagnostics. Performing a manipulation of the argument Addr results in command injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/MeetFireAgain/cve/tree/main/dlink-dsl3782\nhttps://vuldb.com/cve/CVE-2026-90880\nhttps://vuldb.com/submit/928835",
+      "source": "NVD",
+      "time": "2026-09-15 21:58:29"
+    },
+    {
+      "cve_id": "CVE-2026-90879",
+      "title": "高危漏洞: CVE-2026-90879 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-15 13:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in zyx0814 FilePress up to 3.0.1. This vulnerability affects unknown code of the file dzz/publish/search.php of the component Publish Module. Such manipulation of the argument orderby/order leads to sql injection. The attack can be launched remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/zyx0814/FilePress/\nhttps://github.com/zyx0814/FilePress/issues/74\nhttps://vuldb.com/cve/CVE-2026-90879",
+      "source": "NVD",
+      "time": "2026-09-15 21:58:23"
+    },
+    {
       "cve_id": "CVE-2026-90877",
       "title": "高危漏洞: CVE-2026-90877 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -978,127 +1099,6 @@
       "refs": "https://lists.apache.org/thread/swqj31jhbz7hmmkjy42461zp9rhh9lwy\nhttp://www.openwall.com/lists/oss-security/2026/09/14/16",
       "source": "NVD",
       "time": "2026-09-15 10:26:39"
-    },
-    {
-      "cve_id": "CVE-2026-77051",
-      "title": "高危漏洞: CVE-2026-77051 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 21:18:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Apache Syncope.\n\n\n\n\n\nAn administrator with adequate entitlements can achieve execution of arbitrary SQL via stacked queries, leveraging unsanitized entityKey and opEvent parameters.\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 Through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/lv2mm7wojmxwz29jr0zy469p9zbz23f7\nhttp://www.openwall.com/lists/oss-security/2026/09/14/14",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:34"
-    },
-    {
-      "cve_id": "CVE-2026-75030",
-      "title": "高危漏洞: CVE-2026-75030 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 21:18:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Missing Authorization vulnerability in Apache Syncope.\n\n\n\nAn administrator with task execution entitlements might be able to mass (de)provision group members, regardless of their group-related administration capabilities.\n\n\n\n\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 Through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/94rx818lj8sjx85h8pory9xcsst9xvot\nhttp://www.openwall.com/lists/oss-security/2026/09/14/13",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:29"
-    },
-    {
-      "cve_id": "CVE-2026-73668",
-      "title": "高危漏洞: CVE-2026-73668 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 21:18:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect Authorization vulnerability in Apache Syncope.\n\n\n\n\n\nAn administrator with adequate entitlements in a given Realm may be able to read via REST the full Connector configuration, confidential properties included, scoped in another Realm and thus be able to effectively duplicate such Connector instance into the Realm they have administration rights for.\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 Through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/4lgsbbgc72mngf6mc1q5b1cj3d9nyphn\nhttp://www.openwall.com/lists/oss-security/2026/09/14/11",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:25"
-    },
-    {
-      "cve_id": "CVE-2026-73579",
-      "title": "高危漏洞: CVE-2026-73579 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 21:18:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Incorrect Authorization vulnerability in Apache Syncope.\n\n\n\nAny search requests are transformed into SQL, Neo4J or Elasticsearch / Opensearch queries, depending on the actual deployment configuration.\nAn important component of such transformation is the Realms filter, which ensures that the search results are matching the requester's permissions.\nFor non-recursive search requests it is possible that such Realms filter is rendered as empty, thus voiding any restriction on requester privileges.\n\n\n\n\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 Through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/ykwnkrt2b43d0wm1phh94pqqyjb6qyhx\nhttp://www.openwall.com/lists/oss-security/2026/09/14/10",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:20"
-    },
-    {
-      "cve_id": "CVE-2026-73470",
-      "title": "高危漏洞: CVE-2026-73470 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 21:18:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper Privilege Management vulnerability in Apache Syncope.\n\n\n\n\n\nDelegations can be created or updated with Roles not owned by the delegating User, or not for the same Realm subtree under the delegation management was granted for.\n\n\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 Through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/13hph8sgx3wo6m103x0oc0zydf5rkl8y\nhttp://www.openwall.com/lists/oss-security/2026/09/14/9",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:15"
-    },
-    {
-      "cve_id": "CVE-2026-73178",
-      "title": "高危漏洞: CVE-2026-73178 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-14 21:18:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Syncope.\n\nAn administrator with adequate entitlements can get access via REST to the list of existing Access Tokens, including their signed JWT body.\nThese values can be then used to perform further REST requests, impersonating users with higher administration entitlements.\n\n\n\n\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 Through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/owcdm0stb39mnkpyps0h6yw4gp2olnkj\nhttp://www.openwall.com/lists/oss-security/2026/09/14/4",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:11"
-    },
-    {
-      "cve_id": "CVE-2026-87802",
-      "title": "高危漏洞: CVE-2026-87802 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-14 19:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Improper verification of cryptographic signature vulnerability in Apache Syncope.\n\n\n\nWhen SRA is configured for OAuth 2.0 without JWKS set URI assigned, an attacker can forge arbitrary JWTs to impersonate any user identity and permissions, gaining full access to services proxied by SRA.\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/gx83cootj00kn8hqd73x1bp8441np33d\nhttp://www.openwall.com/lists/oss-security/2026/09/14/25",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:04"
-    },
-    {
-      "cve_id": "CVE-2026-87785",
-      "title": "高危漏洞: CVE-2026-87785 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-14 19:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Authentication bypass by spoofing vulnerability in Apache Syncope.\n\n\n\nWhen the configured JWKS settings for internal JWT authentication are disclosed (at least protocol and key), an attacker can spoof another user's privileges after completing a successful authentication and obtaining a valid JWT.\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/3t3om8mny7ng52q053pdzpmtdtosnqoo\nhttp://www.openwall.com/lists/oss-security/2026/09/14/24",
-      "source": "NVD",
-      "time": "2026-09-15 10:26:00"
-    },
-    {
-      "cve_id": "CVE-2026-87779",
-      "title": "高危漏洞: CVE-2026-87779 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-14 19:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Insertion of sensitive information into log file vulnerability in Apache Syncope.\n\n\n\nWhen AES key of non-standard length (not 16/24/32 bytes) is configured, Syncope will pad the provided value with random characters. The resulting key value is logged.\n\n\n\nThis issue affects Apache Syncope: from 3.0.15 through 3.0.16, from 4.0.3 through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/3t3om8mny7ng52q053pdzpmtdtosnqoo\nhttp://www.openwall.com/lists/oss-security/2026/09/14/23",
-      "source": "NVD",
-      "time": "2026-09-15 10:25:56"
-    },
-    {
-      "cve_id": "CVE-2026-86460",
-      "title": "高危漏洞: CVE-2026-86460 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 19:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Cypher injection vulnerability in the Neo4j persistence layer when processing some FIQL search conditions.\n\n\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/cwcc0pz53q6cr0tms9dh5hycboqocw0d\nhttp://www.openwall.com/lists/oss-security/2026/09/14/22",
-      "source": "NVD",
-      "time": "2026-09-15 10:25:51"
-    },
-    {
-      "cve_id": "CVE-2026-82232",
-      "title": "高危漏洞: CVE-2026-82232 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-14 19:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Apache Syncope.\n\n\n\nAn administrator with adequate entitlements can achieve execution of arbitrary SQL via stacked queries, leveraging unsanitized sort clauses for Task search.\n\nThis issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.7, from 4.1.0-M0 through 4.1.2.\n\n\n\nUsers are recommended to upgrade to version 4.0.8 / 4.1.3, which fix this issue.",
-      "refs": "https://lists.apache.org/thread/v5zrdqcn0w0v4pk1d22ndt7frcrplo2b\nhttp://www.openwall.com/lists/oss-security/2026/09/14/21",
-      "source": "NVD",
-      "time": "2026-09-15 10:25:47"
     }
   ]
 }
