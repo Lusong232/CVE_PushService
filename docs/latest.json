@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-92838",
+      "title": "高危漏洞: CVE-2026-92838 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-17 10:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A DLL hijacking\nvulnerability exists in the GeoVision GV-Remote E-Map desktop\napplication. The application loads one or more dynamic-link libraries (DLLs)\nfrom an unsafe search path, allowing a local attacker to place a malicious DLL\nin a location searched before the legitimate library location. If\nsuccessfully exploited, an attacker with local write access to the affected\ndirectory could achieve arbitrary code execution in the security context of\nthe GV-Remote E-Map process.",
+      "refs": "https://hackerone.com/reports/1437942\nhttps://www.cve.org/CVERecord?id=CVE-2020-26947\nhttps://www.geovision.com.tw/cyber_security.php",
+      "source": "NVD",
+      "time": "2026-09-17 16:09:06"
+    },
+    {
+      "cve_id": "CVE-2026-81546",
+      "title": "高危漏洞: CVE-2026-81546 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-17 10:16:27",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "description": "The Affinity by Canva application before 3.3.0 (September 2026 release) did not perform adequate bounds checking when parsing Affinity document files leading to a stack-based buffer overflow. A threat actor could craft a Affinity document that when opened by a user in Affinity could result in arbitrary code execution.",
+      "refs": "https://trust.canva.com?tcuUid=43596908-8a36-4a18-b2e7-5c99b67ab38a",
+      "source": "NVD",
+      "time": "2026-09-17 16:09:02"
+    },
+    {
       "cve_id": "CVE-2026-61596",
       "title": "高危漏洞: CVE-2026-61596 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/coredns/coredns/commit/530b0a5ff2ad68cc0421f10dd93568945cc671c9\nhttps://github.com/coredns/coredns/releases/tag/v1.14.7\nhttps://github.com/coredns/coredns/security/advisories/GHSA-9gm5-9rfh-m6vx",
       "source": "NVD",
       "time": "2026-09-17 07:25:12"
-    },
-    {
-      "cve_id": "CVE-2026-82399",
-      "title": "高危漏洞: CVE-2026-82399 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-17 03:17:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "CoreDNS is a DNS server written in Go. Prior to 1.14.7, the DNS-over-HTTPS, DNS-over-HTTP/3, DNS-over-QUIC, and DNS-over-gRPC request paths in plugin/pkg/doh/doh.go, core/dnsserver/server_quic.go, and core/dnsserver/server_grpc.go call dns.Msg.Unpack on attacker-controlled DNS section counts before dns.DefaultMsgAcceptFunc validates the fixed header. An unauthenticated client can use DNS name compression and excessive section counts to amplify allocation before the plugin chain, so plugin-level rate limiting cannot prevent concurrent requests from exhausting memory and terminating CoreDNS. The ordinary UDP and TCP listeners are not affected because they validate the header first. This issue is fixed in version 1.14.7.",
-      "refs": "https://github.com/coredns/coredns/commit/530b0a5ff2ad68cc0421f10dd93568945cc671c9\nhttps://github.com/coredns/coredns/releases/tag/v1.14.7\nhttps://github.com/coredns/coredns/security/advisories/GHSA-mrg3-qvqr-jw29",
-      "source": "NVD",
-      "time": "2026-09-17 07:25:07"
-    },
-    {
-      "cve_id": "CVE-2026-81876",
-      "title": "高危漏洞: CVE-2026-81876 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-17 03:17:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to version 6.9.12, SHCParser in org.hl7.fhir.r5/src/main/java/org/hl7/fhir/r5/elementmodel/SHCParser.java can enter an infinite loop while processing attacker-controlled Smart Health Card JWT content whose header contains zip: \"DEF\" and whose raw-DEFLATE payload is empty or truncated. SHCParser.decodeJWT() reaches SHCParser.inflate(), where Inflater.inflate() can return zero while Inflater.finished() remains false and Inflater.needsInput() is true. The loop also lacks an Inflater.needsDictionary() termination check, SHCParser.decompress() contains the same zero-progress pattern, and ResourceChecker.java can reach SHC parsing during file-format detection. A malformed validation request can pin a JVM worker thread indefinitely, and concurrent requests can exhaust all validation workers. This issue is fixed in version 6.9.12.",
-      "refs": "https://github.com/hapifhir/org.hl7.fhir.core/commit/d804558bd77372b1629e55a5b901cad3f5134cdc\nhttps://github.com/hapifhir/org.hl7.fhir.core/commit/edd5d8c139e669e39270785f08be7b63aefef24c\nhttps://github.com/hapifhir/org.hl7.fhir.core/pull/2493",
-      "source": "NVD",
-      "time": "2026-09-17 07:25:03"
     }
   ]
 }
