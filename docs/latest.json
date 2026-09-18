@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-17086",
+      "title": "高危漏洞: CVE-2026-17086 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-18 12:17:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The ShortPixel Image Optimizer – Optimize Images, Convert WebP & AVIF plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.5.5 via deserialization of untrusted input . This makes it possible for authenticated attackers, with author-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+      "refs": "https://plugins.trac.wordpress.org/browser/shortpixel-image-optimiser/tags/6.5.1/build/shortpixel/replacer2/src/Replacer.php#L259\nhttps://plugins.trac.wordpress.org/browser/shortpixel-image-optimiser/tags/6.5.1/build/shortpixel/replacer2/src/Replacer.php#L402\nhttps://plugins.trac.wordpress.org/browser/shortpixel-image-optimiser/tags/6.5.1/build/shortpixel/replacer2/src/Replacer.php#L425",
+      "source": "NVD",
+      "time": "2026-09-18 15:45:11"
+    },
+    {
+      "cve_id": "CVE-2026-93468",
+      "title": "高危漏洞: CVE-2026-93468 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-18 11:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The OAKlouds developed by HGiga has an Arbitrary File Read vulnerability. Unauthenticated remote attackers can exploit Relative Path Traversal to read arbitrary system files.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11211-d2aa9-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11210-11cb0-1.html",
+      "source": "NVD",
+      "time": "2026-09-18 15:45:06"
+    },
+    {
+      "cve_id": "CVE-2026-93467",
+      "title": "高危漏洞: CVE-2026-93467 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-18 11:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The OAKlouds developed by HGiga has a Insecure Deserialization vulnerability. Unauthenticated remote attackers can execute arbitrary code on the server by sending maliciously crafted serialized content.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11211-d2aa9-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11210-11cb0-1.html",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:59"
+    },
+    {
+      "cve_id": "CVE-2026-93371",
+      "title": "高危漏洞: CVE-2026-93371 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-09-18 11:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in marcopiovanello yt-dlp-web-ui up to v4. This issue affects the function NewGenericDownload of the file server/internal/downloaders/generic.go. Such manipulation of the argument params leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The name of the patch is c7ad3bd79c7c520a7d17e7f2ba19d962be8e7897. A patch should be applied to remediate this issue.",
+      "refs": "https://github.com/marcopiovanello/yt-dlp-web-ui/\nhttps://github.com/marcopiovanello/yt-dlp-web-ui/commit/c7ad3bd79c7c520a7d17e7f2ba19d962be8e7897\nhttps://vuldb.com/cve/CVE-2026-93371",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:54"
+    },
+    {
+      "cve_id": "CVE-2026-93456",
+      "title": "高危漏洞: CVE-2026-93456 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-18 10:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N",
+      "description": "django-page-cms through 2.0.13 exempts five admin mutation views from CSRF protection in pages/admin/views.py, allowing attackers to forge requests that modify page content. Signed-in editors visiting a malicious page can be tricked into storing unescaped content that renders to all visitors, enabling stored cross-site scripting attacks.",
+      "refs": "https://github.com/batiste/django-page-cms\nhttps://github.com/batiste/django-page-cms/blob/bc4cbe6c187d2d4573289c5695ce8dec0556994d/pages/admin/views.py#L51-L53\nhttps://github.com/batiste/django-page-cms/blob/bc4cbe6c187d2d4573289c5695ce8dec0556994d/pages/placeholders.py#L238-L241",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:48"
+    },
+    {
+      "cve_id": "CVE-2026-93331",
+      "title": "高危漏洞: CVE-2026-93331 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-18 10:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in GPAC 26.08-DEV. This vulnerability affects the function gf_rtp_parse_ttxt of the file src/ietf/rtp_depacketizer.c of the component RTP Depacketizer. Such manipulation of the argument size leads to out-of-bounds read. It is possible to launch the attack remotely. Upgrading to version abi-16.26 is able to resolve this issue. The name of the patch is 6bb0f64b4d1039c0fecd14ee2c1ee861d8661a68. The affected component should be upgraded.",
+      "refs": "https://github.com/gpac/gpac/\nhttps://github.com/gpac/gpac/commit/6bb0f64b4d1039c0fecd14ee2c1ee861d8661a68\nhttps://github.com/gpac/gpac/issues/3868",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:44"
+    },
+    {
+      "cve_id": "CVE-2026-93453",
+      "title": "高危漏洞: CVE-2026-93453 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-09-18 08:17:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
+      "description": "SOGo before 5.12.11 constructs password-reset links using the client-supplied Origin header as the authority, allowing unauthenticated attackers to redirect recovery tokens to attacker-controlled domains. Attackers can submit password recovery requests with a malicious Origin header to have valid password-reset tokens mailed to victim recovery addresses within links pointing to attacker infrastructure, enabling account takeover.",
+      "refs": "https://github.com/Alinto/sogo\nhttps://github.com/Alinto/sogo/blob/SOGo-5.12.10/UI/MainUI/SOGoRootPage.m#L1375\nhttps://github.com/Alinto/sogo/commit/04a3e9823889acaf6c247b224f5f7a0108f8f829",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:39"
+    },
+    {
+      "cve_id": "CVE-2026-93452",
+      "title": "高危漏洞: CVE-2026-93452 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-18 08:17:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "snappy-java through 1.1.10.8 contains a buffer overflow vulnerability in Snappy.compress(ByteBuffer, ByteBuffer) that writes past the end of the destination buffer. Attackers can supply incompressible data that exceeds the destination buffer's remaining capacity, corrupting off-heap memory and causing JVM termination.",
+      "refs": "https://github.com/xerial/snappy-java\nhttps://github.com/xerial/snappy-java/blob/v1.1.10.8/src/main/java/org/xerial/snappy/Snappy.java#L137\nhttps://github.com/xerial/snappy-java/issues/732",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:34"
+    },
+    {
+      "cve_id": "CVE-2026-93450",
+      "title": "高危漏洞: CVE-2026-93450 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-18 08:17:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "go-openapi/swag jsonutils before 0.27.1 contains a stack overflow vulnerability in ordered JSON parsing and serialization due to unbounded recursion with no depth limit. Remote unauthenticated attackers can submit deeply nested JSON documents to services accepting OpenAPI specifications, causing fatal stack overflow that terminates the process and all in-flight requests.",
+      "refs": "https://github.com/go-openapi/swag\nhttps://github.com/go-openapi/swag/blob/v0.27.0/jsonutils/adapters/stdlib/json/adapter.go#L68\nhttps://github.com/go-openapi/swag/blob/v0.27.0/jsonutils/adapters/stdlib/json/ordered_map.go#L214",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:30"
+    },
+    {
+      "cve_id": "CVE-2026-85887",
+      "title": "高危漏洞: CVE-2026-85887 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-18 08:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Incorrect permission assignment for critical resource in M365 Copilot allows an authorized attacker to disclose information over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85887",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:25"
+    },
+    {
+      "cve_id": "CVE-2026-85878",
+      "title": "高危漏洞: CVE-2026-85878 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-18 08:17:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Improper authorization in Azure Database for PostgreSQL allows an authorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85878",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:21"
+    },
+    {
+      "cve_id": "CVE-2026-83946",
+      "title": "高危漏洞: CVE-2026-83946 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-18 08:17:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Azure Portal allows an unauthorized attacker to perform spoofing over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83946",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:16"
+    },
+    {
+      "cve_id": "CVE-2026-69843",
+      "title": "高危漏洞: CVE-2026-69843 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-18 08:17:24",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Authentication bypass by spoofing in Microsoft Fabric allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69843",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:11"
+    },
+    {
+      "cve_id": "CVE-2026-62874",
+      "title": "高危漏洞: CVE-2026-62874 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-18 08:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "description": "Insufficient verification of data authenticity in Azure Billing allows an unauthorized attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62874",
+      "source": "NVD",
+      "time": "2026-09-18 15:44:03"
+    },
+    {
       "cve_id": "CVE-2026-93436",
       "title": "高危漏洞: CVE-2026-93436 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -945,160 +1099,6 @@
       "refs": "https://github.com/SteeltoeOSS/Steeltoe/commit/bc1c3763aacc1fee82ef9932f338ec08dcb00432\nhttps://github.com/SteeltoeOSS/Steeltoe/releases/tag/4.3.0\nhttps://github.com/SteeltoeOSS/security-advisories/security/advisories/GHSA-hr73-3gpv-hh6q",
       "source": "NVD",
       "time": "2026-09-18 02:48:23"
-    },
-    {
-      "cve_id": "CVE-2026-76834",
-      "title": "高危漏洞: CVE-2026-76834 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-18 00:17:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "b2evolution CMS versions 6.7.8 through 7.2.5 contain an incomplete fix for CVE-2016-8901 where the serialized-array object check in param_check_serialized_array() fails to reject payloads with negative integer array keys. Unauthenticated attackers can submit crafted serialized PHP objects via POST requests to htsrv/call_plugin.php that bypass validation and reach unserialize(), instantiating arbitrary PHP objects with attacker-chosen properties that may enable code execution if suitable POP gadget chains exist.",
-      "refs": "https://b2evolution.net/news/2022/03/26/2022-update-eol\nhttps://gist.github.com/axg11/3e29501c33f6e1e05ac2a00107afd64e\nhttps://github.com/b2evolution/b2evolution",
-      "source": "NVD",
-      "time": "2026-09-18 02:48:18"
-    },
-    {
-      "cve_id": "CVE-2026-56795",
-      "title": "高危漏洞: CVE-2026-56795 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-18 00:17:31",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "Dell Server Update Utility, versions prior to 26.07.01, contains an Uncontrolled Search Path Element vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Code execution.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000509930/dsa-2026-422-security-update-for-dell-server-update-utility-suu-vulnerability",
-      "source": "NVD",
-      "time": "2026-09-18 02:48:14"
-    },
-    {
-      "cve_id": "CVE-2026-92987",
-      "title": "高危漏洞: CVE-2026-92987 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-17 23:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "roxmltree through 0.21.1 performs quadratic-time attribute and namespace validation during XML parsing without limits on attribute count. Attackers can craft XML documents with tens of thousands of attributes on a single element to consume excessive CPU time and cause denial of service.",
-      "refs": "https://github.com/RazrFalcon/roxmltree\nhttps://github.com/RazrFalcon/roxmltree/blob/v0.21.1/src/lib.rs#L751-L755\nhttps://github.com/RazrFalcon/roxmltree/blob/v0.21.1/src/parse.rs#L1014-L1020",
-      "source": "NVD",
-      "time": "2026-09-18 02:48:10"
-    },
-    {
-      "cve_id": "CVE-2026-92986",
-      "title": "高危漏洞: CVE-2026-92986 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-17 23:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "SiYuan before 3.8.4 renders document titles as HTML in the backlink dock tree without escaping markup characters. Attackers can set malicious titles through the rename API or crafted notebooks to execute scripts in the Electron renderer with access to child_process for command execution.",
-      "refs": "https://github.com/siyuan-note/siyuan\nhttps://github.com/siyuan-note/siyuan/blob/v3.8.3/app/src/util/Tree.ts#L134\nhttps://github.com/siyuan-note/siyuan/commit/6f093ebe50afc503e2a8b056164293054f8509e7",
-      "source": "NVD",
-      "time": "2026-09-18 02:48:05"
-    },
-    {
-      "cve_id": "CVE-2026-92985",
-      "title": "高危漏洞: CVE-2026-92985 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-17 23:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "SiYuan versions before 3.8.4 fail to escape bookmark labels imported from notebook files when rendering them in the dock tree. Attackers can craft malicious .sy notebook files with unescaped HTML in bookmark attributes that execute scripts in the Electron renderer with access to child_process for command execution.",
-      "refs": "https://github.com/siyuan-note/siyuan\nhttps://github.com/siyuan-note/siyuan/blob/v3.8.3/app/src/util/Tree.ts#L134\nhttps://github.com/siyuan-note/siyuan/commit/6f093ebe50afc503e2a8b056164293054f8509e7",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:58"
-    },
-    {
-      "cve_id": "CVE-2026-92984",
-      "title": "高危漏洞: CVE-2026-92984 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-17 23:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "HUBzero CMS through 2.2.32 accepts session identifiers from query strings and request variables instead of cookies alone, allowing unauthenticated attackers to fixate victim sessions. Attackers can obtain a valid session identifier, send victims a crafted link containing it, and replay the identifier after the victim authenticates to hijack their account and access.",
-      "refs": "https://github.com/hubzero/hubzero-cms\nhttps://github.com/hubzero/hubzero-cms/blob/v2.2.32/core/libraries/Hubzero/Session/Manager.php#L123-L132\nhttps://github.com/hubzero/hubzero-cms/commit/e60e8ebee5e1d38b1db1fc41bd9164b265b24356",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:54"
-    },
-    {
-      "cve_id": "CVE-2026-92983",
-      "title": "高危漏洞: CVE-2026-92983 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-17 23:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "InternLM LMDeploy through 0.17.0 in DistServe prefill/decode disaggregation mode fails to release scheduler sessions because the proxy uses user-facing session IDs instead of internal scheduler keys. Unauthenticated attackers can send completion requests to the proxy endpoint that accumulate unreleased scheduler metadata and memory until the prefill worker is out-of-memory killed.",
-      "refs": "https://github.com/InternLM/lmdeploy\nhttps://github.com/InternLM/lmdeploy/blob/v0.17.0/lmdeploy/pytorch/disagg/conn/engine_conn.py#L93-L99\nhttps://github.com/InternLM/lmdeploy/issues/4967",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:49"
-    },
-    {
-      "cve_id": "CVE-2026-87742",
-      "title": "高危漏洞: CVE-2026-87742 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-17 23:16:56",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A flaw was found in quarkus-websockets-next. This vulnerability allows a remote attacker to cause a Denial of Service (DoS) by streaming messages over a single connection faster than the application can process them. Due to unbounded message buffering and a lack of read backpressure, this rapidly exhausts heap space, leading to a java.lang.OutOfMemoryError that crashes the Java Virtual Machine (JVM).",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-87742\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2530522",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:45"
-    },
-    {
-      "cve_id": "CVE-2026-85077",
-      "title": "高危漏洞: CVE-2026-85077 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-17 23:16:54",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "description": "Sanic is an opensource python web server/framework. Prior to version 24.12.1, and in version 25.12.0, the HTTP/1.1 response pipeline in sanic/response/types.py serializes response header names and values without rejecting carriage-return or line-feed characters. Applications that place attacker-controlled data in response.headers, file(..., filename=...), or cookie path and domain attributes can therefore emit injected headers and may split responses. Depending on application and proxy behavior, this can enable session fixation through injected cookies, cache poisoning, or security-header corruption. This issue is fixed in versions 24.12.1 and 25.12.1.",
-      "refs": "https://github.com/sanic-org/sanic/commit/47349d689d65fa1907977ac100e867894aeafb22\nhttps://github.com/sanic-org/sanic/commit/9a95bb1c187558949606b915f5162c15f2db781b\nhttps://github.com/sanic-org/sanic/commit/a332796506c7c588b6930b02a8886e43eb8ea8d6",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:40"
-    },
-    {
-      "cve_id": "CVE-2026-81446",
-      "title": "高危漏洞: CVE-2026-81446 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-17 23:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
-      "description": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains a Server-Side Request Forgery (SSRF) vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Server-side request forgery.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000506586/dsa-2026-403-security-update-for-dell-openmanage-server-administrator-omsa-network-access-vulnerabilitiesv",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:36"
-    },
-    {
-      "cve_id": "CVE-2026-81445",
-      "title": "高危漏洞: CVE-2026-81445 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-17 23:16:52",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains an Improper Privilege Management vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000506586/dsa-2026-403-security-update-for-dell-openmanage-server-administrator-omsa-network-access-vulnerabilitiesv",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:32"
-    },
-    {
-      "cve_id": "CVE-2026-80356",
-      "title": "高危漏洞: CVE-2026-80356 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-17 23:16:51",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Dell OpenManage Server Administrator, versions prior to 11.1.0.3, contains an Exposure of Sensitive Information to an Unauthorized Actor vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information exposure.",
-      "refs": "https://www.dell.com/support/kbdoc/en-us/000506586/dsa-2026-403-security-update-for-dell-openmanage-server-administrator-omsa-network-access-vulnerabilitiesv",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:24"
-    },
-    {
-      "cve_id": "CVE-2026-77614",
-      "title": "高危漏洞: CVE-2026-77614 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-17 23:16:51",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Opencast is a free, open-source platform to support the management of educational audio and video content. Prior to versions 19.7 and 20.2, the default security configuration in etc/security/mh_default_org.xml accepts a client-selected JSESSIONID from the ;jsessionid= URL path parameter and does not replace it when the victim logs in. An unauthenticated attacker can send a crafted link to a victim whose browser has no active Opencast session cookie, wait for the victim to authenticate, and then reuse the known identifier as the victim's authenticated session. This can expose the victim's data and actions and can produce full administrative account takeover when the victim is an administrator. This issue is fixed in versions 19.7 and 20.2.",
-      "refs": "https://github.com/opencast/opencast/commit/c36652250a026afb7cf78b663950c702669f1d3f\nhttps://github.com/opencast/opencast/commit/ff84128c9b3bcbd79c28192d25929dab8faf185f\nhttps://github.com/opencast/opencast/releases/tag/19.7",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:20"
-    },
-    {
-      "cve_id": "CVE-2026-63472",
-      "title": "高危漏洞: CVE-2026-63472 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-17 23:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Vendure is an open-source headless commerce platform. Prior to 3.7.0, ExternalAuthenticationService.createCustomerAndUser in packages/core/src/service/helpers/external-authentication/external-authentication.service.ts selects an existing customer user by emailAddress and attaches a newly presented ExternalAuthenticationMethod without requiring verified to be true. In deployments with a custom external AuthenticationStrategy that forwards an email whose ownership the provider has not verified, an attacker can authenticate with a victim's email and bind the attacker's external identity to the victim's existing account. This can expose orders, addresses, and personal information and permit account changes or orders as the victim. Native-only email and password deployments and external strategies that always require provider-verified email ownership are unaffected, and new-account creation for an unused email remains permitted. This issue is fixed in version 3.7.0.",
-      "refs": "https://github.com/vendurehq/vendure/commit/3bb04718ea4f9395fda731bd2a4bcfc3afb0a485\nhttps://github.com/vendurehq/vendure/releases/tag/v3.7.0\nhttps://github.com/vendurehq/vendure/security/advisories/GHSA-6j36-r6pr-59x4",
-      "source": "NVD",
-      "time": "2026-09-18 02:47:15"
     }
   ]
 }
