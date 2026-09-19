@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-93740",
+      "title": "高危漏洞: CVE-2026-93740 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-19 06:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Totolink A3002MU Hh-B20211125.1046. Affected is the function formWlEncrypt of the file /boafrm/formWlEncrypt. The manipulation of the argument submit-url leads to buffer overflow. It is possible to initiate the attack remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/ToTolink/A3002MU/bof-formWlEncrypt.md\nhttps://vuldb.com/cve/CVE-2026-93740\nhttps://vuldb.com/submit/914019",
+      "source": "NVD",
+      "time": "2026-09-19 10:13:16"
+    },
+    {
+      "cve_id": "CVE-2026-93739",
+      "title": "高危漏洞: CVE-2026-93739 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-19 06:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Totolink A3002MU Hh-B20211125.1046. This impacts the function formWlAc of the file /boafrm/formWlAc. Executing a manipulation of the argument submit-url can lead to buffer overflow. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/ToTolink/A3002MU/bof-formWlAc.md\nhttps://vuldb.com/cve/CVE-2026-93739\nhttps://vuldb.com/submit/914018",
+      "source": "NVD",
+      "time": "2026-09-19 10:13:12"
+    },
+    {
+      "cve_id": "CVE-2026-75885",
+      "title": "高危漏洞: CVE-2026-75885 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-09-19 06:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "A flaw was found in the OpenShift console. Unauthenticated access to the `/api/devfile/` and `/api/devfile/samples/` endpoints allows a remote attacker to send crafted devfile payloads. This can lead to Server-Side Request Forgery (SSRF), where the console pod makes requests to internal services and reflects partial responses to the attacker. Additionally, by sending repeated large requests without a specified content length, an attacker can cause unbounded memory growth, leading to a Denial of Service (DoS).",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-75885\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2517885",
+      "source": "NVD",
+      "time": "2026-09-19 10:13:08"
+    },
+    {
       "cve_id": "CVE-2026-93738",
       "title": "高危漏洞: CVE-2026-93738 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1066,39 +1099,6 @@
       "refs": "https://github.com/InternLM/lmdeploy/releases/tag/v0.12.3\nhttps://github.com/InternLM/lmdeploy/security/advisories/GHSA-3hmm-rh5q-gwwr",
       "source": "NVD",
       "time": "2026-09-19 04:23:17"
-    },
-    {
-      "cve_id": "CVE-2026-32641",
-      "title": "高危漏洞: CVE-2026-32641 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Parseable is a log analytics platform built for high-volume data ingestion and analysis. Prior to 3.0.0, src/handlers/http/middleware.rs uses unwrap() while parsing the x-amz-firehose-common-attributes header before authentication. A remote unauthenticated attacker can supply non-UTF-8 header data, malformed JSON, or invalid derived header values that trigger a Rust panic and interrupt request handling, allowing repeated requests to deny service or cause container restart loops. This issue is fixed in version 3.0.0.",
-      "refs": "https://github.com/parseablehq/parseable/commit/6c583081a4161476128f330b9bb71ed7305eecde\nhttps://github.com/parseablehq/parseable/pull/1581\nhttps://github.com/parseablehq/parseable/releases/tag/v3.0.0",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:13"
-    },
-    {
-      "cve_id": "CVE-2025-66455",
-      "title": "高危漏洞: CVE-2025-66455 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 02:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LMDeploy is a toolkit for compressing, deploying, and serving large language models. Starting in version 0.9.2 and prior to version 0.16.0, LMDeploy's PyTorch DistServe/PD-disaggregation control plane used `recv_pyobj()` to deserialize messages received through a ZeroMQ PULL socket. PyZMQ implements `recv_pyobj()` using Python pickle deserialization, which can execute arbitrary code while reconstructing an object. The peer address used by the receiver was supplied through the `POST /distserve/p2p_connect` HTTP endpoint. An attacker who could reach an affected DistServe API server could cause the server to connect to an attacker-controlled ZeroMQ endpoint and deserialize a crafted pickle payload. API-key authentication is not enabled unless the operator explicitly configures it. As a result, affected DistServe deployments without API keys allowed unauthenticated remote code execution with the privileges of the LMDeploy serving process. This issue affects the PyTorch backend when PD-disaggregation/DistServe is enabled. Ordinary deployments that do not use the affected disaggregated-serving path do not expose this data flow. The fix was released in LMDeploy 0.16.0. Users who cannot upgrade immediately should prevent untrusted clients from reaching `/distserve/*` endpoints, restrict the DistServe HTTP and ZeroMQ control planes to trusted cluster networks, configure API-key authentication, and block arbitrary outbound ZeroMQ connections from serving nodes. These measures reduce exposure but do not make pickle deserialization safe.",
-      "refs": "https://github.com/InternLM/lmdeploy/commit/f05b4ad8bf2e2d84101a1d63b3c44fadd99223b2\nhttps://github.com/InternLM/lmdeploy/releases/tag/v0.16.0\nhttps://github.com/InternLM/lmdeploy/security/advisories/GHSA-2vh9-42vm-xmv2",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:09"
-    },
-    {
-      "cve_id": "CVE-2026-93765",
-      "title": "高危漏洞: CVE-2026-93765 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-19 01:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Mongoid contains an unsafe reflection weakness in the document persistence layer of its object-document mapping code. Input whose keys are passed through from an unauthenticated party by an embedding application can cause unintended internal method invocation instead of the intended array field update. This may result in unintended removal of stored records and in the embedding application becoming unresponsive.",
-      "refs": "https://jira.mongodb.org/browse/MONGOID-5973",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:01"
     }
   ]
 }
