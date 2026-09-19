@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-93985",
+      "title": "高危漏洞: CVE-2026-93985 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-19 20:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "OpenPanel js-runtime through commit bad75bdd contains a sandbox escape vulnerability in the JavaScript webhook template validator that fails to block computed member access to constructor chains. Attackers with project write access can create webhook templates using computed property notation to access Function constructor and execute arbitrary code in the worker process.",
+      "refs": "https://github.com/Openpanel-dev/openpanel/security/advisories/GHSA-6f7h-cvp6-w9w5\nhttps://www.vulncheck.com/advisories/openpanel-js-runtime-javascript-template-sandbox-escape-rce",
+      "source": "NVD",
+      "time": "2026-09-20 06:35:03"
+    },
+    {
+      "cve_id": "CVE-2026-93742",
+      "title": "高危漏洞: CVE-2026-93742 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-19 17:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A weakness has been identified in Totolink A3002MU Hh-B20211125.1046. Affected by this issue is the function formWsc of the file /boafrm/formWsc. This manipulation of the argument localPin causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/ToTolink/A3002MU/rce-formWsc.md\nhttps://vuldb.com/cve/CVE-2026-93742\nhttps://vuldb.com/submit/914021",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:59"
+    },
+    {
+      "cve_id": "CVE-2026-1255",
+      "title": "高危漏洞: CVE-2026-1255 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-19 17:16:34",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The YS LeadGen plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.1.4 due to the 'ysleadgen_get_captured_data' AJAX action being accessible to unauthenticated users. This makes it possible for unauthenticated attackers to retrieve all captured form submission data, including personally identifiable information (PII) such as names, email addresses, and message content submitted through YS LeadGen forms.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ysleadgen/tags/1.1.1/app/Controllers/Ajax.php#L65\nhttps://plugins.trac.wordpress.org/changeset/3577391\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/66ca4e6a-e489-4c86-a9d4-1eb89c97cc1c?source=cve",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:54"
+    },
+    {
+      "cve_id": "CVE-2026-85658",
+      "title": "高危漏洞: CVE-2026-85658 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-19 16:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 4.17.2 This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for authenticated attackers, with subscriber-level access and above, to execute arbitrary shortcodes.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.17.2/src/Classes/EditUserProfile.php#L337\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.17.2/src/Functions/GlobalFunctions.php#L1715\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.17.2/src/ShortcodeParser/Builder/FrontendProfileBuilder.php#L339",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:47"
+    },
+    {
+      "cve_id": "CVE-2026-4327",
+      "title": "高危漏洞: CVE-2026-4327 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-19 16:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The The Welcomizer plugin for WordPress is vulnerable to Remote Code Execution in all versions up to and including 2.8.1. This is due to missing authorization checks on the twiz_ajax_callback AJAX action's 'savesection' handler combined with the use of eval() to execute user-supplied 'custom logic' code on the frontend. The AJAX handler at twiz-ajax.php verifies a nonce but performs no current_user_can() capability check for the ACTION_SAVE_SECTION case. Furthermore, the nonce is exposed to any authenticated user through the directly-accessible twiz-ajax.js.php file which loads WordPress and outputs the nonce. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary PHP code via the twiz_custom_logic POST parameter when saving a section with output choice 'twiz_logic_output'.",
+      "refs": "https://plugins.trac.wordpress.org/browser/the-welcomizer/tags/2.8.1/includes/twiz.menu.class.php#L265\nhttps://plugins.trac.wordpress.org/browser/the-welcomizer/tags/2.8.1/includes/twiz.menu.class.php#L507\nhttps://plugins.trac.wordpress.org/browser/the-welcomizer/tags/2.8.1/includes/twiz.menu.class.php#L580",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:43"
+    },
+    {
+      "cve_id": "CVE-2026-15664",
+      "title": "高危漏洞: CVE-2026-15664 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-19 16:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Quill Forms | Conversational Multi Step Forms, Surveys & quizzes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Multiple Choice 'Other' Value in all versions up to, and including, 5.7.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected script executes in the context of the WordPress admin results view, making administrators the primary target when reviewing submitted form entries.",
+      "refs": "https://plugins.trac.wordpress.org/browser/quillforms/tags/5.6.1/includes/abstracts/class-block-type.php#L402\nhttps://plugins.trac.wordpress.org/browser/quillforms/tags/5.6.1/includes/blocks/multiple-choice/class-multiple-choice-block.php#L199\nhttps://plugins.trac.wordpress.org/browser/quillforms/tags/5.6.1/includes/class-form-submission.php#L111",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:39"
+    },
+    {
+      "cve_id": "CVE-2026-92404",
+      "title": "高危漏洞: CVE-2026-92404 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-19 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The MgoSync  WordPress plugin before 2.1.7 does not have authorization controls on one of its REST API endpoints, allowing unauthenticated users to retrieve the stored WooCommerce API credentials, including a read/write consumer key and secret, from a configured site.",
+      "refs": "https://wpscan.com/vulnerability/342e79ec-cfe6-43f3-8598-bf2b83aff2a1/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:35"
+    },
+    {
+      "cve_id": "CVE-2026-88926",
+      "title": "高危漏洞: CVE-2026-88926 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-09-19 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The VikRentItems Flexible Rental Management System WordPress plugin before 1.2.4 does not sanitise and escape some of its parameters before using them in SQL statements, allowing unauthenticated users to perform SQL injection attacks.",
+      "refs": "https://wpscan.com/vulnerability/da39827b-f087-48f3-baa9-759709a3767e/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:31"
+    },
+    {
+      "cve_id": "CVE-2026-88824",
+      "title": "高危漏洞: CVE-2026-88824 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-19 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Master Blocks  WordPress plugin before 1.5.0 does not have authorisation on one of its REST routes, allowing unauthenticated users to update its settings, including a value that is output unescaped in the admin area, leading to Stored XSS that executes in the session of any administrator visiting a wp-admin page.",
+      "refs": "https://wpscan.com/vulnerability/898fda0a-4d27-4def-ae6f-35bf25a8ae8d/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:26"
+    },
+    {
+      "cve_id": "CVE-2026-86814",
+      "title": "高危漏洞: CVE-2026-86814 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-19 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The UsersWP  WordPress plugin before 1.5.10 does not verify that a social login provider has confirmed ownership of an email address before using it to resolve an existing account, allowing unauthenticated attackers to log in as any user, including administrators, whose email address they can assert through a provider account of their own.",
+      "refs": "https://wpscan.com/vulnerability/f606cf7b-cef8-4b2c-819a-6d3e6adeacee/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:22"
+    },
+    {
+      "cve_id": "CVE-2026-86591",
+      "title": "高危漏洞: CVE-2026-86591 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-19 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Botiga Pro WordPress plugin before 1.6.5 does not perform any authorisation checks on one of its REST routes, allowing unauthenticated users to update arbitrary WordPress options with arbitrary values, which could lead to privilege escalation and a full site takeover.\nThe same route also allows unauthenticated users to store arbitrary web scripts which are then executed on every page of the site's front end, as well as to move arbitrary posts to the trash.",
+      "refs": "https://wpscan.com/vulnerability/e2389a60-16c2-4750-b85e-a82b91390b30/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:15"
+    },
+    {
+      "cve_id": "CVE-2026-85680",
+      "title": "高危漏洞: CVE-2026-85680 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-19 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Ultimate Member  WordPress plugin before 2.13.1 does not escape a value derived from user supplied profile names before outputting it in the page title, and decodes HTML entities in it after its own sanitisation has already run, allowing unauthenticated attackers who register an account to store JavaScript that will execute when any visitor, including an administrator, views their profile.",
+      "refs": "https://wpscan.com/vulnerability/a49b734f-2244-4d6f-8912-b4ce6ba9eb0f/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:11"
+    },
+    {
+      "cve_id": "CVE-2026-85574",
+      "title": "高危漏洞: CVE-2026-85574 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-09-19 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Unbounce Landing Pages WordPress plugin before 1.1.5 does not perform any authorisation check when updating the configuration its front-end proxy relies on, allowing any authenticated user, such as a subscriber, to point that proxy at a host they control and have arbitrary content served from the site's own origin.",
+      "refs": "https://wpscan.com/vulnerability/f13143dc-5674-4e9f-8aa0-8d22df7a7379/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:07"
+    },
+    {
+      "cve_id": "CVE-2026-76790",
+      "title": "高危漏洞: CVE-2026-76790 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-19 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "The Estatik Real Estate Plugin WordPress plugin before 4.3.5 does not sanitise and escape several values decoded from a request parameter before reflecting them back in an unauthenticated AJAX response, leading to Reflected Cross-Site Scripting.",
+      "refs": "https://wpscan.com/vulnerability/b722c7e9-7c8b-4510-85af-075b1bba9d66/",
+      "source": "NVD",
+      "time": "2026-09-20 06:34:02"
+    },
+    {
+      "cve_id": "CVE-2026-76554",
+      "title": "高危漏洞: CVE-2026-76554 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-19 15:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Import Export Lite WordPress plugin before 3.9.35 does not verify that the user running an import is permitted to create or modify user accounts and assign roles, allowing users granted a delegated WP Import Export Lite WordPress plugin before 3.9.35 permission, who cannot otherwise manage users, to create administrator accounts and to overwrite the credentials and role of existing accounts, including administrators.",
+      "refs": "https://wpscan.com/vulnerability/e28c78be-e2f7-4580-9f16-488955914be3/",
+      "source": "NVD",
+      "time": "2026-09-20 06:33:58"
+    },
+    {
+      "cve_id": "CVE-2026-93741",
+      "title": "高危漏洞: CVE-2026-93741 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-19 14:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in Totolink A3002MU Hh-B20211125.1046. Affected by this vulnerability is the function formWlWds of the file /boafrm/formWlWds. The manipulation of the argument submit-url results in buffer overflow. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/ToTolink/A3002MU/bof-formWlWds.md\nhttps://vuldb.com/cve/CVE-2026-93741\nhttps://vuldb.com/submit/914020",
+      "source": "NVD",
+      "time": "2026-09-20 06:33:54"
+    },
+    {
       "cve_id": "CVE-2026-92807",
       "title": "高危漏洞: CVE-2026-92807 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -923,182 +1099,6 @@
       "refs": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/main/http/vulnerabilities/chanjet-tplus/chanjet-crm-sqli.yaml\nhttps://www.chanjet.com/\nhttps://www.cnvd.org.cn/flaw/show/CNVD-2021-12845",
       "source": "NVD",
       "time": "2026-09-19 04:25:09"
-    },
-    {
-      "cve_id": "CVE-2019-25776",
-      "title": "高危漏洞: CVE-2019-25776 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 03:16:39",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Weaver E-cology contains an unauthenticated SQL injection vulnerability that allows remote attackers to execute arbitrary SQL queries by submitting malicious input through the userIdentifiers GET parameter in the mobile plugin endpoint. Attackers can bypass space-based filter controls by wrapping SQL keywords in parentheses to perform UNION-based injection and extract sensitive data including administrator credential hashes from the database. Exploitation evidence was first observed by the Shadowserver Foundation on 2022-07-28.",
-      "refs": "https://cn-sec.com/archives/135359.html\nhttps://github.com/chaitin/xray/blob/master/pocs/ecology-syncuserinfo-sqli.yml\nhttps://www.vulncheck.com/advisories/weaver-e-cology-sql-injection-via-syncuserinfo-jsp",
-      "source": "NVD",
-      "time": "2026-09-19 04:25:05"
-    },
-    {
-      "cve_id": "CVE-2026-93762",
-      "title": "高危漏洞: CVE-2026-93762 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 02:18:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Mongoid contains an unsafe reflection weakness in the query path used for embedded documents. An application that passes an externally supplied field name to certain in-memory query methods may allow an unauthenticated party to obtain unintended disclosure of stored document data and to permanently remove stored records.",
-      "refs": "https://jira.mongodb.org/browse/MONGOID-5973",
-      "source": "NVD",
-      "time": "2026-09-19 04:25:00"
-    },
-    {
-      "cve_id": "CVE-2026-93761",
-      "title": "高危漏洞: CVE-2026-93761 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An inefficient regular expression complexity issue in the in-memory query evaluation component of the Mongoid library may allow an unauthenticated party to cause excessive processing within an embedding application process. Applications that place user-supplied text into a pattern-matching query condition on an embedded association may become unresponsive.",
-      "refs": "https://jira.mongodb.org/browse/MONGOID-5981",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:53"
-    },
-    {
-      "cve_id": "CVE-2026-93760",
-      "title": "高危漏洞: CVE-2026-93760 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-19 02:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
-      "description": "Mongoid does not restrict which query operators may come from caller-supplied filter data when an application hands that data to its query-building methods. In an application that forwards externally supplied filter parameters in this way, a party with no credentials may influence how the database evaluates the query. This may result in unintended disclosure of stored field values and in reduced database performance.",
-      "refs": "https://jira.mongodb.org/browse/MONGOID-5994",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:49"
-    },
-    {
-      "cve_id": "CVE-2026-93759",
-      "title": "高危漏洞: CVE-2026-93759 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-19 02:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
-      "description": "Mongoid does not neutralize a string-typed query criterion supplied to its query builder, and instead passes it to the database as a server-side JavaScript expression. An unauthenticated party able to influence the value an application supplies as a query argument may cause code of their choosing to be evaluated by the database engine. This may result in unintended disclosure of stored field values, unintended selection of documents for application-initiated writes, and reduced database performance.",
-      "refs": "https://jira.mongodb.org/browse/MONGOID-5993",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:45"
-    },
-    {
-      "cve_id": "CVE-2026-93753",
-      "title": "高危漏洞: CVE-2026-93753 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "deepmerge through 4.3.1 contains a prototype poisoning vulnerability in the mergeObject() function that fails to properly validate keys being written to target objects. Attackers can supply malicious source objects in merge operations to inject attacker-controlled properties into the returned object's prototype, causing applications to inherit unintended values when accessing properties without own-property checks.",
-      "refs": "https://github.com/TehShrike/deepmerge\nhttps://github.com/TehShrike/deepmerge/blob/5b87756a5671635679001cbac72aa42f23472c81/index.js#L39-L60\nhttps://github.com/TehShrike/deepmerge/issues/273",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:41"
-    },
-    {
-      "cve_id": "CVE-2026-93752",
-      "title": "高危漏洞: CVE-2026-93752 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:18:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "CSSOM through 0.5.0 contains a denial of service vulnerability in CSSStyleDeclaration.setProperty() that fails to validate reserved property names. Attackers can supply a stylesheet with a declaration named length to replace the internal counter and trigger excessive memory allocation during cssText serialization, causing process termination.",
-      "refs": "https://github.com/NV/CSSOM\nhttps://github.com/NV/CSSOM/blob/00ec21868e12422581c81779135c2f1648441204/lib/CSSStyleDeclaration.js#L112-L124\nhttps://github.com/NV/CSSOM/blob/00ec21868e12422581c81779135c2f1648441204/lib/CSSStyleDeclaration.js#L41-L56",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:37"
-    },
-    {
-      "cve_id": "CVE-2026-93749",
-      "title": "高危漏洞: CVE-2026-93749 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:18:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "source-map-js through 1.2.1 fails to validate the per-section offset line value in indexed source maps, allowing attackers to specify arbitrary numeric values. Attackers can supply extremely large offset line values that cause synchronous event loop blocking for extended periods, preventing the service from handling other requests.",
-      "refs": "https://github.com/7rulnik/source-map-js\nhttps://github.com/7rulnik/source-map-js/blob/c1cd8904bb7bd0c7fb5879fcda48134d82a27934/lib/source-node.js#L115-L118\nhttps://github.com/7rulnik/source-map-js/issues/76",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:32"
-    },
-    {
-      "cve_id": "CVE-2026-93748",
-      "title": "高危漏洞: CVE-2026-93748 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:18:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "http-cache-semantics through 4.2.0 fails to properly validate security-zeroed cache entries when processing client max-stale directives, allowing unauthenticated attackers to retrieve cached responses belonging to other users. Attackers can request the same URL with a large max-stale value to obtain another user's Set-Cookie session credentials from shared-cache entries that were deliberately zeroed for security reasons.",
-      "refs": "https://github.com/kornelski/http-cache-semantics\nhttps://github.com/kornelski/http-cache-semantics/blob/f01112e954b83cfa8765b633ba880e5e980aa54c/index.js#L425-L441\nhttps://github.com/kornelski/http-cache-semantics/blob/f01112e954b83cfa8765b633ba880e5e980aa54c/index.js#L603-L623",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:28"
-    },
-    {
-      "cve_id": "CVE-2026-92702",
-      "title": "高危漏洞: CVE-2026-92702 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-19 02:18:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Cocos AI is a confidential computing system for running AI workloads inside trusted execution environments. In versions up to and including 0.8.2, the intra-handshake attested TLS (aTLS) AMD SEV-SNP verification path does not enforce attestation freshness when the expected reportData value is nil, empty, or omitted, leaving the SEV-SNP policy ReportData unset so the verifier accepts unrelated or stale Evidence not bound to the current connection. A relying party that uses this path without an expected reportData as a trust or authorization decision can be induced to trust an unintended attestation context; a supplied non-empty reportData is still validated. The issue is fixed in version 0.9.0.",
-      "refs": "https://github.com/ultravioletrs/cocos/commit/80bf813c48300f02259b338b91f844c71be582ea\nhttps://github.com/ultravioletrs/cocos/pull/582\nhttps://github.com/ultravioletrs/cocos/releases/tag/v0.9.0",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:21"
-    },
-    {
-      "cve_id": "CVE-2026-92701",
-      "title": "高危漏洞: CVE-2026-92701 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-19 02:18:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "trusted execution environments. In versions up to and including 0.8.2, the intra-handshake attested TLS (aTLS) Intel TDX verification path does not copy the expected current-session freshness value into the TDX quote-body policy before quote validation, so structurally valid TDX QuoteV4 Evidence is accepted without checking that its REPORT_DATA field matches the reportData expected for the current session. A relying party using this path can therefore accept Evidence with a mismatched or reused reportData and release application data after the handshake, enabling session-misbinding to an unintended attestation context. The issue is fixed in version 0.9.0.",
-      "refs": "https://github.com/ultravioletrs/cocos/releases/tag/v0.9.0\nhttps://github.com/ultravioletrs/cocos/security/advisories/GHSA-4px3-wj2x-xx47",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:17"
-    },
-    {
-      "cve_id": "CVE-2026-91127",
-      "title": "高危漏洞: CVE-2026-91127 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-19 02:18:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
-      "description": "File Viewer is a browser-native viewer for Office, PDF, CAD, archive, and other files in private and internal web applications. Prior to @file-viewer/doc 2.3.1 and msdoc-viewer 0.2.2, the legacy DOC renderer emitted document-controlled hyperlink targets into generated HTML after character escaping but without restricting URL schemes. A crafted legacy DOC file could place javascript:, vbscript:, data:, or another unsafe scheme in a rendered link, and script could execute in the embedding application's origin when a user clicked the link. The fix blocks external document links by default, allows only HTTP(S), mail, telephone, safe relative URLs, and internal bookmarks when external links are explicitly enabled, and applies mount-boundary sanitization as defense in depth. This issue is fixed in @file-viewer/doc 2.3.1 and msdoc-viewer 0.2.2.",
-      "refs": "https://github.com/flyfish-dev/file-viewer/commit/ef045680f8d9830a3eee9612f7df46a734361b07\nhttps://github.com/flyfish-dev/file-viewer/releases/tag/v2.3.1\nhttps://github.com/flyfish-dev/file-viewer/security/advisories/GHSA-3753-m2x2-q623",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:13"
-    },
-    {
-      "cve_id": "CVE-2026-85058",
-      "title": "高危漏洞: CVE-2026-85058 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Moquette is a lightweight Java MQTT broker. Prior to 0.18.1, PostOffice.publishWill publishes a client-controlled Last Will message through publish2Subscribers without invoking the authorizator.canWrite check used by normal PUBLISH paths. When anonymous access is enabled and topic ACLs restrict writes, a remote client can set an ACL-protected topic as the Last Will Topic during CONNECT and perform an abnormal client disconnect, causing the broker to inject attacker-controlled messages into a topic for which the client lacks write permission. This issue is fixed in version 0.18.1.",
-      "refs": "https://github.com/moquette-io/moquette/commit/e23df019f6a11e22c7d2047d4f86d07095466c97\nhttps://github.com/moquette-io/moquette/commit/f5a323fe782d1505c0097498cb22eb6ec6c96973\nhttps://github.com/moquette-io/moquette/releases/tag/v0.18.1",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:09"
-    },
-    {
-      "cve_id": "CVE-2026-84975",
-      "title": "高危漏洞: CVE-2026-84975 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-19 02:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "PJSIP is a free and open source multimedia communication library written in C. In 2.17 and earlier, the OpenSSL and GnuTLS backends in pjlib/src/pj/ssl_sock_ossl.c and pjlib/src/pj/ssl_sock_gtls.c copy DNS SubjectAltName values with string functions that recalculate their length and truncate an embedded NUL byte. With server verification enabled through --tls-verify-server for the PJSIP TLS/SIPS transport, a certificate containing a DNS SubjectAltName formed from the target hostname prefix followed by an embedded NUL and an attacker-controlled suffix can therefore be accepted for the prefix hostname. An attacker who possesses such a certificate from a trusted issuer and can intercept the connection can impersonate the target server, complete the SIP session, and receive REGISTER credentials. The mbedTLS backend is not affected because it preserves the explicit string length. No fixed version is available as of this review.",
-      "refs": "https://github.com/pjsip/pjproject/commit/43d3bd77bb6833eab4c493503b8d564a754ddfdd\nhttps://github.com/pjsip/pjproject/security/advisories/GHSA-382p-87mh-r3q8",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:04"
-    },
-    {
-      "cve_id": "CVE-2026-81180",
-      "title": "高危漏洞: CVE-2026-81180 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 02:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "SysReptor is a fully customizable pentest reporting platform. Prior to 2026.61, authenticated users of SysReptor Professional can upload image files whose formats cause image processing to invoke Ghostscript, allowing embedded PostScript to operate in the shared temporary directory. An attacker can combine that behavior with a race involving GnuPG configuration files in temporary subdirectories to cause GnuPG to copy attacker-controlled Python code into the application code directory. The injected code executes with the privileges of the SysReptor application process after a worker restart. The Community edition is not affected. Version 2026.58 contains a partial mitigation, and this issue is fully fixed in version 2026.61.",
-      "refs": "https://github.com/Syslifters/sysreptor/commit/7d800e5c737df0dbc3d4ea2d095c89235790a1cc\nhttps://github.com/Syslifters/sysreptor/commit/7ecf56a6b8e5c05a2d2212bc8aa340f69855cdea\nhttps://github.com/Syslifters/sysreptor/commit/e8bd31cb42a15a10bb5102337b55dde704be397f",
-      "source": "NVD",
-      "time": "2026-09-19 04:24:00"
-    },
-    {
-      "cve_id": "CVE-2026-81179",
-      "title": "高危漏洞: CVE-2026-81179 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-19 02:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "SysReptor is a fully customizable pentest reporting platform. Prior to 2026.58, installations that enable password reset by email while configuring ALLOWED_HOSTS with a wildcard accept an attacker-controlled Host header when generating a password reset link. An unauthenticated attacker can request a reset email whose link points to an attacker-controlled system, and a victim who follows that link can disclose the reset token, allowing the attacker to reset the victim's password and take over the account. Exploitation also requires a configured email gateway and an email address for the victim, while some reverse proxy configurations may reject the hostile Host header. This issue is fixed in version 2026.58.",
-      "refs": "https://github.com/Syslifters/sysreptor/commit/7ecf56a6b8e5c05a2d2212bc8aa340f69855cdea\nhttps://github.com/Syslifters/sysreptor/releases/tag/2026.58\nhttps://github.com/Syslifters/sysreptor/security/advisories/GHSA-9x2r-5pff-8w6c",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:56"
     }
   ]
 }
