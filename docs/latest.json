@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-92807",
+      "title": "高危漏洞: CVE-2026-92807 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-19 11:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Save as PDF Plugin by PDFCrowd plugin for WordPress is vulnerable to Arbitrary Function Invocation in all versions up to, and including, 4.6.1 via the `pdf_created_callback` shortcode attribute. The `eval_shortcode()` function copies any non-`button_`/non-`email_` shortcode attribute verbatim into a custom options array without sanitization, allowlist enforcement, or capability checks, and `create_button()` AES-encrypts that array — including the attacker-supplied callback value — and embeds the resulting blob in the rendered button HTML; when the blob is later POSTed to the unauthenticated `wp_ajax_nopriv_save_as_pdf_pdfcrowd` endpoint, `save_as_pdf_pdfcrowd()` decrypts it and invokes `$options['pdf_created_callback']` as a PHP callable at line 1722 with no `is_callable()` guard, no allowlist, and no capability check. This makes it possible for authenticated attackers, with Contributor-level access and above, to invoke arbitrary PHP functions or static class methods with plugin option data as the sole argument, enabling disclosure of the site's stored PDFCrowd API key and username or further server-side abuse. Note that the encryption boundary does not mitigate this vector because the server itself encrypts the attacker-chosen callback during shortcode rendering, supplying any authenticated Contributor with a cryptographically valid blob that any unauthenticated visitor can subsequently replay to trigger invocation.",
+      "refs": "https://plugins.trac.wordpress.org/browser/save-as-pdf-by-pdfcrowd/tags/4.6.1/public/class-save-as-pdf-pdfcrowd-public.php#L157\nhttps://plugins.trac.wordpress.org/browser/save-as-pdf-by-pdfcrowd/tags/4.6.1/public/class-save-as-pdf-pdfcrowd-public.php#L1722\nhttps://plugins.trac.wordpress.org/browser/save-as-pdf-by-pdfcrowd/tags/4.6.1/public/class-save-as-pdf-pdfcrowd-public.php#L867",
+      "source": "NVD",
+      "time": "2026-09-19 15:39:16"
+    },
+    {
+      "cve_id": "CVE-2026-92229",
+      "title": "高危漏洞: CVE-2026-92229 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-19 11:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The The Forminator Forms – Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 1.57.2. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes.",
+      "refs": "https://plugins.trac.wordpress.org/browser/forminator/tags/1.57.2/library/abstracts/abstract-class-front-action.php#L127\nhttps://plugins.trac.wordpress.org/browser/forminator/tags/1.57.2/library/modules/quizzes/front/front-action.php#L60\nhttps://plugins.trac.wordpress.org/browser/forminator/tags/1.57.2/library/modules/quizzes/front/front-action.php#L837",
+      "source": "NVD",
+      "time": "2026-09-19 15:39:09"
+    },
+    {
+      "cve_id": "CVE-2026-89274",
+      "title": "高危漏洞: CVE-2026-89274 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-19 11:17:16",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The WP Recipe Maker plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in all versions up to, and including, 10.8.1. The vulnerability exists because `WPRM_Metadata::sanitize_metadata()` recursively calls `do_shortcode()` on every scalar field of the recipe's structured metadata array — including the `reviewBody` field, which is populated verbatim from the `comment_content` of approved `wprm-comment-rating` comments — without sanitizing or stripping shortcode tokens before execution; the subsequent `wp_strip_all_tags()` and `strip_shortcodes()` calls operate only on the output string after execution has already fully occurred, providing no protection against server-side shortcode invocation. This makes it possible for unauthenticated attackers to execute arbitrary registered WordPress shortcodes server-side on every recipe page render, causing shortcode output — such as attachment captions, private post fields, or other data exposed by installed shortcodes — to be embedded in the page's JSON-LD `reviewBody` metadata and disclosed to all visitors who load the recipe page. Successful exploitation requires the attacker's rated comment to pass the site's comment approval threshold, either via auto-approval or moderator action, before the injected shortcode begins executing on page loads.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-recipe-maker/tags/10.8.1/includes/public/class-wprm-metadata.php#L1028\nhttps://plugins.trac.wordpress.org/browser/wp-recipe-maker/tags/10.8.1/includes/public/class-wprm-metadata.php#L181\nhttps://plugins.trac.wordpress.org/browser/wp-recipe-maker/tags/10.8.1/includes/public/class-wprm-metadata.php#L553",
+      "source": "NVD",
+      "time": "2026-09-19 15:39:04"
+    },
+    {
+      "cve_id": "CVE-2026-87909",
+      "title": "高危漏洞: CVE-2026-87909 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-19 11:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Photo Album Plus plugin for WordPress is vulnerable to Remote Code Execution in all versions via the wppa_image_magick function. This is due to insufficient sanitization of the multipart upload filename before concatenation into an ImageMagick command string executed via exec(), with only escapeshellcmd() applied to the whole command rather than quoting individual arguments. This makes it possible for authenticated attackers, with subscriber-level access and above, to execute code on the server. escapeshellcmd() escapes shell metacharacters but does not prevent argument injection because spaces remain as argument separators, and the filename sanitization applied at the database layer is never applied to the physical temporary file path used for ImageMagick processing.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-photo-album-plus/trunk/wppa-functions.php#L4837\nhttps://plugins.trac.wordpress.org/browser/wp-photo-album-plus/trunk/wppa-functions.php#L5286\nhttps://plugins.trac.wordpress.org/browser/wp-photo-album-plus/trunk/wppa-photo-files.php#L281",
+      "source": "NVD",
+      "time": "2026-09-19 15:38:57"
+    },
+    {
+      "cve_id": "CVE-2026-84434",
+      "title": "高危漏洞: CVE-2026-84434 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-19 11:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Gravity Forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.1.0.4 via the upload_file function. This is due to a mismatch between the field validation pipeline and the file persistence pipeline, where hidden file upload fields bypass extension validation and a rejected file's intact upload state is later passed to upload_file() without re-validation. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires the targeted form to contain a File Upload field with its Visibility set to 'Hidden'; the vulnerability is reachable by unauthenticated attackers on any publicly accessible form meeting this condition.",
+      "refs": "https://docs.gravityforms.com/gravityforms-change-log/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/787e22a9-329b-4e71-bc2a-4f5524fc9356?source=cve",
+      "source": "NVD",
+      "time": "2026-09-19 15:38:51"
+    },
+    {
+      "cve_id": "CVE-2026-13354",
+      "title": "高危漏洞: CVE-2026-13354 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-19 11:17:13",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Asset CleanUp: Page Speed Booster plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content in all versions up to, and including, 1.4.0.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is only exploitable on instances where combine_loaded_css has been enabled.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-asset-clean-up/tags/1.4.0.3/classes/OptimiseAssets/OptimizeCss.php#L579\nhttps://plugins.trac.wordpress.org/browser/wp-asset-clean-up/tags/1.4.0.3/classes/OptimiseAssets/OptimizeJs.php#L824\nhttps://plugins.trac.wordpress.org/browser/wp-asset-clean-up/tags/1.4.0.4/classes/OptimiseAssets/OptimizeCss.php#L579",
+      "source": "NVD",
+      "time": "2026-09-19 15:38:42"
+    },
+    {
+      "cve_id": "CVE-2026-93923",
+      "title": "高危漏洞: CVE-2026-93923 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-19 08:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "SiYuan through 3.8.4 fails to escape heading style attributes when rendering outline and bookmark dock HTML, allowing stored cross-site scripting. Attackers can supply crafted notebooks or call administrative endpoints to inject malicious style values that execute in the Electron renderer with full system access.",
+      "refs": "https://github.com/siyuan-note/siyuan\nhttps://github.com/siyuan-note/siyuan/blob/v3.8.4/app/src/util/Tree.ts#L133\nhttps://github.com/siyuan-note/siyuan/blob/v3.8.4/app/src/util/Tree.ts#L194",
+      "source": "NVD",
+      "time": "2026-09-19 15:38:36"
+    },
+    {
+      "cve_id": "CVE-2026-93922",
+      "title": "高危漏洞: CVE-2026-93922 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-19 08:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "SiYuan through 3.8.4 renders notebook names as raw HTML in the Daily Note picker dialog without escaping, allowing stored cross-site scripting in the Electron renderer. Attackers can create notebooks with HTML payloads in names that execute JavaScript with Node.js access when the picker opens, enabling operating system command execution.",
+      "refs": "https://github.com/siyuan-note/siyuan\nhttps://github.com/siyuan-note/siyuan/blob/v3.8.4/app/src/util/mount.ts#L72\nhttps://github.com/siyuan-note/siyuan/blob/v3.8.4/kernel/model/file.go#L2446-L2454",
+      "source": "NVD",
+      "time": "2026-09-19 15:38:28"
+    },
+    {
       "cve_id": "CVE-2026-93740",
       "title": "高危漏洞: CVE-2026-93740 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1011,94 +1099,6 @@
       "refs": "https://github.com/Syslifters/sysreptor/commit/7ecf56a6b8e5c05a2d2212bc8aa340f69855cdea\nhttps://github.com/Syslifters/sysreptor/releases/tag/2026.58\nhttps://github.com/Syslifters/sysreptor/security/advisories/GHSA-9x2r-5pff-8w6c",
       "source": "NVD",
       "time": "2026-09-19 04:23:56"
-    },
-    {
-      "cve_id": "CVE-2026-69184",
-      "title": "高危漏洞: CVE-2026-69184 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 02:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "c-ares is an asynchronous resolver library. Prior to 1.34.7, ares_dns_name_parse() enforces backward DNS compression pointers but does not bound the total pointer hops or assembled name length. A malicious DNS server can send a response containing a long descending pointer chain and many resource records whose NAME or RDATA fields refer to the chain, causing repeated decompression work that grows quadratically with message size. A single crafted response can stall the single-threaded c-ares event loop and deny DNS resolution, without causing memory corruption or information disclosure. This issue is fixed in version 1.34.7.",
-      "refs": "https://github.com/c-ares/c-ares/commit/5c8341ba6ff3a8e4e4dfd616f8ed0418838b8b7b\nhttps://github.com/c-ares/c-ares/commit/f1288bbc70e9a1e0a77134c2382157e52d326aea\nhttps://github.com/c-ares/c-ares/pull/1164",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:49"
-    },
-    {
-      "cve_id": "CVE-2026-62279",
-      "title": "高危漏洞: CVE-2026-62279 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-19 02:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-      "description": "LubeLogger is a self-hosted, open-source, web-based vehicle maintenance and fuel mileage tracker. Prior to 1.6.8, an authenticated user could submit caller-controlled recordIds to the DuplicateRecordsToOtherVehicles endpoint while naming destination vehicleIds the user could edit. The endpoint authorized the destination vehicles but fetched source records in Controllers/VehicleController.cs without checking UserCanEditVehicle for each existingRecord.VehicleId. This missing source-vehicle authorization allowed service, collision, upgrade, fuel, tax, supply, note, odometer, reminder, plan, inspection, and equipment records belonging to another user to be copied into an attacker-controlled vehicle, exposing record contents and attachment paths and creating persistent copies. This issue is fixed in version 1.6.8.",
-      "refs": "https://github.com/hargata/lubelog/commit/c8d5888ebc69e6a163e33f36200233ec845e5c57\nhttps://github.com/hargata/lubelog/issues/1398\nhttps://github.com/hargata/lubelog/pull/1395",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:45"
-    },
-    {
-      "cve_id": "CVE-2026-62278",
-      "title": "高危漏洞: CVE-2026-62278 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-19 02:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "LubeLogger is a self-hosted, open-source, web-based vehicle maintenance and fuel mileage tracker. Prior to 1.6.8, authenticated non-administrative users could reach HandleTranslationFileUpload and influence the name passed from Controllers/FilesController.cs to RenameFile in Helper/FileHelper.cs. RenameFile constructed newFilePath with string replacement and moved the uploaded file without verifying the resolved absolute path remained under the web root or data directory. A crafted upload name could therefore move an uploaded file outside the intended storage directory, enabling unauthorized file placement or overwrite with the privileges of the application process. This issue is fixed in version 1.6.8.",
-      "refs": "https://github.com/hargata/lubelog/commit/c8d5888ebc69e6a163e33f36200233ec845e5c57\nhttps://github.com/hargata/lubelog/issues/1398\nhttps://github.com/hargata/lubelog/pull/1395",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:41"
-    },
-    {
-      "cve_id": "CVE-2026-61552",
-      "title": "高危漏洞: CVE-2026-61552 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-19 02:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Icinga 2 is an open source monitoring system. From 2.4 until 2.14.9, 2.15.4, and 2.16.2, the /v1/objects API writes attacker-controlled template names into generated configuration without escaping them. An authenticated ApiUser with an objects/create/* permission can inject Icinga 2 DSL configuration, escape the intended object, create additional objects, and exceed the user's assigned privileges. This issue is fixed in versions 2.14.9, 2.15.4, and 2.16.2.",
-      "refs": "https://github.com/Icinga/icinga2/commit/125b7734e84d03f09b79d36c270152b11629a8c5\nhttps://github.com/Icinga/icinga2/commit/af4b36e6464b9b214bed270a53d6474cf91eb441\nhttps://github.com/Icinga/icinga2/commit/eec0d90e8303376fe772b3e4a04e3b064a44cf30",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:37"
-    },
-    {
-      "cve_id": "CVE-2026-61551",
-      "title": "高危漏洞: CVE-2026-61551 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-19 02:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
-      "description": "Icinga 2 is an open source monitoring system. Prior to 2.14.9, 2.15.4, and 2.16.2, parsing deeply nested JSON can exhaust the call stack because nesting depth is not bounded. The affected JSON parsing paths are reachable by unauthenticated network clients through the Icinga 2 service on TCP port 5665, allowing a remote attacker to crash the process, while possible code execution has not been demonstrated. This issue is fixed in versions 2.14.9, 2.15.4, and 2.16.2.",
-      "refs": "https://github.com/Icinga/icinga2/commit/391504eaa9ed9aee81f84008c57ec821974b74ee\nhttps://github.com/Icinga/icinga2/commit/3d9166ff52ff1a64a286c39af57957d63442c137\nhttps://github.com/Icinga/icinga2/commit/4964d2444ca5c4fae9036054554e1c6e0025fb89",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:32"
-    },
-    {
-      "cve_id": "CVE-2026-61550",
-      "title": "高危漏洞: CVE-2026-61550 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 02:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Icinga 2 is an open source monitoring system. From 2.8 until 2.14.9, 2.15.4, and 2.16.2, certificate update JSON-RPC message handling does not validate that the sender is a trusted endpoint. An unauthenticated network attacker able to connect to TCP port 5665 can replace the node certificate and trusted CA certificate, impersonate a trusted node, and take control of the node. This issue is fixed in versions 2.14.9, 2.15.4, and 2.16.2.",
-      "refs": "https://github.com/Icinga/icinga2/commit/4b7fb3405f4616a24b2b55e20f603a56b7dd6ad0\nhttps://github.com/Icinga/icinga2/commit/6c2e0db3819f859910a4ae265461cb51b1d2039c\nhttps://github.com/Icinga/icinga2/commit/a6f7cc7a4ef8beed023b24416106822d6940c4c0",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:28"
-    },
-    {
-      "cve_id": "CVE-2026-59163",
-      "title": "高危漏洞: CVE-2026-59163 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-19 02:17:07",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Mnemosyne is a memory layer for artificial intelligence agents. Prior to v3.10.1, the auth check in mnemosyne/core/sync_server.py parsed the JWT's header and payload using base64 decoding, then passed the token to a jwt library call with options that effectively disabled signature verification. The server accepted any well-formed token regardless of the signature, including tokens with alg: none and tokens signed with the wrong key. The fix in v3.10.1 replaces the broken decode with a from-scratch HS256 verifier using only the Python standard library. For users who cannot upgrade immediately, restrict network access to the sync server endpoint to trusted clients only. Firewall, reverse proxy with mTLS, or localhost bind with SSH tunnel are all viable. The vulnerability is not exploitable against an unreachable endpoint.",
-      "refs": "https://github.com/mnemosyne-oss/mnemosyne/commit/a0b6b8711a1a485304971710dc3571e29ff9dbeb\nhttps://github.com/mnemosyne-oss/mnemosyne/pull/373\nhttps://github.com/mnemosyne-oss/mnemosyne/releases/tag/v3.10.1",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:24"
-    },
-    {
-      "cve_id": "CVE-2026-33625",
-      "title": "高危漏洞: CVE-2026-33625 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 02:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "LMDeploy is a toolkit for compressing, deploying, and serving large language models. Versions 012.1 through 0.12.2 contain a code injection vulnerability in `lmdeploy/pytorch/config.py` line 620 that allows an attacker to execute arbitrary Python code by publishing a malicious HuggingFace model with a crafted `quantization_config.quant_dtype` value. When a user loads the model with lmdeploy, the `quant_dtype` is passed to `eval(f'torch.{quant_dtype}')` without any validation. Version 0.12.3 contains a patch.",
-      "refs": "https://github.com/InternLM/lmdeploy/releases/tag/v0.12.3\nhttps://github.com/InternLM/lmdeploy/security/advisories/GHSA-3hmm-rh5q-gwwr",
-      "source": "NVD",
-      "time": "2026-09-19 04:23:17"
     }
   ]
 }
