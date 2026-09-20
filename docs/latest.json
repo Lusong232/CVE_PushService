@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-94089",
+      "title": "高危漏洞: CVE-2026-94089 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-21 05:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in D-Link DIR-868L 2.01b05. This issue affects the function strcpy of the file /webfa_authentication.cgi of the component Authentication Handler. Executing a manipulation of the argument id/password can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/Walnut1337/CVE/blob/main/poc/poc_crash.py\nhttps://vuldb.com/cve/CVE-2026-94089\nhttps://vuldb.com/submit/951681",
+      "source": "NVD",
+      "time": "2026-09-21 06:47:21"
+    },
+    {
+      "cve_id": "CVE-2026-94044",
+      "title": "高危漏洞: CVE-2026-94044 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-21 03:17:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in 03-lovepreetSingh MCP up to f95d035c5317fad81af9828286631053ccb23546. This issue affects the function create_file of the file app/api/mcp/route.ts. Such manipulation of the argument filePath/content leads to path traversal. The attack can be launched remotely. The exploit is publicly available and might be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/03-lovepreetSingh/MCP/\nhttps://github.com/03-lovepreetSingh/MCP/issues/3\nhttps://vuldb.com/cve/CVE-2026-94044",
+      "source": "NVD",
+      "time": "2026-09-21 06:47:15"
+    },
+    {
       "cve_id": "CVE-2026-94039",
       "title": "高危漏洞: CVE-2026-94039 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1077,28 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7288040",
       "source": "NVD",
       "time": "2026-09-19 06:57:39"
-    },
-    {
-      "cve_id": "CVE-2026-84074",
-      "title": "高危漏洞: CVE-2026-84074 (CVSS 8.9)",
-      "cvss_score": 8.9,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of input during web page generation.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:35"
-    },
-    {
-      "cve_id": "CVE-2026-84073",
-      "title": "高危漏洞: CVE-2026-84073 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper neutralization of special elements used in an SQL command.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:31"
     }
   ]
 }
