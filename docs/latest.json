@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-94039",
+      "title": "高危漏洞: CVE-2026-94039 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-21 01:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in vas3k TaxHacker up to 0.8.5. Affected is the function generateInvoicePDF of the file /apps/invoices/actions.ts of the component Invoice PDF Renderer. Performing a manipulation of the argument businessLogo results in server-side request forgery. The attack is possible to be carried out remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/vas3k/TaxHacker/\nhttps://github.com/vas3k/TaxHacker/issues/186\nhttps://vuldb.com/cve/CVE-2026-94039",
+      "source": "NVD",
+      "time": "2026-09-21 03:58:02"
+    },
+    {
+      "cve_id": "CVE-2026-94038",
+      "title": "高危漏洞: CVE-2026-94038 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-21 01:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in NonceGeek dim-sum-app. This impacts the function textSearchV2Handler of the file deno/main.tsx of the component Deno Backend. Such manipulation of the argument supabase_url leads to server-side request forgery. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The name of the patch is 8389032e5d52c28c4855c6126ca7d0eae8af346a. It is best practice to apply a patch to resolve this issue.",
+      "refs": "https://github.com/NonceGeek/dim-sum-app/\nhttps://github.com/NonceGeek/dim-sum-app/commit/8389032e5d52c28c4855c6126ca7d0eae8af346a\nhttps://github.com/NonceGeek/dim-sum-app/issues/366",
+      "source": "NVD",
+      "time": "2026-09-21 03:57:56"
+    },
+    {
+      "cve_id": "CVE-2026-94036",
+      "title": "高危漏洞: CVE-2026-94036 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-21 00:16:55",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in D-Link DIR-X1860 and DIR-X1860Z up to 1.0.2.220120.165402. The impacted element is an unknown function of the file /ubus of the component routerd. The manipulation of the argument passwd_set results in improper access controls. The attack must originate from the local network. The exploit has been released to the public and may be used for attacks.",
+      "refs": "https://pastebin.com/gzKNCCPV\nhttps://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10513\nhttps://vuldb.com/cve/CVE-2026-94036",
+      "source": "NVD",
+      "time": "2026-09-21 03:57:50"
+    },
+    {
       "cve_id": "CVE-2026-94015",
       "title": "高危漏洞: CVE-2026-94015 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1066,39 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7288040",
       "source": "NVD",
       "time": "2026-09-19 06:57:31"
-    },
-    {
-      "cve_id": "CVE-2026-84071",
-      "title": "高危漏洞: CVE-2026-84071 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to OS command injection in the Universal Connector plugin upload functionality. A privileged authenticated attacker can provide a malicious filename that is incorporated into a shell command executed by the application, potentially resulting in arbitrary command execution with root-level privileges.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:27"
-    },
-    {
-      "cve_id": "CVE-2026-84070",
-      "title": "高危漏洞: CVE-2026-84070 (CVSS 8.9)",
-      "cvss_score": 8.9,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of input during web page generation.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:23"
-    },
-    {
-      "cve_id": "CVE-2026-84064",
-      "title": "高危漏洞: CVE-2026-84064 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper neutralization of special elements used in an SQL command.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:18"
     }
   ]
 }
