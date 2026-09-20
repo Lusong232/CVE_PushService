@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-94015",
+      "title": "高危漏洞: CVE-2026-94015 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-20 21:17:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in SourceCodester Drug Recommendation System 1.0. This affects an unknown function of the file /drug_recommender/Admin/edit_user.php. Such manipulation of the argument ID leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used.",
+      "refs": "https://github.com/KaranParelkar/Drug_recommendation_system/blob/main/sqli/edit_user/Readme.md\nhttps://vuldb.com/cve/CVE-2026-94015\nhttps://vuldb.com/submit/944860",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:49"
+    },
+    {
+      "cve_id": "CVE-2026-90817",
+      "title": "高危漏洞: CVE-2026-90817 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-20 21:17:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "An unauthenticated Remote Code Execution vulnerability was found in the survey passthrough routing and Data Import processing logic, in which a malicious user could potentially exploit it by manipulating HTTP requests to access an unintended controller route from a public survey context and by supplying a crafted file-path/stream parameter during import handling. If successfully exploited, this could allow the attacker to remotely execute arbitrary code on the REDCap server. The attacker does not have to be authenticated in order to exploit this, but exploitation requires knowledge of a valid public survey hash. This vulnerability exists in REDCap 13.3.0 and higher.",
+      "refs": "https://www.securifera.com/advisories/",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:45"
+    },
+    {
+      "cve_id": "CVE-2026-94109",
+      "title": "高危漏洞: CVE-2026-94109 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-20 20:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "openEQUELLA versions before 2026.1.0 contain a remote code execution vulnerability in FreeMarker template compilation due to an unsandboxed TemplateClassResolver configuration. Authenticated attackers can inject malicious template expressions through collection summaries, dashboard portlets, or MIME templates to instantiate dangerous classes like freemarker.template.utility.Execute and invoke Runtime.exec for arbitrary command execution.",
+      "refs": "https://github.com/openequella/openEQUELLA\nhttps://github.com/openequella/openEQUELLA/blob/8bd24b1dcf26cc3d74757e6b982fc1971a7d6767/Source/Plugins/Core/com.equella.core/src/com/tle/core/entity/service/impl/AbstractEntityServiceImpl.java#L230-L250\nhttps://github.com/openequella/openEQUELLA/blob/8bd24b1dcf26cc3d74757e6b982fc1971a7d6767/Source/Plugins/Core/com.equella.core/src/com/tle/web/freemarker/BasicConfiguration.java",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:40"
+    },
+    {
+      "cve_id": "CVE-2026-94107",
+      "title": "高危漏洞: CVE-2026-94107 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-20 20:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NivoCart through 2.4.0 contains a predictable password reset token vulnerability in the forgotten.php endpoint that generates recovery codes using substr(md5(mt_rand()), 0, 10). Attackers who know an administrator's email address can request a password reset and predict the token to gain administrative account access without rate limiting or expiration.",
+      "refs": "https://github.com/nivocart/nivocart\nhttps://github.com/nivocart/nivocart/blob/6ea6600cda1263ae70c0aab0a70d31091a32c46b/upload/admin/controller/common/forgotten.php#L20-L34\nhttps://github.com/nivocart/nivocart/blob/6ea6600cda1263ae70c0aab0a70d31091a32c46b/upload/admin/model/user/user.php#L119-L123",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:35"
+    },
+    {
+      "cve_id": "CVE-2026-94106",
+      "title": "高危漏洞: CVE-2026-94106 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-20 20:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "getID3 before 1.9.26 contains an OS command injection vulnerability in shell-out handlers that fail to escape filenames in command strings. Attackers can craft malicious filenames containing shell metacharacters to inject arbitrary commands executed with the privileges of the process embedding getID3.",
+      "refs": "https://github.com/JamesHeinrich/getID3\nhttps://github.com/JamesHeinrich/getID3/blob/fefffe762b02be155dcc32eec57feff8a49bc4b5/getid3/write.vorbiscomment.php#L85-L110\nhttps://github.com/JamesHeinrich/getID3/commit/2c6f3f96546f05746405872848114754ed7fe9b4",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:28"
+    },
+    {
+      "cve_id": "CVE-2026-94104",
+      "title": "高危漏洞: CVE-2026-94104 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-20 20:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "NivoCart through 2.4.0 contains an arbitrary file upload vulnerability in the File Manager multi() endpoint that fails to validate file extensions for new filenames or when chunks parameter is 2 or higher. Attackers with view-only back-office access can upload PHP files to the web-accessible image/data/ directory and execute them for remote code execution.",
+      "refs": "https://github.com/nivocart/nivocart\nhttps://github.com/nivocart/nivocart/blob/6ea6600cda1263ae70c0aab0a70d31091a32c46b/upload/admin/controller/common/filemanager.php#L527-L562\nhttps://github.com/nivocart/nivocart/blob/6ea6600cda1263ae70c0aab0a70d31091a32c46b/upload/admin/controller/common/filemanager_full.php",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:23"
+    },
+    {
+      "cve_id": "CVE-2026-94004",
+      "title": "高危漏洞: CVE-2026-94004 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-20 20:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in DedeCMS up to 5.7.118. The affected element is an unknown function of the file plus/mytag_js.php. The manipulation of the argument aid results in code injection. The attack can be launched remotely. The exploit has been made public and could be used.",
+      "refs": "https://vuldb.com/cve/CVE-2026-94004\nhttps://vuldb.com/submit/944743\nhttps://vuldb.com/vuln/407953",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:18"
+    },
+    {
+      "cve_id": "CVE-2026-94003",
+      "title": "高危漏洞: CVE-2026-94003 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-20 20:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in Comfast CF-N1-S 2.6.0.1. Impacted is the function get_css_path_from_uri of the file /cgi-bin/mbox-config of the component Web Management Interface. The manipulation leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.",
+      "refs": "https://github.com/AdminSafe/CVE/issues/12\nhttps://vuldb.com/cve/CVE-2026-94003\nhttps://vuldb.com/submit/944859",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:14"
+    },
+    {
+      "cve_id": "CVE-2026-93997",
+      "title": "高危漏洞: CVE-2026-93997 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-20 20:17:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in SourceCodester Drug Recommendation System 1.0. Affected by this issue is some unknown functionality of the file /Admin/edit_symptom.php. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://github.com/KaranParelkar/Drug_recommendation_system/blob/main/sqli/edit_symptom_id_parameter/Readme.md\nhttps://vuldb.com/cve/CVE-2026-93997\nhttps://vuldb.com/submit/944843",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:10"
+    },
+    {
+      "cve_id": "CVE-2026-92541",
+      "title": "高危漏洞: CVE-2026-92541 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-20 15:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Import and export users and customers WordPress plugin before 2.5.2 does not enforce the promote_users capability in its front-end import functionality, allowing users with only the create_users capability to change the role of existing users, including promoting them to administrator.",
+      "refs": "https://wpscan.com/vulnerability/b31fb9ee-9f65-43d0-88fa-da99513f8a3b/",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:05"
+    },
+    {
+      "cve_id": "CVE-2026-92540",
+      "title": "高危漏洞: CVE-2026-92540 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-20 15:16:51",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Import and export users and customers WordPress plugin before 2.5.2 does not correctly enforce the promote_users capability when assigning roles during a CSV import, allowing users with only the create_users capability to create new administrator accounts or promote existing users to administrator.",
+      "refs": "https://wpscan.com/vulnerability/3a112d4b-9824-4128-ad6a-25b928e6fbdd/",
+      "source": "NVD",
+      "time": "2026-09-21 01:48:01"
+    },
+    {
+      "cve_id": "CVE-2026-87839",
+      "title": "高危漏洞: CVE-2026-87839 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-20 15:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The Tripzzy  WordPress plugin before 1.5.1 does not have authorisation checks, and does not validate the identifier of the object being removed, in an AJAX action available to unauthenticated users, allowing them to permanently delete arbitrary comments on the site.",
+      "refs": "https://wpscan.com/vulnerability/e5145602-cb5e-4ef9-a51b-8f161200d014/",
+      "source": "NVD",
+      "time": "2026-09-21 01:47:55"
+    },
+    {
+      "cve_id": "CVE-2026-87067",
+      "title": "高危漏洞: CVE-2026-87067 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-09-20 15:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "The Forminator Forms  WordPress plugin before 1.57.2.1 does not restrict which classes may be instantiated when it deserialises a value taken from an XML-RPC request, allowing users who hold its forms-management permission to write a file of their choosing and execute arbitrary code. That permission belongs to an administrator by default, and to any role the site has granted it through the Forminator Forms  WordPress plugin before 1.57.2.1's own settings, so the issue is reachable well below administrator on sites that use that feature.",
+      "refs": "https://wpscan.com/vulnerability/9f5da02e-55af-463f-8b1a-9fe792d589c4/",
+      "source": "NVD",
+      "time": "2026-09-21 01:47:50"
+    },
+    {
+      "cve_id": "CVE-2026-85017",
+      "title": "高危漏洞: CVE-2026-85017 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-20 15:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Unlimited Elements For Elementor WordPress plugin before 2.0.20 does not perform a capability check on an AJAX action and deserializes attacker-controlled stored data through it, which makes it possible for authenticated attackers with subscriber-level access to inject arbitrary PHP objects. A partial fix in the 2.0.18 to 2.0.19 releases raised the privilege required to reach the vulnerable action to editor-level, and the issue was fully resolved in 2.0.20.",
+      "refs": "https://wpscan.com/vulnerability/459a7479-ebd8-4e46-a709-cb86d0386f9b/",
+      "source": "NVD",
+      "time": "2026-09-21 01:47:46"
+    },
+    {
+      "cve_id": "CVE-2026-82842",
+      "title": "高危漏洞: CVE-2026-82842 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-20 15:16:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SAML Single Sign On  WordPress plugin before 6.0.0 does not honour the configured criterion for linking an incoming single sign-on identity to a WordPress account, always resolving the identity by login name whatever the site has chosen, which allows an attacker who can have the site's identity provider assert a login name of their choosing to authenticate as any account, including an administrator, without proving ownership of that account.",
+      "refs": "https://wpscan.com/vulnerability/4ae66b2c-a0de-405f-baca-127302257540/",
+      "source": "NVD",
+      "time": "2026-09-21 01:47:40"
+    },
+    {
+      "cve_id": "CVE-2026-81650",
+      "title": "高危漏洞: CVE-2026-81650 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-20 15:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Photo Gallery, Sliders, Proofing and   WordPress plugin before 4.5.0 does not correctly validate the extensions of files extracted from an uploaded archive, due to a variable being reused as a loop counter so that the check always passes, allowing users granted its gallery-management capability by an administrator to write arbitrary files into a web-accessible directory and, on hosts that execute them, run arbitrary code.",
+      "refs": "https://wpscan.com/vulnerability/7c1443ae-14b4-43ca-bb1a-b6a3f9b27c57/",
+      "source": "NVD",
+      "time": "2026-09-21 01:47:35"
+    },
+    {
       "cve_id": "CVE-2026-93980",
       "title": "高危漏洞: CVE-2026-93980 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -923,182 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7288040",
       "source": "NVD",
       "time": "2026-09-19 06:57:18"
-    },
-    {
-      "cve_id": "CVE-2026-84036",
-      "title": "高危漏洞: CVE-2026-84036 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to bypass security restrictions due to improper authorization.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:14"
-    },
-    {
-      "cve_id": "CVE-2026-84034",
-      "title": "高危漏洞: CVE-2026-84034 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to a hardcoded credentials vulnerability in the hardware_assess/obstore binaries. A low-privileged authenticated user can recover hardcoded product master secrets, potentially resulting in unauthorized access to the internal database and compromise of sensitive system information.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:07"
-    },
-    {
-      "cve_id": "CVE-2026-84031",
-      "title": "高危漏洞: CVE-2026-84031 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-09-19 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of input during web page generation.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:57:03"
-    },
-    {
-      "cve_id": "CVE-2026-82967",
-      "title": "高危漏洞: CVE-2026-82967 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 04:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to an authentication bypass that allows an unauthenticated remote attacker to bypass IP-based access controls and access the Guardium management interface.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:59"
-    },
-    {
-      "cve_id": "CVE-2026-82896",
-      "title": "高危漏洞: CVE-2026-82896 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-09-19 04:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to traverse directories on the system due to a path traversal vulnerability.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:54"
-    },
-    {
-      "cve_id": "CVE-2026-82893",
-      "title": "高危漏洞: CVE-2026-82893 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-19 04:17:25",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a local attacker to gain elevated privileges due to improper privilege management.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:50"
-    },
-    {
-      "cve_id": "CVE-2026-82892",
-      "title": "高危漏洞: CVE-2026-82892 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-19 04:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote attacker to execute arbitrary commands due to improper neutralization of special elements used in an OS command.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:46"
-    },
-    {
-      "cve_id": "CVE-2026-82887",
-      "title": "高危漏洞: CVE-2026-82887 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary commands due to improper neutralization of special elements used in an OS command.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:42"
-    },
-    {
-      "cve_id": "CVE-2026-82885",
-      "title": "高危漏洞: CVE-2026-82885 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to gain elevated privileges due to missing authorization in the REST API.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:35"
-    },
-    {
-      "cve_id": "CVE-2026-82832",
-      "title": "高危漏洞: CVE-2026-82832 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of input during web page generation.",
-      "refs": "https://www.ibm.com/support/pages/node/7288035",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:31"
-    },
-    {
-      "cve_id": "CVE-2026-82340",
-      "title": "高危漏洞: CVE-2026-82340 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to unauthenticated insecure deserialization and attacker-controlled reflective method dispatch in the Change Audit System (CAS) listener. A network attacker able to reach TCP port 16017 may submit crafted serialized messages and potentially cause unintended code execution in the Guardium appliance.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:27"
-    },
-    {
-      "cve_id": "CVE-2026-81937",
-      "title": "高危漏洞: CVE-2026-81937 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to a command injection vulnerability in the import remotelog_config file CLI command. A highly privileged authenticated user can inject shell commands through the filename parameter, potentially resulting in arbitrary command execution with root privileges and impact to the confidentiality, integrity, and availability of the affected system.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:23"
-    },
-    {
-      "cve_id": "CVE-2026-81933",
-      "title": "高危漏洞: CVE-2026-81933 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to a SQL injection vulnerability in the Analytic Grid Service Handler. A low-privileged authenticated user can inject SQL statements through the analytic cases grid endpoint, potentially resulting in unauthorized access to sensitive data and impact to the confidentiality, integrity, and availability of the affected system.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:18"
-    },
-    {
-      "cve_id": "CVE-2026-81669",
-      "title": "高危漏洞: CVE-2026-81669 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-19 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to a command injection vulnerability in the create csr wildcard CLI command. An authenticated privileged CLI user can inject arbitrary shell commands through the alias input, resulting in command execution with root privileges.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:14"
-    },
-    {
-      "cve_id": "CVE-2026-81657",
-      "title": "高危漏洞: CVE-2026-81657 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 04:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 could allow a remote unauthenticated attacker to execute arbitrary code on the system due to the deserialization of untrusted data.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:09"
-    },
-    {
-      "cve_id": "CVE-2026-81656",
-      "title": "高危漏洞: CVE-2026-81656 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 04:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Guardium Data Protection 12.2 is vulnerable to a SQL injection vulnerability in the New Query Builder REST Processor. A low-privileged authenticated user can inject SQL statements through the newQueryBuilder REST endpoint, potentially resulting in unauthorized access to data and impact to the confidentiality, integrity, and availability of the affected system.",
-      "refs": "https://www.ibm.com/support/pages/node/7288040",
-      "source": "NVD",
-      "time": "2026-09-19 06:56:02"
     }
   ]
 }
