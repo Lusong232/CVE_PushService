@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-94056",
+      "title": "高危漏洞: CVE-2026-94056 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-20 07:17:11",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Exim before 4.100.1, when Proxy-Protocol is used with an attacker-controlled proxy, allows attackers to read certain uninitialized data from stack memory.",
+      "refs": "https://lists.exim.org/lurker/message/20260918.121220.0f87338e.en.html",
+      "source": "NVD",
+      "time": "2026-09-20 10:20:27"
+    },
+    {
+      "cve_id": "CVE-2026-94054",
+      "title": "高危漏洞: CVE-2026-94054 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-09-20 07:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "description": "Exim before 4.100.1, when Proxy-Protocol is used with an attacker-controlled proxy, has an out-of-bounds write.",
+      "refs": "https://lists.exim.org/lurker/message/20260918.121220.0f87338e.en.html",
+      "source": "NVD",
+      "time": "2026-09-20 10:20:23"
+    },
+    {
+      "cve_id": "CVE-2026-93993",
+      "title": "高危漏洞: CVE-2026-93993 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-20 07:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Mistral Vibe before 2.25.5 contains a remote code execution vulnerability in the worktree creation process that executes git hooks before trust validation. Attackers can supply a repository with a crafted post-checkout hook that executes arbitrary shell commands with the privileges of the user running Vibe.",
+      "refs": "https://github.com/mistralai/mistral-vibe\nhttps://github.com/mistralai/mistral-vibe/blob/19b5b74faa78d0816b8d4d4c7d7543fc3520678c/vibe/core/git/repo.py#L411-L431\nhttps://github.com/mistralai/mistral-vibe/commit/c069ffa1e12fb5f2487b489217c40ab97721d553",
+      "source": "NVD",
+      "time": "2026-09-20 10:20:18"
+    },
+    {
+      "cve_id": "CVE-2026-93992",
+      "title": "高危漏洞: CVE-2026-93992 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-20 07:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+      "description": "Gopeed through 2.0.0-beta.3 contains a path traversal vulnerability in archive extraction that allows attackers to write arbitrary files outside the extraction directory. Attackers can craft malicious archives with entries containing directory traversal sequences that bypass validation, enabling file write operations when users download and extract archives with AutoExtract enabled.",
+      "refs": "https://github.com/GopeedLab/gopeed\nhttps://github.com/GopeedLab/gopeed/blob/a5cd53f94c18ac65add684b1113fa5f0b47cc4da/pkg/download/extract.go#L284-L296\nhttps://github.com/GopeedLab/gopeed/blob/a5cd53f94c18ac65add684b1113fa5f0b47cc4da/pkg/download/extract_7z.go#L45-L53",
+      "source": "NVD",
+      "time": "2026-09-20 10:20:13"
+    },
+    {
+      "cve_id": "CVE-2026-93991",
+      "title": "高危漏洞: CVE-2026-93991 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-20 07:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Argo Workflows versions 4.1.0 through 4.1.3 contain an authorization bypass vulnerability in ListArchivedWorkflows that fails to apply cluster-scoped access review when the metadata.namespace field selector uses the NotEquals operator. Attackers with namespace-scoped list permissions can use a negated namespace field selector to retrieve archived workflows from all other namespaces, exposing spec arguments, parameter values, and annotations.",
+      "refs": "https://github.com/argoproj/argo-workflows\nhttps://github.com/argoproj/argo-workflows/commit/a40972386c097ddf816d2e60e13f058bedca53d9\nhttps://github.com/argoproj/argo-workflows/releases/tag/v4.1.4",
+      "source": "NVD",
+      "time": "2026-09-20 10:20:06"
+    },
+    {
+      "cve_id": "CVE-2026-93990",
+      "title": "高危漏洞: CVE-2026-93990 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-20 07:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Expat through 2.8.4 fails to validate low surrogates following high surrogates in UTF-16 input, allowing malformed UTF-16 sequences to be accepted. Attackers can craft UTF-16 encoded XML with lone high surrogates that consume following code units, hiding markup characters from the parser and enabling XML injection attacks.",
+      "refs": "https://github.com/libexpat/libexpat\nhttps://github.com/libexpat/libexpat/commit/ff6e1d7e750bbe245178f51a47a965dc8342861a\nhttps://github.com/libexpat/libexpat/pull/1282",
+      "source": "NVD",
+      "time": "2026-09-20 10:20:01"
+    },
+    {
       "cve_id": "CVE-2026-93985",
       "title": "高危漏洞: CVE-2026-93985 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -1033,72 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7287708",
       "source": "NVD",
       "time": "2026-09-19 06:54:52"
-    },
-    {
-      "cve_id": "CVE-2026-11726",
-      "title": "高危漏洞: CVE-2026-11726 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-19 04:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
-      "description": "IBM MQ for HPE NonStop 8.1.0 through 8.1.0.40 could allow an authenticated attacker to obtain sensitive information or cause a denial of service due to improper validation of message header offset values.",
-      "refs": "https://www.ibm.com/support/pages/node/7287707",
-      "source": "NVD",
-      "time": "2026-09-19 06:54:48"
-    },
-    {
-      "cve_id": "CVE-2026-11725",
-      "title": "高危漏洞: CVE-2026-11725 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-19 04:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM MQ could allow an authenticated attacker to cause a denial of service or potentially execute arbitrary code due to an integer overflow in MQINQ request processing.",
-      "refs": "https://www.ibm.com/support/pages/node/7284944",
-      "source": "NVD",
-      "time": "2026-09-19 06:54:44"
-    },
-    {
-      "cve_id": "CVE-2026-11716",
-      "title": "高危漏洞: CVE-2026-11716 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 04:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM MQ for HPE NonStop 8.1.0 through 8.1.0.40 could allow an authenticated attacker to cause a denial of service or potentially execute arbitrary code during queue manager startup due to improper validation of cluster migration data.",
-      "refs": "https://www.ibm.com/support/pages/node/7287705",
-      "source": "NVD",
-      "time": "2026-09-19 06:54:40"
-    },
-    {
-      "cve_id": "CVE-2017-20284",
-      "title": "高危漏洞: CVE-2017-20284 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 04:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Caucho Resin contains a path traversal vulnerability in the documentation webapp (resin-doc) that allows remote unauthenticated attackers to read arbitrary files by supplying a relative path through the inputFile request parameter of the jndi-appconfig tutorial servlet. Attackers can craft requests with directory traversal sequences to the servlet endpoint to read files outside the intended tutorial directory on the underlying system. Exploitation evidence was first observed by the Shadowserver Foundation on 2021-12-10.",
-      "refs": "https://blkstone.github.io/2017/10/30/resin-attack-vectors/\nhttps://caucho.com/products/resin\nhttps://raw.githubusercontent.com/projectdiscovery/nuclei-templates/main/http/vulnerabilities/chanjet-tplus/chanjet-crm-sqli.yaml",
-      "source": "NVD",
-      "time": "2026-09-19 06:54:35"
-    },
-    {
-      "cve_id": "CVE-2023-54399",
-      "title": "高危漏洞: CVE-2023-54399 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 03:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Hongjing e-HR before 8.2 contains a SQL injection vulnerability in the /servlet/codesettree endpoint where the categories query parameter is passed to a database query without sanitization after HRMS-encoding is stripped. An unauthenticated remote attacker can supply a crafted UNION SELECT payload to read arbitrary database content, including credential tables such as operuser. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.",
-      "refs": "https://cn-sec.com/archives/1861976.html\nhttps://www.cloudsek.com/blog/mozi-resurfaces-as-androxgh0st-botnet-unraveling-the-latest-exploitation-wave\nhttps://www.cnblogs.com/pursue-security/p/17704093.html",
-      "source": "NVD",
-      "time": "2026-09-19 04:25:13"
-    },
-    {
-      "cve_id": "CVE-2021-48008",
-      "title": "高危漏洞: CVE-2021-48008 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-19 03:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Chanjet CRM contains an unauthenticated SQL injection vulnerability that allows remote attackers to execute arbitrary SQL queries by manipulating the site_id GET parameter in the webservice endpoint. Attackers can exploit the lack of input sanitization or parameterization through UNION-based injection techniques to extract sensitive data from the underlying database. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-18.",
-      "refs": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/main/http/vulnerabilities/chanjet-tplus/chanjet-crm-sqli.yaml\nhttps://www.chanjet.com/\nhttps://www.cnvd.org.cn/flaw/show/CNVD-2021-12845",
-      "source": "NVD",
-      "time": "2026-09-19 04:25:09"
     }
   ]
 }
