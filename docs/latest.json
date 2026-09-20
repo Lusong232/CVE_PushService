@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-86553",
+      "title": "高危漏洞: CVE-2026-86553 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-09-20 12:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "description": "SmartLife app dynamically generates fresh SmartLife application authentication parameters inside its runtime process. Using the acquired SmartLife application authentication parameters, an attacker can directly call the backend interface /account/verify.serv to obtain the real account ID corresponding to a registered email address. By spoofing the application authentication information together with the target account ID, the attacker can reset the password of the target account.",
+      "refs": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/2171542593031840100",
+      "source": "NVD",
+      "time": "2026-09-20 16:03:17"
+    },
+    {
+      "cve_id": "CVE-2026-93959",
+      "title": "高危漏洞: CVE-2026-93959 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-20 11:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SourceCodester Online Reviewer Management System 1.0. This issue affects some unknown processing of the file /reviewer_0/admins/assessments/course/btn_functions.php. This manipulation of the argument Course causes sql injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/zliang512/cve/issues/1\nhttps://vuldb.com/cve/CVE-2026-93959\nhttps://vuldb.com/submit/944169",
+      "source": "NVD",
+      "time": "2026-09-20 16:03:12"
+    },
+    {
+      "cve_id": "CVE-2026-94084",
+      "title": "高危漏洞: CVE-2026-94084 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-09-20 10:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Suricata before 8.0.7 has an Http2ThreadMultiBuf use-after-free when a transaction is inspected by rules that use http.response_header with and without a transform.",
+      "refs": "https://forum.suricata.io/t/suricata-8-0-7-released/6467\nhttps://github.com/OISF/suricata/commit/1d66355dc8737bb2ae7a198115b3067e3ad49808\nhttps://github.com/OISF/suricata/compare/suricata-8.0.6...suricata-8.0.7",
+      "source": "NVD",
+      "time": "2026-09-20 16:03:08"
+    },
+    {
+      "cve_id": "CVE-2026-94083",
+      "title": "高危漏洞: CVE-2026-94083 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-09-20 10:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "Suricata before 8.0.7 has a DoH2 type confusion that can cause an invalid free, because cleanup code for the HTTP2 state is executed even though the actual state is HTTP1 (when there is a DoH2 request with an HTTP1 to HTTP2 upgrade). This requires app-layer.protocols.doh2 to be enabled, which is the default in 8.x versions.",
+      "refs": "https://forum.suricata.io/t/suricata-8-0-7-released/6467\nhttps://github.com/OISF/suricata/commit/e574009add9c208f319e1d9d15b3bb1229c88074\nhttps://github.com/OISF/suricata/compare/suricata-8.0.6...suricata-8.0.7",
+      "source": "NVD",
+      "time": "2026-09-20 16:03:03"
+    },
+    {
+      "cve_id": "CVE-2026-93958",
+      "title": "高危漏洞: CVE-2026-93958 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-20 10:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was found in D-Link R95 BE9500_1.00.16. This vulnerability affects the function system of the file /bin/ssi of the component DHMAPI. The manipulation of the argument NTPServer results in os command injection. The attack can be executed remotely. The exploit has been made public and could be used.",
+      "refs": "https://github.com/FoundTL/D-Link-R95-BE9500\nhttps://vuldb.com/cve/CVE-2026-93958\nhttps://vuldb.com/submit/944149",
+      "source": "NVD",
+      "time": "2026-09-20 16:02:59"
+    },
+    {
+      "cve_id": "CVE-2026-78030",
+      "title": "高危漏洞: CVE-2026-78030 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-19 19:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.",
+      "refs": "https://github.com/perl5-dbi/dbi/commit/315c6ce703b8b3cbe9188062d9ec80730293554a.patch\nhttps://github.com/perl5-dbi/dbi/security/advisories/GHSA-wqmw-wqwx-3fr7\nhttps://metacpan.org/release/HMBRAND/DBI-1.653/changes",
+      "source": "NVD",
+      "time": "2026-09-20 16:02:54"
+    },
+    {
       "cve_id": "CVE-2026-94056",
       "title": "高危漏洞: CVE-2026-94056 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/pgpartman/pg_partman/commit/ba9405542acf24dd881845b935cab8b165854361\nhttps://github.com/pgpartman/pg_partman/releases/tag/v5.5.0\nhttps://github.com/pgpartman/pg_partman/security/advisories/GHSA-gmw2-52wc-258g",
       "source": "NVD",
       "time": "2026-09-19 06:55:20"
-    },
-    {
-      "cve_id": "CVE-2026-61781",
-      "title": "高危漏洞: CVE-2026-61781 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-09-19 04:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "pg_partman is a PostgreSQL extension that manages partitioned tables by time or ID. Prior to 5.5.0, create_partition_time() reads the writable part_config.time_encoder text value and interpolates it without identifier quoting into a dynamically executed SELECT statement. A role with the documented partman_user INSERT and UPDATE privileges can store SQL rather than a function name. When pg_partman_bgw later creates a child partition for a text- or UUID-keyed set, the worker executes the stored SQL with pg_partman_bgw.role privileges, which default to PostgreSQL superuser. The persistent configuration row can repeatedly restore elevated access on later maintenance ticks, and successful exploitation can permit database-wide compromise and operating-system command execution as the PostgreSQL service account. This issue is fixed in version 5.5.0.",
-      "refs": "https://github.com/pgpartman/pg_partman/commit/ba9405542acf24dd881845b935cab8b165854361\nhttps://github.com/pgpartman/pg_partman/releases/tag/v5.5.0\nhttps://github.com/pgpartman/pg_partman/security/advisories/GHSA-742w-3j7c-qwvp",
-      "source": "NVD",
-      "time": "2026-09-19 06:55:16"
-    },
-    {
-      "cve_id": "CVE-2026-61721",
-      "title": "高危漏洞: CVE-2026-61721 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-09-19 04:17:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H",
-      "description": "FluidSynth is a software synthesizer based on the SoundFont 2 specifications. From 2.5.0 until 2.5.6, the native DLS loader assigns file-controlled wsmp.loop_start and wsmp.loop_length values to samples without calling fluid_sample_validate() or fluid_sample_sanitize_loop(). A crafted DLS file can place sample loop points beyond the sample buffer, causing out-of-bounds reads during audio rendering, undefined behavior, possible memory disclosure, and denial of service. Builds compiled with the CMake option enable-native-dls set to OFF do not expose the affected parser. This issue is fixed in version 2.5.6.",
-      "refs": "https://github.com/FluidSynth/fluidsynth/commit/2354c2a9acdb26de7cdcd37c903ee108f46c0a7d\nhttps://github.com/FluidSynth/fluidsynth/releases/tag/v2.5.6\nhttps://github.com/FluidSynth/fluidsynth/security/advisories/GHSA-59ph-rx8r-8p4j",
-      "source": "NVD",
-      "time": "2026-09-19 06:55:12"
-    },
-    {
-      "cve_id": "CVE-2026-61714",
-      "title": "高危漏洞: CVE-2026-61714 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-19 04:17:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "FluidSynth is a software synthesizer based on the SoundFont 2 specifications. From 2.2.4 until 2.5.6, configuring synth.midi-channels above 16 allows the MIDI player to index _fluid_player_t::channel_isplaying outside its fixed-size heap allocation while tracking active channels. The resulting out-of-bounds reads and writes invoke undefined behavior and may compromise confidentiality, integrity, or availability. No crafted MIDI file is required because the unsafe condition is created by the channel-count configuration itself. Keeping synth.midi-channels at its default value of 16 avoids the vulnerable path. This issue is fixed in version 2.5.6.",
-      "refs": "https://github.com/FluidSynth/fluidsynth/commit/772702e00cc6acc7c607efb40283e2269211effc\nhttps://github.com/FluidSynth/fluidsynth/releases/tag/v2.5.6\nhttps://github.com/FluidSynth/fluidsynth/security/advisories/GHSA-976m-35rw-h3m6",
-      "source": "NVD",
-      "time": "2026-09-19 06:55:08"
-    },
-    {
-      "cve_id": "CVE-2026-58264",
-      "title": "高危漏洞: CVE-2026-58264 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-19 04:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "FluidSynth is a software synthesizer based on the SoundFont 2 specifications. From 1.1.2 until 2.5.6, the FluidSynth command handler accepts a pitch_bend_range command whose channel argument is not bounds checked before the supplied value is written through the selected synth channel. An out-of-range channel can therefore cause an out-of-bounds heap write, leading to denial of service or possible code execution. The issue is remotely reachable when the TCP server is enabled through new_fluid_server() or fluidsynth -s, and it is locally reachable through malicious commands delivered to the FluidSynth shell on standard input. Applications that do not use the shell, command handler, or TCP server are not affected. This issue is fixed in version 2.5.6.",
-      "refs": "https://github.com/FluidSynth/fluidsynth/commit/762a3bd39a431cd45abf3bbcce7286c87909d087\nhttps://github.com/FluidSynth/fluidsynth/pull/1796\nhttps://github.com/FluidSynth/fluidsynth/releases/tag/v2.5.6",
-      "source": "NVD",
-      "time": "2026-09-19 06:55:04"
-    },
-    {
-      "cve_id": "CVE-2026-17619",
-      "title": "高危漏洞: CVE-2026-17619 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-09-19 04:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
-      "description": "IBM Platform RTM is vulnerable to SQL injection. A remote attacker could send specially crafted SQL statements, which could allow the attacker to view, add, modify, or delete information in the back-end database.",
-      "refs": "https://www.ibm.com/support/pages/node/7287769",
-      "source": "NVD",
-      "time": "2026-09-19 06:54:56"
-    },
-    {
-      "cve_id": "CVE-2026-11727",
-      "title": "高危漏洞: CVE-2026-11727 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-19 04:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM MQ for HPE NonStop 8.1.0 through 8.1.0.40 IBM MQ C client could allow a remote attacker to cause a denial of service or potentially execute arbitrary code due to improper validation of queue manager responses when requesting AMS policy data.",
-      "refs": "https://www.ibm.com/support/pages/node/7287708",
-      "source": "NVD",
-      "time": "2026-09-19 06:54:52"
     }
   ]
 }
