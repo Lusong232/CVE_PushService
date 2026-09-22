@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-94493",
+      "title": "高危漏洞: CVE-2026-94493 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-22 09:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in Gigatech PDV5701 1.0.31_240305_112640. This issue affects some unknown processing of the file /index.html of the component WebSocket Service. The manipulation results in missing authentication. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/CSDVi/cve/issues/2\nhttps://vuldb.com/cve/CVE-2026-94493\nhttps://vuldb.com/submit/895425",
+      "source": "NVD",
+      "time": "2026-09-22 16:03:25"
+    },
+    {
+      "cve_id": "CVE-2026-94491",
+      "title": "高危漏洞: CVE-2026-94491 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-22 09:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Yonyou KSOA 9.0. This affects an unknown part of the file /cardcase/search_list.jsp. Executing a manipulation of the argument address can lead to sql injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-94491\nhttps://vuldb.com/submit/895364\nhttps://vuldb.com/vuln/408191",
+      "source": "NVD",
+      "time": "2026-09-22 16:03:19"
+    },
+    {
       "cve_id": "CVE-2026-94425",
       "title": "高危漏洞: CVE-2026-94425 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1077,28 +1099,6 @@
       "refs": "https://app.notion.com/p/Netcore-NBR200V2-Vul-7-39f797159f158028ab02c136450d87e4\nhttps://vuldb.com/cve/CVE-2026-94099\nhttps://vuldb.com/submit/892992",
       "source": "NVD",
       "time": "2026-09-21 16:21:22"
-    },
-    {
-      "cve_id": "CVE-2026-94098",
-      "title": "高危漏洞: CVE-2026-94098 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-21 09:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Netcore NBR200V2 1.3.241127.071246. This vulnerability affects unknown code of the file /www/cgi-bin/upgrade of the component Firmware Upgrade CGI Endpoint. Such manipulation of the argument QUERY_STRING leads to command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://app.notion.com/p/Netcore-NBR200V2-Vul-6-39f797159f1580259aa3cc1d0f512fde\nhttps://vuldb.com/cve/CVE-2026-94098\nhttps://vuldb.com/submit/892991",
-      "source": "NVD",
-      "time": "2026-09-21 16:21:17"
-    },
-    {
-      "cve_id": "CVE-2026-94097",
-      "title": "高危漏洞: CVE-2026-94097 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-09-21 08:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Netcore NBR200V2 1.3.241127.071246. This affects an unknown part of the file /www/cgi-bin/network_tools of the component CGI Diagnostic Endpoint. This manipulation of the argument param/key/val causes command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://app.notion.com/p/Netcore-NBR200V2-Vul-5-39f797159f15809dbc06d2d3ae6b1f04\nhttps://vuldb.com/cve/CVE-2026-94097\nhttps://vuldb.com/submit/892990",
-      "source": "NVD",
-      "time": "2026-09-21 16:21:13"
     }
   ]
 }
