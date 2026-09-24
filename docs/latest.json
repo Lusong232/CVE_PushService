@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-96898",
+      "title": "高危漏洞: CVE-2026-96898 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 12:18:05",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in yhx070424 ShopXO up to 2.2.7. Affected by this vulnerability is an unknown functionality of the file config/ueditor.php of the component Ueditor Upload Interface. The manipulation of the argument path_type results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://gitee.com/yhx070424/shopxo/\nhttps://gitee.com/yhx070424/shopxo/issues/IK4LPH\nhttps://vuldb.com/cve/CVE-2026-96898",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:37"
+    },
+    {
+      "cve_id": "CVE-2026-96891",
+      "title": "高危漏洞: CVE-2026-96891 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-24 11:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in D-Link DIR-825 3.00b32. Affected is the function tunnel_set_params of the file tunnel.c of the component rp-l2tp. The manipulation of the argument peer_hostname  leads to out-of-bounds write. The attack may be initiated remotely.",
+      "refs": "https://tzh00203.notion.site/D-Link-DIR-825-L2TP-Host-Name-AVP-Out-of-Bounds-Write-33cb5c52018a80458ffec58b62096940\nhttps://vuldb.com/cve/CVE-2026-96891\nhttps://vuldb.com/submit/906301",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:33"
+    },
+    {
+      "cve_id": "CVE-2026-97055",
+      "title": "高危漏洞: CVE-2026-97055 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-24 10:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SigNoz from v0.8.0 before v0.143.0 defaults the JWT tokenizer signing secret (tokenizer::jwt::secret, set via SIGNOZ_TOKENIZER_JWT_SECRET or the deprecated SIGNOZ_JWT_SECRET) to an empty string, and Config.Validate() does not reject the empty value, so a deployment that does not configure a secret starts up and both signs and verifies session tokens with an empty HMAC key. Because the JWT tokenizer was the default provider, any such deployment is affected. An unauthenticated attacker who knows the ID of an existing user can forge a valid session token for that user — including an administrator — by signing the id, orgId and email claims with an empty key; the organization ID (and whether an email is registered) can be obtained without authentication from /api/v2/sessions/context. A forged refresh token can be exchanged at /api/v2/sessions/rotate for a new token pair and cannot be revoked, so it remains usable for its full lifetime (30 days by default). Fixed in v0.143.0, which requires a JWT secret when the jwt provider is selected and changes the default provider to opaque.",
+      "refs": "https://github.com/SigNoz/signoz/commit/67895d366d\nhttps://github.com/SigNoz/signoz/commit/b02aae2db3\nhttps://github.com/SigNoz/signoz/security/advisories/GHSA-c26w-g4j8-39m2",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:28"
+    },
+    {
+      "cve_id": "CVE-2026-96803",
+      "title": "高危漏洞: CVE-2026-96803 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 10:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in java110 MicroCommunity up to 2.0. Affected is the function QueryServiceSMOImpl.fallBack of the file BusinessApi.java of the component fallBack API Endpoint. Such manipulation of the argument fallBackSql leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://gitee.com/yhx070424/MicroCommunity/issues/IK4014\nhttps://vuldb.com/cve/CVE-2026-96803\nhttps://vuldb.com/submit/905472",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:21"
+    },
+    {
+      "cve_id": "CVE-2026-18467",
+      "title": "高危漏洞: CVE-2026-18467 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-24 10:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Paytium: Mollie payment forms & donations plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 5.0.3. The 5.0.3 patch introduced a wp_hash()/hash_equals() signature gate on the pt-paytium-user-data field, but left a second filter — pt_cf_checkout_meta(), registered on the pt_meta_values hook after the signed builder — that copies every $_POST['pt_form_field'][*] key verbatim into the payment meta array without any signature verification; this allows the pt-user-role value it copies to overwrite the signed path's output, after which paytium_user_data_processing() reads the persisted _pt-user-role post meta and passes it directly as the role argument to wp_insert_user(). This makes it possible for unauthenticated attackers to register a new WordPress account with the administrator role and fully take over the site. Exploitation requires submitting a payment through a publicly-exposed [paytium] shortcode form and completing the resulting payment flow, after which the attacker can seize the new administrator account via the standard lost-password flow on their supplied email address.",
+      "refs": "https://plugins.trac.wordpress.org/browser/paytium/tags/5.0.3/includes/payment-functions.php#L113\nhttps://plugins.trac.wordpress.org/browser/paytium/tags/5.0.3/includes/process-payment-functions.php#L1103\nhttps://plugins.trac.wordpress.org/browser/paytium/tags/5.0.3/includes/process-payment-functions.php#L21",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:16"
+    },
+    {
+      "cve_id": "CVE-2026-96762",
+      "title": "高危漏洞: CVE-2026-96762 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 08:17:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in kvcache-ai mooncake up to 0.3.12/0.3.13.post1. This affects the function UnmountSegment of the component RPC Path Handler. This manipulation of the argument client_id/segment_id causes authorization bypass. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/yyymk/76d099537af0e661dd01eacc82b9a7ea\nhttps://vuldb.com/cve/CVE-2026-96762\nhttps://vuldb.com/submit/904600",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:09"
+    },
+    {
+      "cve_id": "CVE-2026-96751",
+      "title": "高危漏洞: CVE-2026-96751 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 08:17:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in pmTicket Project-Management-Software up to 078fa56a782490c5059a0814f84df27984f4d7e2. This affects the function setSync of the file /ajax/add_project.php. Such manipulation of the argument conn_settings leads to sql injection. The attack may be launched remotely. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://asciinema.org/a/1230576\nhttps://vuldb.com/cve/CVE-2026-96751\nhttps://vuldb.com/submit/904342",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:05"
+    },
+    {
+      "cve_id": "CVE-2026-93577",
+      "title": "高危漏洞: CVE-2026-93577 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-24 08:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer overflow issue when compiling a specially crafted regular expression in a CI/CD configuration.",
+      "refs": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-1-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/629758\nhttps://hackerone.com/reports/3995696",
+      "source": "NVD",
+      "time": "2026-09-24 15:57:01"
+    },
+    {
+      "cve_id": "CVE-2026-92470",
+      "title": "高危漏洞: CVE-2026-92470 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-24 08:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.7 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to access sensitive CI/CD variable values from debug-mode job traces through the Duo AI troubleshooting feature due to missing authorization checks.",
+      "refs": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-1-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/617719",
+      "source": "NVD",
+      "time": "2026-09-24 15:56:55"
+    },
+    {
+      "cve_id": "CVE-2026-89078",
+      "title": "高危漏洞: CVE-2026-89078 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-24 08:17:22",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free issue when parsing a specially crafted regular expression in a CI/CD configuration.",
+      "refs": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-1-released/\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/628577\nhttps://hackerone.com/reports/4019059",
+      "source": "NVD",
+      "time": "2026-09-24 15:56:48"
+    },
+    {
       "cve_id": "CVE-2026-70125",
       "title": "高危漏洞: CVE-2026-70125 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -989,116 +1099,6 @@
       "refs": "https://access.redhat.com/security/cve/CVE-2026-88832\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2531345",
       "source": "NVD",
       "time": "2026-09-24 02:49:41"
-    },
-    {
-      "cve_id": "CVE-2026-88830",
-      "title": "高危漏洞: CVE-2026-88830 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-24 01:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "A unit confusion in BusyBox TLS Montgomery reduction buffer allocation causes a pre-authentication heap buffer overflow when processing a crafted ClientKeyExchange message.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-88830\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2531344",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:37"
-    },
-    {
-      "cve_id": "CVE-2026-85724",
-      "title": "高危漏洞: CVE-2026-85724 (CVSS 9.6)",
-      "cvss_score": 9.6,
-      "published_date": "2026-09-24 01:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Moquette is a lightweight Java MQTT broker. Prior to 0.18.1, when pattern-based ACL rules are configured, AuthorizationsCollector.canDoOperation substitutes client ID and username values directly into rules containing %c or %u and then treats the result as an MQTT topic filter. A client that uses + or # in either identity can broaden the substituted filter and gain cross-tenant read and write access. A # identity can also produce an invalid filter that triggers a NullPointerException in Topic.match and disrupts session processing. This issue is fixed in version 0.18.1.",
-      "refs": "https://github.com/moquette-io/moquette/commit/b4a98bb3f3425ece476ed073aa080c627c1239af\nhttps://github.com/moquette-io/moquette/releases/tag/v0.18.1\nhttps://github.com/moquette-io/moquette/security/advisories/GHSA-5f42-97gr-vfhq",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:33"
-    },
-    {
-      "cve_id": "CVE-2026-6668",
-      "title": "高危漏洞: CVE-2026-6668 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-24 01:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Integer overflow in the packet buffer growth logic in PgBouncer through 1.25.2 allows an unauthenticated remote attacker to cause a denial of service. Sufficiently large input makes the buffer size computation overflow, leaving the growth loop unable to terminate. Because PgBouncer serves all clients from a single process, this saturates a CPU core and stalls every pooled connection until the process is killed. Both unauthenticated and authenticated code paths can reach the overflow.",
-      "refs": "https://www.pgbouncer.org/changelog.html",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:29"
-    },
-    {
-      "cve_id": "CVE-2026-19888",
-      "title": "高危漏洞: CVE-2026-19888 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-24 01:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Missing validation of a mandatory attribute in the SCRAM client-final-message parser in PgBouncer through 1.25.2 allows an unauthenticated remote attacker to crash the process. A malformed message can make the parser report success while leaving a required value unset, which is then dereferenced as a NULL pointer. The crash occurs before any credential is verified, so no valid account is required. Because PgBouncer serves all clients from a single process, this terminates every pooled connection.",
-      "refs": "https://www.pgbouncer.org/changelog.html",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:22"
-    },
-    {
-      "cve_id": "CVE-2026-96673",
-      "title": "高危漏洞: CVE-2026-96673 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-24 00:16:50",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Photoview through 2.4.0 contains an SQL injection vulnerability in the album download route that allows unauthenticated attackers to inject SQL by manipulating the album_id path segment. Attackers can supply crafted SQL expressions in the album_id parameter to extract arbitrary data from the database using time-based or blind injection techniques.",
-      "refs": "https://github.com/photoview/photoview\nhttps://github.com/photoview/photoview/blob/v2.4.0/api/routes/downloads.go#L19-L29\nhttps://github.com/photoview/photoview/commit/deb1b216e047a30803dc0f48a9fc3d4c4abda594",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:18"
-    },
-    {
-      "cve_id": "CVE-2026-19179",
-      "title": "高危漏洞: CVE-2026-19179 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-09-24 00:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to manipulate database queries due to improper neutralization of special elements in a boolean expression.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:14"
-    },
-    {
-      "cve_id": "CVE-2026-18875",
-      "title": "高危漏洞: CVE-2026-18875 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-24 00:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift is vulnerable to RAG poisoning via unauthenticated runbook upsert (CWE-74) in the FTM AI agent server (api.vectordb.runbooks.js:51). An unauthenticated attacker can insert malicious runbook content into the agent's vector database to steer AI-driven MCP tool calls, potentially triggering unauthorized payment actions or exfiltrating payment data.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:10"
-    },
-    {
-      "cve_id": "CVE-2026-18872",
-      "title": "高危漏洞: CVE-2026-18872 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-09-24 00:16:41",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift is vulnerable to stored cross-site scripting (CWE-79) in the FTM UI NetworkAcknowledgement React component (NetworkAcknowledgement.jsx:42). A malicious actor can inject script into stored network acknowledgement data that executes in authenticated operator browsers, enabling session hijacking and unauthorized operator-level payment actions.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:05"
-    },
-    {
-      "cve_id": "CVE-2026-18490",
-      "title": "高危漏洞: CVE-2026-18490 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-24 00:16:41",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift is vulnerable to unauthenticated remote code execution via Java native deserialization on the PayDir Business Rules Manager RMI SSL endpoint (BrmRMISSLServerSocketFactory.java:95, EP8). An adjacent-network attacker can deliver a crafted serialized payload to achieve arbitrary code execution, exposing all PayDir credentials and enabling manipulation of payment business rules.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:01"
-    },
-    {
-      "cve_id": "CVE-2026-18185",
-      "title": "高危漏洞: CVE-2026-18185 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-24 00:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to access sensitive information and modify system configurations due to missing authentication for a critical function.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:57"
     }
   ]
 }
