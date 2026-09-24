@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-70125",
+      "title": "高危漏洞: CVE-2026-70125 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 07:18:12",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Microsoft Outlook Remote Code Execution Vulnerability",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70125",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:36"
+    },
+    {
+      "cve_id": "CVE-2026-96604",
+      "title": "高危漏洞: CVE-2026-96604 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 06:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in SoftNews Media Group DataLife Engine 18.0. This affects the function strip_data of the file engine/modules/search.php of the component Search Module. The manipulation of the argument story leads to sql injection. The attack can be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://pastebin.com/nkMeTizS\nhttps://vuldb.com/cve/CVE-2026-96604\nhttps://vuldb.com/submit/899134",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:32"
+    },
+    {
+      "cve_id": "CVE-2026-96603",
+      "title": "高危漏洞: CVE-2026-96603 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 06:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Abdurrab5 online-makeup-store. Affected is the function confirm_logged_in/confirm_user of the file functions.php of the component Admin Handler. Such manipulation of the argument adminid leads to missing authorization. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The vendor was contacted early about this disclosure.",
+      "refs": "https://github.com/yashkeral/cve-writeups/blob/main/online-makeup-store/03-broken-access-control.md\nhttps://vuldb.com/cve/CVE-2026-96603\nhttps://vuldb.com/submit/899001",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:29"
+    },
+    {
+      "cve_id": "CVE-2026-96602",
+      "title": "高危漏洞: CVE-2026-96602 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in Abdurrab5 online-makeup-store. This impacts an unknown function of the file customerSignin.php of the component Customer Login Handler. This manipulation of the argument username/password causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The vendor was contacted early about this disclosure.",
+      "refs": "https://github.com/yashkeral/cve-writeups/blob/main/online-makeup-store/02-customer-login-sqli.md\nhttps://vuldb.com/cve/CVE-2026-96602\nhttps://vuldb.com/submit/898998",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:25"
+    },
+    {
+      "cve_id": "CVE-2026-96601",
+      "title": "高危漏洞: CVE-2026-96601 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-24 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Abdurrab5 online-makeup-store. This affects an unknown function of the file index.php of the component Admin Login Handler. The manipulation of the argument id/password results in sql injection. The attack can be executed remotely. The exploit is now public and may be used. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The vendor was contacted early about this disclosure.",
+      "refs": "https://github.com/yashkeral/cve-writeups/blob/main/online-makeup-store/01-admin-login-sqli.md\nhttps://vuldb.com/cve/CVE-2026-96601\nhttps://vuldb.com/submit/898997",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:20"
+    },
+    {
+      "cve_id": "CVE-2026-93352",
+      "title": "高危漏洞: CVE-2026-93352 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-24 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Laravel-Mediable 7.0.0 before 7.0.2 contains an incomplete patch for CVE-2026-49972 in which the .pht extension is absent from the forbidden_extensions blocklist in config/mediable.php. The blocklist introduced to address CVE-2026-49972 includes phpt but omits pht, which Apache executes as PHP via the default FilesMatch directive on Debian and Ubuntu systems. An attacker can upload a .pht file that passes all validation in MediaUploader::verifyExtension() and File::sanitizeFileName() because pht is not present in the blocklist, causing the file to be written to disk and executed as PHP when requested, enabling remote code execution with the privileges of the web server process.",
+      "refs": "https://github.com/plank/laravel-mediable/commit/8ddb0e5b300084e91ad2cb18a6e7bc768bb7b008\nhttps://github.com/plank/laravel-mediable/pull/396\nhttps://github.com/plank/laravel-mediable/releases/tag/7.0.2",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:16"
+    },
+    {
+      "cve_id": "CVE-2026-86583",
+      "title": "高危漏洞: CVE-2026-86583 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 06:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Import and export users and customers plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.4.17 via the plugin's own export and re-import workflow. The vulnerability exists because the exporter writes CSV cells using fputcsv() with a NUL byte (\\0) as the escape character, while the importer parses the same file using SplFileObject::fgetcsv() with only a single delimiter argument, causing PHP's default backslash escape character to be applied instead; because the export column layout places display_name immediately before the role column and nickname immediately after, an attacker can store crafted values in those two profile fields — saved by WordPress core via the standard profile page — such that the escape mismatch causes the parser to merge the display_name cell into the role field and rebalance the column count via nickname, yielding administrator as the parsed role for their own row when it reaches the import_user function's add_role function. This makes it possible for authenticated attackers with Subscriber-level access or above to escalate their privileges to Administrator. Exploitation requires a site administrator to trigger the plugin's documented export re-import migration with both \"Update existing users\" and \"Update roles for existing users\" set to \"yes\".",
+      "refs": "https://plugins.trac.wordpress.org/browser/import-users-from-csv-with-meta/tags/2.4.17/classes/batch_exporter.php#L459\nhttps://plugins.trac.wordpress.org/browser/import-users-from-csv-with-meta/tags/2.4.17/classes/helper.php#L78\nhttps://plugins.trac.wordpress.org/browser/import-users-from-csv-with-meta/tags/2.4.17/classes/import.php#L1356",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:12"
+    },
+    {
+      "cve_id": "CVE-2026-81537",
+      "title": "高危漏洞: CVE-2026-81537 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary code due to OS command injection.",
+      "refs": "https://www.ibm.com/support/pages/node/7288649",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:05"
+    },
+    {
+      "cve_id": "CVE-2026-81536",
+      "title": "高危漏洞: CVE-2026-81536 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-24 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to an XML external entity (XXE) injection.",
+      "refs": "https://www.ibm.com/support/pages/node/7288649",
+      "source": "NVD",
+      "time": "2026-09-24 10:12:01"
+    },
+    {
+      "cve_id": "CVE-2026-81208",
+      "title": "高危漏洞: CVE-2026-81208 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-09-24 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow an authenticated user to access sensitive information due to improper handling of encrypted credentials. An attacker could exploit this vulnerability to obtain credentials intended for other users or environments.",
+      "refs": "https://www.ibm.com/support/pages/node/7288649",
+      "source": "NVD",
+      "time": "2026-09-24 10:11:57"
+    },
+    {
+      "cve_id": "CVE-2026-80423",
+      "title": "高危漏洞: CVE-2026-80423 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to the exposure of namespace-wide secrets via accessible file mounts.",
+      "refs": "https://www.ibm.com/support/pages/node/7288649",
+      "source": "NVD",
+      "time": "2026-09-24 10:11:53"
+    },
+    {
+      "cve_id": "CVE-2026-75887",
+      "title": "高危漏洞: CVE-2026-75887 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-24 06:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "A flaw was found in the OpenShift console. An unauthenticated attacker can exploit a path traversal vulnerability by manipulating the `lng` and `ns` query parameters in the `/locales/resource.json` endpoint. This allows the attacker to read sensitive `*.json` files from the pod filesystem, including plugin manifests and configuration files. Furthermore, this flaw can enable path traversal against registered dynamic-plugin backends.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-75887\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2517889",
+      "source": "NVD",
+      "time": "2026-09-24 10:11:49"
+    },
+    {
+      "cve_id": "CVE-2026-19125",
+      "title": "高危漏洞: CVE-2026-19125 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-24 06:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The EthPress – Web3 Login plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.3.5. This is due to the verify_login() function in app/Login.php containing a missing return statement in the signature verification failure branch — when Signature::verify2() reports a mismatch, the function only assigns a WP_Error to a local variable and continues executing, causing unconditional fall-through to the login block where Address::log_in() calls wp_set_auth_cookie() regardless of whether the submitted signature is valid. This makes it possible for unauthenticated attackers to log in as any WordPress user who has a linked wallet address — including administrators — by submitting that user's public wallet address alongside an arbitrary well-formed signature, enabling full site takeover.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ethpress/tags/2.3.5/app/Address.php#L419\nhttps://plugins.trac.wordpress.org/browser/ethpress/tags/2.3.5/app/Login.php#L46\nhttps://plugins.trac.wordpress.org/browser/ethpress/tags/2.3.5/app/Login.php#L51",
+      "source": "NVD",
+      "time": "2026-09-24 10:11:44"
+    },
+    {
       "cve_id": "CVE-2026-96556",
       "title": "高危漏洞: CVE-2026-96556 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -956,149 +1099,6 @@
       "refs": "https://www.ibm.com/support/pages/node/7288641",
       "source": "NVD",
       "time": "2026-09-24 02:48:57"
-    },
-    {
-      "cve_id": "CVE-2026-18184",
-      "title": "高危漏洞: CVE-2026-18184 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-24 00:16:41",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to obtain sensitive information due to an XML external entity (XXE) injection flaw.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:50"
-    },
-    {
-      "cve_id": "CVE-2026-18181",
-      "title": "高危漏洞: CVE-2026-18181 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-24 00:16:41",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to bypass authentication and access sensitive information due to a hard-coded cryptographic key.",
-      "refs": "https://www.ibm.com/support/pages/node/7288641",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:46"
-    },
-    {
-      "cve_id": "CVE-2026-96276",
-      "title": "高危漏洞: CVE-2026-96276 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-23 23:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "If a malicious SDK container declares an extension point with a crafted `directory` path, and a developer runs `flatpak build-init --writable-sdk --sdk-extension` with that SDK, attacker-chosen files could be written outside the working directory, since the target path is resolved via a function that allows `..` traversal.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-96276\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2539418\nhttps://github.com/flatpak/flatpak/security/advisories/GHSA-8qxj-x646-phcm",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:42"
-    },
-    {
-      "cve_id": "CVE-2026-96275",
-      "title": "高危漏洞: CVE-2026-96275 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-23 23:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "A malicious or compromised Flatpak repository can write attacker-controlled content to arbitrary locations on the host filesystem via extract_extra_data(). On system installs, the write happens as root. Two issues combine: `files/extra` is resolved via path operations that follow symlinks, and blob names from `xa.extra-data-sources` are not sanitized against `..` traversal.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-96275\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2539416\nhttps://github.com/flatpak/flatpak/security/advisories/GHSA-fqx6-vh4p-42cg",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:37"
-    },
-    {
-      "cve_id": "CVE-2026-73591",
-      "title": "高危漏洞: CVE-2026-73591 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-23 23:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Dell Secure Connect Gateway (SCG) Policy Manager, versions prior to 5.34.00.16, contains an Inclusion of Sensitive Information in Source Code vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Information exposure.",
-      "refs": "https://www.dell.com/support/kbdoc/en-ca/000503592/dsa-2026-385-security-update-for-dell-secure-connect-gateway-policy-manager-multiple-vulnerabilities?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:33"
-    },
-    {
-      "cve_id": "CVE-2026-73588",
-      "title": "高危漏洞: CVE-2026-73588 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-23 23:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Dell Secure Connect Gateway (SCG) Policy Manager, versions prior to 5.34.00.16, contains a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
-      "refs": "https://www.dell.com/support/kbdoc/en-ca/000503592/dsa-2026-385-security-update-for-dell-secure-connect-gateway-policy-manager-multiple-vulnerabilities?msockid=3021cac2195069ed3194ddad186a68f9",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:29"
-    },
-    {
-      "cve_id": "CVE-2026-55610",
-      "title": "高危漏洞: CVE-2026-55610 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-09-23 23:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
-      "description": "InvoiceShelf is an open-source web & mobile app that helps track expenses, payments and create professional invoices and estimates. Prior to version 2.4.1, in InvoiceShelf's multi-company installations, any user who is an Owner of one company can read and overwrite any user account in any other company on the same installation. `GET/PUT /api/v1/users/{user}` resolves the target `User` by global primary key, and `UserPolicy` checks only that the requester owns their own header-company — it never verifies that the target user belongs to that company. This allows cross-tenant disclosure of user data and full account takeover (email/password overwrite + company re-assignment). Version 2.4.1 fixes the issue.",
-      "refs": "https://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-vgx6-6cqr-m8qr",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:26"
-    },
-    {
-      "cve_id": "CVE-2026-96560",
-      "title": "高危漏洞: CVE-2026-96560 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-23 22:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LightLLM through 1.2.0 contains a remote code execution vulnerability in the KV-transfer worker when started with --pd_trans_mode nccl, which exposes an unauthenticated RPyC control channel that deserializes attacker-supplied data. Attackers can send malicious pickled objects to the exposed RPyC ThreadedServer to execute arbitrary code with the privileges of the LightLLM service account.",
-      "refs": "https://github.com/ModelTC/LightLLM/issues/1590\nhttps://github.com/ModelTC/lightllm\nhttps://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/model_infer/mode_backend/pd/kv_transporter.py#L20-L36",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:19"
-    },
-    {
-      "cve_id": "CVE-2026-96512",
-      "title": "高危漏洞: CVE-2026-96512 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-09-23 22:17:10",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "A flaw was found in sudo. When sudoers rules use NOTBEFORE or NOTAFTER time-based access restrictions with timestamps that omit the trailing 'Z' timezone indicator, the time evaluation relies on the TZ environment variable inherited from the calling user. Because sudo is a setuid-root program, an unprivileged local user can set TZ to an extreme timezone offset to shift the authorization window by up to approximately 25 hours, causing expired rules to be treated as valid. This allows the user to execute commands outside the intended time window. Authentication is not bypassed; only the time-based authorization check is affected.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-96512\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2539327\nhttps://github.com/sudo-project/sudo/commit/1820a349687522f51023d1ae5925125f59679a8c",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:15"
-    },
-    {
-      "cve_id": "CVE-2026-86708",
-      "title": "高危漏洞: CVE-2026-86708 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-09-23 22:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
-      "description": "ZohoCorp ManageEngine Applications Manager versions 182200 and below were vulnerable to exposure of a Google Cloud service-account private key in the Applications Manager installer, which could allow an unauthenticated attacker to impersonate the service account and access or modify associated cloud resources.",
-      "refs": "https://www.manageengine.com/products/applications_manager/security-updates/security-updates-cve-2026-86708.html",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:11"
-    },
-    {
-      "cve_id": "CVE-2026-86683",
-      "title": "高危漏洞: CVE-2026-86683 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-23 22:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "ZohoCorp ManageEngine Applications Manager versions 182000 and below allowed a low-privileged user to change the proxy settings.",
-      "refs": "https://www.manageengine.com/products/applications_manager/security-updates/security-updates-cve-2026-86683.html",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:07"
-    },
-    {
-      "cve_id": "CVE-2026-86681",
-      "title": "高危漏洞: CVE-2026-86681 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-09-23 22:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
-      "description": "ZohoCorp ManageEngine Applications Manager versions 182200 and below were vulnerable to a permissions validation issue that allowed low-privileged users to execute administrator-configured MBean actions on monitors outside their assigned scope.",
-      "refs": "https://www.manageengine.com/products/applications_manager/security-updates/security-updates-cve-2026-86681.html",
-      "source": "NVD",
-      "time": "2026-09-24 02:48:02"
-    },
-    {
-      "cve_id": "CVE-2026-86679",
-      "title": "高危漏洞: CVE-2026-86679 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-23 22:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "ZohoCorp ManageEngine Applications Manager versions 182000 and below were vulnerable to a permissions validation issue that allowed a low-privileged user to delete service monitors outside their assigned scope.",
-      "refs": "https://www.manageengine.com/products/applications_manager/security-updates/security-updates-cve-2026-86679.html",
-      "source": "NVD",
-      "time": "2026-09-24 02:47:58"
     }
   ]
 }
