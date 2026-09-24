@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-97185",
+      "title": "高危漏洞: CVE-2026-97185 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-09-24 17:17:08",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A flaw was found in GIMP. When processing a specially crafted GIMPressionist preset file, the plug-in does not properly validate vector indices before writing into fixed-size arrays. This can lead to an out-of-bounds write, corrupting memory. An attacker could exploit this by convincing a user to load a malicious preset file, potentially causing a crash or enabling arbitrary code execution.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-97185\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2539980\nhttps://gitlab.gnome.org/GNOME/gimp/-/work_items/16788",
+      "source": "NVD",
+      "time": "2026-09-24 21:54:33"
+    },
+    {
+      "cve_id": "CVE-2026-85682",
+      "title": "高危漏洞: CVE-2026-85682 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The YOP Poll plugin for WordPress is vulnerable to Origin Validation Error in all versions up to, and including, 7.0.10. This is due to the plugin transmitting a wp_rest nonce to window.opener via postMessage() with a wildcard targetOrigin. This makes it possible for unauthenticated attackers to steal a REST nonce scoped to a logged-in Administrator and use it to change the Administrator's email address and password, resulting in full account takeover. The Administrator must open an attacker-controlled page in order to exploit this vulnerability.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3690945/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b3574182-1bda-49b2-aac7-60f862891b46?source=cve",
+      "source": "NVD",
+      "time": "2026-09-24 21:54:29"
+    },
+    {
+      "cve_id": "CVE-2026-78312",
+      "title": "高危漏洞: CVE-2026-78312 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-24 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Path Traversal in DIAEnergie.\n\nThis issue affects DIAEnergie: before 1.11.00.022.",
+      "refs": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00014_DIAEnergie%20Multiple%20Vulberabilities%20(CVE-2026-78308%20~%2078313).pdf",
+      "source": "NVD",
+      "time": "2026-09-24 21:54:24"
+    },
+    {
+      "cve_id": "CVE-2026-78311",
+      "title": "高危漏洞: CVE-2026-78311 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SQL Injection vulnerability in DIAEnergie.\n\nThis issue affects DIAEnergie: before 1.11.00.022.",
+      "refs": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00014_DIAEnergie%20Multiple%20Vulberabilities%20(CVE-2026-78308%20~%2078313).pdf",
+      "source": "NVD",
+      "time": "2026-09-24 21:54:18"
+    },
+    {
+      "cve_id": "CVE-2026-78309",
+      "title": "高危漏洞: CVE-2026-78309 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-24 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SQL Injection vulnerability in DIAEnergie.\n\nThis issue affects DIAEnergie: before 1.11.00.022.",
+      "refs": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00014_DIAEnergie%20Multiple%20Vulberabilities%20(CVE-2026-78308%20~%2078313).pdf",
+      "source": "NVD",
+      "time": "2026-09-24 21:54:11"
+    },
+    {
+      "cve_id": "CVE-2026-78308",
+      "title": "高危漏洞: CVE-2026-78308 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-24 17:17:08",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Authentication vulnerability in DIAEnergie allows Authentication Bypass.\n\nThis issue affects DIAEnergie: before 1.11.00.022.",
+      "refs": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00014_DIAEnergie%20Multiple%20Vulberabilities%20(CVE-2026-78308%20~%2078313).pdf",
+      "source": "NVD",
+      "time": "2026-09-24 21:54:03"
+    },
+    {
+      "cve_id": "CVE-2026-77193",
+      "title": "高危漏洞: CVE-2026-77193 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-24 17:17:07",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The eesy_ID2WP – Publish InDesign HTML5 plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 1.0.3 via the `id2wp_path` parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3662793/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ad266e0f-fc69-4550-b89c-c32ce1221ee4?source=cve",
+      "source": "NVD",
+      "time": "2026-09-24 21:53:55"
+    },
+    {
       "cve_id": "CVE-2026-96898",
       "title": "高危漏洞: CVE-2026-96898 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/orval-labs/orval\nhttps://github.com/orval-labs/orval/blob/v8.29.0/packages/core/src/generators/factory.ts#L493\nhttps://github.com/orval-labs/orval/commit/b9b083576943c683540200eb957feced57dddc1a",
       "source": "NVD",
       "time": "2026-09-24 02:50:12"
-    },
-    {
-      "cve_id": "CVE-2026-96755",
-      "title": "高危漏洞: CVE-2026-96755 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-24 01:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "orval versions 8.14.0 through 8.28.1 contain a code injection vulnerability in the @orval/effect generator that converts OpenAPI schema defaults into template literals. Attackers can inject arbitrary JavaScript expressions via schema defaults containing ${...} syntax, which are executed at module scope when the generated code is built or imported.",
-      "refs": "https://github.com/orval-labs/orval\nhttps://github.com/orval-labs/orval/blob/v8.28.1/packages/effect/src/index.ts#L298-L302\nhttps://github.com/orval-labs/orval/commit/d346d94a660e50a2f8d0f7c17fee2c4c69d8dc23",
-      "source": "NVD",
-      "time": "2026-09-24 02:50:08"
-    },
-    {
-      "cve_id": "CVE-2026-96754",
-      "title": "高危漏洞: CVE-2026-96754 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-24 01:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "orval versions before 8.29.0 contain a code injection vulnerability in the @orval/hono generator that fails to escape OpenAPI path values in single-quoted route literals. Attackers can craft an OpenAPI document with an apostrophe in a static path segment to inject arbitrary JavaScript code that executes when the generated TypeScript module is imported.",
-      "refs": "https://github.com/orval-labs/orval\nhttps://github.com/orval-labs/orval/blob/v8.28.1/packages/hono/src/index.ts#L169-L175\nhttps://github.com/orval-labs/orval/commit/155a5b7a38ff6886020cbc4c292db57c2793e6b6",
-      "source": "NVD",
-      "time": "2026-09-24 02:50:04"
-    },
-    {
-      "cve_id": "CVE-2026-96656",
-      "title": "高危漏洞: CVE-2026-96656 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-24 01:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Plex Media Server before 1.43.3.10861 allows an admin user to write arbitrary files that may be executed on load. The preference TranscoderH264Options is appended verbatim to x264's option string on every transcode. At startup, all .so files are run without signature, execute bit, or symbol checks.",
-      "refs": "https://forums.plex.tv/t/plex-media-server/30447/711\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-96656",
-      "source": "NVD",
-      "time": "2026-09-24 02:50:00"
-    },
-    {
-      "cve_id": "CVE-2026-96514",
-      "title": "高危漏洞: CVE-2026-96514 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-24 01:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in Neethuharii CafeManagement. Impacted is an unknown function of the file CafePortalLogin.php of the component Login Handler. This manipulation of the argument uname causes sql injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://medium.com/@mr.yk404/unauthenticated-sql-injection-leading-to-authentication-bypass-in-cafemanagement-php-e64abc2f52da\nhttps://vuldb.com/cve/CVE-2026-96514\nhttps://vuldb.com/submit/897624",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:53"
-    },
-    {
-      "cve_id": "CVE-2026-96513",
-      "title": "高危漏洞: CVE-2026-96513 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-24 01:17:22",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security flaw has been discovered in Neethuharii CafeManagement. This issue affects some unknown processing of the file AddProductCode.php. The manipulation of the argument image results in unrestricted upload. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://medium.com/@mr.yk404/unauthenticated-arbitrary-file-upload-leading-to-remote-code-execution-in-cafemanagement-df588b716e6f?sharedUserId=mr.yk404\nhttps://vuldb.com/cve/CVE-2026-96513\nhttps://vuldb.com/submit/897619",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:49"
-    },
-    {
-      "cve_id": "CVE-2026-93349",
-      "title": "高危漏洞: CVE-2026-93349 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-24 01:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Frictionless through 5.20.0rc1 contains an OS command injection vulnerability in the explore console command that allows an attacker who supplies a crafted Data Package descriptor to execute arbitrary operating system commands as the user who explores it. Attackers can place shell metacharacters in resource path values within a datapackage.json descriptor, which are passed unsanitized to os.system through a shell, causing arbitrary command execution in the victim's security context when they run the explore command against the untrusted package.",
-      "refs": "https://github.com/SaiTeja-Erukude/CVE-2026-93349-frictionless-command-injection\nhttps://github.com/frictionlessdata/frictionless-py/pull/1820\nhttps://www.vulncheck.com/advisories/frictionless-os-command-injection-via-explore-console-command",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:45"
-    },
-    {
-      "cve_id": "CVE-2026-88832",
-      "title": "高危漏洞: CVE-2026-88832 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-24 01:17:18",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "BusyBox romfs volume ID parsing uses unbounded strlen on attacker-controlled metadata, causing a heap buffer overflow when processing crafted filesystem images.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-88832\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2531345",
-      "source": "NVD",
-      "time": "2026-09-24 02:49:41"
     }
   ]
 }
