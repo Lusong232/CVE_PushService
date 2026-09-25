@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-97735",
+      "title": "高危漏洞: CVE-2026-97735 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-09-25 12:17:50",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "ITFlow before 26.08 allows SVG attachments in the ticket email parser (cron/ticket_email_parser.php) for email messages that may arrive over SMTP from arbitrary senders.",
+      "refs": "https://github.com/itflow-org/itflow/commit/16000efcf7f7c833aae9f8da22d2a82df21a49c0\nhttps://github.com/itflow-org/itflow/security/advisories/GHSA-89fw-w69c-vghj",
+      "source": "NVD",
+      "time": "2026-09-25 16:19:32"
+    },
+    {
+      "cve_id": "CVE-2026-97731",
+      "title": "高危漏洞: CVE-2026-97731 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-25 11:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "description": "MinIO through 7aac2a2 does not verify that every x-amz-* header present on a request also appears in the client-supplied X-Amz-SignedHeaders list. extractSignedHeaders() in cmd/signature-v4-utils.go iterates only the claimed list and never enumerates the headers that actually arrived, and thus a header that arrives unsigned is neither hashed into the canonical request nor rejected. Because cmd/api-router.go dispatches CopyObject on the presence of x-amz-copy-source alone, the holder of a presigned PUT URL scoped to a single object can add that header to the unmodified URL and cause a server-side copy, executed as the signer, of any object the signing key can read. A grant to write one object becomes a read of every bucket that key can reach. Amazon S3 rejects the equivalent request with HTTP 403 AccessDenied. The minio/minio GitHub repository was archived in April 2026; pgsty/silo before 1233254 is also affected.",
+      "refs": "https://github.com/pgsty/silo/commit/1233254309b15571f101b2b26d531951ceaeef1e\nhttps://silo.pgsty.com/about/security-advisories/#sn-2026-011",
+      "source": "NVD",
+      "time": "2026-09-25 16:19:27"
+    },
+    {
+      "cve_id": "CVE-2026-97730",
+      "title": "高危漏洞: CVE-2026-97730 (CVSS 8.5)",
+      "cvss_score": 8.5,
+      "published_date": "2026-09-25 11:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "In Netgate pfSense Plus before 26.07 and pfSense CE before 2.9.0, a Local File Inclusion (LFI) vulnerability in the Dashboard (index.php) widget sequence data handling allows an authenticated attacker to execute arbitrary PHP code. To exploit this, an attacker with privileges to modify Dashboard settings and write arbitrary files to the pfSense firewall system (e.g., /tmp/test.widget.php) can submit a crafted widget sequence value containing a path traversal payload (e.g., ../../../../../../../../../../../tmp/test). The Dashboard will subsequently read and execute the arbitrary PHP file as if it were a standard widget.",
+      "refs": "https://docs.netgate.com/downloads/pfSense-SA-26_18.webgui.asc\nhttps://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html\nhttps://redmine.pfsense.org/attachments/7146",
+      "source": "NVD",
+      "time": "2026-09-25 16:19:21"
+    },
+    {
+      "cve_id": "CVE-2026-97646",
+      "title": "高危漏洞: CVE-2026-97646 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-25 09:16:49",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in ningzichun student-management-system up to 98760f5711cf6dc8b4adca53a9e207ca49b02ebf. This affects an unknown function of the file admin/fun/getStudent.php. This manipulation of the argument sid causes authorization bypass. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/ningzichun/student-management-system/\nhttps://github.com/ningzichun/student-management-system/issues/9\nhttps://vuldb.com/cve/CVE-2026-97646",
+      "source": "NVD",
+      "time": "2026-09-25 16:19:15"
+    },
+    {
       "cve_id": "CVE-2026-95699",
       "title": "高危漏洞: CVE-2026-95699 (CVSS 9.6)",
       "cvss_score": 9.6,
@@ -1055,50 +1099,6 @@
       "refs": "https://lists.apache.org/thread/3ncvptkjw9h6s8mjxlwwo30bxxgol6ry",
       "source": "NVD",
       "time": "2026-09-25 02:44:55"
-    },
-    {
-      "cve_id": "CVE-2026-12227",
-      "title": "高危漏洞: CVE-2026-12227 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-09-24 18:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Visual Composer Website Builder plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 45.16.0 via the `vcv-template` parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included.",
-      "refs": "https://plugins.trac.wordpress.org/changeset/3619572/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/486c1c7c-5a66-42d3-85b0-13ce52a16ed1?source=cve",
-      "source": "NVD",
-      "time": "2026-09-25 02:44:51"
-    },
-    {
-      "cve_id": "CVE-2026-88843",
-      "title": "高危漏洞: CVE-2026-88843 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-09-24 14:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The MasterStudy LMS WordPress Plugin  WordPress plugin before 3.7.50 does not validate one of its display-style settings before using it to build a template path, allowing users with the Contributor role and above to include and execute arbitrary local PHP files on the server. An equivalent path was corrected in an earlier release and this one was not, so the issue persists in versions the earlier advisory reports as fixed.",
-      "refs": "https://wpscan.com/vulnerability/fffc0d8c-256e-417d-b76c-251948b9f1ed/",
-      "source": "NVD",
-      "time": "2026-09-25 02:44:46"
-    },
-    {
-      "cve_id": "CVE-2026-80513",
-      "title": "高危漏洞: CVE-2026-80513 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-24 14:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The wpForo Forum WordPress plugin before 3.1.6 does not restrict which classes may be instantiated when it deserializes a user-supplied profile field value, allowing authenticated users with Subscriber-level access and above to inject a PHP Object.\nNo POP chain is present in the wpForo Forum WordPress plugin before 3.1.6 itself; if one is present via another installed wpForo Forum WordPress plugin before 3.1.6 or , this could lead to remote code execution, arbitrary file operations, or SQL injection. This is an incomplete fix of CVE-2026-49769.",
-      "refs": "https://wpscan.com/vulnerability/09c9b9e7-c178-4f05-80d8-d4d77b7c5050/",
-      "source": "NVD",
-      "time": "2026-09-25 02:44:41"
-    },
-    {
-      "cve_id": "CVE-2026-82356",
-      "title": "高危漏洞: CVE-2026-82356 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-24 03:19:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Imprivata EAM <=26.2.6 lacks the ability to rotate its RSA key pair after deployment when generating an X.509 certificate. Using an RSA key pair indefinitely for certificate generation is against best practices.",
-      "refs": "https://kb.cert.org/vuls/id/273940\nhttps://www.kb.cert.org/vuls/id/273940",
-      "source": "NVD",
-      "time": "2026-09-25 02:44:36"
     }
   ]
 }
