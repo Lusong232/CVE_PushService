@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-72668",
+      "title": "高危漏洞: CVE-2026-72668 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-27 05:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+      "description": "Unintended Proxy or Intermediary ('Confused Deputy') (CWE-441) in Kibana Agent Builder can lead to privilege escalation. A non-administrative user able to edit a shared agent could cause privileged operations to be carried out under the identity of a higher-privileged user who subsequently interacts with that agent. Where the same user can also author workflows, this can extend to full administrative control of Kibana and of the Elasticsearch cluster.",
+      "refs": "https://discuss.elastic.co/t/kibana-9-4-7-9-5-0-security-update-esa-2026-85/390678",
+      "source": "NVD",
+      "time": "2026-09-27 07:14:39"
+    },
+    {
+      "cve_id": "CVE-2026-82901",
+      "title": "高危漏洞: CVE-2026-82901 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-27 03:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Ultra Addons for Contact Form 7 plugin for WordPress is vulnerable to Arbitrary File Upload due to insufficient file type validation in the 'uacf7_wpcf7_mail_components' function in all versions up to, and including, 3.5.50. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: This is only exploitable when the plugin's PDF Generator module is enabled, which is disabled by default.",
+      "refs": "https://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/pdf-generator/pdf-generator.php#L608\nhttps://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/pdf-generator/pdf-generator.php#L807\nhttps://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/signature/ultimate-signature.php#L133",
+      "source": "NVD",
+      "time": "2026-09-27 07:14:35"
+    },
+    {
+      "cve_id": "CVE-2026-85984",
+      "title": "高危漏洞: CVE-2026-85984 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-27 02:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass via the mo_wp_login_intent parameter in all versions up to, and including, 5.5.5. This is due to a missing password-intent guard in the skip_pass_fallback-enabled configuration branch of the mo_by_pass_login() function, which treats administrator role membership alone as sufficient authentication whenever the unauthenticated, unverified POST parameter mo_wp_login_intent is submitted with the value otp, causing mo_get_user() to skip wp_authenticate_username_password() and resolve a WP_User purely from a username lookup. This makes it possible for unauthenticated attackers to log in as any existing administrator account by supplying only a known username and an empty password alongside mo_wp_login_intent=otp, with no password or OTP verification required. Exploitation is conditional on a site administrator having simultaneously enabled the following plugin options: WP Login OTP, Login with Only OTP, Allow Users to Login with Username and Password, and Admin OTP Bypass.",
+      "refs": "https://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.5/includes/js/loginform.js#L176\nhttps://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.5/views/forms/mowploginform.php#L134\nhttps://plugins.trac.wordpress.org/changeset/3687601/miniorange-otp-verification",
+      "source": "NVD",
+      "time": "2026-09-27 07:14:30"
+    },
+    {
+      "cve_id": "CVE-2026-77203",
+      "title": "高危漏洞: CVE-2026-77203 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-27 02:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Groups – Memberships and Access Control plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.6.0. This is due to the groups_join() function deriving group-join eligibility from the ambient post's author capabilities via the global $post->post_author rather than from the currently authenticated user's own capabilities, while simultaneously minting and returning a valid groups-join-data hash and WordPress nonce for the caller in the same response — eliminating all authorization barriers to self-enrollment. This makes it possible for authenticated attackers, with Subscriber-level access and above, to enroll themselves into any group including privileged groups carrying the groups_admin_groups capability, and to subsequently create and join a group containing every registered WordPress capability, effectively escalating their privileges to Administrator. Exploitation requires the attacker to supply an Administrator-authored post ID via the post_ID parameter of the authenticated wp_ajax_parse_media_shortcode handler in order to establish the privileged ambient post context used by the flawed authorization check.",
+      "refs": "https://plugins.trac.wordpress.org/browser/groups/tags/4.5.0/lib/views/class-groups-shortcodes.php#L463\nhttps://plugins.trac.wordpress.org/browser/groups/tags/4.5.0/lib/views/class-groups-shortcodes.php#L521\nhttps://plugins.trac.wordpress.org/browser/groups/tags/4.5.0/lib/views/class-groups-shortcodes.php#L586",
+      "source": "NVD",
+      "time": "2026-09-27 07:14:23"
+    },
+    {
       "cve_id": "CVE-2026-100720",
       "title": "高危漏洞: CVE-2026-100720 (CVSS 8.7)",
       "cvss_score": 8.7,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jjpc-p3xf-8g7p\nhttps://www.vulncheck.com/advisories/openclaw-ios-control-ui-tls-pin-enforcement-bypass",
       "source": "NVD",
       "time": "2026-09-26 16:06:43"
-    },
-    {
-      "cve_id": "CVE-2026-100544",
-      "title": "高危漏洞: CVE-2026-100544 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-26 11:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "openclaw's @openclaw/voice-call package before 2026.8.1 launches the configured agent for classic inbound voice calls without propagating the caller's identity or non-owner status. As a result, owner-only tool filtering can fail open and expose the agent's normal tool authority to a remote caller. A caller who is admitted by the configured inbound-call policy (open, pairing, or allowlist) on a deployment with inbound calling enabled can therefore drive tools intended for the trusted owner, potentially reading data, modifying files, executing commands, or controlling connected services depending on the agent's configuration. The issue is fixed in 2026.8.1.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rrxp-5mx8-mvhh\nhttps://www.vulncheck.com/advisories/openclaw-voice-call-before-2026.8.1-authorization-bypass",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:36"
-    },
-    {
-      "cve_id": "CVE-2026-100543",
-      "title": "高危漏洞: CVE-2026-100543 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 11:17:00",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw (npm package openclaw) before 2026.8.1 could include deterministic hashes computed over the original, unredacted configuration in redacted configuration responses. When the Gateway password had low entropy and the remaining configuration values were reconstructable, these hashes acted as offline password verifiers: a caller able to obtain the redacted configuration (for example via config.get) could test password candidates offline without going through the rate-limited Gateway authentication path. Recovering the password could grant the documented shared-secret operator authority. Secret references were not affected in the same way. The issue is fixed in 2026.8.1.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qgj5-6x35-9g6f\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-information-disclosure-via-configuration-hash",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:32"
-    },
-    {
-      "cve_id": "CVE-2026-100541",
-      "title": "高危漏洞: CVE-2026-100541 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 11:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw's Matrix integration (npm package @openclaw/matrix) versions >= 2026.2.2 and < 2026.8.1 lowercase complete Matrix user IDs — including historical localparts and the case-sensitive server-name portion — when deriving the OpenClaw authorization identity. As a result, distinct authenticated Matrix accounts can normalize to the same authorization identity. A Matrix participant controlling a colliding account identifier (a protocol-valid identifier that differs from the configured one only by characters OpenClaw case/Unicode folds; display-name matching is not required) can inherit allowlist, owner-command, exec-approval, or plugin-approval authority configured for another account. The issue is fixed in 2026.8.1.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hgv5-f2r3-6v9r\nhttps://www.vulncheck.com/advisories/openclaw-matrix-before-2026.8.1-authorization-bypass-via-case-folding",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:27"
-    },
-    {
-      "cve_id": "CVE-2026-100535",
-      "title": "高危漏洞: CVE-2026-100535 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 11:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw (npm package 'openclaw') versions >= 2026.4.5 and < 2026.8.1 can lose the originating requester's restrictions and untrusted provenance when session-derived text is persisted to session memory. In deployments where session-memory capture and dreaming are enabled, a restricted external sender whose messages are admitted with limited tools can persist instructions that are later supplied to an unattended background (dreaming) agent holding broader file and command capabilities, allowing actions beyond the authority of the original turn and affecting files, commands, or services available to that agent. Exploitation requires the content to be captured, selected for later processing, and followed by the model. The issue is fixed in 2026.8.1.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-62qm-6fjj-6g23\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-privilege-escalation-via-session-memory",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:23"
     }
   ]
 }
