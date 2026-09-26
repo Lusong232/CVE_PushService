@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-96795",
+      "title": "高危漏洞: CVE-2026-96795 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-26 07:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Horilla is an HR and CRM software. Prior to 2.0.0, HorillaListView.export_data in horilla_views/generic/cbv/views.py accepts an authenticated user's columns POST parameter, takes field_tuple[1], interpolates it into dynamic_fn_str as Python source, and passes the generated function definition to exec(). A crafted string that remains valid under ast.literal_eval can inject Python syntax into a default argument evaluated during function definition, allowing arbitrary operating-system commands to execute with the application process privileges, including root privileges in the shipped Docker image. This issue is fixed in version 2.0.0.",
+      "refs": "https://github.com/horilla/horilla-hr/releases/tag/2.0.0\nhttps://github.com/horilla/horilla-hr/security/advisories/GHSA-5g4v-4rv4-r26f",
+      "source": "NVD",
+      "time": "2026-09-26 10:31:35"
+    },
+    {
+      "cve_id": "CVE-2026-100419",
+      "title": "高危漏洞: CVE-2026-100419 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-09-26 06:17:10",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "gitoxide gix-fs before 0.23.0 contains a path validation bypass vulnerability in the worktree checkout mechanism that allows attackers to escape the worktree directory via symlink manipulation. During forced checkout with overwrite_existing enabled, attackers can craft malicious repository trees where symlink entries replace validated directories, causing subsequent files to be written outside the worktree through the symlink for code execution or file manipulation.",
+      "refs": "https://github.com/GitoxideLabs/gitoxide\nhttps://github.com/GitoxideLabs/gitoxide/blob/gix-fs-v0.22.1/gix-fs/src/stack.rs#L185-L196\nhttps://github.com/GitoxideLabs/gitoxide/commit/b62498378b8bc2c95863a044b700f2063b0b5875",
+      "source": "NVD",
+      "time": "2026-09-26 10:31:30"
+    },
+    {
       "cve_id": "CVE-2026-91765",
       "title": "高危漏洞: CVE-2026-91765 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1077,28 +1099,6 @@
       "refs": "https://git.kernel.org/stable/c/035e9c3722067648a99010711d0ce81f42572ef4\nhttps://git.kernel.org/stable/c/a0d18d21d48a551f82ee344e50efb8a682161489\nhttps://git.kernel.org/stable/c/ba4ba11ed6eb8972c69070417fc27b48deb002e8",
       "source": "NVD",
       "time": "2026-09-26 03:05:14"
-    },
-    {
-      "cve_id": "CVE-2026-97609",
-      "title": "高危漏洞: CVE-2026-97609 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-09-25 19:17:14",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: cttimeout: prevent UAF during module unload\n\nnf_ct_set_timeout() protects the timeout hook dereference and policy lookup\nwith rcu_read_lock(). cttimeout_exit(), however, unregisters the per-net\noperations before it clears the hook.\n\nThis allows the following interleaving:\n\n  CPU 0                              CPU 1\n  cttimeout_exit()                   nf_ct_set_timeout()\n    unregister_pernet_subsys()         rcu_read_lock()\n      kfree(pernet)                     h = nf_ct_timeout_hook\n                                        h->timeout_find_get()\n                                          nfct_timeout_pernet()\n\nThe hook still points to ctnl_timeout_find_get() when CPU 1 looks up the\nalready freed per-net timeout list. KASAN reported:\n\n  BUG: KASAN: slab-use-after-free in ctnl_timeout_find_get\n  Read of size 8 by task poc/90\n  Call Trace:\n   ctnl_timeout_find_get+0x271/0x2a0 [nfnetlink_cttimeout]\n   nf_ct_set_timeout+0x7b/0x3c0\n   xt_ct_tg_check+0x724/0xb20\n   xt_check_target+0x234/0xa90\n   do_ipt_set_ctl+0x570/0x1270\n  Allocated by task 89:\n   __kmalloc_noprof+0x16e/0x460\n   ops_init+0x6d/0x420\n   register_pernet_operations+0x2f6/0x670\n  Freed by task 91:\n   kfree+0x131/0x390\n   ops_undo_list+0x3d4/0x730\n   unregister_pernet_operations+0x232/0x490\n   unregister_pernet_subsys+0x1c/0x30\n   cttimeout_exit+0x52/0x970 [nfnetlink_cttimeout]\n\nClear the hook and wait for existing readers before unregistering the\nper-net operations. This blocks new policy lookups and ensures readers that\nobserved the hook finish before the per-net storage is freed.",
-      "refs": "https://git.kernel.org/stable/c/1f69c570a73f2dedf75ea5166d47622d5fa958c1\nhttps://git.kernel.org/stable/c/a7fdd86c386b7f7cc72a126389c2cdb55d035221\nhttps://git.kernel.org/stable/c/fec9b1de0d02de8dafa3cc344bcb91cf28660643",
-      "source": "NVD",
-      "time": "2026-09-26 03:05:07"
-    },
-    {
-      "cve_id": "CVE-2026-97608",
-      "title": "高危漏洞: CVE-2026-97608 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-09-25 19:17:14",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_log: unregister loggers before per-net teardown\n\nnf_log_syslog and nfnetlink_log unregister their per-network namespace\noperations before unregistering their global logger backends. This\nleaves a window where a sysctl or netlink writer can rebind the still-\nregistered logger after the per-net pre-exit callback cleared the old\nselection.\n\nThe race looks like this:\n\n  CPU 0                                 CPU 1\n  ----                                  ----\n  unregister_pernet_subsys()\n    nf_log_unset(net, logger)\n      net->nf.nf_loggers[pf] = NULL\n\n                                        lock nf_log_mutex\n                                        find logger in loggers[][]\n                                        net->nf.nf_loggers[pf] = logger\n                                        unlock nf_log_mutex\n\n  nf_log_unregister(logger)\n    lock nf_log_mutex\n    loggers[pf][type] = NULL\n    unlock nf_log_mutex\n    synchronize_rcu()\n  module exit returns\n  module core frees backend memory\n\nLater, a sysctl read or packet logging operation can dereference the\nstale per-net logger pointer.\n\nFix this by unregistering the global logger backends before tearing down\nper-net state. Once the global registrations are gone, later writers can\nno longer rebind the logger. unregister_pernet_subsys() already waits\nfor an RCU grace period after the pre-exit callback clears the per-net\nselection, while nf_log_unregister() continues to cover readers of the\nglobal logger table.\n\nApply this ordering fix to both nf_log backends that combine per-net\nteardown with global logger registration.",
-      "refs": "https://git.kernel.org/stable/c/2c018cc4842c33f0c732962e2ab58635e8ae5823\nhttps://git.kernel.org/stable/c/64803ba0a05791cf9ca874466480e4c4cadaf7ab\nhttps://git.kernel.org/stable/c/dce24f3a146948595bb1b86347f31e20b4975daa",
-      "source": "NVD",
-      "time": "2026-09-26 03:04:59"
     }
   ]
 }
