@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-18143",
+      "title": "高危漏洞: CVE-2026-18143 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-26 15:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Request a Quote for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.9.2 via the `afrfq_submit_quote_via_popup()` function. This is due to missing file extension and MIME type validation in the popup upload handler, which uses the raw attacker-supplied filename directly as the destination for `move_uploaded_file()`. This makes it possible for unauthenticated attackers to upload executable files, such as PHP files, to a web-accessible temporary RFQ upload directory when a public quote rule with the multi-page popup flow is enabled.",
+      "refs": "https://woocommerce.com/products/request-a-quote-plugin-for-woocommerce/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/3417ec27-6abf-45c7-945f-6ef456ba1187?source=cve",
+      "source": "NVD",
+      "time": "2026-09-26 21:28:16"
+    },
+    {
       "cve_id": "CVE-2026-100599",
       "title": "高危漏洞: CVE-2026-100599 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -1088,17 +1099,6 @@
       "refs": "https://git.kernel.org/stable/c/8c1882dfee8f404d118020664b73eb4592172226\nhttps://git.kernel.org/stable/c/9b110a9dcecc59516c77cb3c0caf1f492f75df2d\nhttps://git.kernel.org/stable/c/cbc7ec97601d09b74e05e44470fa6b0bcdabf3f5",
       "source": "NVD",
       "time": "2026-09-26 03:08:36"
-    },
-    {
-      "cve_id": "CVE-2026-98115",
-      "title": "高危漏洞: CVE-2026-98115 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-25 19:17:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: safely drain sessions during logoff\n\nSMB3 multichannel allows requests for one session to run on multiple\nconnections. Wait for all channels bound to a session before freeing\nshared session objects.\n\nA deferred byte-range lock remains counted as a running request and only\nwakes when its file closes. Wake blocked locks during the drain without\nunpublishing or modifying their file objects. Synchronous CANCEL requests\nmust invoke their cancellation callback to wake pending operations, while\nCHANGE_NOTIFY completion remains specific to the asynchronous path.\n\nSerialize session teardown with channel registration and previous-session\ncleanup, and use atomic work-state transitions so LOGOFF, CANCEL, and\nconnection teardown invoke cancellation callbacks only once.",
-      "refs": "https://git.kernel.org/stable/c/a7e6df0bb92642bee4431b2b85c69ada1e463b21\nhttps://git.kernel.org/stable/c/d12168084c8c1b6d883c8eca5853929ac5136a9e",
-      "source": "NVD",
-      "time": "2026-09-26 03:08:28"
     }
   ]
 }
