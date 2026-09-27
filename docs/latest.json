@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-96280",
+      "title": "高危漏洞: CVE-2026-96280 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-28 05:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The OCI delta stream parser read sizes as guint64 but passed them to GLib I/O and allocation functions expecting gsize (32 bits on 32-bit systems), causing undersized allocations while subsequent operations use the original 64-bit size, leading to heap buffer overflows. An attacker controlling an OCI registry can craft a delta stream that triggers this during flatpak install/update, potentially achieving code execution on 32-bit systems.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-96280\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2539419\nhttps://github.com/flatpak/flatpak/security/advisories/GHSA-jr92-2v97-wgvc",
+      "source": "NVD",
+      "time": "2026-09-28 07:30:07"
+    },
+    {
+      "cve_id": "CVE-2026-101090",
+      "title": "高危漏洞: CVE-2026-101090 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-28 05:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Nezha 2.2.3 contains a Host header injection regression in the OAuth2 redirect endpoint. When the new optional dashboard_host setting is empty, /api/v1/oauth2/{provider} (cmd/dashboard/controller/oauth2.go) reflects the attacker-supplied HTTP Host header into the redirect_uri sent to the identity provider instead of falling back to the configured install_host. An attacker who induces a victim to begin OAuth2 login via a request that reaches Nezha with a forged Host header can cause an attacker-controlled callback URL to be used as the redirect_uri; if the OAuth2 provider accepts it, the victim's authorization code is delivered to the attacker origin, allowing the attacker to complete the OAuth2 login/binding flow and take over the account. This regresses the fix for GHSA-9rc6-8cjv-rcvx and is configuration-dependent (dashboard_host empty). At the time of the advisory no patched version was available.",
+      "refs": "https://github.com/nezhahq/nezha/security/advisories/GHSA-rf68-8gjr-36q7\nhttps://www.vulncheck.com/advisories/nezha-through-2.2.3-host-header-injection-via-oauth2-redirect-uri",
+      "source": "NVD",
+      "time": "2026-09-28 07:30:00"
+    },
+    {
+      "cve_id": "CVE-2026-101084",
+      "title": "高危漏洞: CVE-2026-101084 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-09-28 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "description": "obot versions before v0.21.1 fail to enforce Access Control Rules on the /mcp-connect endpoint, allowing any authenticated user to connect to restricted MCP servers if they possess the server ID. Attackers can bypass authorization checks to access and manipulate sensitive backend systems through MCP tool calls using stored OAuth credentials.",
+      "refs": "https://github.com/obot-platform/obot/security/advisories/GHSA-vw82-7fv8-r6gp\nhttps://www.vulncheck.com/advisories/obot-before-0.21.1-authorization-bypass-via-mcp-connect",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:56"
+    },
+    {
+      "cve_id": "CVE-2026-101065",
+      "title": "高危漏洞: CVE-2026-101065 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-28 05:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Obot is an open-source AI agent/MCP platform. In all versions up to and including commit d7e6970, the Docker quickstart command documented in the README starts the container listening on 0.0.0.0:8080 with authentication disabled by default. When authentication is disabled, every request is mapped to a synthetic \"nobody\" user that holds the Owner and Admin roles, so any unauthenticated party who can reach the exposed port obtains full administrative access to the Obot API and UI, including the ability to register and launch attacker-controlled MCP servers. Because the quickstart also mounts /var/run/docker.sock into the container, the MCP runtime backend reachable this way has access to the host's Docker control surface. The fix is documentation-only: the quickstart now enables authentication, and operators who followed the previous instructions should set OBOT_SERVER_ENABLE_AUTHENTICATION=true before exposing the host to any untrusted network.",
+      "refs": "https://github.com/obot-platform/obot/security/advisories/GHSA-jj4w-pfgv-4mrm\nhttps://www.vulncheck.com/advisories/obot-quickstart-docker-deployment-unauthenticated-admin-access",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:51"
+    },
+    {
+      "cve_id": "CVE-2026-101064",
+      "title": "高危漏洞: CVE-2026-101064 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-09-28 05:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Obot before v0.23.0 contains a server-side request forgery vulnerability in remote MCP server registration that allows privileged users to specify arbitrary URLs without destination validation. Attackers with Power User or higher roles can coerce Obot to make requests to internal services and cloud metadata endpoints, reading responses in error messages to disclose sensitive credentials.",
+      "refs": "https://github.com/obot-platform/obot/security/advisories/GHSA-jgh3-fggc-mcpm\nhttps://www.vulncheck.com/advisories/obot-before-0.23.0-server-side-request-forgery-via-mcp",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:47"
+    },
+    {
+      "cve_id": "CVE-2026-101062",
+      "title": "高危漏洞: CVE-2026-101062 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-28 05:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Obot before v0.23.0 (affected versions <= v0.22.1) running with OBOT_SERVER_ENABLE_AUTHENTICATION=true exposes OAuth dynamic client registration without authentication and without any restriction on the redirect URIs a client may register. Because the authorization flow auto-completes for an already logged-in user with no consent screen, an attacker who registers a client pointing at their own domain and induces a logged-in victim to visit a single crafted authorization URL receives an authorization code at the attacker-controlled redirect URI and can exchange it for an access token and refresh token. The token minted by the MCP OAuth flow carries the victim's full group set in the JWT, and Obot validated only the issuer and not the audience, so the token is accepted as a bearer token against any Obot API endpoint the victim can access rather than being scoped to the requested MCP server, allowing the attacker to read or modify the victim's resources until the token is revoked. v0.23.0 adds a consent screen, restricts MCP OAuth tokens to the MCP involved in the request, and enforces audience validation.",
+      "refs": "https://github.com/obot-platform/obot/security/advisories/GHSA-xwmw-prc4-v3cr\nhttps://www.vulncheck.com/advisories/obot-before-0.23.0-authentication-bypass-via-oauth-dynamic-client-registration",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:43"
+    },
+    {
+      "cve_id": "CVE-2026-100875",
+      "title": "高危漏洞: CVE-2026-100875 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 03:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. This impacts an unknown function of the file updatedetailsfromfaculty.php. Such manipulation of the argument myfid leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/rmsbpro/Advisory/blob/main/updatedetailsfromfaculty-sqli.md\nhttps://vuldb.com/cve/CVE-2026-100875\nhttps://vuldb.com/submit/915416",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:35"
+    },
+    {
+      "cve_id": "CVE-2026-100874",
+      "title": "高危漏洞: CVE-2026-100874 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 03:16:53",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. This affects an unknown function of the file addnewstudent.php. This manipulation causes sql injection. The attack may be initiated remotely. The exploit has been published and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/vinniboy021-blip/Advisory/blob/main/addnewstudent-sqli.md\nhttps://vuldb.com/cve/CVE-2026-100874\nhttps://vuldb.com/submit/915272",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:31"
+    },
+    {
+      "cve_id": "CVE-2026-101060",
+      "title": "高危漏洞: CVE-2026-101060 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-09-28 02:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "description": "python-utcp versions before 1.1.4 contain a server-side request forgery vulnerability in HttpCommunicationProtocol.call_tool that validates the initial tool URL but follows HTTP redirects without re-validating the target. Attackers controlling a tool endpoint can return a 302 redirect to internal services, allowing the UTCP client to reach cloud metadata endpoints or internal HTTP services and return their response bodies to the caller.",
+      "refs": "https://github.com/universal-tool-calling-protocol/python-utcp/security/advisories/GHSA-9qhg-99ww-9mqc\nhttps://www.vulncheck.com/advisories/python-utcp-before-1.1.4-ssrf-via-unvalidated-http-redirects",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:27"
+    },
+    {
+      "cve_id": "CVE-2026-101059",
+      "title": "高危漏洞: CVE-2026-101059 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-28 02:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+      "description": "utcp-http before 1.1.4 fails to validate the OAuth2 tokenUrl field from remote OpenAPI specifications, allowing attackers to redirect credential submission to arbitrary endpoints. When a victim registers an attacker-controlled OpenAPI spec and invokes a generated OAuth2-protected tool, the library POSTs the victim's client_id and client_secret to the attacker-supplied token endpoint without URL validation.",
+      "refs": "https://github.com/universal-tool-calling-protocol/python-utcp/security/advisories/GHSA-8cp3-qxj6-px34\nhttps://www.vulncheck.com/advisories/utcp-http-before-1.1.4-oauth2-tokenurl-trust-boundary-bypass",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:22"
+    },
+    {
+      "cve_id": "CVE-2026-101045",
+      "title": "高危漏洞: CVE-2026-101045 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-09-28 02:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Fleet-maintained app install and uninstall scripts for macOS are generated from Homebrew cask metadata. In manifests generated before 2026-08-19, the script generator escaped this metadata at some interpolation sites but not all of them, so cask metadata containing shell metacharacters (for example $(...) command substitution) could be carried into scripts that execute as root on managed macOS hosts. An attacker who could land crafted metadata in an upstream Homebrew cask — without needing any Fleet credentials — could achieve arbitrary command execution as root on managed macOS hosts that install or uninstall the affected Fleet-maintained app; exploitation required the crafted metadata to pass both upstream Homebrew cask review and Fleet's review of the automated ingestion pull request. The fix (fleetdm/fleet#51324) landed in Fleet's ingestion pipeline on 2026-08-19 so that all manifests generated on or after that date escape cask metadata at every interpolation site; because manifests are generated centrally and distributed as pre-built content, remediation applied to all deployments with no customer action, and the code fix is included in Fleet v4.92.0.",
+      "refs": "https://github.com/fleetdm/fleet/security/advisories/GHSA-fv3p-h7wv-2jgm\nhttps://www.vulncheck.com/advisories/fleet-homebrew-cask-os-command-injection-via-metadata",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:17"
+    },
+    {
+      "cve_id": "CVE-2026-101044",
+      "title": "高危漏洞: CVE-2026-101044 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-28 02:16:30",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
+      "description": "pacquet, the Rust package-manager component shipped in the pnpm npm package versions >=12.0.0-alpha.0 and <12.0.0-alpha.5, does not validate dependency alias/name paths taken from a lockfile before using them in install-time filesystem joins. When a user installs a project with an attacker-supplied lockfile using --trust-lockfile or a frozen lockfile, alias entries containing path traversal segments (for example '../../escaped-link') are used when creating dependency and package links, bin destinations, hoisted entries, and virtual-store slots, allowing symlinks and directories to be created outside the intended project and node_modules boundary. Version 12.0.0-alpha.5 validates dependency names and every virtual-store slot path with a shared safe-join containment helper before any filesystem materialization, rejecting traversal, absolute, platform-specific, and reserved names with ERR_PNPM_INVALID_DEPENDENCY_NAME.",
+      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-2rx9-3g3h-c2jv\nhttps://www.vulncheck.com/advisories/pacquet-before-12.0.0-alpha.5-path-traversal-via-lockfile-alias",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:09"
+    },
+    {
+      "cve_id": "CVE-2026-101043",
+      "title": "高危漏洞: CVE-2026-101043 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-28 02:16:29",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "description": "pnpm versions 11.0.0 before 11.11.0 and 10.7.0 before 10.34.5 expand ${VAR} environment-variable placeholders in the httpProxy, httpsProxy, and noProxy settings read from a project's pnpm-workspace.yaml. Because the manifest is repository-controlled and the proxy keys were omitted from the request-destination key set that otherwise suppresses placeholder expansion for untrusted manifests (as already done for registry, pnprServer, registries and namedRegistries), an attacker who controls a repository's pnpm-workspace.yaml can cause a victim who clones the repository and runs a pnpm command (e.g. pnpm install) to expand environment secrets such as NPM_TOKEN or GITHUB_TOKEN into a proxy hostname or userinfo and route install traffic — and the corresponding DNS lookups — through an attacker-controlled host. The exfiltration occurs during configuration loading, before any lifecycle script executes. Fixed in pnpm 11.11.0 and 10.34.5.",
+      "refs": "https://github.com/pnpm/pnpm/security/advisories/GHSA-vx52-2968-3vc6\nhttps://www.vulncheck.com/advisories/pnpm-11.0.0-before-11.11.0-environment-variable-exfiltration-via-proxy-settings",
+      "source": "NVD",
+      "time": "2026-09-28 07:29:04"
+    },
+    {
       "cve_id": "CVE-2026-101032",
       "title": "高危漏洞: CVE-2026-101032 (CVSS 7.0)",
       "cvss_score": 7.0,
@@ -956,149 +1099,6 @@
       "refs": "https://github.com/netty/netty/security/advisories/GHSA-pvjx-v7vp-62vq\nhttps://www.vulncheck.com/advisories/netty-httpservercodec-unbounded-queue-growth-via-http-1.1-pipelining",
       "source": "NVD",
       "time": "2026-09-27 02:12:17"
-    },
-    {
-      "cve_id": "CVE-2026-100655",
-      "title": "高危漏洞: CVE-2026-100655 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty (io.netty:netty-codec-http) versions up to and including 4.1.137.Final and from 4.2.0.Final through 4.2.17.Final accept an unlimited number of concurrent remote-initiated SPDY streams: SpdySessionHandler defaults localConcurrentStreams to Integer.MAX_VALUE and exposes no API to change it. A remote peer that opens a SPDY connection and sends millions of SYN_STREAM frames with FLAG_FIN=0 causes the server to allocate unbounded heap and direct memory, eventually triggering a JVM OutOfMemoryError and crashing the service. Fixed in 4.1.138.Final and 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-rmcw-9fcq-wjq7\nhttps://www.vulncheck.com/advisories/netty-before-4.1.138-final-denial-of-service-via-spdysessionhandler",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:11"
-    },
-    {
-      "cve_id": "CVE-2026-100646",
-      "title": "高危漏洞: CVE-2026-100646 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "SiYuan is a self-hosted personal knowledge management system. In versions up to and including 3.8.3, the kernel's authentication guards (CheckAuth in kernel/model/session.go and IsSessionOriginAllowed in kernel/util/net.go) fail open when the HTTP Origin header is absent, on the incorrect assumption that any browser-initiated cross-site request carries an Origin. Because browsers omit Origin on cross-site top-level GET navigations and no-cors GET subresource loads — and the session cookie is SameSite=Lax — a single cross-site GET issued from any attacker-controlled web page is granted RoleAdministrator, both on default installations with no access-authorization code and on password-protected instances with a live session. Combined with content-type sniffing on the /api/network/proxy endpoint, which allows attacker-controlled HTML to be served under SiYuan's own origin, this permits an unauthenticated remote attacker to execute arbitrary script in the SiYuan origin (http://127.0.0.1:6806), invoke administrator APIs, and exfiltrate the persistent kernel API token. This issue is fixed in version 3.8.4.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-2w6q-wgc8-q743\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-authentication-bypass-via-missing-origin-header",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:07"
-    },
-    {
-      "cve_id": "CVE-2026-100645",
-      "title": "高危漏洞: CVE-2026-100645 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-09-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "SiYuan versions 3.7.0 before 3.8.4 contain a stored cross-site scripting vulnerability in gallery and kanban database renderers where field descriptions are not escaped in aria-label attributes. In the Electron desktop app with nodeIntegration enabled, attackers can inject JavaScript that calls Node.js child_process APIs to execute arbitrary commands with user privileges.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-556j-q8c8-qqg3\nhttps://www.vulncheck.com/advisories/siyuan-3.7.0-before-3.8.4-stored-xss-via-gallery-kanban",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:00"
-    },
-    {
-      "cve_id": "CVE-2026-100644",
-      "title": "高危漏洞: CVE-2026-100644 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "SiYuan before v3.8.4 contains a SQL injection vulnerability in the graph query endpoint where the dailyNoteSavePath parameter is concatenated into SQL without escaping. Unauthenticated attackers on published sites with auth disabled can inject SQL via UNION SELECT to extract arbitrary database rows from all notebooks.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-xr4h-j7cg-q8pc\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-sql-injection-via-dailynotesavepath",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:55"
-    },
-    {
-      "cve_id": "CVE-2026-100643",
-      "title": "高危漏洞: CVE-2026-100643 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-09-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "SiYuan versions before v3.8.4 fail to properly escape four stored Attribute View values in textarea elements, allowing authenticated attackers to inject JavaScript by modifying field descriptions, template sources, select option descriptions, or footer calculation templates. Attackers can execute stored JavaScript when other users open affected database menus, and in the Electron desktop app with nodeIntegration enabled, this leads to command execution with SiYuan process privileges.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-h3p6-c22r-fx2j\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-stored-xss-via-attribute-view-textarea",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:51"
-    },
-    {
-      "cve_id": "CVE-2026-100642",
-      "title": "高危漏洞: CVE-2026-100642 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-09-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
-      "description": "SiYuan versions from v2.1.0 before v3.8.4 contain a cross-site request forgery vulnerability in the CheckAuth lock-screen pass-through branch that grants administrator access to loopback requests without validating Origin headers. Attackers can craft malicious web pages that force victims to terminate the kernel process, read workspace configuration and proxy settings, and trigger administrative actions via zero-credential cross-origin requests from the victim's browser.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-9gpj-3rm3-x42m\nhttps://www.vulncheck.com/advisories/siyuan-2.1.0-before-3.8.4-cross-site-request-forgery-via-checkauth",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:43"
-    },
-    {
-      "cve_id": "CVE-2026-100641",
-      "title": "高危漏洞: CVE-2026-100641 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-09-26 22:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "SiYuan before v3.8.4 does not HTML-escape stored flashcard block content before interpolating it into the card-manager list markup. Block content returned by /api/riff/getRiffCards is inserted into a card item template in app/src/card/viewCards.ts and assigned to listElement.innerHTML, so content such as <img src=invalid onerror=...> becomes an executable event-handler attribute. Because the SiYuan desktop (Electron) main window is created with nodeIntegration enabled and contextIsolation disabled, an administrator who opens the card manager on a workspace containing attacker-supplied flashcard content (for example introduced through contribution or import) executes the attacker's script in a privileged renderer, which can lead to arbitrary code execution on the host. The affected endpoint remains behind authentication and administrator-role checks; this is an untrusted-content-to-privileged-renderer issue, not an authorization bypass.",
-      "refs": "https://github.com/siyuan-note/siyuan/commit/1ecb1c07de497ff03b585536fe5579291754d96b\nhttps://github.com/siyuan-note/siyuan/commit/41b14025b4ac4a8379d1200580344ca18ad152b7\nhttps://github.com/siyuan-note/siyuan/commit/48c354e7de130aaada9d7120125bbc768344fd3b",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:39"
-    },
-    {
-      "cve_id": "CVE-2026-100639",
-      "title": "高危漏洞: CVE-2026-100639 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-26 22:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "SiYuan v3.8.3 fails to HTML-escape the data-subtype attribute when generating gutter-button markup (app/src/protyle/gutter/button.ts, assigned via innerHTML in app/src/protyle/gutter/index.ts) from content pasted as plain-text Markdown containing a Kramdown inline attribute list (IAL). Because the shared Lute renderer parses Kramdown IAL from text/plain input, an attacker-supplied Markdown snippet using entity-encoded quotes in data-subtype breaks out of the attribute value when the gutter markup is re-parsed by the browser, injecting additional attributes such as autofocus and onfocus. If a victim pastes the crafted Markdown and the affected gutter control receives focus, the injected handler executes; in the Electron desktop application, where the main BrowserWindow enables Node integration and disables context isolation, this results in JavaScript execution with renderer Node.js privileges (remote code execution). Fixed in v3.8.4.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-2cmm-9x9j-rvff\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-cross-site-scripting-via-kramdown-ial",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:33"
-    },
-    {
-      "cve_id": "CVE-2026-100638",
-      "title": "高危漏洞: CVE-2026-100638 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-09-26 22:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:L",
-      "description": "SiYuan versions before v3.8.4 contain a path traversal vulnerability in the setNotebookIcon endpoint that allows authenticated administrators to create arbitrary directory trees and write files outside the workspace boundary. Attackers can supply directory traversal sequences in the notebook parameter to escape the workspace data directory and write conf.json files to arbitrary locations accessible by the kernel process.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-6h8x-6mph-7438\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-path-traversal-via-setnotebookicon",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:28"
-    },
-    {
-      "cve_id": "CVE-2026-100637",
-      "title": "高危漏洞: CVE-2026-100637 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-09-26 22:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:L",
-      "description": "SiYuan versions before v3.8.4 contain a path traversal vulnerability in the checkoutRepo endpoint that allows authenticated administrators to write JSON files outside the workspace. Attackers can supply a sessionID parameter containing directory traversal sequences to overwrite arbitrary JSON files in pre-existing kernel-writable directories outside workspace boundaries.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-jhmh-hr4g-c5g2\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-path-traversal-via-checkoutrepo-sessionid",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:24"
-    },
-    {
-      "cve_id": "CVE-2026-100636",
-      "title": "高危漏洞: CVE-2026-100636 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-09-26 22:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:L",
-      "description": "SiYuan versions before v3.8.4 contain a path traversal vulnerability in the exportBrowserHTML endpoint that allows authenticated administrators to write arbitrary HTML content to index.html outside the workspace directory. Attackers can supply a folder parameter with directory traversal sequences to escape the export directory and overwrite index.html in any pre-existing kernel-writable location, enabling stored XSS or workspace defacement.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-jf98-m24w-gm9m\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.4-path-traversal-via-exportbrowserhtml-folder",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:20"
-    },
-    {
-      "cve_id": "CVE-2026-100631",
-      "title": "高危漏洞: CVE-2026-100631 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Parse Server is an open source backend server. In versions prior to 8.6.90 and in versions from 9.0.0 prior to 9.10.1-alpha.9, the device token deduplication logic for installation records does not validate the type of client-supplied installation fields before using them to build database queries. An unauthenticated remote attacker who knows only the public application ID can submit non-string values in these fields to inject query operators, causing the deduplication cleanup — which runs with elevated privileges before class-level permissions are evaluated — to delete every device registration in the application or an attacker-chosen subset of them. No account, session token, master key, or user interaction is required. Deleted registrations cannot be recovered on the server, so push notifications cannot be delivered until every client re-registers. Any deployment that exposes the REST API to clients and uses push notifications is affected in its default configuration. Versions 8.6.90 and 9.10.1-alpha.9 fix the issue by rejecting non-string values with a client error and by scoping the deduplication cleanup to the calling application. No workaround other than upgrading is available.",
-      "refs": "https://github.com/parse-community/parse-server/security/advisories/GHSA-cc6h-c8m4-hgrx\nhttps://www.vulncheck.com/advisories/parse-server-9.0.0-unauthenticated-installation-deletion-via-operator-injection",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:15"
-    },
-    {
-      "cve_id": "CVE-2026-100627",
-      "title": "高危漏洞: CVE-2026-100627 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-09-26 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Capgo (Cap-go/capgo.app) server backend Supabase functions contain an incorrect authorization flaw in the API-key bundle promotion path. The PUT /bundle endpoint, available to \"all\" and \"write\" API keys, dispatches to setChannel, which authorizes with checkPermission(c, 'channel.promote_bundle', { appId: body.app_id }) and omits the request's channel_id. Because the omitted scope field is passed to rbac_check_permission_direct as SQL NULL, and channel-scope override evaluation is gated on p_channel_id IS NOT NULL, per-channel allow/deny overrides are never evaluated. A principal holding app-level channel.promote_bundle (granted by default to the app_developer and app_uploader roles) can therefore promote a bundle to a channel for which an explicit per-channel deny override exists, updating public.channels.version for the supplied channel_id; the target channel is only validated after authorization. The issue is confirmed on main at commit de66fa51e7ff2f50283cc1455c3d80ab3eb0ae43 and likely earlier versions; no patched version is known at the time of publication.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-633x-9x77-77gf\nhttps://www.vulncheck.com/advisories/capgo-bundle-promotion-api-channel-rbac-deny-override-bypass",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:07"
     }
   ]
 }
