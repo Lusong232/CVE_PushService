@@ -1,6 +1,83 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-100739",
+      "title": "高危漏洞: CVE-2026-100739 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-27 06:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. This impacts an unknown function of the file viewresult.php. Performing a manipulation of the argument seno results in sql injection. Remote exploitation of the attack is possible. The exploit is now public and may be used. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/vinniboy021-blip/Advisory/blob/main/viewresult-sqli.md\nhttps://vuldb.com/cve/CVE-2026-100739\nhttps://vuldb.com/submit/914584",
+      "source": "NVD",
+      "time": "2026-09-27 10:29:23"
+    },
+    {
+      "cve_id": "CVE-2026-96532",
+      "title": "高危漏洞: CVE-2026-96532 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-26 15:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "The Testimonials Widget WordPress plugin through 4.0.4 does not perform a capability or ownership check when handling its front-end testimonial submission form, allowing unauthenticated users to modify or create arbitrary posts, including overwriting the title, content and author of any existing post.",
+      "refs": "https://wpscan.com/vulnerability/d1372d8a-6654-4da7-a07e-87b18a0b0db9/",
+      "source": "NVD",
+      "time": "2026-09-27 10:29:18"
+    },
+    {
+      "cve_id": "CVE-2026-96524",
+      "title": "高危漏洞: CVE-2026-96524 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-26 15:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The MCP Server for WordPress  WordPress plugin before 1.8.2 does not correctly verify the WordPress REST API nonce for cookie-authenticated requests when a condition an attacker can influence is present, allowing unauthenticated attackers to perform administrator-only actions, including creating a new administrator account, by tricking a logged-in administrator into visiting a crafted page.",
+      "refs": "https://wpscan.com/vulnerability/d8e97a77-b70f-41f0-8d1e-0d50b6d878c6/",
+      "source": "NVD",
+      "time": "2026-09-27 10:29:12"
+    },
+    {
+      "cve_id": "CVE-2026-85081",
+      "title": "高危漏洞: CVE-2026-85081 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-26 15:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The File Manager WordPress plugin before 8.0.5, FileOrganizer  WordPress plugin before 1.2.1, File Manager Pro  WordPress plugin before 2.1.3 do not correctly validate the origin of window messages received by the file browser they load on their admin screens, accepting any origin that is a leading string prefix of the site's own address, which allows an unauthenticated attacker to run arbitrary JavaScript in the session of a logged-in administrator who visits a page under their control.\n\nThe defect is in the file-manager library all three bundle, and every version below 2.1.70 carries it. Updating the bundled library closes it.",
+      "refs": "https://wpscan.com/vulnerability/3c5f9c52-e609-45aa-b441-491e15b3f4b8/",
+      "source": "NVD",
+      "time": "2026-09-27 10:29:05"
+    },
+    {
+      "cve_id": "CVE-2026-84096",
+      "title": "高危漏洞: CVE-2026-84096 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-09-26 15:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The wp-review-slider-pro WordPress plugin before 12.7.12 does not perform a capability check on the AJAX handler that saves its review submission forms, and the nonce protecting it is generated for every visitor, allowing any authenticated user, such as a subscriber, to overwrite a live form with field values that are output without escaping on public pages, leading to Stored Cross-Site Scripting.",
+      "refs": "https://wpscan.com/vulnerability/b30dd50c-6600-4ad6-8195-7b0606b29c9d/",
+      "source": "NVD",
+      "time": "2026-09-27 10:28:58"
+    },
+    {
+      "cve_id": "CVE-2026-84095",
+      "title": "高危漏洞: CVE-2026-84095 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-09-26 15:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The wp-review-slider-pro WordPress plugin before 12.7.12 does not perform a capability check on one of its AJAX handlers, and the nonce protecting it is generated for every visitor, allowing any authenticated user, such as a subscriber, to store arbitrary review content which is later output without escaping on public pages, leading to Stored Cross-Site Scripting.",
+      "refs": "https://wpscan.com/vulnerability/f788d50b-f507-4821-968e-9ea4f5ab71bd/",
+      "source": "NVD",
+      "time": "2026-09-27 10:28:52"
+    },
+    {
+      "cve_id": "CVE-2026-16591",
+      "title": "高危漏洞: CVE-2026-16591 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-26 15:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP Directory Kit WordPress plugin before 1.5.8 does not sanitize and escape some of its category and location fields before outputting them in page attributes, allowing users with a WP Directory Kit WordPress plugin before 1.5.8-specific listing-management role (and without the unfiltered_html capability) to perform Stored Cross-Site Scripting attacks that execute for any visitor of the affected page.",
+      "refs": "https://wpscan.com/vulnerability/7b5600f1-1024-4329-97de-6347420e46c1/",
+      "source": "NVD",
+      "time": "2026-09-27 10:28:45"
+    },
+    {
       "cve_id": "CVE-2026-72668",
       "title": "高危漏洞: CVE-2026-72668 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1022,83 +1099,6 @@
       "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-ghpx-6xwq-2w4w\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-authentication-bypass-via-exec-wrapper",
       "source": "NVD",
       "time": "2026-09-26 16:07:19"
-    },
-    {
-      "cve_id": "CVE-2026-100560",
-      "title": "高危漏洞: CVE-2026-100560 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 11:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw versions before 2026.8.1 contain an authorization bypass vulnerability where Allow Always approvals for exact commands persist as path-only grants on macOS and Linux. Attackers can reuse the same executable with different arguments to execute commands without triggering new approval prompts, potentially accessing files or internal services.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-74gc-hg2m-79p9\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-reusable-exec-approvals-authorization-bypass",
-      "source": "NVD",
-      "time": "2026-09-26 16:07:14"
-    },
-    {
-      "cve_id": "CVE-2026-100559",
-      "title": "高危漏洞: CVE-2026-100559 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-09-26 11:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw versions before 2026.8.1 contain a command parser vulnerability where escaped newlines confuse exec allowlist parsing, allowing hidden commands to execute. Attackers can craft input with escaped newlines to bypass allowlist validation and execute additional commands without expected authorization prompts.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9f86-pvv5-rxfw\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-command-injection-via-escaped-newlines",
-      "source": "NVD",
-      "time": "2026-09-26 16:07:09"
-    },
-    {
-      "cve_id": "CVE-2026-100558",
-      "title": "高危漏洞: CVE-2026-100558 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 11:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpenClaw versions before 2026.8.1 contain a resource exhaustion vulnerability in the Gateway listener that allows unauthenticated clients to retain response sockets by sending WebSocket upgrade requests without matching connection semantics. Attackers can repeatedly send malformed upgrade requests to exhaust listener resources and cause denial of service without consuming the WebSocket pre-auth connection budget.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4r25-35qc-fr6j\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-resource-exhaustion-via-websocket-upgrade",
-      "source": "NVD",
-      "time": "2026-09-26 16:07:05"
-    },
-    {
-      "cve_id": "CVE-2026-100557",
-      "title": "高危漏洞: CVE-2026-100557 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-09-26 11:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "OpenClaw versions before 2026.8.1 contain an authorization bypass vulnerability in skill tool dispatch that fails to carry the sender's owner status. Non-owner senders authorized to invoke skill commands can access owner-only tools and server credentials reserved for owners.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7cp7-87pj-p32v\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-authorization-bypass-via-skill-tool-dispatch",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:57"
-    },
-    {
-      "cve_id": "CVE-2026-100555",
-      "title": "高危漏洞: CVE-2026-100555 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-26 11:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "description": "OpenClaw is an npm-distributed gateway application. In versions >= 2026.7.1 and < 2026.8.1, Synology Chat attachment delivery could lose DNS pinning: the Gateway validated a single DNS result for a supplied file URL but then passed the original hostname to the Synology NAS, where it could resolve to a different destination. When attachment delivery accepted a remotely influenced hostname, an attacker could use DNS rebinding to make the NAS fetch a private or otherwise policy-denied resource and return its contents to the addressed conversation (server-side request forgery). Practical impact depends on NAS routing, resolver behavior, and the response available at the private destination. The issue is fixed in 2026.8.1; as a workaround, disable remote URL attachment forwarding in Synology Chat.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cf95-m4jv-59rc\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-dns-rebinding-via-attachment-delivery",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:52"
-    },
-    {
-      "cve_id": "CVE-2026-100552",
-      "title": "高危漏洞: CVE-2026-100552 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-26 11:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "OpenClaw (npm package 'openclaw') before 2026.8.1 does not correctly enforce per-chat tool policies for Codex app-server runtime tools. A conversation-level tools.allow rule filtered OpenClaw tools but did not restrict the shell, process, file, and patch tools owned by the Codex runtime. When a lower-trust conversation was assigned to a Codex runtime and restricted with a per-chat tool allowlist, a participant able to trigger that agent could still reach native command and file tools, bypassing the configured allowlist. The practical impact depends on the runtime's host permissions and sandbox configuration. The issue is fixed in 2026.8.1.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wwcw-jfpp-gpxw\nhttps://www.vulncheck.com/advisories/openclaw-before-2026.8.1-policy-bypass-via-native-tools",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:48"
-    },
-    {
-      "cve_id": "CVE-2026-100551",
-      "title": "高危漏洞: CVE-2026-100551 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-09-26 11:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "description": "OpenClaw for iOS versions >= 2026.7.1 and < 2026.8.11 do not enforce saved Gateway TLS pins in the Control UI. While native connections enforced the saved Gateway fingerprint, the authenticated Terminal and session Dashboard WebViews omitted it. If a user had accepted a Gateway fingerprint, an attacker able to redirect the same host and port and present a different certificate that is accepted by iOS system trust can serve a replacement Control UI page; opening the Terminal or a session Dashboard then allows that page to read the injected Gateway token or password. The stolen credential can grant operator access, including reading sensitive Gateway state and invoking host-capable tools. This issue is fixed in 2026.8.11.",
-      "refs": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jjpc-p3xf-8g7p\nhttps://www.vulncheck.com/advisories/openclaw-ios-control-ui-tls-pin-enforcement-bypass",
-      "source": "NVD",
-      "time": "2026-09-26 16:06:43"
     }
   ]
 }
