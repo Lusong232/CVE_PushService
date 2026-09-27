@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-101032",
+      "title": "高危漏洞: CVE-2026-101032 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-09-27 22:16:28",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "navi through 2.24.0 fails to properly escape cheatsheet variable values when substituting them into shell commands. Attackers can inject shell metacharacters through crafted file names in suggestion command directories to execute arbitrary commands with victim privileges.",
+      "refs": "https://github.com/denisidoro/navi\nhttps://github.com/denisidoro/navi/blob/5515367dc8a2a561d2d82b8352f729b1da4120d3/src/commands/core/actor.rs#L159-L193\nhttps://github.com/denisidoro/navi/blob/5515367dc8a2a561d2d82b8352f729b1da4120d3/src/common/shell.rs#L39-L50",
+      "source": "NVD",
+      "time": "2026-09-28 02:45:37"
+    },
+    {
       "cve_id": "CVE-2026-100872",
       "title": "高危漏洞: CVE-2026-100872 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-633x-9x77-77gf\nhttps://www.vulncheck.com/advisories/capgo-bundle-promotion-api-channel-rbac-deny-override-bypass",
       "source": "NVD",
       "time": "2026-09-27 02:11:07"
-    },
-    {
-      "cve_id": "CVE-2026-100625",
-      "title": "高危漏洞: CVE-2026-100625 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-09-26 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:L",
-      "description": "Capgo (capgo.app) exposes a native build TUS upload proxy (supabase/functions/_backend/public/build/upload.ts) that authorizes a caller against a single build job identified by the supplied builder_job_id and validates only that job's stored upload_path, but then forwards the user-controlled TUS resource suffix taken from /build/upload/:jobId/* to the builder service while injecting Capgo's privileged builder API key. Because the forwarded suffix is never bound to the authorized job's upload_path or upload_session_key, a caller holding a valid 'all' or 'write' Capgo API key with app.build_native permission for one application can use its authorized proxy path for job A to write to the TUS upload resource of another job B, provided that resource suffix is known or exposed, corrupting that build's artifacts. All versions are affected; no patch was available at the time of advisory publication.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-r45q-x4gr-3mvv\nhttps://www.vulncheck.com/advisories/capgo-build-upload-proxy-authorization-bypass-via-tus-resource",
-      "source": "NVD",
-      "time": "2026-09-27 02:11:00"
     }
   ]
 }
