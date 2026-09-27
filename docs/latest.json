@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-100872",
+      "title": "高危漏洞: CVE-2026-100872 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-27 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Sylius versions before 2.1.16 and 2.2.9 fail to validate payment amounts during cart recalculation, allowing unauthenticated attackers to modify order totals after gateway transaction initiation. Attackers can pay a small amount, enlarge the order after gateway capture, and have the system mark the inflated order as fully paid while the gateway captured only the original amount.",
+      "refs": "https://github.com/Sylius/Sylius\nhttps://github.com/Sylius/Sylius/commit/9e9aeaacbc97b1fc01d573e44d6679194527905d\nhttps://github.com/Sylius/Sylius/pull/19216",
+      "source": "NVD",
+      "time": "2026-09-27 22:24:37"
+    },
+    {
+      "cve_id": "CVE-2026-100871",
+      "title": "高危漏洞: CVE-2026-100871 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-27 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Sylius versions before 1.12.25, 1.13.17, 1.14.20, 2.1.16, and 2.2.9 fail to include firewall identification in JWT tokens issued by separate Admin and Shop API endpoints. Attackers can register a shop customer account using an administrator's email address and obtain a token that the Admin API resolves to that administrator, granting full administrative access.",
+      "refs": "https://github.com/Sylius/Sylius\nhttps://github.com/Sylius/Sylius/commit/cdfb672a4d174eb2c73159b25cf5b5f44088f45c\nhttps://github.com/Sylius/Sylius/pull/19213",
+      "source": "NVD",
+      "time": "2026-09-27 22:24:31"
+    },
+    {
+      "cve_id": "CVE-2026-100870",
+      "title": "高危漏洞: CVE-2026-100870 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-27 21:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Sylius versions before 1.12.25, 1.13.17, 1.14.20, 2.1.16, and 2.2.9 build administrator password-reset links using the request Host header without validation, allowing unauthenticated attackers to redirect reset tokens to attacker-controlled domains. Attackers can request password resets for known administrator email addresses with forged Host headers to intercept valid reset tokens and take over administrator accounts.",
+      "refs": "https://github.com/Sylius/Sylius\nhttps://github.com/Sylius/Sylius/commit/1255d75b20d3d88a5e5c8d46791504134c838480\nhttps://github.com/Sylius/Sylius/pull/19215",
+      "source": "NVD",
+      "time": "2026-09-27 22:24:26"
+    },
+    {
+      "cve_id": "CVE-2026-100741",
+      "title": "高危漏洞: CVE-2026-100741 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-09-27 16:16:26",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Eval injection in the JScript event-script dispatcher in Progressive Robot Ltd's hMailServer, versions 6.0.0 through 6.3.3 on Windows, allows a remote, unauthenticated attacker to run arbitrary JScript inside the hMailServer service process, with the privileges of the service account, via a password containing a backslash followed by an apostrophe, sent in any logon (SMTP AUTH, POP3, IMAP) that names an existing, active account. Exploitation requires a non-default configuration: event scripting enabled (off by default), the script language set to JScript (the default is VBScript), and an OnClientValidatePassword handler defined in the event script. The server wrote event values into the handler call as JScript string literals, escaping the apostrophe but not the backslash, so such a value closes the literal and the rest of it is parsed as script. The same flaw is reachable by a remote POP3 server through the message UID it returns, where an OnExternalAccountDownload handler is defined, and by a remote SMTP server through the error reply it rejects a delivery with, where an OnDeliveryFailed handler is defined. Before 6.2.25 the injected script can create any COM object, and from 6.2.25 it can with the default ScriptAllowedObjects value of '*'; WScript.Shell among them gives command execution as the service account. VBScript event scripts and the Linux builds of Progressive Robot Ltd's hMailServer are not affected.",
+      "refs": "https://gitlab.com/Progressiverobot/hmailserver/-/commit/5a3de9001d6c5e833662ada8e44ce10d42d76b1a\nhttps://gitlab.com/Progressiverobot/hmailserver/-/releases/v6.3.4",
+      "source": "NVD",
+      "time": "2026-09-27 22:24:19"
+    },
+    {
       "cve_id": "CVE-2026-100746",
       "title": "高危漏洞: CVE-2026-100746 (CVSS 7.3)",
       "cvss_score": 7.3,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-r45q-x4gr-3mvv\nhttps://www.vulncheck.com/advisories/capgo-build-upload-proxy-authorization-bypass-via-tus-resource",
       "source": "NVD",
       "time": "2026-09-27 02:11:00"
-    },
-    {
-      "cve_id": "CVE-2026-100623",
-      "title": "高危漏洞: CVE-2026-100623 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-26 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Capgo (capgo.app) exposes the legacy membership table public.org_users directly through Supabase PostgREST. The table's row-level security policies \"Allow org admin to insert\" and \"Allow org admin to update\" only verify that the caller has admin rights in the target organization (public.check_min_rights('admin', ...)); they do not require a pending invitation in tmp_users, acceptance of an invite token via /private/accept_invitation, any action by the target user, or the membership/role-consistency and anti-escalation checks enforced by the RBAC role-binding path. As a result, an authenticated user who is an admin of an organization can INSERT or UPDATE org_users rows directly to add any existing public.users account as an active member of that organization with user_right=\"admin\", bypassing the invitation and role-assignment workflow entirely. In testing, an account with no prior access to the organization or its apps could, after such a direct insert, read the organization and app and pass check_min_rights. All versions are affected and no patch was available at the time of publication.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-w349-9mc3-8c5x\nhttps://www.vulncheck.com/advisories/capgo-authentication-bypass-via-direct-postgrest-org-users-table-write",
-      "source": "NVD",
-      "time": "2026-09-27 02:10:56"
-    },
-    {
-      "cve_id": "CVE-2026-100622",
-      "title": "高危漏洞: CVE-2026-100622 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "capgo.app through 12.129.0 fails to verify deletion status when serving cached bundle artifacts from the public file read endpoint. Unauthenticated attackers can download deleted bundles using cached URLs and trigger restoration of deleted objects into R2 storage on cache hits.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-26x3-6mr7-989p\nhttps://www.vulncheck.com/advisories/capgo-app-through-12.129.0-cache-restoration-of-deleted-bundles",
-      "source": "NVD",
-      "time": "2026-09-27 02:10:48"
-    },
-    {
-      "cve_id": "CVE-2026-100619",
-      "title": "高危漏洞: CVE-2026-100619 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-09-26 22:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Capgo (capgo.app) blocks direct user inserts into the public.manifest table with a RESTRICTIVE row-level security policy, but that restriction can be bypassed indirectly. A principal holding an app-scoped upload/write/all API key (upload+ rights) or an authenticated user with write+ rights on an app can update public.app_versions.manifest on a version whose storage_provider is 'r2-direct', which is not covered by the bundle content-lock check. The on_version_update async worker trusts record.manifest and, using the service-role Supabase client, inserts the attacker-controlled file_name, file_hash, and s3_path into public.manifest before clearing app_versions.manifest. When a channel points to the crafted version, the /updates endpoint returns the service-role-created manifest entry as a client-facing download_url, enabling OTA manifest poisoning through a trusted async worker path. All versions are affected; no patch was available at the time of publication.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-443r-w5p8-rhr2\nhttps://www.vulncheck.com/advisories/capgo-ota-manifest-poisoning-via-app-versions-manifest-bypass",
-      "source": "NVD",
-      "time": "2026-09-27 02:10:44"
-    },
-    {
-      "cve_id": "CVE-2026-100618",
-      "title": "高危漏洞: CVE-2026-100618 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-09-26 22:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N",
-      "description": "Capgo (capgo.app) is affected by an authorization flaw in the app icon update path. The PUT /app/:id endpoint accepts a user-controlled `icon` value, normalizes it, and stores it in public.apps.icon_url without verifying that the image path belongs to the target app's own image namespace (e.g. org/{owner_org}/{app_id}/...). Updating apps.icon_url fires the on_app_update trigger, whose worker reads record.icon_url and calls cleanStoredImageMetadata(), which runs with service-role credentials (supabaseAdmin()) and downloads and re-uploads the referenced storage object with upsert: true. As a result, an authenticated holder of an app-limited write API key can cause the privileged worker to rewrite an out-of-scope private image object (for example an organization logo) that the key cannot read or write directly under Supabase Storage RLS. All versions are affected; no patched version was available at the time of the advisory.",
-      "refs": "https://github.com/Cap-go/capgo.app/security/advisories/GHSA-669c-gwrr-hc53\nhttps://www.vulncheck.com/advisories/capgo-app-icon-update-privilege-escalation-via-service-role-worker",
-      "source": "NVD",
-      "time": "2026-09-27 02:10:40"
     }
   ]
 }
