@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-100901",
+      "title": "高危漏洞: CVE-2026-100901 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 11:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in athlon1600 youtube-downloader up to 4.0.1. Affected by this vulnerability is the function stream of the file public/stream.php. The manipulation of the argument url results in server-side request forgery. It is possible to launch the attack remotely. The exploit has been made public and could be used. Commit 6ffe823 'better security for public/stream.php' only added CURLOPT_PROTOCOLS http/https restriction and MAXREDIRS cap, does not restrict destination host. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/qianqiusujiu/87a7d7d8bd7fb53cf8529e0bafbeafba\nhttps://vuldb.com/cve/CVE-2026-100901\nhttps://vuldb.com/submit/919147",
+      "source": "NVD",
+      "time": "2026-09-28 17:06:54"
+    },
+    {
+      "cve_id": "CVE-2026-100896",
+      "title": "高危漏洞: CVE-2026-100896 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-09-28 10:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A weakness has been identified in TOTOLINK N150RT 3.4.0-B20201030. The affected element is the function system of the file /boafrm/formWlSiteSurvey of the component Web Management Interface. This manipulation of the argument wlanif causes os command injection. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks.",
+      "refs": "https://gist.github.com/H3rmesk1t/c071a62375f38b629f67653428a8f25a\nhttps://vuldb.com/cve/CVE-2026-100896\nhttps://vuldb.com/submit/918574",
+      "source": "NVD",
+      "time": "2026-09-28 17:06:43"
+    },
+    {
+      "cve_id": "CVE-2026-100893",
+      "title": "高危漏洞: CVE-2026-100893 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 10:17:19",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in Privoce VoceChat Server up to 0.5.36. This vulnerability affects the function open_graph::fetch of the file src/api/resource.rs of the component open_graphic_parse Endpoint. Executing a manipulation of the argument url can lead to server-side request forgery. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://is.yuum.me/posts/2026-08-06-ssrf-vulnerability-in-vocechat-server-v0520/\nhttps://vuldb.com/cve/CVE-2026-100893\nhttps://vuldb.com/submit/917632",
+      "source": "NVD",
+      "time": "2026-09-28 17:06:38"
+    },
+    {
+      "cve_id": "CVE-2026-100891",
+      "title": "高危漏洞: CVE-2026-100891 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 09:16:28",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in Trusted Domain Project OpenDMARC up to 1.4.2. Affected by this issue is the function opendmarc_policy_query_dmarc in the library libopendmarc/opendmarc_policy.c of the component Internationalized Domain Name Handler. Such manipulation leads to encoding error. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-100891\nhttps://vuldb.com/submit/917215\nhttps://vuldb.com/vuln/410841",
+      "source": "NVD",
+      "time": "2026-09-28 17:06:33"
+    },
+    {
+      "cve_id": "CVE-2026-100889",
+      "title": "高危漏洞: CVE-2026-100889 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 08:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Trusted Domain Project OpenDKIM up to 2.11.0. Affected is the function dkim_qp_decode of the file util.c of the component Decoder. The manipulation results in off-by-one. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-100889\nhttps://vuldb.com/submit/917063\nhttps://vuldb.com/vuln/410839",
+      "source": "NVD",
+      "time": "2026-09-28 17:06:29"
+    },
+    {
+      "cve_id": "CVE-2026-100888",
+      "title": "高危漏洞: CVE-2026-100888 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 08:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in Trusted Domain Project OpenDKIM up to 2.11.0. This affects the function dkim_canon_selecthdrs of the file libopendkim/dkim-canon.c of the component DKIM Signature Header Selection. Executing a manipulation of the argument h can lead to out-of-bounds write. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-100888\nhttps://vuldb.com/submit/917015\nhttps://vuldb.com/vuln/410837",
+      "source": "NVD",
+      "time": "2026-09-28 17:06:24"
+    },
+    {
       "cve_id": "CVE-2026-100886",
       "title": "高危漏洞: CVE-2026-100886 (CVSS 10.0)",
       "cvss_score": 10.0,
@@ -1033,72 +1099,6 @@
       "refs": "https://github.com/netty/netty/security/advisories/GHSA-2g6j-r8q9-5hr8\nhttps://www.vulncheck.com/advisories/netty-4.2.0-through-4.2.17-response-desynchronization-via-httpservercodec",
       "source": "NVD",
       "time": "2026-09-27 02:13:05"
-    },
-    {
-      "cve_id": "CVE-2026-100665",
-      "title": "高危漏洞: CVE-2026-100665 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Netty versions from 4.2.11.Final before 4.2.18.Final contain an incomplete hostname verification fix in the QUIC certificate verification path when using a plain X509TrustManager. The BoringSSLCertificateVerifyCallback discards the SSLEngine for plain trust managers, preventing endpoint identification from running even when HTTPS verification is configured. Attackers on the network path can present a certificate chain for the wrong hostname that the plain trust manager accepts, bypassing hostname authentication for QUIC clients.",
-      "refs": "https://github.com/netty/netty/commit/09e72c4fd8007277121ed48db63a124b112b96fe\nhttps://github.com/netty/netty/commit/994e887ed9\nhttps://github.com/netty/netty/security/advisories/GHSA-mj35-3qqm-q387",
-      "source": "NVD",
-      "time": "2026-09-27 02:13:00"
-    },
-    {
-      "cve_id": "CVE-2026-100664",
-      "title": "高危漏洞: CVE-2026-100664 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Netty's HTTP/3 codec (io.netty:netty-codec-http3) versions 4.2.2.Final through 4.2.17.Final builds the HTTP/3 :authority pseudo-header from the HTTP/1 Host header before considering the authority of an absolute-form HTTP/1 request-target. In HttpConversionUtil.toHttp3Headers(HttpMessage, boolean) — reached via Http3FrameToHttpObjectCodec(false) — a non-empty Host header takes precedence over the request-target authority, contrary to the HTTP/1.1 rule that a server receiving an absolute-form request-target must ignore the Host header. In a Netty-based HTTP/1-to-HTTP/3 gateway, proxy, or protocol bridge, a remote client can send a request such as \"GET https://trusted.example/admin HTTP/1.1\" with \"Host: attacker.example\", causing components that validate, authorize, or route on the RFC-defined request-target authority to reach a different decision than the upstream HTTP/3 peer, which receives :authority derived from the conflicting Host header. This authority confusion can affect virtual-host routing, allow-list checks, backend selection, cache keys, and URL generation. The advisory reports integrity impact only (no code execution, memory corruption, or availability impact). Fixed in 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-hfr2-x62w-v49h\nhttps://www.vulncheck.com/advisories/netty-4.2.2-through-4.2.15-http-1-host-header-authority-confusion",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:55"
-    },
-    {
-      "cve_id": "CVE-2026-100663",
-      "title": "高危漏洞: CVE-2026-100663 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "Netty's HTTP/3 codec (io.netty:netty-codec-http3) from 4.2.2.Final through 4.2.17.Final does not special-case HTTP/1 CONNECT authority-form request-targets when converting HTTP/1 messages to HTTP/3 in HttpConversionUtil.toHttp3Headers. The authority-form target (e.g., \"CONNECT trusted.example:443\") is parsed as a URI, so its host is emitted as :scheme, :path is set to \"/\", and the HTTP/1 Host header is used as :authority; if no Host header is present the CONNECT target is dropped. In a Netty-based HTTP/1-to-HTTP/3 proxy or gateway, a remote client can send a CONNECT request whose Host header names a different authority than the request-target, producing a malformed HTTP/3 CONNECT whose tunnel :authority is attacker-controlled. This can bypass tunnel allow-lists, egress policy, backend selection, or audit controls that validate the HTTP/1 CONNECT request-target before forwarding over HTTP/3. The issue is fixed in 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-jgph-cgq3-c627\nhttps://www.vulncheck.com/advisories/netty-http-1-connect-authority-form-mistranslated-to-malformed-http-3",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:48"
-    },
-    {
-      "cve_id": "CVE-2026-100662",
-      "title": "高危漏洞: CVE-2026-100662 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty's HTTP/3 codec (io.netty:netty-codec-http3) versions 4.2.0.Final through 4.2.17.Final contain an uncontrolled resource consumption vulnerability in the QPACK encoder-stream instruction decoder (QpackEncoderHandler, installed on the peer-initiated unidirectional QPACK encoder stream, type 0x02). The handler accepts an attacker-declared string-literal length of up to Integer.MAX_VALUE (~2 GiB) for the Name Length and Value Length fields of the \"Insert With Literal Name\" instruction (RFC 9204 §4.3.3), with no per-instruction or per-literal length cap and no cumulation-size limit; the existing HTTP/3 limits (maxHeaderListSize, maxUnknownFramePayloadLength, DEFAULT_MAX_FIELD_SECTION_SIZE) are not applied to this handler. A remote, unauthenticated peer with an established HTTP/3 connection to a default Netty HTTP/3 server can declare a very large literal length and then trickle fewer bytes than declared, causing the ByteToMessageDecoder MERGE cumulator to retain and grow the per-connection buffer, and ultimately triggering a large byte-array allocation. This leads to unbounded per-connection heap growth and OutOfMemoryError, resulting in denial of service. Fixed in 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-f64r-x647-cg8w\nhttps://www.vulncheck.com/advisories/netty-http-3-qpack-encoder-stream-unbounded-memory-exhaustion-dos",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:43"
-    },
-    {
-      "cve_id": "CVE-2026-100661",
-      "title": "高危漏洞: CVE-2026-100661 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:49",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty's HTTP/3 codec (io.netty:netty-codec-http3) versions 4.2.0.Final through 4.2.17.Final contain a denial-of-service vulnerability in the QPACK prefixed-integer decoder (QpackUtil.decodePrefixedInteger), which does not bound the number of continuation bytes it will process. A remote, unauthenticated peer can open a QPACK unidirectional stream (type 0x02 encoder or 0x03 decoder) and send a first byte with all prefix bits set (e.g. 0xFF for a 7-bit prefix or 0x3F for a 5-bit prefix) followed by an endless run of 0x80 continuation bytes. The decoder returns -1 ('need more bytes'), so callers never consume the input, the ByteToMessageDecoder cumulator grows without bound, and each decode() invocation re-scans the whole accumulated buffer, yielding O(N^2) CPU cost. The result is unbounded per-connection heap growth (OutOfMemoryError) and event-loop CPU starvation, reachable in every configuration. Fixed in 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-v5p2-hmgx-3xrx\nhttps://www.vulncheck.com/advisories/netty-http-3-qpack-prefixed-integer-dos-via-unbounded-accumulation",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:36"
-    },
-    {
-      "cve_id": "CVE-2026-100660",
-      "title": "高危漏洞: CVE-2026-100660 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty's HTTP/3 codec (io.netty:netty-codec-http3) from 4.2.0.Final through 4.2.17.Final retains unbounded per-stream QPACK encoder state. QpackEncoder stores a queue and a dynamic-table index tracker for every encoded field section that references the QPACK dynamic table, keyed by the peer-controlled QUIC stream ID, and these entries are released only when the remote decoder sends a Section Acknowledgment or Stream Cancellation instruction — not when the HTTP/3 stream completes. There is no limit on the number of tracked streams, field sections, or retained bytes. A remote, unauthenticated HTTP/3 client can advertise a non-zero QPACK dynamic-table capacity, acknowledge the table insertion so the server reuses a dynamically indexed response header, and then omit all mandatory Section Acknowledgments while issuing sequential requests over a single QUIC connection, bypassing concurrent-stream limits and causing unbounded heap growth until the server exhausts memory (denial of service). Fixed in 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-495p-pchh-r4mc\nhttps://www.vulncheck.com/advisories/netty-before-4.2.18-final-qpackencoder-unbounded-memory-retention",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:31"
     }
   ]
 }
