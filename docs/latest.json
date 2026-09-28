@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-100886",
+      "title": "高危漏洞: CVE-2026-100886 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-28 07:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was identified in Seetong T8108, T8108P, T8116 and T8232 4.6.1.4-build202604241011. The affected element is an unknown function of the component Debug Service. Such manipulation leads to improper authentication. The attack may be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/heapframe/seetong-ts81xxd3x-rce\nhttps://vuldb.com/cve/CVE-2026-100886\nhttps://vuldb.com/submit/916434",
+      "source": "NVD",
+      "time": "2026-09-28 10:32:32"
+    },
+    {
+      "cve_id": "CVE-2026-100885",
+      "title": "高危漏洞: CVE-2026-100885 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-28 07:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Krayin laravel-crm up to 2.2.4. This affects an unknown function of the file packages/Webkul/Installer/src/Http/Middleware/CanInstall.php of the component admin-config-setup API Endpoint. The manipulation results in authorization bypass. The attack may be launched remotely. The exploit has been made public and could be used. Upgrading to version 2.2.5 mitigates this issue. The patch is identified as 89f2916b6a46ff91bd1999ce38158fa0de8b9490. Upgrading the affected component is recommended.",
+      "refs": "https://github.com/carlosalbertotuma/advisory/blob/main/advisory-07-Unauthenticated-InstallerBypass.md\nhttps://github.com/krayin/laravel-crm/\nhttps://github.com/krayin/laravel-crm/commit/89f2916b6a46ff91bd1999ce38158fa0de8b9490",
+      "source": "NVD",
+      "time": "2026-09-28 10:32:27"
+    },
+    {
       "cve_id": "CVE-2026-96280",
       "title": "高危漏洞: CVE-2026-96280 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1077,28 +1099,6 @@
       "refs": "https://github.com/netty/netty/security/advisories/GHSA-495p-pchh-r4mc\nhttps://www.vulncheck.com/advisories/netty-before-4.2.18-final-qpackencoder-unbounded-memory-retention",
       "source": "NVD",
       "time": "2026-09-27 02:12:31"
-    },
-    {
-      "cve_id": "CVE-2026-100657",
-      "title": "高危漏洞: CVE-2026-100657 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty's STOMP codec (io.netty:netty-codec-stomp) contains a ByteBuf leak in StompSubframeDecoder. Once a frame's declared content-length has been fully read, the decoder allocates a chunk buffer from the channel allocator and parks it in an instance field while waiting for the single NUL byte that terminates the frame. If that byte never arrives, the buffer is never released: the replay Signal thrown by skipNullCharacter extends Error rather than Exception, so the decoder's catch(Exception) release path does not run, and StompSubframeDecoder overrides neither handlerRemoved0 nor channelInactive, so the buffer also survives channel teardown. A remote peer can leak one allocator buffer per connection by sending a complete, well-formed frame body and withholding its terminating NUL byte; with the default pooled allocator the memory is never returned to the pool or reclaimed by garbage collection, so the leak accumulates for the lifetime of the process and can lead to memory exhaustion. This affects versions up to and including 4.1.137.Final and versions 4.2.0.Final through 4.2.17.Final; it is fixed in 4.1.138.Final and 4.2.18.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-ghg5-c4jg-8q5j\nhttps://www.vulncheck.com/advisories/netty-before-4.1.138-final-bytebuf-leak-in-stompsubframedecoder",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:24"
-    },
-    {
-      "cve_id": "CVE-2026-100656",
-      "title": "高危漏洞: CVE-2026-100656 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-09-26 22:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Netty (io.netty:netty-codec-http) contains an unbounded per-connection queue growth flaw in HttpServerCodec. The codec tracks the HTTP method of each still-unanswered pipelined request; the first 32 entries are bit-packed into a single long, but every additional entry is appended to methodOverflowQueue, an ArrayDeque with no size limit and no rejection path. A remote, unauthenticated attacker who pipelines HTTP/1.1 requests on a single connection while withholding reads on their own end (preventing responses from being flushed) can grow this queue without bound, causing unbounded heap growth and denial of service. Affected versions are 4.2.0.Final through 4.2.17.Final and all releases up to and including 4.1.137.Final; the issue is fixed in 4.2.18.Final and 4.1.138.Final.",
-      "refs": "https://github.com/netty/netty/security/advisories/GHSA-pvjx-v7vp-62vq\nhttps://www.vulncheck.com/advisories/netty-httpservercodec-unbounded-queue-growth-via-http-1.1-pipelining",
-      "source": "NVD",
-      "time": "2026-09-27 02:12:17"
     }
   ]
 }
