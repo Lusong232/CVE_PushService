@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-97024",
+      "title": "高危漏洞: CVE-2026-97024 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-09-29 12:18:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
+      "description": "A path traversal vulnerability in Flatpak's handling of the files/etc directory during app deployment allows a malicious Flatpak app to cause certain host system files (such as passwd, group, machine-id, or resolv.conf) to be emptied or replaced with a symlink when the app is installed or upgraded. In system-wide installations, the write is performed as root.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-97024\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2542625\nhttps://github.com/flatpak/flatpak/security/advisories/GHSA-8xgq-v545-vgvf",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:50"
+    },
+    {
+      "cve_id": "CVE-2026-102422",
+      "title": "高危漏洞: CVE-2026-102422 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-09-29 12:17:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "shell-quote's `quote()` function emits a `{ comment }` token as `#` followed by its text, which comments out the rest of the shell line, including the opening quote of any later string token. A line terminator (\\n, \\r, U+2028, U+2029) in that later string therefore ends the comment, and the rest of the string is parsed as shell input: `quote(['echo', 'ok', { comment: 'x' }, 'a\\nid;#'])` runs `id` in sh, bash, dash, ksh and zsh. `parse()` emits a comment token for a `#` in the middle of a word (for example `http://example.com/#frag`), so callers that combine `parse()` output with another untrusted string, such as `quote(parse(untrustedCommand).concat(untrustedArg))`, are affected. The fix for CVE-2026-9277 rejected line terminators in the comment's own text, but not in the tokens after it. Fixed in 1.11.0: `quote()` throws a `TypeError` when a string after a `{ comment }` token contains a line terminator.",
+      "refs": "https://github.com/ljharb/shell-quote\nhttps://github.com/ljharb/shell-quote/commit/6002b2ed90c6b83095eb272b6b0adaf3a172b0bc\nhttps://github.com/ljharb/shell-quote/security/advisories/GHSA-pqg4-j6r4-53mv",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:46"
+    },
+    {
+      "cve_id": "CVE-2026-102249",
+      "title": "高危漏洞: CVE-2026-102249 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-29 12:17:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in REBUILD up to 4.4.11. This vulnerability affects unknown code of the file /commons/file-editor-save. The manipulation of the argument url/fileKey results in missing authorization. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/ASantsSec/CVE/issues/26\nhttps://vuldb.com/cve/CVE-2026-102249\nhttps://vuldb.com/submit/933733",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:41"
+    },
+    {
+      "cve_id": "CVE-2026-102248",
+      "title": "高危漏洞: CVE-2026-102248 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-29 12:17:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in Rebuild up to 4.4.7/4.5.0-beta5. This affects an unknown part of the file /user/login of the component Login Endpoint. The manipulation leads to improper authentication. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/ASantsSec/CVE/issues/25\nhttps://vuldb.com/cve/CVE-2026-102248\nhttps://vuldb.com/submit/933708",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:34"
+    },
+    {
+      "cve_id": "CVE-2026-102245",
+      "title": "高危漏洞: CVE-2026-102245 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-29 12:17:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A weakness has been identified in MODSetter SurfSense up to 2.0.3. The affected element is an unknown function of the file surfsense_backend/app/routes/circleback_webhook_route.py of the component circleback Endpoint. Executing a manipulation can lead to missing authentication. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/DReazer/1e476832e48bcdb2b4f732689dfeac0c\nhttps://vuldb.com/cve/CVE-2026-102245\nhttps://vuldb.com/submit/933653",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:29"
+    },
+    {
+      "cve_id": "CVE-2026-102243",
+      "title": "高危漏洞: CVE-2026-102243 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-09-29 11:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in MODSetter SurfSense up to 2.0.3. This issue affects some unknown processing of the file /api/search-source/connectors/mcp/test of the component MCP Connector Integration. Such manipulation leads to command injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/DReazer/81504d373f4e32206dc885d3c415e278\nhttps://vuldb.com/cve/CVE-2026-102243\nhttps://vuldb.com/submit/933323",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:25"
+    },
+    {
+      "cve_id": "CVE-2026-96326",
+      "title": "高危漏洞: CVE-2026-96326 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-09-29 10:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The HT Contact Form – Drag & Drop Form Builder for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Rich Text Editor Field in all versions up to, and including, 2.10.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3714946/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/782bcc9b-222e-4fee-a9c4-563e64dda1fd?source=cve",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:20"
+    },
+    {
+      "cve_id": "CVE-2026-102240",
+      "title": "高危漏洞: CVE-2026-102240 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-09-29 10:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Netcore NAP930 0.1.241010.141410. This affects the function eval of the file /www/cgi-bin/network_tools of the component Network Tools CGI. The manipulation of the argument sid results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NAP930%20V0.1.241010.141410%20Router/NAP930_network_tools_command_injection.md\nhttps://vuldb.com/cve/CVE-2026-102240\nhttps://vuldb.com/submit/931247",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:15"
+    },
+    {
+      "cve_id": "CVE-2026-101878",
+      "title": "高危漏洞: CVE-2026-101878 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-09-29 10:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Bitwarden Server 2025.6.0 before 2026.5.0 declares the @ExternalId parameter of the User_ReadBySsoUserOrganizationIdExternalId stored procedure as NVARCHAR(50) while the column it queries stores NVARCHAR(300), silently truncating the SSO login identifier on SQL Server deployments and allowing a user whose identity-provider identifier begins with another organization member's full 50-character identifier to authenticate as that member and obtain a victim-scoped access token.",
+      "refs": "https://github.com/bitwarden/server/commit/27ae3d5455f723975fac03819eaeba8710666bc4\nhttps://github.com/bitwarden/server/pull/7501\nhttps://github.com/bitwarden/server/releases/tag/v2026.5.0",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:11"
+    },
+    {
+      "cve_id": "CVE-2026-101860",
+      "title": "高危漏洞: CVE-2026-101860 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-09-29 10:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "A vulnerability was found in RaspAP raspap-webgui up to 3.5.5. Affected by this issue is the function PluginInstaller::addSudoers of the file src/RaspAP/Plugins/PluginInstaller.php of the component sudo Configuration. Performing a manipulation results in improper privilege management. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/simyat/10422042d6d5225b2beb87754de4b68c\nhttps://vuldb.com/cve/CVE-2026-101860\nhttps://vuldb.com/submit/930259",
+      "source": "NVD",
+      "time": "2026-09-29 17:16:07"
+    },
+    {
+      "cve_id": "CVE-2026-101354",
+      "title": "高危漏洞: CVE-2026-101354 (CVSS 9.6)",
+      "cvss_score": 9.6,
+      "published_date": "2026-09-29 10:16:53",
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A security flaw has been discovered in FAST FAC1203R 20200116_2.0.4. The affected element is the function _tWlanTask of the component MmtAtePrase Parser. Performing a manipulation results in stack-based buffer overflow. The attacker must have access to the local network to execute the attack. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1203R-twlantask-MmtAtePrase-stack-overflow(1)/vul-find-FAST_FAC1203R-twlantask-MmtAtePrase-stack-overflow\nhttps://vuldb.com/cve/CVE-2026-101354\nhttps://vuldb.com/submit/927238",
+      "source": "NVD",
+      "time": "2026-09-29 17:15:59"
+    },
+    {
+      "cve_id": "CVE-2026-101281",
+      "title": "高危漏洞: CVE-2026-101281 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-29 09:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in Trusted Domain Project OpenDMARC up to 1.4.2. Affected by this vulnerability is the function opendmarc_sp2_find_mailfrom_domain of the file libopendmarc/opendmarc_spf.c of the component SPF Macro Handler. This manipulation causes improper authentication. The attack is possible to be carried out remotely. The exploit has been published and may be used. Patch name: c48a74c758677fc5272a73eff15ffdbf8afda1a6. Applying a patch is the recommended action to fix this issue.",
+      "refs": "https://github.com/trusteddomainproject/OpenDMARC/commit/c48a74c758677fc5272a73eff15ffdbf8afda1a6\nhttps://github.com/trusteddomainproject/OpenDMARC/issues/262\nhttps://github.com/trusteddomainproject/OpenDMARC/pull/328",
+      "source": "NVD",
+      "time": "2026-09-29 17:15:55"
+    },
+    {
+      "cve_id": "CVE-2026-101280",
+      "title": "高危漏洞: CVE-2026-101280 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-09-29 09:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Trusted Domain Project OpenDMARC up to 1.4.2. Affected is the function opendmarc_policy_query_dmarc of the component Multi-Record Set Handler. The manipulation results in authentication bypass by spoofing. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-101280\nhttps://vuldb.com/submit/918282\nhttps://vuldb.com/vuln/411037",
+      "source": "NVD",
+      "time": "2026-09-29 17:15:51"
+    },
+    {
+      "cve_id": "CVE-2026-102361",
+      "title": "高危漏洞: CVE-2026-102361 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-29 08:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "mall4j through 4.0 contains a missing authentication vulnerability in the PUT /user/updatePwd endpoint that allows unauthenticated attackers to reset any storefront account password. Attackers can supply a target username in the request body to overwrite passwords without verification, enabling account takeover and access to orders and personal data.",
+      "refs": "https://github.com/LinYuanyi1/cve-request-poc/blob/114b3f0d149e50a7678f591bf8043399fc9ac96c/mall4j/A01_updatepwd_account_takeover.py\nhttps://github.com/gz-yami/mall4j\nhttps://github.com/gz-yami/mall4j/blob/ffc672fc1aa4320ce02d0b93853bb456ae0a4dae/yami-shop-api/src/main/java/com/yami/shop/api/controller/UserRegisterController.java#L78-L100",
+      "source": "NVD",
+      "time": "2026-09-29 17:15:47"
+    },
+    {
+      "cve_id": "CVE-2026-101264",
+      "title": "高危漏洞: CVE-2026-101264 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-29 08:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was determined in Ziroom ZHOME A0101 1.0.1.0. Impacted is an unknown function of the file /api/ZRnetwork/set_passwd. This manipulation of the argument password1 causes command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/waltz-sketch/Ziroom/blob/main/set_passwd_password1_command_injection.md\nhttps://vuldb.com/cve/CVE-2026-101264\nhttps://vuldb.com/submit/914646",
+      "source": "NVD",
+      "time": "2026-09-29 17:15:42"
+    },
+    {
+      "cve_id": "CVE-2026-101263",
+      "title": "高危漏洞: CVE-2026-101263 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-09-29 08:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was found in Ziroom ZHOME A0101 1.0.1.0. This issue affects some unknown processing of the file /api/ZRQos/set_online_client. The manipulation of the argument mac results in command injection. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_mac_command_injection.md\nhttps://vuldb.com/cve/CVE-2026-101263\nhttps://vuldb.com/submit/914645",
+      "source": "NVD",
+      "time": "2026-09-29 17:15:35"
+    },
+    {
       "cve_id": "CVE-2026-102335",
       "title": "高危漏洞: CVE-2026-102335 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -923,182 +1099,6 @@
       "refs": "https://github.com/apache/roller/pull/167\nhttps://lists.apache.org/thread/db5zl0wrf2c888qwkqmxymddfjc594q8\nhttp://www.openwall.com/lists/oss-security/2026/09/25/13",
       "source": "NVD",
       "time": "2026-09-29 02:57:38"
-    },
-    {
-      "cve_id": "CVE-2026-82379",
-      "title": "高危漏洞: CVE-2026-82379 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-09-28 16:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "Authentication Bypass by Capture-replay in Apache Roller 6.1.5 allows an attacker who captures a valid WSSE digest authentication header to replay it and gain the victim's AtomPub authority, because the authentication does not enforce nonce uniqueness or timestamp freshness. Only installations that enable the non-default AtomPub API with WSSE authentication and plaintext-compatible password storage are affected. Users are recommended to upgrade to Apache Roller 6.1.6 or later, which removes WSSE as an AtomPub authentication method; existing installations configured for WSSE fail closed until an administrator explicitly selects a supported authentication method.",
-      "refs": "https://github.com/apache/roller/pull/166\nhttps://lists.apache.org/thread/bg5r225c3z4148z6kf7s3fwwgrs2lx02\nhttp://www.openwall.com/lists/oss-security/2026/09/25/12",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:33"
-    },
-    {
-      "cve_id": "CVE-2026-82378",
-      "title": "高危漏洞: CVE-2026-82378 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-09-28 16:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Incorrect Authorization in the OAuth 1.0a authorization endpoint of Apache Roller 6.1.5 allows an unauthenticated remote attacker who learns an outstanding request token for a configured site-wide consumer to bind that token to an arbitrary user account, including an administrator, by submitting an unsigned authorization request. The endpoint derives the authorizing identity from a request-supplied value rather than the authenticated session. Only installations that configure an OAuth 1.0a site-wide consumer are affected, and exploitation requires knowledge of one of its outstanding request tokens. Users are recommended to upgrade to Apache Roller 6.1.6 or later, which binds authorization to the logged-in session.",
-      "refs": "https://github.com/apache/roller/pull/165\nhttps://lists.apache.org/thread/fq512gy70zj9yx8v4c4zm54x43wqb04b\nhttp://www.openwall.com/lists/oss-security/2026/09/25/11",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:29"
-    },
-    {
-      "cve_id": "CVE-2026-82377",
-      "title": "高危漏洞: CVE-2026-82377 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-09-28 16:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Missing Authorization in Apache Roller 6.1.5 allows an authenticated user to read, modify, or delete weblog content belonging to other weblogs through the legacy XML-RPC Blogger and MetaWeblog APIs, because the handlers authenticate the caller but do not verify the caller's permission on the weblog or entry actually affected. Only installations that enable the non-default global XML-RPC setting are affected; the per-weblog API flag defaults to enabled for UI-created weblogs. Users are recommended to upgrade to Apache Roller 6.1.6 or later, which applies an explicit per-method permission check, or to keep the XML-RPC feature disabled.",
-      "refs": "https://github.com/apache/roller/pull/164\nhttps://lists.apache.org/thread/phxx56n0w6jjqzto2my3ot8hto0qjvn8\nhttp://www.openwall.com/lists/oss-security/2026/09/25/10",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:25"
-    },
-    {
-      "cve_id": "CVE-2026-82376",
-      "title": "高危漏洞: CVE-2026-82376 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-09-28 16:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "description": "Improper Restriction of XML External Entity Reference in Apache Roller 6.1.5 allows a user with entry-editing rights on a weblog to cause the server to parse an attacker-influenced trackback response with an XML parser that does not disable external entity resolution, leading to disclosure of files readable by the Roller process. The Trackback control is hidden in the standard UI, but its action remains directly reachable, and no non-default server configuration is required. Users are recommended to upgrade to Apache Roller 6.1.6 or later, which removes the outbound trackback response parser.",
-      "refs": "https://github.com/apache/roller/pull/163\nhttps://lists.apache.org/thread/dxqmd3873q87h06xpjjc9lnvp4jblz0l\nhttp://www.openwall.com/lists/oss-security/2026/09/25/9",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:20"
-    },
-    {
-      "cve_id": "CVE-2026-82375",
-      "title": "高危漏洞: CVE-2026-82375 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-09-28 16:16:41",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
-      "description": "Server-Side Request Forgery (SSRF) in Apache Roller 6.1.5 allows an authenticated user with entry-editing rights on a weblog to cause outbound HTTP requests to attacker-chosen destinations through legacy outbound Trackback and entry enclosure handling. The Trackback control is hidden in the standard UI, but its action remains directly reachable; the enclosure path is relevant only when an author supplies an enclosure URL. No non-default server configuration is required, and the default empty Trackback allow-list permits all destinations. Requests can reach loopback and private-network addresses, while enclosure handling exposes response status, content type, and length. Users are recommended to upgrade to Apache Roller 6.1.6 or later, which removes the outbound trackback action and stops dereferencing enclosure URLs.",
-      "refs": "https://github.com/apache/roller/pull/163\nhttps://github.com/apache/roller/pull/175\nhttps://lists.apache.org/thread/0p7kc0rjcpj3rf00cp96zfkfrz0ns4ny",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:12"
-    },
-    {
-      "cve_id": "CVE-2026-82348",
-      "title": "高危漏洞: CVE-2026-82348 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-09-28 16:16:40",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:H/A:L",
-      "description": "Authorization Bypass Through User-Controlled Key in Apache Roller 6.1.5 allows an authenticated user with authoring rights on one weblog to read, modify, or delete resources belonging to another weblog through unscoped identifier-based lookups. This affects multi-user installations where users are intended to be isolated between weblogs; no optional feature or non-default configuration is required. A user with administrator rights on their weblog can also overwrite another weblog's Velocity template, whose content is evaluated when the victim weblog renders. Users are recommended to upgrade to Apache Roller 6.1.6 or later, which scopes authoring resource lookups to the acting weblog.",
-      "refs": "https://github.com/apache/roller/pull/162\nhttps://lists.apache.org/thread/3h7zk8dhbt8fj5zdt8cjghx0b807wgy1\nhttp://www.openwall.com/lists/oss-security/2026/09/25/7",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:08"
-    },
-    {
-      "cve_id": "CVE-2026-101013",
-      "title": "高危漏洞: CVE-2026-101013 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-28 16:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A security vulnerability has been detected in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. Affected is an unknown function of the file updateresultdetails.php. Such manipulation of the argument editid leads to sql injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/vinniboy021-blip/Advisory/blob/main/updateresultdetails-sqli.md\nhttps://vuldb.com/cve/CVE-2026-101013\nhttps://vuldb.com/submit/915507",
-      "source": "NVD",
-      "time": "2026-09-29 02:57:03"
-    },
-    {
-      "cve_id": "CVE-2026-101012",
-      "title": "高危漏洞: CVE-2026-101012 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-28 16:16:37",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A weakness has been identified in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. This impacts an unknown function of the file makeresult.php. This manipulation of the argument makeid causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/vinniboy021-blip/Advisory/blob/main/makeresult-sqli.md\nhttps://vuldb.com/cve/CVE-2026-101012\nhttps://vuldb.com/submit/915506",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:58"
-    },
-    {
-      "cve_id": "CVE-2026-101009",
-      "title": "高危漏洞: CVE-2026-101009 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-09-28 15:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in aaPanel BaoTa up to 11.8.0. The affected element is the function panelTask.bt_task._unzip of the file /www/server/panel/class/panelTask.py of the component Unzip Handler. Executing a manipulation of the argument Password can lead to os command injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/zuesdevil/ba0b8aa9f7516ea0e57b173146ce5408\nhttps://vuldb.com/cve/CVE-2026-101009\nhttps://vuldb.com/submit/922625",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:54"
-    },
-    {
-      "cve_id": "CVE-2026-101008",
-      "title": "高危漏洞: CVE-2026-101008 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-09-28 15:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was found in aaPanel BaoTa up to 11.8.0. Impacted is the function merge_split_file of the file /www/server/panel/class/files.py of the component File Merge Handler. Performing a manipulation of the argument split_file_path results in command injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/zuesdevil/56b73463ffe3390f670a5c031764a134\nhttps://vuldb.com/cve/CVE-2026-101008\nhttps://vuldb.com/submit/922338",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:50"
-    },
-    {
-      "cve_id": "CVE-2026-101007",
-      "title": "高危漏洞: CVE-2026-101007 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-09-28 15:17:20",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability has been found in aaPanel BaoTa up to 11.8.0. This issue affects the function InputSql of the file class/database.py of the component Database Backup Handler. Such manipulation of the argument Password leads to os command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://gist.github.com/zuesdevil/42ac3ee7ab5554b31784da14f175e029\nhttps://vuldb.com/cve/CVE-2026-101007\nhttps://vuldb.com/submit/922302",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:45"
-    },
-    {
-      "cve_id": "CVE-2026-101005",
-      "title": "高危漏洞: CVE-2026-101005 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-28 15:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was detected in October CMS up to 4.3.4. This affects the function validateExternalImageHost of the file System/Classes/ResizeImages.php of the component SSRF Protection. The manipulation results in server-side request forgery. The attack may be launched remotely. The exploit is now public and may be used. Upgrading to version 4.3.5 is able to mitigate this issue. You should upgrade the affected component.",
-      "refs": "https://github.com/0xGenesi/CVE/blob/main/October_CMS_SSRF_IPv6_Mapped_IPv4_Bypass.md\nhttps://github.com/octobercms/october/releases/tag/v4.3.5\nhttps://github.com/octobercms/october/security/advisories/GHSA-j2j7-7m99-6226",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:38"
-    },
-    {
-      "cve_id": "CVE-2026-101002",
-      "title": "高危漏洞: CVE-2026-101002 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-09-28 14:16:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A security flaw has been discovered in Netcore NBR200V2 1.3.241127.071246. Affected is the function system of the file /usr/bin/network_tools of the component Tools Ping Handler. Performing a manipulation of the argument url results in os command injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NBR200V2_V1.3.241127.071246%20Router/Netcore_NBR200V2_tools_ping_command_injection.md\nhttps://vuldb.com/cve/CVE-2026-101002\nhttps://vuldb.com/submit/920180",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:33"
-    },
-    {
-      "cve_id": "CVE-2026-101001",
-      "title": "高危漏洞: CVE-2026-101001 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-09-28 13:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was identified in Netcore NBR200V2 1.3.241127.071246. This impacts the function eval of the file /www/cgi-bin/network_tools of the component Web Management Interface. Such manipulation of the argument QUERY_STRING leads to os command injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NBR200V2_V1.3.241127.071246%20Router/Netcore_NBR200V2_network_tools_command_injection.md\nhttps://vuldb.com/cve/CVE-2026-101001\nhttps://vuldb.com/submit/920178",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:29"
-    },
-    {
-      "cve_id": "CVE-2026-101000",
-      "title": "高危漏洞: CVE-2026-101000 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-09-28 13:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "A vulnerability was determined in Netcore NBR100V2 1.3.240614.030928. This affects the function uci.apply of the file /usr/share/rpcd/acl.d/unauthenticated.json of the component ACL Handler. This manipulation of the argument section causes missing authorization. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-      "refs": "https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NBR100V2_V1.3.240614.030928%20Router/netcore_nbr100v2_uci_config_tamper.md\nhttps://vuldb.com/cve/CVE-2026-101000\nhttps://vuldb.com/submit/919999",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:23"
-    },
-    {
-      "cve_id": "CVE-2026-100909",
-      "title": "高危漏洞: CVE-2026-100909 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-09-28 13:16:30",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
-      "description": "A vulnerability was found in OctoberCMS up to 4.1.19/4.2.25/4.3.4. The impacted element is the function getSourcePathForResize of the file modules/system/classes/ResizeImages.php. The manipulation of the argument realSourcePath results in server-side request forgery. The attack may be performed from remote. The exploit has been made public and could be used. Upgrading to version 4.3.5 and 4.4.0 is sufficient to resolve this issue. The patch is identified as 0e9736aa2c6d6bd3d60ff6ef9e0b4d32ce387f58. The affected component should be upgraded.",
-      "refs": "https://github.com/0xGenesi/CVE/blob/main/October_CMS_Stream_Wrapper_Injection.md\nhttps://github.com/octobercms/october/commit/0e9736aa2c6d6bd3d60ff6ef9e0b4d32ce387f58\nhttps://github.com/octobercms/october/releases/tag/v4.3.5",
-      "source": "NVD",
-      "time": "2026-09-29 02:56:18"
     }
   ]
 }
