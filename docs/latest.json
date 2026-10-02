@@ -1,6 +1,160 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-96940",
+      "title": "高危漏洞: CVE-2026-96940 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-03 03:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Weak authorization in Microsoft Exchange Server allows an authenticated attacker to elevate privileges over a network.",
+      "refs": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96940",
+      "source": "NVD",
+      "time": "2026-10-03 05:35:13"
+    },
+    {
+      "cve_id": "CVE-2026-103958",
+      "title": "高危漏洞: CVE-2026-103958 (CVSS 7.6)",
+      "cvss_score": 7.6,
+      "published_date": "2026-10-03 03:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
+      "description": "Server-side request forgery in the tool server and remote agent connection handling in Loom for AWS before 1.7.0 might allow an authenticated remote user to obtain the credentials of the application's own container role and to read responses from arbitrary internal network locations, via a crafted connection address supplied when registering, updating or testing a tool server or remote agent.\n\n\n\nTo remediate this issue, users should upgrade to version 1.7.0 or later.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-124-aws/\nhttps://github.com/awslabs/loom/releases/tag/v1.7.0",
+      "source": "NVD",
+      "time": "2026-10-03 05:35:06"
+    },
+    {
+      "cve_id": "CVE-2026-103956",
+      "title": "高危漏洞: CVE-2026-103956 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-10-03 03:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Missing authentication for critical function in the authentication dependency in Loom for AWS before 1.6.1 allowed remote actors to obtain super-admin authority over the agent control plane, including registering tool servers, reading stored integration credentials, and rewriting the IAM role policies attached to managed agent roles, via any request to the application API in a deployment where no identity provider is configured.\n\n\n\nTo remediate this issue, users should upgrade to version 1.6.1 or later.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-124-aws/\nhttps://github.com/awslabs/loom/releases/tag/v1.6.1",
+      "source": "NVD",
+      "time": "2026-10-03 05:35:02"
+    },
+    {
+      "cve_id": "CVE-2023-54405",
+      "title": "高危漏洞: CVE-2023-54405 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-03 03:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "H3C CVM, the Cloud Virtualization Management component of the H3C CAS cloud platform, contains an unauthenticated arbitrary file upload vulnerability in the /cas/fileUpload/upload endpoint that allows remote attackers to write arbitrary files by manipulating the caller-supplied token parameter without restricting path traversal or file type. Attackers can exploit the path traversal in the token parameter to upload a malicious JSP file into a web-accessible directory and then request it to achieve remote code execution as the web-server user. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.",
+      "refs": "https://blog.csdn.net/qq_41904294/article/details/134697278\nhttps://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/h3c-cvm-arbitrary-file-upload.yaml\nhttps://www.h3c.com/en/Support/Resource_Center/EN/Cloud_Computing/Catalog/H3C_CAS/H3C_CAS/Technical_Documents/Configure___Deploy/User_Manuals/H3C_CAS_CVM_UG_E0785-21554/?CHID=1087104",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:58"
+    },
+    {
+      "cve_id": "CVE-2020-37278",
+      "title": "高危漏洞: CVE-2020-37278 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 03:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Weaver e-Bridge contains an unauthenticated arbitrary file read vulnerability that allows remote attackers to access arbitrary files on the host system by supplying a file: URL to the downloadUrl parameter of the saveYZJFile endpoint. Attackers can exploit this flaw to read sensitive files such as /etc/passwd or configuration and credential files, and the same endpoint's support for http(s) URLs also enables server-side request forgery against internal network resources. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-17.",
+      "refs": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/weaver/weaver-ebridge-lfi.yaml\nhttps://www.vulncheck.com/advisories/weaver-e-bridge-unauthenticated-arbitrary-file-read-via-saveyzjfile\nhttps://www.weaver.com.cn/cs/ebridge_full_log_en.html",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:54"
+    },
+    {
+      "cve_id": "CVE-2014-125130",
+      "title": "高危漏洞: CVE-2014-125130 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 03:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "CodeArt Google MP3 Audio Player plugin (google-mp3-audio-player) for WordPress through 1.0.11 contains an unauthenticated arbitrary file read vulnerability that allows remote attackers to retrieve sensitive files by supplying a path-traversal payload in the file parameter of direct_download.php. Attackers can request paths ../../wp-config.php without authentication to download configuration files containing database credentials and secret keys, leading to full site compromise. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-19.",
+      "refs": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/wordpress/wp-googlemp3-lfi.yaml\nhttps://patchstack.com/database/wordpress/plugin/google-mp3-audio-player/vulnerability/wordpress-codeart-google-mp3-player-plugin-file-disclosure-download\nhttps://www.exploit-db.com/exploits/35460",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:49"
+    },
+    {
+      "cve_id": "CVE-2026-104861",
+      "title": "高危漏洞: CVE-2026-104861 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 02:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "probe-image-size gets image dimensions without downloading the entire file. Prior to 7.4.0, lib/parse_sync/svg.js and lib/parse_stream/svg.js use the searching regular expression /<[-_.:a-zA-Z0-9][^>]*>/, which repeatedly scans to the end of input when attacker-controlled data contains many less-than characters without a closing greater-than character. The synchronous parser converts and scans the full supplied buffer without an input cap, while the streaming parser reparses the complete accumulated SVG prefix for every received chunk. The probe.sync(), probe(stream), and probe(url) entry points can therefore block the Node.js event loop at full CPU, and attacker-controlled chunking can amplify the streaming cost. This issue is fixed in version 7.4.0.",
+      "refs": "https://github.com/nodeca/probe-image-size/commit/60cc96ac0b671e79e328213d0a8e831312b09e84\nhttps://github.com/nodeca/probe-image-size/commit/9b74656d6f973cc59ea2ab1375c0d88390a402ad\nhttps://github.com/nodeca/probe-image-size/commit/c032aefabdecf5cb50548ab9ba175db56353078f",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:45"
+    },
+    {
+      "cve_id": "CVE-2026-102795",
+      "title": "高危漏洞: CVE-2026-102795 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-10-03 02:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "description": "Improper Access Control vulnerability in Apache Traffic Server.\n\n\n\nThis issue affects Apache Traffic Server: from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3.\n\n\n\nUsers are recommended to upgrade to version 9.2.15 or 10.1.4, which fixes the issue.\n\n\n\nThis CVE supersedes CVE-2026-41920, whose record listed the affected 9.x versions as 9.0.0 through 9.1.14 and the fixed version as 9.1.15. All 9.2.x releases before 9.2.15 are affected.",
+      "refs": "https://lists.apache.org/thread.html/qcxzvcbbln68hd0j08pdnjdj4r991nhd\nhttps://www.cve.org/CVERecord?id=CVE-2026-41920",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:41"
+    },
+    {
+      "cve_id": "CVE-2026-104851",
+      "title": "高危漏洞: CVE-2026-104851 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-03 01:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "fsspec is a specification and Python implementation framework for filesystem interfaces. From 0.9.0 until 2026.6.0, fsspec.implementations.reference.ReferenceFileSystem evaluates fields from Kerchunk reference JSON documents through unrestricted jinja2.Template(...).render(...) calls in _process_references1._render_jinja, _process_templates, and _process_gen in fsspec/implementations/reference.py. A document supplied inline or fetched from an attacker-controlled URL can provide template expressions that execute Python code when the reference filesystem is opened, including through consumers such as xarray, before referenced data is read. The _process_gen path is reached whenever a document includes a gen array, while the other paths depend on template-related options and values. This issue is fixed in version 2026.6.0.",
+      "refs": "https://github.com/fsspec/filesystem_spec/commit/86438783f93b1398ef245b92f0e6063b445b611c\nhttps://github.com/fsspec/filesystem_spec/commit/a1c16ab3f07f354aa371c38f7b1b07ea7fd4c5c8\nhttps://github.com/fsspec/filesystem_spec/pull/2029",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:33"
+    },
+    {
+      "cve_id": "CVE-2026-104846",
+      "title": "高危漏洞: CVE-2026-104846 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-03 00:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. From 0.12.0 until 1.6.2, fromJSON deserialization of a fulfilled Promise control node can pass a plugin-produced callable-bearing thenable to a native Promise resolver. ECMAScript thenable assimilation then invokes the callable unexpectedly, allowing attacker-controlled JSON to trigger code in applications using plugin-capable Seroval releases. This path bypasses the Promise resolver type-confusion remediation in version 1.5.3 for CVE-2026-59940 because the unexpected invocation occurs through native Promise settlement after the referenced value is deserialized. This issue is fixed in version 1.6.2.",
+      "refs": "https://github.com/lxsmnsyc/seroval/commit/f1ffcc96d259f9b5b3d71feb262b58240c90e7b7\nhttps://github.com/lxsmnsyc/seroval/security/advisories/GHSA-p6vx-979v-rg4c",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:29"
+    },
+    {
+      "cve_id": "CVE-2026-104845",
+      "title": "高危漏洞: CVE-2026-104845 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 00:16:47",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. Prior to 1.6.3, deserializeTypedArray in fromJSON and fromCrossJSON trusts a deserialized source value as an ArrayBuffer and does not bound the serialized element count. An attacker can provide a small untrusted JSON object with a large length value, causing the array-like TypedArray constructor to synchronously allocate the selected number of elements and exhaust CPU or memory while starving the event loop. The offset check does not reject the crafted source because source.byteLength is undefined. DataView reaches a similar unchecked cast but throws rather than allocating, and the issue has no identified confidentiality or integrity impact. This issue is fixed in version 1.6.3.",
+      "refs": "https://github.com/lxsmnsyc/seroval/commit/ac0163e420ac7dcbbefac4d069bcefad300a4851\nhttps://github.com/lxsmnsyc/seroval/commit/e54a6f62784b9e48e3a5fa2ab4089ca69fb8996e\nhttps://github.com/lxsmnsyc/seroval/security/advisories/GHSA-jp82-f5mq-hwhp",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:25"
+    },
+    {
+      "cve_id": "CVE-2026-103648",
+      "title": "高危漏洞: CVE-2026-103648 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-10-03 00:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "Path traversal in image-downloader 4.3.0 allows an attacker who can control the download URL to cause downloaded response data to be written outside the configured destination directory.",
+      "refs": "https://gitlab.com/demsking/image-downloader/-/commit/fb4454304276e2439fb19b98836b3ba903b3aaea\nhttps://gitlab.com/demsking/image-downloader/-/work_items/32",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:21"
+    },
+    {
+      "cve_id": "CVE-2026-101104",
+      "title": "高危漏洞: CVE-2026-101104 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-10-03 00:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+      "description": "The Meari IoT Cloud Platform OpenAPI Service is vulnerable to an authorization flaw that allows authenticated users to manipulate the configurations of devices they do not own. This vulnerability enables attackers to perform unauthorized actions, such as altering device settings or triggering unintended behaviors, without verifying ownership or permissions.",
+      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-274-06.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06\nhttps://www.meari.com/en/downLoadCenter",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:16"
+    },
+    {
+      "cve_id": "CVE-2026-103552",
+      "title": "高危漏洞: CVE-2026-103552 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-02 18:17:06",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "Stack Overflow vulnerability in Apache Directory LDAP API.\n\n\n\nBefore binding, a client can send a deeply nested search filter that overflows the stack in the server's decoder.\n\n\n\nThis issue affects Apache Directory LDAP API: from 1.2.0 before 1.2.9.\n\n\n\nUsers are recommended to upgrade to version 1.2.9, which fixes the issue.",
+      "refs": "https://lists.apache.org/thread.html/fn3bwknn57266hx66w9vv6b4k8rfwcx7",
+      "source": "NVD",
+      "time": "2026-10-03 05:34:10"
+    },
+    {
       "cve_id": "CVE-2026-90970",
       "title": "高危漏洞: CVE-2026-90970 (CVSS 9.9)",
       "cvss_score": 9.9,
@@ -945,160 +1099,6 @@
       "refs": "https://github.com/GetSimpleCMS-CE/GetSimpleCMS-CE/security/advisories/GHSA-r7v8-mx29-5q8h\nhttps://github.com/GetSimpleCMS-CE/GetSimpleCMS-CE/security/advisories/GHSA-r7v8-mx29-5q8h",
       "source": "NVD",
       "time": "2026-10-02 17:12:02"
-    },
-    {
-      "cve_id": "CVE-2026-56660",
-      "title": "高危漏洞: CVE-2026-56660 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-10-02 04:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "GetSimple CMS is a content management system (CMS), and GetSimple CMS CE is the community edition of that CMS. Prior to version 1.5, the update handler in UpdateCE.php downloads a ZIP archive and extracts its contents into the web root without validating file types or extraction paths. Because PHP files are written into a web-accessible directory, an attacker who can cause a malicious archive to be processed achieves remote code execution as the web-server user. Entry names are also used unsafely, allowing directory traversal (../) to write files outside the intended extraction directory. This issue has been patched in version 1.5.",
-      "refs": "https://github.com/GetSimpleCMS-CE/GetSimpleCMS-CE/security/advisories/GHSA-q5rx-gppg-768r\nhttps://github.com/GetSimpleCMS-CE/GetSimpleCMS-CE/security/advisories/GHSA-q5rx-gppg-768r",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:58"
-    },
-    {
-      "cve_id": "CVE-2026-54049",
-      "title": "高危漏洞: CVE-2026-54049 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-10-02 04:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Sakai is a Collaboration and Learning Environment (CLE). From versions 23.0 to before 23.5, and versions 25.0 to before 25.3, the Sakai Conversations tool stores topic and post messages without HTML sanitization, and the frontend renders them using LitElement's unsafeHTML() directive, resulting in stored cross-site scripting (XSS). Any authenticated user with access to a site that has the Conversations tool enabled can inject arbitrary HTML and JavaScript that executes in the browsers of all other users who view that topic or post. This issue has been patched in versions 23.5, 25.3, and 26.0.",
-      "refs": "https://github.com/sakaiproject/sakai/commit/2696b4b48cbef2e81512f52f84f7477adff78b27\nhttps://github.com/sakaiproject/sakai/security/advisories/GHSA-w2x5-gv52-9ccv",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:53"
-    },
-    {
-      "cve_id": "CVE-2026-53964",
-      "title": "高危漏洞: CVE-2026-53964 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-02 04:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Document Merge Service is a document template merge service providing an API to manage templates and merge them with given data. Prior to version 9.1.0, a remote code execution (RCE) via server-side template injection (SSTI) allows for user supplied code to be executed in the server's context where it is executed as the document-merge-server user with the UID 901 thus giving an attacker considerable control over the container. The vulnerability is limited to XLSX templates, were the xltpl library uses a npn-sandboxed Jinja environment for the processing of the template. This issue has been patched in version 9.1.0.",
-      "refs": "https://github.com/adfinis/document-merge-service/releases/tag/v9.1.0\nhttps://github.com/adfinis/document-merge-service/security/advisories/GHSA-w47q-945m-q9pc",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:46"
-    },
-    {
-      "cve_id": "CVE-2026-53953",
-      "title": "高危漏洞: CVE-2026-53953 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-10-02 04:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "GetSimple CMS is a content management system (CMS), and GetSimple CMS CE is the community edition of that CMS. In version 3.3.22, the password reset endpoint can be accessed without authentication. When a reset request is submitted for an existing user, the application generates a new temporary password and immediately stores its hash as the user's new password. The temporary password is generated using PHP rand() seeded with microtime(). Because this seed is time-based and has a limited effective search space, an attacker can generate possible reset password candidates. Since the admin login endpoint does not enforce rate limiting or account lockout, these candidates can be tested online until the correct password is found. Successful exploitation may lead to administrator account takeover. At time of publication, there are no publicly available patches.",
-      "refs": "https://github.com/GetSimpleCMS-CE/GetSimpleCMS-CE/security/advisories/GHSA-vvhx-56q2-gcjq",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:42"
-    },
-    {
-      "cve_id": "CVE-2026-104286",
-      "title": "高危漏洞: CVE-2026-104286 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-02 04:17:24",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
-      "refs": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:38"
-    },
-    {
-      "cve_id": "CVE-2026-103484",
-      "title": "高危漏洞: CVE-2026-103484 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-02 04:17:23",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IVFFlat index build in pgvector before 0.8.7 allows a database user to write data out-of-bounds, which can lead to arbitrary code execution.",
-      "refs": "https://github.com/pgvector/pgvector/commit/ee00d39ab30c2a7cf9510abf9288c624d91db156\nhttps://github.com/pgvector/pgvector/issues/1036",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:34"
-    },
-    {
-      "cve_id": "CVE-2026-102667",
-      "title": "高危漏洞: CVE-2026-102667 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-10-02 04:17:21",
-      "vector_string": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Joyland AI app allows an attacker with shared network access to inject JavaScript into content loaded in WebView. Without user-granted permissions, an attacker could access the clipboard, make arbitrary HTTP requests via the Weex 'stream' module, or access app-internal storage.  If the installed app has been granted permissions previously, the attacker can access the entire file system, camera, microphone, and GPS tracking.",
-      "refs": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-275-03.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-1026667",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:29"
-    },
-    {
-      "cve_id": "CVE-2026-102628",
-      "title": "高危漏洞: CVE-2026-102628 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-10-02 04:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
-      "description": "The Cadmos LTI application hosted at cadmos.eummena.io had Laravel debug mode enabled (APP_DEBUG=true, APP_ENV=local) in a publicly accessible environment. An unauthenticated attacker could send a GET request and trigger an unhandled exception, causing Laravel to expose the entire server environment, including all .env configuration variables, in plaintext. Fixed on or before 2026-09-02.",
-      "refs": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/VA-26-275-05.json\nhttps://www.cve.org/CVERecord?id=CVE-2026-102628",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:25"
-    },
-    {
-      "cve_id": "CVE-2026-55232",
-      "title": "高危漏洞: CVE-2026-55232 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-10-02 03:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
-      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to version 1.0.8.6, Vvveb's SSRF guard resolves a host with an IPv4-only function and never inspects IPv6, so any host that lacks an A record passes a private-range check. Editor oEmbed proxy fetches an attacker-supplied URL server side and reflects a response body, so an authenticated admin-panel user (default role site_admin or higher) can read internal-only services and cloud metadata, including IAM credentials, using an IPv6 literal or a domain that carries only an AAAA record. This issue has been patched in version 1.0.8.6.",
-      "refs": "https://github.com/givanz/Vvveb/commit/e27d1ef097a8502c33f8cc94271c948407c5dce3\nhttps://github.com/givanz/Vvveb/releases/tag/1.0.8.6\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-r6g4-5m3x-xrqj",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:21"
-    },
-    {
-      "cve_id": "CVE-2026-55231",
-      "title": "高危漏洞: CVE-2026-55231 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-02 03:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to version 1.0.8.6, a flawed central path sanitizer lets an authenticated admin-panel user who holds backup access (default role site_admin or higher) read and delete arbitrary files on a server. An attacker can recover database credentials from config/db.php, read host files such as /etc/passwd, and delete config/db.php to push a site back into install mode for a full takeover. This issue has been patched in version 1.0.8.6.",
-      "refs": "https://github.com/givanz/Vvveb/releases/tag/1.0.8.6\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-327v-4f9p-5qxq\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-327v-4f9p-5qxq",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:14"
-    },
-    {
-      "cve_id": "CVE-2026-55230",
-      "title": "高危漏洞: CVE-2026-55230 (CVSS 8.7)",
-      "cvss_score": 8.7,
-      "published_date": "2026-10-02 03:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to version 1.0.8.6, Vvveb's HTML sanitizer fails to strip event-handler attributes when a tag carries a greater-than character inside a quoted attribute value. A low-privilege content author (default role author or contributor) can store a payload in post or product content that runs JavaScript in a browser of every visitor and of any administrator who views or previews that content, which opens a path to admin account takeover. This issue has been patched in version 1.0.8.6.",
-      "refs": "https://github.com/givanz/Vvveb/releases/tag/1.0.8.6\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-97xr-82vc-wj2v\nhttps://github.com/givanz/Vvveb/security/advisories/GHSA-97xr-82vc-wj2v",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:10"
-    },
-    {
-      "cve_id": "CVE-2026-55083",
-      "title": "高危漏洞: CVE-2026-55083 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-10-02 03:17:21",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "DHIS2 is a flexible information system for data capture, management, validation, analytics and visualization. From versions 2.42.0 to before 2.42.5.1, and from versions 2.43.0 to before 2.43.0.1, DHIS2 is vulnerable to remote code execution (RCE) via unsafe Java deserialization. This issue has been patched in versions 2.42.5.1, 2.43.0.1, and 2.44.",
-      "refs": "https://github.com/dhis2/dhis2-core/releases/tag/2.42.5.1\nhttps://github.com/dhis2/dhis2-core/releases/tag/2.43.0.1\nhttps://github.com/dhis2/dhis2-core/security/advisories/GHSA-3fr2-wvqx-cmr5",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:06"
-    },
-    {
-      "cve_id": "CVE-2026-15911",
-      "title": "高危漏洞: CVE-2026-15911 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-10-02 03:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Confluent Kafka Python client's HashiCorp Vault KMS integration could allow a remote attacker to obtain sensitive information due to improper TLS certificate validation.",
-      "refs": "https://support.confluent.io/hc/en-us/articles/54133146724244-CONFSA-2026-22-CVE-2026-15911-Confluent-Kafka-Python-Client-Vulnerability-TLS-Certificate-verification-disabled-by-default-in-HashiCorp-Vault-KMS-Integration",
-      "source": "NVD",
-      "time": "2026-10-02 17:11:02"
-    },
-    {
-      "cve_id": "CVE-2026-104059",
-      "title": "高危漏洞: CVE-2026-104059 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-02 03:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "Lektor 3.3.14 and 3.4.0b15 contains a cross-site request forgery vulnerability in the admin API blueprint that allows unauthenticated attackers to perform state-changing actions by sending cross-origin requests without CSRF tokens, Origin/Referer validation, CORS configuration, or Host allowlisting. Attackers can exploit the newattachment, deleterecord, build, clean, and publish endpoints from a malicious web page to write arbitrary files, delete pages, wipe build output, trigger deployment publication, and via DNS rebinding reach read endpoints to disclose data.",
-      "refs": "https://gist.github.com/mansurmavlankulov/c7683e3204e84892e442b0196585d5bb\nhttps://www.vulncheck.com/advisories/lektor-csrf-via-admin-api-endpoints",
-      "source": "NVD",
-      "time": "2026-10-02 17:10:58"
     }
   ]
 }
