@@ -1,6 +1,94 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-97644",
+      "title": "高危漏洞: CVE-2026-97644 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-03 12:18:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Groundhogg — CRM, Newsletters, and Marketing Automation plugin for WordPress is vulnerable to Privilege Escalation via Contact Identity Rebinding in all versions up to, and including, 4.9 The vulnerability exists because the `create_contact` function in the v3 REST endpoint (`POST /gh/v3/contacts`) is gated solely by the `add_contacts` capability and forwards the full request payload — including the security-bearing `user_id` column — into the upsert path of `Contacts_DB::add()`, which bypasses the ownership guard that `Contacts_DB::update()` enforces, allowing an attacker to rebind any existing contact record to an arbitrary WordPress user ID. This makes it possible for authenticated attackers with Sales Representative-level access and above to upsert their own contact row to point to an Administrator's user ID, then invoke the v4 email-test endpoint (`POST /gh/v4/emails/test`) — also accessible to the Sales Representative role via the `send_emails` capability — to generate an `{auto_login_url}` one-time permissions key bound to the rebound contact, and consume that link to call `wp_set_auth_cookie()` and gain a fully authenticated session as the WordPress Administrator.",
+      "refs": "https://plugins.trac.wordpress.org/browser/groundhogg/tags/4.8.3/api/v3/contacts-api.php#L373\nhttps://plugins.trac.wordpress.org/browser/groundhogg/tags/4.8.3/api/v4/emails-api.php#L571\nhttps://plugins.trac.wordpress.org/browser/groundhogg/tags/4.8.3/db/contacts.php#L205",
+      "source": "NVD",
+      "time": "2026-10-03 16:43:20"
+    },
+    {
+      "cve_id": "CVE-2026-92977",
+      "title": "高危漏洞: CVE-2026-92977 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-03 12:18:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Real Cookie Banner: GDPR & ePrivacy Cookie Consent plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment in all versions up to, and including, 5.3.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Malicious script payloads placed in the title attribute of an anchor tag survive WordPress's comment kses filter at save time, as the payload is only promoted to executable HTML attributes when the plugin's page-wide regex strips the closing quote delimiter at render time; exploitability is therefore subject to the standard comment moderation workflow before the comment is publicly displayed.",
+      "refs": "https://plugins.trac.wordpress.org/browser/real-cookie-banner/tags/5.3.0/inc/view/Blocker.php#L213\nhttps://plugins.trac.wordpress.org/browser/real-cookie-banner/tags/5.3.0/inc/view/Blocker.php#L233\nhttps://plugins.trac.wordpress.org/browser/real-cookie-banner/tags/5.3.0/vendor/devowl-wp/fast-html-tag/src/FastHtmlTag.php#L166",
+      "source": "NVD",
+      "time": "2026-10-03 16:43:12"
+    },
+    {
+      "cve_id": "CVE-2026-92536",
+      "title": "高危漏洞: CVE-2026-92536 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-03 12:18:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.17.4 via the get_user_profile_structure. This makes it possible for authenticated attackers, with subscriber-level access and above, to extract other users' email addresses, login names, and registration dates via the Member Directory's per-row user rebinding when attacker-controlled base64 payloads in the [pp-custom-html] shortcode invoke [profile-email], [profile-username], and [profile-date-registered]. When the WordPress users_can_register option is enabled, unauthenticated attackers can also exploit this vulnerability by supplying the split shortcode fragments through the plugin's own registration handler, which processes the reg_nickname and reg_bio fields without a nonce requirement.",
+      "refs": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.17.4/src/Classes/EditUserProfile.php#L342\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.17.4/src/Classes/RegistrationAuth.php#L131\nhttps://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.17.4/src/Functions/GlobalFunctions.php#L1715",
+      "source": "NVD",
+      "time": "2026-10-03 16:43:06"
+    },
+    {
+      "cve_id": "CVE-2026-96270",
+      "title": "高危漏洞: CVE-2026-96270 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-03 11:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+      "description": "The Ultimate Member – User Profile, Registration, Login, Member Directory, Content Restriction & Membership Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form_id' parameter in all versions up to, and including, 2.13.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload is stored in the registering user's 'submitted' usermeta via update_user_meta() and is only triggered when an administrator opens the affected user record in the wp-admin Users modal, which inserts the unescaped output via jQuery .html().",
+      "refs": "https://github.com/ultimatemember/ultimatemember/releases/tag/2.14.0\nhttps://plugins.trac.wordpress.org/browser/ultimate-member/tags/2.13.1/includes/admin/core/class-admin-builder.php#L1090\nhttps://plugins.trac.wordpress.org/browser/ultimate-member/tags/2.13.1/includes/core/class-form.php#L422",
+      "source": "NVD",
+      "time": "2026-10-03 16:43:01"
+    },
+    {
+      "cve_id": "CVE-2026-93428",
+      "title": "高危漏洞: CVE-2026-93428 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 11:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The Ultimate Member – User Profile, Registration, Login, Member Directory, Content Restriction & Membership Plugin plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.13.1 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to view privacy-restricted member profile field values — including fields explicitly configured as owner-only, members-only, or role-restricted — by querying the publicly accessible wp_ajax_nopriv_um_get_members endpoint. The nonce required by the endpoint ('um-frontend-nonce') is emitted to all unauthenticated visitors via wp_localize_script, meaning it provides no meaningful access control and any anonymous visitor can satisfy the endpoint's authentication requirements.",
+      "refs": "https://github.com/ultimatemember/ultimatemember/releases/tag/2.14.0\nhttps://plugins.trac.wordpress.org/browser/ultimate-member/tags/2.13.1/includes/core/class-ajax-common.php#L61\nhttps://plugins.trac.wordpress.org/browser/ultimate-member/tags/2.13.1/includes/core/class-fields.php#L144",
+      "source": "NVD",
+      "time": "2026-10-03 16:42:54"
+    },
+    {
+      "cve_id": "CVE-2026-105080",
+      "title": "高危漏洞: CVE-2026-105080 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-10-03 09:17:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "In ConvertX before 0.19.0, converters/calibre.ts does not block recipe files, and instead passes them to the ebook-convert program from Calibre. This affects executable code in a .recipe or .downloaded_recipe file.",
+      "refs": "https://github.com/C4illin/ConvertX/commit/0ca17dad7fa65e2e34823b59b95dd00bb1066b66\nhttps://github.com/C4illin/ConvertX/releases/tag/v0.19.0\nhttps://github.com/C4illin/ConvertX/security/advisories/GHSA-m4hh-rqmf-c8hw",
+      "source": "NVD",
+      "time": "2026-10-03 16:42:49"
+    },
+    {
+      "cve_id": "CVE-2026-104478",
+      "title": "高危漏洞: CVE-2026-104478 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-03 08:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+      "description": "Formwork before 2.3.13 contains a path traversal vulnerability in BackupController that allows authenticated panel users to read or delete arbitrary files. Attackers with backup download or delete permission can supply a base64-encoded backslash-separated traversal payload that bypasses PHP basename on Linux to access files outside the backup directory.",
+      "refs": "https://github.com/getformwork/formwork\nhttps://github.com/getformwork/formwork/commit/89e7821a6fcee89474cd401b3dde0c1dccb0687f\nhttps://www.vulncheck.com/advisories/formwork-before-2.3.13-path-traversal-via-backupcontroller-download-and-delete",
+      "source": "NVD",
+      "time": "2026-10-03 16:42:42"
+    },
+    {
+      "cve_id": "CVE-2026-104433",
+      "title": "高危漏洞: CVE-2026-104433 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 08:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Mooncake transfer engine before 0.3.12 contains an out-of-bounds read vulnerability in the readString function of include/common.h that allows unauthenticated attackers to crash the service by sending a zero-length handshake frame. Attackers can connect to the handshake port listening on all interfaces and send an eight-byte frame to terminate the hosting process, such as an SGLang inference server.",
+      "refs": "https://github.com/kvcache-ai/Mooncake\nhttps://github.com/kvcache-ai/Mooncake/commit/c142b40590259360196d8e504b2193382529e7b4\nhttps://github.com/kvcache-ai/Mooncake/issues/4452",
+      "source": "NVD",
+      "time": "2026-10-03 16:42:35"
+    },
+    {
       "cve_id": "CVE-2026-84411",
       "title": "高危漏洞: CVE-2026-84411 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1011,94 +1099,6 @@
       "refs": "https://plugins.trac.wordpress.org/browser/kubio/tags/2.9.1/build/frontend/index.js\nhttps://plugins.trac.wordpress.org/browser/kubio/tags/2.9.1/lib/admin-pages/pages.php#L195\nhttps://plugins.trac.wordpress.org/browser/kubio/tags/2.9.1/lib/filters/svg-kses.php#L74",
       "source": "NVD",
       "time": "2026-10-03 01:02:13"
-    },
-    {
-      "cve_id": "CVE-2026-93698",
-      "title": "高危漏洞: CVE-2026-93698 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-10-02 15:16:39",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Insufficient validation allows arbitrary commands to be executed via the Multilang adminbin.",
-      "refs": "https://docs.cpanel.net/changelogs/110-change-log/#1100148\nhttps://docs.cpanel.net/changelogs/134-change-log/#134061\nhttps://docs.cpanel.net/changelogs/136-change-log/#136045",
-      "source": "NVD",
-      "time": "2026-10-03 01:02:09"
-    },
-    {
-      "cve_id": "CVE-2026-93697",
-      "title": "高危漏洞: CVE-2026-93697 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-10-02 15:16:38",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "There is a stored XSS vulnerability allowing arbitrary code execution in the WHM Mass Modify Accounts interface.",
-      "refs": "https://docs.cpanel.net/changelogs/110-change-log/#1100148\nhttps://docs.cpanel.net/changelogs/134-change-log/#134061\nhttps://docs.cpanel.net/changelogs/136-change-log/#136045",
-      "source": "NVD",
-      "time": "2026-10-03 01:02:05"
-    },
-    {
-      "cve_id": "CVE-2026-93029",
-      "title": "高危漏洞: CVE-2026-93029 (CVSS 9.0)",
-      "cvss_score": 9.0,
-      "published_date": "2026-10-02 15:16:38",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
-      "description": "There is a stored XSS vulnerability allowing arbitrary code execution in the WHM Manage SSL Hosts interface.",
-      "refs": "https://docs.cpanel.net/changelogs/110-change-log/#1100148\nhttps://docs.cpanel.net/changelogs/134-change-log/#134061\nhttps://docs.cpanel.net/changelogs/136-change-log/#136045",
-      "source": "NVD",
-      "time": "2026-10-03 01:02:01"
-    },
-    {
-      "cve_id": "CVE-2026-102565",
-      "title": "高危漏洞: CVE-2026-102565 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-02 15:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The BA Book Everything plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'booking_service_qty' parameter in all versions up to, and including, 1.8.28 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires that an administrator or other privileged user opens the injected order record in the plugin's wp-admin order management area, which is the plugin's ordinary order-review workflow.",
-      "refs": "https://plugins.trac.wordpress.org/browser/ba-book-everything/tags/1.8.28/includes/class-babe-html.php#L3609\nhttps://plugins.trac.wordpress.org/browser/ba-book-everything/tags/1.8.28/includes/class-babe-order.php#L1265\nhttps://plugins.trac.wordpress.org/browser/ba-book-everything/tags/1.8.28/includes/class-babe-order.php#L2041",
-      "source": "NVD",
-      "time": "2026-10-03 01:01:56"
-    },
-    {
-      "cve_id": "CVE-2026-92820",
-      "title": "高危漏洞: CVE-2026-92820 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-02 14:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file operations in all versions up to, and including, 3.3.34 via the external (Amazon S3) upload flow. The plugin trusts an attacker-supplied file path from the form submission and stores it as the upload's file_path, which is then used without validation to attach a file to the form's notification email (arbitrary file read), to write fetched content (arbitrary file write, leading to remote code execution when the external store is configured), and in a scheduled deletion (arbitrary file deletion). This makes it possible for unauthenticated attackers to read, write, or delete arbitrary files on the server. Exploitation requires the site to use the plugin's External File Upload (Amazon S3) action; the read variant additionally requires a form Email action configured to attach the uploaded file.",
-      "refs": "https://ninjaforms.com/extensions/file-uploads/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6d5f0ec1-abcb-4aa2-a130-53682fa13f00?source=cve",
-      "source": "NVD",
-      "time": "2026-10-03 01:01:52"
-    },
-    {
-      "cve_id": "CVE-2026-92174",
-      "title": "高危漏洞: CVE-2026-92174 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 14:16:43",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The SiteOrigin Widgets Bundle plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.73.2 via the 'theme' parameter parameter. This makes it possible for authenticated attackers, with contributor-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. Exploitation requires sending a malicious widgetData payload containing a legacy top-level theme key alongside a non-empty columns array to the /wp-json/sowb/v1/widgets/previews REST endpoint, which bypasses field validation because update_fields() only processes declared form fields.",
-      "refs": "https://plugins.trac.wordpress.org/browser/so-widgets-bundle/tags/1.73.1/base/inc/routes/siteorigin-widgets-resource.class.php#L140\nhttps://plugins.trac.wordpress.org/browser/so-widgets-bundle/tags/1.73.1/base/siteorigin-widget.class.php#L214\nhttps://plugins.trac.wordpress.org/browser/so-widgets-bundle/tags/1.73.1/compat/block-editor/widget-block.php#L710",
-      "source": "NVD",
-      "time": "2026-10-03 01:01:48"
-    },
-    {
-      "cve_id": "CVE-2026-91828",
-      "title": "高危漏洞: CVE-2026-91828 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 14:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy. WordPress plugin before 6.3.11 does not require authentication or a valid nonce on an action that issues a slow server-side loopback request, allowing unauthenticated attackers to exhaust the site's PHP worker pool and make the entire site unavailable.",
-      "refs": "https://wpscan.com/vulnerability/be25f7b5-5790-4db7-9056-b43b538a7183/",
-      "source": "NVD",
-      "time": "2026-10-03 01:01:40"
-    },
-    {
-      "cve_id": "CVE-2026-90438",
-      "title": "高危漏洞: CVE-2026-90438 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-02 14:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Ninja Forms – The Contact Form Builder That Grows With You plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Paragraph Text (RTE) Field Submission in all versions up to, and including, 3.15.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is only exploitable when the targeted Paragraph Text field has the Rich Text Editor (RTE) option enabled.",
-      "refs": "https://plugins.trac.wordpress.org/browser/ninja-forms/tags/3.15.2/build/submissions.js#L1\nhttps://plugins.trac.wordpress.org/browser/ninja-forms/tags/3.15.2/includes/AJAX/Controllers/Submission.php#L61\nhttps://plugins.trac.wordpress.org/browser/ninja-forms/tags/3.15.2/includes/Database/Models/Submission.php#L308",
-      "source": "NVD",
-      "time": "2026-10-03 01:01:36"
     }
   ]
 }
