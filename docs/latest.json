@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-96451",
+      "title": "高危漏洞: CVE-2026-96451 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-04 00:16:46",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Authorization Bypass Through User-Controlled Key vulnerability in Ultimate Member Ultimate Member ultimate-member allows Privilege Escalation.This issue affects Ultimate Member: from n/a through 2.13.1.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/ultimate-member/vulnerability/wordpress-ultimate-member-plugin-2-13-1-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 02:26:25"
+    },
+    {
+      "cve_id": "CVE-2026-103342",
+      "title": "高危漏洞: CVE-2026-103342 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-03 23:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Reflected XSS.This issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.20.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 02:26:21"
+    },
+    {
+      "cve_id": "CVE-2026-103065",
+      "title": "高危漏洞: CVE-2026-103065 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-10-03 23:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "description": "Improper Validation of Specified Quantity in Input vulnerability in Themeum Kirki kirki allows Accessing Functionality Not Properly Constrained by ACLs.This issue affects Kirki: from n/a through 6.3.1.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/kirki/vulnerability/wordpress-kirki-plugin-6-3-1-arbitrary-code-execution-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 02:26:17"
+    },
+    {
+      "cve_id": "CVE-2026-105115",
+      "title": "高危漏洞: CVE-2026-105115 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-10-03 22:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+      "description": "OpenAM before 16.1.3 contains an unauthenticated arbitrary class instantiation vulnerability in the legacy JAX-RPC SOAP interface that allows remote attackers to load classes without authentication. Attackers can send SOAP requests to /jaxrpc/* with an unverified session identifier and a chosen class name, crashing the server, probing the classpath, or potentially reaching code execution via gadget chains.",
+      "refs": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-wxmx-q96f-w4gw\nhttps://www.vulncheck.com/advisories/openam-before-16.1.3-unauthenticated-arbitrary-class-instantiation-via-jax-rpc-interface",
+      "source": "NVD",
+      "time": "2026-10-04 02:26:11"
+    },
+    {
+      "cve_id": "CVE-2026-105105",
+      "title": "高危漏洞: CVE-2026-105105 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-03 20:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "CWE-306: Missing Authentication for Critical Function in the ait.core.server telemetry and command broker (ait-server) in NASA-AMMOS AIT-Core through 3.1.1 allows an unauthenticated remote attacker with network access to the ZeroMQ message bus to inject spacecraft command data, exfiltrate command and telemetry traffic, inject forged telemetry, or disrupt the command and telemetry bus. The ait-server ZeroMQ broker binds its XSUB and XPUB sockets to all network interfaces by default without authentication or transport security. An attacker able to reach TCP port 5559 can publish messages onto internal topics, including the __commands__ command topic. With the shipped default configuration, command messages are forwarded through command_stream and emitted on the command-uplink UDP path. An attacker able to reach TCP port 5560 can subscribe to command and telemetry traffic on the ground bus. AIT-Core 3.1.2 changes the default ZeroMQ bind addresses to loopback.",
+      "refs": "https://github.com/Mothra-1\nhttps://github.com/NASA-AMMOS/AIT-Core/\nhttps://github.com/NASA-AMMOS/AIT-Core/security/advisories/GHSA-ccw5-g774-3683",
+      "source": "NVD",
+      "time": "2026-10-04 02:26:06"
+    },
+    {
+      "cve_id": "CVE-2026-91078",
+      "title": "高危漏洞: CVE-2026-91078 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-10-03 14:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "description": "The TillKit WordPress plugin before 1.0.5 does not require the hard-coded, publicly known PIN of the privileged POS account it creates on activation to be changed before use, and it authenticates its public POS login endpoint on that PIN alone with no identity or capability check, allowing unauthenticated attackers to obtain a privileged POS session and thereby read customer and site-user personal data and modify store data.",
+      "refs": "https://wpscan.com/vulnerability/7ab037d6-c670-4eaf-be0d-11cc9e20b18e/",
+      "source": "NVD",
+      "time": "2026-10-04 02:26:00"
+    },
+    {
+      "cve_id": "CVE-2026-89236",
+      "title": "高危漏洞: CVE-2026-89236 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-10-03 14:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The SaveTo Wishlist Lite  WordPress plugin before 1.1.5 does not sanitise and escape parameters before using them in the ORDER BY clause of a SQL query, allowing unauthenticated attackers to append additional SQL queries and extract sensitive information from the database.",
+      "refs": "https://wpscan.com/vulnerability/7b92ed60-7bcb-4dcf-8c57-0afcaa6809b7/",
+      "source": "NVD",
+      "time": "2026-10-04 02:25:56"
+    },
+    {
+      "cve_id": "CVE-2026-88783",
+      "title": "高危漏洞: CVE-2026-88783 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-03 14:16:45",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Kubio AI Page Builder WordPress plugin before 2.9.3 does not limit its widening of the allowed HTML elements to the editor context, so the wider set is applied when filtering content submitted by unauthenticated users as well, allowing them to store markup which the Kubio AI Page Builder WordPress plugin before 2.9.3's own script later executes in the browser of any visitor, or of an administrator reviewing the still-unapproved submission.",
+      "refs": "https://wpscan.com/vulnerability/94d11df1-dae7-479f-bc93-3db6b0925d99/",
+      "source": "NVD",
+      "time": "2026-10-04 02:25:51"
+    },
+    {
+      "cve_id": "CVE-2026-103514",
+      "title": "高危漏洞: CVE-2026-103514 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 14:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The WP 2FA  WordPress plugin before 4.1.0 does not invalidate a time-based one-time passcode once it has been used, allowing an attacker who knows an account's password and has observed a valid code within its validity window to replay it and bypass two-factor authentication, including on administrator accounts.",
+      "refs": "https://wpscan.com/vulnerability/e05aa5a3-cd04-428a-b6bb-0538ca1f6b4a/",
+      "source": "NVD",
+      "time": "2026-10-04 02:25:46"
+    },
+    {
+      "cve_id": "CVE-2026-101161",
+      "title": "高危漏洞: CVE-2026-101161 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 14:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The WP Ultimate Review WordPress plugin before 2.4.4 does not prevent unauthenticated users from storing crafted review content that makes the reviewed page fail with a fatal error on every subsequent visit, resulting in a persistent denial of service when the WP Ultimate Review WordPress plugin before 2.4.4's review display settings have never been saved.",
+      "refs": "https://wpscan.com/vulnerability/c1c3e2d7-4833-4e51-a3c7-45e6d036a525/",
+      "source": "NVD",
+      "time": "2026-10-04 02:25:40"
+    },
+    {
+      "cve_id": "CVE-2026-101160",
+      "title": "高危漏洞: CVE-2026-101160 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 14:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The WP Ultimate Review WordPress plugin before 2.4.4 does not validate that a submitted review rating is numeric before storing it and later using it in numeric operations when rendering reviews, allowing unauthenticated users to make the reviewed content fail with a fatal error for all visitors until the review is removed (a persistent denial of service), when user reviews are enabled.",
+      "refs": "https://wpscan.com/vulnerability/d728523f-1f33-470f-b64f-e9e286d29b6b/",
+      "source": "NVD",
+      "time": "2026-10-04 02:25:35"
+    },
+    {
+      "cve_id": "CVE-2026-101159",
+      "title": "高危漏洞: CVE-2026-101159 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-03 14:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The WP Ultimate Review WordPress plugin before 2.4.4 does not properly sanitise and escape reviews submitted through its public review form, which is available to unauthenticated visitors, allowing them to perform Stored Cross-Site Scripting attacks against any user, including administrators, viewing a page displaying the review, when user reviews are enabled.",
+      "refs": "https://wpscan.com/vulnerability/1eefa81e-6134-498b-9615-b9a42cd99749/",
+      "source": "NVD",
+      "time": "2026-10-04 02:25:30"
+    },
+    {
       "cve_id": "CVE-2026-92084",
       "title": "高危漏洞: CVE-2026-92084 (CVSS 9.1)",
       "cvss_score": 9.1,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-pvmv-cwg8-v6c8\nhttps://www.vulncheck.com/advisories/zebra-4.4.0-consensus-divergence-via-v5-sighash-single-without-output",
       "source": "NVD",
       "time": "2026-10-03 01:04:50"
-    },
-    {
-      "cve_id": "CVE-2026-104431",
-      "title": "高危漏洞: CVE-2026-104431 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Zebra before 6.0.0 contains a denial of service vulnerability that allows unauthenticated peers to stall Tokio workers by submitting mempool transactions requiring expensive synchronous script verification. Attackers can send non-standard high-sigop P2SH transactions that reach CachedFfiTransaction::is_valid() before standardness checks, saturating the verifier buffer and rendering the node unresponsive.",
-      "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-84j3-rw4c-gqmj\nhttps://www.vulncheck.com/advisories/zebra-before-6.0.0-denial-of-service-via-synchronous-script-ffi-verification",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:44"
-    },
-    {
-      "cve_id": "CVE-2026-104430",
-      "title": "高危漏洞: CVE-2026-104430 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:13",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Zebra zebrad 4.5.0 and zebra-script 7.0.0 count P2SH redeem script signature operations in legacy mode rather than zcashd's accurate P2SH mode, overcounting CHECKMULTISIG preceded by OP_1 through OP_16 as 20 sigops and causing a consensus divergence. Remote attackers can broadcast P2SH spends using low-threshold multisig redeem scripts so that a block zcashd accepts exceeds Zebra's inflated MAX_BLOCK_SIGOPS count, causing Zebra nodes to reject it and stall off the chain.",
-      "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-2prc-cj5x-4443\nhttps://www.vulncheck.com/advisories/zebra-4.5.0-consensus-split-via-p2sh-sigop-overcount",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:40"
-    },
-    {
-      "cve_id": "CVE-2026-104423",
-      "title": "高危漏洞: CVE-2026-104423 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Zebra (zebrad) before 6.2.1 contains an asymmetric resource consumption vulnerability that allows unauthenticated peers to stall block verification by pushing V6 mempool transactions with invalid Halo2 proofs. Attackers can flood the shared unprioritized Halo2 verification queue with zero-fee transactions carrying zero-filled Orchard and Ironwood proofs, causing nodes to fall behind the chain tip.",
-      "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-2p4c-3q4q-p463\nhttps://www.vulncheck.com/advisories/zebra-before-6.2.1-denial-of-service-via-uncapped-v6-shielded-proof-verification",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:32"
-    },
-    {
-      "cve_id": "CVE-2026-104422",
-      "title": "高危漏洞: CVE-2026-104422 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:12",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "The block sync download path in Zebra (zebrad) before 6.3.0 reads a block's height from its unvalidated coinbase scriptSig and drops blocks that appear too far behind the tip before consensus validation, without penalizing the supplying peer. Because V5 transaction IDs exclude the scriptSig, a malicious peer can repeatedly serve a canonical block whose coinbase claims height 1 while keeping the requested hash, delaying the node's discovery of the newest block.",
-      "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-g95h-hw6g-pvgv\nhttps://www.vulncheck.com/advisories/zebra-before-6.3.0-block-sync-denial-of-service-via-coinbase-scriptsig-rewrite",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:28"
-    },
-    {
-      "cve_id": "CVE-2026-104418",
-      "title": "高危漏洞: CVE-2026-104418 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-02 20:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Ghost from 6.10.3 before 6.64.0 contains a remote code execution vulnerability that allows authenticated administrators to run code by abusing theme translation file loading. Attackers with administrator access can upload a crafted theme containing malicious translation files to execute arbitrary code on the Ghost server.",
-      "refs": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-jj74-hc2q-xrvm\nhttps://www.vulncheck.com/advisories/ghost-from-6.10.3-before-6.64.0-rce-via-theme-translation-files",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:23"
-    },
-    {
-      "cve_id": "CVE-2026-104416",
-      "title": "高危漏洞: CVE-2026-104416 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Ghost from 4.39.0 before 6.64.0 contains an information disclosure vulnerability in the Admin API that allows staff users to view secret tokens of pending staff invites. Staff users with invite viewing permission can accept pending invites for higher-privileged roles to escalate their privileges.",
-      "refs": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-v6q3-xqxm-6f5v\nhttps://www.vulncheck.com/advisories/ghost-4.39.0-before-6.64.0-invite-token-disclosure-via-admin-api",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:18"
-    },
-    {
-      "cve_id": "CVE-2026-104414",
-      "title": "高危漏洞: CVE-2026-104414 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-02 20:17:11",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Ghost from 2.5.0 before 6.64.0 contains a stored cross-site scripting vulnerability that allows attackers to inject untrusted scripts into post content via oEmbed photo responses. Attackers can host malicious oEmbed photo responses so that embedding their URL stores scripts that run in the Ghost editor, published site, and newsletter emails, compromising staff admin sessions.",
-      "refs": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-v3xr-g6p2-fvgv\nhttps://www.vulncheck.com/advisories/ghost-from-2.5.0-before-6.64.0-stored-xss-via-oembed-photo-responses",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:13"
-    },
-    {
-      "cve_id": "CVE-2026-104413",
-      "title": "高危漏洞: CVE-2026-104413 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-10-02 20:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Ghost from 5.94.0 before 6.64.0 contains a stored cross-site scripting vulnerability that allows staff users, including Contributors, to host arbitrary HTML by abusing bookmark card image fetching. Attackers can create bookmark cards that store non-image files from external websites as icons or thumbnails to compromise other staff users' admin sessions.",
-      "refs": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-347q-26qq-h2p6\nhttps://www.vulncheck.com/advisories/ghost-5.94.0-before-6.64.0-stored-xss-via-bookmark-card-images",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:08"
-    },
-    {
-      "cve_id": "CVE-2026-104411",
-      "title": "高危漏洞: CVE-2026-104411 (CVSS 7.3)",
-      "cvss_score": 7.3,
-      "published_date": "2026-10-02 20:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
-      "description": "Ghost from 6.22.1 before 6.64.0 contains a stored cross-site scripting vulnerability that allows staff users to host scripts by uploading files served with extension-derived content types on the default local storage adapter. Attackers can upload script-bearing files to the site's domain to compromise other staff users' admin sessions.",
-      "refs": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-gfjp-2p8f-94qv\nhttps://www.vulncheck.com/advisories/ghost-6.22.1-before-6.64.0-stored-xss-via-local-storage-file-uploads",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:03"
-    },
-    {
-      "cve_id": "CVE-2026-104410",
-      "title": "高危漏洞: CVE-2026-104410 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "SiYuan before 3.8.5 contains an information disclosure vulnerability that allows publish readers to read password-protected and publish-disabled database rows via the /api/export/preview endpoint. Attackers can request an export preview of a public document embedding a database view to obtain protected rows' primary-key text and cell values.",
-      "refs": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-778g-gq49-fxxj\nhttps://www.vulncheck.com/advisories/siyuan-before-3.8.5-information-disclosure-via-api-export-preview",
-      "source": "NVD",
-      "time": "2026-10-03 01:03:59"
-    },
-    {
-      "cve_id": "CVE-2026-94541",
-      "title": "高危漏洞: CVE-2026-94541 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-02 18:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The WPMobile.App – Android and iOS App Builder plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 11.82 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to exfiltrate password-reset URLs for arbitrary users, including administrators, mirrored into the push queue by the mail-to-push feature, and use those URLs to take over the targeted accounts. This exploit chain requires the plugin's mail-to-push feature (wpmobile_auto_mail=1) to be enabled, as that setting is what causes outbound WordPress password-reset emails — including the reset URL and key — to be mirrored into the push row queue where they become accessible to the attacker.",
-      "refs": "https://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/api/push.php#L467\nhttps://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/api/read_enhanced.php#L171\nhttps://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/common/deeplinking.php#L249",
-      "source": "NVD",
-      "time": "2026-10-03 01:03:51"
-    },
-    {
-      "cve_id": "CVE-2026-87920",
-      "title": "高危漏洞: CVE-2026-87920 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-02 18:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The W3 Total Cache plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content via Output-Buffer Regex Rewrite in all versions up to, and including, 2.10.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This vulnerability is only exploitable when the 'Remove query strings from static resources' option is enabled in W3 Total Cache, as mutate_url() must strip the '?' delimiter and everything following it — including the closing quote of the outer attribute — to break the attribute boundary.",
-      "refs": "https://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.10.6/BrowserCache_Plugin.php#L208\nhttps://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.10.6/BrowserCache_Plugin.php#L259\nhttps://plugins.trac.wordpress.org/browser/w3-total-cache/tags/2.10.6/BrowserCache_Plugin.php#L336",
-      "source": "NVD",
-      "time": "2026-10-03 01:03:46"
     }
   ]
 }
