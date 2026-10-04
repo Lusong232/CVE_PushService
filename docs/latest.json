@@ -1,6 +1,116 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-97276",
+      "title": "高危漏洞: CVE-2026-97276 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-04 17:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VeronaLabs WP Statistics wp-statistics allows Reflected XSS.This issue affects WP Statistics: from n/a through 14.16.14.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/wp-statistics/vulnerability/wordpress-wp-statistics-plugin-14-16-14-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 19:31:03"
+    },
+    {
+      "cve_id": "CVE-2026-103355",
+      "title": "高危漏洞: CVE-2026-103355 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-10-04 17:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Blind SQL Injection.This issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.20.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-sql-injection-vulnerability-2?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:58"
+    },
+    {
+      "cve_id": "CVE-2026-103354",
+      "title": "高危漏洞: CVE-2026-103354 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-04 17:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.7.11.1.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/kadence-blocks/vulnerability/wordpress-gutenberg-blocks-by-kadence-blocks-plugin-3-7-11-1-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:53"
+    },
+    {
+      "cve_id": "CVE-2026-103344",
+      "title": "高危漏洞: CVE-2026-103344 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-04 17:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Reflected XSS.This issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.20.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-cross-site-scripting-xss-vulnerability-2?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:49"
+    },
+    {
+      "cve_id": "CVE-2026-103062",
+      "title": "高危漏洞: CVE-2026-103062 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-04 17:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Stored XSS.This issue affects TranslatePress: from n/a through 3.3.6.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/translatepress-multilingual/vulnerability/wordpress-translatepress-plugin-3-3-6-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:45"
+    },
+    {
+      "cve_id": "CVE-2026-105135",
+      "title": "高危漏洞: CVE-2026-105135 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-10-04 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability has been found in InternLM MindSearch 0.1.0. This issue affects the function ExecutionAction.run of the file mindsearch/agent/graph.py of the component Planner Agent. The manipulation of the argument inputs leads to code injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/DReazer/7ad46df9da73d0cf414276e4195b2183\nhttps://vuldb.com/cve/CVE-2026-105135\nhttps://vuldb.com/submit/943315",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:40"
+    },
+    {
+      "cve_id": "CVE-2026-105134",
+      "title": "高危漏洞: CVE-2026-105134 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-10-04 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve this issue. Upgrading the affected component is advised.",
+      "refs": "https://vuldb.com/cve/CVE-2026-105134\nhttps://vuldb.com/submit/942743\nhttps://vuldb.com/vuln/413351",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:35"
+    },
+    {
+      "cve_id": "CVE-2026-105133",
+      "title": "高危漏洞: CVE-2026-105133 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-04 15:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
+      "refs": "https://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://vuldb.com/vuln/413350",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:30"
+    },
+    {
+      "cve_id": "CVE-2026-105126",
+      "title": "高危漏洞: CVE-2026-105126 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-04 08:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "LaraDashboard before 1.4.8 contains an improper privilege management vulnerability that allows authenticated Admin users to escalate to Superadmin by editing or renaming roles. Attackers with role.edit can rename their role to Superadmin or grant user.login_as permissions to take over accounts and reach core upgrade and module installation functions for code execution.",
+      "refs": "https://github.com/laradashboard/laradashboard\nhttps://github.com/laradashboard/laradashboard/blob/v1.4.2/app/Http/Controllers/Backend/RoleController.php#L144\nhttps://github.com/laradashboard/laradashboard/blob/v1.4.2/app/Http/Controllers/Backend/RoleController.php#L180",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:24"
+    },
+    {
+      "cve_id": "CVE-2026-105123",
+      "title": "高危漏洞: CVE-2026-105123 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-04 08:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "W (vincent-peugnet/wcms) through 3.18.0 contains a remote code execution vulnerability that allows authenticated editors to write arbitrary files by abusing the unvalidated path in POST /api/v0/media/upload/[*:path]. Attackers can upload .php files executed by the web server, use encoded ../ sequences to write outside the media directory, and delete arbitrary files via DELETE /api/v0/media/[*:path].",
+      "refs": "https://github.com/vincent-peugnet/wcms\nhttps://github.com/vincent-peugnet/wcms/blob/cda5bcdb95dbdb1e804fdfe0e5fd2e2b2f8a90e2/app/class/Controllerapimedia.php#L24-L44\nhttps://github.com/vincent-peugnet/wcms/blob/cda5bcdb95dbdb1e804fdfe0e5fd2e2b2f8a90e2/app/class/Media.php#L98",
+      "source": "NVD",
+      "time": "2026-10-04 19:30:19"
+    },
+    {
       "cve_id": "CVE-2026-96451",
       "title": "高危漏洞: CVE-2026-96451 (CVSS 8.8)",
       "cvss_score": 8.8,
@@ -989,116 +1099,6 @@
       "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-p9rm-p6pp-8m8c\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-sql-injection-via-nuagetag-tags-parameter\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-p9rm-p6pp-8m8c",
       "source": "NVD",
       "time": "2026-10-03 01:05:44"
-    },
-    {
-      "cve_id": "CVE-2026-104460",
-      "title": "高危漏洞: CVE-2026-104460 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "YesWiki before 4.6.7 contains a blind SQL injection vulnerability in the {{newtextsearch}} action because Bazar list option ids are concatenated into SQL REGEXP/LIKE clauses in actions/newtextsearch.php without escaping. Anonymous attackers can plant a malicious option id in an anonymously editable Bazar list and use search requests as a boolean oracle to read arbitrary database data, including admin password hashes from the yeswiki_users table.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-4333-x9p4-8xj7\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-unauthenticated-blind-sql-injection-via-newtextsearch\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-4333-x9p4-8xj7",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:36"
-    },
-    {
-      "cve_id": "CVE-2026-104457",
-      "title": "高危漏洞: CVE-2026-104457 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-10-02 20:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
-      "description": "YesWiki before 4.6.7 contains an SQL injection vulnerability in the Bazar filtertags action, which wraps unescaped filterN attribute tokens in quotes and concatenates them into a raw tags.value IN (...) clause. Unauthenticated attackers on default installs can save filtertags markup in a page with a trailing-backslash token that breaks quote parity under MySQL backslash escaping. This lets them inject a five-column UNION subquery to read arbitrary table data such as password hashes.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-p87r-f4x4-8r4g\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-sql-injection-via-filtertags-filtern-parameter",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:32"
-    },
-    {
-      "cve_id": "CVE-2026-104456",
-      "title": "高危漏洞: CVE-2026-104456 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-10-02 20:17:17",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
-      "description": "YesWiki before 4.6.7 contains a second-order SQL injection vulnerability in AclService::updateRequestWithACL, where a stored username is concatenated unescaped into a read-ACL LIKE clause. Attackers can self-register an account name containing a double-quote payload, then load non-admin ACL-filtered listings to read database contents and bypass read ACLs.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-6rw5-62xf-q5xp\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-second-order-sql-injection-via-acl-username\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-6rw5-62xf-q5xp",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:24"
-    },
-    {
-      "cve_id": "CVE-2026-104448",
-      "title": "高危漏洞: CVE-2026-104448 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-02 20:17:16",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in the ajaxdeletepage handler, which permanently deletes a page on any GET request carrying a jsonp_callback parameter without checking a CSRF token. Attackers can lure a logged-in administrator or page owner to a crafted link to delete arbitrary pages along with their ACLs, links, triples, comments and referrers.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-hqmg-843g-pp28\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-csrf-page-deletion-via-ajaxdeletepage-handler\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-hqmg-843g-pp28",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:19"
-    },
-    {
-      "cve_id": "CVE-2026-104447",
-      "title": "高危漏洞: CVE-2026-104447 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-02 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
-      "description": "YesWiki before 4.6.7 contains a cross-site request forgery vulnerability in the autoupdate UpdateAction that allows attackers to delete installed packages via unprotected GET requests. Attackers can lure a logged-in administrator to a crafted link with action=delete and a package parameter to remove extensions like bazar, breaking core site functionality.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-jp5c-grgj-624x\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-csrf-package-deletion-via-autoupdate-updateaction\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-jp5c-grgj-624x",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:15"
-    },
-    {
-      "cve_id": "CVE-2026-104445",
-      "title": "高危漏洞: CVE-2026-104445 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-10-02 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
-      "description": "YesWiki before 4.6.7 contains an authentication bypass vulnerability in the ActivityPub inbox that fails to bind the verified HTTP signature signer to the activity actor. Unauthenticated attackers with any ActivityPub keypair can send signed Delete or Update activities referencing a mirrored entry's sourceUrl to delete or overwrite other actors' federated entries.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-rm6r-grfg-4v78\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-authentication-bypass-via-activitypub-inbox-actor-spoofing",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:10"
-    },
-    {
-      "cve_id": "CVE-2026-104444",
-      "title": "高危漏洞: CVE-2026-104444 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-02 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
-      "description": "YesWiki before 4.6.7 contains an authorization bypass vulnerability in the comments API editComment route that allows authenticated low-privilege users to overwrite arbitrary pages or comments by supplying their own page as the pagetag field. Attackers can send a POST request to the api/comments endpoint targeting a victim tag, bypassing per-page write ACLs to replace content and reparent existing pages or comments.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-894w-63wr-8x5r\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-authorization-bypass-via-comments-api-editcomment",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:04"
-    },
-    {
-      "cve_id": "CVE-2026-104443",
-      "title": "高危漏洞: CVE-2026-104443 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-02 20:17:15",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
-      "description": "YesWiki before 4.6.7 contains an empty-filter scope bypass in the triples delete API that allows any authenticated user to delete or forge arbitrary semantic triples regardless of ownership. Attackers can send an empty filter to the triples delete endpoint to remove the admins-group membership triple, emptying the admin group and causing a site-wide authorization lockout.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-9j7h-ccj2-jxv6\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-scope-bypass-via-triples-delete-api\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-9j7h-ccj2-jxv6",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:59"
-    },
-    {
-      "cve_id": "CVE-2026-104437",
-      "title": "高危漏洞: CVE-2026-104437 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-10-02 20:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Zebra before 4.4.0 contains a consensus divergence vulnerability in V5 transparent signature verification, computing a ZIP-244 digest for SIGHASH_SINGLE inputs lacking corresponding outputs instead of failing. Attackers can craft V5 transactions with fewer outputs than inputs that Zebra accepts and templates via getblocktemplate, producing blocks zcashd rejects.",
-      "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-cwfq-rfcr-8hmp\nhttps://www.vulncheck.com/advisories/zebra-before-4.4.0-consensus-split-via-sighash-single-missing-output-handling",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:54"
-    },
-    {
-      "cve_id": "CVE-2026-104435",
-      "title": "高危漏洞: CVE-2026-104435 (CVSS 7.4)",
-      "cvss_score": 7.4,
-      "published_date": "2026-10-02 20:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Zebra zebrad 4.4.0 and zebra-script 6.0.0 fail to enforce a ZIP-244 consensus rule, accepting V5 transparent inputs signed with SIGHASH_SINGLE that lack a corresponding output. Attackers can broadcast crafted V5 transactions with more inputs than outputs that Zebra accepts but zcashd rejects, causing a network consensus split.",
-      "refs": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-pvmv-cwg8-v6c8\nhttps://www.vulncheck.com/advisories/zebra-4.4.0-consensus-divergence-via-v5-sighash-single-without-output",
-      "source": "NVD",
-      "time": "2026-10-03 01:04:50"
     }
   ]
 }
