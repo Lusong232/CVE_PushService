@@ -1,6 +1,50 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-105149",
+      "title": "高危漏洞: CVE-2026-105149 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-04 21:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security flaw has been discovered in mooSocial up to 3.2.4. This issue affects some unknown processing of the file /stores/all-products. Performing a manipulation of the argument rating results in sql injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-105149\nhttps://vuldb.com/submit/948272\nhttps://vuldb.com/vuln/413374",
+      "source": "NVD",
+      "time": "2026-10-05 00:09:13"
+    },
+    {
+      "cve_id": "CVE-2026-105148",
+      "title": "高危漏洞: CVE-2026-105148 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-04 21:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in SciPhi-AI R2R up to 3.6.6. This vulnerability affects unknown code of the file py/shared/abstractions/llm.py of the component Retrieval Completion API Endpoint. Such manipulation of the argument generation_config.api_base leads to server-side request forgery. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/DReazer/6c1fd0ef98900fbbfa383faa20f731f6\nhttps://vuldb.com/cve/CVE-2026-105148\nhttps://vuldb.com/submit/947817",
+      "source": "NVD",
+      "time": "2026-10-05 00:09:09"
+    },
+    {
+      "cve_id": "CVE-2026-105147",
+      "title": "高危漏洞: CVE-2026-105147 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-04 21:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in SciPhi-AI R2R up to 3.6.6. This affects an unknown part of the component JWT Secret Handler. This manipulation of the argument DEFAULT_BCRYPT_SECRET_KEY/DEFAULT_NACL_SECRET_KEY causes hard-coded credentials. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://gist.github.com/DReazer/6bc4f88053ec35f8358395bcc0d1a0bb\nhttps://vuldb.com/cve/CVE-2026-105147\nhttps://vuldb.com/submit/947748",
+      "source": "NVD",
+      "time": "2026-10-05 00:09:04"
+    },
+    {
+      "cve_id": "CVE-2026-97307",
+      "title": "高危漏洞: CVE-2026-97307 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-04 19:16:33",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Insertion of Sensitive Information Into Sent Data vulnerability in StylemixThemes Cost Calculator Builder cost-calculator-builder allows Retrieve Embedded Sensitive Data.This issue affects Cost Calculator Builder: from n/a through 4.0.17.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/cost-calculator-builder/vulnerability/wordpress-cost-calculator-builder-plugin-4-0-17-sensitive-data-exposure-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-05 00:09:00"
+    },
+    {
       "cve_id": "CVE-2026-97276",
       "title": "高危漏洞: CVE-2026-97276 (CVSS 7.1)",
       "cvss_score": 7.1,
@@ -1055,50 +1099,6 @@
       "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-6rvf-7pwm-6j44\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-ssrf-and-xss-via-bazar-valeur-action",
       "source": "NVD",
       "time": "2026-10-03 01:06:04"
-    },
-    {
-      "cve_id": "CVE-2026-104467",
-      "title": "高危漏洞: CVE-2026-104467 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-02 20:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "YesWiki before 4.6.7 contains an authorization bypass vulnerability in ApiService::isAuthorized() that allows unauthenticated attackers to call admin-only API routes when public API mode is enabled. Attackers can send requests to endpoints like api/ci/update_config and api/archives to overwrite configuration and list, download, or delete backup archives.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-v527-6r4j-j2w2\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-authorization-bypass-via-public-api-mode",
-      "source": "NVD",
-      "time": "2026-10-03 01:06:00"
-    },
-    {
-      "cve_id": "CVE-2026-104464",
-      "title": "高危漏洞: CVE-2026-104464 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-10-02 20:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make server-side GET requests by supplying an unvalidated actor URL to the Bazar abonnements sync action. Attackers can target internal hosts or cloud metadata endpoints and chain attacker-controlled outbox first/next links, with fetched responses stored as readable Bazar entries.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-wcjp-v62j-p5xm\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-ssrf-via-bazar-abonnements-sync-actor-parameter\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-wcjp-v62j-p5xm",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:55"
-    },
-    {
-      "cve_id": "CVE-2026-104463",
-      "title": "高危漏洞: CVE-2026-104463 (CVSS 7.0)",
-      "cvss_score": 7.0,
-      "published_date": "2026-10-02 20:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
-      "description": "YesWiki before 4.6.7 contains a server-side request forgery vulnerability that allows unauthenticated attackers to trigger server requests by sending signed Follow activities to the public forms actor inbox route. Attackers sign requests with their own keyId while supplying internal actor URLs in the body, reaching internal hosts or cloud metadata via blind GET and POST requests.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-x623-wwf6-f6wp\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-unauthenticated-ssrf-via-activitypub-inbox\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-x623-wwf6-f6wp",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:48"
-    },
-    {
-      "cve_id": "CVE-2026-104462",
-      "title": "高危漏洞: CVE-2026-104462 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-02 20:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "YesWiki before 4.6.7 contains an SQL injection vulnerability in the Bazar nuagetag action, which concatenates the unescaped tags attribute into a raw SQL IN clause. Attackers with page-write access (unauthenticated on default installs) can embed a nuagetag tag ending in a backslash to break quote parity and inject a UNION subquery, exfiltrating password hashes and arbitrary table data.",
-      "refs": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-p9rm-p6pp-8m8c\nhttps://www.vulncheck.com/advisories/yeswiki-before-4.6.7-sql-injection-via-nuagetag-tags-parameter\nhttps://github.com/YesWiki/yeswiki/security/advisories/GHSA-p9rm-p6pp-8m8c",
-      "source": "NVD",
-      "time": "2026-10-03 01:05:44"
     }
   ]
 }
