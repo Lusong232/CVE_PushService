@@ -1,6 +1,61 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-105222",
+      "title": "高危漏洞: CVE-2026-105222 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-10-05 07:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The alexpechkarev/google-maps Laravel package through 12.16 disables TLS certificate verification by default because the bundled config sets ssl_verify_peer to FALSE, which is passed to CURLOPT_SSL_VERIFYPEER. On-path attackers can present any certificate to intercept Google Maps web-service requests, steal the API key from the query string, and tamper with responses.",
+      "refs": "https://github.com/alexpechkarev/google-maps\nhttps://github.com/alexpechkarev/google-maps/blob/v12.14/src/WebService.php#L267-L269\nhttps://github.com/alexpechkarev/google-maps/blob/v12.16/src/config/googlemaps.php#L28",
+      "source": "NVD",
+      "time": "2026-10-05 10:59:57"
+    },
+    {
+      "cve_id": "CVE-2026-105221",
+      "title": "高危漏洞: CVE-2026-105221 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-10-05 07:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The gist RubyGem before 6.1.0 contains an improper certificate validation vulnerability that allows on-path attackers to intercept HTTPS traffic because http_connection in lib/gist.rb sets VERIFY_NONE. Attackers can present any certificate to read or modify GitHub API traffic, stealing OAuth tokens and login credentials to read and modify the victim's gists.",
+      "refs": "https://github.com/defunkt/gist\nhttps://github.com/defunkt/gist/blob/v6.0.0/lib/gist.rb#L466-L468\nhttps://github.com/defunkt/gist/commit/07ccc1a6d46e9d36f0e85d0b1c5d795890ae6bcf",
+      "source": "NVD",
+      "time": "2026-10-05 10:59:53"
+    },
+    {
+      "cve_id": "CVE-2026-105220",
+      "title": "高危漏洞: CVE-2026-105220 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-10-05 07:16:59",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Twine 2 desktop through 2.12.0 contains a cross-site scripting vulnerability in importStories() that executes markup from imported story files in the editor window. Attackers can craft a story file whose script calls the twineElectron openWithScratchFile IPC bridge to write and open a .bat file, executing code as the user.",
+      "refs": "https://github.com/klembot/twinejs\nhttps://github.com/klembot/twinejs/blob/2.12.0/src/electron/main-process/scratch-file.ts#L57-L63\nhttps://github.com/klembot/twinejs/blob/2.12.0/src/util/import.ts#L134-L136",
+      "source": "NVD",
+      "time": "2026-10-05 10:59:48"
+    },
+    {
+      "cve_id": "CVE-2026-105167",
+      "title": "高危漏洞: CVE-2026-105167 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-05 07:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. The impacted element is an unknown function of the file admin/donate.php. Executing a manipulation of the argument location can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/kishor-23/food-waste-management-system/\nhttps://github.com/kishor-23/food-waste-management-system/issues/7\nhttps://vuldb.com/cve/CVE-2026-105167",
+      "source": "NVD",
+      "time": "2026-10-05 10:59:42"
+    },
+    {
+      "cve_id": "CVE-2026-105166",
+      "title": "高危漏洞: CVE-2026-105166 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-05 07:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. The affected element is the function insert of the file fooddonateform.php of the component Food Donation Form. Performing a manipulation of the argument image-choice results in sql injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/kishor-23/food-waste-management-system/\nhttps://github.com/kishor-23/food-waste-management-system/issues/6\nhttps://vuldb.com/cve/CVE-2026-105166",
+      "source": "NVD",
+      "time": "2026-10-05 10:59:35"
+    },
+    {
       "cve_id": "CVE-2026-105219",
       "title": "高危漏洞: CVE-2026-105219 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1044,61 +1099,6 @@
       "refs": "https://lists.apache.org/thread.html/qcxzvcbbln68hd0j08pdnjdj4r991nhd\nhttps://www.cve.org/CVERecord?id=CVE-2026-41920",
       "source": "NVD",
       "time": "2026-10-03 05:34:41"
-    },
-    {
-      "cve_id": "CVE-2026-104851",
-      "title": "高危漏洞: CVE-2026-104851 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-03 01:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "fsspec is a specification and Python implementation framework for filesystem interfaces. From 0.9.0 until 2026.6.0, fsspec.implementations.reference.ReferenceFileSystem evaluates fields from Kerchunk reference JSON documents through unrestricted jinja2.Template(...).render(...) calls in _process_references1._render_jinja, _process_templates, and _process_gen in fsspec/implementations/reference.py. A document supplied inline or fetched from an attacker-controlled URL can provide template expressions that execute Python code when the reference filesystem is opened, including through consumers such as xarray, before referenced data is read. The _process_gen path is reached whenever a document includes a gen array, while the other paths depend on template-related options and values. This issue is fixed in version 2026.6.0.",
-      "refs": "https://github.com/fsspec/filesystem_spec/commit/86438783f93b1398ef245b92f0e6063b445b611c\nhttps://github.com/fsspec/filesystem_spec/commit/a1c16ab3f07f354aa371c38f7b1b07ea7fd4c5c8\nhttps://github.com/fsspec/filesystem_spec/pull/2029",
-      "source": "NVD",
-      "time": "2026-10-03 05:34:33"
-    },
-    {
-      "cve_id": "CVE-2026-104846",
-      "title": "高危漏洞: CVE-2026-104846 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-03 00:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. From 0.12.0 until 1.6.2, fromJSON deserialization of a fulfilled Promise control node can pass a plugin-produced callable-bearing thenable to a native Promise resolver. ECMAScript thenable assimilation then invokes the callable unexpectedly, allowing attacker-controlled JSON to trigger code in applications using plugin-capable Seroval releases. This path bypasses the Promise resolver type-confusion remediation in version 1.5.3 for CVE-2026-59940 because the unexpected invocation occurs through native Promise settlement after the referenced value is deserialized. This issue is fixed in version 1.6.2.",
-      "refs": "https://github.com/lxsmnsyc/seroval/commit/f1ffcc96d259f9b5b3d71feb262b58240c90e7b7\nhttps://github.com/lxsmnsyc/seroval/security/advisories/GHSA-p6vx-979v-rg4c",
-      "source": "NVD",
-      "time": "2026-10-03 05:34:29"
-    },
-    {
-      "cve_id": "CVE-2026-104845",
-      "title": "高危漏洞: CVE-2026-104845 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-03 00:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Seroval facilitates JS value stringification, including complex structures beyond JSON.stringify capabilities. Prior to 1.6.3, deserializeTypedArray in fromJSON and fromCrossJSON trusts a deserialized source value as an ArrayBuffer and does not bound the serialized element count. An attacker can provide a small untrusted JSON object with a large length value, causing the array-like TypedArray constructor to synchronously allocate the selected number of elements and exhaust CPU or memory while starving the event loop. The offset check does not reject the crafted source because source.byteLength is undefined. DataView reaches a similar unchecked cast but throws rather than allocating, and the issue has no identified confidentiality or integrity impact. This issue is fixed in version 1.6.3.",
-      "refs": "https://github.com/lxsmnsyc/seroval/commit/ac0163e420ac7dcbbefac4d069bcefad300a4851\nhttps://github.com/lxsmnsyc/seroval/commit/e54a6f62784b9e48e3a5fa2ab4089ca69fb8996e\nhttps://github.com/lxsmnsyc/seroval/security/advisories/GHSA-jp82-f5mq-hwhp",
-      "source": "NVD",
-      "time": "2026-10-03 05:34:25"
-    },
-    {
-      "cve_id": "CVE-2026-103648",
-      "title": "高危漏洞: CVE-2026-103648 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-10-03 00:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "Path traversal in image-downloader 4.3.0 allows an attacker who can control the download URL to cause downloaded response data to be written outside the configured destination directory.",
-      "refs": "https://gitlab.com/demsking/image-downloader/-/commit/fb4454304276e2439fb19b98836b3ba903b3aaea\nhttps://gitlab.com/demsking/image-downloader/-/work_items/32",
-      "source": "NVD",
-      "time": "2026-10-03 05:34:21"
-    },
-    {
-      "cve_id": "CVE-2026-101104",
-      "title": "高危漏洞: CVE-2026-101104 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-10-03 00:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
-      "description": "The Meari IoT Cloud Platform OpenAPI Service is vulnerable to an authorization flaw that allows authenticated users to manipulate the configurations of devices they do not own. This vulnerability enables attackers to perform unauthorized actions, such as altering device settings or triggering unintended behaviors, without verifying ownership or permissions.",
-      "refs": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-274-06.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06\nhttps://www.meari.com/en/downLoadCenter",
-      "source": "NVD",
-      "time": "2026-10-03 05:34:16"
     }
   ]
 }
