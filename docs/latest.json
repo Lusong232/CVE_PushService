@@ -1,6 +1,149 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-89322",
+      "title": "高危漏洞: CVE-2026-89322 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-08 07:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Vault and Vault Enterprise did not consistently evaluate ACL policies against the canonical form of resource and policy names. This may allow an authenticated user with delegated permissions to bypass an explicit deny restriction and access a protected resource or assign a denied policy, potentially leading to privilege escalation. This vulnerability (CVE-2026-89322) is fixed in Vault Community Edition 2.1.2, and Vault Enterprise 2.1.2, 1.21.12, 1.20.17, and 1.19.23.",
+      "refs": "https://discuss.hashicorp.com/t/hcsec-2026-43-vault-inconsistent-acl-policy-evaluation-may-allow-bypass-of-deny-restrictions/77815",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:55"
+    },
+    {
+      "cve_id": "CVE-2026-107232",
+      "title": "高危漏洞: CVE-2026-107232 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 06:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.12 on 3.x and 2.16.1 on 2.x, the client infers that an HTTP proxy tunnel exists from the last request method rather than the CONNECT result. After a proxy rejects CONNECT, redirect or authentication handlers can write an origin request and its Authorization credentials onto the still-plaintext proxy connection. Basic credentials can be recovered directly, while NTLM responses may be cracked or relayed. This issue is fixed in versions 3.0.12 and 2.16.1.",
+      "refs": "https://github.com/AsyncHttpClient/async-http-client/commit/3a625cb892233c0a6653ac68823a25ffbc80f393\nhttps://github.com/AsyncHttpClient/async-http-client/commit/a87e7b8c81a6f66a4ce23cd43097fbadd1c788ea\nhttps://github.com/AsyncHttpClient/async-http-client/releases/tag/async-http-client-project-2.16.1",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:47"
+    },
+    {
+      "cve_id": "CVE-2026-107230",
+      "title": "高危漏洞: CVE-2026-107230 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-10-08 06:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. From 2.0.0 until 3.0.14, connection-pool partitioning still omits identity-defining fields for Kerberos, SPNEGO, NTLM, and authenticated proxy connections. Logins without a configured principal, proxy realms, identities sharing a user name, and SOCKS or CONNECT proxy logins can reuse a socket authenticated as a different identity. A later request is then executed under the first identity and can expose that identity's data or authority to another caller. In the affected execution path, SpnegoEngine, NTLM, Kerberos, SPNEGO, SOCKS, and CONNECT control or expose the vulnerable behavior. This issue is fixed in version 3.0.14.",
+      "refs": "https://github.com/AsyncHttpClient/async-http-client/commit/d3bb4d68b41acf5d3ab7541afa9fdfe7ec3ba054\nhttps://github.com/AsyncHttpClient/async-http-client/releases/tag/async-http-client-project-3.0.14\nhttps://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-v2j5-22fr-j62r",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:43"
+    },
+    {
+      "cve_id": "CVE-2026-105816",
+      "title": "高危漏洞: CVE-2026-105816 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-10-08 06:17:02",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "Vault and Vault Enterprise did not consistently verify that stored plugin catalog entries reference binaries within the configured plugin directory. When Vault uses Shamir seals and has an external plugin directory configured, a privileged operator able to restore an Integrated Storage (Raft) snapshot may be able to execute arbitrary code on the Vault host. This vulnerability (CVE-2026-105816) is fixed in Vault Community Edition 2.1.2, and Vault Enterprise 2.1.2, 1.21.12, 1.20.17, and 1.19.23.",
+      "refs": "https://discuss.hashicorp.com/t/hcsec-2026-41-vault-vulnerable-to-arbitrary-code-execution-via-plugin-catalog-entries-restored-from-raft-snapshots/77813",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:39"
+    },
+    {
+      "cve_id": "CVE-2026-76268",
+      "title": "高危漏洞: CVE-2026-76268 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-08 05:17:17",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In Splunk Enterprise versions below 10.4.3 and 10.2.7, an unauthenticated user with network access to the Patroni Representational State Transfer (REST) Application Programming Interface (API) on a search head cluster member could execute attacker-controlled operating-system commands. The vulnerability is possible because this interface does not require authentication for critical configuration operations. For more information see Sidecar configuration settings (https://help.splunk.com/en/data-management/splunk-enterprise-admin-manual/10.2/splunk-sidecars/sidecar-configuration-settings) in the Splunk documentation.\n\nSplunk Enterprise versions 10.0.x and 9.4.x are not affected.",
+      "refs": "https://advisory.splunk.com/advisories/SVD-2026-1001",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:34"
+    },
+    {
+      "cve_id": "CVE-2026-76266",
+      "title": "高危漏洞: CVE-2026-76266 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-10-08 05:17:17",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+      "description": "In Splunk Enterprise versions below 10.4.3, 10.2.7, 10.0.10, and 9.4.15 on Linux, a local user who can run commands as the user account running Splunk Enterprise could cause an affected Linux package upgrade to run attacker-controlled operating-system commands with root privileges. The vulnerability is possible because the Linux package maintainer script trusts existing Splunk Enterprise installation content when it performs upgrade operations with root privileges. The vulnerability requires an affected Linux package upgrade to occur after the local user modifies the installation. The local user should not be able to elevate privileges at will.",
+      "refs": "https://advisory.splunk.com/advisories/SVD-2026-1001",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:30"
+    },
+    {
+      "cve_id": "CVE-2026-107352",
+      "title": "高危漏洞: CVE-2026-107352 (CVSS 7.7)",
+      "cvss_score": 7.7,
+      "published_date": "2026-10-08 05:17:15",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "description": "Missing authorization checks in Amazon Athena engine version 3 request handling could have allowed an authenticated user to read limited query metadata (AWS account identifiers and SQL statement text) from other AWS accounts. Query results, credentials, and Amazon S3 data were not affected. AWS remediated the issue on September 1, 2026, and has confirmed no customer metadata was accessed. No customer action is required.",
+      "refs": "https://aws.amazon.com/security/security-bulletins/2026-128-aws/",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:24"
+    },
+    {
+      "cve_id": "CVE-2026-107227",
+      "title": "高危漏洞: CVE-2026-107227 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 05:17:14",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. From 2.2.0 until 3.0.14, WebSocket permessage-deflate decompression is unbounded when compression is enabled. The inbound pipeline aggregates compressed frames before WebSocketClientCompressionHandler inflates them, so webSocketMaxFrameSize and webSocketMaxBufferSize do not bound decompressed output. A malicious WebSocket peer can send a small compressed message that expands to a very large Netty buffer and exhausts JVM heap. This issue is fixed in version 3.0.14.",
+      "refs": "https://github.com/AsyncHttpClient/async-http-client/commit/b61637f30327f314b7693418f12ce141ac6b2b30\nhttps://github.com/AsyncHttpClient/async-http-client/releases/tag/async-http-client-project-3.0.14\nhttps://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-x8v2-478q-2hvg",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:19"
+    },
+    {
+      "cve_id": "CVE-2026-107161",
+      "title": "高危漏洞: CVE-2026-107161 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 04:17:10",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "A heap-based buffer overflow flaw was found in Cyrus SASL. The add_to_challenge() function in the DIGEST-MD5 plugin computes the size of the buffer needed for a challenge/response field before DIGEST-MD5 quoting is applied, but does not recompute that size when quoting (escaping special characters) makes the value longer. The under-sized buffer is then passed to strcat(), causing a heap-based out-of-bounds write whose size depends on attacker-controlled input. A malicious or on-path DIGEST-MD5 (or HTTP Digest) server can trigger this flaw in a connecting client by supplying a crafted challenge field, such as realm or nonce, most likely resulting in a crash of the client application.",
+      "refs": "https://access.redhat.com/security/cve/CVE-2026-107161\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2460420",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:15"
+    },
+    {
+      "cve_id": "CVE-2026-107202",
+      "title": "高危漏洞: CVE-2026-107202 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-10-07 23:17:20",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "A command injection vulnerability exists in the h-ui (version v0.0.25 and below) administrative API due to improper validation of the listen configuration field. When an authenticated administrator submits a value containing shell metacharacters, the application constructs nftables/iptables rule strings using fmt.Sprintf and executes them via bash -c as root. Because the listen field lacks port or format validation, arbitrary OS commands can be injected and executed with root privileges.",
+      "refs": "https://github.com/jonssonyan/h-ui",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:08"
+    },
+    {
+      "cve_id": "CVE-2025-70521",
+      "title": "高危漏洞: CVE-2025-70521 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-07 23:16:55",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The management portal's diagnostic ping tool of Fanvil x7a firmware version 2.6.0.1182 does not handle user supplied input securely. The lack of secure user input handling allows any unauthenticated attacker to inject commands and run code in the underlying Android operating system.",
+      "refs": "http://download.fanvil.com/Firmware/Release/PA2S/\nhttps://www.darkpoint.ca/blog/2026/02/27/Fanvil-x7a-PA2S-Vulnerability-Disclosure\nhttps://www.fanvil.com/products/p5/wulianwangwangguan_1/20210921/5035.html",
+      "source": "NVD",
+      "time": "2026-10-08 08:34:04"
+    },
+    {
+      "cve_id": "CVE-2025-70516",
+      "title": "高危漏洞: CVE-2025-70516 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-10-07 23:16:52",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "The websocket handler of Fanvil x7a firmware version 2.6.0.1182 does not enforce proper authentication restrictions against sessionless users. The lack of restrictions grants anyone the ability to view any device resources such as operational logs or perform diagnostic requests.",
+      "refs": "http://download.fanvil.com/Firmware/Release/X7A/\nhttps://www.darkpoint.ca/blog/2026/02/27/Fanvil-x7a-PA2S-Vulnerability-Disclosure\nhttps://www.fanvil.com/products/p1/x/20210921/5043.html",
+      "source": "NVD",
+      "time": "2026-10-08 08:33:59"
+    },
+    {
+      "cve_id": "CVE-2026-42617",
+      "title": "高危漏洞: CVE-2026-42617 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-07 22:17:09",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "description": "In NTFS-3G before 2026.7.7, a heap buffer overflow exists in ntfs_ir_to_ib() in index.c that allows an attacker to corrupt heap memory in the SUID-root ntfs-3g binary by crafting a malicious NTFS image. The overflow is triggered by extending a directory, e.g., by creating a file.",
+      "refs": "https://github.com/tuxera/ntfs-3g/releases#release-2026.7.7\nhttps://github.com/tuxera/ntfs-3g/security/advisories/GHSA-jv65-qqf7-f692",
+      "source": "NVD",
+      "time": "2026-10-08 08:33:53"
+    },
+    {
       "cve_id": "CVE-2026-107219",
       "title": "高危漏洞: CVE-2026-107219 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -956,149 +1099,6 @@
       "refs": "https://wpscan.com/vulnerability/cfb495ac-32fc-43e2-81b4-74faa8c164a4/",
       "source": "NVD",
       "time": "2026-10-07 20:20:13"
-    },
-    {
-      "cve_id": "CVE-2026-87971",
-      "title": "高危漏洞: CVE-2026-87971 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-07 15:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "The If-So Dynamic Content  WordPress plugin before 1.10.2 does not validate the URL scheme of a request-supplied value before reflecting it into a link on an admin page, allowing attackers to execute arbitrary JavaScript in the browser of a logged-in user who opens a crafted link.",
-      "refs": "https://wpscan.com/vulnerability/f03cb198-7d64-4405-9c2c-5342f24deb4f/",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:09"
-    },
-    {
-      "cve_id": "CVE-2026-87782",
-      "title": "高危漏洞: CVE-2026-87782 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-07 15:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Koinonia Link WordPress plugin before 1.1.5 does not check that a user is allowed to change roles before saving a role selection submitted with a profile update, allowing any authenticated user, such as a subscriber, to grant themselves the Administrator role.",
-      "refs": "https://wpscan.com/vulnerability/0f3af398-4a70-4987-9da8-b876b9e932c7/",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:04"
-    },
-    {
-      "cve_id": "CVE-2026-82212",
-      "title": "高危漏洞: CVE-2026-82212 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-07 15:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "description": "The Nexi XPay Build WordPress plugin through 7.6.2 does not correctly validate the security token on its payment notification route, accepting the request when the target order has no stored token, which allows unauthenticated attackers to mark arbitrary orders as paid, or to mark genuinely paid orders as failed.",
-      "refs": "https://wpscan.com/vulnerability/66df6adb-336c-4660-9a63-5e6e550a2edb/",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:59"
-    },
-    {
-      "cve_id": "CVE-2026-82211",
-      "title": "高危漏洞: CVE-2026-82211 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-10-07 15:17:01",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "description": "The Nexi XPay Build WordPress plugin through 7.6.2 does not verify the payment result supplied to several of its unauthenticated routes, allowing attackers to mark arbitrary orders as paid or failed, to cancel them, and to obtain order keys which expose guest buyers' details.",
-      "refs": "https://wpscan.com/vulnerability/c1ab38b4-2445-4a56-a47e-aab2b8e8de1e/",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:55"
-    },
-    {
-      "cve_id": "CVE-2026-105316",
-      "title": "高危漏洞: CVE-2026-105316 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-07 15:16:59",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "The Magee Shortcodes WordPress plugin through 2.1.1 does not sanitise and escape user input in some of its AJAX actions, which are available to unauthenticated users, before reflecting it back in the response, leading to Reflected Cross-Site Scripting.",
-      "refs": "https://wpscan.com/vulnerability/8240033a-bb4b-490f-97da-4ae768d2cb6d/",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:50"
-    },
-    {
-      "cve_id": "CVE-2026-104677",
-      "title": "高危漏洞: CVE-2026-104677 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-07 15:16:58",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The WP Coder  WordPress plugin before 4.5.2 does not restrict access to its PHP code-execution feature to administrators, gating it on a content capability that the Editor role holds by default, which allows Editor-level users to save and execute arbitrary PHP code on the server and fully compromise the site.",
-      "refs": "https://wpscan.com/vulnerability/2e730bf3-ebf9-4c0d-bb05-8ca94c7cab60/",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:44"
-    },
-    {
-      "cve_id": "CVE-2026-59347",
-      "title": "高危漏洞: CVE-2026-59347 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-07 14:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "VMware Workstation and Fusion contain a stack-based buffer-overflow vulnerability in HGFS. A malicious actor with local administrative privileges on a virtual machine may exploit this issue to execute code as the virtual machine's VMX process running on the host.\n\nAffected versions:\n- VMware Workstation: 25H2, 26H1 (fixed in 26H1u1)\n- VMware Fusion: 25H2, 26H1 (fixed in 26H1u1)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/security-advisories/0/38288",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:39"
-    },
-    {
-      "cve_id": "CVE-2026-59346",
-      "title": "高危漏洞: CVE-2026-59346 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-10-07 14:16:35",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "VMware Workstation and Fusion contain an integer-overflow vulnerability. A malicious actor with local administrative privileges on a virtual machine with VMXNET3 virtual network adapter may exploit this issue to execute code on the host.\n\nAffected versions:\n- VMware Workstation: 25H2, 26H1 (fixed in 26H1u1)\n- VMware Fusion: 25H2, 26H1 (fixed in 26H1u1)",
-      "refs": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/security-advisories/0/38288",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:35"
-    },
-    {
-      "cve_id": "CVE-2026-102173",
-      "title": "高危漏洞: CVE-2026-102173 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-07 14:16:33",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via registration metadata in all versions up to, and including, 6.3.1 This is due to insufficient escaping in `ExceptionalElements::image_element()`, which concatenates a user-meta value straight into an `<img src=\"…\">` attribute. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute whenever a user accesses a page rendering a Kirki users collection whose image element is bound to one of the nine registration meta fields. Requires public user registration to be enabled and a published page carrying a `kirki-register` element, which prints the required element nonce into the public markup.",
-      "refs": "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/CompLibFormHandler.php#L361\nhttps://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/CompLibFormHandler.php#L389\nhttps://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/CompLibFormHandler.php#L76",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:29"
-    },
-    {
-      "cve_id": "CVE-2026-106471",
-      "title": "高危漏洞: CVE-2026-106471 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-07 10:16:57",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-      "description": "A flaw was found in Candlepin. The central authorization filter incorrectly grants access when any one of multiple @Verify-annotated parameters is accessible, instead of requiring access to every verified entity. A low-privilege authenticated attacker who can access the first referenced object can bypass authorization checks on subsequent objects. When target resource identifiers are known, this can enable unauthorized disclosure of consumer information and unauthorized modification of entitlements and related subscription resources, including across organizations.",
-      "refs": "https://access.redhat.com/security/cve/CVE-2026-106471\nhttps://bugzilla.redhat.com/show_bug.cgi?id=2547044",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:23"
-    },
-    {
-      "cve_id": "CVE-2026-97680",
-      "title": "高危漏洞: CVE-2026-97680 (CVSS 8.3)",
-      "cvss_score": 8.3,
-      "published_date": "2026-10-07 09:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information or inject malicious data due to improper access control in the vertex result caching subsystem.",
-      "refs": "https://www.ibm.com/support/pages/node/7290694",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:18"
-    },
-    {
-      "cve_id": "CVE-2026-97679",
-      "title": "高危漏洞: CVE-2026-97679 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-07 09:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in an OS command ('Code Injection') related to improper input validation.",
-      "refs": "https://www.ibm.com/support/pages/node/7290694",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:14"
-    },
-    {
-      "cve_id": "CVE-2026-97678",
-      "title": "高危漏洞: CVE-2026-97678 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-07 09:16:36",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper input validation.",
-      "refs": "https://www.ibm.com/support/pages/node/7290694",
-      "source": "NVD",
-      "time": "2026-10-07 20:19:07"
     }
   ]
 }
