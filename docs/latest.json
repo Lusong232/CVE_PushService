@@ -1,6 +1,17 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-82627",
+      "title": "高危漏洞: CVE-2026-82627 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 10:16:54",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Uncanny Automator – AI + Automation for WordPress | AI Agent, AI Page Builder, Free AI Usage Included plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.6.1.1 via deserialization of untrusted input. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object when a third-party integration plugin (such as PeepSo,  MailPoet, WPForms, etc) is installed and a recipe is configured that stores attacker-controlled data as trigger meta. The additional presence of a POP chain within Uncanny Automator allows attackers to delete arbitrary files on the server.",
+      "refs": "https://plugins.trac.wordpress.org/changeset/3721435/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ce918263-dc4a-4db1-a506-a9e6c8125741?source=cve",
+      "source": "NVD",
+      "time": "2026-10-08 17:41:59"
+    },
+    {
       "cve_id": "CVE-2026-89322",
       "title": "高危漏洞: CVE-2026-89322 (CVSS 7.2)",
       "cvss_score": 7.2,
@@ -1088,17 +1099,6 @@
       "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/4416ad13677259d180f35ce44338578694e48184\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-x37p-38wq-cgwj",
       "source": "NVD",
       "time": "2026-10-07 20:20:21"
-    },
-    {
-      "cve_id": "CVE-2026-97188",
-      "title": "高危漏洞: CVE-2026-97188 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-07 15:17:02",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "The String locator WordPress plugin before 2.6.8 does not restrict the classes allowed when deserializing the content of a database row saved through its database editor, allowing unauthenticated attackers to store a serialized PHP object that is instantiated when an administrator later opens and saves that row. If a suitable POP chain is present via another installed String locator WordPress plugin before 2.6.8 or , this can lead to arbitrary file deletion, sensitive data disclosure or remote code execution.",
-      "refs": "https://wpscan.com/vulnerability/cfb495ac-32fc-43e2-81b4-74faa8c164a4/",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:13"
     }
   ]
 }
