@@ -1,6 +1,182 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-104704",
+      "title": "高危漏洞: CVE-2026-104704 (CVSS 7.4)",
+      "cvss_score": 7.4,
+      "published_date": "2026-10-08 19:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Progressive Robot hMailServer 6.0.0 through 6.3.5 does not enforce TLS for outbound SMTP delivery to a mail exchanger whose DNSSEC-validated TLSA records contain no DANE-EE (usage 3) record, contrary to RFC 7672 section 2.2. The server used only DANE-EE records and treated a validated TLSA record set consisting of DANE-TA (usage 2) or otherwise unusable records as if no records were published, so delivery to such a host fell back to opportunistic TLS. An attacker with an active position on the network path between the server and the recipient's mail exchanger can suppress or break the STARTTLS negotiation and cause messages to be delivered in cleartext, where they can be read and modified.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.6\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/61",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:40"
+    },
+    {
+      "cve_id": "CVE-2026-104660",
+      "title": "高危漏洞: CVE-2026-104660 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-10-08 19:16:44",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Missing authorization on COM objects in Progressive Robot hMailServer 6.0.0 through 6.3.5 (Windows only) lets a local interactive user with no hMailServer credential read and write arbitrary files as the service account and queue mail as any sender. The service registers its COM classes with no DCOM access or launch permission and calls CoInitializeSecurity with no security descriptor, so any user logged on at the console or over Remote Desktop can activate the classes in the running service; a hMailServer.Message, its Attachments and Attachment, and a hMailServer.FetchAccount created this way carry a credential that never authenticated. Attachments.Add(path) and Attachment.SaveAs(path) performed no authorization check, and Message.Save/Copy and FetchAccount.AccountID/Save performed none either up to 6.3.3 and from 6.3.4 treated a holder with no credential as the server's own event-script host. Because the service does not impersonate the COM caller, Attachments.Add reads any file the service account can read and returns it, Attachment.SaveAs writes attacker-chosen bytes to any path it can write (on a LocalSystem installation, code execution as SYSTEM), Message.Save queues outbound mail from any address past the SMTP checks, and FetchAccount attaches a mail-fetch job to any mailbox. The objects an Application handed out behave the same once a later Authenticate on that Application fails.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.6\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/59",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:36"
+    },
+    {
+      "cve_id": "CVE-2026-104659",
+      "title": "高危漏洞: CVE-2026-104659 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 19:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Missing Host header validation and missing throttling of failed administrator sign-ins in the REST API listener of Progressive Robot hMailServer 6.0.0 through 6.3.5 allow a remote attacker to brute-force the server administrator's password through the administrator's own browser by DNS rebinding. The listener, which is off by default and bound to the loopback when enabled, answered requests whatever their Host header named, and a failed sign-in with the administrator's password from the loopback was neither auto-banned nor delayed. A web page whose host name the attacker rebinds to 127.0.0.1, opened in a browser on the server, can therefore send authenticated requests to the listener, read the answers and try administrator passwords at full speed until one is accepted, giving the attacker full administrative control of the mail server.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.6\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/57",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:28"
+    },
+    {
+      "cve_id": "CVE-2026-104658",
+      "title": "高危漏洞: CVE-2026-104658 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-10-08 19:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Linux live-update apply helper (hmailserver-update) of Progressive Robot hMailServer 6.3.4 and 6.3.5 runs as root on a request file written by the unprivileged hmailserver service account, and took from that request the program used to verify an AppImage update's signature and the systemd unit to stop before reading the service account's files. An attacker who already runs code as the hmailserver service account, for example through another flaw in the mail server, can therefore have arbitrary code executed as root, on any Linux installation where the live update's path unit is active - the default for the project's .deb and .rpm packages - and on AppImage installations run under that unit.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.6\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/58",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:21"
+    },
+    {
+      "cve_id": "CVE-2026-103649",
+      "title": "高危漏洞: CVE-2026-103649 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 19:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "description": "Missing network timeouts in the Linux builds of Progressive Robot hMailServer 6.3.0 through 6.3.5 allow a remote attacker to hold server threads indefinitely and so stop outbound mail delivery (denial of service). The server set its socket timeouts in the form Windows takes, which Linux refuses, and its HTTPS clients read without a deadline, so a peer that accepts a connection and then sends nothing held the waiting thread for as long as the connection stayed open. The MTA-STS policy fetch, enabled by default, is made during outbound delivery to mta-sts.<recipient domain>, so anyone who can make the server deliver mail to a domain they control - for example as the envelope sender of a message that bounces - can hold delivery threads until outbound delivery stops. The same flaw affects the DANE TLSA query, the OAuth2 token request, the ACME client, and the ManageSieve and metrics listeners, which a silent client stops from serving anyone else. Windows builds are not affected.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.6\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/53",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:17"
+    },
+    {
+      "cve_id": "CVE-2026-103647",
+      "title": "高危漏洞: CVE-2026-103647 (CVSS 8.0)",
+      "cvss_score": 8.0,
+      "published_date": "2026-10-08 19:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "description": "Cross-site scripting in the webmail of Progressive Robot hMailServer 6.3.2 through 6.3.5 allows a remote attacker who can send a user an encrypted message to run script in the webmail's origin with that user's session. When the webmail decrypted an S/MIME message (from 6.3.2) or an OpenPGP message (from 6.3.4) in the browser, it offered each decrypted attachment as a blob URL of the media type the message declared for it. A click saved the file, but if the user opened the attachment in a new tab, a part declared as text/html was rendered as a document of the webmail's origin and its script could read the mailbox, send mail and change the account through the REST API. The webmail is served only when the REST API is enabled, which it is not by default.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.6\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/52",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:13"
+    },
+    {
+      "cve_id": "CVE-2026-103010",
+      "title": "高危漏洞: CVE-2026-103010 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-10-08 19:16:42",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Heap-based buffer overflow in the legacy Blowfish decryption routine (BlowFishEncryptor::DecryptFromString) in Progressive Robot hMailServer 6.0.0 through 6.3.3 on Windows allows a local interactive user with no hMailServer credentials to write bytes of their choosing past the end of a 255-byte heap buffer in the hMailServer service process, which runs as LocalSystem by default. The user does this by passing a long hexadecimal string to the COM method Utilities.BlowfishDecrypt, which checked no authentication. The routine converted hexadecimal input of any length into a fixed 255-byte buffer before decrypting it in place. The result is a denial of service (service crash), and possibly code execution with the privileges of the service account.",
+      "refs": "https://gitlab.com/hmailserver/hmailserver/-/commit/135a1908ff820ed587d5f180f98c53bd010d8931\nhttps://gitlab.com/hmailserver/hmailserver/-/releases/v6.3.4\nhttps://gitlab.com/hmailserver/hmailserver/-/work_items/49",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:07"
+    },
+    {
+      "cve_id": "CVE-2026-107510",
+      "title": "高危漏洞: CVE-2026-107510 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-10-08 18:17:09",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "description": "An authenticated high privilege user can inject arguments in troubleshooting commands resulting in privilege escalation.",
+      "refs": "https://support.infoblox.com/s/article/Security-Advisory-NIOS-Maintenance-Mode-Permits-Root-Shell",
+      "source": "NVD",
+      "time": "2026-10-09 02:10:02"
+    },
+    {
+      "cve_id": "CVE-2026-105110",
+      "title": "高危漏洞: CVE-2026-105110 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-08 17:16:40",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "OS Command Injection in the login.xgi CGI endpoint in Iskratel Innbox GPON ONT devices allows an unauthenticated remote attacker to execute arbitrary commands as root via the CLI parameter.",
+      "refs": "https://github.com/BlackHatExploitation/innbox_root",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:57"
+    },
+    {
+      "cve_id": "CVE-2026-85097",
+      "title": "高危漏洞: CVE-2026-85097 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-08 15:16:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Bricksforge plugin for WordPress is vulnerable to unauthenticated arbitrary file upload in versions up to, and including, 3.1.8.9. This is due to insufficient validation of the attacker-controlled URL field in the 'temporaryFileUploads' parameter during form submission. An unauthenticated attacker can first obtain a valid nonce via the bricksforge_regenerate_nonce AJAX endpoint, then upload a GIF/PHP polyglot file to the temporary upload directory where MIME type validation is correctly performed. Subsequently, the attacker can submit a form with a crafted 'temporaryFileUploads' parameter where the server-side file path points to the validated GIF file, but the attacker-controlled url field ends with a .php extension. This makes it possible for unauthenticated attackers to upload and execute arbitrary PHP code on the server.",
+      "refs": "https://bricksforge.io/version-changelog/\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/e993c929-f175-43a7-92e6-9d3b089b8dde?source=cve",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:53"
+    },
+    {
+      "cve_id": "CVE-2026-107459",
+      "title": "高危漏洞: CVE-2026-107459 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-08 14:16:42",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SecuShare Pro developed by Openfind has an OS Command Injection vulnerability. Unauthenticated remote attackers can inject arbitrary OS commands and execute them on the server.",
+      "refs": "https://www.twcert.org.tw/en/cp-139-11255-bce41-2.html\nhttps://www.twcert.org.tw/tw/cp-132-11254-9c206-1.html",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:45"
+    },
+    {
+      "cve_id": "CVE-2026-103692",
+      "title": "高危漏洞: CVE-2026-103692 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-08 14:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Frontend Dashboard WordPress plugin before 3.0.5 does not perform any authorisation or nonce check on actions available to unauthenticated users that call an attacker-chosen PHP function or class method with the request data, allowing unauthenticated users to take over any account, including administrators.",
+      "refs": "https://wpscan.com/vulnerability/d2341538-77fa-48a0-83e3-bc9a3818276c/",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:41"
+    },
+    {
+      "cve_id": "CVE-2026-103646",
+      "title": "高危漏洞: CVE-2026-103646 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-08 14:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Ultimate Multisite  WordPress plugin before 2.17.0 does not require authentication before a logged-out checkout is linked to, and logged in as, an existing WordPress account matching the submitted email address, and its duplicate-account check normalizes that address differently from the lookup used to create the customer, so an unauthenticated attacker can log in as any existing user, including a Network Super Admin, whose email address they know.\nThis bypass is not addressed by the 2.15.1 fix for CVE-2026-75957 and remains exploitable in all versions up to and including 2.16.1, the releases that fix was expected to cover. Exploitation requires a checkout form configured without a password field (auto-generated password) and a target account that has no existing customer record in the Ultimate Multisite  WordPress plugin before 2.17.0.",
+      "refs": "https://wpscan.com/vulnerability/a05da0ad-5d92-406f-b182-b3ed1f8389f3/",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:37"
+    },
+    {
+      "cve_id": "CVE-2026-103309",
+      "title": "高危漏洞: CVE-2026-103309 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-08 14:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The GPTranslate  WordPress plugin before 2.34.14 does not properly restrict who can store translations, and does not escape them when outputting them in translated pages, allowing unauthenticated users to perform Stored Cross-Site Scripting attacks when server-side translations are enabled.",
+      "refs": "https://wpscan.com/vulnerability/e791e349-932b-4e59-bacb-a49b57343cf3/",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:32"
+    },
+    {
+      "cve_id": "CVE-2026-17609",
+      "title": "高危漏洞: CVE-2026-17609 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-10-08 13:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "description": "The Super Forms – Drag & Drop Form Builder plugin for WordPress is vulnerable to Arbitrary Directory Deletion in all versions up to, and including, 6.3.316 via the submit_form function. This is due to insufficient validation of attacker-controlled JSON field declarations against the actual form schema, combined with a non-effective ABSPATH guard that dirname() trivially bypasses by stripping the trailing slash. This makes it possible for unauthenticated attackers to recursively delete arbitrary directories on the server, including the WordPress root directory. Exploitation requires that an administrator has enabled the 'Delete files from server after form submissions' setting, though this is a documented and commonly-enabled feature.",
+      "refs": "https://github.com/RensTillmann/super-forms/pull/205\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f21577b4-b7c6-4b39-b2b7-66a75c5f56fb?source=cve",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:27"
+    },
+    {
+      "cve_id": "CVE-2026-17196",
+      "title": "高危漏洞: CVE-2026-17196 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-08 13:17:04",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Super Forms – Drag & Drop Form Builder plugin for WordPress is vulnerable to Unrestricted File Type Upload in all versions up to, and including, 6.3.316 via the upload_files function. This is due to missing file type validation in the upload_files function, which reads and applies an attacker-controlled extensions string from _super_elements post meta verbatim as the allowed MIME type map. This makes it possible for authenticated attackers, with Subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. The attack requires a preceding step: poisoning the _super_elements post meta via the super_save_form AJAX handler, which lacks a capability and nonce check but requires the attacker to be authenticated as at minimum a Subscriber-level user; the subsequent file upload via super_upload_files requires no authentication at all.",
+      "refs": "https://github.com/RensTillmann/super-forms/pull/205\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/63db136b-58da-4758-a506-4dc79b3c177d?source=cve",
+      "source": "NVD",
+      "time": "2026-10-09 02:09:22"
+    },
+    {
       "cve_id": "CVE-2026-82627",
       "title": "高危漏洞: CVE-2026-82627 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -923,182 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/wp-post-author/vulnerability/wordpress-wp-post-author-plugin-4-0-0-sql-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-10-08 04:19:30"
-    },
-    {
-      "cve_id": "CVE-2026-106059",
-      "title": "高危漏洞: CVE-2026-106059 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-07 20:17:09",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "GitAhead through 2.7.1 on macOS contains a command injection vulnerability that allows attackers to execute shell commands by crafting repository filenames interpolated unescaped into the Show in Finder AppleScript. Attackers can commit a file whose path contains a double quote followed by a do shell script payload, which runs as the victim user when Show in Finder is chosen.",
-      "refs": "https://github.com/gitahead/gitahead\nhttps://github.com/gitahead/gitahead/blob/v2.7.1/src/tools/ShowTool.cpp#L40-L48\nhttps://github.com/gitahead/gitahead/issues/663",
-      "source": "NVD",
-      "time": "2026-10-08 04:19:26"
-    },
-    {
-      "cve_id": "CVE-2026-106058",
-      "title": "高危漏洞: CVE-2026-106058 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-07 20:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "GitAhead through 2.7.1 contains an OS command injection vulnerability in src/git/Filter.cpp that allows malicious repositories to execute commands by substituting crafted filenames into clean/smudge filter commands. Attackers can ship files named with $(command) selected via .gitattributes so checkout or staging runs the command through bash -c as the victim.",
-      "refs": "https://github.com/gitahead/gitahead\nhttps://github.com/gitahead/gitahead/blob/v2.7.1/src/git/Filter.cpp#L43-L70\nhttps://github.com/gitahead/gitahead/issues/661",
-      "source": "NVD",
-      "time": "2026-10-08 04:19:19"
-    },
-    {
-      "cve_id": "CVE-2026-106057",
-      "title": "高危漏洞: CVE-2026-106057 (CVSS 7.8)",
-      "cvss_score": 7.8,
-      "published_date": "2026-10-07 20:17:08",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "patool before 4.0.6 contains an OS command injection vulnerability on Windows because shell_quote_nt fails to escape cmd.exe metacharacters or embedded double quotes in archive filenames. Attackers can supply crafted filenames like report&calc.gz for single-file formats run with shell=True to execute commands with patool process privileges.",
-      "refs": "https://github.com/wummel/patool\nhttps://github.com/wummel/patool/blob/4.0.5/patoolib/util.py#L110-L116\nhttps://github.com/wummel/patool/commit/592f35761f428afbcde2888ecd3cc4af43881aeb",
-      "source": "NVD",
-      "time": "2026-10-08 04:19:15"
-    },
-    {
-      "cve_id": "CVE-2026-106056",
-      "title": "高危漏洞: CVE-2026-106056 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-07 20:17:08",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Rundeck before 6.2.0 contains an OS command injection vulnerability that allows authenticated users with job run permission to execute commands on Windows nodes by supplying crafted option values. Attackers can inject cmd.exe metacharacters such as && or | into free-text options, which CLIUtils.quoteWindowsCMDArg wraps in ineffective single quotes, running commands with node executor credential privileges.",
-      "refs": "https://github.com/rundeck/rundeck\nhttps://github.com/rundeck/rundeck/blob/v6.1.0/core/src/main/java/com/dtolabs/rundeck/core/cli/CLIUtils.java#L146-L158\nhttps://github.com/rundeck/rundeck/commit/807d9cf0eef63669b342e02e05a740e97f84f013",
-      "source": "NVD",
-      "time": "2026-10-08 04:19:10"
-    },
-    {
-      "cve_id": "CVE-2026-97720",
-      "title": "高危漏洞: CVE-2026-97720 (CVSS 9.1)",
-      "cvss_score": 9.1,
-      "published_date": "2026-10-07 17:17:06",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "description": "Incorrect implementation of JWT/OAuth authentication in Impala executors in Apache Impala versions up to and including 4.5.2 which allows attacked to access resources served by the executor's webserver when that webserver is configured to accept JWT/OAuth tokens.  Bearer token (JWT) signatures are not validated resulting in the webserver accepting any valid JWT.\nUsers are recommended to either disable JWT/OAuth auth for Impala executors or upgrade to version 4.5.3, which fixes this issue.",
-      "refs": "https://lists.apache.org/thread.html/q2qkrnko9hdv2mhqy6prm06f65n2g3h2\nhttp://www.openwall.com/lists/oss-security/2026/10/07/22",
-      "source": "NVD",
-      "time": "2026-10-08 04:19:04"
-    },
-    {
-      "cve_id": "CVE-2026-106550",
-      "title": "高危漏洞: CVE-2026-106550 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-07 05:17:18",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Mozilla's Node-convict (version 6.2.2 and later) is vulnerable to a Denial of Service vulnerability caused by incomplete prototype‑pollution protections in config.set(). An attacker controlling the configuration key can write arbitrary properties to constructor.<key>, which walk() resolves to the global Object function. This allows overwriting core JavaScript methods such as Object.assign, leading to persistent process-wide failures and requiring a restart. The issue bypasses existing filters that only block constructor.prototype.* and __proto__.*. Exploitation requires an endpoint that forwards attacker-controlled keys into config.set().",
-      "refs": "https://github.com/mozilla/node-convict",
-      "source": "NVD",
-      "time": "2026-10-08 04:18:58"
-    },
-    {
-      "cve_id": "CVE-2026-96408",
-      "title": "高危漏洞: CVE-2026-96408 (CVSS 9.4)",
-      "cvss_score": 9.4,
-      "published_date": "2026-10-07 19:17:20",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
-      "description": "A code injection vulnerability exists in the upgrade script of Movable Type, which may allow an unauthenticated attacker to execute an arbitrary Perl script or an SQL query on the affected product.",
-      "refs": "https://jvn.jp/en/jp/JVN91153973/\nhttps://movabletype.org/news/2026/10/mt-930-released.html\nhttps://www.sixapart.jp/movabletype/news/2026/10/07-1100.html",
-      "source": "NVD",
-      "time": "2026-10-07 20:21:08"
-    },
-    {
-      "cve_id": "CVE-2026-42714",
-      "title": "高危漏洞: CVE-2026-42714 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-10-07 19:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Piggly Dev Pix por Piggly (para Woocommerce) pix-por-piggly allows Blind SQL Injection.This issue affects Pix por Piggly (para Woocommerce): from n/a through 2.1.2.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/pix-por-piggly/vulnerability/wordpress-pix-por-piggly-para-woocommerce-plugin-2-1-2-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-07 20:21:03"
-    },
-    {
-      "cve_id": "CVE-2026-42713",
-      "title": "高危漏洞: CVE-2026-42713 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-10-07 19:17:19",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Gopiplus Post title marquee scroll post-title-marquee-scroll allows Blind SQL Injection.This issue affects Post title marquee scroll: from n/a through 9.9.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/post-title-marquee-scroll/vulnerability/wordpress-post-title-marquee-scroll-plugin-9-9-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:58"
-    },
-    {
-      "cve_id": "CVE-2026-103668",
-      "title": "高危漏洞: CVE-2026-103668 (CVSS 8.6)",
-      "cvss_score": 8.6,
-      "published_date": "2026-10-07 19:17:09",
-      "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
-      "description": "An SQL Injection vulnerability exists in the Site Search function of Movable Type, which may allow an unauthenticated attacker to execute an arbitrary SQL query on the affected product.",
-      "refs": "https://jvn.jp/en/jp/JVN91153973/\nhttps://movabletype.org/news/2026/10/mt-930-released.html\nhttps://www.sixapart.jp/movabletype/news/2026/10/07-1100.html",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:54"
-    },
-    {
-      "cve_id": "CVE-2026-42721",
-      "title": "高危漏洞: CVE-2026-42721 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-10-07 18:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in SERVIT Software Solutions affiliate-toolkit affiliate-toolkit-starter allows Blind SQL Injection.This issue affects affiliate-toolkit: from n/a through 3.9.1.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/affiliate-toolkit-starter/vulnerability/wordpress-affiliate-toolkit-plugin-3-9-1-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:49"
-    },
-    {
-      "cve_id": "CVE-2026-42720",
-      "title": "高危漏洞: CVE-2026-42720 (CVSS 7.6)",
-      "cvss_score": 7.6,
-      "published_date": "2026-10-07 18:17:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Sarah Giles Dynamic User Directory dynamic-user-directory allows Blind SQL Injection.This issue affects Dynamic User Directory: from n/a through 2.4.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/dynamic-user-directory/vulnerability/wordpress-dynamic-user-directory-plugin-2-4-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:43"
-    },
-    {
-      "cve_id": "CVE-2026-105192",
-      "title": "高危漏洞: CVE-2026-105192 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-07 18:17:32",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "LMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ ROUTER so worker processes can register and share KV cache blocks. Messages on that socket are msgpack. Extension code 1 is passed to DeviceIPCWrapper.Deserialize, which calls pickle.loads, while the server is still decoding request arguments and before the handler runs. A single unauthenticated ZMQ DEALER message to the transport port (default 5555) therefore executes code as the user the LMCache process runs as. Official container images run that process as root. The transport binds to localhost unless the operator sets a routable address with --host, which is how multi-node deployments let peers connect.",
-      "refs": "https://github.com/LMCache/LMCache\nhttps://github.com/LMCache/LMCache/blob/v0.3.9/lmcache/v1/multiprocess/custom_types.py\nhttps://github.com/LMCache/LMCache/blob/v0.5.5/lmcache/v1/platform/base/ipc_wrapper.py",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:37"
-    },
-    {
-      "cve_id": "CVE-2026-89417",
-      "title": "高危漏洞: CVE-2026-89417 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-07 17:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
-      "description": "The OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy. plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 's' Search Parameter via comments-atom Feed in all versions up to, and including, 6.3.10 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires that the front-end server serves the retained .tmp file without a Content-Type or X-Content-Type-Options header, enabling MIME-sniffing browsers such as Chromium to execute the injected script — a condition present by default on many Apache and nginx/php-fpm deployments.",
-      "refs": "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Download.php#L78\nhttps://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Frontend/Process.php#L411\nhttps://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Frontend/Process.php#L663",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:33"
-    },
-    {
-      "cve_id": "CVE-2026-19186",
-      "title": "高危漏洞: CVE-2026-19186 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-07 17:17:05",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-      "description": "ieee802154_decipher_data_frame() in subsys/net/l2/ieee802154/ieee802154_frame.c computed payload_len = net_pkt_get_len(pkt) - ll_hdr_len - authtag_len without first checking that the received frame is at least ll_hdr_len + authtag_len bytes long. All three variables are uint8_t, so a frame whose payload is shorter than the configured authentication tag makes the subtraction wrap around to a large value (up to 255).\n\nThe wrapped length is passed unchanged to ieee802154_decrypt_auth() and on to the CCM operation as cipher_pkt.in_len/out_buf_max, with apkt->tag pointing at frame + ll_hdr_len + payload_len. Because the receive buffer is allocated to the exact length of the frame received from the radio driver, the crypto layer then reads several hundred bytes past the end of the packet buffer and writes the same number of decrypted bytes back over it in place. The frame's authentication tag is only verified after this processing has taken place, so no key material, association or prior authentication is needed — a single crafted short frame from any device in radio range is sufficient. Frame validation in ieee802154_validate_frame() does not prevent it: a data frame is accepted with a one-byte payload.\n\nThe result is an out-of-bounds read and an out-of-bounds write of up to roughly 240 bytes into the adjacent network-buffer pool, corrupting other packets or allocator metadata and typically faulting the target. The out-of-bounds content is not attacker-chosen (it is ciphertext XOR keystream over out-of-bounds memory) and the frame is dropped when tag verification fails, so the primary impact is memory corruption and denial of service rather than information disclosure.\n\nExposure is limited to configurations that enable the experimental CONFIG_NET_L2_IEEE802154_SECURITY option, select a crypto device via CONFIG_NET_L2_IEEE802154_SECURITY_CRYPTO_DEV_NAME, and have established a security session with a level other than IEEE802154_SECURITY_LEVEL_NONE; with security disabled or at level NONE the tag length is zero and no underflow occurs. The fix rejects frames shorter than ll_hdr_len + authtag_len before the subtraction, and adds the matching guard on the transmit side in ieee802154_create_data_frame().",
-      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/6d721de13a6026808f75578ecfee95a3592d5264\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-6x64-rwq6-j8x3",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:28"
-    },
-    {
-      "cve_id": "CVE-2026-15894",
-      "title": "高危漏洞: CVE-2026-15894 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-07 17:17:05",
-      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "The Bluetooth Mesh On-Demand Private Proxy solicitation handler in subsys/bluetooth/mesh/solicitation.c copies a received Solicitation PDU into a fixed 17-byte stack buffer without bounding the source length. In sol_pdu_decrypt(), out is allocated as NET_BUF_SIMPLE(17) and then filled with net_buf_simple_add_mem(out, in->data, in->len); net_buf_simple_add() guards its tailroom only with __ASSERT_NO_MSG, which is compiled out in production builds, so when in->len > 17 the underlying memcpy writes attacker-controlled bytes past the 17-byte stack buffer. The copy occurs before any decryption or authentication, so no key material is required to trigger it.\n\nThe oversized length arises because the mesh scan callback in subsys/bluetooth/mesh/adv.c calls net_buf_simple_restore() before dispatching to bt_mesh_sol_recv(), leaving buf->len covering the entire remaining advertising payload rather than just the Solicitation Service Data. After the parser locates the Service Data AD and consumes the Identification Type byte, the remaining buf->len is the 17-octet Network PDU plus any trailing advertising bytes, and prior to this fix there was no maximum-length check (only a minimum). An attacker can therefore append extra AD structures or padding after the Solicitation Service Data to make buf->len exceed 17.\n\nbt_mesh_scan_cb() is registered directly as the BLE scan callback, so buf is raw, unauthenticated advertising data received over the air. Any device in radio range can send a non-connectable advertisement carrying a crafted mesh Proxy Solicitation to a node that has CONFIG_BT_MESH_OD_PRIV_PROXY_SRV enabled and is currently eligible to be solicited (GATT proxy disabled, On-Demand Private Proxy enabled), with no pairing, bonding, or provisioning. The result is an attacker-controlled stack overwrite — plausibly leading to remote code execution and at minimum a reliable remote denial of service. The fix trims buf->len to the spec-fixed 17 octets (dropping the PDU if fewer remain) before decryption.",
-      "refs": "https://github.com/zephyrproject-rtos/zephyr/commit/4416ad13677259d180f35ce44338578694e48184\nhttps://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-x37p-38wq-cgwj",
-      "source": "NVD",
-      "time": "2026-10-07 20:20:21"
     }
   ]
 }
