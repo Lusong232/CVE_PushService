@@ -1,6 +1,193 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-108553",
+      "title": "高危漏洞: CVE-2026-108553 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-10 23:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "OpenRefine through 3.10.1 contains a cross-site request forgery vulnerability in the get-rows command that allows remote attackers to execute Jython facet expressions. Attackers can lure a user to a malicious page issuing a cross-origin GET with a crafted engine parameter, executing operating system commands as the OpenRefine user.",
+      "refs": "https://github.com/OpenRefine/OpenRefine\nhttps://github.com/OpenRefine/OpenRefine/blob/bde8a36dc188f7846aeafc2910969e7d0fbc8e7c/extensions/jython/src/com/google/refine/jython/JythonEvaluable.java#L142\nhttps://github.com/OpenRefine/OpenRefine/blob/bde8a36dc188f7846aeafc2910969e7d0fbc8e7c/main/src/com/google/refine/commands/row/GetRowsCommand.java#L174-L186",
+      "source": "NVD",
+      "time": "2026-10-11 00:36:19"
+    },
+    {
+      "cve_id": "CVE-2026-108551",
+      "title": "高危漏洞: CVE-2026-108551 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-10 23:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "openapi-typescript-codegen through 0.31.0 contains a code injection vulnerability that allows attackers controlling an OpenAPI document to inject JavaScript by supplying unescaped values interpolated into single-quoted string literals. Attackers can embed a single quote in path keys, parameter names, servers[0].url, or info.version to execute arbitrary JavaScript when generated clients are imported or service methods called.",
+      "refs": "https://github.com/ferdikoomen/openapi-typescript-codegen\nhttps://github.com/ferdikoomen/openapi-typescript-codegen/blob/v0.31.0/src/templates/core/OpenAPI.hbs#L20-L23\nhttps://github.com/ferdikoomen/openapi-typescript-codegen/blob/v0.31.0/src/templates/exportService.hbs#L89-L110",
+      "source": "NVD",
+      "time": "2026-10-11 00:36:15"
+    },
+    {
+      "cve_id": "CVE-2026-108550",
+      "title": "高危漏洞: CVE-2026-108550 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-10 23:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "SkillHub before 0.2.22 contains an incorrect authorization vulnerability in AccountMergeService and AccountMergeController that allows authenticated attackers to take over other accounts by abusing the merge flow. Attackers can call the merge initiate endpoint with a target username or OAuth identity, receive the verification token directly, and confirm the merge to inherit the victim's API tokens, roles and namespace ownership.",
+      "refs": "https://github.com/iflytek/skillhub\nhttps://github.com/iflytek/skillhub/blob/v0.2.21/server/skillhub-auth/src/main/java/com/iflytek/skillhub/auth/merge/AccountMergeService.java#L95-L109\nhttps://github.com/iflytek/skillhub/commit/45228996c7dd67f9304dba5b221fef15138a7fc4",
+      "source": "NVD",
+      "time": "2026-10-11 00:36:10"
+    },
+    {
+      "cve_id": "CVE-2026-108549",
+      "title": "高危漏洞: CVE-2026-108549 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-10-10 23:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "cc-connect through 1.5.0 contains a missing authentication vulnerability in the MAX platform adapter webhook mode in platform/max/max.go that accepts unauthenticated updates when no webhook_secret is configured. Remote attackers reaching the webhook listener on port 8080 can forge updates with an allowed or admin user_id to run privileged commands like /shell on the host.",
+      "refs": "https://github.com/chenhg5/cc-connect\nhttps://github.com/chenhg5/cc-connect/blob/v1.5.0/platform/max/max.go#L287-L305\nhttps://github.com/chenhg5/cc-connect/issues/1968",
+      "source": "NVD",
+      "time": "2026-10-11 00:36:04"
+    },
+    {
+      "cve_id": "CVE-2026-108548",
+      "title": "高危漏洞: CVE-2026-108548 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-10 23:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "AstronRPA through 1.1.6 contains an authentication bypass vulnerability in the OpenResty gateway's auth_handler.lua that accepts any Bearer token without validation. Unauthenticated attackers can send arbitrary Bearer values to reach /api/resource/ and /api/rpa-ai-service/ routes and spoof X-User-Id or user_id headers to act as any user.",
+      "refs": "https://github.com/iflytek/astron-rpa\nhttps://github.com/iflytek/astron-rpa/blob/v1.1.6/backend/ai-service/app/dependencies/__init__.py#L10-L24\nhttps://github.com/iflytek/astron-rpa/blob/v1.1.6/docker/volumes/nginx/lua/auth_handler.lua#L21-L35",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:59"
+    },
+    {
+      "cve_id": "CVE-2026-108546",
+      "title": "高危漏洞: CVE-2026-108546 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-10 23:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "Spotweb through 1.5.8 contains an OS command injection vulnerability in the runcommand NZB handler that allows remote attackers to execute commands by publishing spots with malicious titles. Attackers can post self-signed spots over Usenet with shell metacharacters in the title, which are substituted unescaped for $SPOTTITLE and passed to exec() when a user downloads the spot, running commands as the Spotweb PHP process.",
+      "refs": "https://github.com/spotweb/spotweb\nhttps://github.com/spotweb/spotweb/blob/1.5.8/lib/services/NzbHandler/Services_NzbHandler_Runcommand.php#L41-L45\nhttps://hackmd.io/@haind/spotweb-runcommand-title-injection",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:54"
+    },
+    {
+      "cve_id": "CVE-2026-97264",
+      "title": "高危漏洞: CVE-2026-97264 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-10 22:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Greg Winiarski WPAdverts wpadverts allows Reflected XSS.This issue affects WPAdverts: from n/a through 2.3.4.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/wpadverts/vulnerability/wordpress-wpadverts-plugin-2-3-4-cross-site-scripting-xss-vulnerability-2?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:46"
+    },
+    {
+      "cve_id": "CVE-2026-97263",
+      "title": "高危漏洞: CVE-2026-97263 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-10 22:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Greg Winiarski WPAdverts wpadverts allows Stored XSS.This issue affects WPAdverts: from n/a through 2.3.4.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/wpadverts/vulnerability/wordpress-wpadverts-plugin-2-3-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:40"
+    },
+    {
+      "cve_id": "CVE-2026-94676",
+      "title": "高危漏洞: CVE-2026-94676 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-10 22:16:38",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in Tainacan Community Tainacan tainacan allows Object Injection.This issue affects Tainacan: from n/a through 1.3.0.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/tainacan/vulnerability/wordpress-tainacan-plugin-1-3-0-php-object-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:36"
+    },
+    {
+      "cve_id": "CVE-2026-108161",
+      "title": "高危漏洞: CVE-2026-108161 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-10 22:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "FusionPBX through 5.6.5 contains an OS command injection vulnerability in call_recordings::download() that allows unauthenticated attackers to execute commands by placing calls with malicious caller ID values. When the record_name filename template is enabled, attackers can embed shell metacharacters like $(...) in the Caller-ID name or number, executing commands as the web server user once a privileged user downloads multiple recordings as a ZIP.",
+      "refs": "https://github.com/fusionpbx/fusionpbx\nhttps://github.com/fusionpbx/fusionpbx/blob/ac4cd29870e3af67506390800904e262fee7e0ec/app/call_recordings/resources/classes/call_recordings.php#L736-L776\nhttps://github.com/fusionpbx/fusionpbx/commit/074a69310100f95171c67db62643cc2aac4f4d37",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:31"
+    },
+    {
+      "cve_id": "CVE-2026-105885",
+      "title": "高危漏洞: CVE-2026-105885 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-10 22:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in 10Web Slider by 10Web slider-wd allows Object Injection.This issue affects Slider by 10Web: from n/a through 1.2.62.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/slider-wd/vulnerability/wordpress-slider-by-10web-plugin-1-2-62-php-object-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:26"
+    },
+    {
+      "cve_id": "CVE-2026-102388",
+      "title": "高危漏洞: CVE-2026-102388 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-10 22:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPMU DEV Forminator forminator allows Stored XSS.This issue affects Forminator: from n/a through 1.57.3.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/forminator/vulnerability/wordpress-forminator-plugin-1-57-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:21"
+    },
+    {
+      "cve_id": "CVE-2026-94257",
+      "title": "高危漏洞: CVE-2026-94257 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-10-10 14:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SMS Alert  WordPress plugin before 4.0.1 does not bind the account whose password is being changed to the phone number that was actually verified during its OTP password reset, allowing unauthenticated attackers to set a new password on an arbitrary account, including an administrator, by verifying a one-time code sent to a phone number they control.",
+      "refs": "https://wpscan.com/vulnerability/4c32fa5b-4677-4f62-8856-fbe9c601fc36/",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:17"
+    },
+    {
+      "cve_id": "CVE-2026-94256",
+      "title": "高危漏洞: CVE-2026-94256 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-10-10 14:16:44",
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The SMS Alert  WordPress plugin before 4.0.1 does not verify that the account being logged in is the one the verified one-time code belongs to, allowing unauthenticated attackers to sign in as any user with a stored phone number, including an administrator, by completing a code challenge on a phone they control.",
+      "refs": "https://wpscan.com/vulnerability/38b4e7f9-d73e-4c4d-bb9c-4c2dd1f4d7d9/",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:11"
+    },
+    {
+      "cve_id": "CVE-2026-87781",
+      "title": "高危漏洞: CVE-2026-87781 (CVSS 8.6)",
+      "cvss_score": 8.6,
+      "published_date": "2026-10-10 14:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "description": "The LTL Freight Quotes  WordPress plugin before 4.2.19 does not sanitise and escape a parameter before using it in a SQL statement, leading to a SQL injection exploitable by unauthenticated users.",
+      "refs": "https://wpscan.com/vulnerability/e600ef26-5aec-4e4a-96be-d67875c337a0/",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:06"
+    },
+    {
+      "cve_id": "CVE-2026-87780",
+      "title": "高危漏洞: CVE-2026-87780 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-10 14:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The LTL Freight Quotes  WordPress plugin before 4.2.19 does not sanitise and escape values submitted through an unauthenticated endpoint before storing them and outputting them back in an administrative page, leading to Stored XSS which will execute in the session of any administrator viewing it.",
+      "refs": "https://wpscan.com/vulnerability/94448385-65df-4466-8251-d939275b6604/",
+      "source": "NVD",
+      "time": "2026-10-11 00:35:00"
+    },
+    {
+      "cve_id": "CVE-2026-104752",
+      "title": "高危漏洞: CVE-2026-104752 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-10 14:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "The Rank Math SEO  WordPress plugin before 1.0.280 does not correctly validate the type of a file uploaded through its settings import feature, allowing users with administrator-level access to upload a PHP file and achieve remote code execution.",
+      "refs": "https://wpscan.com/vulnerability/c7caaf99-5b0f-4935-8875-3a2b9c5ed782/",
+      "source": "NVD",
+      "time": "2026-10-11 00:34:54"
+    },
+    {
       "cve_id": "CVE-2026-91136",
       "title": "高危漏洞: CVE-2026-91136 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -912,193 +1099,6 @@
       "refs": "https://github.com/MariaDB/server/commit/3b1c2e58abab5571bec4ff52773ddc75b1738da9\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.11.19\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.6.28",
       "source": "NVD",
       "time": "2026-10-10 06:02:24"
-    },
-    {
-      "cve_id": "CVE-2026-107818",
-      "title": "高危漏洞: CVE-2026-107818 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-10-10 02:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-      "description": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, the mariadb.service unit used /run/mysqld/wsrep-new-cluster during the next service restart. A database user with FILE privilege and a secure-file-priv configuration permitting writes to /run/mysqld could create that file and inject attacker-controlled environment values into the restarted service. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
-      "refs": "https://github.com/MariaDB/server/commit/e3d62d4e78fd4941cef3f5053e6a50d0b32d740e\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.11.19\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.6.28",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:17"
-    },
-    {
-      "cve_id": "CVE-2026-75347",
-      "title": "高危漏洞: CVE-2026-75347 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 01:16:48",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "EIPStackGroup OpENer v2.3 and master up to commit 76b95cf contain an expired pointer dereference vulnerability in the EtherNet/IP Common Packet Format (CPF) handling logic. This allows a remote attacker to cause a denial of service.",
-      "refs": "https://github.com/EIPStackGroup/OpENer/blob/master/source/src/enet_encap/cpf.c\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/enet_encap/encap.c\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/ports/generic_networkhandler.c",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:13"
-    },
-    {
-      "cve_id": "CVE-2026-55797",
-      "title": "高危漏洞: CVE-2026-55797 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-10 01:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 2.11.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2, the Argo CD repo-server is vulnerable to command injection when it clones, tests, or fetches an SSH Git repository configured with a proxy URL. The proxy host and port are embedded in an SSH ProxyCommand that is executed through a shell without neutralizing shell metacharacters. A user who can create or update a repository or repository credential template can supply a crafted proxy host to execute commands in the repo-server and access its Git, Helm, and OCI credentials. This issue is fixed in versions 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2.",
-      "refs": "https://github.com/argoproj/argo-cd/commit/1e3ddd0b7250aa23f489956b5fab8c13d0493a9f\nhttps://github.com/argoproj/argo-cd/commit/9b27aeb1a4fb15d11a0f01cad65dea1fdfc60205\nhttps://github.com/argoproj/argo-cd/pull/15864",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:09"
-    },
-    {
-      "cve_id": "CVE-2026-108160",
-      "title": "高危漏洞: CVE-2026-108160 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 01:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "AstronRPA through 1.1.6 contains a download of code without integrity check vulnerability that allows network attackers to deliver malicious updates by abusing the desktop client's auto-update mechanism. Attackers positioned between the client and server can serve a malicious update manifest and NSIS installer, which electron-updater installs without signature verification, executing code as the desktop user.",
-      "refs": "https://github.com/iflytek/astron-rpa\nhttps://github.com/iflytek/astron-rpa/blob/8b015bc1b15d23fbdc55c78ff1de9af4bb65fba6/frontend/packages/electron-app/electron-builder.json#L26\nhttps://github.com/iflytek/astron-rpa/issues/894",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:05"
-    },
-    {
-      "cve_id": "CVE-2026-108159",
-      "title": "高危漏洞: CVE-2026-108159 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 01:16:47",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "AstronRPA through 1.1.6 contains a cross-site scripting vulnerability in the desktop client's smart-component chat that allows remote attackers to execute OS commands by abusing unsanitized LLM output rendered via v-html. Attackers can embed prompt-injection content in a web page so the model emits HTML event handlers invoking the unrestricted open-path IPC handler with shell metacharacters, executing commands as the desktop user.",
-      "refs": "https://github.com/iflytek/astron-rpa\nhttps://github.com/iflytek/astron-rpa/blob/8b015bc1b15d23fbdc55c78ff1de9af4bb65fba6/frontend/packages/web-app/src/components/SmartComponent/hooks/useChatContext.tsx#L203\nhttps://github.com/iflytek/astron-rpa/issues/892",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:01"
-    },
-    {
-      "cve_id": "CVE-2026-108157",
-      "title": "高危漏洞: CVE-2026-108157 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-10 01:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Pingvin Share X from 0.19.0 before 1.22.0 contains an improper authentication vulnerability that allows remote unauthenticated attackers to take over accounts by abusing automatic OAuth email linking in OAuthService.signUp(). Attackers can register a victim's unverified email on an enabled OAuth/OIDC provider, exploiting the missing email_verified check in GenericOidcProvider, to sign in as the victim including administrators while bypassing TOTP.",
-      "refs": "https://github.com/smp46/pingvin-share-x\nhttps://github.com/smp46/pingvin-share-x/blob/de7ffecf9bfc4976993149a5c4c98efe35161424/backend/src/oauth/oauth.service.ts#L158-L175\nhttps://github.com/smp46/pingvin-share-x/commit/07aa8c0a96030c439e9018ce94a2778bd37304e6",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:57"
-    },
-    {
-      "cve_id": "CVE-2026-108156",
-      "title": "高危漏洞: CVE-2026-108156 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-10 01:16:46",
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
-      "description": "LobsterAI 2026.5.27 through 2026.9.23 contains an external control of file path vulnerability in the skills:delete IPC handler that trusts the openclawSourceDir value from a skill's _meta.json during uninstall. Attackers who convince a user to install a crafted skill can make uninstallation recursively delete arbitrary user-writable directories, such as the home directory, since the security scanner never inspects _meta.json.",
-      "refs": "https://github.com/netease-youdao/LobsterAI\nhttps://github.com/netease-youdao/LobsterAI/blob/791a352dee3b3d8c6f64edcaf229ce474a68f6c5/src/main/ipcHandlers/skills/handlers.ts#L60-L78\nhttps://github.com/netease-youdao/LobsterAI/commit/82fdfe10d1b85d0ff734aa720e18c866b4be2406",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:52"
-    },
-    {
-      "cve_id": "CVE-2026-107815",
-      "title": "高危漏洞: CVE-2026-107815 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-10-10 01:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, the CONNECT engine's DOS table type used an incorrect boundary check that permitted a one-byte null write beyond a stack buffer at an attacker-controlled offset. An authenticated user able to use the CONNECT engine could cause a crash and potentially remote code execution. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
-      "refs": "https://github.com/MariaDB/server/commit/b369925f6855d3e1f0ebcf453492724b99fda6f8\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.11.19\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.6.28",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:45"
-    },
-    {
-      "cve_id": "CVE-2026-90983",
-      "title": "高危漏洞: CVE-2026-90983 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-10-10 00:17:31",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "description": "Use of Client-Side authentication vulnerability in Hayat Health Facilities Inc. (Hayat Hospital) Hayat Mobile allows Authentication Bypass.\n\nThis issue affects Hayat Mobile: from 3.3.0 before 3.4.0.",
-      "refs": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1289",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:41"
-    },
-    {
-      "cve_id": "CVE-2026-75349",
-      "title": "高危漏洞: CVE-2026-75349 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 00:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "EIPStackGroup OpENer v2.3.0/master up to commit 76b95cf contains an out-of-bounds read vulnerability in Connection Manager request parsing. This allows a remote attacker to cause a denial of service.",
-      "refs": "https://github.com/EIPStackGroup/OpENer\nhttps://github.com/EIPStackGroup/OpENer/blob/76b95cf/source/src/cip/cipconnectionmanager.c\nhttps://github.com/EIPStackGroup/OpENer/blob/76b95cf/source/src/cip/cipmessagerouter.c",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:37"
-    },
-    {
-      "cve_id": "CVE-2026-75348",
-      "title": "高危漏洞: CVE-2026-75348 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 00:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An out-of-bounds read vulnerability exists in EIPStackGroup OpENer v2.3 and master up to commit 76b95cf in the EtherNet/IP TCP SendRRData Common Packet Format parser. The issue occurs in CreateCommonPacketFormatStructure() when it parses recognized optional socket address information items of type 0x8000 or 0x8001 without first validating that the remaining CPF buffer contains the complete fixed sockaddr structure. This allows a remote attacker to cause a denial of service.",
-      "refs": "https://github.com/EIPStackGroup/OpENer/blob/master/source/src/enet_encap/cpf.c\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/enet_encap/encap.c\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/enet_encap/endianconv.c",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:33"
-    },
-    {
-      "cve_id": "CVE-2026-75345",
-      "title": "高危漏洞: CVE-2026-75345 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 00:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpENer v2.3.0 / commit 76b95cf contains an out-of-bounds read in the unconnected explicit messaging path. This allows a remote attacker to cause a denial of service.",
-      "refs": "https://github.com/EIPStackGroup/OpENer/blob/76b95cf/source/src/cip/cipcommon.c\nhttps://github.com/EIPStackGroup/OpENer/blob/76b95cf/source/src/cip/cipmessagerouter.c\nhttps://github.com/EIPStackGroup/OpENer/blob/76b95cf/source/src/cip/ciptcpipinterface.c",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:29"
-    },
-    {
-      "cve_id": "CVE-2026-108113",
-      "title": "高危漏洞: CVE-2026-108113 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-10 00:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "ILIAS before 9.24, 10.12, and 11.5 contains an unrestricted file upload vulnerability in QTI question import image handling (ilQtiMatImageSecurity) that allows authenticated authors to write executable files. Attackers with question pool import rights can import a crafted archive writing a .htaccess and PHP file to the web-served image directory, achieving remote code execution as the web server user.",
-      "refs": "https://docu.ilias.de/go/blog/15821/950\nhttps://docu.ilias.de/go/blog/15821/951\nhttps://docu.ilias.de/go/blog/15821/952",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:24"
-    },
-    {
-      "cve_id": "CVE-2026-107814",
-      "title": "高危漏洞: CVE-2026-107814 (CVSS 8.4)",
-      "cvss_score": 8.4,
-      "published_date": "2026-10-10 00:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
-      "description": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, MariaDB RPM packages created the dedicated mysql service account with the database data directory as its home directory. A database user with the FILE privilege could write startup dot-files such as .bash_profile into $HOME, and those files could execute when an administrator opened a login shell for the mysql account. Debian packages are not affected because they use /nonexistent as the account home. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
-      "refs": "https://github.com/MariaDB/server/commit/d842d6e994a8b0d67c280bf785a11357d6b316a2\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.11.19\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.6.28",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:20"
-    },
-    {
-      "cve_id": "CVE-2026-107813",
-      "title": "高危漏洞: CVE-2026-107813 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-10 00:17:26",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, the api/cluster router exposes node and namespace mutation operations and cluster-wide Nginx reload or restart operations with AuthRequired but without RequireSecureSession. An authenticated OTP-enabled user possessing a stolen or persisted JWT can therefore perform node CRUD, read or replace node credentials, change namespaces, and invoke nodes/reload_nginx or nodes/restart_nginx without a fresh second-factor step-up. This issue is an incomplete fix for CVE-2026-84315 and is fixed in version 2.5.0.",
-      "refs": "https://github.com/0xJacky/nginx-ui/commit/a3999bd78a3b97ab22e6b5e9fd478ac57598a954\nhttps://github.com/0xJacky/nginx-ui/releases/tag/v2.5.0\nhttps://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h246-wpgf-vmq5",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:13"
-    },
-    {
-      "cve_id": "CVE-2026-107812",
-      "title": "高危漏洞: CVE-2026-107812 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 00:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "description": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, the self-upgrade mechanism validates a downloaded binary only with a same-origin digest obtained from the same upgrade mirror. A compromised mirror or network attacker able to alter both responses can supply a malicious executable and matching digest. An operator-triggered upgrade is required, and the application installs and runs the attacker-controlled code in the Nginx UI process context on the next upgrade. This issue is fixed in version 2.5.0.",
-      "refs": "https://github.com/0xJacky/nginx-ui/commit/580585516dd87a8b176bcdac258db70c3b64b7ec\nhttps://github.com/0xJacky/nginx-ui/releases/tag/v2.5.0\nhttps://github.com/0xJacky/nginx-ui/security/advisories/GHSA-662p-52hx-cmh2",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:08"
-    },
-    {
-      "cve_id": "CVE-2026-107811",
-      "title": "高危漏洞: CVE-2026-107811 (CVSS 8.8)",
-      "cvss_score": 8.8,
-      "published_date": "2026-10-10 00:17:25",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, ordinary authenticated users can access /api/nodes and /api/nodes/:id, whose responses serialize the node token field. The same token is accepted as X-Node-Secret by AuthRequired and maps the request to initUser, allowing the user to impersonate a trusted node against a reachable cluster member. This cross-node authentication bypass can expose sensitive management operations, including configuration synchronization and service restart. This issue is fixed in version 2.5.0.",
-      "refs": "https://github.com/0xJacky/nginx-ui/commit/0ecbd106c37b5143be14880c9447a66135151512\nhttps://github.com/0xJacky/nginx-ui/releases/tag/v2.5.0\nhttps://github.com/0xJacky/nginx-ui/security/advisories/GHSA-32gc-wf3m-78w9",
-      "source": "NVD",
-      "time": "2026-10-10 06:01:04"
     }
   ]
 }
