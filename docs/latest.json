@@ -1,6 +1,138 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-96341",
+      "title": "高危漏洞: CVE-2026-96341 (CVSS 8.2)",
+      "cvss_score": 8.2,
+      "published_date": "2026-10-11 03:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+      "description": "Incorrect Privilege Assignment vulnerability in WPMU DEV Forminator forminator allows Privilege Escalation.This issue affects Forminator: from n/a through 1.57.3.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/forminator/vulnerability/wordpress-forminator-plugin-1-57-3-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:53:08"
+    },
+    {
+      "cve_id": "CVE-2026-57806",
+      "title": "高危漏洞: CVE-2026-57806 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-11 03:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in drfuri Martfury - WooCommerce Marketplace WordPress Theme martfury allows Reflected XSS.This issue affects Martfury - WooCommerce Marketplace WordPress Theme: from n/a through 3.3.9.",
+      "refs": "https://patchstack.com/database/wordpress/theme/martfury/vulnerability/wordpress-martfury-woocommerce-marketplace-wordpress-theme-theme-3-3-9-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:53:03"
+    },
+    {
+      "cve_id": "CVE-2026-108598",
+      "title": "高危漏洞: CVE-2026-108598 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-11 03:16:58",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Floci 1.1.0 before 2.2.0 contains a code injection vulnerability in VtlTemplateEngine that allows unauthenticated attackers to execute commands via unrestricted Velocity mapping templates. Attackers can create a REST API with a MOCK integration whose template uses $util reflection to reach Runtime or ProcessBuilder, executing OS commands in the Floci JVM.",
+      "refs": "https://github.com/floci-io/floci\nhttps://github.com/floci-io/floci/blob/560b3e4aae61cea3ac7d4d51843bdffd0e3085fd/src/main/java/io/github/hectorvent/floci/services/apigateway/VtlTemplateEngine.java#L74-L114\nhttps://github.com/floci-io/floci/commit/144b90e6fa861a5ac882e99a090d503da01945c4",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:59"
+    },
+    {
+      "cve_id": "CVE-2026-106610",
+      "title": "高危漏洞: CVE-2026-106610 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-11 03:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in miniOrange miniorange otp verification miniorange-otp-verification allows Privilege Escalation.This issue affects miniorange otp verification: from n/a through 5.5.7.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/miniorange-otp-verification/vulnerability/wordpress-miniorange-otp-verification-plugin-5-5-7-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:54"
+    },
+    {
+      "cve_id": "CVE-2026-105892",
+      "title": "高危漏洞: CVE-2026-105892 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-11 03:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in rtCamp Inc. rtMedia for WordPress, BuddyPress and bbPress buddypress-media allows Path Traversal.This issue affects rtMedia for WordPress, BuddyPress and bbPress: from n/a through 4.7.13.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/buddypress-media/vulnerability/wordpress-rtmedia-for-wordpress-buddypress-and-bbpress-plugin-4-7-13-arbitrary-file-deletion-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:49"
+    },
+    {
+      "cve_id": "CVE-2026-94160",
+      "title": "高危漏洞: CVE-2026-94160 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-11 01:17:01",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in themeStek ThemeStek Extras for LabtechCO Theme themestek-labtechco-extras allows Reflected XSS.This issue affects ThemeStek Extras for LabtechCO Theme: from n/a through 8.4.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/themestek-labtechco-extras/vulnerability/wordpress-themestek-extras-for-labtechco-theme-plugin-8-4-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:43"
+    },
+    {
+      "cve_id": "CVE-2026-62044",
+      "title": "高危漏洞: CVE-2026-62044 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-11 01:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in bPlugins Super Video Player super-video-player allows Object Injection.This issue affects Super Video Player: from n/a through 1.8.13.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/super-video-player/vulnerability/wordpress-super-video-player-plugin-1-8-13-php-object-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:38"
+    },
+    {
+      "cve_id": "CVE-2026-106609",
+      "title": "高危漏洞: CVE-2026-106609 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-11 01:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "description": "Missing Authorization vulnerability in Web Impian Bayarcash WooCommerce bayarcash-wc allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Bayarcash WooCommerce: from n/a through 4.4.2.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/bayarcash-wc/vulnerability/wordpress-bayarcash-woocommerce-plugin-4-4-2-broken-access-control-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:33"
+    },
+    {
+      "cve_id": "CVE-2026-106608",
+      "title": "高危漏洞: CVE-2026-106608 (CVSS 7.2)",
+      "cvss_score": 7.2,
+      "published_date": "2026-10-11 01:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Incorrect Privilege Assignment vulnerability in Automattic WooCommerce woocommerce allows Privilege Escalation.This issue affects WooCommerce: from 9.8.0 through 11.1.2.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/woocommerce/vulnerability/wordpress-woocommerce-plugin-9-8-0-11-1-2-privilege-escalation-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:28"
+    },
+    {
+      "cve_id": "CVE-2026-105889",
+      "title": "高危漏洞: CVE-2026-105889 (CVSS 9.3)",
+      "cvss_score": 9.3,
+      "published_date": "2026-10-11 01:17:00",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Tickera Tickera tickera-event-ticketing-system allows Blind SQL Injection.This issue affects Tickera: from n/a through 3.6.0.6.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/tickera-event-ticketing-system/vulnerability/wordpress-tickera-plugin-3-6-0-6-sql-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:24"
+    },
+    {
+      "cve_id": "CVE-2026-104398",
+      "title": "高危漏洞: CVE-2026-104398 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-11 01:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Deserialization of Untrusted Data vulnerability in VillaTheme AFFI – Affiliate Marketing for WooCommerce affi-affiliate-marketing-for-woo allows Object Injection.This issue affects AFFI – Affiliate Marketing for WooCommerce: from n/a through 1.0.10.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/affi-affiliate-marketing-for-woo/vulnerability/wordpress-affi-affiliate-marketing-for-woocommerce-plugin-1-0-10-php-object-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:18"
+    },
+    {
+      "cve_id": "CVE-2026-103071",
+      "title": "高危漏洞: CVE-2026-103071 (CVSS 7.5)",
+      "cvss_score": 7.5,
+      "published_date": "2026-10-11 01:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in VillaTheme Thank You Page Customizer for WooCommerce woo-thank-you-page-customizer allows Code Injection.This issue affects Thank You Page Customizer for WooCommerce: from n/a through 1.2.3.",
+      "refs": "https://patchstack.com/database/wordpress/plugin/woo-thank-you-page-customizer/vulnerability/wordpress-thank-you-page-customizer-for-woocommerce-plugin-1-2-3-content-injection-vulnerability?_s_id=cve",
+      "source": "NVD",
+      "time": "2026-10-11 04:52:11"
+    },
+    {
       "cve_id": "CVE-2026-108553",
       "title": "高危漏洞: CVE-2026-108553 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -967,138 +1099,6 @@
       "refs": "https://github.com/tinacms/tinacms/commit/5295e077f0d279c35686a0e481a15e33a4877e3b\nhttps://github.com/tinacms/tinacms/pull/7523\nhttps://github.com/tinacms/tinacms/releases/tag/@tinacms/web-components@0.2.1",
       "source": "NVD",
       "time": "2026-10-10 11:19:15"
-    },
-    {
-      "cve_id": "CVE-2026-108259",
-      "title": "高危漏洞: CVE-2026-108259 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-10-10 05:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "description": "Tina is a headless content management system. Prior to 3.0.0, @tinacms/cli reads Git branch values from VERCEL_GIT_COMMIT_REF, GITHUB_BRANCH, or HEAD, incorporates the raw value into the API URL, and interpolates that URL into JavaScript string literals in packages/@tinacms/cli/src/next/codegen/index.ts and packages/@tinacms/cli/src/next/codegen/codegen/plugin.ts. A crafted Git-valid branch name containing a quote can terminate the generated string and inject an expression that executes when the generated client module is imported during a preview build. The injected code runs with the build process privileges and can read environment credentials, modify deployment artifacts, or make network requests. This issue is fixed in version 3.0.0.",
-      "refs": "https://github.com/tinacms/tinacms/commit/d030d414d39e15de79bf36e4c728d57205e71dde\nhttps://github.com/tinacms/tinacms/pull/7526\nhttps://github.com/tinacms/tinacms/releases/tag/@tinacms/cli@3.0.0",
-      "source": "NVD",
-      "time": "2026-10-10 11:19:11"
-    },
-    {
-      "cve_id": "CVE-2026-107845",
-      "title": "高危漏洞: CVE-2026-107845 (CVSS 9.3)",
-      "cvss_score": 9.3,
-      "published_date": "2026-10-10 04:17:10",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-      "description": "Contao is an Open Source CMS. From version 4.0.0 until 5.3.50 and 5.7.12, an unauthenticated visitor can submit a comment whose email or website metadata is rendered without sufficient attribute and URL encoding by listComments() in comments-bundle/contao/dca/tl_comments.php. When a backend user opens the Comments module, attacker-controlled script can execute in the Contao backend origin under that user's session. Unpublished comments remain visible to moderators, so moderation does not prevent exposure. This issue is fixed in versions 5.3.50 and 5.7.12.",
-      "refs": "https://github.com/contao/contao/commit/22505d5f79bc1a7f52e2cba5fddf6007e1f0408a\nhttps://github.com/contao/contao/releases/tag/5.3.50\nhttps://github.com/contao/contao/releases/tag/5.7.12",
-      "source": "NVD",
-      "time": "2026-10-10 11:19:06"
-    },
-    {
-      "cve_id": "CVE-2026-75351",
-      "title": "高危漏洞: CVE-2026-75351 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 03:16:42",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OpENer v2.3/commit 76b95cf, contains an out-of-bounds read in the server-side EtherNet/IP ForwardOpen connection-path parser. This allows a remote attacker to cause a denial of service.",
-      "refs": "https://github.com/EIPStackGroup/OpENer\nhttps://github.com/EIPStackGroup/OpENer/issues/574\nhttps://github.com/EIPStackGroup/OpENer/issues/574",
-      "source": "NVD",
-      "time": "2026-10-10 11:19:02"
-    },
-    {
-      "cve_id": "CVE-2026-75346",
-      "title": "高危漏洞: CVE-2026-75346 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 00:17:29",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "An out-of-bounds read vulnerability exists in EIPStackGroup OpENer v2.3 and master through commit 76b95cf in the server-side CIP SetAttributeList service. This allows a remote attacker to cause a denial of service",
-      "refs": "https://github.com/EIPStackGroup/OpENer\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/cip/cipcommon.c\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/cip/cipidentity.c",
-      "source": "NVD",
-      "time": "2026-10-10 11:18:56"
-    },
-    {
-      "cve_id": "CVE-2026-75350",
-      "title": "高危漏洞: CVE-2026-75350 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 02:17:14",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "EIPStackGroup OpENer v2.3 / master commit 76b95cf contains a buffer overflow in the GetAttributeList() implementation for the EtherNet/IP Get_Attribute_List service. This allows a remote attacker to cause a denial of service",
-      "refs": "https://github.com/EIPStackGroup/OpENer\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/cip/cipcommon.c\nhttps://github.com/EIPStackGroup/OpENer/blob/master/source/src/enet_encap/cpf.c",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:56"
-    },
-    {
-      "cve_id": "CVE-2026-107840",
-      "title": "高危漏洞: CVE-2026-107840 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 02:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "yopass is a service for securely sharing secrets, passwords, and files. Prior to version 14.7.0, the Prometheus metrics middleware in pkg/server/server.go uses the attacker-controlled r.Method value directly as the method label for yopass_http_requests_total and yopass_http_request_duration_seconds. Because the catch-all route accepts arbitrary HTTP method tokens, an unauthenticated remote attacker can submit many unique methods and create metric series that the Prometheus registry never evicts. The resulting monotonic memory growth can OOM-kill the process, while the expanding registry also degrades /metrics scrape latency and can blind monitoring. This issue is fixed in version 14.7.0.",
-      "refs": "https://github.com/jhaals/yopass/commit/61e31ead04a4fc27ce80bed226af41c7c0426ccf\nhttps://github.com/jhaals/yopass/commit/78d0c14f7085048130199662a2ec8a18ec8d6ebb\nhttps://github.com/jhaals/yopass/pull/3773",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:49"
-    },
-    {
-      "cve_id": "CVE-2026-107839",
-      "title": "高危漏洞: CVE-2026-107839 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 02:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "ageLANServer provides a cross-platform web server and launcher for offline multiplayer in several Age of Empires and Age of Mythology games. Prior to version 1.15.2, the AoE3 POST /game/cloud/getFileURL handler in the bundled game server has no request body size limit or cap on the attacker-controlled JSON names array and allocates response storage directly from the unbounded array length. A remote unauthenticated client can use the default self-registration flow and send an oversized request that causes excessive memory allocation, crashes or hangs the server process, disconnects active players, and keeps the service unavailable until it is restarted. This issue is fixed in version 1.15.2.",
-      "refs": "https://github.com/luskaner/ageLANServer/commit/1dd40166a59356865c0a4b1800f32d05dc8bec79\nhttps://github.com/luskaner/ageLANServer/releases/tag/v1.15.2\nhttps://github.com/luskaner/ageLANServer/security/advisories/GHSA-4jfq-pmq9-257h",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:45"
-    },
-    {
-      "cve_id": "CVE-2026-107838",
-      "title": "高危漏洞: CVE-2026-107838 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 02:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "RIOT is an open-source microcontroller operating system designed for Internet of Things devices and other embedded systems. From version 2023.07 through version 2026.07, nanocoap_fileserver callers in sys/net/application_layer/nanocoap/fileserver.c ignore a failure returned by _resp_init() when coap_build_reply() cannot fit a response header into the response buffer. A remote client can send a CoAP request with a sufficiently large extended token when nanocoap_token_ext is enabled, causing response initialization to fail while _get_file() or _get_directory() continues with stale response state. The path then reaches _calc_szx2() and its pdu->payload_len > reserve assertion, terminating the affected service or device task. No fixed release is available as of this review.",
-      "refs": "https://github.com/RIOT-OS/RIOT/commit/d3a47289c58d108575a19e623e4d3f647659e743\nhttps://github.com/RIOT-OS/RIOT/pull/22745\nhttps://github.com/RIOT-OS/RIOT/security/advisories/GHSA-39j3-3v73-5mj2",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:41"
-    },
-    {
-      "cve_id": "CVE-2026-107837",
-      "title": "高危漏洞: CVE-2026-107837 (CVSS 8.2)",
-      "cvss_score": 8.2,
-      "published_date": "2026-10-10 02:17:05",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
-      "description": "RIOT is an open-source microcontroller operating system designed for Internet of Things devices and other embedded systems. In 2026.07 and earlier, _receive() in sys/net/gnrc/network_layer/sixlowpan/gnrc_sixlowpan.c can route an undersized packet into SFF fragment handling after only a minimal payload check. The code then interprets the packet as a sixlowpan_frag_t or larger fragment header without verifying that the packet snip contains the required bytes. A remote attacker can send a malformed 6LoWPAN fragment that causes gnrc_sixlowpan_frag_recv() to read beyond the packet buffer, potentially disclosing memory and crashing the network stack. No fixed repository release is available as of this review.",
-      "refs": "https://github.com/RIOT-OS/RIOT/commit/0cae205cd1d110e0b8fce094714598322d56ce2d\nhttps://github.com/RIOT-OS/RIOT/pull/22504\nhttps://github.com/RIOT-OS/RIOT/security/advisories/GHSA-m8mc-q4p7-p8j3",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:37"
-    },
-    {
-      "cve_id": "CVE-2026-107826",
-      "title": "高危漏洞: CVE-2026-107826 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-10 02:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "OWASP Coraza WAF is a golang modsecurity compatible web application firewall library. From 3.0.0 until 3.8.1, readJSON in internal/bodyprocessors/json.go can stop its bounded flattening walk after reaching SecArgumentsLimit or the byte budget and then call gjson.Valid on the complete raw body. An unauthenticated attacker can submit shallow values followed by an extremely deeply nested JSON tail that was not visited by the bounded walk, causing gjson.Valid to recurse without a depth bound and terminate the hosting process with an unrecoverable fatal stack overflow. The ProcessRequest and ProcessResponse JSON paths share the affected readJSON validation flow, and the payload can remain within recommended body-size and argument-count limits. This issue is fixed in version 3.8.1.",
-      "refs": "https://github.com/corazawaf/coraza/commit/814e1898e083d2ff2ceb644382d0da17e930f93f\nhttps://github.com/corazawaf/coraza/releases/tag/v3.8.1\nhttps://github.com/corazawaf/coraza/security/advisories/GHSA-6gcq-wc29-5xf2",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:33"
-    },
-    {
-      "cve_id": "CVE-2026-107823",
-      "title": "高危漏洞: CVE-2026-107823 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-10 02:17:04",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, the MariaDB view FRM parser did not safely encode embedded newline characters in a username. An account with CREATE USER and CREATE VIEW WITH GRANT OPTION could create a crafted username containing additional view metadata, causing the parser to interpret part of the username as security metadata and potentially escalating database privileges. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
-      "refs": "https://github.com/MariaDB/server/commit/8a642bc8103aadc6b2087d781ba8e1595616a2c4\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.11.19\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.6.28",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:28"
-    },
-    {
-      "cve_id": "CVE-2026-107821",
-      "title": "高危漏洞: CVE-2026-107821 (CVSS 8.0)",
-      "cvss_score": 8.0,
-      "published_date": "2026-10-10 02:17:03",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
-      "description": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, MariaDB insufficiently validated counts, offsets, lengths, and field boundaries in FRM metadata while opening binary FRM files. An attacker able to place a crafted FRM file in the data directory could trigger out-of-bounds reads or writes, crash the server, or potentially execute code. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
-      "refs": "https://github.com/MariaDB/server/commit/3b1c2e58abab5571bec4ff52773ddc75b1738da9\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.11.19\nhttps://github.com/MariaDB/server/releases/tag/mariadb-10.6.28",
-      "source": "NVD",
-      "time": "2026-10-10 06:02:24"
     }
   ]
 }
