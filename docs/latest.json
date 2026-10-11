@@ -1,6 +1,72 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-108540",
+      "title": "高危漏洞: CVE-2026-108540 (CVSS 9.9)",
+      "cvss_score": 9.9,
+      "published_date": "2026-10-11 15:17:23",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A flaw has been found in OpenSpug Spug up to 3.4.0/4.0.1. This impacts an unknown function of the file /exec/transfer of the component File Transfer. Executing a manipulation can lead to os command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/SECWG/CVE/issues/10\nhttps://vuldb.com/cve/CVE-2026-108540\nhttps://vuldb.com/submit/948328",
+      "source": "NVD",
+      "time": "2026-10-11 19:48:05"
+    },
+    {
+      "cve_id": "CVE-2026-108522",
+      "title": "高危漏洞: CVE-2026-108522 (CVSS 8.3)",
+      "cvss_score": 8.3,
+      "published_date": "2026-10-11 12:17:31",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+      "description": "A vulnerability was found in Studio-Saelix Sencho up to 0.94.1. This affects an unknown part of the file /api/auth/login of the component Login Endpoint. Performing a manipulation of the argument X-Forwarded-For results in improper authentication. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The patch is named 79b86ddcd4aefdd6941f098e35990ab397b13c72. To fix this issue, it is recommended to deploy a patch. The vendor confirms: \"The login limiter relied on client-supplied X-Forwarded-For data without an explicit trusted-proxy boundary, allowing an attacker to rotate the apparent client address. The remediation now ignores forwarding headers by default, accepts them only from explicitly configured proxy CIDRs, and adds a separate failed-attempt limit keyed by normalized account identity.\"",
+      "refs": "https://gist.github.com/jovair1994/839c8aaca1f37567cdd02e107a389f6a\nhttps://github.com/Studio-Saelix/sencho/\nhttps://github.com/Studio-Saelix/sencho/commit/79b86ddcd4aefdd6941f098e35990ab397b13c72",
+      "source": "NVD",
+      "time": "2026-10-11 19:48:00"
+    },
+    {
+      "cve_id": "CVE-2026-108708",
+      "title": "高危漏洞: CVE-2026-108708 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-11 10:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Wukong_HRM through commit 186115e contains a missing authorization vulnerability because EmployeeAspect assigns every caller the HR administrator role and EmployeeUtil data-scope checks return all employees. Any authenticated low-privileged employee can read payslips, salary records, bank cards and personal data, edit bank cards, and delete employees, departments and contracts company-wide.",
+      "refs": "https://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/Wukong_HRM/poc_payroll_card_social_security.py\nhttps://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/Wukong_HRM/poc_salary_archives_history.py\nhttps://github.com/WuKongOpenSource/Wukong_HRM/blob/186115e1a5a0b827ad9596ff8c2f3a876fb0cc55/hrm/hrm-web/src/main/java/com/kakarote/hrm/common/EmployeeAspect.java#L28-L45",
+      "source": "NVD",
+      "time": "2026-10-11 19:47:56"
+    },
+    {
+      "cve_id": "CVE-2026-108707",
+      "title": "高危漏洞: CVE-2026-108707 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-11 10:16:39",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Wukong_HRM through commit 186115e contains an authentication bypass vulnerability in ParamAspect that allows unauthenticated attackers to call every HRM API endpoint by omitting the AUTH-TOKEN header. Attackers gain HR administrator access to read payslips, salary history and employee personal data, download attachments, and modify or delete company-wide HR records.",
+      "refs": "https://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/Wukong_HRM/poc_attachment_download_idor.py\nhttps://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/Wukong_HRM/poc_employee_export_pii.py\nhttps://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/Wukong_HRM/poc_salary_slip_detail_read.py",
+      "source": "NVD",
+      "time": "2026-10-11 19:47:51"
+    },
+    {
+      "cve_id": "CVE-2026-108695",
+      "title": "高危漏洞: CVE-2026-108695 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-11 10:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "MultiVendorX WordPress plugin through 5.0.19 contains an incorrect authorization vulnerability that allows vendor accounts to modify marketplace-wide settings via the settings REST endpoint. Attackers with the store_owner role can send POST requests to /wp-json/multivendorx/v1/settings, gated only by edit_stores, to overwrite commission, payout, and onboarding settings.",
+      "refs": "https://github.com/multivendorx/multivendorx\nhttps://github.com/multivendorx/multivendorx/blob/8a717799b02f698e4b2b61a282062a41fbe15183/plugins/multivendorx/classes/RestAPI/Controllers/Settings.php#L157-L172\nhttps://github.com/multivendorx/multivendorx/blob/8a717799b02f698e4b2b61a282062a41fbe15183/plugins/multivendorx/classes/RestAPI/Controllers/Settings.php#L77-L80",
+      "source": "NVD",
+      "time": "2026-10-11 19:47:44"
+    },
+    {
+      "cve_id": "CVE-2026-108693",
+      "title": "高危漏洞: CVE-2026-108693 (CVSS 7.0)",
+      "cvss_score": 7.0,
+      "published_date": "2026-10-11 10:16:37",
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "ImageMagick on Windows through 7.1.2-33 and 6.9.13-58 contains an uncontrolled search path vulnerability in NTGhostscriptEXE() that launches gswin64c.exe by bare name when Ghostscript is unregistered. Attackers can plant a malicious gswin64c.exe in the working directory to execute code with ImageMagick privileges when PDF, PostScript, or EPS files are converted.",
+      "refs": "https://github.com/ImageMagick/ImageMagick\nhttps://github.com/ImageMagick/ImageMagick/blob/211e5b975a0019a88dcef5f84c1193f46738d815/MagickCore/nt-base.c#L1469-L1511\nhttps://github.com/ImageMagick/ImageMagick/blob/211e5b975a0019a88dcef5f84c1193f46738d815/MagickCore/nt-base.c#L2829-L2832",
+      "source": "NVD",
+      "time": "2026-10-11 19:47:38"
+    },
+    {
       "cve_id": "CVE-2026-108657",
       "title": "高危漏洞: CVE-2026-108657 (CVSS 8.1)",
       "cvss_score": 8.1,
@@ -1033,72 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/fv-player/vulnerability/wordpress-fv-player-8-plugin-8-1-8-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-10-11 07:59:25"
-    },
-    {
-      "cve_id": "CVE-2026-42697",
-      "title": "高危漏洞: CVE-2026-42697 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-11 04:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Social Share Icons & Social Share Buttons <= 3.7.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/ultimate-social-media-plus/vulnerability/wordpress-social-share-icons-social-share-buttons-plugin-3-7-5-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:59:21"
-    },
-    {
-      "cve_id": "CVE-2026-42696",
-      "title": "高危漏洞: CVE-2026-42696 (CVSS 10.0)",
-      "cvss_score": 10.0,
-      "published_date": "2026-10-11 04:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Unauthenticated Remote Code Execution (RCE) in SiteVault – Backup, Restore, Migration &amp; Cloning <= 1.5.19 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/sitevault-backup-restore-migration/vulnerability/wordpress-sitevault-backup-restore-migration-cloning-plugin-1-5-18-remote-code-execution-rce-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:59:16"
-    },
-    {
-      "cve_id": "CVE-2026-42693",
-      "title": "高危漏洞: CVE-2026-42693 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-11 04:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Jannah <= 7.6.5 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/jannah/vulnerability/wordpress-jannah-theme-7-6-5-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:59:11"
-    },
-    {
-      "cve_id": "CVE-2026-42633",
-      "title": "高危漏洞: CVE-2026-42633 (CVSS 8.5)",
-      "cvss_score": 8.5,
-      "published_date": "2026-10-11 04:16:35",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L",
-      "description": "Subscriber SQL Injection in Events Manager <= 7.4.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/events-manager/vulnerability/wordpress-events-manager-plugin-7-4-6-sql-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:59:07"
-    },
-    {
-      "cve_id": "CVE-2026-42632",
-      "title": "高危漏洞: CVE-2026-42632 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-11 04:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Qode Real Estate <= 1.1.7.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/qode-real-estate/vulnerability/wordpress-qode-real-estate-plugin-1-1-7-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:59:03"
-    },
-    {
-      "cve_id": "CVE-2026-42631",
-      "title": "高危漏洞: CVE-2026-42631 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-11 04:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Qode Music <= 2.1.8.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/qode-music/vulnerability/wordpress-qode-music-plugin-2-1-8-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:58:58"
     }
   ]
 }
