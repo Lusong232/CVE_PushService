@@ -1,6 +1,39 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-108657",
+      "title": "高危漏洞: CVE-2026-108657 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-10-11 06:16:41",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysTenantController passApply handler that allows any authenticated user to approve tenant administrator applications. Attackers can file a pending application via doApplyTenantPackUser and approve it through PUT /sys/tenant/passApply to gain tenant administrator pack permissions in any tenant.",
+      "refs": "https://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/JeecgBoot/poc_tenant_ownership_and_pack_approval.py\nhttps://github.com/jeecgboot/JeecgBoot/blob/e3b9dc0aefe1943d9772b026f64ed671a7c82802/jeecg-boot/jeecg-module-system/jeecg-system-biz/src/main/java/org/jeecg/modules/system/controller/SysTenantController.java#L838-L842\nhttps://www.vulncheck.com/advisories/jeecgboot-through-3.9.5-missing-authorization-via-sys-tenant-passapply",
+      "source": "NVD",
+      "time": "2026-10-11 11:53:51"
+    },
+    {
+      "cve_id": "CVE-2026-108628",
+      "title": "高危漏洞: CVE-2026-108628 (CVSS 8.1)",
+      "cvss_score": 8.1,
+      "published_date": "2026-10-11 06:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "description": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the saveDeptRolePermission endpoint of SysDepartPermissionController that allows any authenticated user to modify department role permissions. Low-privileged attackers can submit roleId and permissionIds values to grant arbitrary menu or button permissions, escalating privileges or revoking other users' permissions.",
+      "refs": "https://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/JeecgBoot/poc_dept_role_policy_reads_and_save.py\nhttps://github.com/jeecgboot/JeecgBoot/blob/e3b9dc0aefe1943d9772b026f64ed671a7c82802/jeecg-boot/jeecg-module-system/jeecg-system-biz/src/main/java/org/jeecg/modules/system/controller/SysDepartPermissionController.java#L252-L271\nhttps://www.vulncheck.com/advisories/jeecgboot-through-3.9.5-missing-authorization-via-savedeptrolepermission-endpoint",
+      "source": "NVD",
+      "time": "2026-10-11 11:53:45"
+    },
+    {
+      "cve_id": "CVE-2026-108623",
+      "title": "高危漏洞: CVE-2026-108623 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-11 06:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "description": "JeecgBoot through 3.9.5 contains a missing authorization vulnerability in the SysLogController deleteBatch handler that allows any authenticated user to delete system audit log entries. Low-privileged attackers can send a DELETE request with ids set to allclear to wipe the entire sys_log table, erasing all users' audit trails.",
+      "refs": "https://github.com/AnkesKasty/cve-request-poc/blob/a7b6d1423555812d8efa26c91c5d0683164b31e5/JeecgBoot/poc_log_delete_batch.py\nhttps://github.com/jeecgboot/JeecgBoot/blob/e3b9dc0aefe1943d9772b026f64ed671a7c82802/jeecg-boot/jeecg-module-system/jeecg-system-biz/src/main/java/org/jeecg/modules/system/controller/SysLogController.java#L125-L140\nhttps://www.vulncheck.com/advisories/jeecgboot-through-3.9.5-missing-authorization-via-sys-log-deletebatch",
+      "source": "NVD",
+      "time": "2026-10-11 11:53:39"
+    },
+    {
       "cve_id": "CVE-2026-81797",
       "title": "高危漏洞: CVE-2026-81797 (CVSS 9.8)",
       "cvss_score": 9.8,
@@ -1066,39 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/qode-music/vulnerability/wordpress-qode-music-plugin-2-1-8-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-10-11 07:58:58"
-    },
-    {
-      "cve_id": "CVE-2026-42630",
-      "title": "高危漏洞: CVE-2026-42630 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-11 04:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "description": "Unauthenticated Sensitive Data Exposure in Web Plura Backup &amp; Restore Manager <= 0.2.25 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/web-plura-backup-restore-manager/vulnerability/wordpress-web-plura-backup-restore-manager-plugin-0-2-25-sensitive-data-exposure-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:58:51"
-    },
-    {
-      "cve_id": "CVE-2026-40805",
-      "title": "高危漏洞: CVE-2026-40805 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-10-11 04:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "Subscriber Arbitrary File Deletion in PeepSo <= 9.0.5.4 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/peepso/vulnerability/wordpress-peepso-plugin-9-0-5-4-arbitrary-file-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:58:47"
-    },
-    {
-      "cve_id": "CVE-2026-40803",
-      "title": "高危漏洞: CVE-2026-40803 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-11 04:16:34",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in Jotform &#8211; AI Chatbot <= 3.8.2 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/jotform-ai-chatbot/vulnerability/wordpress-jotform-ai-chatbot-plugin-3-8-2-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 07:58:43"
     }
   ]
 }
