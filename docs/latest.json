@@ -1,6 +1,171 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-108818",
+      "title": "高危漏洞: CVE-2026-108818 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 17:16:43",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was identified in agno-agi agno up to 2.7.3/3.0.6. This affects the function get_authentication_dependency of the file auth.py. Such manipulation of the argument security_key leads to missing authentication. The attack may be launched remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+      "refs": "https://github.com/Agno-agi/Agno/\nhttps://github.com/Agno-agi/Agno/issues/10051\nhttps://github.com/ybyu-ieu/agno-security-advisories/blob/main/advisories/agno-agentos-no-authentication-by-default.md",
+      "source": "NVD",
+      "time": "2026-10-12 21:53:01"
+    },
+    {
+      "cve_id": "CVE-2026-93582",
+      "title": "高危漏洞: CVE-2026-93582 (CVSS 9.4)",
+      "cvss_score": 9.4,
+      "published_date": "2026-10-12 15:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "description": "The HTTP Basic Authentication modules in ((OTRS)) Community Edition 6 and prior accept the authenticated username from either the REMOTE_USER or HTTP_REMOTE_USER environment variable. In CGI and mod_perl based deployments, HTTP request headers may be mapped to corresponding HTTP_* environment variables. As a result, an unauthenticated remote attacker can supply a crafted Remote-User request header which is exposed to the application as HTTP_REMOTE_USER. When HTTP Basic Authentication is configured as the authentication backend, OTRS trusts this value as an already authenticated username and does not perform an additional password verification. An attacker may therefore authenticate through the Generic Interface as an existing agent or customer user without knowing the corresponding credentials.\n\nThe resulting privileges depend on the account being impersonated. Successful exploitation may allow access to confidential information and modification of data or configuration with the permissions of the affected user. Exploitation requires HTTP Basic Authentication to be configured as an authentication backend and a web server environment in which attacker-controlled HTTP headers are exposed through the corresponding HTTP_* environment variables.\n\nOTRS 7 and later are not affected by this attack vector due to the use of Mojolicious/Hypnotoad and does not expose arbitrary request headers through %ENV in the manner required for exploitation. The supported REMOTE_USER mechanism additionally requires validation through the configured SSO shared secret. The unused HTTP_REMOTE_USER fallback has nevertheless been removed as a security-hardening measure.\n\nPlease note that ((OTRS)) Community Edition 6.x and before are vulnerable. Products based on the ((OTRS)) Community Edition also very likely to be affected",
+      "refs": "https://otrs.com/release-notes/otrs-security-advisory-2026-18/",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:57"
+    },
+    {
+      "cve_id": "CVE-2026-78357",
+      "title": "高危漏洞: CVE-2026-78357 (CVSS 9.1)",
+      "cvss_score": 9.1,
+      "published_date": "2026-10-12 15:16:37",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "description": "Previously issued authentication tokens are not immediately invalidated when an OTRS agent or customer user account is deactivated or its password is changed. As a result, an existing JWT may remain valid until its regular expiration time, which can be approximately 16 hours.\n\nAn attacker who has previously obtained a valid authentication token can therefore continue to access OTRS with the privileges of the affected agent or customer user even after the corresponding account has been deactivated or the user's password has been changed.\n\nThe vulnerability does not allow an attacker to obtain authentication tokens by itself. Exploitation requires possession of a previously issued and still valid token. The actual impact depends on the privileges associated with the compromised token. Customer user tokens are limited to the permissions of the affected customer account, while agent tokens may provide access to broader ticket, customer, or administrative functionality depending on the assigned permissions.\n\nThis issue affects OTRS:\n\n  *  7.0.X\n  *  8.0.X\n  *  2023.X\n  *  2024.X\n  *  2025.X\n  *  2026.X before 2026.7.X",
+      "refs": "https://otrs.com/release-notes/otrs-security-advisory-2026-14/",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:49"
+    },
+    {
+      "cve_id": "CVE-2026-78355",
+      "title": "高危漏洞: CVE-2026-78355 (CVSS 8.7)",
+      "cvss_score": 8.7,
+      "published_date": "2026-10-12 15:16:36",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:H",
+      "description": "A path traversal vulnerability in the OTRS SendSupportBundle functionality allows an authenticated administrator to reference file paths outside the intended directory.\n\nThis may allow files accessible to the OTRS application process to be deleted. The vulnerability does not bypass operating system file permissions. On OTRS versions prior to OTRS 7, the effective permissions of the web server process are relevant. Starting with OTRS 7, access is limited by the permissions of the dedicated OTRS user. Files with overly permissive ownership or file system permissions may therefore also be affected.\n\nThe affected functionality may additionally attempt to include controlled files in a support bundle. However, support bundles are sent to a predefined OTRS support address, and direct disclosure of arbitrary files to the attacker has not been demonstrated.\n\nAn attacker therefore requires valid administrative access to exploit the vulnerable functionality. The primary demonstrated impact is the deletion of files outside the intended directory within the effective permissions of the OTRS application process.\n\nThis issue affects OTRS:\n\n  *  7.0.X\n  *  8.0.X\n  *  2023.X\n  *  2024.X\n  *  2025.X\n  *  2026.X before 2026.7.X\n\nPlease note that ((OTRS)) Community Edition 6.x and before are vulnerable. Products based on the ((OTRS)) Community Edition also very likely to be affected",
+      "refs": "https://otrs.com/release-notes/otrs-security-advisory-2026-12/",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:42"
+    },
+    {
+      "cve_id": "CVE-2026-108807",
+      "title": "高危漏洞: CVE-2026-108807 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 15:16:35",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. This affects the function mysql_query of the file source/adminregister.php of the component Registration Handler. Performing a manipulation results in sql injection. The attack may be initiated remotely. The exploit has been made public and could be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/xiaotian2023/CVE/issues/3\nhttps://vuldb.com/cve/CVE-2026-108807\nhttps://vuldb.com/submit/963381",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:35"
+    },
+    {
+      "cve_id": "CVE-2026-108806",
+      "title": "高危漏洞: CVE-2026-108806 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 14:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability has been found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. Affected by this issue is the function mysql_query of the file source/authprocessing.php of the component Forgot Password Handler. Such manipulation of the argument fpemail leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/xiaotian2023/CVE/issues/2\nhttps://vuldb.com/cve/CVE-2026-108806\nhttps://vuldb.com/submit/963380",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:31"
+    },
+    {
+      "cve_id": "CVE-2026-108805",
+      "title": "高危漏洞: CVE-2026-108805 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 14:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A flaw has been found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. Affected by this vulnerability is the function mysql_query of the file source/loginprocessing.php of the component Login Handler. This manipulation of the argument email/password causes sql injection. The attack can be initiated remotely. The exploit has been published and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/xiaotian2023/CVE/issues/1\nhttps://vuldb.com/cve/CVE-2026-108805\nhttps://vuldb.com/submit/963376",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:26"
+    },
+    {
+      "cve_id": "CVE-2026-108804",
+      "title": "高危漏洞: CVE-2026-108804 (CVSS 10.0)",
+      "cvss_score": 10.0,
+      "published_date": "2026-10-12 14:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "description": "A vulnerability was detected in TRENDnet TEW-751DR, TEW-752DRU and TEW733GR 1.03B01/1.03B03. Affected is the function fwrite of the file pigwidgeon.cgi of the component Web Management Backend. The manipulation of the argument service results in os command injection. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor confirms: \"As this router was EOL'd in 2011, we have no way of testing if such vulnerability exists. We will notify our customers of a potential vulnerability on this product.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "refs": "https://github.com/dacj4n/TRENDNetExploits\nhttps://github.com/dacj4n/TRENDNetExploits/tree/main/exploit\nhttps://vuldb.com/cve/CVE-2026-108804",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:22"
+    },
+    {
+      "cve_id": "CVE-2026-87690",
+      "title": "高危漏洞: CVE-2026-87690 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-12 13:17:03",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "description": "The Metasploit Framework post module post/apple_ios/gather/ios_image_gather is affected by a relative path traversal vulnerability (CWE-22). The module interpolates file names taken from a Meterpreter directory listing — data fully controlled by a hostile or tampered iOS device — directly into the local destination path passed to client.fs.file.download_file(), with no sanitization. The underlying stdapi sink (lib/rex/post/meterpreter/extensions/stdapi/fs/file.rb) writes to whatever path is supplied, so a listing entry such as ../../msfconsole.rc escapes the intended ~/.msf4/loot/<random> directory and overwrites ~/.msf4/msfconsole.rc, a resource file that every msfconsole invocation automatically executes at startup (lib/msf/ui/console/driver.rb:196). An attacker-controlled device that lures an operator into running this gather module achieves an arbitrary file write as the operator; because the written msfconsole.rc can load a second written file (a Ruby plugin whose top-level code runs on require), this converts into persistent code execution and an interactive shell as the operator (frequently root) on the pentester's workstation at the next console launch. The same traversal was previously fixed upstream in the recursive downloader (stdapi/fs/dir.rb scrubs separators); this module omitted the equivalent scrub. The fix applies the same separator scrub (or File.basename) to listing entries before building the local path.",
+      "refs": "https://github.com/rapid7/metasploit-framework\nhttps://github.com/rapid7/metasploit-framework/pull/21880\nhttps://github.com/rapid7/metasploit-framework/releases/tag/6.5.5",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:17"
+    },
+    {
+      "cve_id": "CVE-2026-108799",
+      "title": "高危漏洞: CVE-2026-108799 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 13:16:59",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was determined in jackq XCMS up to 3fab5342cc509945a7ce1b8ec39d19f701b89261. Impacted is the function PublicController::sendFindPwdMail of the file Admin/Home/Controller/PublicController.class.php of the component Password Recovery Mail Endpoint. This manipulation of the argument email causes sql injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
+      "refs": "https://github.com/wawyw/cve_report/blob/main/xcms_2.md\nhttps://vuldb.com/cve/CVE-2026-108799\nhttps://vuldb.com/submit/961602",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:10"
+    },
+    {
+      "cve_id": "CVE-2026-108798",
+      "title": "高危漏洞: CVE-2026-108798 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 12:16:48",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A vulnerability was found in ZKTeco BioTime 9.5.6 Build 20260130.3206. This issue affects some unknown processing. The manipulation results in use of hard-coded cryptographic key\r . The attack may be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://vuldb.com/cve/CVE-2026-108798\nhttps://vuldb.com/submit/961812\nhttps://vuldb.com/vuln/416575",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:05"
+    },
+    {
+      "cve_id": "CVE-2026-108985",
+      "title": "高危漏洞: CVE-2026-108985 (CVSS 7.1)",
+      "cvss_score": 7.1,
+      "published_date": "2026-10-12 11:17:18",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
+      "description": "ZDR decoding in libnfs through 6.0.2 before 7613236 has an out-of-bounds write related to lib/libnfs-zdr.c with libnfs_zdr_bytes(), libnfs_zdr_string(), and libnfs_zdr_array(). The caller-supplied maxsize value is not honored.",
+      "refs": "https://github.com/sahlberg/libnfs/commit/7613236464317bee2d9636f087f995148de4db27",
+      "source": "NVD",
+      "time": "2026-10-12 21:52:01"
+    },
+    {
+      "cve_id": "CVE-2026-66086",
+      "title": "高危漏洞: CVE-2026-66086 (CVSS 9.8)",
+      "cvss_score": 9.8,
+      "published_date": "2026-10-12 10:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "description": "In the modem OTA stack, there is a possible stack-based buffer overflow due to improper validation of scheduling information in SIB1 messages. This could lead to remote code execution or denial of service with no additional execution privileges needed.",
+      "refs": "https://www.unisoc.com/en/support/product-security-bulletin/2109454821805424641",
+      "source": "NVD",
+      "time": "2026-10-12 21:51:56"
+    },
+    {
+      "cve_id": "CVE-2026-108980",
+      "title": "高危漏洞: CVE-2026-108980 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-12 10:16:57",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Blinko through 1.8.8 allows directory traversal, overwriting startup files as root, via installPlugin. It builds the plugin install path from an unsanitized name in server/routerTrpc/plugin.ts, and the plugin.installPlugin tRPC procedure is open to any authenticated user. Thus, a name containing ../ sequences writes the downloaded plugin files outside the plugins directory. Because the official Docker image runs as root, an authenticated attacker overwrites a root-owned startup file and achieves remote code execution as root. Self-registration for an account may be possible.",
+      "refs": "https://github.com/blinkospace/blinko/blob/178e4b3538a21823a50ac2481e653d56cb1ffa86/app/src/pages/signin.tsx#L238-L243\nhttps://github.com/blinkospace/blinko/blob/178e4b3538a21823a50ac2481e653d56cb1ffa86/server/routerTrpc/plugin.ts#L273\nhttps://github.com/kashishtopi/blinko-plugin-path-traversal-rce",
+      "source": "NVD",
+      "time": "2026-10-12 21:51:52"
+    },
+    {
+      "cve_id": "CVE-2026-108783",
+      "title": "高危漏洞: CVE-2026-108783 (CVSS 7.3)",
+      "cvss_score": 7.3,
+      "published_date": "2026-10-12 10:16:56",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "description": "A security vulnerability has been detected in PRVTPRO Amnezia-Web-Panel up to 1.6.2/1.7.2. This affects an unknown part of the file app.py of the component Backup Download. The manipulation leads to use of default credentials. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "refs": "https://github.com/ASantsSec/CVE/issues/27\nhttps://vuldb.com/cve/CVE-2026-108783\nhttps://vuldb.com/submit/959275",
+      "source": "NVD",
+      "time": "2026-10-12 21:51:48"
+    },
+    {
       "cve_id": "CVE-2026-108976",
       "title": "高危漏洞: CVE-2026-108976 (CVSS 7.8)",
       "cvss_score": 7.8,
@@ -934,171 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/theme/qwery/vulnerability/wordpress-qwery-theme-3-6-1-php-object-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-10-11 08:06:37"
-    },
-    {
-      "cve_id": "CVE-2026-78532",
-      "title": "高危漏洞: CVE-2026-78532 (CVSS 7.1)",
-      "cvss_score": 7.1,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
-      "description": "Unauthenticated Cross Site Scripting (XSS) in LMS <= 8.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/lms/vulnerability/wordpress-lms-theme-8-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:33"
-    },
-    {
-      "cve_id": "CVE-2026-78531",
-      "title": "高危漏洞: CVE-2026-78531 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Jacqueline <= 2.22 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/jacqueline/vulnerability/wordpress-jacqueline-theme-2-22-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:29"
-    },
-    {
-      "cve_id": "CVE-2026-78530",
-      "title": "高危漏洞: CVE-2026-78530 (CVSS 7.7)",
-      "cvss_score": 7.7,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
-      "description": "Subscriber Arbitrary File Deletion in FoodBakery <= 4.6 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/foodbakery/vulnerability/wordpress-foodbakery-theme-4-6-arbitrary-file-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:22"
-    },
-    {
-      "cve_id": "CVE-2026-78529",
-      "title": "高危漏洞: CVE-2026-78529 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Alliance <= 3.11 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/alliance/vulnerability/wordpress-alliance-theme-3-11-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:17"
-    },
-    {
-      "cve_id": "CVE-2026-66569",
-      "title": "高危漏洞: CVE-2026-66569 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Kicker <= 2.2.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/kicker/vulnerability/wordpress-kicker-theme-2-2-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:13"
-    },
-    {
-      "cve_id": "CVE-2026-66568",
-      "title": "高危漏洞: CVE-2026-66568 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Original <= 1.9.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/original/vulnerability/wordpress-original-theme-1-9-0-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:09"
-    },
-    {
-      "cve_id": "CVE-2026-66567",
-      "title": "高危漏洞: CVE-2026-66567 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Anesta <= 1.5.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/anesta/vulnerability/wordpress-anesta-theme-1-5-3-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:06:04"
-    },
-    {
-      "cve_id": "CVE-2026-66566",
-      "title": "高危漏洞: CVE-2026-66566 (CVSS 8.1)",
-      "cvss_score": 8.1,
-      "published_date": "2026-10-11 04:16:46",
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated Local File Inclusion in Ambient <= 1.7 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/ambient/vulnerability/wordpress-ambient-theme-1-7-local-file-inclusion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:59"
-    },
-    {
-      "cve_id": "CVE-2026-66565",
-      "title": "高危漏洞: CVE-2026-66565 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in FC United <= 1.1.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/fcunited/vulnerability/wordpress-fc-united-theme-1-1-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:55"
-    },
-    {
-      "cve_id": "CVE-2026-66564",
-      "title": "高危漏洞: CVE-2026-66564 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in ShiftCV <= 3.0.14 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/shift-cv/vulnerability/wordpress-shiftcv-theme-3-0-14-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:46"
-    },
-    {
-      "cve_id": "CVE-2026-66563",
-      "title": "高危漏洞: CVE-2026-66563 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Windsor <= 2.10 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/windsor/vulnerability/wordpress-windsor-theme-2-10-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:42"
-    },
-    {
-      "cve_id": "CVE-2026-66483",
-      "title": "高危漏洞: CVE-2026-66483 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Education Center <= 3.6.12 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/education/vulnerability/wordpress-education-center-theme-3-6-12-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:37"
-    },
-    {
-      "cve_id": "CVE-2026-66482",
-      "title": "高危漏洞: CVE-2026-66482 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Drone Media <= 2.2.0 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/drone-media/vulnerability/wordpress-drone-media-theme-2-2-0-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:33"
-    },
-    {
-      "cve_id": "CVE-2026-65459",
-      "title": "高危漏洞: CVE-2026-65459 (CVSS 7.5)",
-      "cvss_score": 7.5,
-      "published_date": "2026-10-11 04:16:45",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-      "description": "Unauthenticated Arbitrary Content Deletion in Forminator <= 1.57.3 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/forminator/vulnerability/wordpress-forminator-plugin-1-57-3-arbitrary-content-deletion-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:28"
-    },
-    {
-      "cve_id": "CVE-2026-62130",
-      "title": "高危漏洞: CVE-2026-62130 (CVSS 7.2)",
-      "cvss_score": 7.2,
-      "published_date": "2026-10-11 04:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Shop manager PHP Object Injection in WooCommerce Multilingual & Multicurrency <= 5.5.8 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/woocommerce-multilingual/vulnerability/wordpress-woocommerce-multilingual-multicurrency-plugin-5-5-8-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:24"
     }
   ]
 }
