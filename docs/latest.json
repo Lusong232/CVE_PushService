@@ -1,6 +1,28 @@
 {
   "latest": [
     {
+      "cve_id": "CVE-2026-108976",
+      "title": "高危漏洞: CVE-2026-108976 (CVSS 7.8)",
+      "cvss_score": 7.8,
+      "published_date": "2026-10-12 05:16:43",
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "GNU Emacs before 31.2 (and TRAMP through 2.8.2) allows OS command injection via a filename because tramp-user-regexp has an incomplete list of disallowed inputs. NOTE: this issue exists because of an incomplete fix for CVE-2026-79992.",
+      "refs": "https://ftp.gnu.org/gnu/tramp/tramp-2.8.2.tar.gz\nhttps://www.openwall.com/lists/oss-security/2026/08/21/1\nhttps://www.openwall.com/lists/oss-security/2026/10/11/1",
+      "source": "NVD",
+      "time": "2026-10-12 11:15:18"
+    },
+    {
+      "cve_id": "CVE-2026-108963",
+      "title": "高危漏洞: CVE-2026-108963 (CVSS 8.8)",
+      "cvss_score": 8.8,
+      "published_date": "2026-10-12 04:16:32",
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "databasement before 1.8.2 allows remote code execution because it runs certain commands (e.g., mariadb-dump) with a database name that can be specified by any authenticated user. For example, --result-file=/app/public/index.php can write to index.php. In other words, quoting prevents OS command injection in mariadb-dump, but the argument injection alone is sufficient for code execution indirectly. NOTE: the project's composer.json file does not indicate an independently published databasement Composer package.",
+      "refs": "https://github.com/David-Crty/databasement/blob/bcee6f0e62796337aaac26961c41f7eb9578dd76/app/Services/Backup/Databases/MysqlDatabase.php#L22\nhttps://github.com/David-Crty/databasement/blob/bcee6f0e62796337aaac26961c41f7eb9578dd76/composer.json#L3\nhttps://github.com/David-Crty/databasement/commit/22258e3eac594e653f9d04a69d93e83923d61499",
+      "source": "NVD",
+      "time": "2026-10-12 11:15:12"
+    },
+    {
       "cve_id": "CVE-2026-19935",
       "title": "高危漏洞: CVE-2026-19935 (CVSS 7.5)",
       "cvss_score": 7.5,
@@ -1077,28 +1099,6 @@
       "refs": "https://patchstack.com/database/wordpress/plugin/woocommerce-multilingual/vulnerability/wordpress-woocommerce-multilingual-multicurrency-plugin-5-5-8-php-object-injection-vulnerability?_s_id=cve",
       "source": "NVD",
       "time": "2026-10-11 08:05:24"
-    },
-    {
-      "cve_id": "CVE-2026-62129",
-      "title": "高危漏洞: CVE-2026-62129 (CVSS 9.9)",
-      "cvss_score": 9.9,
-      "published_date": "2026-10-11 04:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "description": "Contributor Arbitrary File Upload in Creator LMS <= 1.2.21 versions.",
-      "refs": "https://patchstack.com/database/wordpress/plugin/creatorlms/vulnerability/wordpress-creator-lms-plugin-1-2-21-arbitrary-file-upload-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:20"
-    },
-    {
-      "cve_id": "CVE-2026-62125",
-      "title": "高危漏洞: CVE-2026-62125 (CVSS 9.8)",
-      "cvss_score": 9.8,
-      "published_date": "2026-10-11 04:16:44",
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-      "description": "Unauthenticated PHP Object Injection in Asia Garden <= 1.3.1 versions.",
-      "refs": "https://patchstack.com/database/wordpress/theme/asia-garden/vulnerability/wordpress-asia-garden-theme-1-3-1-php-object-injection-vulnerability?_s_id=cve",
-      "source": "NVD",
-      "time": "2026-10-11 08:05:12"
     }
   ]
 }
